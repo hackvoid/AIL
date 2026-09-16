@@ -1,0 +1,416 @@
+WEBVTT
+
+00:00.000 --> 00:08.080
+Hello to everyone, I am Massimiliano Schettino and today we will follow a lesson on Vehicle
+
+00:08.080 --> 00:15.200
+Subsystems. Vehicle Subsystems are defined as the different components like Burke Disks,
+
+00:15.200 --> 00:22.640
+Alternators, Valves and so on that cooperates for the specific functionalities as reduce
+
+00:22.640 --> 00:29.560
+vehicle speed, avoid battery discharge, reduce car emission, etc. and that make up an entire
+
+00:29.560 --> 00:37.740
+vehicle when built together. Let's begin with the braking system, a critical component
+
+00:37.740 --> 00:44.860
+on vehicle safety. A vehicle braking system is responsible for slowing down or stopping
+
+00:44.860 --> 00:54.420
+the vehicle when needed. There are two primary types of brakes, drum brakes and disc brakes.
+
+00:54.420 --> 01:02.700
+A drum brake consists of a metal rotating drum and friction coated surfaces called brake shoes.
+
+01:02.700 --> 01:10.400
+When the driver applies the brake, these shoes press against the drum, creating friction that
+
+01:10.400 --> 01:17.980
+slows the vehicle down. Drum brakes are more common in older vehicles and are still used
+
+01:17.980 --> 01:25.920
+on the rear wheels of some modern cars due to their cost effectiveness. Disc brakes, on
+
+01:25.920 --> 01:33.960
+the other hand, are positioned inside the wheel and rely on an hydraulic system to function.
+
+01:33.960 --> 01:40.980
+When the brake pedal is pressed, hydraulic pressure forces the brake pads to clamp onto a rotating
+
+01:40.980 --> 01:50.220
+metal disc or rotor, slowing the wheel. Disc brakes offer superior stopping power and are widely
+
+01:50.220 --> 01:55.120
+used in modern vehicles.
+
+01:55.120 --> 02:03.580
+Now let's talk about vehicle dynamics, specifically overseer and underseer. Overseers occurs when
+
+02:03.580 --> 02:12.940
+a car's rear wheels lose traction during a turn, causing the vehicle to turn more sharply than intended.
+
+02:12.940 --> 02:20.680
+This behavior can lead to skidding or spinning, particularly in rear-wheel drive cars, or in conditions
+
+02:20.680 --> 02:29.260
+of low traction. Underseer, in contrast, happens when the front wheels lose traction, causing the
+
+02:29.260 --> 02:37.760
+car to follow a wider path than intended. Drivers often experience understeer in front wheel-driver
+
+02:37.760 --> 02:48.020
+cars when turning at high speeds or during sudden maneuvers. Correcting understeer typically involves
+
+02:48.020 --> 02:53.620
+reducing speed and realigning the steering.
+
+02:53.620 --> 03:03.160
+Moving on to the anti-lock brake system, or ABS. ABS prevents wheels lockup during braking by
+
+03:03.160 --> 03:10.040
+continuously monitoring the rotational speed of each wheel. Sensors placed on each wheel relay
+
+03:10.040 --> 03:17.060
+this information to the electronic control unit . If the ECU detects that a wheel is about
+
+03:17.060 --> 03:25.300
+to lockup, it modulates the brake pressure to that wheel, allowing it to maintain traction.
+
+03:25.300 --> 03:37.460
+This system enhances vehicle stability and reduces stopping distances, particularly on slippery surfaces.
+
+03:37.460 --> 03:46.500
+Electronic brake force distribution, or EBD, works in conjunction with ABS to optimize braking performance.
+
+03:46.500 --> 03:53.000
+During braking, the low distribution on the wheels varies, with the rear wheels generally experiencing
+
+03:53.000 --> 04:01.540
+less grip. EBD adjusts the braking force applied to each wheel to prevent rear wheel lockup and
+
+04:01.540 --> 04:10.500
+maintain vehicle stability, especially during cornering. Electronic stability control, also known
+
+04:10.500 --> 04:20.100
+as ESP or DSC, is a system designed to enhance vehicle stability during skidding events. The ECU monitors the
+
+04:20.100 --> 04:30.180
+car's trajectory and compares it to the driver's intended path. If a discrepancy is detected, the system reduces engine power
+
+04:30.180 --> 04:38.660
+and applies braking to individual wheels to correct the car's motion. This intervention prevents accidents
+
+04:38.660 --> 04:40.980
+by helping the driver to maintain control.
+
+04:43.940 --> 04:51.060
+The traction control system, also known as anti-spin regulation, prevents wheel spin during acceleration.
+
+04:51.940 --> 05:00.660
+This system is particularly useful in low traction conditions such as rain or ice. Sensors detect wheel spin,
+
+05:01.460 --> 05:08.500
+and DSU adjusts engine power or applies braking to spinning wheel, ensuring optimal traction.
+
+05:11.620 --> 05:18.900
+The heel holder system assists drivers when starting on an incline. It prevents the vehicle from rolling
+
+05:18.900 --> 05:25.620
+backward during the transition from the brake pedal to the accelerator, offering convenience and reducing
+
+05:25.620 --> 05:35.620
+the risk of accidents. Alternators are responsible for keeping the vehicle's battery charged and powering
+
+05:35.620 --> 05:47.620
+electrical components. Since alternating current EC cannot be stored, alternators use a rectifier to convert
+
+05:47.620 --> 05:57.620
+DC to direct current DC for storage. Modern vehicles often feature smart alternators, say SAM,
+
+05:58.660 --> 06:06.580
+which adjusts the power drawn from the engine based on the vehicle's operational state, improving efficiency.
+
+06:09.380 --> 06:13.780
+The starter motor is a key component in an internal combustion engine.
+
+06:13.780 --> 06:22.900
+It's primary function is to draw electrical current from the battery to turn the engine over until it reaches
+
+06:22.900 --> 06:30.580
+a speed sufficient for self-sustaining operation. It is mechanically connected to the engine's
+
+06:30.580 --> 06:38.820
+craft shafts and engaged only during the startup phase. Modern starter motors are compact yet powerful,
+
+06:38.820 --> 06:48.260
+and ensuring reliable ignition in all conditions. Next, we will discuss emission-related subsystems,
+
+06:48.900 --> 06:53.940
+crucial for reducing the environmental impact of vehicles.
+
+06:57.940 --> 07:05.140
+Exhaust gas recirculation system recirculates a little portion of exhaust
+
+07:05.140 --> 07:13.780
+exhaust gases back into the engine's intake main fold. By doing so, it reduces combustion temperatures
+
+07:14.420 --> 07:24.340
+and the formation of nitrogen oxides, or NOx, a harmful pollutant. The AGR system is controlled by the
+
+07:24.340 --> 07:29.860
+engine control unit, which adjusts the recirculation rate using a PWM signal.
+
+07:29.860 --> 07:43.300
+The diesel particulate filter, or DPF, is designed to trap and remove particulate matter from diesel exhaust.
+
+07:44.580 --> 07:52.420
+It works in conjunction with the catalytic converter and uses diagnostic software to monitor and maintain
+
+07:52.420 --> 08:00.340
+its functionality. Periodic regeneration burns off accumulated salt, ensuring efficient operation.
+
+08:03.060 --> 08:10.020
+The lambda probe is a sensor that measures the oxygen concentration in a vehicle's exhaust gases.
+
+08:11.460 --> 08:15.700
+By comparing this measurement to the oxygen levels in the ambient air,
+
+08:15.700 --> 08:24.100
+it determines the air-fuel mixture in the engine. The lambda value indicates whether the mixture
+
+08:24.100 --> 08:35.220
+is stichiometric, where lambda is equal to 1, rich, if lambda is minus than 1, or lean, if lambda is
+
+08:35.220 --> 08:44.660
+greater than 1. This information helps the engine control unit in optimizing fuel injection and in reducing emissions.
+
+08:47.860 --> 08:56.340
+There are different types of lambda probes, zirconium dioxide, titanium dioxide, and double lambda probes.
+
+08:56.340 --> 09:04.900
+Zirconium dioxide probes reproduce a voltage signal based on oxygen levels, while titanium
+
+09:04.900 --> 09:13.700
+dioxide probes measure resistance changes. Double lambda probes enhance precision by using two sensors
+
+09:13.700 --> 09:19.380
+to provide more accurate data, improving engine efficiency and reducing emissions.
+
+09:19.380 --> 09:30.500
+A catalytic converter reduces harmful emissions by converting pollutants into less harmful substances.
+
+09:31.380 --> 09:39.940
+It operates within the exhaust system, using a catalytic to promote chemical reactions that oxidize
+
+09:39.940 --> 09:49.140
+carbon monoxide and hydrocarbons while using nitrogen oxides. The catalytic converter also contributes
+
+09:49.140 --> 09:56.900
+to noise reduction in the exhaust system. There are three main types of catalytic converters,
+
+09:57.540 --> 10:07.220
+reducing, oxidizing, and three-way. Reducing converters target nitrogen oxides, oxidizing converters
+
+10:07.220 --> 10:15.060
+handle carbon monoxide and hydrocarbons, and three-way converters combine this function for engines
+
+10:15.060 --> 10:23.540
+operating with the stoichiometric combustion. These devices are essential for meeting modern emission standard.
+
+10:27.540 --> 10:34.820
+Selective catalytic reduction is a process used to reduce nitrogen oxides in diesel engine exhaust.
+
+10:34.820 --> 10:43.220
+By introducing a reducing agent, typically urea, into the exhaust system, the system promotes
+
+10:43.220 --> 10:53.700
+chemical reactions that convert NOx into harmless nitrogen and water vapor. The SCR system requires precise dosing
+
+10:53.700 --> 10:57.380
+and a specially designed catalyst to ensure effectiveness.
+
+10:57.380 --> 11:06.980
+Let's now pass to valve timing, which is essential for efficient operation of a four-stroke engine.
+
+11:10.420 --> 11:16.820
+Valve timing refers to the synchronization of the opening and closing of the engine's intake
+
+11:16.820 --> 11:20.740
+and exhaust valves with the movement of the pistons.
+
+11:20.740 --> 11:28.900
+This synchronization is achieved using chains, belts, or gears to link the camshaft and crankshaft.
+
+11:30.020 --> 11:36.980
+Accurate valve timing ensures optimal engine performance, fuel efficiency, and reduced emissions.
+
+11:38.820 --> 11:47.060
+Fixed valve timing uses a camshaft with a constant profile, resulting in unchanging valve operation
+
+11:47.060 --> 11:55.380
+of the system. This simplicity is cost-effective, but limits optimization across varying engine speeds.
+
+11:58.180 --> 12:04.500
+Variable valve timing, on the other hand, dynamically adjusts the timing and duration of valve operation.
+
+12:05.540 --> 12:13.060
+This system improves performance at different engine speeds, enhances fuel efficiency, and reduces emissions.
+
+12:13.940 --> 12:24.500
+For example, at low RPM, valve timing may prioritize smoothness, while at high RPM, it shifts to maximize power output.
+
+12:24.500 --> 12:30.340
+There are several mechanisms to control valve timing.
+
+12:31.060 --> 12:36.180
+Camshaft rotation, that adjusts the timing without altering the duration.
+
+12:37.460 --> 12:44.340
+Double-toothed gear, that incorporates a gear that can slide, changing the valve timing.
+
+12:45.620 --> 12:50.500
+While variation of cam effects alters the cam's impact on valve operation,
+
+12:51.220 --> 12:54.020
+influencing the duration and amplitude of timing.
+
+12:55.300 --> 13:01.860
+These methods allow manufacturers to fine-tune engine performance based on specific requirements.
+
+13:05.540 --> 13:12.980
+Some engines employ advanced configuration, such as double cam, where multiple cams with different
+
+13:12.980 --> 13:18.100
+profiles control the same valve, offering flexibility for different driving conditions.
+
+13:19.060 --> 13:25.860
+Rocker arm, that uses a single cam and a rocker arm system to adjust the valve's actuation,
+
+13:26.420 --> 13:29.780
+and this allows fine control over the valve's behavior.
+
+13:29.780 --> 13:46.420
+Or disengageable cams, where these cams can slide along the shaft and lock bolts in a closed position, enabling the engine to deactivate certain cylinders, improving fuel efficiency during load-demand scenarios.
+
+13:46.420 --> 13:54.100
+Automotive manufacturers have developed various variable timing systems.
+
+13:55.300 --> 14:04.100
+Examples include VTAC by Honda, that optimizes performance and efficiency through multi-stage cam profiles.
+
+14:04.100 --> 14:12.660
+VTAC by Honda, that offers seamless adjustment to camshaft timing.
+
+14:13.620 --> 14:22.180
+Or multi-air by Fiat, that uses an electronically controlled hydraulic system for precise valve timing and lift control.
+
+14:22.180 --> 14:30.100
+This system combines flexibility and efficiency, reducing emissions while enhancing power.
+
+14:33.380 --> 14:36.020
+Let's open a parenthesis on multi-air system.
+
+14:38.180 --> 14:42.740
+Fiat's multi-air system represents a leap in valve timing technology.
+
+14:43.380 --> 14:50.820
+It uses an hydraulic tupper controlled by an electronic valve to modify the camshaft's influence on the valves.
+
+14:50.820 --> 14:59.460
+This innovation enables precise control of valve opening and closing, adapting to driving condition and throttle input.
+
+15:00.500 --> 15:06.340
+The result is improved power delivery, reduced emissions, and better fuel economy.
+
+15:09.540 --> 15:18.100
+Now let's move on the transmission system, which plays a key role in transferring engine power to the wheels while optimizing torque and speed.
+
+15:18.100 --> 15:30.980
+Transmissions act as speed reducers, allowing the engine to operate efficiently across varying demands, whether for acceleration, steady cruising, or climbing.
+
+15:33.700 --> 15:36.500
+The basis of transmission system is the gearbox.
+
+15:36.500 --> 15:42.420
+It modifies the torque coming from the engine by selecting different gear ratios.
+
+15:43.860 --> 15:53.860
+Lower gears provide higher torque, useful for climbing or acceleration, while higher gears focus on speed and fuel efficiency during cruising.
+
+15:53.860 --> 16:06.980
+Modern gearboxes are designed to minimize power losses and maximize efficiency, offering smooth transitions between gears for optimal driving experiences.
+
+16:09.780 --> 16:13.700
+Transmissions can be manual, automatic, or a combination of both.
+
+16:13.700 --> 16:27.300
+Automated manual transmission, or AMTS, combines the mechanics of manual gearbox with automated clutch and gear shifted controls.
+
+16:28.260 --> 16:36.900
+An electronic control unit manages these operations, providing the efficiency of a manual system with the convenience of automation.
+
+16:36.900 --> 16:44.260
+Dual clutch transmissions combine the benefits of manual and automatic systems.
+
+16:45.380 --> 16:53.220
+They use two separate clutches for odd and even gears, enabling rapid gear changes with minimal power interruption.
+
+16:53.220 --> 17:02.660
+This design enhances both performance and fuel efficiency, making it a preferred choice in high-performance and luxury vehicles.
+
+17:05.860 --> 17:12.900
+Automatic transmissions use hydraulic systems and planetary gear sets to change gears seamlessly.
+
+17:14.180 --> 17:21.860
+The torque converter replaces the clutch, enabling smooth power transfer and eliminating the need for manual gear changes.
+
+17:21.860 --> 17:26.260
+This system prioritizes comfort and easy to use.
+
+17:29.940 --> 17:33.860
+To the torque converter is a critical component of automatic transmission.
+
+17:34.820 --> 17:39.940
+Positioned between the engine and the transmission, it replaces the traditional clutch.
+
+17:41.060 --> 17:48.500
+It enables smooth power transfer during acceleration and allows the engine to idle without stalling the vehicle.
+
+17:48.500 --> 17:55.860
+Additionally, it provides torque multiplication at low speeds, improving vehicle performance.
+
+17:58.980 --> 18:05.780
+Finally, let's discuss the traction system, which determines how power is distributed to the wheels.
+
+18:05.780 --> 18:15.540
+The choice of traction system significantly impacts a vehicle's handling and performance in different driving conditions.
+
+18:19.460 --> 18:22.020
+Front wheel drive or FWD.
+
+18:22.980 --> 18:29.060
+Here the engine powers the front wheels, offering better fuel efficiency and compact design.
+
+18:29.060 --> 18:41.700
+For the rear wheel drive or FWD, the power is sent to the rear wheels, enhancing handling and performance, especially in sports car.
+
+18:41.700 --> 18:56.820
+But we have also the four wheel drive or FWD, where power is equally distributed to all wheels, making it ideal for off-road and rugged terrain.
+
+18:56.820 --> 19:14.660
+Finally, the all wheel drive or AWD, where it dynamically distributes power between axles based on traction needs, ensuring optimal performance in varying road conditions.
+
+19:14.660 --> 19:21.540
+Well, this concludes our session on vehicle subsystems.
+
+19:22.580 --> 19:31.940
+The systems for the backbone of modern automotive engineering, contributing to safety, efficiency and performance.
+
+19:31.940 --> 19:38.180
+I hope you all enjoyed my lesson, and for any doubts or questions, here you can find my email.
+
+19:38.980 --> 19:42.580
+I can only say thank you for the attention and goodbye.
+

@@ -1,0 +1,640 @@
+start	end	text
+560	10380	Hello everyone, my name is Pasquale Perrotta and we are going to explain today part of what
+10380	18080	diagnosis means in the automotive world. So before we move on to the explanation, I would
+18080	25560	just like to give you some references. So as I was saying, I am Pasquale Perrotta, here
+25560	37700	there is my email address, which is pasquale.perrotta, head sign kineton.it. And I'm starting the lesson
+37700	43660	like this because at the end of the lesson or during the lesson or days after the lesson,
+43660	53000	you might have some doubts or curiosities about this topic. So feel free whenever you want to send
+53000	60600	me an email to this email address or simply writing me a message in chat. I'll be glad
+60600	72480	to answer all your doubts and make your learning process even smoother. So today's topic is
+72480	80660	diagnosis. We'll spend probably one hour and a half or something describing this topic. This
+80660	90160	is a very huge, huge topic. So it will be divided in few lessons, few exercises. So take your
+90160	96900	time to understand every single slide that we are going to describe here. But before moving
+96900	105940	to the slides, I always like to start this lesson in this way, showing you a few videos. Let's
+105940	114760	start with this one. In Japan, we have old Chinese proverb. It say good is good, but number one is
+114760	122660	better. Now, this wretched car, so well engineered and it's top imported car in Germany. Why not we?
+125540	132600	It's big and you British think it's excellent good value for money. But what worst of all,
+132600	140420	it's number one best selling small car in Europe. And it's not from Japan. The Fiat Uno. Absolutely the
+140420	152200	number one best selling small car. So I am, I haven't lost my mind. But these are, here is another video.
+152200	162360	Here, these are all commercials of the 80s and 90s. Yeah, this one is about 80s. So let's watch this again. Let's
+162360	171960	comment it. In Japan, we have old Chinese proverb. It say good is good, but number one is better. Now, this wretched car.
+171960	180520	So, first of all, as you see, the cars coming from the 80s, all the advertisement, you know, the actual
+180520	194040	advertisement of 2023 is related to all these space cars with all kind of features inside. They look
+194040	200840	extremely futuristic and stuff like this. But in the 80s, what was important about the car was basically
+201480	210360	the mechanical advantages that a car had. So there's this guy kicking the car, those other guys just
+210360	216360	jumping on the car. Too well engineered and it's top imported car in Germany. Why not we?
+219240	226600	It's big and you're British. Yeah, space inside. I think it's excellent, good value. You can fit five
+226600	234680	people inside. But what, worst of all, it's number one best selling small car in Europe. Yeah, they,
+235480	242440	let's say, they were fast, even though the idea of fast was very different at the time. So, you know,
+243000	250200	everything that was mechanically related. And also, what was important was the price,
+250200	256200	because these cards were supposed to be cheap. So there are plenty of advertisement here. There is
+256200	277720	another one related on how... Yeah, there is also a very weird music on the background.
+286200	300120	So, once again, you see that what was important about the car was having space for the family,
+300120	305720	but not just for the family.
+317160	324120	So, you see, what was important about the car, that was for everyone, for family, for this woman
+324120	330760	going around with the dog and so on and so on. Last thing before we actually move on, as we see here
+330760	338360	that the car, again, what was the main feature of a car was about the mechanical properties of the car,
+338920	344920	the space, the robustness, the speed and stuff like this. Because as you can see, the car
+345720	352760	was like a car from 80s, where something like this, where the electronical part of the car was very,
+353400	362920	let's say, limited. So, you see, there is just a speedometer, let's say, just showing the speed of the car.
+363960	372040	Few lamps, but you see, there is nothing digital. Everything was analogical. You see also other leverage
+372040	382600	here for the side errors or DVI air, you know, what was important, yeah, again, the actuation of
+382600	390840	the windscreen cleaner and stuff like this. Okay, here, once again, the space, the rear windscreen
+390840	398440	cleaner, so, you know, everything that was mechanical, okay? So, that was, that's what was important in a car
+398440	406440	in the past. So, you can find plenty of these videos over internet. So, if you look at the advertisement
+406440	412600	of the 80s or simply, you go in a museum or wherever in the world that describes, that shows,
+414200	423240	cars from the 80s, 70s, even 90s, they are all, they are all related to the mechanical part.
+423240	432520	So, everyone stressed out the importance of the mechanical part. I actually live in Torino,
+432520	442520	and in Torino, there is a long, long history of, let's say, manufacturer in the 20s, 30s, 40s. So,
+442520	451640	the beginning of the 20th century, there were so many car makers in Torino. But what was the main
+451640	458040	thing about all these car makers is was every car was made by hand. So, basically, every car was
+458040	464840	different from the other. So, you couldn't have the same car produced in the same way every time.
+464840	470280	So, whenever you had the problem with your car, basically, you had to bring the car in the same
+470280	477960	place, the same, you know, mechanical shop where you could leave the car there and a specific,
+477960	485480	specialized person from that car maker would have checked the car and fixed the problem. Some
+485480	492920	richer car makers like, I don't know, Lamborghini or Ferrari even sent people directly where the car
+492920	500920	was actually to fix the car. So, everyone is gone, every car maker had his own strategy and idea to
+500920	506040	produce cars. So, basically, cars were different. Every car was different from another one.
+506040	516920	So, that was something possible and feasible in the 60s, 70s, those years, especially in a place
+516920	527880	like Italy or, let's say, poor countries in a way, where the amount of car per citizen, let's say,
+527880	535160	this kind of statistic, the number of cars for citizens was a very high number, which means
+535160	542920	few people had the car, okay? So, it was still possible for the lucky people getting the car to
+542920	552280	afford, you know, send someone, send a technician to fix the car. But thanks to the technology
+552280	559400	development and the fact that it was easier to produce cars in series, so it was easier to produce
+559400	564920	a higher amount of cars. And with the increase of the economy, where people could buy more stuff and
+564920	573000	started to think about buying a car, this kind of model of having cars very different from each other
+573000	578840	was not really competitive, was not really sustainable. Because one thing was sending a
+578840	587320	person to fix one car or ten cars around Italy. Another thing is sending people fixing 100 cars,
+587320	595320	1000 cars, 100,000 cars in Italy and in Europe. So, it arrived at the point where the car maker
+595960	606840	had to follow a different path. So, the path was not to create extremely original cars. Every car
+606840	613320	was completely different and completely new from the other one, but they had to start a standard process
+613320	620360	of standardization, okay? Diagnosis, what we are going to describe today is everything related to
+620360	629480	standardization, okay? So, this is the reason why the first thing we are going to say is that everything,
+629480	643480	everything, guys, that we will mention in this lesson is based on this reference, okay? The ISO 14229,
+643480	652600	Unified Diagnostic Services. You will hear so many times the UDS, okay? UDS stands for Unified Diagnostic
+652600	660040	Services and basically this is an international standard organization norm 14229. So, this is our
+660040	668920	reference. I guess at this point of the of training you have you would have already had the VOOCYCLE lesson
+668920	677160	which is specified so much and is stressed out so many times the importance of requirements. This norm
+677160	686520	stands for it's we can see this norm as a requirement for everything related to the diagnosis, okay?
+689320	696840	This lesson will be divided in many parts and here is why. So, first of all because it's a huge topic so
+696840	707960	it's very difficult to do everything in one time but the main reason is that we can divide this norm and as
+707960	715240	soon as you start working you will have this norm. So, don't be scared about remembering everything
+715240	721960	or taking crazy amount of notes just to write everything down. This norm will be available so
+721960	727640	whenever you need something you can check the norm and read things again and step by step you will learn.
+728520	737880	But before starting the this module about the diagnosis let's say that we can divide the norm basically
+739160	747480	describing it dividing it in four main areas and to give you this kind of information I'm going to use the
+748200	757400	most used software in the engineering world which is pain. So, we will have basically four main parts then
+758440	766120	you will see that are like 100 parts let's say of the norm but let's focus on four of them. So, one and
+766760	779640	this is the topic of today is the DTC which stands for Diagnostic Trouble Code. This is what we are going to
+780200	791960	see today. This is everything related to air roads, okay? So, basically the car, the electronic control units but then we will go into details about it,
+792520	799320	must be able to understand if there's something wrong and you know saving some error codes but we will
+799320	813720	go into details about it today. The other part of the norm are the RDI which is read data by identifier.
+813720	823880	This is as it looks like so with the RDI we read some data recalling an identifier. So, I will ask the
+823880	833320	electronic control unit can you give me the data inside this in that part of the memory that has got
+833320	840120	as a disidentifier and the electronic control unit will reply eventually giving you the information.
+841000	846040	The third part is the I.O. or input output.
+846040	854840	So, another lesson that you will have already done at this point is related to sensors and actuators. If you
+854840	862600	didn't get it I would suggest you to follow that lesson before going through the input output section
+862600	869560	of the diagnosis. So, as you have already heard in that lesson every electronic control unit has got
+869560	877880	different devices connected to it and one of these could be some actuators. So, through the input output
+877880	885000	commands we can command or actuate as we wish some actuators connected to the electronic control unit
+885800	893000	for testing purposes, for plenty of purposes. So, this is actually the control of actuators
+893000	899640	direct directly connected to the electronic control unit. The fourth part is related to the routine
+900760	907560	but the routine the idea behind routine is very easy because routines are basically a set of commands
+907560	916360	that are launched automatically by the electronic control unit just using one specific command. I won't
+916360	922680	go into details about it because this is subject of another video about the diagnosis. So,
+923320	932360	today we will focus only on the first part which is DTC. Guys, this is extremely important to remember
+932360	941400	that here we are still talking about the ISO 14229 which is the UDS. This is our reference then I can
+941400	950680	make it even bigger in a different color and whatever. So, our reference is this norm. So, first of all,
+950680	960040	if something is not clear, of course, you can reach me out with my email in the kinetron chat
+960040	967800	and stuff like this. But, before asking all kinds of questions about the diagnosis, first of all, please
+967800	973000	have a look to the norms because most likely the doubts that you have is already explained in the norm.
+973000	981080	Okay. So, this is extremely important. Let me see if the presentation is going otherwise I'm recording.
+981080	993320	Okay. Here we are. So, okay. We will focus on this. Okay. Diagnostic travel code. Let's see.
+993320	1007640	So, the general... How to say that? The way this lesson will go, it's not me reading some slides
+1007640	1014440	because you can do this on your own. But, I will try to give you an added value to these slides. So,
+1014440	1022280	my suggestion is to read these slides after the presentation. So, first you watch the video,
+1022280	1027720	then you read the slide, eventually you re-watch the video and stuff like this. But, in general,
+1027720	1034600	I will not read the slides. But, in this case, it is extremely important at least to read this first
+1035240	1044200	definition. Okay. So, first we read it and then we will try to divide somehow this definition in
+1044840	1054760	few parts so that we can explain in an easier way what is the diagnosis. So, let's read it first.
+1054760	1061240	Diagnosis. It is the capacity of an electronic system, control unit, equipped with microprocessor,
+1061240	1068520	to carry out a cyclic check through the acquisition, processing and comparison of component signals
+1068520	1075960	directly or indirectly connected, of both internal microprocessor, memory, etc., and external
+1075960	1082840	components belonging to the same system. The result of the diagnosis, in case of failure,
+1082840	1087880	permanent or intermittent detection through the control unit, must be recorded in the dedicated
+1087880	1094840	error of cells of non-volatile memory. Okay. So, I guess you were able to read also by yourself this
+1094840	1101480	definition. So, let's go through it again and let's divide it in simpler parts to to understand what
+1101480	1109080	this all this is all about. So, let's start here. Diagnosis is the capacity of an electronic system,
+1109080	1115320	equipped with microprocessor, to carry out a cyclic check through the acquisition, processing,
+1115320	1122280	and comparison of component signals. So, let's start from this part. I even make it red. Okay. So,
+1122280	1132040	let's start from this one. Okay. So, first of all, let's see what we are talking about. Okay. Control unit.
+1132040	1137320	Probably you already know what is an electronic control unit, but let's look for it already.
+1137320	1154200	Let's go in the image. Yes, electronic control unit. So, this is a clear example of an electronic control unit.
+1155640	1163240	Guys, I have a big suggestion here. I don't know if you have already got in the previous videos, but
+1163240	1173320	this is a suggestion I always give to everyone. This work sometimes could seem abstract. Okay. We will
+1173320	1181960	talk about bit that goes to zero, the other bit goes to one, the variable goes to three, the other map
+1181960	1189000	goes to 47. So, some things that we are going to mention could very look like
+1189000	1200200	abstract, but they are not. So, my suggestion is always to think in a most concrete possible way.
+1209960	1217240	So, the suggestion is always to think in a concrete way. Okay. From the physical point of view. So,
+1217800	1223080	okay, we mentioned the electronic control unit. What is that? This one. Okay. This is an example of an
+1223080	1229800	electronic control unit. So, what we're seeing here, it is the capacity of an electronic system,
+1229800	1235480	in this case, an electronic control unit, equipped with the microprocessor. So, it means that inside
+1235480	1242440	this metallic case, there is a microprocessor. And we see here, there is this green board basically
+1242440	1250520	to carry out the cyclic check. Okay. Through the acquisition, processing and comparison of component
+1250520	1261080	signals. Okay. So, first of all, what is this signal? So, we will have some wires going to these
+1261080	1266520	electronic control units. Okay. So, let's always think from the physical point of view, as I was saying,
+1267080	1276360	we have these electronic control units. Okay. This is a metallic element. Okay. So, it's a piece of metal
+1276360	1282920	with some electronic stuff inside. Okay. In itself, it's meaningless. It's useless. Okay. So, if you take
+1282920	1287560	this electronic control unit in your hand and it's not connected to anything, it's useless. Okay.
+1287560	1296520	So, the definition of diagnosis here says the acquisition, processing and comparison of component
+1296520	1304200	signal. So, first, the electronic control unit must be able to take these signals. So, first of all,
+1304200	1313880	we need a physical connection. Okay. This means that here, to the electronic control unit, here we have other
+1313880	1322280	examples. Okay. To the electronic control units, we will have some wires going inside. Okay. And these
+1322280	1329160	wires are connected here, where there are these connectors. Okay. So, these two big connectors that you
+1329160	1336040	see here, there are like 100 pins and we connect something to these pins. For example, we connect a
+1336040	1343240	temperature sensors. Okay. Or a potentiometer that is used to read the position of the accelerator pedal,
+1343240	1349880	for example. Okay. They must be physically connected to the electronic control unit. They could be,
+1349880	1355960	but in this case, they are connected to an electronic control unit directly using some pins. Okay.
+1355960	1362680	Probably here is an example. You see, this is the electronic control unit. And then we have the pin
+1362680	1369880	for the battery, the detonation sensor, camshaft position sensor, the coolant temperature sensors. This is a
+1369880	1377480	perfect example, actually, to understand that the electronic control unit in itself is useless,
+1377480	1384040	but then we start to connect to the electronic control unit some devices. And we do that. Why?
+1384040	1390360	Because we want to acquire signals. So, we need the sensors, for example, with the sensing part,
+1390360	1397640	reading some information. So, creating basically an information. Okay. So, the temperature sensors will read
+1397640	1404600	the temperature. It will send this information through a wire from the sensor to the electronic control unit.
+1405240	1411080	Then the electronic control unit, of course, needs, first of all, the right hardware to read this
+1411080	1417400	information. Eventually, a transceiver, if we're talking about the can, or simply that, you know,
+1417400	1425240	the right port to read this data. To process this data, because remember, most of the devices that are
+1425240	1433720	connected to the electronic control unit will send or a current or signal in a current signal or an
+1433720	1440680	information through delta voltage. Okay. But if I want to read a temperature, it means that I have
+1440680	1447080	to process the information that I read as voltage and transform this information from voltage to
+1447080	1452600	temperature. Okay. This means processing. And then we have comparison of component signals.
+1452600	1461080	So, why would we need the comparison? So, always remember, here we are talking about diagnosis. And
+1461640	1470040	on paint before, I said diagnostic trouble code. Okay. So, these words should really help you understand
+1470040	1477800	what we are talking about here. Here, we are talking about problems. Okay. So, let's hope you will never face this
+1477800	1487160	kind of topic with your cars. But basically, we are talking about errors here. Okay. So, the comparison
+1487160	1494840	of signals is needed to make sure that everything is okay. So, we take these signals. We process these
+1494840	1500840	signals. For example, let's consider we have two temperature sensors related to the battery pack of
+1500840	1514120	electric cars. The battery pack has to work in an optimized way. The battery pack has to work in a
+1514120	1519960	specific temperature range. So, to make sure that everything is okay, I have, I don't know, two
+1519960	1526840	temperature sensors. These two temperature sensors always tell me, okay, temperature is 35 degrees, 35
+1526840	1538840	because this is a secret check. As soon as the temperature is not 35, but I read, I don't know, 60
+1538840	1546440	degrees. First of all, I compare this information with another temperature sensors to make sure that the
+1546440	1552760	information is plausible and that that's not that the sensor is broken. So, if the temperature is actually 60
+1552760	1559560	60 degrees area and I read 60 degrees on both temperature sensors, then it means that I have that
+1559560	1566040	something is wrong and something is wrong with the battery pack because the temperature is higher than
+1566040	1574360	it should be. And then something will happen. Okay. But since in an electric vehicle, for example,
+1574360	1581720	the battery pack is one of the, eventually, the most important system that we have in the car,
+1581720	1589160	I need to check that everything is okay. Not once in a while, not once every 10 seconds, but probably
+1589160	1599880	this check is done once every 100 milliseconds, once every 50 milliseconds. It can be done also once every 10
+1599880	1610120	milliseconds. So, this means that we will have between 10 and, I don't know, 50 checks every second that
+1610120	1616440	everything is okay. So, here we are starting to understand what is going on from the physical point
+1616440	1623160	of view. We have the electronic control unit that is this one. We have something connected to electronic
+1623160	1630760	control units using these connectors and simple simple wires. Then we read the information from the
+1630760	1638520	sensors and we have the acquisition processing and comparison of component signals. Doing a cyclic check,
+1638520	1645320	most of the time you will see that the check of signals is cyclic with cycle time like 10 milliseconds,
+1645320	1652680	20 milliseconds, 50 milliseconds, or 100 milliseconds. So, everything, most of the checks that are done in
+1652680	1662680	a car, most of the time are less than one second. Almost all of them are the frequency is at least
+1662680	1670440	one hertz, but one hertz is already very rare. Usually, the cycle time of this kind of checks is 10
+1670440	1676600	milliseconds, 1 every 10 milliseconds, 20 milliseconds, 50 milliseconds, and stuff like this. Okay.
+1677960	1690280	Okay. So, let's move on. We have our electronic control units. We have our wonderful devices here. Oops,
+1690280	1703560	I wrongly clicked it. Anyway, now we have something connected to the electronic control unit. Nice. Let's move on
+1703560	1715800	with the definition. Component signals directly or indirectly connected of both internal and external
+1715800	1724840	components belonging to the same system. Okay. Let's change color blue like this. Now we're focusing on
+1724840	1738280	this one without the underline. Okay. So, as we were seeing in this picture, these are all components that
+1738280	1745480	are directly connected to the electronic control unit. This means that all these components have got physical
+1745480	1752520	wires connected connected to this electronic control unit. Okay. Guys, here we are not talking about
+1752520	1762360	the car yet. Okay. Here we have our metallic piece, some sensors and actuators connected to it, and these
+1762360	1770120	elements are all indirectly connected to the electronic control unit. Okay. But what is indirectly connected to
+1770120	1777080	the electronic control unit? Here it says indirectly connected. This means that we are not referring
+1777080	1783720	only on information that comes from devices directly connected to it, but we can also use information that
+1783720	1795960	comes from the CAN network, LIN network, CANFD network, Ethernet network, so from the networks. Okay. Maybe I have a situation
+1795960	1805720	where, okay, let's use, uh, once again, uh, pain. I have a situation where this is my electronic control unit,
+1805720	1813880	one. Okay. Then I have, uh, some, uh, devices connected to it, as we have seen from the, from the picture
+1813880	1824920	below. Then I have two wires related to the CAN network, and on this CAN network, I will have, uh, the echo 2, I will have the
+1824920	1835080	echo 3, I will have the echo, the echo 4, and stuff like this. Okay. So, eventually, I need an information
+1835080	1844200	that comes from a, uh, temperature sensor connected to the echo 4. This information, the information is
+1844200	1851720	created here, it's read here, goes in the electronic control unit. The electronic control unit then provides
+1851720	1858440	this information on CAN network, and then I read the information from the CAN network. So, basically,
+1858440	1865080	from, in my electronic control unit, the electronic control unit 1, I'm using the information coming
+1865080	1871720	from this, uh, from this temperature sensor that is not directly connected to the electronic control unit,
+1871720	1879960	because this is, this connection is not present. Okay. It doesn't exist, but we are using, we are getting
+1879960	1885080	the information anyway, because the information goes directly to the electronic control unit 4.
+1885640	1890920	Then, the electronic control unit 4 gives this information and provides this information on
+1890920	1897800	CAN network, and from here, then, the information could be available for our electronic control unit 1.
+1897800	1904440	So, we need that information, even though the component is not directly connected. Okay. So, here,
+1904440	1913000	we are saying, okay, we do not manage just the, or we do not read just the information coming from the devices
+1913000	1920760	that are, uh, directly connected to the electronic control unit, but I can retrieve information also from, uh,
+1920760	1928760	sensors, actuators, or other issues that are just connected to mine through the CAN network. Okay.
+1928760	1941480	Let's see. So, all of this, okay, is wonderful. So, now, we don't have just the electronic control unit, we don't have just the electronic control unit with the devices,
+1941480	1947480	but we start to have more than one electronic control unit. So, we have the electronic control unit,
+1947480	1956920	the sensors and actuators related to it, the network on which the echo communicates, and we have also other electronic control units. Okay.
+1956920	1965320	So, now, let's see, we have the car. Okay. So, let's add also the mechanical part, and we finally have a car. Okay.
+1965320	1971560	So, we started from a useless metallic piece, and we got to have the car. Okay.
+1973320	1982360	Let's focus on the last part of this definition. Okay. So, we divided finally in three parts, and we use, I don't know,
+1983080	1990920	green or maybe yellow. No, yellow is very weird. So, let's use this one. Okay.
+1992600	1999800	I'm going to underline this because this is extremely important. So, once we have everything that I was
+1999800	2009000	mentioning before, we finally says the results of the diagnosis, and guys, remember, guys, we remember,
+2009000	2016360	the diagnosis is what we were saying before. Okay. It is the capacity of an electronic system with microprocessor to
+2016360	2022440	carry out blah, blah, blah, blah, blah. Okay. So, the result of what everything we have said before is
+2023000	2041480	the results of the non-volatile memory. This means that in case something is wrong with what we have said
+2041480	2049320	before, the result must be recorded in the dedicated error cells of the non-volatile memory.
+2050920	2058200	To connect to the example that we were doing before, if we are reading temperature of the battery pack,
+2058200	2067080	and we see that the temperature is out of an acceptable range, for example, the temperature is 70 degrees,
+2067960	2078520	then the electronic control unit needs to have a software inside that has a logic, first of all,
+2078520	2086120	comparing the two signals, and a logic that in case the information that I see from the sensors is out of a
+2087480	2097320	acceptable range, then the echo realizes there is a failure, a problem, and once the the software inside
+2097320	2104920	the electronic control unit realizes that there is something wrong, an error must be recorded in the
+2104920	2113480	dedicated error cells of the non-volatile memory. So, we arrived here to say that we have a cyclic
+2113480	2120920	check of signals coming from different parts of the car. If we have an electronic control unit with a
+2120920	2129560	board, you know, we saw before this is a board, on this board and the microprocessor we upload a software,
+2130440	2134840	once we receive the physical information from the outside, then this information is acquired
+2134920	2141240	processed and processed, and thanks to the logic inside the software, everything is compared. So, if
+2141240	2149480	something is wrong, then the echo must realize there is a failure and save an error inside the
+2151480	2157720	non-volatile memory. This ends the definition.
+2157720	2165400	But, once again, this presentation is very, very nice.
+2167640	2176200	But yet, I want to go through something more with you. And once again, I have a specific suggestion. My
+2176200	2186680	suggestion is always to think from the, let's say, high level point of view. Let's always find a concrete
+2186680	2193000	example in the reality. Because really, guys, of everything you are going to see in this training,
+2193560	2201000	the diagnosis part will be probably the closest one to the real world, okay? So, with something that you
+2201000	2209720	will see even in your car, okay? So, here on the left, we have the wonderful definition that we used
+2209720	2217080	before, okay? So, everything is clear, hopefully, of what is the diagnosis. Okay, great. So,
+2219320	2229400	what, let's now consider an example, okay? So, let's move from the slide world to the real world.
+2230120	2237720	Let's say one of you is just driving on the highway, and then, for some reason, something wrong,
+2238440	2247400	there is something wrong with the accelerator. Okay, what we expect to happen? So, of course, this is a
+2247400	2255560	recorded lesson. So, I will not give, I will not get feedback from you. Usually, here, all of the nice
+2255560	2262040	answers arrive from the students. But basically, remember, remember always what is the expected
+2262040	2270200	result. We are working on improving the quality of cars. So, we have always to put ourselves inside
+2270200	2277800	these cars and think, okay, what would I expect to happen? So, we are on the highway, we are driving, we are
+2278600	2289160	following the rules of the road, and stuff like this. Then, there's something wrong with the accelerator
+2289160	2299400	pedal. So, first of all, we have a, well, we have one, we have an electronic control unit, okay?
+2299400	2305880	Let's say we have an electronic control unit managing the accelerator pedals, okay? These electronic control
+2305880	2315880	units, we said also in the past, but we are going to say it again, has got some connection with some
+2315880	2327000	devices. In this case, we have a connection with the accelerator pedal, okay? This is very bad handwriting,
+2327000	2333000	but yeah, this is it. So, we have this physical connection. So, it means that we have an electronic
+2333000	2342040	control unit with a potentiometer connected to the electronic control unit, and we are reading. So, we
+2342040	2350600	are acquiring information from this potentiometer here, acquisition. We are processing this information
+2350600	2360440	because this potentiometer gives just a level of voltage, eventually included between 0.5 and 4.5 volts, okay?
+2360440	2371560	Okay? We read this value of voltage, we convert this voltage in a percentage actuation, and we understand
+2371560	2382120	if this position is plausible, okay? So, we are acquiring information, processing information, and comparing
+2382120	2388440	information coming from a device, in this case, directly connected to the electronic control unit, because the
+2388440	2398120	the potentiometer is directly connected to the electronic control unit. We also have to say that for safety
+2398120	2405960	reason, we have two accelerator pedal potentiometer, okay? They read the same position, so they read the
+2405960	2412280	position of the accelerator pedal, but for safety reason, we have a redundancy here. So, in case one fails,
+2412280	2419960	we still have the other one. But most of all, we have two information about the same thing. So, we can
+2419960	2426840	perform a comparison between the signals. So, basically, what happens here is that Diego acquires,
+2426840	2434840	processes, and compares the information coming from these two potentiometers. If the information, if the two
+2434840	2441800	signals are plausible, which means they should be the same information, no? If I'm accelerating to 50% with my
+2441800	2449880	foot, then I should read 50% both from here and from here. So, if I read more or less 50% from these two
+2449880	2456600	inputs, then it's okay. And I check it every, probably every 10 milliseconds, probably every 5 milliseconds,
+2456600	2465320	I have this check, okay? So, every 5 milliseconds, is the voltage between 0.5 and 4.5? Yes. Are these two
+2465320	2471400	voltages the same from the two potentiometers? Yes. Okay. And every 10 milliseconds, this check is done.
+2472040	2477800	So, start to imagine the amount of information that you get in this way. How many information an
+2477800	2485640	electronic control unit has to check? And this is only related to the proper position of the accelerator
+2485640	2491960	pedal. This is one of the errors that you might have. Okay, this is one of the main ones, of course, because
+2491960	2501480	the accelerator pedal is safety relevant. But on the main electronic control units, the ECU manages even 300,
+2501480	2510600	400 diagnostic trouble calls, and so 300, 400 cyclic checks. So, you start to understand how much
+2510600	2517880	information electronic control units share. Anyway, so we have an electronic control unit that is able to read
+2517880	2524440	this data. And, of course, there is also, let's say, software inside of this electronic control unit,
+2524440	2529480	okay? Because we don't need just to read the information physically, then we have also to
+2530040	2540760	process them and compare them, okay? So, let's say that one sensor reads 80%, another one reads 10%.
+2540760	2547080	So, here, of course, there's something wrong, because they should read the same information.
+2548600	2553000	Of course, we dislike tolerance, but the information should be more or less the same.
+2553000	2561480	So, let's say that, in reality, we are pushing the accelerator pedal to 50%, but one potential meter reads
+2561480	2569640	80%, and the other one reads 10%. So, this is the issue that we were talking about, okay? We said we are on a
+2569640	2575960	highway. We are driving. We are pushing the accelerator pedal to 50%. Then, for some reason,
+2575960	2581480	one potential meter reads that we are pushing the accelerator pedal to 80%, and in that case,
+2581480	2590360	the car would accelerate. The other one reads that we are actuating at 10%. That would mean that we have
+2590360	2596280	to slow down, basically, because we are accelerating less than we were doing before. So, what happens in this
+2596280	2607320	case? Okay, of course, think about it, but I will get no feedback in this recording. But, basically,
+2607320	2612840	what should happen here is that the electronic control unit realizes, okay, there's something wrong
+2612840	2620440	here, because there cannot be a difference of 70% between the potentiometers that should create the same
+2620440	2628680	position. So, here, what happens is that the electronic control unit realize that there is something wrong.
+2629400	2633160	So, detection of
+2637080	2644200	failure, okay? So, the electronic control unit realizes, okay, there is something wrong. Detection of failure.
+2644200	2655080	So, this means that we will have a DTC, diagnostic trouble code. So, the AIQ realizes that there is
+2655080	2663720	something wrong, and the first action, apart from the actions that we mentioned before, which is acquiring,
+2663720	2670920	processing, and comparing signals in a cyclic way, and blah, blah, blah. The second step is, okay, there is a failure.
+2670920	2680360	So, here, then I save an electronic diagnostic trouble code. So, basically, I will have a code that I already
+2680360	2689160	tell you is written in three bytes, okay? So, this every code is expressed in three bytes, okay? So, we'll have
+2689160	2697240	a diagnostic trouble code, and this means, from the physical point of view, because, once again, please never
+2697240	2706920	forget to mention and find the right connection to the real-world scenario, okay? So, the thing that we
+2706920	2715320	have here is that, okay, we realized there is something wrong, and we have a three byte saved in here, okay?
+2715320	2727320	So, usually, when I do this lesson live with the students in front of me, I ask, okay, is this enough?
+2728120	2734200	I mean, you're on a highway, then the accelerator pedal is not working anymore, so is it enough that we have
+2734200	2745640	three bytes saved in a metallic piece? Of course not, because, please remember that we are driving a car
+2745640	2752600	on a highway, eventually, in 100 kilometers per hour, 130, or if you're a criminal, then it's going to be 200,
+2752600	2759640	300, or whatever. And if there is something wrong with the accelerator pedal, I just don't,
+2759640	2766600	I don't want just a code, so three bytes saved in an electronic control unit. I want that the car
+2766600	2775240	does something so that I'm safe, so that I do not get killed, and other people do not get killed.
+2775240	2784440	So, the next step is not only, okay, I save a diagnostic trouble code inside the electronic control unit,
+2784440	2791640	but once I have a code, there is a third extremely important action that will happen,
+2791640	2798520	that is a reaction base, basically, to this diagnostic trouble code. So, this is generally called
+2800120	2808760	recovery, recovery action, or lymphome action, or system action, you know, there can be
+2808760	2816200	plenty of names, but the main idea behind it is that it's not enough to have just three bytes saved
+2816200	2822200	in an electronic control unit, because having three bytes saved in the memory will not save me if I
+2822200	2829640	cannot accelerate, or if I cannot brake, or if the car, for example, decides to fall over the 80%
+2829640	2835000	activation, and starts to accelerate by itself. This will not be helpful for me, this will not save
+2835000	2841640	myself in case I have this kind of problems. So, it's not important only everything that we have
+2841640	2847480	said before, but it's extremely important, and once the electronic control unit realizes that there is a
+2847480	2855960	failure, and saves a diagnostic trouble code, then it enables a recovery action. What is a recovery action?
+2855960	2864840	Recovery action is an action, or a set of actions taken by the electronic control unit to preserve
+2865320	2874280	first, the safety of the driver, and the occupants of the vehicle. So, the passengers and drivers. So, first of all, safety.
+2876920	2883720	Second priority is the safety of the system. Third priority is related to the emissions,
+2885560	2892520	so to reduce the emissions. Fourth priority is going to be the performance of the vehicle.
+2895000	2901240	and stuff like this. Okay, so the first important thing is to preserve the safety of the driver,
+2901880	2906760	and the safety of the passengers, inside car and outside car.
+2906760	2919000	So, guys, this is extremely important. You will listen, you will work on cars, you will work on
+2920440	2926440	simulators, you will perform a lot of tests about software, about simulation, about the hardware and stuff
+2926440	2936040	like this. I don't want to be brutal, let's say, but in the past, there has been a lot of accidents
+2936040	2947000	related to some bugs not found in the software, or recovery action not working properly, or some failures
+2947000	2956040	not properly seen. DTC not saved, so that there were no recovery action. This is a very serious matter,
+2956040	2959560	because you can look for over internet. I don't want to show
+2960520	2970680	now, because I prefer to keep the tone of the lesson light, but we have also situations where,
+2971320	2979800	because of a software bug, then indeed, in such cases, the car didn't actuate recovery action,
+2979800	2984680	but simply the car started to accelerate. So the car started to accelerate by itself,
+2985560	2991320	and the people inside the car could not do anything, because the car was just accelerating by itself.
+2991960	2997960	And basically, all these people inside this kind of the cars that had this kind of problem basically
+2998840	3006440	did accidents, because the car accelerated by itself. And there is an extremely famous case of the
+3007240	3014600	Toyota. You can search over internet for Toyota unwanted acceleration, so not wanted acceleration,
+3016120	3026680	where almost 100 100 people got killed. Okay, everything happened because there were some tests that were
+3026680	3034360	not done properly, some problems inside the software, the chain that I'm showing you here didn't work
+3034360	3040600	properly. So finally, even though there were problems on the accelerator pedal, the car didn't realize,
+3040600	3046840	and the the action of the car was not to slow down the car slowly and to preserve the safety of
+3046840	3053320	drivers and passengers, but the car started to accelerate by itself. Guys, this is extremely serious
+3053320	3062280	matter. This can happen. So that's why whatever you do, not just about the argument, this is a general
+3062280	3073880	topic. Okay, this applies to everything. But this is why whatever you do, you must always find the
+3073880	3083720	connection to the real world. Never, hopefully I will never hear from you, okay, I said the variable, I
+3084280	3093880	made sure that the variable went to one and that's it. The variable in itself is nothing. If I have a DTC inside
+3093880	3103160	an electronic control unit, for me, it's just an information inside a useless piece of metal. Okay, so here,
+3103160	3111000	the bull chain has to work. So I don't care only about the software working properly inside the electronic
+3111000	3116600	control unit because these that will not be enough in case I will have actual problems on the car.
+3117400	3123880	Okay, so if you look over the internet, there are a lot, a lot, a lot of this kind of information. Okay, I don't want
+3123880	3130360	to go into details of Toyota, the unwanted acceleration case and stuff like this. But if you type over
+3130360	3136440	internet unwanted acceleration Toyota, you will see there is a very long
+3136440	3147800	lawsuit against Toyota. Toyota had to pay billions of dollars to all the victims or the families. The
+3147800	3155800	cars had to be retired and stuff like this. This is why this chain didn't work properly. Okay, so this
+3155800	3163400	is not only a chain we discuss, okay, yeah, something you have to know to start working and earn money. No,
+3163400	3173960	this is something related to safety first. Okay, nice. So once I threaten you with this dark
+3175160	3181640	information, let's move on to the first step. Because, okay, so we are here, we are on the highway,
+3181640	3188360	we are driving and then something wrong happened. The echo here realizes that there is something wrong.
+3188360	3196920	So the first reaction again is, okay, there is a DTC diagnostic trouble code saved inside the electronic
+3196920	3203960	control limit. But then what I expect is if I'm running at 100 kilometers per hour, then I expect
+3203960	3212360	that the speed of my car slowly decreases until, I don't know, zero and then the car will turn off.
+3212360	3221880	Okay, this happens because I have a DTC and once I have a DTC, a recovery kicks in. Okay, so the recovery
+3221880	3227480	will be, in this case, okay, please ignore the information that comes from the accelerator pedal
+3228200	3233800	because there's something wrong. So just ignore everything that comes from the accelerator pedal
+3233800	3241800	is useless. Just ignore it. The car, you can brake, of course, the car can even by itself slowly reduce
+3241800	3248760	the speed so that you do not get stuck all of a sudden in the highway. But you can cross the different
+3250760	3258920	lines and stop the car safely. And eventually, one of the recovery can be also that you can turn on the car,
+3258920	3266840	but the maximum speed will be 5 kilometers per hour or 10 kilometers per hour so that you can
+3266840	3274120	move the car out of the way and bring the car somewhere safe. Okay, I know that the picture here
+3274120	3279640	is not really clear, but if you followed me step by step, probably this should be very clear on how
+3280600	3290120	close is to what can happen in a real case scenario. So now, okay, let's go back to the example. We were
+3290120	3300040	driving, we had a problem, the echo realized there is a failure, it saves the DTC. First, the recovery is
+3300040	3311080	enabled. So the car stops. Okay. Every time I do this example, let's say you are driving because you
+3311080	3320120	need to go to a disco to dance or simply you're going to take, I don't know, your girlfriend, your
+3320120	3326520	boyfriend, your friends, your families, whatever. So first important thing, okay, you saved your life.
+3326520	3335160	Okay. Thanks. The car saved your life or bad. The team that tested this chain of things that must
+3335160	3339560	happen inside an electronic control unit saved your life because they did the proper job.
+3340200	3346520	Everything worked. So the echo realized it was a failure. DTC was saved. A recovery action was
+3346520	3355160	activated. So the car, you know, after there was a problem, the recovery were enabled and the car safely
+3355160	3363880	stopped. And your life is safe. Great. Then of course, I don't want to spend my life
+3363880	3371960	on the side of the highway. I want to move from there. And so one of the things could be that the
+3371960	3380200	recovery actions that are enabled are enables you to turn on the car and move the car to a maximum speed,
+3380200	3385800	for example, five, five kilometers per hour, 10 kilometers per hour, or I don't know, 50 kilometers
+3385800	3391320	per hour, whatever. So something that enables you to move from there and going somewhere, somewhere safe.
+3392200	3399000	Or even consider, let's consider the example that the car is stuck. So once you safety stop, the car is
+3399000	3413800	stuck, then someone will come pick you with a van. So they will just pull the car to the mechanical shop.
+3413800	3416760	Okay. To the mechanics. Okay. Great.
+3419560	3425960	What we want after we're safe is that our car will start working again. Okay.
+3425960	3436920	So most of the time, uh, you know, when a project is already, uh, very advanced, so, uh, everything
+3436920	3443800	already works and a car, let's say not the car that has been just released, but the car that is on the
+3443800	3451160	market after two years, let's say, we are pretty confident that the software and everything works.
+3451160	3456760	So most of the, the first check that the mechanic does is, okay, let's see what are the electron,
+3456760	3463560	the error codes that we have inside the electronic control unit. So there will be a specific diagnostic,
+3464360	3471560	uh, service that is a can message basically that is sent to the electronic control unit asking,
+3471560	3477240	can you give me the list of diagnostic trouble code that you have? The electronic control unit,
+3477240	3485240	most of the time will reply. Yes. I will give you the list of diagnostic trouble code. The echo will say,
+3485240	3492840	I have a, uh, problem about the accelerator pedal. And the intervention of the mechanic will be,
+3492840	3499080	okay, I will replace the accelerator pedal with the potentiometers related to it. Okay. This is one,
+3499080	3509400	uh, path that we can follow to fix the problem, but let's consider this happened while we are developing
+3509400	3518440	the car. So I, I don't need just to understand what was the problem, but to avoid that this problem will
+3518440	3527800	happen again, I need further additional information to understand what was happening at the moment that the
+3527800	3538040	error happened. So here I had a fourth step, uh, which I will call, let's say, uh, snapshot.
+3540680	3548520	There are, there is also another way to call them, which is freeze freeze frame.
+3548520	3559800	This is, uh, guys, this is basically a list of information of general information of the car that can
+3559800	3566840	help, uh, people that is going to analyze this problem. What was doing the car when the problem
+3566840	3573240	happened? So you will have other information about the level of the fuel or the level of the state of
+3573240	3582280	charge in case we're talking about hybrid or electric vehicle. Um, uh, I don't know that the slope of the
+3582280	3590600	road, the speed, the time since the engine was on the time, since the electronic control unit was on,
+3590600	3598920	how many K on K off were done, uh, how many kilometers the car had, uh, driven that far so far. Uh,
+3598920	3606600	uh, you know, there can be a lot, a lot of information, all the, for me, I don't know,
+3606600	3613000	the status of the doors, the status of the seat belts, uh, you know, whatever, there can be whatever
+3613000	3620120	information that can be helpful to understand what was going on when the error happened. This is done
+3620120	3631320	because this is helpful to, um, these are all useful information for people that will, um, let's say,
+3633320	3638120	work on this problem to understand why this problem on the accelerator pedal happened.
+3638840	3644360	So, guys, let's repeat the chain. We have all the hardware that we need, so the potential meters,
+3644360	3650440	the echo, the software inside the echo, and blah, blah, blah. Then something wrong happens and this
+3650440	3655880	is done through the acquisition, processing, and comparison of signals using the software logic
+3655880	3662040	inside. Then the echo detects there is a failure. This failure leads to the saving of the, of a
+3662040	3668840	diagnostic trouble code, which I will, uh, I'll remind these are three bytes inside an electronic control
+3668840	3677640	unit. Once the DTC is saved, then a recovery action is enabled, uh, using as priority the safety of the
+3677640	3684120	passengers and drivers first, then the safety of the system, then the emissions, then the performance,
+3684120	3690760	and other small stuff. Finally, every time we have a diagnostic trouble code, then a list of information
+3690760	3698440	is saved so that we can understand what was, what was going on when the error happened. Okay.
+3698840	3707640	So, this is everything related to saving the error code, uh, acting for the safety, saving the data,
+3707640	3715720	and stuff like this. Of course, we will have also information that will, um, let us understand how to,
+3717080	3725800	let's say, heal this situation. So, to remove the DTC, to remove the recovery action, and to let the car
+3725800	3737240	work, uh, properly, uh, again. Okay. Let's go back to the, uh, presentation, but I need to drink a bit.
+3744200	3744600	Okay.
+3747640	3753800	So, uh, keep in mind one very important thing.
+3756200	3764600	When we are referring to, um, a problem that we have on a car and the app OS to acquire signal,
+3764600	3770440	process signal, and compare signals, this is everything that happens inside the electronic
+3770440	3777000	control unit. Okay. So, everything we have mentioned about the example happens inside the electronic
+3777000	3782680	control unit. So, the electronic control unit acquires signals, processes them, compares them,
+3782680	3790440	uh, then, uh, saves the DTC. If there is a failure, uh, uh, actuate the recovery action,
+3790440	3795000	uh, saves is an option. All the things that we have said before. Okay. Nice.
+3795000	3805240	Once you bring your car to, uh, the mechanics or you are working as a validation team, you need to
+3806120	3814280	check the diagnosis of, uh, an electronic control unit. We actually have to connect to the car and talk to
+3814280	3823640	the car to retrieve all this information. So, we do it through a diagnostic instrument using then a
+3823640	3828920	specific communication protocol that enables us to communicate with the electronic control unit.
+3828920	3839240	The way to communicate with the electronic control unit is done through a list of CAN messages.
+3840200	3849560	These are diagnostic messages and the, the, the syntax needed to write messages and to understand
+3849560	3861720	the, the, the reply of the, of the electronic control unit is described in the ISO 14229. So, the ISO 14229
+3861720	3870120	basically is a diagnostic norms that explains what is a diagnosis, RTI, uh, IO, routine, and blah, blah, blah.
+3870760	3879400	But then once it gives you the general idea, then the UDS is a list of instructions
+3881400	3889160	that are used to, uh, for, in this case, ask the electronic control units, uh, can you give me the
+3889160	3897400	list of error code that you have in your memory? Okay. And the way to do it is using this specific, uh,
+3897400	3905480	diagnostic service, which is a CAN message. Okay. So, in the norm, you will read a lot of diagnostic
+3905480	3913720	services like, uh, diagnostic service 19, diagnostic service 22, diagnostic service 11, diagnostic service
+3913720	3920680	14, diagnostic service 2E, diagnostic service 2F, diagnostic service 31, and there are a lot,
+3920680	3927160	lot, lot of them. I've just listed the main one. Okay. What are they? They are simply
+3927640	3936680	CAN messages and every CAN message described in this, uh, norm gives you the chance to communicate in a
+3936680	3942920	way to the electronic control unit and ask the electronic control unit for or specific information
+3942920	3950840	or specific actions. I already tell you that the main, uh, uh, service, so diagnostic message that we are
+3950840	3958520	going to use for the diagnosis is the service 19. So, whenever you will have the norm, please, first of
+3958520	3961640	all, read the chapter related to the service 19.
+3964440	3971800	So, as I was saying, everything that is related to the diagnosis happens inside the electronic control unit,
+3971800	3976840	but in case we want to communicate with the electronic control unit, we will need to
+3976840	3985480	communicate with the car. So, uh, in order to communicate with the car, uh, first of all,
+3985480	3995960	you need to, so the ECU that I was mentioning before are connected to a specific port that is in all
+3995960	4004120	our cars, usually is on the bottom left side of the steering wheel. Okay, uh, probably I can show you
+4004120	4020680	here as well, uh, OBD port cars. Let's see image. Yeah, you see here, bottom left side of the, uh, steering wheel.
+4020680	4027880	Here you have the OBD port. This is a standard connector. This is used all over Europe, I guess,
+4027880	4039560	and, uh, this is the only, uh, way to the external world of a car. This is the way we can talk to the car.
+4039560	4051160	Okay, talk means sending to the electronic control unit specific, uh, messages and, uh, using the
+4051160	4059240	rules that are listed inside the ISO 14229, so the UDS norm, and understanding the reply of the electronic
+4059240	4069560	control unit using, once again, the, the set of rules explained in the ISO 14229. Okay, once again,
+4069560	4075160	I'm showing you the physical side of everything so that you can understand that here we are talking
+4075160	4080840	about something concrete. Nothing is abstract, it's not just a matter of bits,
+4080840	4085640	it's not only a matter of bytes, it's not only a matter of variables. Okay, we are talking about
+4085640	4096200	here concrete stuff. Okay, so, uh, the, the electronic control unit will arrive to this port that I was
+4096200	4103000	showing you, the OBD port, then we will have some wires connected to a CAN case, which I believe,
+4103000	4110760	I believe you have already seen in the lesson of, uh, CAN-LIN networks or a canalizer in G,
+4110760	4119080	Kanoe, anyway, past lessons, you will have already seen, uh, this, and then through a USB cable,
+4119080	4124920	then we will, you connect to your computer. In your computer, you will have a software,
+4124920	4133640	but basically with this software, you will just write the, uh, canned messages following the instructions
+4133640	4142760	explained in the norm ISO 14229 UDS, and then everything that, uh, so we send a message here,
+4142760	4147880	because in the GAN case, from the GAN case, it goes to the OBD port, and from the OBD port goes
+4147880	4154360	to the electronic control unit. The EC will reply, the reply will go back through the bull chain,
+4154360	4161640	and will arrive back to us, and using the set of rules and the information provided by the ISO 14229 UDS,
+4161640	4174600	we are able to understand, uh, the meaning of this reply. Okay, uh, great, so here, diagnostic performance,
+4174600	4182040	you see a lot of, uh, a lot of other stuff that diagnostic does, so managing a physical transmission,
+4182040	4188520	we have said that, recognizing emergencies, and we mentioned it, uh, implementing a full-time management
+4188520	4195720	procedure, which means, okay, there is a failure, I save a DTC, then I should activate recovery action,
+4195720	4202520	I should save a snapshot, uh, these are all the criteria, once they are met, I can also delete
+4202520	4208280	the error code, because I'm sure everything is okay, so fault management procedure in general.
+4209160	4214920	The engineering parameters, guys, are all the information included in the snapshot, or freeze frame,
+4214920	4221320	okay, not less, not more, manage, oh, here, something that I forgot to mention, of course,
+4221320	4228920	some errors are so important that the driver must be warned, and this is when you have some warning lamps
+4228920	4235080	that you see on the cluster on the screen in your car, okay, so you have a red lamp, or I don't know,
+4235080	4240680	an orange lamp, or whatever, just telling you, okay, look, there's something wrong in the system,
+4240680	4244520	eventually, go to the service, and whatever, okay,
+4257880	4265880	okay, so to finish this first section of this lesson, let's go through some few other slides,
+4265880	4274040	um, it's very important that you keep in mind what we have already, uh, said before, okay,
+4274040	4281000	related to the acquisition, comparing, processing, comparison, uh, saving of the, recognizing the
+4281000	4288520	failure, uh, saving DTC, recovery action, and stuff like this, here we focus slightly on the
+4288520	4294040	recognition of the failures and agencies, okay, so here we are in the phase where the electronic control
+4294040	4305000	unit must acquire, um, signals, uh, process them, compare them, and through, uh, the software logic
+4305000	4312280	that the electronic control unit has inside, understanding if there is a failure, okay, so,
+4313080	4319560	uh, I will go through these slides, of course, you will read them, and you will understand them better,
+4319560	4328440	uh, so you can read also them by yourself, I will just add a couple of things, so, because most of this
+4328440	4336600	stuff are, have been already mentioned in the past, uh, the previous part of the lesson, okay, so we
+4336600	4342120	already know that the error information must be, must be stored in the non-volatile memory, okay, so we
+4342120	4351640	already know that these are the DTCs, um, um, in addition, these errors must be saved, not just in
+4351640	4358840	the RAM memory, but also in the ROM memory, because, okay, the example that we did before about the
+4358840	4364840	accelerator pedal, okay, everything, let's say, is smooth, so we do not turn off the car, basically,
+4364840	4370600	every, the car does everything by itself, then once we are safely stopped, we turn off, we turn off the
+4370600	4379240	car, but let's consider the example, we do an accident, so, uh, let's, once we, okay, let's hope
+4379240	4385880	nothing happens in this accident, but once, uh, we have to take the car, and understand what happened,
+4385880	4392520	and what was going on, then for us, it's important to know if, before the accident, there were some kind
+4392520	4397560	of problems in the car, or some kind of problem happened right before the accident, that maybe caused
+4397560	4404440	the accident, so it's extremely important that the information are not saved only in the RAM, but
+4404440	4414600	the electronic control unit has some features that, uh, let the, um, information be saved, also in the
+4414600	4422280	ROM memory, also in case of accidents. Uh, here is another information, before we mentioned,
+4422280	4427960	generically, that, uh, the electronic control unit has to provide a cyclic check, we didn't mention
+4427960	4434040	the specific vehicle condition, which this check has to be done, but basically, this check is done
+4434040	4442360	always at key-on, cranking phase, engine running, uh, vehicle running, and power latch. I'm not sure
+4442360	4451800	someone has already explained what power latch is, but basically, uh, when you turn off the car, basically,
+4451800	4459000	you can, uh, um, experience yourself that sometimes you keep listening, the fun going, or it looks like
+4459000	4465240	something is going on in the car, even though you turned off the car. So, basically, then, whenever
+4465240	4472680	you turn off the car, there are some procedures that many echos has to do, for example, saving some data,
+4472680	4481400	or, for example, if the, if the engine is too hot, then it must be, uh, cooled down. So, in all these cases,
+4481400	4490440	then, some actions are needed even though you turned the car off. Uh, so, even with the, the, the,
+4490440	4497000	the, the K off, the, the engine turned off, the power supply is still on, so the energy will be taken
+4497000	4507240	from the 12 volt battery, and, um, all the time from the power of turn K off the car, the, the, the,
+4507240	4515640	the engine, and performing the K off, to the actual, uh, disruption of the power. This is the power. So,
+4515640	4524360	the time needed from the K off to the actual disrupt of the power that the electronic control unit needs
+4524360	4532760	to perform, uh, you know, post K off procedures like saving data or keeping the actuation of some
+4532760	4537720	devices in case, I don't know, for example, the engine is too hot, it needs to be cooled down. So,
+4537720	4545160	the fan will still work to cool down the engine even though the engine is off. Okay. Um,
+4548680	4554920	in the, I'm not sure you know about the cranking phase, but I think the cranking phase is mentioned
+4554920	4561080	during the lesson of internal combustion engine. If not, you just have to know that during the crank
+4561080	4567240	phase for the physical construction of the system, the voltage of the bat of the low voltage battery
+4567720	4575560	will drop beat and this drop could create some false issues inside the electronic control unit. So,
+4575560	4581960	the software must be able to understand when we are in a cranking phase so that all the problems that
+4581960	4589000	are seen during the cranking phase will be filtered out because the drop of the voltage is not a real
+4589000	4594360	problem, but it's something physical that must happen during the cranking phase. But in case there are
+4594360	4598920	some doubts about the cranking phase, then please send me an email and eventually I will add a small
+4598920	4613400	additional explanation on this slide. Keeping in mind always the chain that I was mentioning before,
+4614360	4620360	we can have different kinds of errors. I used the example of the accelerator pedal because it's very,
+4620360	4631080	it's easy to be understood, but other possible problems are electrical problems, so hardware problems.
+4632760	4637560	Also, in the example that I did before, there could have been an hardware problem because maybe the
+4637560	4644760	sensors, the potential meters started to read a wrong position because there was an hardware problem.
+4644760	4653160	Okay, so it could be also an hardware problem, but in general the main hardware problem that we can
+4653160	4661560	have are basically three. One is the open circuit OC, so there is, I don't know, a wire has been cut,
+4661560	4668920	okay, for example. One is a short circuit to ground, so for example if we have a device that should have
+4668920	4677880	voltage between one volt and four volt, short circuit ground means that we read a zero volt, for example.
+4677880	4688280	Okay, so it's out of the accepted values. Third possible failure is short circuit to battery,
+4688280	4696360	so unless we do not have a voltage between one and four volt as we expect, but we have, for example,
+4696360	4703160	five volts, which is the power supply voltage. Okay, so these are the three main electrical problems that
+4703160	4710120	we can have, and then comparing information, so acquiring signals, processing signals, and comparing
+4710120	4719880	signals. We can also evaluate plausibility, so it means that we have many sensors or source of information
+4719880	4725320	about the same thing about the same thing. These information are compared between each other to see
+4725320	4733080	if everything makes sense. Okay, the example I was doing before of the comparison between the two
+4733080	4740600	potential meters, that was also a plausibility check because we are comparing two information,
+4740600	4745960	two information coming from two different devices, and we are making sure that these information are
+4745960	4753160	plausible. That means that the position of the accelerator pedal read by the two potentiometers is the same.
+4753160	4759800	Okay, there are also short circuits between different wires or power supply problems.
+4761160	4767960	So we can summarize everything with the electronic system failures or electrical failures, as we mentioned
+4767960	4777960	before, power supply failures or even mechanical part failures. The mechanical problems are a bit tricky because we do not have,
+4777960	4789160	I don't know, a deformation sensor on every mechanical part that we can understand if something is going wrong and there is a deformation or something.
+4789160	4800520	But using the sensors or other information that we can get from other devices, we can indirectly understand if there are mechanical problems.
+4803480	4810360	Once we know that there are no electrical problems, for example, then there could be communication problems.
+4810360	4831560	The physical connection between nodes is present. Okay, so the three nodes are all properly connected, but for some reason the communication between the two is not proper.
+4831560	4843960	So for example, I expect 10 messages from the node A to node C, but I just read eight messages, three messages, one message, or I don't read anything.
+4844760	4851080	These are all communication problems, so they are not related to an actual electrical problem.
+4851800	4857800	That could be an open circuit, short circuit to battery, short circuit to ground, but I have a communication problem.
+4857800	4866440	So I do not read properly or the information that I expect to read, and I can have here a different kind of communication problem.
+4866920	4873480	On this part, I would suggest you to read the slides because they should be very self-explained.
+4873480	4879480	Okay, there's no absent, the node faulty, node mute, bus off, and stuff like this.
+4879480	4879800	Okay.
+4884280	4892840	Okay, this information is, this slide is a bit, let's say, in advanced content, but okay, I'll explain it.
+4893480	4902440	Then I would suggest you, once you finish the video, to read this slide again, because then probably it would be easier to understand.
+4903400	4910920	So we have said basically that all the acquiring, processing and comparing signals,
+4911480	4918440	saving the DTC, actuating the recoveries and stuff like this, everything happened inside the electronic control unit, okay?
+4918440	4930840	And I said that if we want to talk to the car to know all of this information that are inside the electronic control unit, I say it again,
+4931480	4941320	we need to connect the OBD port that I mentioned here before, which is the, that is this connector that we have on the bottom left side of the steering wheel.
+4941320	4952280	And then, following the rules of the ISO 14229, we can request information or request the echo to do something and the echo will reply with the specific information.
+4952280	4952920	Great.
+4952920	4968120	So, this means that unless I connect all the hardware needs and I request information or I request something sending diagnostic messages through the hardware that I showed you before,
+4969080	4977000	there are no diagnostic information available on CAN network because we are the one asking,
+4977000	4984200	but without the external hardware, there will be no one asking diagnostic information to the electronic control unit.
+4984200	4993800	This means that as default, we do not have diagnostic information on CAN, okay, on the network.
+4994600	4995720	This is very important.
+4995720	5001080	So, it means that if there is a problem on a car, but there was no hardware connected,
+5001080	5007160	that there was no one requesting diagnostic information, we can also have a log,
+5007160	5013560	so a recording of everything that happened on the CAN network, we will have no information about the diagnosis, okay?
+5014920	5032440	But, just to give a general idea to see if there were problems, then there are just two CAN signals that talk about the diagnosis,
+5032440	5040360	which are the current fail status, which is a signal that simply says if I have an active DTC or not.
+5040920	5047720	So, if I have one problem actually active right now, then this signal goes to one.
+5047720	5055240	It will not tell me which is the DTC, which are the recoveries, which is the snapshot, which is the reason of the failure,
+5055240	5061800	which are the ways to solve the problem. It will not tell me anything, okay?
+5061800	5066840	So, all the information that I was mentioning can be retrieved using diagnostic information.
+5067320	5070760	But here, we are talking about only two signals on a CAN.
+5070760	5077080	So, the current fail status will tell me only if I have active errors.
+5078680	5086760	So, it will go to one if I have an active error, or if I have no active errors, then it will stay zero.
+5087480	5096760	The generic fail status will go to one if I have at least one error saved inside the electronic control unit,
+5096760	5102600	and it will go to zero if I have no DTC saved inside the electronic control unit.
+5102600	5115160	So, this could be a bit confusing, but it will be very much more clear once you start doing the exercises.
+5115160	5121720	So, this ends the first part.
+5123880	5128840	Then, there will be a second module of this lesson, because as I said,
+5129560	5138840	the DTC is stored inside the electronic control unit with three bytes, which is basically an ID.
+5138840	5145000	Okay, so this is the ED of the error, but then we have a fourth
+5145160	5159320	byte that says the status, so it says, okay, this is the error with the three bytes,
+5159960	5164920	and the fourth byte tells me which is the status of this error.
+5164920	5172120	Okay, so it tells me if it's active, if it's not active, if it's active right now,
+5172120	5181800	it was active in this cycle, but a few minutes ago, if it was active the last case cycle,
+5181800	5187640	two monitoring cycles before, or that it's not active, but still we have a trace in the memory.
+5187640	5194120	So, all this information can be retrieved from the fourth byte, and the fourth byte plus
+5194840	5203640	small other stuff will be the topic of the second module of this lesson.
+5204440	5209880	So, once again, my references are this one.
+5209880	5216120	So, pasquale.perrota, head sign, kinethon.it, you can send me an email, you can write
+5216120	5227480	a chat, or simply you can write an email to Automotive Training.
+5228120	5235400	This is a team where I am involved, so me or other four people will help you
+5237640	5241320	with all the questions that you might have about this topic.
+5241320	5247480	Give us feedback about the lesson. If something is missing or is not very clear,
+5247480	5253320	please let me know in the mail, and we will work on additional modules to this lesson.
+5255080	5265320	Thank you so much.

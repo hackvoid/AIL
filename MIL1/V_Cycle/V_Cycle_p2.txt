@@ -1,0 +1,2382 @@
+Hello everyone, I am Pasquale Perrotta, and this is the second module of V-Cycle Explanation.
+As all the lessons that I'm recording, the lesson will start just showing you the references, okay?
+So, here we have my reference, okay, name and surname, plus the, sorry, name and last name,
+and the email address, which is pasquale.perrotta, head sign kineton.it.
+I like to start in this way, because whenever you have, in case you have doubts after this explanation,
+or even after the explanation of the first module of the V-Cycle, and you have some curiosities, doubts, problems, whatever,
+you know, you can write an email to that, yeah, the email shown over there, or simply you can send me a message in chat.
+The aim of today's video recording is to go deeper into details about V-Cycle Explanation that you have already watched and received with the other video,
+V-Cycle Part 1. Why is this needed? This is needed because, because of, basically, one reason.
+In the, in the past video recording, what you have seen, basically, it's a simplified version of the V-Cycle,
+which looks like something like this, okay, which looks like this.
+I will not explain the V-Cycle again, using this scheme, because you have already had this explanation in the other video.
+So, I will be very fast on this slide, and then we will go through the reason why I'm recording this,
+let's say, deeper explanation about the V-Cycle.
+So, you have already seen this, so, as you know, the first and most important thing is the software requirements, okay?
+Everything starts from requirements.
+So, please, you will listen me or other people saying this many times.
+The requirements are the starting point for all the activities that we are going to do, okay?
+So, whatever you're doing, if you're working on the diagnosis, if you're working on network,
+if you're working in the car, the child, wherever you are working,
+the first input of the activities is always the requirements.
+Why so?
+Requirements are extremely important because we need a set of instructions that then have to be implemented in the software.
+So, here we have software requirements.
+Basically, these are documents, okay?
+Like Word documents, PDF documents, you know, textual documents, okay?
+These documents will, once they're prepared, let's say, they are shared to the software development team
+that will create an architecture of the software.
+We'll start to deeper these software architectures, starting to, let's say, think about big blocks
+that should, let's say, be part of the software itself.
+So, they will divide software in domains, but, yeah, we will not go into details now about that.
+And finally, the software developer team will write the actual code, okay?
+This will not be the aim of this lesson and probably of this learning phase.
+If you're following a validation program, we will not go through the phases of software architecture,
+software configuration, and software construction.
+But why this is important?
+This is important because the software developers will consider as an input software requirements.
+And then, once the software is ready, this software is delivered to the testing team
+that will start at the unit test phase, the integration test phase, and the functional test phase.
+There will be other lessons, probably the lessons related to the software verification,
+where we will enter every single block that we see here on the right side,
+the unit test, the integration test, and functional test.
+We will add some more details, but for the sake of this lesson, we will not enter these blocks.
+I want to just remind what the V-cycle looks like and add, in addition, that apart from the purple V that we see here,
+there are also gray blocks.
+These are functional test design, integration test design, and unit test design.
+So, basically, once we have the requirements, once we have software architecture or software design,
+we can start to develop some test cases, so we can prepare the tests that we have to do,
+starting to write them, and once we actually have the software,
+or the integrated hardware in the system, for example, system hardware in the loop,
+where we have more than one electronic control unit,
+or simply we have a car where we can perform a functional test,
+we can start to prepare all the tests,
+and once we have the bench to open the cars, we can actually perform the tests.
+Okay.
+So, this is a fast explanation about the V-cycle,
+and probably in the first module, something like this was already explained,
+and this V-cycle repeats itself in many phases of the project.
+So, about the design, about the requirements, about the software development,
+and stuff like this.
+Okay.
+So, this V-cycle will repeat itself many times.
+We finally get to the point of this second module.
+The point of this second module is to say,
+okay, this is wonderful.
+I mean, this is very clear, easy to understand.
+This is the process.
+Great.
+Question.
+How do we use this V-cycle in a real case scenario?
+Actually, I go to work.
+I sit on my chair in front of the computer.
+How?
+The V-cycle is going to affect my activities.
+So, the aim of this second module is to bring everything that you have seen
+in the previous presentation that is, let's say, general,
+and try to place this V-cycle on a real project.
+This is a project I was working on, and of course, I will not mention it for copyrights reasons,
+but this is actually a real case scenario I was working on,
+and we will see how all that we have said about the V-cycle actually applies also on a real case scenario.
+So, let's move to this other slide.
+You will not get this presentation yet because this is part of a bigger presentation
+that will arrive later in the validation learning and training program.
+But you can, you know, have a look at the video and then, let's say, use it to study.
+Let's just see something.
+Okay, there is a little spoiler here, but then, yeah, let's see what it is.
+So, what is that?
+I imagine that that's what you ask yourself once you have seen the first video,
+and then you received the exercise after the first video.
+In front of this slide, probably everyone would have asked himself or herself,
+okay, what am I supposed to do with this drawing?
+What are all these dots?
+What are this stuff?
+This is an intended shock, let's say, that we provide you
+because we want first to test how you react from the, let's say, didactical point of view
+that is the first module of this, of this, yeah, VooCycle topic
+and see what you're able to understand about something like this
+and how you would place the VooCycle here on a real case scenario.
+Of course, you are going to watch this video right after you have tried
+at least once or twice or three times to resolve the exercise, okay?
+Not everything is answerable from the exercise without this explanation,
+but part of it, it is.
+So, before you move on, please make sure that you have already shared
+one of your solutions of the exercise before this one will,
+this explanation will probably reply to all the questions
+that are asked for the VooCycle exercise.
+So, let's see.
+As you can imagine, this is a, yeah, of course,
+looking at the top part of the presentation,
+here we see a timeline, okay?
+What we really care about starts in 2020 and 2022.
+So, the lifespan of this project is 2020 to 2022.
+Let's start from the left part.
+So, the left part is the, let's say, first moments of a project, okay?
+And while we move on the right side of this slide,
+we are advancing in time.
+That means that the project is advancing as well,
+or at least it's supposed to advance.
+So, the maturity of the project is advancing.
+So, as you see here, in the top left part of the slide,
+there is the program approval.
+Program approval is something that really happens
+at a very high level of the project, okay?
+Oh, yeah.
+Well, probably we can use the, once again,
+the most used software in the engineering world,
+which is paint.
+So, let's use it so we can draw,
+we can draw something in here, okay?
+Okay, let's keep 100% for now.
+Okay, great.
+So, here we have the program approval, okay?
+I'll mark it in red.
+Here, guys, this is a very high level,
+high management decision.
+So, it's the management deciding,
+okay, we are going to create,
+to work on this project, okay?
+I don't know, let's call it ST project, okay?
+So, our card is the ST project, okay?
+This is the project plan for the ST project, okay?
+This is a fictional card.
+Then, let's analyze some of these lines.
+I would see, we will work on the spec freeze,
+PCR fleet, eco,
+and then this line starting from here onward,
+this line onward, and stuff like this.
+Let's start from the spec freeze.
+The spec freeze is the moment
+when a set of requirements are freeze, okay?
+Frozen freeze, you pick the right way
+to pronounce it or to say.
+This means that, okay,
+at this date, the 22nd of May,
+we will have,
+I'm just, you know, inventing numbers.
+I don't remember the actual numbers,
+but we will have,
+let's put it, let's make it smaller.
+We'll have like 25% of the requirements
+will be ready,
+and most of all,
+they will be official, okay?
+So, this means that 25% of the requirements are ready.
+As you can see here,
+there is a delta time
+that passes from here to here, okay?
+This time, this delta time, let's see,
+is the time where once we know
+that this program is going to happen,
+then there will be a team
+working on writing the requirements.
+So, here, we will have
+what is the up-left part of the V cycle,
+the software requirement.
+Do you remember the previous slide
+where we had this first block
+up-left side of the V cycle?
+Here it is.
+So, here, there will be a team
+writing software requirement.
+Of course, they will need some time
+to write these requirements,
+so they start writing the requirements,
+and they will need one month,
+two months, three months.
+It depends on how much,
+how many requirements we want to share
+for this date, the 22 of May.
+But then we will arrive that
+the 22 of May,
+the 0A release will be ready.
+This means that 25% of the requirement
+will be shared.
+This is a timeline, okay?
+Remember always to look both
+to the timeline on the top part of the slide
+and the timeline that we are working on here, okay?
+As soon as we go on the right part of the slide,
+we are advancing in time.
+You see, there are also other releases
+that we will have the 1A,
+we will have the 2A,
+but in general,
+as your general understanding,
+we will not have just three releases,
+0A, 1A, and 2A.
+In my experience,
+I've seen 0A, 0B,
+the 0C, 1A, and 2A.
+These are five milestones,
+let's say, for the requirements.
+And you can understand that from 0A,
+we will have the 25%,
+I don't know, 0B, 50%,
+0C, 75%,
+1A, 100% of the requirements.
+And then we will have another
+and last release of the requirements
+where we simply modify what was not working before
+if we realize that there was something wrong
+on the requirements.
+So we will have a last release of the requirement,
+that is the 2A.
+As you see here,
+there are no other phases after this 2A.
+So this means that all the requirements
+must be ready and finished
+within the 2A.
+After the 2A,
+there will be no new requirements.
+Of course, this is an ideal perspective,
+let's say.
+This is an ideal situation.
+Quite likely in the likelihood of a project,
+in the reality of the project,
+it happens that we will have other requirements
+in late phases of the project.
+But this is an emergency case.
+Most of the requirements should be closed
+or at least 100% of the requirements
+should be closed up and running,
+let's say,
+not modifiable,
+from the 2A on.
+The 2A is the last time
+we can upload update requirements.
+Okay.
+But let's move back
+to what we were saying before.
+So when the requirements are released here,
+let's say here we have
+the software requirement release.
+Okay.
+Where the 25% of the requirements are written.
+As you remember from the presentation
+I was showing before,
+so let's move back for one second.
+Here you see the software requirements
+is the first step.
+Then there will be other steps.
+These steps will be part of
+the software development team.
+So we will not see anything
+that happens between
+the release of the requirements
+and the release of the first software.
+The release of the first software,
+in this case,
+considering just ECHO1 timeline,
+is this B100.
+So as you see,
+the B100 is released,
+was released on 16th of September 2020,
+while the requirements
+were released 22th of May 2020.
+So there were like four months
+between the two releases.
+What happened in these two months?
+In these two months,
+it happened that
+the requirements were shared
+with the software developers.
+The software developers
+discussed the requirements
+with the specification engineer,
+so the engineer
+that wrote the requirement.
+So there is a discussion
+between the requirement engineer
+and the software developers.
+And once they agree on everything,
+then the requirements are,
+let's say, finalized.
+So these requirements
+are agreed between the parties.
+And then the software developer team
+starts to work on the requirement
+and to actually implement them
+in the software.
+How?
+First, creating a software architecture,
+then a software design,
+and finally constructing the software.
+So the requirements are shared
+and agreed between
+the requirement engineer
+and the software development team.
+And finally,
+the software development team
+starts to work on them.
+They create an architecture,
+they design the software,
+and they write the software.
+Then they release the software.
+So here we are simply
+descending the left part
+of the cycle, okay?
+So this was the software requirement,
+okay?
+And here we start to go down the V
+until we have the release
+of the first software.
+So they build the software
+and then they give us,
+so let's go down here for a while.
+And then we start to raise the V,
+okay?
+Where we find the first part
+that really matters
+to us that are following
+the validation program.
+So remember,
+this is the software requirement block.
+Then we have the software architecture block.
+We have the software design block.
+Here we have the software construction.
+And then we will have the,
+let's see,
+here at the phase of unit testing.
+So here we will receive
+the first software.
+Where we upload this software,
+so we have a bunch of lines of code,
+okay?
+But then we have to test this software.
+So to test this software,
+we will need a benchtop.
+You will see different stuff
+about these benchtops,
+different kind of benchtops,
+the car,
+and stuff like this.
+So hardware in the loop,
+software in the loop,
+whatever, okay?
+There will be many strategies
+to perform these tests.
+But for the sake of this explanation,
+we consider as an hypothesis
+that before we received the software,
+there was a team working
+in preparing the benchtop for us,
+okay?
+This will be clearer
+once you move forward
+to the training program.
+But for now,
+let's consider that
+we already have a benchtop
+that is ready to be tested.
+So we have a benchtop.
+We have the electronic control unit one.
+And when we receive the software
+related to the electronic control unit one,
+then we flash or upload the software
+on the electronic control unit
+and we start the test.
+Question.
+What kind of test do we start?
+Guys, please remember always
+that the starting point
+and the full purpose
+of the verification,
+of the validation,
+and in general,
+the testing activities
+is to make sure
+that the software
+and so the system
+behaves
+as the requirements
+described,
+okay?
+This is the reason
+why the requirements
+are always
+the most important phase,
+okay?
+They are extremely important
+because they are the input document
+for everything.
+Whenever we have to test,
+what we test
+is that the software
+behaves according
+to the requirements,
+okay?
+Requirements must enter
+in your head.
+I don't know
+if you want to
+tattoo
+these requirements
+on your heart.
+You want to write
+requirements everywhere
+on your copybook,
+wherever,
+put as a screen saver
+on your computer.
+What is extremely important
+is that you remember
+that the input
+of all,
+all,
+all the activities
+that you will see here
+in this company
+starts from
+the requirements,
+okay?
+So,
+this is actually,
+again,
+an experience
+that I had.
+So,
+I was working
+on this project
+when I received
+B100 software.
+There was another team
+working on a benchtop.
+This team provided me
+the benchtop.
+I had the electronic
+control unit one.
+I flashed the software
+and I had
+to make sure
+that the software
+behaved according
+to the 25%
+of the requirements
+that were shared
+on the zero errorings,
+okay?
+So,
+we have
+a bunch of requirements
+and we make sure
+that these requirements
+are properly implemented
+in the software,
+okay?
+As you see here,
+there is a similarities
+in colors,
+okay?
+So,
+this light blue
+is the same light blue
+that we have
+on all these points,
+okay?
+I'm just focusing
+on the development
+of ECO1,
+but as you've already
+seen in the introduction
+videos about
+the e-architecture
+or generally
+of all the electronic
+control units
+that you have
+on a car,
+you may realize
+that there are
+like 30,
+40,
+50 electronic
+control units
+inside the car.
+So,
+what we say
+for one electronic
+control unit
+may apply also
+for other 30,
+40,
+or 50 electronic
+control units.
+We have requirements
+that are related
+to the bull car,
+so it means
+that these requirements
+to be properly
+implemented
+need the collaboration
+of many electronic
+control units
+or some requirements
+that are specific
+for one electronic
+control unit.
+But anyway,
+we will
+deep this
+topic
+in further
+lessons.
+So,
+we arrived
+at the unit test
+phase.
+Okay,
+do you remember
+we are here?
+Why unit test?
+Especially
+for the first
+part of the project,
+you do not
+have
+a
+system
+that looks
+like the final
+product.
+So,
+basically,
+we do not
+have a car.
+we do not
+have a very
+advanced
+hardware in the
+loop that
+simulate the car
+because we are
+at the beginning
+of the project.
+So,
+at the beginning
+of the project,
+here,
+we just focus
+on one
+electronic
+control unit.
+This is why
+here we mentioned
+the unit test,
+which is focusing
+on testing
+just our
+component.
+So,
+here,
+most of the time,
+we have
+a simplified
+hardware in the
+loop where there
+is an ideal
+and simplified
+model of a car,
+the only
+available hardware
+is our
+electronic control
+unit and we
+work only
+with the
+electronic control
+unit 1,
+testing the
+software B100.
+You see here
+there are many
+other software,
+B110,
+B120,
+and stuff like
+this.
+This can be
+both because
+the 0A
+requirements
+couldn't be
+implemented
+fully in
+B100 and
+maybe they
+splitted part
+in B100,
+part in B110
+and other
+part of B120,
+but also because
+once we start
+testing,
+we can have
+problems and
+we will see
+what happens
+in that case.
+Let's focus on
+something very
+important that
+is up here.
+So,
+I slightly
+delete this
+part because
+I want to
+focus on
+this timeline,
+this one.
+this is the
+timeline of
+the vehicles.
+Let's
+explain this
+better.
+Where you
+see here
+Mule 1,
+Mule 1 is
+the first
+prototype ever
+of that
+project.
+This is a
+car that is
+built by hand
+basically.
+Okay?
+So,
+parts of
+other cars
+are taken,
+they're put,
+they're all
+together,
+they're put
+together,
+and we
+create
+first
+prototype.
+Is this
+just a
+random
+prototype?
+No.
+Probably
+10% of
+this car
+will be
+what we
+will find
+in the
+final product,
+while the
+90% of
+the car
+is something
+different.
+So,
+the purpose
+here is
+just to
+test the
+10% of
+the car
+that will
+be actually
+part of
+the final
+product.
+Why I'm
+focusing on
+this?
+I'm focusing
+on this
+because this
+means that
+before this
+16th of
+November,
+before,
+there are
+no cars.
+Okay?
+So,
+we are
+working on
+a project
+to create
+a car,
+to work
+on this
+car that
+we call
+ST
+project,
+but before
+16th of
+November,
+if everything
+goes according
+to the
+plan,
+we have
+no car.
+So,
+this explains
+you why
+we focus
+first on
+unit test
+because at
+the beginning
+it's extremely
+important first
+to test that
+the single
+unit works
+properly.
+Then,
+once we
+move in
+the timeline,
+we will
+have other
+electronic
+control unit,
+let's say
+in a way
+debugged,
+or at least
+other components
+that start
+to be more
+mature,
+and we can
+move to
+the next
+phase of
+the system
+testing,
+okay?
+The integration
+testing,
+sorry.
+So,
+we don't
+have just
+the test
+of one
+component,
+but then
+we start
+to put
+together
+more
+electronic
+control
+units.
+This is
+needed because,
+as I was
+mentioning
+before,
+the requirements
+are the
+feature that
+we have on
+cars,
+most of
+them imply
+the collaboration
+of more
+than one
+electronic
+control unit.
+I always
+do the
+example of
+the cruise
+control,
+or for
+example,
+the adaptive
+cruise control.
+The adaptive
+cruise control
+is a feature
+that allows
+you to
+follow a
+car without
+just braking
+or accelerating.
+The car
+will do
+everything by
+itself.
+In order
+to do
+that,
+the car
+needs to
+read information
+from the
+radar,
+from the
+camera,
+and then
+accelerate
+by itself,
+brake by
+itself.
+So,
+all these
+devices are
+not controlled
+just by one
+electronic
+control unit,
+but there
+are more
+than one,
+there are
+two,
+three,
+four,
+five electronic
+control units
+working to
+make the
+adaptive cruise
+control working
+properly in
+the car.
+So,
+it's okay
+that I have
+the single
+electronic control
+unit working
+properly,
+but then,
+in order to
+make this
+feature working
+properly also
+on a car,
+so that actually
+a driver can
+use an adaptive
+cruise control,
+it's extremely
+important that
+not just the
+unit works,
+but that also
+the different
+units participating
+with this
+feature talk
+properly to
+each other
+and make
+sure that the
+adaptive cruise
+control will
+work properly
+on a car.
+So,
+before we
+arrive to
+the testing
+phase in
+the car,
+we perform
+first unit
+test,
+then integration
+test,
+so we start
+to put together
+the electronic
+control units
+and see what
+happens when
+they talk to
+each other
+and if they
+talk properly
+to each
+other,
+and finally,
+we arrive to
+the last
+phase,
+okay,
+now this
+V is a bit
+weird,
+let's say
+it's something
+like this,
+we arrive to
+the last
+phase here,
+that is
+the new
+one,
+so here
+finally we
+have the
+first car,
+on a car
+we do not
+focus only
+on the
+single unit,
+but we
+focus on the
+whole system
+performing
+functional
+tests,
+so now
+we see that
+there is a
+connection
+between this
+V cycle
+that is
+on a slide
+and a
+V cycle
+seen on
+a real
+project,
+okay,
+so let's
+see if I
+can
+clean a
+bit the
+mess that
+I created
+over here,
+maybe it's
+better just
+to move
+here directly,
+so we're
+at this
+point,
+here you
+see we
+have the
+first V
+cycle
+drawn on
+a real
+project
+plan
+card,
+so I
+have a
+look at
+this
+slide
+for a
+while,
+okay,
+this is the
+final slide,
+so you
+see that
+V cycle
+repeats
+itself
+many,
+many,
+many times,
+okay,
+this is just
+a qualitative
+expression,
+okay,
+this doesn't
+mean that
+we have
+I don't
+know,
+1,
+2,
+3,
+4,
+5,
+6,
+I drawn
+just
+6 V
+cycles,
+but V
+cycle
+repeats
+itself
+over and
+over
+again,
+why,
+because I
+received
+the B100,
+then I
+start
+testing,
+let's
+say I
+start
+testing
+something
+in
+Mule 1,
+which is
+the first
+prototype or
+even while
+testing in
+my electronic
+control unit,
+in the unit
+test,
+I realized
+there is
+something wrong,
+there might be
+something wrong
+on the requirements,
+there could be
+something wrong
+on the
+software side,
+and stuff like
+this,
+but if
+something is
+not working,
+which means
+if the
+software and
+the system
+are not
+behaving as
+the requirement
+expects,
+then I
+raise an
+issue,
+saying,
+okay,
+there is an
+issue with
+the system,
+the issue
+is analyzed
+by,
+first of
+all,
+by us,
+so we
+perform a
+first analysis,
+and then,
+or someone
+will help us,
+and then if
+it's a
+software
+requirement,
+then the
+software must
+be modified,
+so again,
+could be an
+architectural
+problem,
+a design
+problem,
+or simply
+a one-line
+code problem,
+the software
+is modified,
+and then a
+new version
+of the software
+is released,
+so we will
+have another,
+let's say,
+V cycle,
+but this time,
+this line of
+the unit test
+will not pass
+through the
+B100,
+but will pass
+for B110.
+so every
+time you
+have a
+software release,
+there will
+be a
+V cycle,
+okay,
+or again,
+in case the
+problem were
+the requirements,
+because there
+was something
+not clear,
+or a requirement
+was not
+properly written,
+then the
+V cycle
+repeats itself,
+and requirements
+are modified,
+eventually there
+is a 0B
+release,
+as we were
+mentioning before,
+so an updated
+version of the
+requirements,
+a new
+software is
+developed,
+and then a
+new software
+is released,
+and we keep
+testing the
+requirements,
+okay,
+so we start
+testing activities,
+still trying
+to make sure
+that the
+software,
+and then the
+system,
+behaves according
+to the
+requirements,
+okay,
+okay,
+so the
+V cycle
+repeats itself
+many,
+many,
+many times,
+okay,
+so just keep
+in mind that
+this is a
+process that
+you will
+always work
+with,
+okay,
+let's go
+back to
+this picture,
+so we were
+focusing here
+on this
+timeline,
+we have just
+mentioned the
+new one,
+this is just
+an invented
+number,
+okay,
+this is not
+actually true,
+but let's
+see that on
+the new one,
+10% of the
+car is
+the,
+what we will
+actually find,
+and the
+final project,
+so the
+car that
+is actually
+sold to
+people,
+while 90%
+is something
+else.
+As we move
+on on the
+timeline,
+so moving
+on on the
+timeline,
+it means that
+the software
+is,
+every time
+there is a
+software release,
+the software
+is better,
+the software
+is more
+complete,
+we are testing
+that the
+software complies
+with the
+requirements,
+there is also
+another release
+of the
+requirements,
+so it means
+that having
+a new set
+of requirements,
+we will have
+a software
+which will
+contain more
+requirements and
+stuff like this,
+okay,
+so we
+are getting,
+as soon as we
+move on the
+right side,
+a better software
+or a more
+complete software,
+then we will
+arrive to the
+face of the
+Mule 2,
+the Mule 2,
+and once again,
+here guys,
+I'm inventing
+these numbers,
+okay,
+so I'm not sure
+it's like this,
+something around
+this,
+but yeah,
+Mule 2 is still
+a prototype,
+but in this
+case we will
+have that 50%
+of the car
+is actually
+the car
+that we will
+find on the
+market,
+while the
+other 50%
+is something
+else,
+please keep
+in mind
+that the
+Mule 1
+is the
+first actual
+car for
+that project,
+so it means
+that you
+have one
+car,
+okay,
+then Mule 2,
+since it is
+similar to
+the final
+product,
+it makes
+sense to
+have more
+than one
+Mule,
+one than
+more car,
+so that we
+can start
+performing
+some tests,
+okay,
+keep in mind
+that it's
+very helpful
+and easy
+to work
+on an
+HIL,
+because,
+so an
+hardware in
+the loop,
+because we
+have just
+one real
+hardware,
+which is the
+electronic
+control unit
+that we
+are testing,
+but then
+everything
+that is
+around the
+electronic
+control unit
+is just
+a model,
+is ideal,
+so there
+are some
+situations
+that we
+cannot test
+or some
+problems
+that we
+could not
+realize and
+understand
+testing it
+from the
+hardware in
+the loop,
+but then
+that will
+be clear
+if we
+test it
+in the
+car,
+okay,
+so guys,
+in the
+past,
+all the
+tests were
+done on
+prototypes,
+okay,
+in the past
+when the
+car were
+mechanical
+and all
+of this
+software
+stuff was
+not
+reality,
+everything
+was done
+using these
+prototypes,
+prototypes,
+but prototypes
+are very
+expensive to
+be done,
+it's very
+slow
+activities,
+if you
+break a
+prototype,
+then to
+have another
+one,
+it takes
+weeks,
+so it's
+very slow
+and very
+expensive,
+so in
+order to
+save money,
+we are
+trying to
+push
+everything,
+to do
+everything that
+is possible
+on a
+hardware in
+the loop,
+which is,
+let's say,
+easy to
+configure it,
+easy to
+replace,
+easy to
+improve and
+stuff like
+this,
+or not
+easy in
+itself,
+but easier
+than having
+a car,
+okay,
+and for
+sure,
+less expensive
+and much
+faster.
+Again,
+once we
+move on,
+we have
+another
+development
+of the
+car,
+we arrive
+at the
+BP,
+which is,
+which are
+the vehicle
+production,
+here,
+once again,
+let's say,
+we have
+that 80%
+of the
+car is
+what we
+will actually
+find on
+the market,
+and 20%
+is still
+something else,
+okay,
+so there are
+still some
+parts that
+will be
+not really
+part of
+the final
+project.
+Vehicle
+production
+phase,
+maybe even
+85%,
+okay,
+so it
+means that
+this car
+is actually
+very close
+to the
+final one.
+Once we
+have a
+car that
+is so
+close to
+the final
+one,
+this means
+that performing
+tests on
+this car
+will be
+extremely
+helpful,
+because it
+will help
+us to
+understand
+if everything
+is working,
+not just
+in a
+laboratory
+or using
+a simulator,
+but also
+using actually
+the car
+in the
+street.
+PS is the
+pre-series
+car, so
+here, let's
+say that
+95%
+of the
+car or
+even
+98%
+of the
+car is
+the car
+that we
+will have
+at the
+end.
+PRA
+is, let's
+say, here
+we have
+that actual
+cars are
+already
+delivered to
+the management
+of the
+client, just
+to see
+how a
+car is
+actually
+performing
+used by
+a normal
+driver, so
+a driver that
+is not
+technician, but
+a normal
+person having
+the car, and
+finally, if
+everything is
+going well, then
+we will
+arrive to
+this phase, which
+is the most
+important phase, the
+one that we
+always look at,
+which is, in
+this case, called
+job one.
+Job one is
+the day when
+the production
+starts, the
+production, in
+series, of
+the car
+starts.
+this is a
+name that
+is used by
+a specific
+client, there
+are other
+clients that
+call it in a
+different way, for
+example, simply
+SOP, start
+of production, or
+simply production, or
+deliver, final
+delivery, whatever,
+there are all
+kind of names for
+this phase, but
+what is extremely
+important for you
+is that you
+have always
+in mind, where
+is this job
+one, when
+is this job
+one, and
+when are the
+main milestone
+of the
+project, so
+that you
+know when
+the project is
+going to
+finish, and
+when the
+car is
+actually sold.
+So it
+means that
+from the
+job one
+on worth, the
+car started
+to be produced
+and sold
+on the
+market.
+The
+suggestion
+here, so
+is always to
+have in
+mind big
+picture of
+the project,
+okay, when
+you will
+start working,
+okay, now
+it's very
+soon, because
+you have
+just, you
+know, probably
+the second
+day of the
+company, when
+you are
+watching this
+video, you
+will know, you
+will have no
+idea of what
+you are going
+to do in
+the activities,
+but this is a
+suggestion that
+I give at
+every stage of
+the career, one
+person, when it
+starts, or even
+when they're
+an expert or
+senior profiling
+the company,
+have always a
+big picture of
+what is going
+on here,
+okay.
+A work could
+become very
+abstract, I
+mean, during
+this validation
+training, you
+will see a
+huge focus on
+variables, on
+the bit, this
+bit goes to
+one, this bit
+goes to zero,
+the variable
+goes to
+three, this
+will go to
+50 and
+stuff like
+so, things
+that looks
+like abstract
+with no
+physical meaning,
+but this is
+actually the
+contrary, because
+everything you're
+going to do
+is going to
+affect the
+volt vehicle, so
+always ask
+yourself, okay,
+what is going
+to happen if I
+do something on
+the software,
+what is going
+to happen on
+the high level
+point of view,
+because it
+will have a
+general effect
+on a car, and
+so will affect
+also this
+plan, okay.
+So, always
+looking at the
+plan, as you
+see here,
+here, there
+are these
+signs, okay,
+this is the
+symbol of
+ice, this is
+the symbol of
+sun, and
+here you have
+them again.
+These are
+symbols of
+the winter
+tests that are
+done on the
+snow, and
+these are the
+summer tests
+usually done in
+the desert or
+extremely hot
+countries.
+So, having in
+mind that this
+is going to
+happen, so
+in this
+moment, in
+this period of
+the year, there
+will be winter
+tests, I will
+make sure that
+even though, even
+if the software
+is not, you
+know, we are
+still working on
+B200 series,
+okay, so we are
+implementing the
+1A requirements,
+so we will have
+also another
+release of
+requirements,
+there will be a
+lot of other
+software in the
+future, so we
+know that the
+software is not
+still the best
+and the perfect
+one, but I
+will, I know
+that these two
+weeks, there
+will be people
+working in a
+car on the
+snow, so I
+will have to
+give the
+highest priority
+to all the
+activities that
+are related to
+the management
+of, I don't
+know, the
+ether of the
+battery packs.
+the battery
+pack will
+work in
+a specific
+temperature range
+and they need
+to have the
+batteries always
+working at that
+temperature range,
+so if the
+ether is not
+working, either
+the battery pack
+will stop working
+so the electric
+vehicle will be,
+will stuck, or
+even the
+air conditioner, I
+mean, let's
+consider people
+working at minus
+10 degrees,
+probably they
+will get
+frozen if
+they don't
+have the
+air conditioner
+or the
+ether working
+properly, so
+this is
+probably the
+contents to
+verify, to
+test, will
+be a lot,
+so among
+all the tests
+that you have
+to do, having
+a big picture
+of the project
+will help you
+to give the
+right priority
+of the stuff,
+and here we
+are always
+talking about
+the VOOCYCLE,
+you know, we
+have not changed
+the topic, because
+again, the VOOCYCLE
+is something like
+this, then we
+will have another
+requirements here,
+so we will
+have something like
+this, and
+arriving to the
+move 2, and
+so on, okay, so
+what I'm trying
+to say here is
+that this is an
+actual plan where
+you can actually
+apply the
+concepts that
+you got from
+the VOOCYCLE
+lesson, okay,
+these are the
+winter tests, these
+are the summer
+tests, and then
+we will repeat
+them once the
+everything is
+clearer, not
+everything is
+clearer, but the
+software is more
+mature, we have
+the VOOCYCLE
+cars, so it's
+much more
+meaningful to
+perform tests on
+these kind of
+cars and
+softwares, because
+the project is
+almost at the
+end, so it
+means that
+everything is,
+let's say,
+almost already
+working properly,
+okay,
+keep looking at
+the slide, there
+are so many
+things that we
+could mention,
+one of the, so
+we have, let's
+say, described
+this timeline
+about cars,
+this timeline
+related to the
+VOOCYCLE that
+are called
+Quality
+Gate, I will
+not really go
+into details
+about it, because
+this is, let's
+say, an
+advanced content,
+so we are going
+to review this
+slide further in
+the future, what
+is important
+here is to
+describe the
+PCR fleet
+thing, okay,
+this is the
+PCR fleet
+timeline, so the
+VOOCYCLE that
+we mentioned
+before, it
+applies, as I
+was saying, not
+just on one
+electronic control
+unit, but this
+process applies to
+all the electronic
+control units, so
+there will be, I
+don't know, we
+have 50
+electronic control
+units, we will
+have 50 VOOCYCLE
+in parallel going
+on, but of
+course, the car
+that we are
+working on is
+just one, okay,
+so the system, we
+are actually
+debugging and
+the system on
+which we are
+improving the
+quality, because
+let's move back
+here, if you
+see the VOOCYCLE,
+the left part is
+the software
+development part,
+but then the
+right part is the
+quality assurance,
+and as you see, as
+we move on the
+right side, we
+move from unit
+test to the
+functional test,
+we are basically
+improving the
+quality of the
+system, okay, so
+even though we
+have 50 small
+systems, and 50
+teams, for
+example, working
+on these different
+electronic control
+units, then there
+must be some
+common points
+where all these
+electronic control
+units, all this
+work come together
+and put on the
+car, everything
+works, this is
+actually what a
+PCR is, PCR
+is basically a
+release of a
+group of
+software that
+put all
+together on a
+car will be
+able to
+properly
+implement
+everything that
+is listed, in
+this case, in
+0A
+requirements, so
+specification,
+release.
+Once again, you
+see the
+color that are
+similar, okay?
+So this means that
+1A will implement
+everything that is
+being described in
+0A, the 2A
+PCR release will
+implement everything
+that has been
+defined in 1A, and
+stuff like this.
+of course, we
+have only 2A as
+a final release of
+the requirements, but
+we will have more
+than one, so more
+than the 2A
+release, we have
+the 3A, 4A, 5A, 6A,
+and stuff like this.
+We will go deeper
+into details about
+this slide once we
+will get to the
+right topic, but
+what you have to
+know is that once
+we put everything on
+a car, car is a
+very complex system
+where there are a
+lot, lot of
+systems talking to
+each other,
+collaborating, and
+working to make
+sure that one
+feature works
+properly.
+Once again, we
+can do the
+example of the
+adaptive cruise
+control.
+The adaptive cruise
+control works
+using the work
+of many teams
+that have worked
+on the
+powertrain
+electronic control
+unit, battery
+pack control
+unit, ADAS
+electronic control
+unit, all this
+stuff.
+So when the
+1A release of
+PCR happens, it
+means that all
+the suppliers
+have to provide
+a software that
+once put in a
+car, is able to
+make on a car
+this feature
+working.
+So it means that
+the brake has to
+properly talk to
+the powertrain
+electronic control
+unit.
+They both have to
+talk to the
+battery pack.
+Everything has to
+talk with the
+ADAS.
+ADAS has to
+send all the
+information in the
+right time to the
+other electronic
+control unit.
+So all these
+echoes must work
+properly together
+and all these
+echoes must have
+specific software
+to make this
+feature working
+properly on a
+car.
+Okay.
+And this happens
+every time.
+This is 1A, 2A,
+3A, 4A, 5A,
+6A.
+So as we move
+on the right
+side of the
+project, we are
+advancing.
+We are advancing
+on the timeline.
+And this means
+that everything
+will be...
+So in 1A,
+part of the car
+will work,
+2A, we have
+more contents
+working,
+3A, the car
+works quite
+well, 4A, we
+have almost
+everything we
+have just to
+tune parameters,
+5A is just
+looking forward
+to the production,
+6A is the
+final release
+where everything
+has to work
+properly.
+final words
+about this
+slide.
+Well, we
+can...
+We could
+keep describing
+what are
+these, you
+know, rectangles
+here, the
+purple one, the
+green one, blue
+one, the
+orange one.
+Okay.
+So there are a
+lot of things
+that we could
+mention, but
+the general and
+final suggestion
+that I would
+give you, and I
+already gave you
+before, so it's
+just repetition.
+Every time you
+perform an
+activity, please
+have in mind the
+general idea of
+the project, the
+general timing of
+the project.
+These documents,
+if you work on
+this, on a
+specific client,
+you will actually
+find this kind of
+layout, because it's
+still used, okay,
+for projects of
+2023, 2024,
+2025.
+So you will
+see still this
+kind of
+layout.
+But even other
+clients, other
+care makers,
+whoever, there is
+always, always a
+general plan of
+the project we are
+working on.
+So the
+suggestion here is
+do not just
+focus on your
+specific activity,
+just looking at
+your screen and
+thinking only on
+your test to be
+executed, but
+always ask to
+you're responsible.
+Can I have a
+general overview of
+the timing of the
+project I'm working
+on?
+I know that these
+things looks like
+obvious for you
+right now, but I'm
+sure, and I've seen
+so many people going
+through this program
+and then start
+working.
+Then once you start
+working, you are so
+overwhelmed by
+technical thing that
+you have to learn,
+the deadline to meet
+and stuff like this
+that you will
+completely forget to
+have a general
+perspective of the
+project.
+But just take your
+time and remember
+having a general
+perspective of the
+project will help
+you very much to
+focus on what is a
+real priority in that
+period and what is
+not, why an
+activity has to be
+done in one week
+and why another
+activity has to be
+done in three weeks
+and stuff like this.
+okay, so just to
+close with the
+proper slide and
+not just the screen
+that I was doing,
+it's very, very
+important that we
+do not just think
+of the cycle as
+this draw on a
+slide that is,
+okay, very easy to
+understand, but
+extremely far from
+the daily life
+activities.
+This is not true
+true at all because
+the VOOCYCLE will
+also apply on
+real case project
+card, project plan
+here, and you can
+see this VOOCYCLE
+repeating itself over
+and over again
+until the project
+gets to the final
+part, which is the
+production.
+Please remember
+that, okay, that we
+are debugging the
+software, so we are
+making sure that the
+software works
+properly, but the
+final goal is to
+sell cars that
+behave properly.
+Consider always
+yourself in a car
+and think, okay,
+would I like this
+behavior of the
+car?
+Would I like that
+while I'm driving on
+a highway, something
+goes wrong and the
+car doesn't realize
+anything?
+Would I like that I
+have to spend like
+5,000 hero just to
+understand a small
+problem that could
+have been very clear
+if I had done the
+proper testing phase?
+So ask always these
+questions, put yourself
+in the car and have
+always a big
+perspective view on
+the activities that
+you are doing.
+VOOCYCLE is just,
+it's not just a V
+drawn on a paper,
+it's a process that
+we actually follow on
+a daily basis.

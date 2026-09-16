@@ -1,0 +1,3412 @@
+1
+00:00:00,000 --> 00:00:12,720
+okay okay here we are so let me share the screen
+
+2
+00:00:12,720 --> 00:00:28,480
+do you see the screen guys
+
+3
+00:00:28,480 --> 00:00:39,360
+yes yeah you should see verification software at some point yes okay yeah what
+
+4
+00:00:42,480 --> 00:00:58,080
+no sorry okay nice well so this is a very huge topic verification software actually
+
+5
+00:00:58,080 --> 00:01:06,160
+a lot of people have worked on it personally I've done this activity for two years and a half working
+
+6
+00:01:06,160 --> 00:01:16,000
+on electric vehicles and this is a very first step to make you very close to what are going
+
+7
+00:01:16,000 --> 00:01:24,160
+to be the activities that you might do for for kinaton this is a very long topic comparable to
+
+8
+00:01:24,160 --> 00:01:32,960
+diagnosis let's say so hopefully we're gonna have a few exercises and review with other colleagues as
+
+9
+00:01:32,960 --> 00:01:41,200
+well and we might have also some openings for this kind of activities so specific effort would be
+
+10
+00:01:41,200 --> 00:01:53,200
+needed here so as every real teacher which I'm not but as every real teacher starts let's start with
+
+11
+00:01:53,200 --> 00:01:59,920
+some definitions so for this lesson I picked a couple of definitions that I liked let's start from the
+
+12
+00:01:59,920 --> 00:02:08,720
+first one that I called academic definition so this is let's say the correct definition to
+
+13
+00:02:09,840 --> 00:02:15,360
+yeah define what is software verification so we can even try to read it software verification
+
+14
+00:02:15,360 --> 00:02:22,560
+is a discipline of software engineering whose goal is to assure that software fully satisfies all the
+
+15
+00:02:22,560 --> 00:02:32,240
+expected requirements let's clarify something immediately well today now you're alone in the office but
+
+16
+00:02:32,240 --> 00:02:39,520
+tomorrow when other people will join you can ask them how I stressed out the importance of what I'm going
+
+17
+00:02:39,520 --> 00:02:48,320
+to do requirements when you read the requirements here you know I don't know you can do a murales in your
+
+18
+00:02:48,320 --> 00:02:57,200
+office saying requirements you can I don't know draw requirements on your copy book you can have a tattoo
+
+19
+00:02:57,200 --> 00:03:02,880
+requirements on your right or left arm whatever it helps you just remember the importance of requirements
+
+20
+00:03:03,920 --> 00:03:09,040
+so let's read it again software verification is a discipline of software engineering whose goal is to
+
+21
+00:03:09,040 --> 00:03:15,680
+assure that software fully satisfies all the expected requirements so the requirements are always
+
+22
+00:03:15,680 --> 00:03:23,040
+the input for our activities okay we work with the software most likely we will perform some tests
+
+23
+00:03:23,600 --> 00:03:29,600
+our goal is to assure that the software behaves according to the requirements so if I don't have the
+
+24
+00:03:29,600 --> 00:03:35,200
+requirements I don't know what to test I don't know how to test and most of all I don't know if the test
+
+25
+00:03:35,760 --> 00:03:43,360
+is okay or not okay because I don't know if the expected result is according to the requirements okay so
+
+26
+00:03:43,360 --> 00:03:50,000
+what you should learn from this lesson specifically is the how important requirements are and that
+
+27
+00:03:50,000 --> 00:03:56,960
+these requirements are always the input for our activities okay and this applies to everything I mean
+
+28
+00:03:56,960 --> 00:04:05,120
+to the diagnosis to can network stuff to general software features we're gonna see
+
+29
+00:04:05,120 --> 00:04:15,280
+all of them start with requirements and then tests test cases will come test execution will come test results
+
+30
+00:04:15,280 --> 00:04:20,640
+will come okay but the extremely important thing is the importance of requirements
+
+31
+00:04:23,440 --> 00:04:31,760
+and this is let's say first definition then I'll add I've added a second definition which you know it's a name
+
+32
+00:04:31,760 --> 00:04:40,640
+that I gave so you I do not suggest you to write useful definition of software verification over google because I
+
+33
+00:04:40,640 --> 00:04:49,120
+might be scared of the results that will come out but yeah this is the one that I like the main goal of
+
+34
+00:04:49,120 --> 00:04:59,040
+verification is to ensure that software is compliant with new requirements once again requirements are mentioned okay
+
+35
+00:04:59,040 --> 00:05:07,520
+so again I don't know if the meanwhile meanwhile I'm talking you are already deciding if you should get a tattoo or ask Mario
+
+36
+00:05:08,400 --> 00:05:15,600
+on Gino to paint the walls writing requirements you know I don't know you will let me know at the end of the lesson
+
+37
+00:05:16,240 --> 00:05:27,360
+but the common point here is the importance of requirements as you might already notice there are some differences between these definitions
+
+38
+00:05:28,240 --> 00:05:37,760
+and we will go through them in the next slides but since I'm a bit probably not just a bit older than you
+
+39
+00:05:38,880 --> 00:05:49,600
+I see this kind of war between you these two definitions as this battle between these two characters but I'm not sure
+
+40
+00:05:49,600 --> 00:06:05,440
+for some of you know stack and three do you know this video game yeah I know nice wow I know it so all the video game is so famous or you were as old as me so one of the two stuff
+
+41
+00:06:05,440 --> 00:06:09,980
+No, I am 25, but I used to play it when I was young.
+
+42
+00:06:10,120 --> 00:06:11,500
+I also played Mortal Kombat.
+
+43
+00:06:14,180 --> 00:06:17,040
+We have some gamers here in the office.
+
+44
+00:06:17,460 --> 00:06:18,260
+Wow, nice.
+
+45
+00:06:18,560 --> 00:06:24,200
+Last time I did the lesson, people were very happy when I showed this video game.
+
+46
+00:06:24,200 --> 00:06:28,080
+And I was happy too, because I didn't feel that old.
+
+47
+00:06:28,080 --> 00:06:36,400
+Anyway, so let's see how these two definitions, let's say, battles between each other,
+
+48
+00:06:36,500 --> 00:06:40,160
+even though they are really defining the same stuff.
+
+49
+00:06:40,960 --> 00:06:43,680
+So let's start from the academic definition.
+
+50
+00:06:44,620 --> 00:06:49,080
+Yeah, here is a kind of, it's written again.
+
+51
+00:06:50,020 --> 00:06:51,320
+Let's go through it.
+
+52
+00:06:51,440 --> 00:06:56,560
+So there are positive aspects and aspects that I would like to clarify.
+
+53
+00:06:56,560 --> 00:07:01,480
+So the positive aspect of this definition is that, of course, it's a proper definition.
+
+54
+00:07:01,680 --> 00:07:05,420
+Okay, it's in theory the correct one.
+
+55
+00:07:05,520 --> 00:07:09,300
+So if someone asks you, what is software verification?
+
+56
+00:07:09,700 --> 00:07:13,740
+Then this answer will be probably the correct one.
+
+57
+00:07:13,740 --> 00:07:20,920
+Okay, so it's a discipline of software engineering whose goal is to assure that software fully satisfies all the expected requirements.
+
+58
+00:07:20,920 --> 00:07:28,840
+Whenever you say software, checking that the software is compliant with requirements,
+
+59
+00:07:28,840 --> 00:07:38,360
+when you say that, you are almost 90% of times correct when they ask you something about it.
+
+60
+00:07:38,360 --> 00:07:42,760
+Okay, so, yeah, again, requirements.
+
+61
+00:07:42,980 --> 00:07:50,320
+That's the first thing that you should think of when talking about software verification or testing in general.
+
+62
+00:07:50,320 --> 00:08:01,360
+Okay, the only thing that it has to be commented or clarified here is the word fully.
+
+63
+00:08:01,580 --> 00:08:06,120
+As you see, I circle it with an orange kind of circle.
+
+64
+00:08:06,120 --> 00:08:15,180
+So, why so, we will see more in details why it's needed to comment it.
+
+65
+00:08:15,380 --> 00:08:17,580
+But in general, it's like this.
+
+66
+00:08:17,740 --> 00:08:21,600
+So when we work on a software or we have to test the software,
+
+67
+00:08:22,060 --> 00:08:26,820
+we have to make sure that the software satisfies all the requirements.
+
+68
+00:08:27,000 --> 00:08:28,940
+Okay, so in theory, this is correct.
+
+69
+00:08:28,940 --> 00:08:33,900
+But we will see that we can start work in the middle of the project.
+
+70
+00:08:34,380 --> 00:08:38,080
+Some requirements are copied from another project and were already tested.
+
+71
+00:08:38,640 --> 00:08:40,460
+Some other requirements are not applicable.
+
+72
+00:08:40,800 --> 00:08:46,940
+So in the working activities, sometimes we, well, not sometimes,
+
+73
+00:08:47,160 --> 00:08:54,600
+most of the times we don't have to test the requirements of all the components of all the car
+
+74
+00:08:54,600 --> 00:08:57,180
+because probably some of them have been already satisfied.
+
+75
+00:08:57,440 --> 00:09:02,660
+Some of them are not applicable or some of them have been just copied from another project.
+
+76
+00:09:03,140 --> 00:09:05,900
+And in this new project, that part of the software is the same.
+
+77
+00:09:06,060 --> 00:09:10,320
+So probably the does have to be tested again.
+
+78
+00:09:11,140 --> 00:09:13,380
+Okay, so fully is correct.
+
+79
+00:09:13,820 --> 00:09:17,100
+Satisfying all the requirements is correct in general.
+
+80
+00:09:17,580 --> 00:09:20,820
+But when we arrive to work on the practical stuff,
+
+81
+00:09:21,000 --> 00:09:23,560
+it's a bit tricky.
+
+82
+00:09:23,560 --> 00:09:27,380
+Okay, because we don't have to do everything back again every time.
+
+83
+00:09:31,720 --> 00:09:33,080
+Guys, just one sec.
+
+84
+00:09:33,120 --> 00:09:35,740
+I received an important message I should take.
+
+85
+00:09:50,920 --> 00:09:51,400
+Okay.
+
+86
+00:09:53,560 --> 00:09:58,800
+So that's why, since I didn't like completely this definition,
+
+87
+00:09:59,000 --> 00:10:01,960
+I added this definition as well, which is the useful one.
+
+88
+00:10:02,500 --> 00:10:05,480
+Here I like because there are a couple of things that
+
+89
+00:10:05,480 --> 00:10:09,900
+give me the chance to explain even better the verification.
+
+90
+00:10:10,180 --> 00:10:12,380
+First of all, is the main goal of a verification.
+
+91
+00:10:13,380 --> 00:10:16,120
+This means that there are other goals of a verification,
+
+92
+00:10:16,120 --> 00:10:18,920
+and we will see them in the next slides.
+
+93
+00:10:19,640 --> 00:10:23,560
+But the main difference compared to the other definition is that here,
+
+94
+00:10:23,560 --> 00:10:28,440
+to ensure that the software is compliant with new requirements.
+
+95
+00:10:28,440 --> 00:10:37,000
+So, as always, as I'm saying already probably it's already the 10th time that I'm saying this,
+
+96
+00:10:37,000 --> 00:10:41,160
+as always, we have to make sure that the software is compliant with the requirements.
+
+97
+00:10:41,160 --> 00:10:49,000
+But in the previous definition, they said that it has to be compliant with fully satisfies the requirements.
+
+98
+00:10:49,000 --> 00:10:52,440
+So it means all the requirements must be satisfied.
+
+99
+00:10:52,440 --> 00:10:58,520
+In this definition, let's say it's the same, but when it comes to actually perform the tests,
+
+100
+00:10:58,520 --> 00:11:04,280
+what we do is to make sure that the software is compliant with the new requirements.
+
+101
+00:11:04,280 --> 00:11:10,280
+Why this is important, because the old requirements are not important anymore.
+
+102
+00:11:10,280 --> 00:11:14,200
+No, they're important, but since they're already, I don't know,
+
+103
+00:11:15,560 --> 00:11:18,360
+old requirements, maybe they have been already tested,
+
+104
+00:11:18,360 --> 00:11:22,360
+or maybe we already know that on the software are satisfied.
+
+105
+00:11:22,360 --> 00:11:27,000
+So what we do basically here is to be, to test new requirements,
+
+106
+00:11:27,000 --> 00:11:31,400
+because that will refer to a new part of the software, okay.
+
+107
+00:11:31,400 --> 00:11:38,440
+Is this clear, guys, is the first distinction between the two?
+
+108
+00:11:38,440 --> 00:11:39,800
+Yes, yes, it's clear.
+
+109
+00:11:41,080 --> 00:11:44,360
+Okay, of course, guys, this is a weaker definition, because
+
+110
+00:11:45,960 --> 00:11:47,960
+the proper definition is the previous one.
+
+111
+00:11:48,760 --> 00:11:54,600
+The main goal, that the goal of the verification is to ensure that the software fully satisfies the requirement.
+
+112
+00:11:54,600 --> 00:11:57,640
+Okay, so this is the definition of verification.
+
+113
+00:11:58,280 --> 00:12:06,520
+But when we start working, you will notice that we won't test all the requirements every time,
+
+114
+00:12:06,520 --> 00:12:12,280
+but you will work on a delta, on new requirements, on something that is new,
+
+115
+00:12:12,280 --> 00:12:17,080
+or there was a problem before, so you never work every time on all the requirements.
+
+116
+00:12:17,080 --> 00:12:20,600
+But the final goal is to be compliant with all the requirements.
+
+117
+00:12:20,600 --> 00:12:33,640
+Okay, okay, so guys, sorry, once again, for the message that I was getting.
+
+118
+00:12:33,640 --> 00:12:47,800
+Okay, okay, let's move on.
+
+119
+00:12:49,960 --> 00:12:56,840
+So here it comes again, your dearest friend or enemy, according to how you
+
+120
+00:12:56,840 --> 00:13:02,440
+felt about it the first time you saw it, that is the WooCycle.
+
+121
+00:13:03,240 --> 00:13:06,200
+So where are we with the verification?
+
+122
+00:13:08,360 --> 00:13:13,560
+I won't go through the WooCycle again, because you already have two lessons about it,
+
+123
+00:13:13,560 --> 00:13:19,720
+so I'm sure that those two lessons are more than enough to understand the basics of the WooCycle.
+
+124
+00:13:19,720 --> 00:13:25,000
+Here is just an overview, just to remind you, and to show you once again, that the first thing,
+
+125
+00:13:25,000 --> 00:13:32,040
+also in the WooCycle, as is probably been already said in the videos, is the requirements.
+
+126
+00:13:32,040 --> 00:13:36,760
+Here it says software requirements, because this WooCycle is specific for the software,
+
+127
+00:13:37,400 --> 00:13:40,840
+but consider that for everything that is has to be,
+
+128
+00:13:43,480 --> 00:13:48,360
+that, you know, it's related to a project, there is a requirement to do it.
+
+129
+00:13:48,360 --> 00:13:53,800
+Okay, so here it's software requirements, but there might be also other kind of requirements,
+
+130
+00:13:53,800 --> 00:14:01,400
+also about, I don't know, the materials to be used, the packaging, how to ship this stuff,
+
+131
+00:14:01,400 --> 00:14:03,400
+you know, there might be requirements for everything.
+
+132
+00:14:03,960 --> 00:14:12,200
+Basically, it's the client asking how to do something, okay, and this will become a requirement.
+
+133
+00:14:12,200 --> 00:14:17,160
+In this case, it's a software requirement, but there might be also other kind of requirements as well, okay.
+
+134
+00:14:18,360 --> 00:14:23,400
+So, once again, first step is having the software requirements.
+
+135
+00:14:25,800 --> 00:14:32,520
+We will, we have some slides after, but basically requirements really are just documents, okay.
+
+136
+00:14:32,520 --> 00:14:39,080
+Think of it as, I don't know, a Word document, a PDF document, whatever, it's text, okay, most of the time,
+
+137
+00:14:39,880 --> 00:14:47,480
+saying the software should behave like this, and there is an explanation of how a specific behavior should be,
+
+138
+00:14:49,000 --> 00:14:51,640
+what is the behavior that has to be reached, okay.
+
+139
+00:14:53,480 --> 00:14:58,040
+This document is then shared with the software developers.
+
+140
+00:14:58,840 --> 00:15:06,120
+Software developers might be of the same company, might be of an external company, might be one person,
+
+141
+00:15:06,120 --> 00:15:11,960
+might be 300 people, okay, whatever, so there's not a specific rule.
+
+142
+00:15:13,560 --> 00:15:18,920
+I work with the clients where sometimes the software developers were internal,
+
+143
+00:15:18,920 --> 00:15:26,280
+some other times are external, so this distinction between internal and external is important,
+
+144
+00:15:26,280 --> 00:15:34,440
+because, of course, if the team is internal, you share the same tools, probably you have the same permissions of tools,
+
+145
+00:15:34,440 --> 00:15:40,120
+so it's much easier to communication, and you can get further access to the software as well.
+
+146
+00:15:40,760 --> 00:15:47,240
+If the software developers are external, so basically the client is giving the,
+
+147
+00:15:47,240 --> 00:15:56,120
+the burden, let's say, of doing the software to an external company, then quite likely you will have
+
+148
+00:15:56,120 --> 00:16:02,760
+few restrictions and limitations, because probably you use two different tools, a discussion on how to make
+
+149
+00:16:02,760 --> 00:16:12,120
+everything compatible must be done, or even stupidly you cannot talk, for example, over teams, for example,
+
+150
+00:16:12,120 --> 00:16:19,400
+because you are from two different companies, so this distinction between having the team internal or external
+
+151
+00:16:20,680 --> 00:16:26,520
+creates some practical issues, let's say, but for now this is a very
+
+152
+00:16:26,520 --> 00:16:33,880
+introductory lesson about verification, so we not, we will not go through all these very specific details.
+
+153
+00:16:34,840 --> 00:16:41,640
+Anyway, when a requirement is written, so when we have this document explaining how the software should behave,
+
+154
+00:16:42,600 --> 00:16:49,160
+and remember, it's just a piece of paper, okay, so there's nothing, you just have a piece of paper with a few stuff written on it,
+
+155
+00:16:50,280 --> 00:16:55,480
+then this document is given to the software developers, the software developers, of course, will not start
+
+156
+00:16:55,480 --> 00:17:02,120
+immediately doing the, the, the, the code, okay, the code lines, so first of all there will be a software architecture,
+
+157
+00:17:02,120 --> 00:17:09,080
+where will they kind of design how software should be built from a very high level point of view,
+
+158
+00:17:10,040 --> 00:17:14,680
+and then from software architecture, we move to software design and software de-verification,
+
+159
+00:17:14,680 --> 00:17:20,120
+where from this big picture, then you start to clarify specific parts of the software,
+
+160
+00:17:20,840 --> 00:17:25,880
+finally getting to the software construction, where the actual code is written, okay,
+
+161
+00:17:25,880 --> 00:17:36,280
+this lesson, generally guys, the training that you are following follow, focuses on the testing part,
+
+162
+00:17:36,280 --> 00:17:44,360
+so what happens, what happens on the left side, is not a big concern of this training,
+
+163
+00:17:45,160 --> 00:17:51,640
+I'm actually working on software requirements, so in case are needed, I can give you further
+
+164
+00:17:52,360 --> 00:17:57,960
+explanations and stuff, but what we really care about is everything that comes here,
+
+165
+00:17:58,760 --> 00:18:05,400
+from the right side, let's say of this cycle, okay, so I'm just explaining also the left part,
+
+166
+00:18:05,400 --> 00:18:13,480
+to give you a general idea of where it starts our activity, so where our, the input for our activities
+
+167
+00:18:13,480 --> 00:18:18,760
+were born, and when it comes the time when we have to work on it, okay,
+
+168
+00:18:18,760 --> 00:18:31,480
+great, so once we arrive to the software construction, then the software actually will be released,
+
+169
+00:18:32,360 --> 00:18:37,800
+once we have the software, then it comes, when, then it comes the time when we can start working,
+
+170
+00:18:37,800 --> 00:18:44,200
+because as a test engineer, the input for our activities are, let's say, two, basically, one
+
+171
+00:18:45,000 --> 00:18:51,160
+is the software requirements, because we have to know which is the intended behavior of the software,
+
+172
+00:18:52,120 --> 00:18:58,280
+two, of course, is the software, otherwise we don't know what to test, and third, of course,
+
+173
+00:18:58,280 --> 00:19:05,080
+we will need an hardware in the loop or a vehicle, but we will see it later in the slides.
+
+174
+00:19:05,080 --> 00:19:08,840
+Is this clear, guys, until here?
+
+175
+00:19:12,760 --> 00:19:13,080
+Yes.
+
+176
+00:19:15,880 --> 00:19:18,040
+Cindy, did you want to make a question?
+
+177
+00:19:19,400 --> 00:19:21,160
+No, I was just going to say yes.
+
+178
+00:19:21,160 --> 00:19:22,440
+Okay, nice, great.
+
+179
+00:19:25,160 --> 00:19:28,360
+Well, so let's move on then.
+
+180
+00:19:28,360 --> 00:19:38,360
+Yeah, yeah, here, just a note, the left part of the cycle, here we are in the software development phase,
+
+181
+00:19:38,360 --> 00:19:44,840
+once the software is ready, then we go on the right side, which is the quality assurance of the software,
+
+182
+00:19:44,840 --> 00:19:51,000
+because basically, on the left side, the software is prepared, here is ready, of course, already the
+
+183
+00:19:51,000 --> 00:19:59,480
+software developers perform some tests, but the tests that they perform are not on very complex systems
+
+184
+00:19:59,480 --> 00:20:06,280
+that we will use at work, so our job will be to raise, let's say, the quality of the software, which
+
+185
+00:20:06,280 --> 00:20:14,680
+means making sure that once this software is used, in our case, on the real system, which means on the
+
+186
+00:20:14,680 --> 00:20:21,720
+vehicle, it's not going to be dangerous, it will perform as expected, and stuff like this, okay,
+
+187
+00:20:21,720 --> 00:20:25,000
+so basically, we raise the quality of the software itself.
+
+188
+00:20:28,440 --> 00:20:38,760
+Verification side generally lies here, okay, so we receive the software and then we perform unit tests
+
+189
+00:20:38,760 --> 00:20:47,640
+about it, so we focus just on one module or one component, so one electronic control unit,
+
+190
+00:20:48,920 --> 00:20:56,680
+we make sure that the software works properly, and then we'll start a new kind of tests further,
+
+191
+00:20:56,680 --> 00:21:00,920
+the integration tests and functional tests, which imply more complex hardware in the room,
+
+192
+00:21:00,920 --> 00:21:07,560
+or even the vehicle itself, so when we talk about verification, basically, we are stuck here, let's say,
+
+193
+00:21:07,560 --> 00:21:13,240
+in software, let's say, construction, but it's not our case, because we are not software developers,
+
+194
+00:21:13,240 --> 00:21:19,960
+what we do, basically, is the unit test section, but once again, the next slides, we will have
+
+195
+00:21:19,960 --> 00:21:29,800
+further details about it. So we have already mentioned it, and these are the points that we will go through,
+
+196
+00:21:29,800 --> 00:21:35,240
+first of all, the software requirements, I hope you are already making your mind what you get,
+
+197
+00:21:35,240 --> 00:21:50,680
+what, sorry, I'm sure it was an incredible, incredibly smart thing to do, but I didn't hear anything,
+
+198
+00:21:50,680 --> 00:21:59,560
+didn't understand, but I trust you, it was a very nice thing to say, so anyway, software requirements,
+
+199
+00:21:59,560 --> 00:22:09,960
+which are the, or general requirements, which are the starting point, always, why the saying main goal
+
+200
+00:22:09,960 --> 00:22:15,080
+is very important, because the main goal of verification is to ensure that software is compliant
+
+201
+00:22:15,080 --> 00:22:20,600
+with requirements, but there are also other goals that we should achieve, and also the difference between
+
+202
+00:22:20,600 --> 00:22:25,960
+fully and new, some of the stuff I've already, let's say, explained in advance, but we will have a
+
+203
+00:22:25,960 --> 00:22:37,000
+dedicated slides for it. Okay, so, first of all, software requirements, as I already said before,
+
+204
+00:22:37,000 --> 00:22:44,920
+these are the first, first step in the whole cycle as well, the starting point, so even though we are on
+
+205
+00:22:44,920 --> 00:22:51,560
+the right side of the cycle, it's important to know what are these software requirements, because these
+
+206
+00:22:51,560 --> 00:22:59,720
+are going, morning, morning, sorry for being late, but there were a lot of traffic on my way,
+
+207
+00:23:00,680 --> 00:23:03,480
+okay, okay, I'm just sorry, thank you, okay,
+
+208
+00:23:06,360 --> 00:23:09,560
+so starting point is, as I was saying, software requirements,
+
+209
+00:23:11,240 --> 00:23:17,320
+and these are the inputs for all our activities, so whenever you start an activity,
+
+210
+00:23:17,880 --> 00:23:24,040
+for one client or another, the first thing that is, of course, related to tests and stuff,
+
+211
+00:23:25,800 --> 00:23:31,480
+one of the first questions to ask is, can I have the requirement for this specific,
+
+212
+00:23:31,480 --> 00:23:37,800
+I don't know, feature that I should test, it's important, guys, to ask, and probably to ask many
+
+213
+00:23:37,800 --> 00:23:46,040
+times, because in some situations, it's not that easy to have requirements, the process is not as smooth
+
+214
+00:23:46,040 --> 00:23:56,120
+as it's supposed to be, it's not as rich as it should be, so sometimes you should, you work on some
+
+215
+00:23:56,120 --> 00:24:02,040
+features without having the requirements, so this should not happen, first of all, ask always about
+
+216
+00:24:02,040 --> 00:24:07,400
+requirements, requirements are one of the input for your activities, without them, you are doing
+
+217
+00:24:08,200 --> 00:24:13,000
+you're just playing with the software, with the hardware in the loop, with the vehicle, okay,
+
+218
+00:24:19,320 --> 00:24:28,120
+again, here is, this is an example of a requirement, okay, so as you see, this is a document,
+
+219
+00:24:28,120 --> 00:24:32,840
+okay, probably this is an informative part, some of the requirements related to the software are,
+
+220
+00:24:33,400 --> 00:24:40,120
+let's say, very short, they're defined as atomic, okay, so the requirement should give you just one
+
+221
+00:24:40,120 --> 00:24:50,120
+instruction, a software requirement, if this signal is equal to three, then this variable goes to false,
+
+222
+00:24:50,120 --> 00:25:01,400
+for example, this is a proper requirement, very short, with one instruction, they're defined as atomic,
+
+223
+00:25:01,400 --> 00:25:08,600
+okay, so unit, basically, but also there are some parts of the requirements where the architecture
+
+224
+00:25:08,600 --> 00:25:15,160
+is explained where, you know, more high level requirements are, this is an example, so this is an example
+
+225
+00:25:15,160 --> 00:25:25,960
+related to, yeah, I mean, electric propulsion, and this is an example of an architecture, whatever,
+
+226
+00:25:25,960 --> 00:25:39,800
+this is one of the case, yeah, so basically, the, the, the, the software developer team will just get
+
+227
+00:25:39,800 --> 00:25:45,560
+this document, and out of this document, some other requirements should be, uh, defined,
+
+228
+00:25:45,560 --> 00:25:53,000
+and, guys, just to think of something, I don't know if you remember, uh, the cycle exercise that we did,
+
+229
+00:25:53,000 --> 00:25:59,800
+there was a timeline, we have the same timeline in these slides as well, but later in the presentation,
+
+230
+00:26:00,440 --> 00:26:07,720
+as you remember, from the point the project is accepted, to the moment where we have the car,
+
+231
+00:26:07,720 --> 00:26:19,960
+it, uh, probably, there is, uh, nine months or ten months of, you know, wait, uh, it, it means that
+
+232
+00:26:19,960 --> 00:26:26,920
+when we start writing the requirements, we don't even have the car, in some cases, so the requirements,
+
+233
+00:26:26,920 --> 00:26:35,400
+of course, cannot be so very, very specific, because we are just writing a document, so we cannot
+
+234
+00:26:35,400 --> 00:26:43,560
+anticipate all the problems that the car might have, or we cannot know where it's important to specify
+
+235
+00:26:44,200 --> 00:26:50,200
+the specific feature for the software stuff, so consider that the requirement at the beginning must
+
+236
+00:26:50,200 --> 00:26:59,080
+be very general, so very high level, just a very high level explanation of how the car or specific
+
+237
+00:26:59,080 --> 00:27:05,320
+system or specific component should work, but then, uh, during the timeline of the
+
+238
+00:27:05,320 --> 00:27:11,800
+project, so as soon as the project goes on, the requirements get, uh, more detailed every time,
+
+239
+00:27:11,800 --> 00:27:17,400
+okay, so these, I'm saying this, because this requirement that you see here is a very high level
+
+240
+00:27:17,400 --> 00:27:23,320
+explanation, okay, it's just an example of an architecture where you can find the basics for
+
+241
+00:27:23,320 --> 00:27:29,480
+every electric car, okay, so this is not a very detailed explanation of how
+
+242
+00:27:29,480 --> 00:27:37,560
+a car should work and what, what the software should contain just looking at this picture, okay, so
+
+243
+00:27:37,560 --> 00:27:43,880
+probably this is a first explanation, first requirement, early requirement in the project,
+
+244
+00:27:43,880 --> 00:27:49,000
+probably from these requirements a lot of others followed, okay,
+
+245
+00:27:55,560 --> 00:27:55,800
+so
+
+246
+00:27:59,480 --> 00:28:15,880
+main goal, so this is the slide I really care about, so slide 9 is the, on the second place of things to
+
+247
+00:28:15,880 --> 00:28:24,520
+learn from this lesson, the first one, as you might know already, is about requirement, uh, I remember I had,
+
+248
+00:28:24,520 --> 00:28:33,560
+let me think about it, because I remember I had the catchphrase for the, the class before yours,
+
+249
+00:28:34,600 --> 00:28:42,680
+uh, yeah, it was, uh, have the requirement, read the requirement, understand the requirement,
+
+250
+00:28:42,680 --> 00:28:48,520
+and, uh, make sure that the software is compliant with this requirement, it should be something like
+
+251
+00:28:48,520 --> 00:28:54,360
+this, and you can ask other people when they'll be back in the office, but yeah, so, and I repeated,
+
+252
+00:28:54,360 --> 00:29:05,400
+repeated that sentence and that phrase, like, uh, 50 times in lesson, uh, yeah, so have the requirement,
+
+253
+00:29:05,400 --> 00:29:11,800
+for sure, because as I would say that usually when you go to a client, the process is not as defined as
+
+254
+00:29:11,800 --> 00:29:18,360
+it should be and always supposed to be like in the slides, so first, uh, first the task is to get
+
+255
+00:29:18,360 --> 00:29:23,560
+the requirement, so have the requirement, the second task is read the requirements,
+
+256
+00:29:24,920 --> 00:29:29,560
+third task is understand the requirements, because otherwise you are doing, I don't know,
+
+257
+00:29:30,200 --> 00:29:37,080
+monkey, uh, work where you just perform mechanical stuff without understanding anything,
+
+258
+00:29:37,800 --> 00:29:43,240
+the first step is to make sure that the software is compliant with the requirements, because this is
+
+259
+00:29:43,240 --> 00:29:52,840
+actually the, the, the goal of our activity and why we are paid for if you work as a verification,
+
+260
+00:29:52,840 --> 00:30:01,320
+validation engineer, okay, uh, main goal, so let's see why this slide is so important,
+
+261
+00:30:02,040 --> 00:30:09,480
+first thing, as we were saying software requirements, once again, uh, we have said that the goal is to
+
+262
+00:30:09,480 --> 00:30:15,000
+make sure that the software is compliant with this requirement, so if the software is compliant, 100
+
+263
+00:30:15,000 --> 00:30:24,440
+compliant with the requirements, then, uh, we are working properly and this is, let's say, uh, a model expression
+
+264
+00:30:24,440 --> 00:30:31,880
+of a manager happy when you declare that the software is 100 compliant with requirements, okay,
+
+265
+00:30:33,160 --> 00:30:39,960
+but this is just one part, so let's see what there is, uh, left to discuss, we haven't mentioned
+
+266
+00:30:39,960 --> 00:30:46,840
+this central part, the gray one, the famous test cases, which I don't know if you've already written
+
+267
+00:30:46,840 --> 00:30:59,560
+in the past, or for sure you have heard about them, is extremely important to, uh, write down
+
+268
+00:30:59,560 --> 00:31:08,760
+the manual words that you do while you perform the tests, for many reasons, so you, as I was saying,
+
+269
+00:31:08,760 --> 00:31:15,400
+the input of your activities are requirements, okay, so you enter the office, you sit at your table,
+
+270
+00:31:16,120 --> 00:31:23,400
+uh, whatever you find on your desk, in your computer, or wherever, this pile of requirements, okay,
+
+271
+00:31:23,400 --> 00:31:32,200
+so just a document, once again, so you, you have accomplished the first task, which is half the
+
+272
+00:31:32,200 --> 00:31:38,600
+requirement, the second task is read the requirement, so you take this file, you start reading the
+
+273
+00:31:38,600 --> 00:31:44,600
+requirements, third task is to understand the requirement, so what are we talking about,
+
+274
+00:31:45,640 --> 00:31:49,960
+fourth task is to make sure that the software is compliant with the requirement, so,
+
+275
+00:31:51,080 --> 00:32:08,280
+to get to the, the first, for the fourth task, oh, sorry guys, the battery is low, give me just, uh, one minute,
+
+276
+00:32:08,600 --> 00:32:11,960
+last night, the battery is full of Cincinnati.
+
+277
+00:32:11,960 --> 00:32:15,340
+So, um, we have out- ills-
+
+278
+00:32:15,340 --> 00:32:45,320
+Thank you.
+
+279
+00:32:45,340 --> 00:33:01,040
+So to accomplish the fourth step, which is making sure that the software is compliant with the requirements, I have to do a couple of things.
+
+280
+00:33:01,040 --> 00:33:08,240
+So one is to, that I'm already suggesting you, which is writing the test cases.
+
+281
+00:33:08,240 --> 00:33:12,040
+So why do you think it's important to write test cases?
+
+282
+00:33:13,680 --> 00:33:16,460
+Let's think together about it.
+
+283
+00:33:17,640 --> 00:33:25,120
+Because an option could be, okay, I have the software, I have, let's say, a bench stop where I can perform the tests.
+
+284
+00:33:25,840 --> 00:33:26,860
+I just do the tests.
+
+285
+00:33:26,860 --> 00:33:29,780
+And then I say, yeah, okay, it works.
+
+286
+00:33:30,700 --> 00:33:32,780
+So why should I write test cases?
+
+287
+00:33:34,660 --> 00:33:39,860
+I see at least a couple of reasons, but let's have an open discussion about it.
+
+288
+00:33:39,860 --> 00:33:49,440
+So we can document everything and show to the client?
+
+289
+00:33:52,860 --> 00:33:55,600
+Yeah, kind of like it.
+
+290
+00:33:55,700 --> 00:33:58,340
+So document everything and show to the client.
+
+291
+00:33:58,340 --> 00:34:00,560
+What do you mean with show to the client?
+
+292
+00:34:01,140 --> 00:34:02,600
+Why should you show?
+
+293
+00:34:02,740 --> 00:34:05,140
+To verify what we have done.
+
+294
+00:34:06,100 --> 00:34:10,080
+Yeah, to show that we've made some progress maybe.
+
+295
+00:34:10,660 --> 00:34:17,620
+And to see if it's according to the requirements or it's working well.
+
+296
+00:34:17,620 --> 00:34:20,720
+Yeah, it also helps for future work.
+
+297
+00:34:22,240 --> 00:34:23,740
+Okay, okay.
+
+298
+00:34:24,040 --> 00:34:26,500
+So let's say, for example, when...
+
+299
+00:34:26,500 --> 00:34:28,640
+We've got a couple of good reasons.
+
+300
+00:34:29,100 --> 00:34:32,940
+Maybe they have to be said in a slightly different way, but they're right fast.
+
+301
+00:34:33,460 --> 00:34:33,960
+Yeah, please go ahead.
+
+302
+00:34:33,960 --> 00:34:38,760
+Maybe to see if the software has issues and it's not working properly.
+
+303
+00:34:42,000 --> 00:34:44,680
+And why should we write test cases for it?
+
+304
+00:34:44,680 --> 00:34:54,660
+I'm not saying it's wrong.
+
+305
+00:34:55,080 --> 00:34:56,120
+Yeah, I get it.
+
+306
+00:34:56,220 --> 00:34:56,520
+I get it.
+
+307
+00:34:56,860 --> 00:35:02,580
+So we write the test cases, we test them, and then we see if we have problems or not.
+
+308
+00:35:02,980 --> 00:35:05,020
+So we write the test cases.
+
+309
+00:35:05,680 --> 00:35:11,600
+I believe we think that, like, what will be the...
+
+310
+00:35:11,600 --> 00:35:12,640
+How do we say?
+
+311
+00:35:12,640 --> 00:35:14,960
+The nature, not the nature.
+
+312
+00:35:15,260 --> 00:35:15,500
+Anyway.
+
+313
+00:35:17,240 --> 00:35:19,920
+It's all in my head, but I don't know how to explain it to you.
+
+314
+00:35:21,360 --> 00:35:21,600
+So.
+
+315
+00:35:25,060 --> 00:35:30,700
+Maybe it's to make it easy for future tests.
+
+316
+00:35:30,700 --> 00:35:39,160
+Or maybe to verify the software meets the requirements.
+
+317
+00:35:41,300 --> 00:35:46,420
+And, like, we imagine what the future will be for the software.
+
+318
+00:35:46,620 --> 00:35:50,340
+So we test in different cases.
+
+319
+00:35:50,340 --> 00:35:56,400
+So we think about all the cases that the software will go through.
+
+320
+00:35:57,100 --> 00:35:58,320
+Like, we think for the future.
+
+321
+00:35:59,040 --> 00:36:01,860
+Oh, so the software works in different conditions.
+
+322
+00:36:02,040 --> 00:36:02,300
+Yeah.
+
+323
+00:36:02,360 --> 00:36:02,700
+Yeah.
+
+324
+00:36:02,880 --> 00:36:03,540
+The conditions.
+
+325
+00:36:04,900 --> 00:36:05,240
+Okay.
+
+326
+00:36:05,240 --> 00:36:09,400
+Let's try to wrap up all the nice things that you gave me about it.
+
+327
+00:36:09,780 --> 00:36:12,160
+So, okay.
+
+328
+00:36:12,160 --> 00:36:15,480
+First of all, we, you know, we have a document.
+
+329
+00:36:15,840 --> 00:36:18,280
+Sometimes we don't have the software yet.
+
+330
+00:36:18,280 --> 00:36:24,780
+So, sometimes the client might ask, okay, start to write test cases.
+
+331
+00:36:25,900 --> 00:36:30,200
+Because you can, let's say, anticipate some work.
+
+332
+00:36:30,200 --> 00:36:37,180
+So you start writing test cases, reading, having the requirement, reading the requirement, and understanding the requirement.
+
+333
+00:36:37,180 --> 00:36:46,940
+So that once you have the software and the benchtop or the car that you should use is ready, you already have all the maneuvers done.
+
+334
+00:36:46,940 --> 00:36:56,820
+So, when some of you were saying, oh, to make it easier, to make the other activities easier, the testing activities easier, or saying something like this.
+
+335
+00:36:57,160 --> 00:36:58,120
+Yeah, that's correct.
+
+336
+00:36:58,320 --> 00:37:00,820
+That's one of the goal of writing test cases.
+
+337
+00:37:00,820 --> 00:37:11,240
+So, I take the requirements, I write test cases, and maybe I share these test cases to another team that will perform test cases.
+
+338
+00:37:11,240 --> 00:37:20,180
+So, they won't have to have the requirement, read the requirement, understand the requirement, stuff like this, because all of these steps have been done by you.
+
+339
+00:37:20,180 --> 00:37:31,780
+Okay, so this is one of the reasons to write test cases, to have clear maneuvers to perform, let's say, to verify that requirement.
+
+340
+00:37:32,900 --> 00:37:41,360
+Another thing is, has probably seen you, I don't know who was saying, to show a kind of progress to the client.
+
+341
+00:37:41,360 --> 00:37:59,720
+This is not exactly true, because we have another staff to show that we have done activities, we will see later, but it's very important to have also test cases where we can say, okay, we have done, today, we have done 10 test cases, 20 test cases, 50 test cases.
+
+342
+00:37:59,720 --> 00:38:13,080
+Okay, in our world, that's a key parameter for showing progress, not just to the client, but whoever, whoever is your responsible, in Kinet or wherever, it will work.
+
+343
+00:38:13,440 --> 00:38:25,100
+Okay, and if you say, I performed 50 test cases, and your responsibility is, okay, which one, and you have nothing, how can you say you performed 50 test cases?
+
+344
+00:38:25,100 --> 00:38:33,100
+So, writing test cases is also very important, for, to show progress that you've done on the activities.
+
+345
+00:38:35,500 --> 00:38:39,020
+There are also other reasons why we write test cases.
+
+346
+00:38:39,740 --> 00:38:53,340
+Let's say, you perform, you have requirement, you write the test cases, so you have a maneuver, you perform it, okay, then for some reason, there are problems, or that feature has to be tested again.
+
+347
+00:38:55,100 --> 00:38:59,660
+Maybe, maybe, in eight months, since the first time you performed the test.
+
+348
+00:39:00,920 --> 00:39:08,940
+How can I perform the same test, exactly, the same test again, if I don't have the maneuver written down?
+
+349
+00:39:09,820 --> 00:39:22,060
+So, it's extremely important to run the test cases, also because the same test might, might be executed, not just in one software, but also, eventually, potentially, in all the softwares,
+
+350
+00:39:22,060 --> 00:39:33,980
+the same test cases, from that point on, and sometimes, you can be asked to perform the same tests, even one year later, you performed the first time that cast, that test, okay.
+
+351
+00:39:33,980 --> 00:39:50,600
+So, even though, while you are doing the test, it looks stupid to write down all the steps, like, I go in K-On, I set this variable to 3, which means, I don't know, dot open, for example.
+
+352
+00:39:50,600 --> 00:40:04,600
+Then I wait five seconds, then I, you know, when you're doing that, it's very, let's say, stupid, you don't need that, all those details, because you think, okay, I know how to do it.
+
+353
+00:40:04,600 --> 00:40:26,300
+But, but think in perspective, you might be, uh, asked to perform the exact same test, one year later, or two years later, it happened to me to perform some tests, one year later, on a specific feature, maybe I'll tell you about that later.
+
+354
+00:40:26,300 --> 00:40:40,260
+And you really should trust your version, the past version of yourself, about doing him or her a good job here, because otherwise, it's going to be a mess.
+
+355
+00:40:40,260 --> 00:41:02,040
+Okay, so, we, we said to make life easier to other tests, let's say, to say it in a proper way, writing the, let's say, checklist, so a list of tests to be executed, this is one reason, second reason is to show progresses, which is not exactly true, but more or less.
+
+356
+00:41:02,040 --> 00:41:17,500
+Another thing, as we said, is to, yeah, have a bunch of tests, and, uh, written in a specific way, so that we can, uh, perform these tests again later in the future.
+
+357
+00:41:18,940 --> 00:41:30,960
+The most important thing, guys, anyway, is that the software, software requirements are fully implemented in the software, okay, so the software is compliant with the requirements.
+
+358
+00:41:30,960 --> 00:41:41,440
+So, the process, once that we have the requirements, and each requirement must be covered at least by one test cases.
+
+359
+00:41:41,440 --> 00:41:57,260
+So, here we are saying that each line, okay, each instruction, the requirement, must have at least a test case is linked to it, because in this way, we are saying that every part of the requirements are covered at least by one test.
+
+360
+00:41:57,260 --> 00:42:25,040
+So, this means getting, this means getting close to achieving the fourth step that I was saying before, I'll just remember you that the first step is have the requirement, second step is read the requirement, the third step is understand the requirement, then let's say we have a fourth step, which is writing test cases, and then the fifth step is, uh, make sure that the software is compliant with the requirements, okay, so yeah, five steps.
+
+361
+00:42:25,040 --> 00:42:39,680
+The fourth step, which is, you know, make us very close to achieving the final goal of the verification activities, which is making sure that the software is compliant with the requirements.
+
+362
+00:42:39,680 --> 00:42:43,680
+How can I be sure that the software is compliant with the requirements?
+
+363
+00:42:43,680 --> 00:42:55,680
+Well, first of all, I have to make sure that each line, so each requirement, each instruction that I have in the requirement is covered at least, at least by one test cases.
+
+364
+00:42:55,680 --> 00:43:15,680
+Then you can have two test cases, then you can have two test cases per requirement, three test cases per requirement, maybe there is a requirement that is a bit tricky, so you cover it with the 20 test cases, okay, so there is no really a high threshold on this.
+
+365
+00:43:15,680 --> 00:43:39,500
+There is no real high threshold on this, uh, the battery is a lower threshold, the lower threshold is to have at least, at least one test cases linked to each requirement.
+
+366
+00:43:39,500 --> 00:44:05,500
+Now that I'm working on requirements, I might even say that you must have at least two test cases on requirement, one saying the software should work like this, and another test case is saying, okay, when the software, when I perform a maneuver different from the one explained in the requirement, then the software shouldn't behave as written in the requirement.
+
+367
+00:44:05,500 --> 00:44:12,500
+So the positive one, so the positive one and the negative one, okay, this is the rule generally accepted.
+
+368
+00:44:12,500 --> 00:44:30,500
+So the one test case is very minimum for, you know, doing a, almost, let's say, poor job, two test cases is actually a good way to improve your work.
+
+369
+00:44:30,500 --> 00:44:45,500
+Okay, so we are, we arrived at a point where we have the requirement, we have read the requirement, we have understood, hopefully, the requirement, we wrote the test cases, then what should I do?
+
+370
+00:44:45,500 --> 00:44:59,500
+In case you didn't get is a question for you guys.
+
+371
+00:45:09,500 --> 00:45:10,500
+Something the requirements.
+
+372
+00:45:10,500 --> 00:45:11,500
+Well, can you be much more specific?
+
+373
+00:45:11,500 --> 00:45:34,500
+So think, really think of yourself entering the office, you enter, you sit at the table, you have your file of requirements, probably digital file of requirements, you have them, you read them, understand them.
+
+374
+00:45:34,500 --> 00:45:46,500
+Then you open, I don't know, an Excel file, for example, you write your test cases, then what you have again, you just have a word file explaining how software should behave.
+
+375
+00:45:46,500 --> 00:45:52,500
+And then you have an Excel file saying which are the maneuvers to be done.
+
+376
+00:45:52,500 --> 00:45:57,500
+Then, is this enough to say, yeah, the car will work.
+
+377
+00:45:57,500 --> 00:45:59,500
+So we do the maneuvers, and then make the test.
+
+378
+00:45:59,500 --> 00:46:03,500
+Yeah, of course, of course, guys, that's the main part.
+
+379
+00:46:03,500 --> 00:46:11,500
+Okay, it's extremely important, again, to have the requirement, read the requirement, understand the requirement, write test cases.
+
+380
+00:46:11,500 --> 00:46:24,500
+Of course, these are all fundamental steps, but then, of course, we have to perform the tests, otherwise, you know, we're just, we stop just right before the main part.
+
+381
+00:46:24,500 --> 00:46:46,500
+So we perform the test, okay, according to the test cases that we've written, and the bench top, or anyway, what we have to perform the tests, we might find ourselves doing unit tests, which means tests on a specific component.
+
+382
+00:46:46,500 --> 00:47:09,500
+So I don't know, one electronic control unit, for example, or on tests of integration, integration test, which means testing a, you know, a more complex bench top where we have more than one electronic control unit or more than one module talk to each other.
+
+383
+00:47:09,500 --> 00:47:21,500
+So maybe you are testing some features that involve more than one electronic control unit, so two, three, five electronic control units talking to each other, for example.
+
+384
+00:47:21,500 --> 00:47:33,500
+And also we can get to functional tests, which are high, let's say, tests from a high level point of view, I would say, I would call them driver point of view.
+
+385
+00:47:33,500 --> 00:47:46,500
+So just think always of yourself entering the car and doing maneuvers, okay, so everything that you might do in the car that can be considered as a functional test.
+
+386
+00:47:46,500 --> 00:47:55,500
+So not really getting into details of the variables inside the electronic control unit, but just caring about the maneuver to be done in the vehicle.
+
+387
+00:47:55,500 --> 00:48:08,500
+Okay, so basically, I don't know, I will open the door, I turn right side, the steering wheel, I put in the car, first gear or whatever, okay, this kind of maneuvers.
+
+388
+00:48:08,500 --> 00:48:10,500
+Then what is missing here.
+
+389
+00:48:10,500 --> 00:48:24,500
+So we have said, we have the requirement, we did the requirement, we understand the requirement, we write test cases, we perform the test cases, then,
+
+390
+00:48:24,500 --> 00:48:38,960
+what happens here so you have a test case saying open the door turn the car on try to move the
+
+391
+00:48:38,960 --> 00:48:43,820
+car with door open okay this is the maneuver you do it then
+
+392
+00:48:54,500 --> 00:49:15,440
+then we see if everything is okay and if everything is okay I don't know what is the next step then
+
+393
+00:49:15,440 --> 00:49:20,840
+but if it has a problem we check the requirements
+
+394
+00:49:20,840 --> 00:49:31,700
+why you check the requirement if there is a problem or maybe we check our test cases I
+
+395
+00:49:31,700 --> 00:49:41,300
+think we send it back so they can fix it yeah they can fix it for developers guys so I give
+
+396
+00:49:41,300 --> 00:49:49,640
+you 15 seconds to think better about it give me just one minute you think about it I have to write
+
+397
+00:49:49,640 --> 00:50:14,480
+okay
+
+398
+00:50:14,480 --> 00:50:24,720
+okay so you were saying something that i like which means i do the test cases and
+
+399
+00:50:26,000 --> 00:50:31,600
+if something is wrong i check the requirements so it's not really clear this part
+
+400
+00:50:33,600 --> 00:50:39,520
+so please let's uh let's think and discuss about it again so we perform test cases then
+
+401
+00:50:39,520 --> 00:50:50,960
+uh then uh if the if the tests are going bad uh we will we'll say that
+
+402
+00:50:54,080 --> 00:51:01,200
+the team to remake the requirements so we can check them again and if the requirements are okay
+
+403
+00:51:02,080 --> 00:51:09,120
+we can go to the next stage i have a couple of questions so uh first one
+
+404
+00:51:10,320 --> 00:51:16,000
+how can you know that requirements are not okay that's the first question why do you say uh
+
+405
+00:51:17,120 --> 00:51:24,320
+maybe i see if the requirements are maybe it's something missing that uh we can do the test cases
+
+406
+00:51:24,320 --> 00:51:28,880
+yeah no no might be might be but the requirements are wrong
+
+407
+00:51:32,560 --> 00:51:38,000
+i just want to know why you started all i see if the requirement is wrong consider that most of the
+
+408
+00:51:38,000 --> 00:51:44,080
+the time requirements are an input to your activities so most of the time they should be
+
+409
+00:51:44,080 --> 00:51:52,320
+correct or sometimes so it's very rare that the problem are the requirements that's why i'm asking
+
+410
+00:51:52,320 --> 00:52:00,320
+why you started questioning immediately the requirements it can be of course it can happen but requirements are wrong
+
+411
+00:52:02,240 --> 00:52:07,120
+but yeah that's the second question the first question that i want to ask is you told me if
+
+412
+00:52:07,120 --> 00:52:12,240
+the test is going bad how can you know the test is going bad let's say
+
+413
+00:52:15,360 --> 00:52:22,240
+it doesn't tell the output that we act so and what is the output that you are expecting
+
+414
+00:52:22,240 --> 00:52:30,560
+now maybe for example if we expect the one it it gives for example zero and it throws a matter
+
+415
+00:52:30,560 --> 00:52:36,480
+no no it's that that's clear away from the requirements oh oh finally finally that's what
+
+416
+00:52:36,480 --> 00:52:43,200
+i wanted to hear guys the requirements are our input and the requirement says how the software should
+
+417
+00:52:43,200 --> 00:52:52,160
+behave so i write i read the requirement that says okay you enter the car if you have the door open and
+
+418
+00:52:52,160 --> 00:52:59,120
+you try to move the car the car won't move for example okay so this is an example of requirement okay
+
+419
+00:52:59,840 --> 00:53:07,520
+then you read requirement you write this case you say okay so the maneuver is i open the door i turn on
+
+420
+00:53:07,520 --> 00:53:16,080
+the car i insert the car i insert the first gear and the car the requirement does not just say the
+
+421
+00:53:16,080 --> 00:53:22,320
+manual says the manual the requirement says also what is the expected behavior the expected behavior is
+
+422
+00:53:22,320 --> 00:53:28,720
+the car will not move okay so when you write the test cases you perform the full maneuver saying open the
+
+423
+00:53:28,720 --> 00:53:37,040
+door key on turn on the car put first gear and try to move then the way to say that the test is okay
+
+424
+00:53:37,040 --> 00:53:45,920
+or the test is not okay so i suggest to you not to use the test is going bad going bad is not really
+
+425
+00:53:46,480 --> 00:53:53,440
+this is scientific the scientific part let's say here is or okay meaning the software is compliant with
+
+426
+00:53:53,440 --> 00:53:59,760
+the requirement or not okay the software is not compliant with the requirement okay you we have just two
+
+427
+00:53:59,760 --> 00:54:06,480
+options here no others so how can i know if a test is okay or a test is not okay
+
+428
+00:54:07,040 --> 00:54:13,840
+simply reading having reading understanding the requirements in the test cases you will not
+
+429
+00:54:13,840 --> 00:54:19,280
+write just the maneuver you will write the maneuver so there is a section that is called i don't know
+
+430
+00:54:20,400 --> 00:54:30,160
+test steps uh where to be done procedure of tests whatever okay every client has his own name but the
+
+431
+00:54:30,160 --> 00:54:37,840
+important thing is step is to write down all the steps and the maneuvers to be done but you have also
+
+432
+00:54:37,840 --> 00:54:46,640
+another column saying which are the the let's say the acceptance criteria the expected behavior behaviors
+
+433
+00:54:46,640 --> 00:54:54,480
+to accept the test here again everyone has fun choosing different names but the main idea is i have
+
+434
+00:54:54,480 --> 00:55:02,320
+the maneuver in the requirements i have the maneuver let's say the intended behavior so the maneuver plus the
+
+435
+00:55:02,320 --> 00:55:10,800
+intended behavior and in this way i can know if a test is okay or a test is not okay is this clear guys
+
+436
+00:55:10,800 --> 00:55:16,480
+it's extremely important to know this because how can you know if a test is okay or not okay if you don't
+
+437
+00:55:16,480 --> 00:55:20,240
+have you don't have you don't read and you don't understand the requirements
+
+438
+00:55:23,760 --> 00:55:31,600
+so to sum up you have the requirement you read them understand them you write test cases you perform
+
+439
+00:55:32,160 --> 00:55:42,480
+test cases and you put an okay or a not okay in your report according to the expected behavior
+
+440
+00:55:43,440 --> 00:55:48,480
+uh from uh from uh from the requirement itself okay
+
+441
+00:55:54,000 --> 00:55:57,200
+it's clear thank you great
+
+442
+00:55:59,680 --> 00:56:04,480
+okay so we have written test cases we have uh
+
+443
+00:56:06,720 --> 00:56:11,600
+we're adding the report okay or not okay and stuff like this
+
+444
+00:56:12,480 --> 00:56:12,800
+then
+
+445
+00:56:15,120 --> 00:56:20,160
+what should i do while doing the test for example what should i do once i have the result
+
+446
+00:56:21,200 --> 00:56:23,520
+there are a couple of things more that i want to know
+
+447
+00:56:28,240 --> 00:56:32,080
+uh check again write a report
+
+448
+00:56:33,440 --> 00:56:39,360
+yeah okay we have the report we have written okay or not okay great
+
+449
+00:56:39,360 --> 00:56:48,880
+so there are two things that are missing the first one is if i'm supposed to do something while i
+
+450
+00:56:48,880 --> 00:56:54,480
+like perform the test cases or i have to add the specific information inside the report apart
+
+451
+00:56:54,480 --> 00:57:02,560
+from the result and the second one is how should i behave when i have an okay or when i have a not okay
+
+452
+00:57:03,920 --> 00:57:12,000
+so first thing i'm doing the test and i put okay for example in the report should i do something more
+
+453
+00:57:12,000 --> 00:57:20,720
+from the technical point of view so we have uh maybe maybe suggest your own modifications
+
+454
+00:57:22,720 --> 00:57:25,200
+modification or what for example
+
+455
+00:57:26,240 --> 00:57:34,160
+uh extra uh extra requirements that you have tested on your own or maybe you suggest some changes
+
+456
+00:57:34,160 --> 00:57:46,720
+extra requirements that you have tested on your own so okay in general of course if there are
+
+457
+00:57:46,720 --> 00:57:53,600
+improvements to the requirements or to the members because yeah as i was saying maybe you can find
+
+458
+00:57:53,600 --> 00:58:01,280
+yourself working with test cases written by someone else okay this this can be a case of activities as
+
+459
+00:58:01,280 --> 00:58:10,960
+well in that case of course if you see something to be improved yeah sure but uh this is something you
+
+460
+00:58:10,960 --> 00:58:17,760
+know why is this this lesson is important this lesson is important because it tries to give you a process
+
+461
+00:58:17,760 --> 00:58:25,760
+process it's important because okay the process is clear but then when you'll start working and you don't know
+
+462
+00:58:26,880 --> 00:58:32,960
+that you don't know the bank stop you don't understand the requirement maybe you don't have the requirements
+
+463
+00:58:32,960 --> 00:58:40,560
+because uh the person that should share the requirement is enjoying the national holiday in albania you
+
+464
+00:58:40,560 --> 00:58:47,680
+know all kind of problems that you might face you have a daily target of things to
+
+465
+00:58:47,920 --> 00:58:56,000
+get done i don't know for example 100 tests per day 100 is crazy now let's say five let's say five
+
+466
+00:58:56,720 --> 00:59:04,880
+so you do not get too much scared five tests per day nice you don't know anything you don't know what
+
+467
+00:59:04,880 --> 00:59:13,760
+to do so the file the final thing done at the end of the day is zero tests zero tests then the day after
+
+468
+00:59:13,760 --> 00:59:20,720
+you start to get requirements but you don't know the the bench top so just the day after you perform
+
+469
+00:59:20,720 --> 00:59:28,320
+just one test maybe you did it even in a wrong way it comes the third day you have the chance to talk to
+
+470
+00:59:28,320 --> 00:59:33,920
+someone they tell you oh look this requirement this test is completely wrong you're supposed to do like
+
+471
+00:59:33,920 --> 00:59:40,720
+this so at the end of the day you perform one test but it was the one of the day before so where i'm getting
+
+472
+00:59:40,720 --> 00:59:50,640
+at with this big apparently stupid monologue when you start working at the beginning you will
+
+473
+00:59:52,960 --> 01:00:00,480
+let's say have a lot of delay on the targets that the client will set for you so the the temptation
+
+474
+01:00:00,480 --> 01:00:08,320
+let's say you will have is okay let's jump some steps so that i can achieve the target that the client
+
+475
+01:00:08,320 --> 01:00:14,640
+gave me and i won't get you know bad reviews or whatever so you say yeah i have the requirements
+
+476
+01:00:14,640 --> 01:00:18,640
+but i already have the test cases written by someone so i don't need to read them i don't
+
+477
+01:00:18,640 --> 01:00:24,160
+need to understand the requirements let's directly jump to perform the test okay this this can be a
+
+478
+01:00:24,160 --> 01:00:32,560
+strategy but it's a very short-term strategy the long-term strategy is trying to understand exactly how
+
+479
+01:00:32,560 --> 01:00:38,880
+the process works trying to stick with it the beginning it's normal to be delay with the target
+
+480
+01:00:39,920 --> 01:00:46,400
+but i assured you that you will start just conveniently forgetting the process because you
+
+481
+01:00:46,400 --> 01:00:52,480
+have to speed up your activities this is why i'm focusing so much how should be the process because
+
+482
+01:00:52,480 --> 01:00:57,520
+this is very important to work like this because this will improve a lot quality of your work
+
+483
+01:00:58,080 --> 01:01:03,680
+might be slower at the beginning but then you will get much faster and most of all better
+
+484
+01:01:04,240 --> 01:01:11,360
+and more comprehensive of stuff about car in the future that's why it's extremely important to focus on it
+
+485
+01:01:13,840 --> 01:01:21,200
+so all of this to say yeah improvements okay okay but there are other two important stuff that i'm not
+
+486
+01:01:21,200 --> 01:01:33,600
+hearing so we performed the test okay do you think the client or kinet or whoever will just trust your word
+
+487
+01:01:34,400 --> 01:01:46,720
+i mean i'm sure you are all extremely nice people meant for paradise from here to 100 years from today but
+
+488
+01:01:46,720 --> 01:01:54,240
+you know you're doing an activity you just write the excel file saying ah yeah these tests are okay
+
+489
+01:01:56,080 --> 01:02:03,200
+is the client supposed to believe you on your word or do we have some other some something
+
+490
+01:02:03,200 --> 01:02:31,920
+so we have to send them a report of the work that we have done sorry the work that we are done until that moment
+
+491
+01:02:33,200 --> 01:02:39,920
+okay the report can be i don't know word file a powerpoint file an excel file that is just a
+
+492
+01:02:39,920 --> 01:02:47,680
+we can we can record it oh nice that's what i wanted to hear so whatever you do as whatever
+
+493
+01:02:48,320 --> 01:02:57,680
+guys and we whatever you do the report is fundamental because at the end of the day we talk through reports
+
+494
+01:02:57,680 --> 01:03:05,120
+you know we don't open every time all the record and stuff because we trust the person but this is on
+
+495
+01:03:05,120 --> 01:03:14,080
+a daily basis then it might be the case or it happens of course it happens uh quite often that we have to
+
+496
+01:03:14,080 --> 01:03:21,040
+show what we have done not through reports but through a report the famous log also the log that you did
+
+497
+01:03:21,040 --> 01:03:28,000
+using the analyzer that time or the analyzer that time so all the log that you performed and then analyzed
+
+498
+01:03:28,000 --> 01:03:35,600
+offline later that's what actual this is the process when performing tests so once again we have an
+
+499
+01:03:35,600 --> 01:03:43,680
+additional step have the requirement read the requirement understand the requirement write test cases
+
+500
+01:03:44,320 --> 01:03:53,920
+perform test cases and while performing them record them recording test that we are doing and of course
+
+501
+01:03:53,920 --> 01:04:00,080
+checking if the behavior of the software is compliant with the requirement in that case we put okay
+
+502
+01:04:00,720 --> 01:04:07,680
+if it's not compliant then we put not okay so this is important guys because when you have to start a
+
+503
+01:04:07,680 --> 01:04:15,520
+discussion about a specific maneuver or something yeah the maneuver performed can be helpful to quick to
+
+504
+01:04:15,520 --> 01:04:24,400
+understand quicker quickly what you did in that log but then the way to communicate between teams is using
+
+505
+01:04:24,400 --> 01:04:31,200
+the record that you did that's the only way because those are actual data not your word or your report or your
+
+506
+01:04:31,200 --> 01:04:39,600
+maneuver okay i can make them up whenever i want about the reports about maneuvers i can fake maneuvers three
+
+507
+01:04:39,600 --> 01:04:48,080
+years later oh yeah i did like this you know no one might question in that case with the record yes with
+
+508
+01:04:48,080 --> 01:04:55,760
+the record is official it's the actual record of what you did on the car and that's the proof of our work and the
+
+509
+01:04:55,760 --> 01:05:08,720
+proof most of all that uh looking and analyzing that uh record we see that the software is actually compliant with the requirements and the
+
+510
+01:05:08,720 --> 01:05:16,720
+okay that we put on the report is justified not just because we are good people and our okay can be in trust but also
+
+511
+01:05:16,720 --> 01:05:24,960
+because there is a set of data that confirms that the behavior of the software is compliant with the requirements
+
+512
+01:05:24,960 --> 01:05:31,600
+and the only way we have to show it is through record it might be actually the most important thing
+
+513
+01:05:31,600 --> 01:05:40,160
+of our activities but let's say from the legal point of view is this clear guys this is extremely important
+
+514
+01:05:42,320 --> 01:05:49,920
+all of these steps are important so i hope you're getting them writing them down uh you will have this
+
+515
+01:05:49,920 --> 01:06:01,680
+lesson recorded so you can listen or you create some you know you know those youtube videos like 10 minutes of
+
+516
+01:06:01,680 --> 01:06:08,880
+someone doing something yeah you can make a video youtube video of myself saying have the requirement read
+
+517
+01:06:08,880 --> 01:06:17,280
+the requirement understand the requirement write test cases perform maneuvers while recording them
+
+518
+01:06:17,280 --> 01:06:24,800
+um setting the result okay according to the requirements to make sure that software is compliant with the
+
+519
+01:06:24,800 --> 01:06:29,840
+requirements that case okay it's not compliant with regard requirements that case is not okay
+
+520
+01:06:31,360 --> 01:06:35,520
+clear guys do you have questions doubts
+
+521
+01:06:35,520 --> 01:06:47,920
+you want to resign after this lesson yeah all comments are appreciated maybe we're sick this coming
+
+522
+01:06:51,280 --> 01:06:51,680
+okay
+
+523
+01:06:54,400 --> 01:07:03,360
+so what happens if i put okay so we clear the first part okay second part what is the expect let's say what
+
+524
+01:07:03,360 --> 01:07:08,400
+what should we do if the test is okay what should we do if the test is not okay
+
+525
+01:07:13,760 --> 01:07:20,400
+uh i think in both cases we should communicate it to the to our colleagues like yeah either if it's okay
+
+526
+01:07:22,160 --> 01:07:26,720
+we should speak to our colleagues that everything went fine and this test
+
+527
+01:07:26,720 --> 01:07:29,440
+passed all the validation and also if it's not okay
+
+528
+01:07:29,440 --> 01:07:39,920
+okay again tell them that it's not okay how frequent for you uh it depends on the importance of the test i think
+
+529
+01:07:41,120 --> 01:07:41,680
+and uh
+
+530
+01:07:44,800 --> 01:07:52,240
+yeah i like a lot this answer because i would accept it also let's say daily basis even though it depends i
+
+531
+01:07:52,240 --> 01:07:57,840
+mean it depends on the activities because if you have milestone i don't know a touch point meeting every week
+
+532
+01:07:57,840 --> 01:08:05,280
+for example if you agree to discuss the results every week it can be okay to give weekly results even though
+
+533
+01:08:06,480 --> 01:08:14,000
+i uh i prefer having let's say daily report because it really gives you the idea of where you are heading
+
+534
+01:08:14,000 --> 01:08:20,160
+your activities even for yourself and not not necessarily to share with the manager but just to have
+
+535
+01:08:20,160 --> 01:08:30,240
+yourself an idea on on a daily basis how your work is doing and going so for sure let's say we have a every
+
+536
+01:08:30,240 --> 01:08:40,640
+three days uh uh progress meeting with the the manager so every three day we communicate the results
+
+537
+01:08:41,440 --> 01:08:45,920
+but i like luck when you said depends on the importance of the test because
+
+538
+01:08:45,920 --> 01:08:52,400
+if it's okay most of the time okay you put okay in the report uh you moved from
+
+539
+01:08:53,360 --> 01:09:01,600
+i don't know 50 percent of activities done to 50.02 okay we are all happy we are advancing great
+
+540
+01:09:02,880 --> 01:09:07,360
+the the main thing happens when the test is not okay so if it's a small not okay
+
+541
+01:09:07,360 --> 01:09:16,160
+okay and okay you put a not okay and then after three days you will say you will explain to the manager
+
+542
+01:09:16,160 --> 01:09:25,440
+look i performed 100 tests i don't know 90 were okay and 10 were not okay so among those 10 are not okay
+
+543
+01:09:25,440 --> 01:09:34,400
+there is this one that is very it gives a lot of problems okay so if you find a test that is very
+
+544
+01:09:34,400 --> 01:09:44,480
+dangerous it's important to let's say alert people above you immediately of course guys before starting
+
+545
+01:09:44,480 --> 01:09:51,120
+all these warnings and stuff it's important that you are sure that that's not okay so before you just
+
+546
+01:09:51,120 --> 01:09:59,120
+express your thoughts be sure of have performed a proper analysis of what you're doing but yeah anyway
+
+547
+01:09:59,120 --> 01:10:08,240
+so the frequent frequency is i don't know daily for example or i don't weekly or every three days
+
+548
+01:10:08,240 --> 01:10:14,000
+every two days whatever but my suggestion is daily because you will have daily targets so if you have
+
+549
+01:10:14,000 --> 01:10:21,840
+daily targets i would say i have a daily update of the report that's my suggestion and if something
+
+550
+01:10:21,840 --> 01:10:28,640
+very bad happens for example you realize that performing a specific maneuver the car will start
+
+551
+01:10:28,640 --> 01:10:35,600
+accelerate by itself then that might worth mentioning as soon as possible to the manager saying look
+
+552
+01:10:35,600 --> 01:10:44,080
+i found this very weird behavior it looks very dangerous so what should we do should we do this that
+
+553
+01:10:44,080 --> 01:10:52,720
+and stuff like this and have a let's say discussion with someone in a higher position than doing that this
+
+554
+01:10:52,720 --> 01:11:00,720
+moment okay do you think is enough just to work your manager
+
+555
+01:11:06,640 --> 01:11:12,160
+the answer might be yes okay i'm not saying it's necessarily wrong but do you think it's enough
+
+556
+01:11:12,160 --> 01:11:25,120
+uh so just the manager i think maybe it's uh needed but not enough you also have to uh communicate to your
+
+557
+01:11:25,120 --> 01:11:28,480
+teammates because our testes may be implied in there
+
+558
+01:11:31,840 --> 01:11:41,360
+i know like it may be like a waterfall logic if uh if something is wrong in our uh task it may imply
+
+559
+01:11:41,360 --> 01:11:46,960
+directly to another colleague task and we have to communicate as soon as possible uh yeah this is
+
+560
+01:11:46,960 --> 01:11:52,960
+correct but it's not the main the main it's not the main thing for a specific reason i'll ask you a
+
+561
+01:11:52,960 --> 01:11:56,640
+question what is the main what is the goal of verification
+
+562
+01:11:56,640 --> 01:12:12,640
+uh to verify whether all the requirements are in the right function are functioning right
+
+563
+01:12:14,560 --> 01:12:23,360
+or say that let's say in a slightly different way that the software is compliant with the requirements
+
+564
+01:12:23,360 --> 01:12:30,160
+yeah yeah so when you perform a test and you declare that this test is not okay you're basically
+
+565
+01:12:30,720 --> 01:12:37,520
+basically saying the software is not compliant so our goal in the end is to make sure that the software
+
+566
+01:12:37,520 --> 01:12:43,440
+is compliant with the requirement so when there is a not okay what do you think should be the next
+
+567
+01:12:43,440 --> 01:12:50,320
+action okay to warn the manager or the teammates because maybe their activities might be affected these
+
+568
+01:12:50,320 --> 01:12:57,360
+are all yeah organized things to do but warning people that something is not working
+
+569
+01:12:58,240 --> 01:13:05,600
+it's not enough to fix the problem the software will not fix by itself just because you will tell
+
+570
+01:13:05,600 --> 01:13:13,200
+people ah it's not working so what do you think should be the next step the next action to do
+
+571
+01:13:13,200 --> 01:13:20,320
+uh maybe we can suggest them a solution by our role
+
+572
+01:13:22,880 --> 01:13:39,600
+uh okay two things suggest to them with them second of all how can you know what is the solution
+
+573
+01:13:39,600 --> 01:13:52,080
+i don't know i i don't know if it's our job but we can communicate with software engineering to make
+
+574
+01:13:53,200 --> 01:14:04,560
+the new software complained with the requirements okay okay this i like guys there is this work
+
+575
+01:14:04,560 --> 01:14:14,960
+uh we work with clients that are so big that uh it's very hard you know to have a full picture of it
+
+576
+01:14:14,960 --> 01:14:22,400
+so to work properly we have to be aware of which are the input of our activities and which are the outputs
+
+577
+01:14:22,400 --> 01:14:30,960
+okay so we which are the team that we work with from where the input of our activities come and where the
+
+578
+01:14:30,960 --> 01:14:41,920
+output of our activities go in this case we have said for the past wow it's 10 no no break yeah you are brave
+
+579
+01:14:43,040 --> 01:14:51,040
+anyway we have said for one hour and a half almost that there is a person writing requirements okay let's
+
+580
+01:14:51,040 --> 01:15:00,640
+say team writing requirements this team so the first uh let's say the interaction that you have
+
+581
+01:15:00,640 --> 01:15:07,760
+is with the software requirements team eventually because you will write the test cases so you see
+
+582
+01:15:07,760 --> 01:15:13,280
+that the input of one of your activities is having the requirement okay so one of the interaction that
+
+583
+01:15:13,280 --> 01:15:21,920
+you might have is with the requirements team okay and that's the first thing second thing is that
+
+584
+01:15:21,920 --> 01:15:27,520
+this requirement are received also by the software development team the software development team reads the
+
+585
+01:15:27,520 --> 01:15:33,280
+requirement they understand the requirement there is a requirement licitation but yeah you we will not
+
+586
+01:15:33,280 --> 01:15:40,480
+go through those steps there finally the software developers will produce a software and will publish a
+
+587
+01:15:40,480 --> 01:15:52,160
+software for you so you will get a let's do something like this okay let's use the most powerful tool of all time
+
+588
+01:15:52,160 --> 01:16:15,760
+name which is paint okay so here as as i was saying we have the first interaction okay let's say we we are this part that cases and text execution okay we are here
+
+589
+01:16:15,760 --> 01:16:36,320
+this is not really professional but yeah that that's us okay nice this is the first interaction with the software requirements team or requirements team because you receive the requirements
+
+590
+01:16:36,320 --> 01:16:45,680
+sometimes you don't have a direct connection with the requirements team sometimes you just receive the documents and that's it okay but that's the that's the first interaction
+
+591
+01:16:46,400 --> 01:16:53,120
+another interaction that you have is with the software development team okay that cares about this part
+
+592
+01:16:55,360 --> 01:17:02,320
+the interaction so here we have uh write it in a better here
+
+593
+01:17:04,720 --> 01:17:10,160
+here we have the requirements okay as an input here as input we have
+
+594
+01:17:10,160 --> 01:17:14,880
+here we have
+
+595
+01:17:14,880 --> 01:17:15,200
+here
+
+596
+01:17:18,160 --> 01:17:19,200
+we have software
+
+597
+01:17:27,200 --> 01:17:27,520
+great
+
+598
+01:17:27,520 --> 01:17:40,240
+then what is our what we do we here we are just receiving stuff okay so what we do back to these clips
+
+599
+01:17:41,280 --> 01:17:49,680
+so if the if everything is okay then we have an output saying okay uh software is compliant okay
+
+600
+01:17:50,320 --> 01:17:57,600
+so our report goes out to the management saying we have covered i don't know 50 of the requirements and
+
+601
+01:17:57,600 --> 01:18:02,400
+the software is compliant with these 50 of requirements okay nice
+
+602
+01:18:03,520 --> 01:18:07,920
+the thing is when it's not okay we perform an analysis
+
+603
+01:18:07,920 --> 01:18:19,040
+saying okay the requirement says that uh if i try to drive the car with the door open the car will not move
+
+604
+01:18:21,360 --> 01:18:28,560
+so most of the time we have to consider the requirements as frozen the requirement arrives
+
+605
+01:18:28,560 --> 01:18:34,400
+you when they have been already discussed accepted and stuff like this so most of the time the problem
+
+606
+01:18:34,400 --> 01:18:40,320
+are not the requirements so let's consider the requirements are correct if the requirements are
+
+607
+01:18:40,320 --> 01:18:48,960
+correct and then you perform the maneuver and the uh the software does not behave as you expect
+
+608
+01:18:48,960 --> 01:18:59,120
+then you have to do something to warn what the software developers so here there is an interaction
+
+609
+01:18:59,120 --> 01:19:05,760
+back to the software developers saying look the software is not working properly so considering
+
+610
+01:19:05,760 --> 01:19:10,960
+that the requirements are okay we can ignore this part because we say okay this part is correct
+
+611
+01:19:10,960 --> 01:19:23,200
+we open an issue we open a ticket we open a point you know there are different we raise an issue everyone says every
+
+612
+01:19:23,200 --> 01:19:32,560
+clients talk about it as in a different way but basically we open an issue to the software development team
+
+613
+01:19:32,560 --> 01:19:39,920
+saying look you have given us a software that is not compliant to requirement so you should make something
+
+614
+01:19:39,920 --> 01:19:49,680
+different they will analyze not your report not your maneuver not your mail they will analyze your record
+
+615
+01:19:49,680 --> 01:19:55,280
+your log this is the way to talk to the other team so that's why it's so important to record the
+
+616
+01:19:55,280 --> 01:20:02,720
+managers first of all to let's say demonstrate that you worked and what you do second of all is whenever
+
+617
+01:20:02,720 --> 01:20:09,520
+there is a problem or for some reason we have to analyze what you did the only way to talk between
+
+618
+01:20:09,520 --> 01:20:18,480
+teams is using the recordings nothing else of course the mail will help with your describing what was going on
+
+619
+01:20:19,280 --> 01:20:25,040
+of course the reference to the requirement helps of course the test maneuver helps you know all this
+
+620
+01:20:25,040 --> 01:20:33,520
+stuff are very helpful but at the end of the day the software developer will care about the behavior of the system
+
+621
+01:20:33,520 --> 01:20:43,760
+not your behavior okay of course we do a first analysis like i see that the variable that should go to
+
+622
+01:20:43,760 --> 01:20:50,240
+three stays stuck to zero in that case it's very evident the issue and you say look the issue might be
+
+623
+01:20:50,240 --> 01:20:55,840
+this variable that is stuck to zero but of course it's up to you to understand what was the problem
+
+624
+01:20:55,840 --> 01:21:05,600
+so you always perform first let's say a pre-analysis of the issue but then if the software is not compliant
+
+625
+01:21:05,600 --> 01:21:13,920
+with the requirements we just raise an issue and warn in an official way with an email or with a
+
+626
+01:21:15,120 --> 01:21:23,920
+tool i don't know the tool that i've seen to the clients are i don't know jira or polarion or mantis
+
+627
+01:21:23,920 --> 01:21:34,560
+or jama or whatever really there are there are a lot of tools for the issue tracking but most of
+
+628
+01:21:34,560 --> 01:21:42,000
+the time when there is a not okay in your report it cannot stay in your report it must go somewhere
+
+629
+01:21:42,000 --> 01:21:48,800
+else and this somewhere else is warning the software developer team if it's a software problem
+
+630
+01:21:48,800 --> 01:21:58,240
+or the requirements team if it's a requirement problem okay in fact i added here all these marks
+
+631
+01:21:59,920 --> 01:22:06,960
+to say there is an extremely important stuff which is the issue tracking if it is okay then we move on
+
+632
+01:22:06,960 --> 01:22:14,240
+the whole report with all the okays and all the reports and everything if it's not okay it's up to you to
+
+633
+01:22:14,240 --> 01:22:24,240
+manage the issue until the issue is fixed so first of all you say look this is not okay i open a ticket
+
+634
+01:22:24,240 --> 01:22:34,080
+i open a point i raise an issue whatever to the software developers team they will read your problem
+
+635
+01:22:34,080 --> 01:22:39,360
+eventually they will ask for clarification they will ask for the maneuver they will ask for the software
+
+636
+01:22:39,360 --> 01:22:45,520
+that you were working on if you were working on an hil if you were working on a card so they will ask you
+
+637
+01:22:45,520 --> 01:22:52,640
+a bunch of questions once the issue is clear they will analyze the issue then they will tell you okay
+
+638
+01:22:52,640 --> 01:22:59,440
+we have found the problem solution will enter in the next software and then the cycle starts back again
+
+639
+01:23:00,080 --> 01:23:04,800
+so they've moved from software architecture or software design or software construction directly
+
+640
+01:23:04,800 --> 01:23:10,560
+they will change the software they will produce a new software and you will receive the new software
+
+641
+01:23:11,600 --> 01:23:18,880
+how can you know that now the behavior is fixed because you in the past have written the test cases
+
+642
+01:23:18,880 --> 01:23:26,800
+so you know exactly which is the maneuver to be repeated in the exact same way you perform the same test
+
+643
+01:23:26,800 --> 01:23:34,400
+with the new software containing the it's called the bug fix and you declare and record the
+
+644
+01:23:34,400 --> 01:23:42,880
+the maneuver and you check that now the test is okay because they fixed software once all this cycle is done
+
+645
+01:23:42,880 --> 01:23:49,040
+then you can move on because now the software is compliant with the requirement
+
+646
+01:23:52,400 --> 01:23:53,520
+is this clear guys
+
+647
+01:24:02,400 --> 01:24:02,880
+yes
+
+648
+01:24:04,400 --> 01:24:05,600
+yes clear
+
+649
+01:24:08,080 --> 01:24:08,480
+okay
+
+650
+01:24:15,200 --> 01:24:15,520
+great
+
+651
+01:24:18,960 --> 01:24:27,600
+so yeah here you know what one said all of these this is the main part of the lesson okay right after the
+
+652
+01:24:27,600 --> 01:24:36,000
+the uh the requirement stuff so having the requirement reading the requirement understanding the requirement
+
+653
+01:24:36,640 --> 01:24:43,440
+writing test the cases recording the maneuver that we do so while we perform the test
+
+654
+01:24:44,640 --> 01:24:45,680
+putting the okay
+
+655
+01:24:47,760 --> 01:24:53,520
+or not okay in the report according to the expected behavior coming from the requirements
+
+656
+01:24:54,080 --> 01:25:01,360
+if the test if the test is okay then okay if the test is not okay then we have to raise an issue to the right
+
+657
+01:25:01,360 --> 01:25:09,360
+team according it's a problem of the software of requirement or something else okay
+
+658
+01:25:09,360 --> 01:25:18,000
+this is extremely important this is the part i really care about and it will be really help you
+
+659
+01:25:18,000 --> 01:25:28,880
+uh working properly then we start to move more on the practical part here we mentioned the unit test
+
+660
+01:25:28,880 --> 01:25:36,160
+integration test the functional test so let's see what are the components that we might use for perform these tests
+
+661
+01:25:36,160 --> 01:25:49,440
+uh we can have oh sorry okay yeah uh we can find ourselves working on the component uh
+
+662
+01:25:49,440 --> 01:25:53,280
+uh on the component uh
+
+663
+01:25:55,360 --> 01:25:59,600
+hardware in the loop they're called the component hardware in the loop because basically what you have
+
+664
+01:25:59,600 --> 01:26:06,160
+is just one component which is an electronic control unit like this one this is the real hardware
+
+665
+01:26:06,960 --> 01:26:14,000
+and then you have an hardware in the loop or model simulating the card okay
+
+666
+01:26:14,000 --> 01:26:24,240
+in this case this um configuration is an easy configuration because you have just one real hardware
+
+667
+01:26:25,280 --> 01:26:31,440
+and all the everything else is a model so it's easy to configure it because every you can simulate
+
+668
+01:26:31,440 --> 01:26:36,960
+whatever because the there is a model of the car there's not the real cars you you can change the the
+
+669
+01:26:36,960 --> 01:26:46,800
+the tire size you can i don't know force the the the speed to 300 kilometers per hour you know whatever
+
+670
+01:26:46,800 --> 01:26:52,400
+it's a model so you can do whatever you want the only real thing is the electronic control unit and the
+
+671
+01:26:52,400 --> 01:26:58,960
+software inside this electronic control unit for this reason it's very flexible because of course you can
+
+672
+01:26:58,960 --> 01:27:06,240
+also perform some tests with a very dangerous situation i don't know driving to 200 kilometers per hour
+
+673
+01:27:06,240 --> 01:27:12,560
+downhill for example would be very dangerous for a driver but it's not a problem on a simulator
+
+674
+01:27:13,680 --> 01:27:19,600
+sometimes this kind of system is too simplified because uh you know
+
+675
+01:27:22,320 --> 01:27:26,960
+at the end of the day okay the goal is to make sure that software is compliant with the requirements
+
+676
+01:27:27,840 --> 01:27:36,160
+okay and the subsequent thing is that once we put this software in an electronic control unit and then
+
+677
+01:27:36,160 --> 01:27:45,360
+in a car the car first of all should be safe no one will buy a car that after 100 kilometers just
+
+678
+01:27:46,160 --> 01:27:54,400
+broke broke down break down uh doesn't break just accelerate or or stuff i hope you remember all the
+
+679
+01:27:54,400 --> 01:28:00,400
+problems that i guess healthy had on the highway while we were discussing about the diagnosis
+
+680
+01:28:01,120 --> 01:28:08,640
+so you don't want to buy those kind of car so i cannot rely on the safety and the proper behavior
+
+681
+01:28:08,640 --> 01:28:18,480
+of the car just basing everything on tests done with just this echo and a motor okay so this kind of
+
+682
+01:28:18,480 --> 01:28:25,920
+setup is very extremely helpful for the early stage of the of the project the i've actually worked most of
+
+683
+01:28:25,920 --> 01:28:32,800
+the time this kind of setup with one electronic control unit so you can focus a lot on this echo
+
+684
+01:28:33,440 --> 01:28:37,920
+most of the time this activity is done with power train electronic control units because they are the
+
+685
+01:28:37,920 --> 01:28:45,120
+most important one but then once you have performed the test with this kind of simulator then for sure
+
+686
+01:28:45,120 --> 01:28:53,040
+the next phase of testing will move to a much complex system it can be called the system
+
+687
+01:28:53,040 --> 01:29:00,160
+hardware in the loop integrated hardware in the loop integrated system you know whatever the name can be
+
+688
+01:29:00,160 --> 01:29:07,360
+whatever the difference here is that you just you don't have just one hardware real hardware coming
+
+689
+01:29:07,360 --> 01:29:13,760
+from the car you might have two hardware three hardware i don't know like two electronic control units
+
+690
+01:29:13,760 --> 01:29:20,960
+three electronic control units five electronic control units you might have also some sensors some
+
+691
+01:29:20,960 --> 01:29:27,360
+activators there are i've seen some benchtops where you can even find the steering wheel the headlight
+
+692
+01:29:27,360 --> 01:29:35,680
+so you basically there is the whole car just be basically without the chassis and the plastic part
+
+693
+01:29:35,680 --> 01:29:42,640
+around but apart from that everything is there steering wheel the arrows the stereo everything okay even the horn
+
+694
+01:29:43,840 --> 01:29:52,880
+you know everything in that case of course the complexity is higher so while in the previous configuration
+
+695
+01:29:52,880 --> 01:29:59,600
+you can force the model to do weird stuff in this case you really have to be careful because now you
+
+696
+01:29:59,600 --> 01:30:08,080
+start to have real component one of the examples that i'm thinking of is the tests done with the battery pack
+
+697
+01:30:08,080 --> 01:30:16,720
+and the inverter and all the electric motors in that case you cannot force a you know high power because
+
+698
+01:30:16,720 --> 01:30:23,680
+you have actually the battery so you have to be very careful in performing these crazy maneuvers because in that case
+
+699
+01:30:23,680 --> 01:30:36,000
+you will actually have a source of energy giving actual electricity out so that can be a problem okay the system is less flexible of course
+
+700
+01:30:37,360 --> 01:30:44,400
+and here i introduced the the concept of significance i'm not sure this is the right translation from english
+
+701
+01:30:44,400 --> 01:30:56,160
+because in italian for now let's use significance but the concept is what i was explaining before meaning
+
+702
+01:30:57,680 --> 01:31:02,880
+the final goal is to ensure that the software is compliant with the requirements okay and the
+
+703
+01:31:02,880 --> 01:31:08,560
+some basic consequence of this is that once we put everything in the car everything is safe and everything
+
+704
+01:31:08,560 --> 01:31:19,920
+is working properly so if i just test one hardware and the bull car is a model of course those kind of tests can help me
+
+705
+01:31:19,920 --> 01:31:28,080
+but i cannot trust them 100 because i'm just testing one part of the car while the rest is a model so the significance
+
+706
+01:31:28,080 --> 01:31:38,400
+let's say the meaning uh of uh let's say the level of trust i can say uh of that test on a bull car
+
+707
+01:31:38,400 --> 01:31:44,800
+is limited because we are just testing one part with this kind of bench top we're starting to test not
+
+708
+01:31:44,800 --> 01:31:51,200
+just the small part of the car but the bigger part of the car it's not the car yet so we are not testing
+
+709
+01:31:51,200 --> 01:31:58,000
+the full system but we are starting to test the system that is closer to the car so we're starting to test
+
+710
+01:31:58,000 --> 01:32:08,160
+something that can be compared somehow with the car that's what i mean with significant or level of trust
+
+711
+01:32:08,400 --> 01:32:08,880
+let's see
+
+712
+01:32:12,720 --> 01:32:15,920
+finally we have the functional test
+
+713
+01:32:17,840 --> 01:32:24,240
+functional test as i was saying are tests done and driver level point of view so you can find yourself
+
+714
+01:32:24,240 --> 01:32:31,280
+working in you know this is i guess alfa romeo julia for example
+
+715
+01:32:31,280 --> 01:32:42,320
+uh this might be a mclaren of some sort so someone might find yourself working in alfa romeo someone
+
+716
+01:32:42,320 --> 01:32:49,040
+here or this mclaren for example these are just random pictures taken from internet or from uh
+
+717
+01:32:50,560 --> 01:32:58,400
+let's say old time people like some of you you might like working on ducato you know they're all kind
+
+718
+01:32:58,400 --> 01:33:09,920
+everything for all tastes you know um here the complexity is at its highest of course uh the car
+
+719
+01:33:11,840 --> 01:33:18,160
+you cannot really change stuff on the car okay so that's the system that's the full system so the
+
+720
+01:33:18,160 --> 01:33:26,640
+complexity is very high because when we when i say complexity it's a 360 degrees because when you work
+
+721
+01:33:26,640 --> 01:33:32,800
+in the car you can have all sorts of problems not just software related you can have i don't know
+
+722
+01:33:35,280 --> 01:33:43,680
+tires the flat tire so you cannot use the car because you have one tire less for example
+
+723
+01:33:44,480 --> 01:33:50,880
+or i don't know that the battery of your computer is low so you cannot do a test of 30 minutes out
+
+724
+01:33:50,880 --> 01:34:00,160
+in the street uh or the battery of the car is low because i don't know you forgot something on and the
+
+725
+01:34:00,160 --> 01:34:05,920
+day after the battery is out you cannot do the tests so at the end of the day you will have a delay
+
+726
+01:34:05,920 --> 01:34:12,560
+the manager will ask why you have a delay and then you have to explain you know all of this stuff uh you
+
+727
+01:34:12,560 --> 01:34:22,080
+can find dead animals in the car as well you know i've heard and seen very strange stuff in the car so
+
+728
+01:34:22,080 --> 01:34:30,800
+it's not just software related but when you go on real world all kind of stuff can happen it's not
+
+729
+01:34:30,800 --> 01:34:36,960
+flexible as i was saying and of course the significance is at this highest because this is we are actually
+
+730
+01:34:36,960 --> 01:34:46,880
+testing the system okay so we cannot get closer than this to the car that we will actually uh sell okay
+
+731
+01:34:50,160 --> 01:34:50,560
+um
+
+732
+01:34:53,920 --> 01:35:01,200
+yeah here there is an italian quotation well it's translated to italian it's for a man there are
+
+733
+01:35:01,200 --> 01:35:12,400
+few innocents uh way to kept it busy which is making money uh why i'm seeing this uh because most of the time
+
+734
+01:35:12,400 --> 01:35:24,720
+when we work on a project it's very rare that we work on a new project most of the time the projects are
+
+735
+01:35:24,720 --> 01:35:32,080
+considered as carry over a carry over a carry over means we take you know an old project or a previous
+
+736
+01:35:32,080 --> 01:35:39,280
+project and then we use part of that project and we make a new car so when you listen to all those fancy
+
+737
+01:35:39,280 --> 01:35:50,800
+advertisements in the car on the tv saying ah the new car x new version of uh you know whatever car
+
+738
+01:35:50,800 --> 01:36:00,080
+uh most of the time almost 95 percent of the times that's not the new car at all sometimes it's the
+
+739
+01:36:00,080 --> 01:36:07,680
+same car of a previous one just they changed slightly the headlight form or this you know shape of
+
+740
+01:36:07,680 --> 01:36:16,560
+whatever interior part yeah new car basically the car is the same uh why am i saying the same because
+
+741
+01:36:16,560 --> 01:36:24,640
+it's the same uh from the hardware point of view because they built the car the same factory
+
+742
+01:36:24,640 --> 01:36:32,480
+eventually or with the same architecture but also they copy actually the software from one project
+
+743
+01:36:32,480 --> 01:36:41,200
+and they start another project starting from the previous one okay so we most of the time you will
+
+744
+01:36:41,200 --> 01:36:53,600
+listen talking about the level of carry over i don't know 50 carry over 75 of carry over 100 of carry over
+
+745
+01:36:53,600 --> 01:37:01,680
+which means it's the same software just probably some headlights will change or some very minor stuff will
+
+746
+01:37:01,680 --> 01:37:09,520
+change why we do that we do that because in this way we save a lot a lot a lot of money
+
+747
+01:37:11,200 --> 01:37:19,600
+guys when i graduated i'm the mechanical engineer and when i finished university i thought yeah
+
+748
+01:37:19,600 --> 01:37:28,400
+well car car is all about engines all about tires is all about chassis yeah whatever that's my dream
+
+749
+01:37:28,400 --> 01:37:36,160
+when i finished university but then i realized that there's nothing about it because on road car
+
+750
+01:37:36,800 --> 01:37:44,000
+engine is always the same tires are always the same you know it's so standardized everything from the
+
+751
+01:37:44,000 --> 01:37:53,440
+mechanical point of view that's there's very left to be done honestly uh but on the software side
+
+752
+01:37:54,080 --> 01:37:58,640
+all the money basically went on testing the software side at least on road cars
+
+753
+01:37:58,640 --> 01:38:10,720
+so that's why i'm in this field still because this is where the the the the the the money goes on road
+
+754
+01:38:10,720 --> 01:38:19,120
+cars in testing activities so to save money of people working performing tests or you know all the
+
+755
+01:38:19,120 --> 01:38:26,000
+verification engineers that are supposed to verify that are supposed to have the requirement read the
+
+756
+01:38:26,000 --> 01:38:32,640
+requirement understand the requirement write test cases perform the test cases while recording
+
+757
+01:38:33,520 --> 01:38:41,040
+making sure that the test is complies met meets accepting criteria so that the software is compliant
+
+758
+01:38:41,040 --> 01:38:47,440
+with the requirement and making sure that if it's not compliant the tester will raise an issue and will
+
+759
+01:38:47,440 --> 01:38:52,720
+follow it until it's fixed and the software then behaves according to the requirement
+
+760
+01:38:53,600 --> 01:38:59,040
+all of this you just forget about it because you have the same software as before you just use the
+
+761
+01:38:59,040 --> 01:39:05,520
+work done by someone else of course you cannot trust 100 to send everything so there will be some
+
+762
+01:39:05,520 --> 01:39:11,200
+activities but if you completely take one software from a previous project that you use on a new project
+
+763
+01:39:11,200 --> 01:39:17,680
+with the same hardware the same software same architecture whatever then the testing activities will be
+
+764
+01:39:17,680 --> 01:39:26,480
+much smaller and the money spent on the project will be much less so you see that every time there is
+
+765
+01:39:26,480 --> 01:39:29,600
+a carryover of everything most of the times and
+
+766
+01:39:32,880 --> 01:39:39,440
+really five percent of the cars are new on the market all the others are just copy of others
+
+767
+01:39:39,440 --> 01:39:57,120
+okay this is the let's see last slide uh part uh almost everything i said in the cycle part two lesson
+
+768
+01:39:57,840 --> 01:40:04,640
+is what i said when i do when i usually do this lesson so i won't really go through this slide
+
+769
+01:40:04,640 --> 01:40:13,440
+a lot uh because we have covered everything but what something that i want to do is just giving you
+
+770
+01:40:14,560 --> 01:40:24,240
+a last concept before stopping because really i've never talked for two hours without stop since a long
+
+771
+01:40:24,240 --> 01:40:34,000
+time uh which is the the question of the questions the king of the question the queen of questions
+
+772
+01:40:34,800 --> 01:40:44,160
+of about verification that is what is the difference between verification and validation
+
+773
+01:40:45,840 --> 01:40:54,000
+boom you know explosion civil wars among people and clients uh going crazy and stuff this is the
+
+774
+01:40:54,000 --> 01:40:59,600
+question that most of the time they ask the first one is what is the verification and all steps to be done
+
+775
+01:40:59,600 --> 01:41:05,600
+and we have covered it with the list i told you before but then they will ask okay what is the
+
+776
+01:41:05,600 --> 01:41:15,040
+difference between verification and validation uh you will slowly understand by doing it but let's
+
+777
+01:41:15,040 --> 01:41:26,240
+try to explain looking at this picture so in the early phase of the project uh we have the usual you
+
+778
+01:41:26,240 --> 01:41:32,560
+know i just go i'll move on because this is the same slide that i used for the cycle part two lesson
+
+779
+01:41:33,360 --> 01:41:37,920
+so we have the first part of the project where basically we have
+
+780
+01:41:40,880 --> 01:41:47,680
+approval from the high management of the project then there is a software requirements team that start
+
+781
+01:41:47,680 --> 01:41:53,520
+writing the requirements okay these requirements then are shared to the software development team
+
+782
+01:41:53,520 --> 01:41:59,200
+software development team produce the software and shares the software with you great
+
+783
+01:42:01,600 --> 01:42:08,880
+at the beginning we uh this is let's say a new project okay let's consider these slides is
+
+784
+01:42:08,880 --> 01:42:15,200
+representing a new project so first of all we have to make sure that the software is compliant with the
+
+785
+01:42:15,200 --> 01:42:24,720
+requirement and we know now that that's the process the verification we have defined the verification okay so making
+
+786
+01:42:24,720 --> 01:42:29,920
+sure that the software is compliant with the requirement great and that's what we basically do so there's not
+
+787
+01:42:29,920 --> 01:42:34,400
+much more to be said about verification i already spent two hours about it
+
+788
+01:42:34,400 --> 01:42:48,400
+so let's focus on the right part of this slide where you see there is this purple rectangle b and b in purple that starts really late in the project
+
+789
+01:42:49,280 --> 01:42:59,280
+that's when the validation starts why not the verification started here because uh yeah that's the first software
+
+790
+01:42:59,280 --> 01:43:14,160
+would be 100 for example the verification started here in september 2020 and went on or most indefinitely while the validation started for some reason one year later
+
+791
+01:43:15,600 --> 01:43:28,240
+what happened this one year during this one year the verification team ensured that the software was and is compliant with the requirement
+
+792
+01:43:28,240 --> 01:43:34,800
+once we make sure that the software is compliant with all the requirements so we have
+
+793
+01:43:35,520 --> 01:43:41,840
+all the requirements expected for the project and the software developers have implemented everything
+
+794
+01:43:41,840 --> 01:43:49,040
+coming from the requirements and the verification team has verified that all the required software is compliant with all
+
+795
+01:43:49,040 --> 01:43:55,680
+the requirements when we arrive at this point and it comes the time that we test again all the requirements but this
+
+796
+01:43:55,680 --> 01:44:04,560
+time inside the card while why we do this because in this case we are sure that the software generally in hil
+
+797
+01:44:05,200 --> 01:44:15,440
+uh you know on uh prototypes so in a not in a let's say uh cts car or a car that is very close to the
+
+798
+01:44:15,440 --> 01:44:22,320
+production one but just prototypes so we use basically development tools we make sure that the software works
+
+799
+01:44:22,320 --> 01:44:29,280
+properly with development tools but once we are sure that the software is compliant with all the requirements
+
+800
+01:44:29,280 --> 01:44:37,200
+then we have to make sure that everything works properly also in the car so having the software compliant
+
+801
+01:44:37,200 --> 01:44:44,640
+with the requirement says okay that the software is should be saved to go in the car then it starts the validation
+
+802
+01:44:44,640 --> 01:44:54,640
+phase where all the requirements are tested again but in the car in order to tune some parameters
+
+803
+01:44:55,200 --> 01:45:03,280
+to make sure that the behavior is not just compliant with the requirements but also is okay from the
+
+804
+01:45:03,280 --> 01:45:10,080
+driver point of view i mean let's consider we have a map of i accelerate 10 percent of the accelerator pedal
+
+805
+01:45:10,080 --> 01:45:17,360
+and i get the 15 newton meters of torque for example okay maybe the requirement is met but then i put this
+
+806
+01:45:17,360 --> 01:45:25,040
+software inside the car and the car does you know there are vibrations there are sudden acceleration the
+
+807
+01:45:25,040 --> 01:45:33,280
+feeling of accelerating is not correct or is not the one desired actually by the market so in that case
+
+808
+01:45:33,280 --> 01:45:41,120
+the software is working properly but it's not really like how it should be the final car in that case you start
+
+809
+01:45:41,120 --> 01:45:48,400
+tuning some parameters where the logic of the software works because it has been already verified by the
+
+810
+01:45:48,400 --> 01:45:55,760
+verification team but there are some parameters to be tuned some constants to be tuned inside the software
+
+811
+01:45:55,760 --> 01:46:08,800
+which are called calibrations that will be adjust during the validation activities so to sum up everything and close
+
+812
+01:46:11,120 --> 01:46:18,720
+everything here because it's late finally i need to break you too probably what is the difference between
+
+813
+01:46:18,720 --> 01:46:29,840
+a verification and validation verification we know verification is uh the activity of ensuring that the software is compliant with the requirement
+
+814
+01:46:31,760 --> 01:46:36,160
+the validation so the difference between the verification and validation is that the validation
+
+815
+01:46:36,720 --> 01:46:46,960
+performs basically the same activities so ensuring that the system is uh behaves according to the requirement
+
+816
+01:46:46,960 --> 01:46:59,760
+starting starting from the assumption that the software has been already verified so i consider that the software doesn't have bugs so the software is working properly because
+
+817
+01:47:00,720 --> 01:47:10,400
+it has been already verified and the validation checks that the system in itself so basically these are activities done on the car most of the times
+
+818
+01:47:11,040 --> 01:47:21,520
+the system the system behaves according not just to the requirement because i expect that but also that the behavior is like the expected one and the desired one at high level
+
+819
+01:47:21,520 --> 01:47:34,880
+consider guys once again that the requirements are written one here in the house before of the car so i cannot imagine all the side corner corner cases the side scenarios that i can get
+
+820
+01:47:34,880 --> 01:47:43,360
+once i get once i have a car so maybe there are some adjustments to be done some other stuff that i couldn't test into the hil i have to test in the car
+
+821
+01:47:43,920 --> 01:47:48,800
+so i basically repeat everything that has been done in the verification phase i do it again
+
+822
+01:47:49,680 --> 01:47:55,760
+in the car so having a system that is much closer to the final tool at the final the
+
+823
+01:47:55,760 --> 01:48:05,440
+of the car that is sold on the market starting from the assumption that the software has been verified so
+
+824
+01:48:05,440 --> 01:48:13,360
+i'm supposed not to work on the software logic but just on these tuning parameters called calibrations
+
+825
+01:48:14,000 --> 01:48:20,640
+that will adjust the behavior of the car so finally i can sell in the market a car that is not only compliant
+
+826
+01:48:20,640 --> 01:48:28,400
+with the requirements but it's also let's say nice to drive and is actually compliant with the main idea of
+
+827
+01:48:28,400 --> 01:48:33,840
+the client okay so the intended idea of the client of the car
+
+828
+01:48:38,560 --> 01:48:48,800
+okay so uh we can uh let's see uh discuss about these slides a lot because there are a lot of stuff that
+
+829
+01:48:48,800 --> 01:48:56,720
+we haven't mentioned by the quality gate pg uh the mule part but i guess this part is covered also in
+
+830
+01:48:56,720 --> 01:49:05,680
+boost cycle part two so my suggestion for today would be to uh review what we have done today
+
+831
+01:49:07,680 --> 01:49:14,000
+uh eventually have a look also the full cycle too if you do not recollect it because this focus just on
+
+832
+01:49:14,000 --> 01:49:17,120
+this last part and having the knowledge of what we have said about
+
+833
+01:49:17,120 --> 01:49:23,520
+uh verification this can be helpful for you to have a wider picture of this slide as well
+
+834
+01:49:24,960 --> 01:49:31,920
+and uh yeah i guess we will talk again tomorrow just starting from this point on
+
+835
+01:49:32,880 --> 01:49:37,360
+because from this part on then it starts the operative part
+
+836
+01:49:39,440 --> 01:49:44,800
+where we start to focus on writing the test cases how to write the test cases
+
+837
+01:49:44,800 --> 01:49:49,600
+uh how we want to check while performing test cases and stuff like this but
+
+838
+01:49:50,720 --> 01:50:02,160
+these are just focuses on what we have said that slide 10 i guess nine nine yeah this one okay
+
+839
+01:50:02,720 --> 01:50:06,320
+so this is the focus i would like you to have and write down
+
+840
+01:50:06,320 --> 01:50:15,440
+uh wherever you want on your body on the wall of the office on the floor ceiling or whatever having the
+
+841
+01:50:15,440 --> 01:50:23,920
+requirement understanding the requirement sorry reading the requirement no sorry having the requirement
+
+842
+01:50:23,920 --> 01:50:30,400
+reading the requirement understanding the requirement writing the test cases perform test cases
+
+843
+01:50:30,400 --> 01:50:43,440
+uh while recording them and then uh checking that the the behavior meets the requirement setting okay or if it's not okay
+
+844
+01:50:43,440 --> 01:50:50,400
+raising an issue and following the issue until the issue is fixed we will see that to write test cases there are further
+
+845
+01:50:50,400 --> 01:50:57,920
+information information information information to be added but we will see tomorrow where we will continue from this slide
+
+846
+01:50:58,880 --> 01:51:07,840
+okay uh there is also other material in the folder there are also some exercises but for today i would like you to
+
+847
+01:51:08,640 --> 01:51:14,480
+focus on this just create the scheme of the process and we will uh discuss it
+
+848
+01:51:15,280 --> 01:51:21,280
+tomorrow again and we will slide uh slowly move to a more operative part
+
+849
+01:51:22,480 --> 01:51:29,840
+of course uh if there are questions this is time to ask or uh if they come after
+
+850
+01:51:30,560 --> 01:51:35,440
+the explanation please reach to me at this after okay okay
+
+851
+01:51:37,600 --> 01:51:39,280
+do you have uh questions
+
+852
+01:51:39,280 --> 01:51:55,520
+it's all clear thank you for me it's clear too thank you great so thank you all guys and see you tomorrow
+
+853
+01:51:57,440 --> 01:52:07,280
+see you bye bye bye
+

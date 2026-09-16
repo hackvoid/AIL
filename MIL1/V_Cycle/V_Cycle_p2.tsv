@@ -1,0 +1,2383 @@
+start	end	text
+0	8960	Hello everyone, I am Pasquale Perrotta, and this is the second module of V-Cycle Explanation.
+9640	16780	As all the lessons that I'm recording, the lesson will start just showing you the references, okay?
+17180	24700	So, here we have my reference, okay, name and surname, plus the, sorry, name and last name,
+24700	33040	and the email address, which is pasquale.perrotta, head sign kineton.it.
+33820	40200	I like to start in this way, because whenever you have, in case you have doubts after this explanation,
+40420	48740	or even after the explanation of the first module of the V-Cycle, and you have some curiosities, doubts, problems, whatever,
+48740	59520	you know, you can write an email to that, yeah, the email shown over there, or simply you can send me a message in chat.
+61260	74760	The aim of today's video recording is to go deeper into details about V-Cycle Explanation that you have already watched and received with the other video,
+74760	84460	V-Cycle Part 1. Why is this needed? This is needed because, because of, basically, one reason.
+85240	94500	In the, in the past video recording, what you have seen, basically, it's a simplified version of the V-Cycle,
+94640	98020	which looks like something like this, okay, which looks like this.
+98020	111240	I will not explain the V-Cycle again, using this scheme, because you have already had this explanation in the other video.
+111420	119260	So, I will be very fast on this slide, and then we will go through the reason why I'm recording this,
+119500	123240	let's say, deeper explanation about the V-Cycle.
+123240	131020	So, you have already seen this, so, as you know, the first and most important thing is the software requirements, okay?
+131160	133360	Everything starts from requirements.
+133680	139620	So, please, you will listen me or other people saying this many times.
+139720	145220	The requirements are the starting point for all the activities that we are going to do, okay?
+145220	151480	So, whatever you're doing, if you're working on the diagnosis, if you're working on network,
+151780	155700	if you're working in the car, the child, wherever you are working,
+156340	160760	the first input of the activities is always the requirements.
+161940	162660	Why so?
+163400	171700	Requirements are extremely important because we need a set of instructions that then have to be implemented in the software.
+171700	174920	So, here we have software requirements.
+175100	176820	Basically, these are documents, okay?
+176900	183080	Like Word documents, PDF documents, you know, textual documents, okay?
+183960	190640	These documents will, once they're prepared, let's say, they are shared to the software development team
+190640	193380	that will create an architecture of the software.
+193980	202380	We'll start to deeper these software architectures, starting to, let's say, think about big blocks
+202380	208140	that should, let's say, be part of the software itself.
+208400	214560	So, they will divide software in domains, but, yeah, we will not go into details now about that.
+214560	220600	And finally, the software developer team will write the actual code, okay?
+221640	227500	This will not be the aim of this lesson and probably of this learning phase.
+227720	235240	If you're following a validation program, we will not go through the phases of software architecture,
+235500	237760	software configuration, and software construction.
+239240	241080	But why this is important?
+241180	246300	This is important because the software developers will consider as an input software requirements.
+246300	252600	And then, once the software is ready, this software is delivered to the testing team
+252600	258240	that will start at the unit test phase, the integration test phase, and the functional test phase.
+258240	264680	There will be other lessons, probably the lessons related to the software verification,
+264680	271480	where we will enter every single block that we see here on the right side,
+271560	274100	the unit test, the integration test, and functional test.
+274100	283540	We will add some more details, but for the sake of this lesson, we will not enter these blocks.
+283540	294460	I want to just remind what the V-cycle looks like and add, in addition, that apart from the purple V that we see here,
+294460	296440	there are also gray blocks.
+296640	300580	These are functional test design, integration test design, and unit test design.
+300580	306280	So, basically, once we have the requirements, once we have software architecture or software design,
+306700	312860	we can start to develop some test cases, so we can prepare the tests that we have to do,
+312980	316780	starting to write them, and once we actually have the software,
+317260	323500	or the integrated hardware in the system, for example, system hardware in the loop,
+323560	325820	where we have more than one electronic control unit,
+325820	330220	or simply we have a car where we can perform a functional test,
+330820	333180	we can start to prepare all the tests,
+333180	337320	and once we have the bench to open the cars, we can actually perform the tests.
+337720	337840	Okay.
+338740	345900	So, this is a fast explanation about the V-cycle,
+346080	351140	and probably in the first module, something like this was already explained,
+351400	354920	and this V-cycle repeats itself in many phases of the project.
+354920	362220	So, about the design, about the requirements, about the software development,
+362360	363120	and stuff like this.
+363180	363320	Okay.
+363400	365960	So, this V-cycle will repeat itself many times.
+367840	372960	We finally get to the point of this second module.
+373080	376040	The point of this second module is to say,
+376560	378660	okay, this is wonderful.
+378900	381720	I mean, this is very clear, easy to understand.
+382200	383200	This is the process.
+383640	384040	Great.
+385620	386140	Question.
+386580	391000	How do we use this V-cycle in a real case scenario?
+391220	392740	Actually, I go to work.
+393100	395200	I sit on my chair in front of the computer.
+395820	396260	How?
+396460	398920	The V-cycle is going to affect my activities.
+399660	404980	So, the aim of this second module is to bring everything that you have seen
+404980	411060	in the previous presentation that is, let's say, general,
+411060	415520	and try to place this V-cycle on a real project.
+415520	424120	This is a project I was working on, and of course, I will not mention it for copyrights reasons,
+424120	430180	but this is actually a real case scenario I was working on,
+430180	437680	and we will see how all that we have said about the V-cycle actually applies also on a real case scenario.
+437680	443080	So, let's move to this other slide.
+443080	450900	You will not get this presentation yet because this is part of a bigger presentation
+450900	456300	that will arrive later in the validation learning and training program.
+456300	465780	But you can, you know, have a look at the video and then, let's say, use it to study.
+466600	468260	Let's just see something.
+468260	479420	Okay, there is a little spoiler here, but then, yeah, let's see what it is.
+480360	481960	So, what is that?
+483240	489860	I imagine that that's what you ask yourself once you have seen the first video,
+490140	494680	and then you received the exercise after the first video.
+494680	500220	In front of this slide, probably everyone would have asked himself or herself,
+500680	503880	okay, what am I supposed to do with this drawing?
+504120	505460	What are all these dots?
+505640	506920	What are this stuff?
+507760	511940	This is an intended shock, let's say, that we provide you
+511940	519000	because we want first to test how you react from the, let's say, didactical point of view
+519000	525900	that is the first module of this, of this, yeah, VooCycle topic
+525900	530560	and see what you're able to understand about something like this
+530560	535620	and how you would place the VooCycle here on a real case scenario.
+536560	540580	Of course, you are going to watch this video right after you have tried
+540580	545860	at least once or twice or three times to resolve the exercise, okay?
+546760	552180	Not everything is answerable from the exercise without this explanation,
+552640	553920	but part of it, it is.
+554100	558280	So, before you move on, please make sure that you have already shared
+558280	562600	one of your solutions of the exercise before this one will,
+562760	565760	this explanation will probably reply to all the questions
+565760	569720	that are asked for the VooCycle exercise.
+570800	571740	So, let's see.
+572340	575520	As you can imagine, this is a, yeah, of course,
+575600	577920	looking at the top part of the presentation,
+578240	580040	here we see a timeline, okay?
+581340	585640	What we really care about starts in 2020 and 2022.
+586480	591780	So, the lifespan of this project is 2020 to 2022.
+592520	594320	Let's start from the left part.
+594320	599780	So, the left part is the, let's say, first moments of a project, okay?
+600160	605840	And while we move on the right side of this slide,
+605960	607860	we are advancing in time.
+608540	612540	That means that the project is advancing as well,
+612580	614300	or at least it's supposed to advance.
+614400	617720	So, the maturity of the project is advancing.
+617720	622240	So, as you see here, in the top left part of the slide,
+622340	623440	there is the program approval.
+624300	627200	Program approval is something that really happens
+627200	630180	at a very high level of the project, okay?
+631060	631660	Oh, yeah.
+631760	634700	Well, probably we can use the, once again,
+634860	639180	the most used software in the engineering world,
+639180	640600	which is paint.
+641600	643860	So, let's use it so we can draw,
+644060	648660	we can draw something in here, okay?
+648980	650880	Okay, let's keep 100% for now.
+651920	652880	Okay, great.
+652880	656680	So, here we have the program approval, okay?
+656760	657800	I'll mark it in red.
+658160	661740	Here, guys, this is a very high level,
+662060	663500	high management decision.
+663680	665140	So, it's the management deciding,
+665300	668660	okay, we are going to create,
+668800	672040	to work on this project, okay?
+672040	679520	I don't know, let's call it ST project, okay?
+680160	682980	So, our card is the ST project, okay?
+683260	689680	This is the project plan for the ST project, okay?
+689900	691560	This is a fictional card.
+692860	696360	Then, let's analyze some of these lines.
+696360	701020	I would see, we will work on the spec freeze,
+701740	703780	PCR fleet, eco,
+704320	707960	and then this line starting from here onward,
+708520	711460	this line onward, and stuff like this.
+712440	714300	Let's start from the spec freeze.
+714700	717080	The spec freeze is the moment
+717080	724460	when a set of requirements are freeze, okay?
+724460	729220	Frozen freeze, you pick the right way
+729220	730520	to pronounce it or to say.
+731220	732460	This means that, okay,
+733540	737000	at this date, the 22nd of May,
+737480	738240	we will have,
+738780	742420	I'm just, you know, inventing numbers.
+742600	744320	I don't remember the actual numbers,
+745220	746200	but we will have,
+746620	750340	let's put it, let's make it smaller.
+750340	758660	We'll have like 25% of the requirements
+758660	761080	will be ready,
+761520	762360	and most of all,
+762560	765420	they will be official, okay?
+765800	769860	So, this means that 25% of the requirements are ready.
+771760	773260	As you can see here,
+773260	777080	there is a delta time
+777080	781100	that passes from here to here, okay?
+781920	784340	This time, this delta time, let's see,
+784740	787400	is the time where once we know
+787400	789080	that this program is going to happen,
+789440	792480	then there will be a team
+792480	795520	working on writing the requirements.
+795520	798600	So, here, we will have
+798600	802580	what is the up-left part of the V cycle,
+802960	803900	the software requirement.
+804080	805560	Do you remember the previous slide
+805560	808620	where we had this first block
+808620	813040	up-left side of the V cycle?
+813420	814120	Here it is.
+814520	816180	So, here, there will be a team
+816180	818060	writing software requirement.
+818880	820620	Of course, they will need some time
+820620	821780	to write these requirements,
+822220	824340	so they start writing the requirements,
+824340	827720	and they will need one month,
+827820	828620	two months, three months.
+828680	829920	It depends on how much,
+830500	832200	how many requirements we want to share
+832200	835420	for this date, the 22 of May.
+835740	837480	But then we will arrive that
+837480	841420	the 22 of May,
+841840	843700	the 0A release will be ready.
+843920	845960	This means that 25% of the requirement
+845960	846980	will be shared.
+849760	851480	This is a timeline, okay?
+851480	853700	Remember always to look both
+853700	856600	to the timeline on the top part of the slide
+856600	859780	and the timeline that we are working on here, okay?
+860320	862980	As soon as we go on the right part of the slide,
+863120	864420	we are advancing in time.
+865180	867660	You see, there are also other releases
+867660	868980	that we will have the 1A,
+869120	870180	we will have the 2A,
+870920	871720	but in general,
+872120	875360	as your general understanding,
+875360	878080	we will not have just three releases,
+878260	879800	0A, 1A, and 2A.
+880240	881300	In my experience,
+881400	884260	I've seen 0A, 0B,
+884960	888660	the 0C, 1A, and 2A.
+888800	891240	These are five milestones,
+891420	892460	let's say, for the requirements.
+892840	894980	And you can understand that from 0A,
+895140	896640	we will have the 25%,
+896640	900080	I don't know, 0B, 50%,
+900080	901640	0C, 75%,
+901640	903680	1A, 100% of the requirements.
+904120	907400	And then we will have another
+907400	910540	and last release of the requirements
+910540	913880	where we simply modify what was not working before
+913880	916100	if we realize that there was something wrong
+916100	916800	on the requirements.
+916800	921180	So we will have a last release of the requirement,
+921360	922060	that is the 2A.
+922060	924420	As you see here,
+924500	927860	there are no other phases after this 2A.
+927980	930320	So this means that all the requirements
+930320	934060	must be ready and finished
+934060	936380	within the 2A.
+936560	937600	After the 2A,
+937920	940860	there will be no new requirements.
+940860	945740	Of course, this is an ideal perspective,
+945880	946280	let's say.
+946380	948660	This is an ideal situation.
+948660	954020	Quite likely in the likelihood of a project,
+954180	955560	in the reality of the project,
+956000	958640	it happens that we will have other requirements
+958640	960620	in late phases of the project.
+960760	962320	But this is an emergency case.
+962740	964420	Most of the requirements should be closed
+964420	966480	or at least 100% of the requirements
+966480	969260	should be closed up and running,
+969500	970000	let's say,
+970400	972160	not modifiable,
+972920	974320	from the 2A on.
+974320	977820	The 2A is the last time
+977820	980560	we can upload update requirements.
+980760	980840	Okay.
+981680	983020	But let's move back
+983020	984380	to what we were saying before.
+984800	987740	So when the requirements are released here,
+988140	989420	let's say here we have
+989420	990820	the software requirement release.
+990920	991040	Okay.
+991080	993120	Where the 25% of the requirements are written.
+993780	995460	As you remember from the presentation
+995460	996500	I was showing before,
+996600	999520	so let's move back for one second.
+1000300	1001760	Here you see the software requirements
+1001760	1002800	is the first step.
+1002800	1004800	Then there will be other steps.
+1004940	1006780	These steps will be part of
+1006780	1009760	the software development team.
+1009880	1011820	So we will not see anything
+1011820	1012900	that happens between
+1012900	1015180	the release of the requirements
+1015180	1017740	and the release of the first software.
+1018120	1020480	The release of the first software,
+1020600	1021340	in this case,
+1021540	1024400	considering just ECHO1 timeline,
+1024880	1026420	is this B100.
+1026420	1028640	So as you see,
+1028760	1030400	the B100 is released,
+1030640	1035120	was released on 16th of September 2020,
+1035640	1036700	while the requirements
+1036700	1041160	were released 22th of May 2020.
+1041800	1044460	So there were like four months
+1044460	1045720	between the two releases.
+1046560	1048120	What happened in these two months?
+1048240	1049080	In these two months,
+1049180	1050320	it happened that
+1050320	1052860	the requirements were shared
+1052860	1054040	with the software developers.
+1054520	1055620	The software developers
+1055620	1057160	discussed the requirements
+1057160	1065260	with the specification engineer,
+1065380	1066420	so the engineer
+1066420	1067460	that wrote the requirement.
+1067620	1068440	So there is a discussion
+1068440	1070760	between the requirement engineer
+1070760	1073580	and the software developers.
+1074120	1075980	And once they agree on everything,
+1076860	1078580	then the requirements are,
+1078720	1079780	let's say, finalized.
+1079780	1080660	So these requirements
+1080660	1082480	are agreed between the parties.
+1082960	1084640	And then the software developer team
+1084640	1086360	starts to work on the requirement
+1086360	1088340	and to actually implement them
+1088340	1088900	in the software.
+1089420	1089820	How?
+1090100	1092280	First, creating a software architecture,
+1092560	1093660	then a software design,
+1093760	1096480	and finally constructing the software.
+1102160	1104660	So the requirements are shared
+1104660	1107160	and agreed between
+1107160	1108680	the requirement engineer
+1108680	1110240	and the software development team.
+1111220	1111800	And finally,
+1111920	1113220	the software development team
+1113220	1114360	starts to work on them.
+1114840	1115900	They create an architecture,
+1116080	1117100	they design the software,
+1117280	1118400	and they write the software.
+1119260	1121040	Then they release the software.
+1121360	1123480	So here we are simply
+1123480	1125520	descending the left part
+1125520	1126560	of the cycle, okay?
+1127020	1131280	So this was the software requirement,
+1131920	1132160	okay?
+1132460	1134580	And here we start to go down the V
+1134580	1137160	until we have the release
+1137160	1138240	of the first software.
+1139200	1140800	So they build the software
+1140800	1142140	and then they give us,
+1142380	1144920	so let's go down here for a while.
+1145400	1148220	And then we start to raise the V,
+1148620	1148980	okay?
+1149720	1153580	Where we find the first part
+1153580	1155360	that really matters
+1155360	1157460	to us that are following
+1157460	1158660	the validation program.
+1159440	1160040	So remember,
+1160300	1161940	this is the software requirement block.
+1162080	1163920	Then we have the software architecture block.
+1163920	1166040	We have the software design block.
+1166260	1168220	Here we have the software construction.
+1169140	1170880	And then we will have the,
+1171960	1172400	let's see,
+1172480	1174060	here at the phase of unit testing.
+1174540	1176060	So here we will receive
+1176060	1178100	the first software.
+1179560	1181700	Where we upload this software,
+1182040	1184720	so we have a bunch of lines of code,
+1185140	1185440	okay?
+1186080	1188120	But then we have to test this software.
+1188120	1190120	So to test this software,
+1190260	1193220	we will need a benchtop.
+1193680	1195780	You will see different stuff
+1195780	1197020	about these benchtops,
+1197140	1198600	different kind of benchtops,
+1198700	1199220	the car,
+1199720	1200640	and stuff like this.
+1200720	1201720	So hardware in the loop,
+1201820	1202700	software in the loop,
+1202920	1204740	whatever, okay?
+1204780	1206460	There will be many strategies
+1206460	1207820	to perform these tests.
+1207980	1210180	But for the sake of this explanation,
+1210880	1213760	we consider as an hypothesis
+1213760	1216040	that before we received the software,
+1216040	1217820	there was a team working
+1217820	1219760	in preparing the benchtop for us,
+1219820	1220020	okay?
+1220460	1221380	This will be clearer
+1221380	1224100	once you move forward
+1224100	1225960	to the training program.
+1226500	1227360	But for now,
+1227460	1228280	let's consider that
+1228280	1230000	we already have a benchtop
+1230000	1231280	that is ready to be tested.
+1231420	1232540	So we have a benchtop.
+1233060	1235800	We have the electronic control unit one.
+1236440	1237900	And when we receive the software
+1237900	1240160	related to the electronic control unit one,
+1240160	1244140	then we flash or upload the software
+1244140	1246460	on the electronic control unit
+1246460	1248220	and we start the test.
+1249680	1250320	Question.
+1251040	1252660	What kind of test do we start?
+1253520	1256820	Guys, please remember always
+1256820	1259020	that the starting point
+1259020	1260700	and the full purpose
+1260700	1261680	of the verification,
+1262160	1262920	of the validation,
+1263340	1264160	and in general,
+1264720	1265940	the testing activities
+1265940	1267740	is to make sure
+1267740	1268920	that the software
+1268920	1270960	and so the system
+1270960	1272440	behaves
+1272440	1274420	as the requirements
+1274420	1275700	described,
+1276240	1276520	okay?
+1277160	1278180	This is the reason
+1278180	1279140	why the requirements
+1279140	1280300	are always
+1280300	1282600	the most important phase,
+1282940	1283280	okay?
+1284060	1285900	They are extremely important
+1285900	1287620	because they are the input document
+1287620	1288360	for everything.
+1289000	1290480	Whenever we have to test,
+1290620	1291660	what we test
+1291660	1292840	is that the software
+1292840	1294300	behaves according
+1294300	1295440	to the requirements,
+1295880	1296080	okay?
+1297300	1299100	Requirements must enter
+1299100	1300000	in your head.
+1300100	1300440	I don't know
+1300440	1301480	if you want to
+1301480	1303280	tattoo
+1303280	1304920	these requirements
+1304920	1305760	on your heart.
+1306080	1307160	You want to write
+1307160	1308620	requirements everywhere
+1308620	1310720	on your copybook,
+1310840	1311180	wherever,
+1311340	1313140	put as a screen saver
+1313140	1314220	on your computer.
+1314860	1316320	What is extremely important
+1316320	1317240	is that you remember
+1317240	1318660	that the input
+1318660	1320020	of all,
+1320540	1320980	all,
+1321500	1322800	all the activities
+1322800	1324200	that you will see here
+1324200	1325020	in this company
+1325020	1326740	starts from
+1326740	1327960	the requirements,
+1328400	1328640	okay?
+1329460	1329780	So,
+1330680	1332240	this is actually,
+1332680	1333660	again,
+1333920	1334560	an experience
+1334560	1335520	that I had.
+1335940	1336100	So,
+1336240	1337420	I was working
+1337420	1338220	on this project
+1338220	1339040	when I received
+1339040	1340640	B100 software.
+1341160	1342400	There was another team
+1342400	1343840	working on a benchtop.
+1344120	1345660	This team provided me
+1345660	1346320	the benchtop.
+1346700	1347940	I had the electronic
+1347940	1349060	control unit one.
+1349420	1350800	I flashed the software
+1350800	1351840	and I had
+1351840	1352580	to make sure
+1352580	1353320	that the software
+1353320	1354280	behaved according
+1354280	1355860	to the 25%
+1355860	1356660	of the requirements
+1356660	1357420	that were shared
+1357420	1358480	on the zero errorings,
+1358760	1359020	okay?
+1359520	1359820	So,
+1359900	1360380	we have
+1360380	1362560	a bunch of requirements
+1362560	1363660	and we make sure
+1363660	1364660	that these requirements
+1364660	1366980	are properly implemented
+1366980	1367640	in the software,
+1367900	1368200	okay?
+1369480	1371280	As you see here,
+1371340	1372360	there is a similarities
+1372360	1373120	in colors,
+1373280	1373580	okay?
+1373580	1373920	So,
+1374180	1375280	this light blue
+1375280	1376560	is the same light blue
+1376560	1377260	that we have
+1377260	1378740	on all these points,
+1378820	1379100	okay?
+1379860	1381100	I'm just focusing
+1381100	1382180	on the development
+1382180	1383140	of ECO1,
+1383340	1384360	but as you've already
+1384360	1385600	seen in the introduction
+1385600	1386680	videos about
+1386680	1388180	the e-architecture
+1388180	1389500	or generally
+1389500	1390440	of all the electronic
+1390440	1391180	control units
+1391180	1391720	that you have
+1391720	1392160	on a car,
+1392640	1393900	you may realize
+1393900	1394900	that there are
+1394900	1395780	like 30,
+1396200	1396680	40,
+1397180	1398700	50 electronic
+1398700	1399660	control units
+1399660	1400960	inside the car.
+1400960	1401400	So,
+1402040	1403320	what we say
+1403320	1404300	for one electronic
+1404300	1405120	control unit
+1405120	1406500	may apply also
+1406500	1407500	for other 30,
+1407660	1407920	40,
+1407940	1409060	or 50 electronic
+1409060	1409900	control units.
+1411440	1412940	We have requirements
+1412940	1413760	that are related
+1413760	1414660	to the bull car,
+1414920	1416400	so it means
+1416400	1417320	that these requirements
+1417320	1419060	to be properly
+1419060	1419640	implemented
+1419640	1421440	need the collaboration
+1421440	1423200	of many electronic
+1423200	1423980	control units
+1423980	1425500	or some requirements
+1425500	1426300	that are specific
+1426300	1427420	for one electronic
+1427420	1428160	control unit.
+1428620	1429200	But anyway,
+1429380	1429720	we will
+1429720	1431980	deep this
+1431980	1433520	topic
+1433520	1434140	in further
+1434140	1434800	lessons.
+1435740	1436300	So,
+1436380	1436880	we arrived
+1436880	1437720	at the unit test
+1437720	1438040	phase.
+1438160	1438300	Okay,
+1438340	1438920	do you remember
+1438920	1439620	we are here?
+1439860	1440800	Why unit test?
+1442260	1442820	Especially
+1442820	1445060	for the first
+1445060	1446100	part of the project,
+1446660	1448000	you do not
+1448000	1448560	have
+1448560	1450560	a
+1450560	1452400	system
+1452400	1453260	that looks
+1453260	1454000	like the final
+1454000	1454500	product.
+1454960	1455180	So,
+1455220	1455480	basically,
+1455660	1456280	we do not
+1456280	1457060	have a car.
+1457060	1457960	we do not
+1457960	1459120	have a very
+1459120	1459780	advanced
+1459780	1461440	hardware in the
+1461440	1461800	loop that
+1461800	1462640	simulate the car
+1462640	1463360	because we are
+1463360	1463980	at the beginning
+1463980	1464680	of the project.
+1465240	1465340	So,
+1465420	1465740	at the beginning
+1465740	1466500	of the project,
+1466620	1466820	here,
+1466900	1468040	we just focus
+1468040	1468820	on one
+1468820	1469540	electronic
+1469540	1470420	control unit.
+1470760	1471400	This is why
+1471400	1472360	here we mentioned
+1472360	1473600	the unit test,
+1473860	1475160	which is focusing
+1475160	1475820	on testing
+1475820	1476760	just our
+1476760	1477640	component.
+1477900	1478040	So,
+1478140	1478420	here,
+1478500	1479220	most of the time,
+1479320	1479720	we have
+1479720	1481340	a simplified
+1481340	1482180	hardware in the
+1482180	1482760	loop where there
+1482760	1483800	is an ideal
+1483800	1484680	and simplified
+1484680	1485840	model of a car,
+1485840	1487220	the only
+1487220	1488540	available hardware
+1488540	1489460	is our
+1489460	1490440	electronic control
+1490440	1491140	unit and we
+1491140	1491840	work only
+1491840	1492660	with the
+1492660	1493500	electronic control
+1493500	1494200	unit 1,
+1494460	1495180	testing the
+1495180	1495940	software B100.
+1497120	1498180	You see here
+1498180	1498800	there are many
+1498800	1499520	other software,
+1499680	1500700	B110,
+1501040	1502000	B120,
+1502360	1502960	and stuff like
+1502960	1503240	this.
+1503980	1504940	This can be
+1504940	1505980	both because
+1505980	1506940	the 0A
+1506940	1507580	requirements
+1507580	1508560	couldn't be
+1508560	1509200	implemented
+1509200	1510560	fully in
+1510560	1511500	B100 and
+1511500	1512020	maybe they
+1512020	1512760	splitted part
+1512760	1513480	in B100,
+1513720	1514740	part in B110
+1514740	1515580	and other
+1515580	1516940	part of B120,
+1517480	1518420	but also because
+1518420	1519200	once we start
+1519200	1519660	testing,
+1520920	1522660	we can have
+1522660	1523560	problems and
+1523560	1524440	we will see
+1524440	1525180	what happens
+1525180	1525860	in that case.
+1527120	1528240	Let's focus on
+1528240	1529160	something very
+1529160	1529960	important that
+1529960	1530840	is up here.
+1531020	1531140	So,
+1531220	1532020	I slightly
+1532020	1533140	delete this
+1533140	1535520	part because
+1535520	1537200	I want to
+1537200	1538040	focus on
+1538040	1540080	this timeline,
+1540460	1541040	this one.
+1541040	1542480	this is the
+1542480	1543460	timeline of
+1543460	1544400	the vehicles.
+1545860	1546460	Let's
+1546460	1547200	explain this
+1547200	1547560	better.
+1548600	1549000	Where you
+1549000	1549500	see here
+1549500	1550260	Mule 1,
+1550500	1551580	Mule 1 is
+1551580	1552320	the first
+1552320	1553800	prototype ever
+1553800	1554540	of that
+1554540	1555200	project.
+1555960	1556600	This is a
+1556600	1557320	car that is
+1557320	1558460	built by hand
+1558460	1558900	basically.
+1559260	1559400	Okay?
+1559980	1560220	So,
+1560460	1562460	parts of
+1562460	1563140	other cars
+1563140	1563720	are taken,
+1564240	1564580	they're put,
+1564820	1565500	they're all
+1565500	1565960	together,
+1566080	1566420	they're put
+1566420	1566840	together,
+1566840	1567260	and we
+1567260	1567660	create
+1567660	1568220	first
+1568220	1568900	prototype.
+1570760	1571660	Is this
+1571660	1572220	just a
+1572220	1572620	random
+1572620	1573300	prototype?
+1573720	1574000	No.
+1574500	1574880	Probably
+1574880	1575800	10% of
+1575800	1576300	this car
+1576300	1577560	will be
+1577560	1580760	what we
+1580760	1581860	will find
+1581860	1582140	in the
+1582140	1582860	final product,
+1583120	1583600	while the
+1583600	1584600	90% of
+1584600	1584940	the car
+1584940	1585460	is something
+1585460	1585920	different.
+1586540	1586720	So,
+1586760	1587160	the purpose
+1587160	1587740	here is
+1587740	1588180	just to
+1588180	1589040	test the
+1589040	1590040	10% of
+1590040	1590400	the car
+1590400	1592960	that will
+1592960	1593500	be actually
+1593500	1594220	part of
+1594220	1594700	the final
+1594700	1595220	product.
+1595220	1597100	Why I'm
+1597100	1597720	focusing on
+1597720	1597940	this?
+1598020	1598540	I'm focusing
+1598540	1598940	on this
+1598940	1599720	because this
+1599720	1600320	means that
+1600320	1601900	before this
+1601900	1602960	16th of
+1602960	1603480	November,
+1604200	1604720	before,
+1604900	1605200	there are
+1605200	1605720	no cars.
+1606320	1606460	Okay?
+1606900	1607280	So,
+1607400	1607680	we are
+1607680	1608320	working on
+1608320	1608820	a project
+1608820	1609660	to create
+1609660	1610080	a car,
+1610400	1610980	to work
+1610980	1611400	on this
+1611400	1611880	car that
+1611880	1612340	we call
+1612340	1612720	ST
+1612720	1613160	project,
+1613860	1614740	but before
+1614740	1615620	16th of
+1615620	1616120	November,
+1616740	1617360	if everything
+1617360	1618040	goes according
+1618040	1618340	to the
+1618340	1618540	plan,
+1618840	1619320	we have
+1619320	1620480	no car.
+1621320	1621620	So,
+1621720	1622600	this explains
+1622600	1623620	you why
+1623620	1624480	we focus
+1624480	1625200	first on
+1625200	1625920	unit test
+1625920	1626300	because at
+1626300	1626720	the beginning
+1626720	1627560	it's extremely
+1627560	1628860	important first
+1628860	1629500	to test that
+1629500	1630080	the single
+1630080	1630820	unit works
+1630820	1631260	properly.
+1632000	1632300	Then,
+1632420	1632880	once we
+1632880	1633300	move in
+1633300	1633820	the timeline,
+1634160	1634440	we will
+1634440	1635320	have other
+1635320	1635880	electronic
+1635880	1636780	control unit,
+1637640	1638160	let's say
+1638160	1638620	in a way
+1638620	1639280	debugged,
+1639360	1639980	or at least
+1639980	1641000	other components
+1641000	1641620	that start
+1641620	1642340	to be more
+1642340	1642820	mature,
+1643280	1643820	and we can
+1643820	1644220	move to
+1644220	1644600	the next
+1644600	1645200	phase of
+1645200	1645960	the system
+1645960	1647840	testing,
+1648060	1648180	okay?
+1648220	1648860	The integration
+1648860	1649420	testing,
+1649560	1649780	sorry.
+1650160	1650400	So,
+1650400	1651100	we don't
+1651100	1651800	have just
+1651800	1652620	the test
+1652620	1653240	of one
+1653240	1654720	component,
+1654720	1655120	but then
+1655120	1655520	we start
+1655520	1655900	to put
+1655900	1656380	together
+1656380	1657180	more
+1657180	1657720	electronic
+1657720	1658140	control
+1658140	1658600	units.
+1659640	1660400	This is
+1660400	1661100	needed because,
+1661300	1661700	as I was
+1661700	1662080	mentioning
+1662080	1662560	before,
+1663020	1663780	the requirements
+1663780	1664780	are the
+1664780	1665740	feature that
+1665740	1666300	we have on
+1666300	1666720	cars,
+1666860	1667440	most of
+1667440	1668360	them imply
+1668360	1669040	the collaboration
+1669040	1669660	of more
+1669660	1670120	than one
+1670120	1670600	electronic
+1670600	1671300	control unit.
+1671720	1672320	I always
+1672320	1672620	do the
+1672620	1673160	example of
+1673160	1673500	the cruise
+1673500	1673880	control,
+1674000	1674360	or for
+1674360	1674720	example,
+1674820	1675440	the adaptive
+1675440	1676260	cruise control.
+1676400	1676860	The adaptive
+1676860	1677920	cruise control
+1677920	1678540	is a feature
+1678540	1679780	that allows
+1679780	1680360	you to
+1680360	1681080	follow a
+1681080	1681660	car without
+1681660	1682480	just braking
+1682480	1683280	or accelerating.
+1683440	1683720	The car
+1683720	1684040	will do
+1684040	1684620	everything by
+1684620	1685020	itself.
+1685660	1686020	In order
+1686020	1686400	to do
+1686400	1686660	that,
+1686760	1687080	the car
+1687080	1687480	needs to
+1687480	1688160	read information
+1688160	1688640	from the
+1688640	1689000	radar,
+1689440	1689780	from the
+1689780	1690140	camera,
+1690560	1690920	and then
+1690920	1691400	accelerate
+1691400	1692200	by itself,
+1692520	1693380	brake by
+1693380	1693800	itself.
+1694200	1694360	So,
+1694540	1694960	all these
+1694960	1696740	devices are
+1696740	1697500	not controlled
+1697500	1698700	just by one
+1698700	1699220	electronic
+1699220	1699960	control unit,
+1700320	1700680	but there
+1700680	1701400	are more
+1701400	1702000	than one,
+1702120	1702460	there are
+1702460	1702680	two,
+1702840	1703040	three,
+1703200	1703400	four,
+1703680	1704400	five electronic
+1704400	1705200	control units
+1705200	1706460	working to
+1706460	1707560	make the
+1707560	1708580	adaptive cruise
+1708580	1709320	control working
+1709320	1709880	properly in
+1709880	1710200	the car.
+1711120	1711440	So,
+1712080	1712640	it's okay
+1712640	1713420	that I have
+1713420	1714220	the single
+1714220	1715300	electronic control
+1715300	1716060	unit working
+1716060	1716580	properly,
+1716880	1717360	but then,
+1717460	1718780	in order to
+1718780	1719480	make this
+1719480	1720560	feature working
+1720560	1721480	properly also
+1721480	1722380	on a car,
+1722520	1723180	so that actually
+1723180	1724080	a driver can
+1724080	1724880	use an adaptive
+1724880	1725680	cruise control,
+1726080	1726800	it's extremely
+1726800	1727720	important that
+1727720	1728400	not just the
+1728400	1729100	unit works,
+1729380	1730060	but that also
+1730060	1730820	the different
+1730820	1732900	units participating
+1732900	1733340	with this
+1733340	1734580	feature talk
+1734580	1735600	properly to
+1735600	1736220	each other
+1736220	1737500	and make
+1737500	1738060	sure that the
+1738060	1738800	adaptive cruise
+1738800	1739420	control will
+1739420	1740120	work properly
+1740120	1740760	on a car.
+1741500	1741660	So,
+1741800	1742580	before we
+1742580	1743500	arrive to
+1743500	1744220	the testing
+1744220	1745120	phase in
+1745120	1745880	the car,
+1746500	1747240	we perform
+1747240	1748180	first unit
+1748180	1748580	test,
+1748920	1750000	then integration
+1750000	1750480	test,
+1750620	1751120	so we start
+1751120	1751880	to put together
+1751880	1752460	the electronic
+1752460	1753280	control units
+1753280	1753960	and see what
+1753960	1754540	happens when
+1754540	1755060	they talk to
+1755060	1755520	each other
+1755520	1756220	and if they
+1756220	1756920	talk properly
+1756920	1757300	to each
+1757300	1757540	other,
+1758260	1758880	and finally,
+1759020	1759700	we arrive to
+1759700	1760060	the last
+1760060	1760480	phase,
+1760620	1760740	okay,
+1760840	1761320	now this
+1761320	1762540	V is a bit
+1762540	1762900	weird,
+1763020	1763540	let's say
+1763540	1764040	it's something
+1764040	1764640	like this,
+1765900	1766440	we arrive to
+1766440	1766800	the last
+1766800	1767640	phase here,
+1768060	1768560	that is
+1768560	1769000	the new
+1769000	1769340	one,
+1769460	1770080	so here
+1770080	1770820	finally we
+1770820	1771560	have the
+1771560	1772460	first car,
+1773000	1773600	on a car
+1773600	1774360	we do not
+1774360	1775240	focus only
+1775240	1775720	on the
+1775720	1776840	single unit,
+1777160	1777500	but we
+1777500	1778720	focus on the
+1778720	1779760	whole system
+1779760	1780400	performing
+1780400	1781000	functional
+1781000	1781500	tests,
+1781500	1783020	so now
+1783020	1783940	we see that
+1783940	1784460	there is a
+1784460	1784900	connection
+1784900	1785640	between this
+1785640	1786220	V cycle
+1786220	1786860	that is
+1786860	1787420	on a slide
+1787420	1788080	and a
+1788080	1788580	V cycle
+1788580	1789780	seen on
+1789780	1790100	a real
+1790100	1790620	project,
+1790880	1791120	okay,
+1792520	1793300	so let's
+1793300	1793800	see if I
+1793800	1794220	can
+1794220	1796640	clean a
+1796640	1797220	bit the
+1797220	1797720	mess that
+1797720	1798300	I created
+1798300	1798980	over here,
+1801560	1803040	maybe it's
+1803040	1803600	better just
+1803600	1804080	to move
+1804080	1805020	here directly,
+1805020	1806960	so we're
+1806960	1807780	at this
+1807780	1808160	point,
+1808720	1810220	here you
+1810220	1811020	see we
+1811020	1812040	have the
+1812040	1813160	first V
+1813160	1813720	cycle
+1813720	1815840	drawn on
+1815840	1818440	a real
+1818440	1820160	project
+1820160	1822240	plan
+1822240	1822840	card,
+1822840	1824220	so I
+1824220	1824400	have a
+1824400	1824740	look at
+1824740	1824960	this
+1824960	1825260	slide
+1825260	1826120	for a
+1826120	1826420	while,
+1826420	1852300	okay,
+1852440	1852940	this is the
+1852940	1853580	final slide,
+1853720	1855860	so you
+1855860	1856340	see that
+1856340	1857120	V cycle
+1857120	1857760	repeats
+1857760	1858540	itself
+1858540	1859320	many,
+1859320	1860060	many,
+1860060	1861340	many times,
+1861480	1861660	okay,
+1861840	1862560	this is just
+1862560	1863140	a qualitative
+1863140	1863980	expression,
+1864280	1864440	okay,
+1864900	1865640	this doesn't
+1865640	1866000	mean that
+1866000	1866440	we have
+1866440	1866660	I don't
+1866660	1866760	know,
+1866820	1867040	1,
+1867120	1867260	2,
+1867400	1867700	3,
+1867700	1868180	4,
+1868280	1868500	5,
+1868580	1868760	6,
+1868760	1869460	I drawn
+1869460	1869820	just
+1869820	1870640	6 V
+1870640	1871040	cycles,
+1871160	1871480	but V
+1871480	1871720	cycle
+1871720	1872220	repeats
+1872220	1873660	itself
+1873660	1874760	over and
+1874760	1875120	over
+1875120	1875600	again,
+1876360	1876800	why,
+1877040	1877740	because I
+1877740	1878120	received
+1878120	1878580	the B100,
+1878820	1879180	then I
+1879180	1879440	start
+1879440	1879860	testing,
+1880040	1880280	let's
+1880280	1880600	say I
+1880600	1880920	start
+1880920	1881320	testing
+1881320	1881740	something
+1881740	1881980	in
+1881980	1882540	Mule 1,
+1883540	1884220	which is
+1884220	1886380	the first
+1886380	1887200	prototype or
+1887200	1888120	even while
+1888120	1889440	testing in
+1889440	1890340	my electronic
+1890340	1891200	control unit,
+1891280	1892040	in the unit
+1892040	1892420	test,
+1892740	1893420	I realized
+1893420	1893780	there is
+1893780	1894480	something wrong,
+1894780	1895300	there might be
+1895300	1896040	something wrong
+1896040	1896860	on the requirements,
+1897120	1898340	there could be
+1898340	1899120	something wrong
+1899120	1900160	on the
+1900160	1901080	software side,
+1901280	1901880	and stuff like
+1901880	1902140	this,
+1902680	1903220	but if
+1903220	1903800	something is
+1903800	1904520	not working,
+1905060	1905700	which means
+1905700	1906440	if the
+1906440	1907220	software and
+1907220	1907740	the system
+1907740	1908340	are not
+1908340	1909520	behaving as
+1909520	1910440	the requirement
+1910440	1911220	expects,
+1912120	1913340	then I
+1913340	1915180	raise an
+1915180	1915540	issue,
+1915820	1916140	saying,
+1916300	1916400	okay,
+1916440	1916780	there is an
+1916780	1917200	issue with
+1917200	1917660	the system,
+1918320	1918900	the issue
+1918900	1919720	is analyzed
+1919720	1920240	by,
+1921180	1921960	first of
+1921960	1922240	all,
+1922340	1922860	by us,
+1923260	1923560	so we
+1923560	1924160	perform a
+1924160	1925140	first analysis,
+1926000	1926360	and then,
+1927000	1928220	or someone
+1928220	1929000	will help us,
+1929120	1929520	and then if
+1929520	1930160	it's a
+1930160	1930860	software
+1930860	1931480	requirement,
+1932220	1933540	then the
+1933540	1935480	software must
+1935480	1936920	be modified,
+1937460	1938140	so again,
+1938300	1938980	could be an
+1938980	1939460	architectural
+1939460	1940160	problem,
+1940360	1940920	a design
+1940920	1941440	problem,
+1941440	1942100	or simply
+1942100	1942940	a one-line
+1942940	1944060	code problem,
+1944960	1946100	the software
+1946100	1946640	is modified,
+1946960	1947500	and then a
+1947500	1947960	new version
+1947960	1948540	of the software
+1948540	1949240	is released,
+1949380	1949820	so we will
+1949820	1950620	have another,
+1951000	1951400	let's say,
+1951480	1952100	V cycle,
+1952960	1953860	but this time,
+1954020	1954740	this line of
+1954740	1955400	the unit test
+1955400	1956280	will not pass
+1956280	1956780	through the
+1956780	1957540	B100,
+1957900	1958520	but will pass
+1958520	1959760	for B110.
+1959760	1961580	so every
+1961580	1962160	time you
+1962160	1962440	have a
+1962440	1963180	software release,
+1963280	1963580	there will
+1963580	1963980	be a
+1963980	1964500	V cycle,
+1964880	1965140	okay,
+1966300	1967860	or again,
+1968000	1968600	in case the
+1968600	1969120	problem were
+1969120	1969840	the requirements,
+1970040	1970360	because there
+1970360	1971260	was something
+1971260	1971960	not clear,
+1972140	1972920	or a requirement
+1972920	1973440	was not
+1973440	1974220	properly written,
+1974700	1975200	then the
+1975200	1975600	V cycle
+1975600	1976660	repeats itself,
+1977240	1978020	and requirements
+1978020	1978940	are modified,
+1979640	1980620	eventually there
+1980620	1981520	is a 0B
+1981520	1981900	release,
+1981980	1982460	as we were
+1982460	1983360	mentioning before,
+1983700	1984300	so an updated
+1984300	1985000	version of the
+1985000	1985520	requirements,
+1985520	1988680	a new
+1988680	1989280	software is
+1989280	1989640	developed,
+1989960	1990460	and then a
+1990460	1990900	new software
+1990900	1991580	is released,
+1991820	1993140	and we keep
+1993140	1994140	testing the
+1994140	1994760	requirements,
+1994920	1995060	okay,
+1995100	1995660	so we start
+1995660	1996700	testing activities,
+1997280	1998780	still trying
+1998780	2000120	to make sure
+2000120	2000540	that the
+2000540	2000880	software,
+2001060	2001540	and then the
+2001540	2001900	system,
+2002500	2003400	behaves according
+2003400	2003880	to the
+2003880	2004320	requirements,
+2004700	2004920	okay,
+2005300	2006740	okay,
+2006900	2007900	so the
+2007900	2008400	V cycle
+2008400	2009420	repeats itself
+2009420	2010000	many,
+2010200	2010540	many,
+2010540	2011540	many times,
+2011660	2011820	okay,
+2011820	2012440	so just keep
+2012440	2013080	in mind that
+2013080	2013660	this is a
+2013660	2014300	process that
+2014300	2014680	you will
+2014680	2015740	always work
+2015740	2016060	with,
+2016180	2016400	okay,
+2016700	2017840	let's go
+2017840	2018480	back to
+2018480	2022080	this picture,
+2022320	2022880	so we were
+2022880	2024100	focusing here
+2024100	2025660	on this
+2025660	2026260	timeline,
+2026700	2027560	we have just
+2027560	2028340	mentioned the
+2028340	2028980	new one,
+2029360	2030720	this is just
+2030720	2031620	an invented
+2031620	2032140	number,
+2032340	2032440	okay,
+2032440	2033040	this is not
+2033040	2034640	actually true,
+2034860	2035620	but let's
+2035620	2036320	see that on
+2036320	2037020	the new one,
+2037900	2039000	10% of the
+2039000	2040140	car is
+2040140	2040500	the,
+2040780	2041980	what we will
+2041980	2043060	actually find,
+2043520	2043880	and the
+2043880	2044720	final project,
+2044840	2045180	so the
+2045180	2045660	car that
+2045660	2046080	is actually
+2046080	2047360	sold to
+2047360	2049940	people,
+2050320	2051240	while 90%
+2051240	2051760	is something
+2051760	2052140	else.
+2052760	2053640	As we move
+2053640	2054160	on on the
+2054160	2054540	timeline,
+2054960	2056460	so moving
+2056460	2056940	on on the
+2056940	2057280	timeline,
+2057500	2058200	it means that
+2058200	2059340	the software
+2059340	2059760	is,
+2060040	2060660	every time
+2060660	2061040	there is a
+2061040	2061700	software release,
+2061820	2062220	the software
+2062220	2062780	is better,
+2062900	2063260	the software
+2063260	2063680	is more
+2063680	2064200	complete,
+2064720	2065740	we are testing
+2065740	2066180	that the
+2066180	2067560	software complies
+2067560	2067900	with the
+2067900	2068420	requirements,
+2068680	2069260	there is also
+2069260	2069900	another release
+2069900	2070160	of the
+2070160	2070660	requirements,
+2071240	2072280	so it means
+2072280	2072940	that having
+2072940	2073680	a new set
+2073680	2074300	of requirements,
+2074480	2074920	we will have
+2074920	2075440	a software
+2075440	2076060	which will
+2076060	2076960	contain more
+2076960	2077760	requirements and
+2077760	2078480	stuff like this,
+2078560	2078720	okay,
+2079480	2080680	so we
+2080680	2082080	are getting,
+2082180	2082720	as soon as we
+2082720	2083200	move on the
+2083200	2083760	right side,
+2083860	2084740	a better software
+2084740	2085340	or a more
+2085340	2086200	complete software,
+2086740	2088020	then we will
+2088020	2088640	arrive to the
+2088640	2089140	face of the
+2089140	2089560	Mule 2,
+2089720	2090320	the Mule 2,
+2090480	2091140	and once again,
+2091280	2091880	here guys,
+2091980	2092920	I'm inventing
+2092920	2093580	these numbers,
+2093800	2093940	okay,
+2093980	2094800	so I'm not sure
+2094800	2095640	it's like this,
+2095840	2096820	something around
+2096820	2097140	this,
+2097300	2097700	but yeah,
+2098400	2099620	Mule 2 is still
+2099620	2100160	a prototype,
+2100160	2100900	but in this
+2100900	2101580	case we will
+2101580	2102720	have that 50%
+2102720	2103320	of the car
+2103320	2104060	is actually
+2104060	2105120	the car
+2105120	2105680	that we will
+2105680	2107860	find on the
+2107860	2108200	market,
+2108420	2108840	while the
+2108840	2109700	other 50%
+2109700	2110220	is something
+2110220	2110600	else,
+2111720	2112500	please keep
+2112500	2112840	in mind
+2112840	2113240	that the
+2113240	2113840	Mule 1
+2113840	2114340	is the
+2114340	2115880	first actual
+2115880	2116760	car for
+2116760	2117620	that project,
+2118200	2119280	so it means
+2119280	2119600	that you
+2119600	2120660	have one
+2120660	2121160	car,
+2121520	2121760	okay,
+2123160	2125240	then Mule 2,
+2125700	2126840	since it is
+2126840	2127820	similar to
+2127820	2128380	the final
+2128380	2128820	product,
+2129000	2129420	it makes
+2129420	2129860	sense to
+2129860	2130380	have more
+2130380	2131000	than one
+2131000	2131420	Mule,
+2131860	2132460	one than
+2132460	2133000	more car,
+2133120	2133540	so that we
+2133540	2134080	can start
+2134080	2134700	performing
+2134700	2135520	some tests,
+2135840	2136000	okay,
+2136780	2137360	keep in mind
+2137360	2137800	that it's
+2137800	2138580	very helpful
+2138580	2139460	and easy
+2139460	2140040	to work
+2140040	2140340	on an
+2140340	2140800	HIL,
+2141060	2141280	because,
+2141420	2141660	so an
+2141660	2142080	hardware in
+2142080	2142320	the loop,
+2142380	2144100	because we
+2144100	2144580	have just
+2144580	2145440	one real
+2145440	2145820	hardware,
+2146020	2146360	which is the
+2146360	2146760	electronic
+2146760	2147640	control unit
+2147640	2148380	that we
+2148380	2148920	are testing,
+2149440	2150100	but then
+2150100	2152640	everything
+2152640	2153020	that is
+2153020	2153620	around the
+2153620	2154000	electronic
+2154000	2154640	control unit
+2154640	2155140	is just
+2155140	2155600	a model,
+2155760	2156340	is ideal,
+2156600	2157020	so there
+2157020	2157460	are some
+2157460	2157980	situations
+2157980	2158400	that we
+2158400	2159280	cannot test
+2159280	2160320	or some
+2160320	2160780	problems
+2160780	2161180	that we
+2161180	2161740	could not
+2161740	2163340	realize and
+2163340	2163940	understand
+2163940	2165040	testing it
+2165040	2165480	from the
+2165480	2165920	hardware in
+2165920	2166160	the loop,
+2166240	2166900	but then
+2166900	2168120	that will
+2168120	2168800	be clear
+2168800	2169460	if we
+2169460	2169860	test it
+2169860	2170100	in the
+2170100	2170340	car,
+2170560	2170840	okay,
+2171080	2172380	so guys,
+2172380	2172800	in the
+2172800	2173220	past,
+2173500	2173900	all the
+2173900	2174500	tests were
+2174500	2175020	done on
+2175020	2176260	prototypes,
+2176660	2176900	okay,
+2177240	2177920	in the past
+2177920	2178200	when the
+2178200	2178500	car were
+2178500	2179020	mechanical
+2179020	2179640	and all
+2179640	2180040	of this
+2180040	2180460	software
+2180460	2181040	stuff was
+2181040	2181360	not
+2181360	2182600	reality,
+2183040	2183380	everything
+2183380	2184020	was done
+2184020	2184780	using these
+2184780	2185300	prototypes,
+2185300	2186300	prototypes,
+2186300	2186500	but prototypes
+2186500	2188840	are very
+2188840	2190000	expensive to
+2190000	2190420	be done,
+2190860	2191200	it's very
+2191200	2193080	slow
+2193080	2193760	activities,
+2193760	2194440	if you
+2194440	2195260	break a
+2195260	2195700	prototype,
+2195840	2196120	then to
+2196120	2196620	have another
+2196620	2196900	one,
+2196960	2197420	it takes
+2197420	2197980	weeks,
+2198400	2199080	so it's
+2199080	2199660	very slow
+2199660	2200020	and very
+2200020	2200520	expensive,
+2200520	2201000	so in
+2201000	2201460	order to
+2201460	2202120	save money,
+2202600	2202900	we are
+2202900	2203420	trying to
+2203420	2203900	push
+2203900	2204560	everything,
+2204840	2205320	to do
+2205320	2205940	everything that
+2205940	2206480	is possible
+2206480	2206880	on a
+2206880	2207360	hardware in
+2207360	2207600	the loop,
+2207720	2208040	which is,
+2208240	2208520	let's say,
+2208560	2208940	easy to
+2208940	2209640	configure it,
+2210100	2210820	easy to
+2210820	2211400	replace,
+2211620	2212760	easy to
+2212760	2215340	improve and
+2215340	2215920	stuff like
+2215920	2216200	this,
+2216560	2217100	or not
+2217100	2217580	easy in
+2217580	2217920	itself,
+2218020	2218680	but easier
+2218680	2219380	than having
+2219380	2219840	a car,
+2220160	2220380	okay,
+2220620	2221420	and for
+2221420	2221800	sure,
+2222280	2223360	less expensive
+2223360	2223980	and much
+2223980	2224400	faster.
+2226040	2226560	Again,
+2226680	2227120	once we
+2227120	2227560	move on,
+2227700	2228160	we have
+2228160	2228600	another
+2228600	2229140	development
+2229140	2229580	of the
+2229580	2229820	car,
+2229960	2230500	we arrive
+2230500	2230800	at the
+2230800	2231080	BP,
+2231300	2231760	which is,
+2231920	2232260	which are
+2232260	2232660	the vehicle
+2232660	2233240	production,
+2233780	2234140	here,
+2234460	2235020	once again,
+2235360	2235600	let's say,
+2235660	2236080	we have
+2236080	2237340	that 80%
+2237340	2238540	of the
+2238540	2239200	car is
+2239200	2239740	what we
+2239740	2240520	will actually
+2240520	2241340	find on
+2241340	2241860	the market,
+2241860	2243980	and 20%
+2243980	2244700	is still
+2244700	2245460	something else,
+2245600	2245740	okay,
+2245820	2246320	so there are
+2246320	2246820	still some
+2246820	2247280	parts that
+2247280	2247700	will be
+2247700	2248320	not really
+2248320	2249660	part of
+2249660	2250000	the final
+2250000	2250560	project.
+2251340	2251700	Vehicle
+2251700	2252280	production
+2252280	2252680	phase,
+2252760	2253240	maybe even
+2253240	2254160	85%,
+2254160	2254520	okay,
+2254580	2254860	so it
+2254860	2255240	means that
+2255240	2255700	this car
+2255700	2256340	is actually
+2256340	2256980	very close
+2256980	2257300	to the
+2257300	2257860	final one.
+2258840	2259340	Once we
+2259340	2259640	have a
+2259640	2260040	car that
+2260040	2260600	is so
+2260600	2261260	close to
+2261260	2261840	the final
+2261840	2262240	one,
+2262360	2262800	this means
+2262800	2263600	that performing
+2263600	2264460	tests on
+2264460	2264960	this car
+2264960	2265360	will be
+2265360	2265800	extremely
+2265800	2266280	helpful,
+2266280	2266840	because it
+2266840	2267360	will help
+2267360	2268400	us to
+2268400	2269160	understand
+2269160	2270200	if everything
+2270200	2270920	is working,
+2270920	2271600	not just
+2271600	2271980	in a
+2271980	2272500	laboratory
+2272500	2273460	or using
+2273460	2274100	a simulator,
+2274520	2275280	but also
+2275280	2276440	using actually
+2276440	2276900	the car
+2276900	2277300	in the
+2277300	2277660	street.
+2279120	2280160	PS is the
+2280160	2281000	pre-series
+2281000	2282660	car, so
+2282660	2283280	here, let's
+2283280	2283800	say that
+2283800	2285840	95%
+2285840	2286360	of the
+2286360	2286900	car or
+2286900	2287280	even
+2287280	2289040	98%
+2289040	2289480	of the
+2289480	2290420	car is
+2290420	2293500	the car
+2293500	2293800	that we
+2293800	2294280	will have
+2294280	2294780	at the
+2294780	2295020	end.
+2295020	2296280	PRA
+2296280	2298920	is, let's
+2298920	2299360	say, here
+2299360	2299880	we have
+2299880	2300720	that actual
+2300720	2301540	cars are
+2301540	2302960	already
+2302960	2303980	delivered to
+2303980	2304500	the management
+2304500	2304920	of the
+2304920	2305580	client, just
+2305580	2308860	to see
+2308860	2310220	how a
+2310220	2311620	car is
+2311620	2315840	actually
+2315840	2316520	performing
+2316520	2317460	used by
+2317460	2318620	a normal
+2318620	2319560	driver, so
+2319560	2320680	a driver that
+2320680	2321020	is not
+2321020	2322040	technician, but
+2322040	2322500	a normal
+2322500	2323380	person having
+2323380	2324640	the car, and
+2324640	2325260	finally, if
+2325260	2325880	everything is
+2325880	2327120	going well, then
+2327120	2327780	we will
+2327780	2328860	arrive to
+2328860	2330000	this phase, which
+2330000	2330680	is the most
+2330680	2332500	important phase, the
+2332500	2333260	one that we
+2333260	2334500	always look at,
+2334940	2335920	which is, in
+2335920	2336600	this case, called
+2336600	2337640	job one.
+2338060	2339220	Job one is
+2339220	2340120	the day when
+2340120	2340620	the production
+2340620	2341440	starts, the
+2341440	2342160	production, in
+2342160	2342800	series, of
+2342800	2343200	the car
+2343200	2343820	starts.
+2343820	2345060	this is a
+2345060	2345500	name that
+2345500	2346240	is used by
+2346240	2346700	a specific
+2346700	2347840	client, there
+2347840	2348320	are other
+2348320	2349160	clients that
+2349160	2349960	call it in a
+2349960	2350840	different way, for
+2350840	2353800	example, simply
+2353800	2355340	SOP, start
+2355340	2357700	of production, or
+2357700	2359540	simply production, or
+2359540	2360600	deliver, final
+2360600	2361500	delivery, whatever,
+2361720	2362500	there are all
+2362500	2363320	kind of names for
+2363320	2364400	this phase, but
+2364400	2365180	what is extremely
+2365180	2366020	important for you
+2366020	2366580	is that you
+2366580	2367340	have always
+2367340	2368260	in mind, where
+2368260	2368940	is this job
+2368940	2369520	one, when
+2369520	2370240	is this job
+2370240	2371080	one, and
+2371080	2372240	when are the
+2372240	2373100	main milestone
+2373100	2373540	of the
+2373540	2374380	project, so
+2374380	2374780	that you
+2374780	2379380	know when
+2379380	2380280	the project is
+2380280	2380680	going to
+2380680	2381180	finish, and
+2381180	2381580	when the
+2381580	2381880	car is
+2381880	2382540	actually sold.
+2382880	2383240	So it
+2383240	2383580	means that
+2383580	2383940	from the
+2383940	2384580	job one
+2384580	2386120	on worth, the
+2386120	2386800	car started
+2386800	2387460	to be produced
+2387460	2388080	and sold
+2388080	2388500	on the
+2388500	2388900	market.
+2396460	2397020	The
+2397020	2397580	suggestion
+2397580	2398660	here, so
+2398660	2399560	is always to
+2399560	2399940	have in
+2399940	2400800	mind big
+2400800	2401540	picture of
+2401540	2402140	the project,
+2402260	2403240	okay, when
+2403240	2403620	you will
+2403620	2404520	start working,
+2404620	2405020	okay, now
+2405020	2405700	it's very
+2405700	2406820	soon, because
+2406820	2407180	you have
+2407180	2408160	just, you
+2408160	2408800	know, probably
+2408800	2409320	the second
+2409320	2410300	day of the
+2410300	2411500	company, when
+2411500	2411760	you are
+2411760	2412340	watching this
+2412340	2414980	video, you
+2414980	2416300	will know, you
+2416300	2417600	will have no
+2417600	2419560	idea of what
+2419560	2420060	you are going
+2420060	2420880	to do in
+2420880	2421940	the activities,
+2422100	2423440	but this is a
+2423440	2425020	suggestion that
+2425020	2425960	I give at
+2425960	2427540	every stage of
+2427540	2428540	the career, one
+2428540	2429280	person, when it
+2429280	2430240	starts, or even
+2430240	2431820	when they're
+2431820	2432820	an expert or
+2432820	2433900	senior profiling
+2433900	2434520	the company,
+2435140	2436560	have always a
+2436560	2437940	big picture of
+2437940	2438580	what is going
+2438580	2439280	on here,
+2439460	2439640	okay.
+2440440	2441340	A work could
+2441340	2442100	become very
+2442100	2443140	abstract, I
+2443140	2444080	mean, during
+2444080	2445240	this validation
+2445240	2446120	training, you
+2446120	2448080	will see a
+2448080	2449360	huge focus on
+2449360	2450400	variables, on
+2450400	2451360	the bit, this
+2451360	2452260	bit goes to
+2452260	2453240	one, this bit
+2453240	2454240	goes to zero,
+2454240	2455040	the variable
+2455040	2455700	goes to
+2455700	2457260	three, this
+2457260	2458420	will go to
+2458420	2459540	50 and
+2459540	2460040	stuff like
+2460040	2460680	so, things
+2460680	2461220	that looks
+2461220	2463360	like abstract
+2463360	2464240	with no
+2464240	2465200	physical meaning,
+2465380	2465940	but this is
+2465940	2466600	actually the
+2466600	2467480	contrary, because
+2467480	2468200	everything you're
+2468200	2468760	going to do
+2468760	2470160	is going to
+2470160	2470980	affect the
+2470980	2471960	volt vehicle, so
+2471960	2472600	always ask
+2472600	2473440	yourself, okay,
+2473760	2474260	what is going
+2474260	2475580	to happen if I
+2475580	2476980	do something on
+2476980	2477580	the software,
+2478000	2478460	what is going
+2478460	2479240	to happen on
+2479240	2479940	the high level
+2479940	2480600	point of view,
+2480660	2481840	because it
+2481840	2482780	will have a
+2482780	2484860	general effect
+2484860	2486000	on a car, and
+2486000	2487180	so will affect
+2487180	2487800	also this
+2487800	2488620	plan, okay.
+2489620	2490440	So, always
+2490440	2491080	looking at the
+2491080	2491740	plan, as you
+2491740	2492420	see here,
+2492540	2493300	here, there
+2493300	2493840	are these
+2493840	2496080	signs, okay,
+2496460	2497280	this is the
+2497280	2498120	symbol of
+2498120	2498880	ice, this is
+2498880	2499520	the symbol of
+2499520	2500440	sun, and
+2500440	2501300	here you have
+2501300	2501860	them again.
+2502560	2503400	These are
+2503400	2504340	symbols of
+2504340	2504840	the winter
+2504840	2505760	tests that are
+2505760	2506920	done on the
+2506920	2507760	snow, and
+2507760	2508240	these are the
+2508240	2508880	summer tests
+2508880	2509720	usually done in
+2509720	2510600	the desert or
+2510600	2512360	extremely hot
+2512360	2513180	countries.
+2514000	2515220	So, having in
+2515220	2516240	mind that this
+2516240	2516820	is going to
+2516820	2517700	happen, so
+2517700	2521260	in this
+2521260	2522360	moment, in
+2522360	2523500	this period of
+2523500	2524560	the year, there
+2524560	2525500	will be winter
+2525500	2527160	tests, I will
+2527160	2528420	make sure that
+2528420	2530060	even though, even
+2530060	2530920	if the software
+2530920	2532380	is not, you
+2532380	2533240	know, we are
+2533240	2534680	still working on
+2534680	2536900	B200 series,
+2537180	2537840	okay, so we are
+2537840	2538760	implementing the
+2538760	2539800	1A requirements,
+2540300	2541220	so we will have
+2541220	2541840	also another
+2541840	2542280	release of
+2542280	2542880	requirements,
+2543260	2544000	there will be a
+2544000	2544540	lot of other
+2544540	2545480	software in the
+2545480	2546940	future, so we
+2546940	2547700	know that the
+2547700	2548560	software is not
+2548560	2549660	still the best
+2549660	2550300	and the perfect
+2550300	2551740	one, but I
+2551740	2553460	will, I know
+2553460	2554680	that these two
+2554680	2555940	weeks, there
+2555940	2557220	will be people
+2557220	2558660	working in a
+2558660	2559580	car on the
+2559580	2560940	snow, so I
+2560940	2561640	will have to
+2561640	2562360	give the
+2562360	2563760	highest priority
+2563760	2564440	to all the
+2564440	2565160	activities that
+2565160	2566160	are related to
+2566160	2567460	the management
+2567460	2568200	of, I don't
+2568200	2568640	know, the
+2568640	2569500	ether of the
+2569500	2570160	battery packs.
+2570160	2570640	the battery
+2570640	2572860	pack will
+2572860	2573940	work in
+2573940	2575580	a specific
+2575580	2576620	temperature range
+2576620	2577620	and they need
+2577620	2578520	to have the
+2578520	2579180	batteries always
+2579180	2580080	working at that
+2580080	2581040	temperature range,
+2581320	2582140	so if the
+2582140	2583140	ether is not
+2583140	2584720	working, either
+2584720	2585800	the battery pack
+2585800	2586760	will stop working
+2586760	2588140	so the electric
+2588140	2589220	vehicle will be,
+2589320	2590880	will stuck, or
+2590880	2591440	even the
+2591440	2592620	air conditioner, I
+2592620	2593500	mean, let's
+2593500	2594300	consider people
+2594300	2595380	working at minus
+2595380	2595980	10 degrees,
+2596100	2596600	probably they
+2596600	2597140	will get
+2597140	2598580	frozen if
+2598580	2599160	they don't
+2599160	2599460	have the
+2599460	2600140	air conditioner
+2600140	2600580	or the
+2600580	2601200	ether working
+2601200	2602940	properly, so
+2602940	2603480	this is
+2603480	2605040	probably the
+2605040	2606040	contents to
+2606040	2606920	verify, to
+2606920	2609340	test, will
+2609340	2611240	be a lot,
+2611500	2612200	so among
+2612200	2613380	all the tests
+2613380	2613980	that you have
+2613980	2616340	to do, having
+2616340	2617200	a big picture
+2617200	2617900	of the project
+2617900	2618660	will help you
+2618660	2619280	to give the
+2619280	2620060	right priority
+2620060	2620660	of the stuff,
+2620660	2622600	and here we
+2622600	2623060	are always
+2623060	2623740	talking about
+2623740	2624480	the VOOCYCLE,
+2624920	2626060	you know, we
+2626060	2627060	have not changed
+2627060	2627880	the topic, because
+2627880	2628840	again, the VOOCYCLE
+2628840	2629800	is something like
+2629800	2631320	this, then we
+2631320	2631900	will have another
+2631900	2632840	requirements here,
+2632960	2633400	so we will
+2633400	2634220	have something like
+2634220	2635540	this, and
+2635540	2636440	arriving to the
+2636440	2637480	move 2, and
+2637480	2639680	so on, okay, so
+2639680	2641100	what I'm trying
+2641100	2642200	to say here is
+2642200	2643320	that this is an
+2643320	2644280	actual plan where
+2644280	2645300	you can actually
+2645300	2646800	apply the
+2646800	2647600	concepts that
+2647600	2648780	you got from
+2648780	2650000	the VOOCYCLE
+2650000	2650640	lesson, okay,
+2650660	2653300	these are the
+2653300	2654180	winter tests, these
+2654180	2655860	are the summer
+2655860	2656580	tests, and then
+2656580	2657140	we will repeat
+2657140	2658120	them once the
+2658120	2660480	everything is
+2660480	2662060	clearer, not
+2662060	2662620	everything is
+2662620	2663400	clearer, but the
+2663400	2664320	software is more
+2664320	2665620	mature, we have
+2665620	2666340	the VOOCYCLE
+2666340	2667520	cars, so it's
+2667520	2668040	much more
+2668040	2668780	meaningful to
+2668780	2669880	perform tests on
+2669880	2670460	these kind of
+2670460	2671200	cars and
+2671200	2672320	softwares, because
+2672320	2673260	the project is
+2673260	2673880	almost at the
+2673880	2674420	end, so it
+2674420	2674840	means that
+2674840	2676160	everything is,
+2676620	2677140	let's say,
+2677320	2678780	almost already
+2678780	2680040	working properly,
+2680200	2680420	okay,
+2680660	2699920	keep looking at
+2699920	2701760	the slide, there
+2701760	2702360	are so many
+2702360	2703260	things that we
+2703260	2704820	could mention,
+2704820	2707560	one of the, so
+2707560	2708880	we have, let's
+2708880	2711540	say, described
+2711540	2712500	this timeline
+2712500	2714640	about cars,
+2716040	2717820	this timeline
+2717820	2718600	related to the
+2718600	2719500	VOOCYCLE that
+2719500	2719960	are called
+2719960	2720680	Quality
+2720680	2721700	Gate, I will
+2721700	2722640	not really go
+2722640	2723420	into details
+2723420	2724500	about it, because
+2724500	2725180	this is, let's
+2725180	2725460	say, an
+2725460	2726460	advanced content,
+2726460	2727300	so we are going
+2727300	2728220	to review this
+2728220	2729160	slide further in
+2729160	2730380	the future, what
+2730380	2731000	is important
+2731000	2731900	here is to
+2731900	2732660	describe the
+2732660	2733700	PCR fleet
+2733700	2735100	thing, okay,
+2735160	2735640	this is the
+2735640	2736260	PCR fleet
+2736260	2738380	timeline, so the
+2738380	2739080	VOOCYCLE that
+2739080	2739680	we mentioned
+2739680	2740400	before, it
+2740400	2741080	applies, as I
+2741080	2741700	was saying, not
+2741700	2742640	just on one
+2742640	2743480	electronic control
+2743480	2744260	unit, but this
+2744260	2745300	process applies to
+2745300	2746120	all the electronic
+2746120	2748020	control units, so
+2748020	2749860	there will be, I
+2749860	2750480	don't know, we
+2750480	2751240	have 50
+2751240	2752180	electronic control
+2752180	2752940	units, we will
+2752940	2754560	have 50 VOOCYCLE
+2754560	2755580	in parallel going
+2755580	2757380	on, but of
+2757380	2758100	course, the car
+2758100	2758540	that we are
+2758540	2759300	working on is
+2759300	2760320	just one, okay,
+2760400	2761680	so the system, we
+2761680	2762400	are actually
+2762400	2764060	debugging and
+2764060	2764880	the system on
+2764880	2765360	which we are
+2765360	2766120	improving the
+2766120	2766760	quality, because
+2766760	2767620	let's move back
+2767620	2768700	here, if you
+2768700	2769580	see the VOOCYCLE,
+2770040	2771180	the left part is
+2771180	2771640	the software
+2771640	2772520	development part,
+2772900	2773900	but then the
+2773900	2774940	right part is the
+2774940	2775940	quality assurance,
+2776200	2777060	and as you see, as
+2777060	2777920	we move on the
+2777920	2778940	right side, we
+2778940	2779720	move from unit
+2779720	2780260	test to the
+2780260	2780940	functional test,
+2781260	2781980	we are basically
+2781980	2784060	improving the
+2784060	2785620	quality of the
+2785620	2787140	system, okay, so
+2787140	2787820	even though we
+2787820	2789620	have 50 small
+2789620	2792340	systems, and 50
+2792340	2792860	teams, for
+2792860	2793820	example, working
+2793820	2794900	on these different
+2794900	2795860	electronic control
+2795860	2797220	units, then there
+2797220	2798100	must be some
+2798100	2799080	common points
+2799080	2800360	where all these
+2800360	2801220	electronic control
+2801220	2802020	units, all this
+2802020	2803080	work come together
+2803080	2804220	and put on the
+2804220	2805080	car, everything
+2805080	2806800	works, this is
+2806800	2807940	actually what a
+2807940	2810140	PCR is, PCR
+2810140	2811380	is basically a
+2811380	2812760	release of a
+2812760	2813580	group of
+2813580	2815060	software that
+2815060	2815880	put all
+2815880	2817420	together on a
+2817420	2818440	car will be
+2818440	2819380	able to
+2819380	2820080	properly
+2820080	2820520	implement
+2820520	2821660	everything that
+2821660	2822540	is listed, in
+2822540	2823160	this case, in
+2823160	2823960	0A
+2823960	2826540	requirements, so
+2826540	2826940	specification,
+2827660	2828020	release.
+2828340	2829200	Once again, you
+2829200	2829940	see the
+2829940	2830940	color that are
+2830940	2831800	similar, okay?
+2832660	2833740	So this means that
+2833740	2834860	1A will implement
+2834860	2835640	everything that is
+2835640	2836500	being described in
+2836500	2838820	0A, the 2A
+2838820	2839920	PCR release will
+2839920	2840820	implement everything
+2840820	2841580	that has been
+2841580	2843220	defined in 1A, and
+2843220	2843880	stuff like this.
+2843880	2844940	of course, we
+2844940	2846440	have only 2A as
+2846440	2849200	a final release of
+2849200	2850480	the requirements, but
+2850480	2851300	we will have more
+2851300	2853900	than one, so more
+2853900	2855100	than the 2A
+2855100	2856140	release, we have
+2856140	2857740	the 3A, 4A, 5A, 6A,
+2857800	2858520	and stuff like this.
+2858560	2859740	We will go deeper
+2859740	2860820	into details about
+2860820	2861900	this slide once we
+2861900	2862620	will get to the
+2862620	2863680	right topic, but
+2863680	2864340	what you have to
+2864340	2865580	know is that once
+2865580	2866520	we put everything on
+2866520	2867840	a car, car is a
+2867840	2869620	very complex system
+2869620	2870500	where there are a
+2870500	2871300	lot, lot of
+2871300	2872760	systems talking to
+2872760	2873260	each other,
+2873400	2874560	collaborating, and
+2874560	2875420	working to make
+2875420	2876240	sure that one
+2876240	2877020	feature works
+2877020	2877480	properly.
+2877980	2878680	Once again, we
+2878680	2879080	can do the
+2879080	2879820	example of the
+2879820	2880520	adaptive cruise
+2880520	2880900	control.
+2881020	2881720	The adaptive cruise
+2881720	2882720	control works
+2882720	2883980	using the work
+2883980	2885780	of many teams
+2885780	2887220	that have worked
+2887220	2887920	on the
+2887920	2888880	powertrain
+2888880	2889760	electronic control
+2889760	2890560	unit, battery
+2890560	2891220	pack control
+2891220	2892460	unit, ADAS
+2892460	2893480	electronic control
+2893480	2894400	unit, all this
+2894400	2894680	stuff.
+2895160	2896180	So when the
+2896180	2897840	1A release of
+2897840	2899540	PCR happens, it
+2899540	2900320	means that all
+2900320	2901000	the suppliers
+2901000	2902020	have to provide
+2902020	2903860	a software that
+2903860	2905560	once put in a
+2905560	2907000	car, is able to
+2907000	2908540	make on a car
+2908540	2909500	this feature
+2909500	2910140	working.
+2910740	2911640	So it means that
+2911640	2912360	the brake has to
+2912360	2913280	properly talk to
+2913280	2913860	the powertrain
+2913860	2915920	electronic control
+2915920	2916320	unit.
+2916860	2918400	They both have to
+2918400	2919060	talk to the
+2919060	2919740	battery pack.
+2919840	2920540	Everything has to
+2920540	2921160	talk with the
+2921160	2923360	ADAS.
+2923440	2924260	ADAS has to
+2924260	2925040	send all the
+2925040	2926080	information in the
+2926080	2927120	right time to the
+2927120	2927720	other electronic
+2927720	2928420	control unit.
+2928420	2930040	So all these
+2930040	2931120	echoes must work
+2931120	2932040	properly together
+2932040	2933020	and all these
+2933020	2934000	echoes must have
+2934000	2935540	specific software
+2935540	2936500	to make this
+2936500	2937440	feature working
+2937440	2938180	properly on a
+2938180	2938380	car.
+2938740	2938960	Okay.
+2939160	2940060	And this happens
+2940060	2940640	every time.
+2940800	2941640	This is 1A, 2A,
+2941720	2942880	3A, 4A, 5A,
+2942960	2943320	6A.
+2943420	2944500	So as we move
+2944500	2945360	on the right
+2945360	2945840	side of the
+2945840	2946620	project, we are
+2946620	2947260	advancing.
+2947560	2948360	We are advancing
+2948360	2949380	on the timeline.
+2950220	2950640	And this means
+2950640	2951140	that everything
+2951140	2952420	will be...
+2952420	2954140	So in 1A,
+2954140	2955640	part of the car
+2955640	2956340	will work,
+2956600	2958340	2A, we have
+2958340	2959020	more contents
+2959020	2959520	working,
+2959700	2961780	3A, the car
+2961780	2962520	works quite
+2962520	2963760	well, 4A, we
+2963760	2964360	have almost
+2964360	2965880	everything we
+2965880	2966560	have just to
+2966560	2967600	tune parameters,
+2968180	2969520	5A is just
+2969520	2970440	looking forward
+2970440	2971020	to the production,
+2971220	2971960	6A is the
+2971960	2972600	final release
+2972600	2973220	where everything
+2973220	2973880	has to work
+2973880	2975480	properly.
+2975480	2980300	final words
+2980300	2981420	about this
+2981420	2981900	slide.
+2982500	2982980	Well, we
+2982980	2983800	can...
+2983800	2984200	We could
+2984200	2986120	keep describing
+2986120	2986920	what are
+2986920	2988540	these, you
+2988540	2990740	know, rectangles
+2990740	2991280	here, the
+2991280	2992300	purple one, the
+2992300	2993500	green one, blue
+2993500	2994380	one, the
+2994380	2995120	orange one.
+2995560	2995800	Okay.
+2995900	2997320	So there are a
+2997320	2997840	lot of things
+2997840	2998420	that we could
+2998420	2999300	mention, but
+2999300	3002220	the general and
+3002220	3003420	final suggestion
+3003420	3004100	that I would
+3004100	3005200	give you, and I
+3005200	3006440	already gave you
+3006440	3007600	before, so it's
+3007600	3008400	just repetition.
+3009260	3010120	Every time you
+3010120	3010740	perform an
+3010740	3011840	activity, please
+3011840	3013400	have in mind the
+3013400	3014920	general idea of
+3014920	3015680	the project, the
+3015680	3017100	general timing of
+3017100	3017760	the project.
+3018420	3019280	These documents,
+3020000	3022780	if you work on
+3022780	3025320	this, on a
+3025320	3026060	specific client,
+3026240	3027640	you will actually
+3027640	3028820	find this kind of
+3028820	3029780	layout, because it's
+3029780	3030840	still used, okay,
+3030900	3031780	for projects of
+3031780	3033120	2023, 2024,
+3033260	3033560	2025.
+3033780	3034820	So you will
+3034820	3036640	see still this
+3036640	3037020	kind of
+3037020	3037380	layout.
+3038160	3039480	But even other
+3039480	3040520	clients, other
+3040520	3041220	care makers,
+3041460	3043060	whoever, there is
+3043060	3045140	always, always a
+3045140	3046320	general plan of
+3046320	3047120	the project we are
+3047120	3047800	working on.
+3048240	3048940	So the
+3048940	3050320	suggestion here is
+3050320	3051520	do not just
+3051520	3052880	focus on your
+3052880	3054520	specific activity,
+3054940	3056160	just looking at
+3056160	3057960	your screen and
+3057960	3059160	thinking only on
+3059160	3060060	your test to be
+3060060	3061320	executed, but
+3061320	3062380	always ask to
+3062380	3063200	you're responsible.
+3063940	3065260	Can I have a
+3065260	3066300	general overview of
+3066300	3067400	the timing of the
+3067400	3068400	project I'm working
+3068400	3068660	on?
+3068980	3070120	I know that these
+3070120	3071820	things looks like
+3071820	3073720	obvious for you
+3073720	3074860	right now, but I'm
+3074860	3075660	sure, and I've seen
+3075660	3077120	so many people going
+3077120	3077960	through this program
+3077960	3078660	and then start
+3078660	3079120	working.
+3079120	3080200	Then once you start
+3080200	3081380	working, you are so
+3081380	3082940	overwhelmed by
+3082940	3086800	technical thing that
+3086800	3087640	you have to learn,
+3087800	3089160	the deadline to meet
+3089160	3090140	and stuff like this
+3090140	3090920	that you will
+3090920	3092320	completely forget to
+3092320	3093000	have a general
+3093000	3094120	perspective of the
+3094120	3094500	project.
+3094980	3096060	But just take your
+3096060	3097180	time and remember
+3097180	3098180	having a general
+3098180	3099320	perspective of the
+3099320	3100640	project will help
+3100640	3105060	you very much to
+3105060	3107020	focus on what is a
+3107020	3108260	real priority in that
+3108260	3109260	period and what is
+3109260	3110300	not, why an
+3110300	3111640	activity has to be
+3111640	3112540	done in one week
+3112540	3113340	and why another
+3113340	3114220	activity has to be
+3114220	3115220	done in three weeks
+3115220	3116180	and stuff like this.
+3116180	3118540	okay, so just to
+3118540	3119900	close with the
+3119900	3120860	proper slide and
+3120860	3122500	not just the screen
+3122500	3123420	that I was doing,
+3123960	3124960	it's very, very
+3124960	3127380	important that we
+3127380	3129160	do not just think
+3129160	3130400	of the cycle as
+3130400	3134680	this draw on a
+3134680	3135660	slide that is,
+3135820	3136560	okay, very easy to
+3136560	3137260	understand, but
+3137260	3139080	extremely far from
+3139080	3141400	the daily life
+3141400	3142000	activities.
+3143080	3144740	This is not true
+3144740	3145760	true at all because
+3145760	3147560	the VOOCYCLE will
+3147560	3150020	also apply on
+3150020	3152460	real case project
+3152460	3154880	card, project plan
+3154880	3156260	here, and you can
+3156260	3157340	see this VOOCYCLE
+3157340	3158880	repeating itself over
+3158880	3159740	and over again
+3159740	3161500	until the project
+3161500	3163520	gets to the final
+3163520	3164780	part, which is the
+3164780	3165260	production.
+3166120	3166940	Please remember
+3166940	3168660	that, okay, that we
+3168660	3169640	are debugging the
+3169640	3170620	software, so we are
+3170620	3171620	making sure that the
+3171620	3172480	software works
+3172480	3174560	properly, but the
+3174560	3176480	final goal is to
+3176480	3178760	sell cars that
+3178760	3180540	behave properly.
+3181320	3182420	Consider always
+3182420	3183740	yourself in a car
+3183740	3184780	and think, okay,
+3184980	3186780	would I like this
+3186780	3187500	behavior of the
+3187500	3187720	car?
+3188060	3189000	Would I like that
+3189000	3190120	while I'm driving on
+3190120	3191420	a highway, something
+3191420	3192600	goes wrong and the
+3192600	3193520	car doesn't realize
+3193520	3193960	anything?
+3194480	3195560	Would I like that I
+3195560	3196680	have to spend like
+3196680	3200640	5,000 hero just to
+3200640	3201460	understand a small
+3201460	3202380	problem that could
+3202380	3203380	have been very clear
+3203380	3204480	if I had done the
+3204480	3205840	proper testing phase?
+3206260	3207460	So ask always these
+3207460	3208760	questions, put yourself
+3208760	3212940	in the car and have
+3212940	3214580	always a big
+3214580	3218280	perspective view on
+3218280	3219360	the activities that
+3219360	3220160	you are doing.
+3220320	3221640	VOOCYCLE is just,
+3221640	3223820	it's not just a V
+3223820	3225200	drawn on a paper,
+3225700	3227060	it's a process that
+3227060	3229160	we actually follow on
+3229160	3230260	a daily basis.

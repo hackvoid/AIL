@@ -1,0 +1,1466 @@
+Ciao, I'm Clippo and today we are going to see how the canaliser can be used in order to perform several actions.
+For example, this tool can allow us to go through an analysis and also a stimulation of a bus communication system.
+As you know, the bus communication systems are widely used in the automotive sector because they are basically mandatory means that are used to communicate between electronic control units.
+There are several types of bus communication systems. The main ones, for example, are CAM protocol communication, the Lean one, FlexRay and several others.
+I suggest you, if you did not do that before, to go through the CAM protocol lesson because it will be very useful for you.
+And it contains a lot of mandatory information in order to better understand this canaliser lesson.
+So, first of all, the screen that you are just looking at is the main page of the already prepared canaliser configuration.
+As we were telling before, canaliser can be used in order to check, for example, if there is a communication between several TCUs in a bus communication system.
+And also, in case of a positive response or a communication ongoing, it will allow you to perform also an analysis and a study of the kind of communication and any issue of the communication itself.
+On the other hand, canaliser will allow you to collect data, so perform and acquire data from the communication itself.
+In order to get started, let's open a new configuration.
+We will have the opportunity to start from the basics.
+So, let's go here, new.
+Let's open up the default one.
+Click on create configuration.
+And the window that you will see open would be something like that.
+We are in the phrase layer.
+You will understand later what it is.
+So, let's move to the configuration layer.
+And here you've got one of the most important window of canaliser tool, which is the measurement setup window.
+As you can see, there are several blocks here with different names and that can be used in order to perform several things.
+First of all, there is this block here where you see offline and online.
+This is the data source where you can find basically if you want to work online or offline.
+Online means basically that you are currently using a cam case and canaliser connected to a specific, for example, cam communication bus.
+And you are looking at the cam communication in real life.
+So, the communication is ongoing while we are looking at it and we are analyzing it.
+On the other side, what we can do is work in offline mode.
+So, if you double click here, as you can see, these two blocks here just turn gray and we enable this folder here.
+Now we are in offline mode, which means that we can, for example, but we will see this later.
+We can start from a already acquired log.
+So, already collected the information from a cam communication, which happened in the past and from where we acquired the data.
+And we can review that offline.
+So basically just using our PC, we do not need to be physically, for example, connected to cam communication system, the cam bus.
+So these are the two main modes of operation that we can go through and we can use to canaliser.
+There are here several other blocks that can be used.
+Statistics ones, trace, data, graphics, logging.
+We will dive deeper into those in the next minutes.
+So, don't worry for now.
+But apart from the operational mode that we can use canaliser for.
+There are also analysis windows.
+For example, in online mode, we can insert an interactive generator blocks.
+To set the cam communication itself.
+A program node to use, for example, cable programs.
+So basically codes that are written by ourselves and that can be used in order to perform several stimulations of the cam communication.
+We can insert filters of different kinds.
+Channel filters.
+So filtering by specific cam communication channels.
+Or we can add event and variables filters.
+To have a closer look at specific things that we want to look at.
+And in online mode, as you can see, we can, for example, here enable the logging block.
+And this is the way we can use in order to collect data.
+And that can be done and reviewed in offline mode.
+So, let's move to the first things, the most important ones, in order to configure our canaliser setup.
+First of all, we need to understand here, on top, the hardware layer.
+We need to set up the hardware configuration that we are currently using.
+For this lesson, we will use a lot that was acquired in the program that I'm working with.
+And basically here, on channel usage, the log was performed acquiring only one cam bus communication.
+So here on cam, we need to select one.
+I did not acquire any link communication in the log that we will use.
+So we select here zero.
+And select OK.
+As you can see, in this right window here, the system is telling us that all channel specific options are OK.
+So we can move on.
+In particular, we have here top left channel mapping.
+So here what we can do, we can basically link on the application channel column here, the virtual can channel.
+And that canaliser will use for its operations.
+With the hardware column link.
+Which is basically the real channel of the can case that is physically connected to the computer, to the PC that we are using in order to run canaliser.
+For example, right now, this window, among all the choices, you see that under transceiver column, we've got only virtual can channels.
+And that's because right now I do not have any can case connected to my PC.
+So canaliser allows us to perform any kind of operations that we want, but it's telling us that we do not have any real and physical can case connected to the PC.
+And so we can just use virtual channels, but that is enough for our demonstration of canaliser usage.
+So let's click OK and let's use the virtual can channel 1 to the virtual can bus 1.
+Now we've got to configure the kind of can bus communication that we want to review in offline mode.
+I acquired a log from the program, as I was telling before, that I will work on.
+And specifically, this is a program with a network topology equal to Atlantis side can have the communication, which is basically flexible data rate and protocol.
+Which means that, for example, here, as you can see, can 1.
+This is the same virtual can channel that we just configured on channel mapping.
+But as you can see here, cam controller mode, we cannot use cam with a baud rate up to 500 kg baud.
+But we need to select this window ISOCAMFD flexible data rate.
+And as you can see, the data rate field just appears because, as you can understand from the cam protocol lesson, cam flexible data rate communication differs from the standard cam communication.
+So let's now go ahead and choose six分 box,fal file method that we coffee discussed.
+So let's select how to load our weights achieve this calculation, how to load our weights in camp and unmute it and get we are having them aside to pouring spikes.
+We must give you we 5출 the probability of swine output into it.
+Back to this values at 9 Ginger pole parameter.
+This is the second value procedure.
+And the way we just substitute what we prepared to do, we make it a while going to increase ourploy Polar,
+so it's actually highly strategic data set-up時間.
+So I really ON questions, I'll continue to ensure that we wanted this one.
+soon as we set up correctly the data rate okay and what we can do now is for
+example adding here in offline mode the source that we want to use for our
+activities in particular as I told you before we will use an already acquired log so we click here
+add offline source my source is here a blf file so binary logging file
+and as you can see now that we add this offline source the one that we just selected it appears
+also here in the measurement setup window just above the folder where we double click
+if you guys have got a log for example in a different file which can be
+i don't know a national file in order to perform this offline analysis of the data you need to
+convert it to a blf so what you need to do is very useful on this side as well you can go here on
+tools login file conversion click here and as you can see there are two fields source file destination
+file on source file you need to select the file that you want to convert into a blf file so you can see
+file select it and then automatically here analyzer tells you the destination of the file the name of the
+file and the format which is dot blf you can change the name you can change the destination wherever you want
+for example here try at the end of the name save save and you just need to wait for the analyzer conversion
+of the file as you can see here there is a percentage and as soon as it goes up to 100 you have your file
+converted to a blf one let's just wait for it to finish but we have already uploaded here a blf file so we are good to go
+okay let's close here
+before moving to the analysis windows the trace one data graphics and so on let's see another very
+very useful feature that analyzer provides to us which is on tools top left can db plus plus editor
+open it as you can see
+this window here on this bottom allows you to open or even create a new dbc file database scan file
+that let's add example this dbc file that will be needed for us to review the log that we want to use for this demonstration
+and here as you can see there is the old dbc file that we just uploaded vector can db plus plus editor allows
+you not only to create dbc files but also to add new messages new network nodes and you can signals
+into the already existing and this is the case dbc file for example we can click on here network nodes new
+and we can add this window here the name of our node that we are just creating so try node we need to
+give it the hexadecimal address let's use one two three
+and now we can create and now we can for example proceed creating a new message among the list of all
+already existing can messages so let's click on the right button of the mouse messages new message let's call it
+try message id id 2.4 dlc data land code 8 it's fine and we can click ok so i'm on the list of messages here
+where we can reduce and expand if we search for
+try message here it is we'll find it here so we can click click with the right button and message
+transmitter as you can see we create a new message but we did not set up yet which is the vcu
+and this can buzz that is transmitting this message so you can for example click on here transmitter layer
+add add and you can select the ecu in the this dbc because it's transmitting the new message that we created
+so we select the try node that we just created
+and we click ok the same goes for a signal if we want to create a can signal inside
+messages messages that we just created right button new and the process is
+pretty much the same one for that we go through and went through for the node creation and account message creation
+we can select here for example by order value type sign sign load double unit or scaling factor offset minimum maximum
+and what we need to do for example in such a scenario we need to
+link to link this signal to the can message that contains the signal itself so on the signal we go on messages
+add we need to select from all the can messages
+this message that we just created try this so okay
+and here it goes
+can db plus plus editor is very useful in order to not only create but also to modify existing dbc database
+we can as you just saw we can find transmission and reception relationships we can adjust can signals
+position inside the can message and so on let's go back to the
+main canalizer window measurement setup window
+as a canalizer user you will be able to analyze the bus communication depending from
+the kind of communication so if it is a can if it is based on can protocol link protocol flex ray and so on
+but there are a lot of
+windows that will support you in your
+analysis and in your
+work
+which are
+the ones that we just mentioned before so let's go through them one by one
+just to complete our basic setup configuration so we
+configure the hardware side
+we configure the offline source that we want to use for our demonstration a very important thing to do
+right now is adding here on analysis stimulation
+clicking on database management there can dbc that
+we need to link
+to the virtual can channel that we are using in order to review the log that we acquire and that we are
+reviewing right now that's because otherwise we will not be able to recognize the can messages that are inside the log that we are reviewing
+because
+canalizer in order to correctly recognize the can messages needs a sort of let me say
+and communication translator which is the can dbc according to a specific can message id
+for example
+canalizer will be able to recognize the message itself and so for example recognize which are the can signals inside the can message
+which are those positions inside the can message so
+analyzer will be able to convert the can signals values and so on but analyzer needs a source in order to
+mapping a translator in order to perform all these actions and that is the dbc so on can channel one which is the one that we are
+configured
+we click with the right button add database and
+and then we select the dbc that we firstly used in order to acquire the logo we are reviewing
+and as you can see we just added for the channel one this dbc
+here canalizer tells you the file name and the path where the file was extracted from
+so first window that we are going to look at is trace window
+as you can see on the trace layer bottom left there is already an already open trace window but
+we can close it for example and we can insert it again and analyze the stimulation
+clicking here on trace view trace and here it is
+if we want to run the
+simulation so review the already acquired data
+on this file here we can go on trace and click on the top left button here start
+as you can see there is a time reference here that is running a channel
+here cam5 id this is the example id of this cam frame this is the data field
+of this cam frame the one the method the one with id 119 but as you can see under name there isn't anything
+and that's because we are using here on channel mapping the virtual cam channel one
+while as you can see when this log was acquired it used channel cam5 so first of all
+if it happens to you to be in this same scenario we need to go back here in the
+measurement setup window right click here on the folder where we uploaded
+the log that we want to review offline mode configuration
+on the channel mapping layer here click add new set bus type
+we are reviewing our can communication bus data so can source channel so basically what we need to do
+one remember from the trace here just we need to re-address all the messages that were acquired on cam5
+we need to re-map them to this nation channel one because this is the one that we are currently
+used in order for the data so we just created a new channel mapping set called channel mapping set one
+but we need we can also rename it but it doesn't matter this channel mapping setup will take all those
+messages from cam5 source channel and we will remap them to the cam channel one let's click okay
+right button again offline file list this is the file currently uploaded channel mapping here known
+but we need to use the one that we just created we select it close it back to source
+and we're on the log as you can see now
+the channel the channel that is being recognized for all those can messages that were transmitted at
+these time stamps here through all the log are now seen coming from can one and as you can see here
+we are recognizing also the can message name because right now we are using correctly both the can
+channel and also the can database so as you can see here the trace window allows you to basically look at
+the transmission and reception of all the cam messages inside for example this offline log but that can be
+be done as well on the other hand in online mode while for example performing an operation called sniffing which is
+basically a passive listening of the campaign communication in real time and
+you can perform several actions here for example on the trace window you can
+have a detailed view of the communication so i'm selecting one message here you can see
+which is the time stamp that was
+acquired the direction ex
+the name of the cam messages with this nid
+the channel that it went through dlc.9 code the data field in extra decimal values byte per byte
+and also the list of all the cam signals inside the cam message and the values that they've got at that time
+that the message was sent you can have a similar signal value description here
+for example just clicking expanding the cam message here on the left plus and here it is
+basically those can signal values are the same ones that are present here on the data field
+here in the decimal values which is this report here but the canalizer is converting
+these data field according to the dbc that we associate to the scan channel so basically canalizer is taking
+these data field in decimal values and using the dbc is recognizing the can signal position inside this
+cam message and converting them according to the dbc factor offset and minimum and maximum
+indications that are recording there you can perform other thing you can for example add some markers here
+clicking with the red button on this gray column new markers so for example if you want to associate to this
+specific specific time instant and who can message transmission or reception a specific level name
+or no level marker try you can also add a comment and have a background color program color program color
+you click ok and you have the marker here so just scrolling with the mouse
+and pointing at it you will see even marker dry
+mark the name and a comment
+and you can remove it just
+that you can remove it on the other hand if on the top left here you've got the detail view you can
+add also statistics view which is a little bit different from the detail view because for example
+statistic view we are pointing to a specific message and this those columns here are telling us
+for example all the can signals inside that can message but also minimum maximum average value
+we can also perform
+several other things
+for example we can have a difference view
+selecting
+different signals for example engine have to choose
+here at this time stamp but it was also sent
+previously or after this time reference
+and so we can for example select it from trace window and have a
+conversion between the signal values for example
+respect to two different time instant and so on
+there are other windows very useful for example the graphic window here that you can find when you open
+a new configuration on the analysis layer here at the bottom of the main window
+but as for the trace window you can go here top left a nice simulation and add a new graphic window just clicking on it
+and this is very very useful because it can
+can give you a visual reference for example i can signal evolution to in this case a radio parallel
+so you can click on this blank column blank section here right button add signals
+here we've got basically the whole dbc
+that we can create this is the dbc name
+so among all the can signals
+you can choose whatever you want
+but for example we can filter for can messages
+so if we know that a specific signal that we are interested in is inside the can message
+yes bcm fd9 you can search for the cam message and then we can signal inside of it
+or we can also filter by the means so
+the bus node that transmits that specific cam framework and signal
+let's for example add the vehicle
+let's check it and drag it here on the left just click on apply it will appear here okay
+and as you can see here we've got its name but we do not have any value yet
+and we've got just a whole blank window so what you need to do is run again canalizer top left
+and you will see that now it's running to the log and you've got something moving here
+so on the y-axis you see the calcium that we have the vehicle speed vso signal
+the measuring unit the km per hour while on the x-axis you've got the time
+if you want to adjust for example the whole graph according to the whole long time period acquired
+you can click here fit x and here you are
+you've got the evolution of the vehicle speed can signal to the whole candle as you can see it was
+equal to zero for a very long time and then start increasing decreasing and so on so what you can do
+is for example adjusting not only the x-axis but also the y-axis in order to have a better understanding
+of the value that for example this can signal had during the log but if you want to have further
+detail on specific values that you can signal had you can click on here so you can activate the measurement
+cursor as you can see the top left a column just here the y one here so if you smooth
+the measurement marker that we just added you will see near the cursor that you've got a value
+represent of the value of the signal but also the time instant
+and so let's move for example here when the vehicle speeds start increasing and you see the reflection
+on the top left of the value but also on the marker measurement here axis that we added
+if you want to perform a comparison between different time distance you can click here
+so you will just activate the difference cursor you can see another column here here and another
+measurement marker appeared here the red one so you can move for example marker the difference marker
+and as you can see for this marker here you just have not only the value of the signal for that time
+reference but also the t1 which is a time distance of course and the dt so the difference
+time period between the two measurement markers and if you want to have
+the same delta measurement but not for the time references between the two markers but for the
+y values so the values of that you can see now between the two different time instances you can refer
+to the p y here column so between marker blue marker and red one for example the vehicle speed difference
+is equal to 80 kilometers per hour which means that if the blue marker the value of the vehicle speed was
+equal to 36 basically meters per hour you've got some to add to it
+80 kilometers for a total of 115 and 16 km per hour in order to add the red value the red marker value of the
+can signal what you can do here is adding also a lot of several can signals because you can do that not only with this one can signal but basically all of the can signals inside of the dbc that we're using so for example always clicking here with the red button add can signal we can
+and i don't know how for example the engine speed
+can signal and need to run again
+analyzer in order to have
+an uploading of an upload of this can signal evolution
+and as you can see we just have a
+a sort of yellow let me say
+value here that goes up and down this is the edge speed the one that we just
+added
+and the same things can be done with markers
+but what you need to do in order to switch from
+from a can signal analysis to the other one is selecting the one that you want to
+refer to because if we select here the engine speed can signal the markers will tell the value of that can signal
+not the vehicle speed for example anymore
+so if we want to separate them
+we can do that here so
+we click on here
+show signals in separate diagram
+as you can see now
+two can signals are splitted in two different
+windows with the same
+x reference or the same time distance we can again adjust the x axis and
+adjust the all and fit all the signals y axis
+so
+these are some of the most important features on the graphic
+window you can zoom in
+example with specific term references and
+adjust y axis you can
+let's go back to the whole log here
+you can click on here
+which is drag zoom mode so instead of clicking
+zooming in or zooming out
+by one click at a time
+you can click the drag and zoom function
+and basically selecting the part of the graphs where you are interested in
+and you can move signals up down
+but there are a lot of feature here you can undo whatever you just did
+and so on
+it's very very useful
+from a visual point of view
+but let's now go back to the main measurement setup window and let's go through for example the
+data here window let's double click here
+right button add signals let's do that with the same signal that we just used
+vehicle speed
+and so
+sig
+fly
+and
+engine speed
+okay they appear here
+and what happens for example you see several
+columns name value unit row value bar
+which is a
+sort of
+progression bar which shows you
+visual
+from visual point of view the evolution of the can signal menu
+if you run
+an evolution of the can signals this is very useful when it is used
+for example
+while performing online activities so you are connected to a real bus
+a real cam bus for example
+where there is an ongoing communication between issues and you can have a visual reference for
+specific scan signals the one that you are interested in
+about the evolution and so on
+so
+um
+basically data window
+display as you just see
+as you just saw
+the values of
+can signals or system variables diagnostic parameters
+whatever you want in different types of
+representation
+and
+they give you
+sort of
+graphical overview of those things
+there are
+other windows for example the can statistics one
+as you can see they are all available here
+if you want to open them
+can statistics
+here you've got different informations
+for example regarding the bus activity
+which can be
+can lean
+flex ray
+whatever they are
+during measurement
+while operating in online mode or after a measurement
+among those information there are as you can see the bus load percentage
+the minimum sending in distance in
+millisecond
+or i don't know frame per bus
+cheap state
+transceiver errors
+standard data
+standard data
+counters
+counters
+and so on
+so if we run again
+you will see for example the bus load
+here
+evolving or the standard data
+calculation
+and you will also have
+not only
+an indication of the current and last
+values of those information but also
+minimum minimum maximum and average value
+so
+let's move to
+another very powerful feature that
+analyzer
+offers you which is
+the diagnostic feature site
+you can find it here
+you can find it here
+tools
+on my bed
+you see diagnostics here
+sorry
+here on the top left
+so
+what we can do here
+basically is
+analyzing and studying
+also the diagnostic communication
+according to the several diagnostic protocols
+that can be used in the automotive sector
+for example
+the unified diagnostic services
+standard one
+or the keyword protocol
+so the starting file
+that needs to be used
+for example
+in order to perform this kind of analysis
+is the
+cdd
+diagnostic
+and
+that can be done
+here
+adding diagnostic description
+you can use basic descriptions
+already available in
+canadizer
+as i
+told you
+there is already available
+the uds or keyword protocol one
+but
+let's use
+these here
+let's search for a specific file
+since i
+i've got the cdb for my
+for my program
+so
+search for it
+we select the dot cdd file
+canal data diagnostic file
+and let's wait for it to be uploaded in canalizer
+so as you can see
+we just uploaded this file
+this is the path
+the specific interface that
+we've used
+and then we've described
+for our kind of diagnostic communication
+click ok
+and then we click on
+diagnostic parameters
+what we can do here is
+adding
+a lot of things
+for example
+that would be
+used
+mostly
+not be used in offline mode
+but
+it can be used in online mode
+in order to interact
+for example
+with the
+ECU under testing
+for example
+because
+as you can see
+if we are in offline mode
+we cannot
+use the diagnostic console
+the cold memory here
+window and the session control
+neither the
+OBE2 one
+but as soon as
+we switch to the online
+configuration
+even if we are not running
+analyzer
+and we are not even connected to
+a real cam bus
+let's just stay
+in this configuration setup
+just to show you
+those windows here
+diagnostic console
+that
+show us
+for example
+basically
+all the information
+that are contained
+in the cdb file
+for example
+you've got
+here the possibility
+to change
+the session control
+that
+the ECU under test
+is using
+in particular
+double clicking here
+you can
+activate the
+programming session
+but as you can see
+RKS can only be sent
+during a running measurement
+and now
+canalyzer is not running
+but even if we start
+the measurement here
+canalyzer will tell us
+that we're missing the licenses
+but also there is no
+real hardware connected
+so it's not useful
+to run
+services right now
+as we
+cannot work in an online mode
+but
+as you can see
+we can change
+not only the
+session control
+we can perform
+an ECU reset
+double clicking
+always
+we can
+for example
+here on
+engineering parameters
+we can
+read
+or write
+write
+all the RDIs
+and DIDs
+that are included
+in the
+CDD
+we can
+use the
+IO control
+commands
+in order to
+control
+manually
+actuators
+we can run
+teams
+and so on
+we can
+for example
+look at the
+fault memory
+here
+according to
+who we
+want to
+specifically do
+you see here
+the commands
+the value
+that we send
+if we want
+to run
+a specific
+command
+what we want
+to
+specific
+action
+that we
+want to perform
+but
+let me say
+for the
+full memory
+analysis
+this
+analyzer
+provides
+you
+already
+a
+value
+to
+window
+the
+right
+one
+right
+to
+diagnostic
+console
+for
+memory
+you
+select
+the
+CDD
+that we
+uploaded
+and here
+you can
+basically
+have a review
+of all the
+DTCs that
+are
+present in the
+error memory
+for this
+specific
+ECU under
+testing
+right now
+we cannot
+perform
+anything
+yes we
+are not
+connected to
+a real
+ECU under
+the loop
+but
+this is
+something that
+Catalyzer allows
+you to do
+and which is
+very useful
+in case
+in the case
+of where
+you
+do not have
+the possibility
+to use
+for example
+already
+available tools
+like
+the analyzer
+for
+media programs
+or
+CDA
+for
+enough
+programs
+on
+the other
+hand
+there is
+another
+window
+that can
+be used
+the
+session
+control
+as we
+saw
+in the
+diagnostic
+console
+window
+you can
+change
+session
+control
+using
+a
+dedicated
+window
+here
+basically
+perform
+the same
+thing
+or you
+can
+unlock
+secure
+gateway
+and
+modify
+unlock
+security
+accesses
+RPC
+reset
+and
+and so
+on
+so
+the
+diagnostic
+side
+of
+Catalyzer
+can be
+very useful
+as well
+along with
+all the other
+windows
+that we
+have seen
+since
+we are
+now configured
+in online
+mode
+as I
+was
+showing you
+before
+we can
+use
+canalizer
+also to
+perform
+unlock
+so basically
+we can
+collect
+data
+starting
+from
+a
+communication
+and
+we can
+do that
+enabling
+here
+so
+in online
+mode
+enabling
+here
+this
+block
+login
+we double
+click on
+this folder
+we select
+the destination
+folder
+and
+the
+name
+of the
+file
+that
+we want
+to generate
+and here
+the file
+format
+will have
+binary
+log file
+so
+as soon
+as you
+for example
+know
+name
+sorry
+log
+and
+we do not
+need to
+change the
+destination
+folder
+since
+we will not
+perform a
+real log
+you see
+here
+the name
+of the
+file
+and
+you can
+set up
+set up
+here
+a trigger
+single trigger
+that can be
+started manually
+stopped manually
+or
+can be
+triggered by
+the cable
+so the
+program node
+itself
+the code
+that we
+define
+and then
+you can
+just
+perform the
+log but
+right now
+we cannot
+do that
+anyway
+along with
+all the
+analysis
+windows that
+we have
+just seen
+as we were
+mentioning
+before
+canalizer
+allows you
+also to
+stimulate
+and interact
+with the
+live
+communication
+in the
+example
+cambus
+or
+limbus
+or whatever
+communication
+bus it is
+that
+you are
+interacting
+with
+using the
+analyzer
+online
+mooc
+configuration
+for example
+a few of
+the
+means that
+you can use
+in order to
+interact
+with
+a
+real
+communication
+whatever
+it is
+is
+the
+click here
+with the
+right
+bottom
+can
+practice
+generator
+let's
+double click
+here
+you've got
+this whole
+new
+blank
+window
+right
+bottom
+add
+frame
+from the
+database
+once again
+we are starting
+from the
+dbc
+file that
+we upload
+in the
+analyzer
+we can
+add
+specific
+cammessage
+selected
+client
+you can see
+it just appeared
+background
+but we can also
+add
+a whole list
+of
+cammessages
+cammessages
+here
+this
+column here
+we've got the
+name
+cammessage
+all the
+list
+we
+added
+the
+trigger
+that we want
+to use
+in order
+to
+send
+that we
+want to send
+that specific
+message
+for example
+we can
+manually
+send it
+once again
+i'm not running
+online
+mode
+but
+we can
+manually send it
+clicking on here
+or we can
+for example
+send it
+periodically
+so without having
+to do that
+manually
+and the cycle
+time
+reported here
+is the one
+that was
+extracted from
+the dbc
+file when
+we selected
+an important
+year
+this
+cammessage
+or it
+can be also
+done
+manually
+and we can
+also
+link
+the
+transmission
+of
+disc and
+message
+according to a
+system variable
+that can be
+defined
+in the
+program
+node
+on the
+other side
+node
+with defining
+which messages
+we want to
+send
+ones that are
+already
+present in the
+dbc
+or as we
+have seen
+before
+messages
+that we
+added
+in on
+radio
+exists
+in dbc
+um
+we can
+find
+how to
+send them
+we can
+change
+the values
+of the
+can signals
+inside of
+these
+of those
+kind of
+messages
+for example
+inside
+the cmfd2
+we can
+decide
+for example
+here
+maybe
+is that
+opens
+the bottom
+left
+the bottom
+side
+of the
+window
+the values
+of
+i don't know
+if you're
+records
+right now
+physical value
+by dbc
+by default value
+is equal to
+normal
+if you will
+and running
+the analyzer in online mode
+we could
+basically change
+that these
+can signal
+inside of
+these
+can
+message
+otherwise
+and we can
+do that
+basically for
+all the
+can
+signal
+inside of
+all the
+can messages
+that we
+that we
+add here
+and this
+is uh
+let me say
+a method
+that can
+be used
+when we want
+for example
+to send
+messages
+that are not
+sent in the
+real
+can bus
+that we are
+working on
+but
+when we want
+to
+some messages
+that we are
+creating
+let me say
+x
+novel
+because if
+we want to
+modify a
+message
+or a
+signal
+which is
+already
+sent
+that can
+bus
+by a
+real
+electronic
+control unit
+we cannot
+use the
+this
+block
+here
+we can
+interactive
+generator
+block
+because we
+would just
+overlap the
+message that
+we are
+sending to
+the one
+that is
+sent by
+the real
+issue
+if we
+want to
+instead
+perform
+sort of
+gateway
+and i
+suggest
+to go
+to the
+dedicated
+lesson
+in the
+academy
+for this
+part here
+regarding
+how the
+interactive
+generator
+block
+or the
+kpop
+program
+nodes can
+be used
+and when
+they should
+be used
+for testing
+we can
+use the
+program
+node here
+so always
+right bottom
+program node
+double click
+and right now
+it asks us
+to select
+an already
+available
+capable
+program
+for example
+i've already
+got one
+the gateway
+so i just
+uploaded this
+file
+and
+just wait a few
+seconds
+that
+file is
+being uploaded
+opened by
+canalizer
+you will be able
+to modify
+for example
+the manual
+code
+according to
+the action
+that you
+want to
+do
+for example
+this was
+a code
+people
+code
+written
+in order
+to perform
+a gateway
+amongst
+one
+ECU
+under testing
+and all
+the other
+ECUs
+in the
+cat bus
+but i suggest
+you to go
+through the
+dedicated
+lesson
+for this
+specific
+window
+regarding the
+data
+visualization
+another
+very useful
+thing that
+can be used
+is
+the panel
+feature
+that you
+can find
+here in
+tools
+panel designer
+so basically
+the panels
+are just
+graphical
+elements
+that you
+can use
+in order
+to modify
+or to
+visualize
+can
+single
+values
+or
+system
+variable
+values
+and
+they can
+be
+very easily
+created
+this one is
+a new
+panel
+they just
+created
+decided
+for example
+that's
+this list
+here
+to the right
+let's drag
+and drop
+drop
+i don't
+know
+let's
+see
+a bar
+or
+meter
+progress bar
+and
+what we want
+for example
+to see
+here
+is the
+visual representation
+i don't know
+vehicle speed
+we just did
+for the graph
+we click here
+and drag it
+here
+in order
+to link
+that cash
+signal to
+the two
+panels
+that we
+just
+created
+when you
+select a
+panel
+you can
+right
+click
+and go
+on
+show
+properties
+in order
+to for
+example
+define
+the minimum
+and maximum
+value
+of that
+panel
+you can
+choose
+one
+display
+on the
+value
+where you
+want
+to be
+to be seen
+and
+let's do that
+also for
+this other panel
+the meter
+here
+so let's
+change
+for example
+the angles
+it's very
+useful
+from
+a visual
+when you say
+final view
+value range
+for the
+vehicle speed
+level
+to the
+maximum
+150
+right now
+if you click
+the meter
+you will see
+that it is
+linked to
+the can
+signal
+vehicle
+speed
+vso
+sig
+link
+not link
+but
+and signal
+vehicle speed
+included in the
+break of
+mutual
+method
+and the
+same
+for the
+progress
+bar
+so you
+save
+it
+browse
+browse
+and here it is
+if you run
+analyzer in off the mode as you were doing
+or if you run
+run analyzer in off the mode as you were doing
+my bad
+let me add it again
+this is a
+x
+node
+part of it we just create again let's open one and create together this one
+one
+right here
+so if you run analyzer
+you will see that it was changing according to the
+vehicle speed value
+if you want to have a comparison for example you can add here
+the graph window so you can compare when you will see for example here
+vehicle speed evolving
+when you see the panel
+values evolving
+so it's just another way of representing
+let me say
+can signal or system variables value
+the only last feature that
+you could
+let's say dive deeper into it
+would be
+the program node and
+can interactive
+generator block
+but
+as i was mentioning you before
+there is a dedicated lesson
+for
+that topic
+so i would suggest you to go
+through
+that one
+and
+that's it
+that is just
+what we just had together was a
+high level
+lesson
+we say
+very basic regarding analyzer usage
+so
+i will be available for any verification
+needed
+i will be available to answer to any
+all of your questions
+and
+i
+just
+nothing else
+i will be available for
+for anything so
+enjoy your day
+have a
+have a good day
+see you

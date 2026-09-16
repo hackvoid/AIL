@@ -1,0 +1,5864 @@
+1
+00:00:00,000 --> 00:00:12,000
+Ciao, I'm Clippo and today we are going to see how the canaliser can be used in order to perform several actions.
+
+2
+00:00:12,000 --> 00:00:23,000
+For example, this tool can allow us to go through an analysis and also a stimulation of a bus communication system.
+
+3
+00:00:23,000 --> 00:00:40,000
+As you know, the bus communication systems are widely used in the automotive sector because they are basically mandatory means that are used to communicate between electronic control units.
+
+4
+00:00:40,000 --> 00:00:53,000
+There are several types of bus communication systems. The main ones, for example, are CAM protocol communication, the Lean one, FlexRay and several others.
+
+5
+00:00:53,000 --> 00:01:04,000
+I suggest you, if you did not do that before, to go through the CAM protocol lesson because it will be very useful for you.
+
+6
+00:01:04,000 --> 00:01:11,000
+And it contains a lot of mandatory information in order to better understand this canaliser lesson.
+
+7
+00:01:11,000 --> 00:01:24,000
+So, first of all, the screen that you are just looking at is the main page of the already prepared canaliser configuration.
+
+8
+00:01:24,000 --> 00:01:37,000
+As we were telling before, canaliser can be used in order to check, for example, if there is a communication between several TCUs in a bus communication system.
+
+9
+00:01:37,000 --> 00:01:56,000
+And also, in case of a positive response or a communication ongoing, it will allow you to perform also an analysis and a study of the kind of communication and any issue of the communication itself.
+
+10
+00:01:56,000 --> 00:02:08,000
+On the other hand, canaliser will allow you to collect data, so perform and acquire data from the communication itself.
+
+11
+00:02:08,000 --> 00:02:15,000
+In order to get started, let's open a new configuration.
+
+12
+00:02:15,000 --> 00:02:19,000
+We will have the opportunity to start from the basics.
+
+13
+00:02:19,000 --> 00:02:22,000
+So, let's go here, new.
+
+14
+00:02:22,000 --> 00:02:24,000
+Let's open up the default one.
+
+15
+00:02:24,000 --> 00:02:28,000
+Click on create configuration.
+
+16
+00:02:28,000 --> 00:02:35,000
+And the window that you will see open would be something like that.
+
+17
+00:02:35,000 --> 00:02:38,000
+We are in the phrase layer.
+
+18
+00:02:38,000 --> 00:02:41,000
+You will understand later what it is.
+
+19
+00:02:41,000 --> 00:02:44,000
+So, let's move to the configuration layer.
+
+20
+00:02:44,000 --> 00:02:54,000
+And here you've got one of the most important window of canaliser tool, which is the measurement setup window.
+
+21
+00:02:54,000 --> 00:03:05,000
+As you can see, there are several blocks here with different names and that can be used in order to perform several things.
+
+22
+00:03:05,000 --> 00:03:11,000
+First of all, there is this block here where you see offline and online.
+
+23
+00:03:11,000 --> 00:03:20,000
+This is the data source where you can find basically if you want to work online or offline.
+
+24
+00:03:20,000 --> 00:03:32,000
+Online means basically that you are currently using a cam case and canaliser connected to a specific, for example, cam communication bus.
+
+25
+00:03:32,000 --> 00:03:40,000
+And you are looking at the cam communication in real life.
+
+26
+00:03:40,000 --> 00:03:47,000
+So, the communication is ongoing while we are looking at it and we are analyzing it.
+
+27
+00:03:47,000 --> 00:03:51,000
+On the other side, what we can do is work in offline mode.
+
+28
+00:03:51,000 --> 00:04:01,000
+So, if you double click here, as you can see, these two blocks here just turn gray and we enable this folder here.
+
+29
+00:04:01,000 --> 00:04:08,000
+Now we are in offline mode, which means that we can, for example, but we will see this later.
+
+30
+00:04:08,000 --> 00:04:14,000
+We can start from a already acquired log.
+
+31
+00:04:14,000 --> 00:04:25,000
+So, already collected the information from a cam communication, which happened in the past and from where we acquired the data.
+
+32
+00:04:25,000 --> 00:04:27,000
+And we can review that offline.
+
+33
+00:04:27,000 --> 00:04:36,000
+So basically just using our PC, we do not need to be physically, for example, connected to cam communication system, the cam bus.
+
+34
+00:04:36,000 --> 00:04:46,000
+So these are the two main modes of operation that we can go through and we can use to canaliser.
+
+35
+00:04:46,000 --> 00:04:51,000
+There are here several other blocks that can be used.
+
+36
+00:04:51,000 --> 00:04:55,000
+Statistics ones, trace, data, graphics, logging.
+
+37
+00:04:55,000 --> 00:05:00,000
+We will dive deeper into those in the next minutes.
+
+38
+00:05:00,000 --> 00:05:02,000
+So, don't worry for now.
+
+39
+00:05:02,000 --> 00:05:08,000
+But apart from the operational mode that we can use canaliser for.
+
+40
+00:05:08,000 --> 00:05:11,000
+There are also analysis windows.
+
+41
+00:05:11,000 --> 00:05:17,000
+For example, in online mode, we can insert an interactive generator blocks.
+
+42
+00:05:17,000 --> 00:05:23,000
+To set the cam communication itself.
+
+43
+00:05:23,000 --> 00:05:28,000
+A program node to use, for example, cable programs.
+
+44
+00:05:28,000 --> 00:05:38,000
+So basically codes that are written by ourselves and that can be used in order to perform several stimulations of the cam communication.
+
+45
+00:05:38,000 --> 00:05:44,000
+We can insert filters of different kinds.
+
+46
+00:05:44,000 --> 00:05:45,000
+Channel filters.
+
+47
+00:05:45,000 --> 00:05:49,000
+So filtering by specific cam communication channels.
+
+48
+00:05:49,000 --> 00:05:54,000
+Or we can add event and variables filters.
+
+49
+00:05:54,000 --> 00:06:03,000
+To have a closer look at specific things that we want to look at.
+
+50
+00:06:03,000 --> 00:06:15,000
+And in online mode, as you can see, we can, for example, here enable the logging block.
+
+51
+00:06:15,000 --> 00:06:19,000
+And this is the way we can use in order to collect data.
+
+52
+00:06:19,000 --> 00:06:25,000
+And that can be done and reviewed in offline mode.
+
+53
+00:06:25,000 --> 00:06:35,000
+So, let's move to the first things, the most important ones, in order to configure our canaliser setup.
+
+54
+00:06:35,000 --> 00:06:40,000
+First of all, we need to understand here, on top, the hardware layer.
+
+55
+00:06:40,000 --> 00:06:45,000
+We need to set up the hardware configuration that we are currently using.
+
+56
+00:06:45,000 --> 00:06:54,000
+For this lesson, we will use a lot that was acquired in the program that I'm working with.
+
+57
+00:06:54,000 --> 00:07:03,000
+And basically here, on channel usage, the log was performed acquiring only one cam bus communication.
+
+58
+00:07:03,000 --> 00:07:08,000
+So here on cam, we need to select one.
+
+59
+00:07:08,000 --> 00:07:14,000
+I did not acquire any link communication in the log that we will use.
+
+60
+00:07:14,000 --> 00:07:16,000
+So we select here zero.
+
+61
+00:07:16,000 --> 00:07:18,000
+And select OK.
+
+62
+00:07:18,000 --> 00:07:31,000
+As you can see, in this right window here, the system is telling us that all channel specific options are OK.
+
+63
+00:07:31,000 --> 00:07:33,000
+So we can move on.
+
+64
+00:07:33,000 --> 00:07:36,000
+In particular, we have here top left channel mapping.
+
+65
+00:07:36,000 --> 00:07:50,000
+So here what we can do, we can basically link on the application channel column here, the virtual can channel.
+
+66
+00:07:50,000 --> 00:07:54,000
+And that canaliser will use for its operations.
+
+67
+00:07:54,000 --> 00:07:58,000
+With the hardware column link.
+
+68
+00:07:58,000 --> 00:08:10,000
+Which is basically the real channel of the can case that is physically connected to the computer, to the PC that we are using in order to run canaliser.
+
+69
+00:08:10,000 --> 00:08:21,000
+For example, right now, this window, among all the choices, you see that under transceiver column, we've got only virtual can channels.
+
+70
+00:08:21,000 --> 00:08:27,000
+And that's because right now I do not have any can case connected to my PC.
+
+71
+00:08:27,000 --> 00:08:43,000
+So canaliser allows us to perform any kind of operations that we want, but it's telling us that we do not have any real and physical can case connected to the PC.
+
+72
+00:08:43,000 --> 00:08:50,000
+And so we can just use virtual channels, but that is enough for our demonstration of canaliser usage.
+
+73
+00:08:50,000 --> 00:09:02,000
+So let's click OK and let's use the virtual can channel 1 to the virtual can bus 1.
+
+74
+00:09:02,000 --> 00:09:11,000
+Now we've got to configure the kind of can bus communication that we want to review in offline mode.
+
+75
+00:09:11,000 --> 00:09:17,000
+I acquired a log from the program, as I was telling before, that I will work on.
+
+76
+00:09:17,000 --> 00:09:35,000
+And specifically, this is a program with a network topology equal to Atlantis side can have the communication, which is basically flexible data rate and protocol.
+
+77
+00:09:35,000 --> 00:09:39,000
+Which means that, for example, here, as you can see, can 1.
+
+78
+00:09:39,000 --> 00:09:45,000
+This is the same virtual can channel that we just configured on channel mapping.
+
+79
+00:09:45,000 --> 00:09:55,000
+But as you can see here, cam controller mode, we cannot use cam with a baud rate up to 500 kg baud.
+
+80
+00:09:55,000 --> 00:10:01,000
+But we need to select this window ISOCAMFD flexible data rate.
+
+81
+00:10:01,000 --> 00:10:17,000
+And as you can see, the data rate field just appears because, as you can understand from the cam protocol lesson, cam flexible data rate communication differs from the standard cam communication.
+
+82
+00:10:17,000 --> 00:10:21,000
+So let's now go ahead and choose six分 box,fal file method that we coffee discussed.
+
+83
+00:10:21,000 --> 00:10:23,000
+So let's select how to load our weights achieve this calculation, how to load our weights in camp and unmute it and get we are having them aside to pouring spikes.
+
+84
+00:10:23,000 --> 00:10:32,000
+We must give you we 5출 the probability of swine output into it.
+
+85
+00:10:32,000 --> 00:10:33,000
+Back to this values at 9 Ginger pole parameter.
+
+86
+00:10:33,000 --> 00:10:35,000
+This is the second value procedure.
+
+87
+00:10:35,000 --> 00:10:38,000
+And the way we just substitute what we prepared to do, we make it a while going to increase ourploy Polar,
+
+88
+00:10:38,000 --> 00:10:39,000
+so it's actually highly strategic data set-up時間.
+
+89
+00:10:39,000 --> 00:10:41,000
+So I really ON questions, I'll continue to ensure that we wanted this one.
+
+90
+00:10:41,000 --> 00:10:51,880
+soon as we set up correctly the data rate okay and what we can do now is for
+
+91
+00:10:51,880 --> 00:11:02,360
+example adding here in offline mode the source that we want to use for our
+
+92
+00:11:02,360 --> 00:11:11,240
+activities in particular as I told you before we will use an already acquired log so we click here
+
+93
+00:11:11,240 --> 00:11:21,000
+add offline source my source is here a blf file so binary logging file
+
+94
+00:11:24,120 --> 00:11:31,640
+and as you can see now that we add this offline source the one that we just selected it appears
+
+95
+00:11:31,640 --> 00:11:37,080
+also here in the measurement setup window just above the folder where we double click
+
+96
+00:11:39,240 --> 00:11:45,400
+if you guys have got a log for example in a different file which can be
+
+97
+00:11:47,080 --> 00:11:55,960
+i don't know a national file in order to perform this offline analysis of the data you need to
+
+98
+00:11:55,960 --> 00:12:04,840
+convert it to a blf so what you need to do is very useful on this side as well you can go here on
+
+99
+00:12:04,840 --> 00:12:14,920
+tools login file conversion click here and as you can see there are two fields source file destination
+
+100
+00:12:14,920 --> 00:12:22,600
+file on source file you need to select the file that you want to convert into a blf file so you can see
+
+101
+00:12:22,600 --> 00:12:34,600
+file select it and then automatically here analyzer tells you the destination of the file the name of the
+
+102
+00:12:34,600 --> 00:12:42,120
+file and the format which is dot blf you can change the name you can change the destination wherever you want
+
+103
+00:12:43,080 --> 00:12:56,440
+for example here try at the end of the name save save and you just need to wait for the analyzer conversion
+
+104
+00:12:56,440 --> 00:13:05,720
+of the file as you can see here there is a percentage and as soon as it goes up to 100 you have your file
+
+105
+00:13:05,720 --> 00:13:15,320
+converted to a blf one let's just wait for it to finish but we have already uploaded here a blf file so we are good to go
+
+106
+00:13:20,360 --> 00:13:21,640
+okay let's close here
+
+107
+00:13:23,800 --> 00:13:32,280
+before moving to the analysis windows the trace one data graphics and so on let's see another very
+
+108
+00:13:32,280 --> 00:13:41,640
+very useful feature that analyzer provides to us which is on tools top left can db plus plus editor
+
+109
+00:13:45,320 --> 00:13:47,240
+open it as you can see
+
+110
+00:13:49,640 --> 00:14:00,440
+this window here on this bottom allows you to open or even create a new dbc file database scan file
+
+111
+00:14:00,440 --> 00:14:13,800
+that let's add example this dbc file that will be needed for us to review the log that we want to use for this demonstration
+
+112
+00:14:16,840 --> 00:14:27,880
+and here as you can see there is the old dbc file that we just uploaded vector can db plus plus editor allows
+
+113
+00:14:27,880 --> 00:14:39,160
+you not only to create dbc files but also to add new messages new network nodes and you can signals
+
+114
+00:14:39,880 --> 00:14:49,000
+into the already existing and this is the case dbc file for example we can click on here network nodes new
+
+115
+00:14:49,000 --> 00:15:02,920
+and we can add this window here the name of our node that we are just creating so try node we need to
+
+116
+00:15:03,560 --> 00:15:08,600
+give it the hexadecimal address let's use one two three
+
+117
+00:15:08,600 --> 00:15:19,400
+and now we can create and now we can for example proceed creating a new message among the list of all
+
+118
+00:15:19,400 --> 00:15:29,320
+already existing can messages so let's click on the right button of the mouse messages new message let's call it
+
+119
+00:15:29,320 --> 00:15:46,040
+try message id id 2.4 dlc data land code 8 it's fine and we can click ok so i'm on the list of messages here
+
+120
+00:15:46,040 --> 00:15:50,360
+where we can reduce and expand if we search for
+
+121
+00:15:50,360 --> 00:16:00,840
+try message here it is we'll find it here so we can click click with the right button and message
+
+122
+00:16:01,480 --> 00:16:08,120
+transmitter as you can see we create a new message but we did not set up yet which is the vcu
+
+123
+00:16:09,080 --> 00:16:17,320
+and this can buzz that is transmitting this message so you can for example click on here transmitter layer
+
+124
+00:16:17,320 --> 00:16:29,320
+add add and you can select the ecu in the this dbc because it's transmitting the new message that we created
+
+125
+00:16:29,960 --> 00:16:34,280
+so we select the try node that we just created
+
+126
+00:16:39,000 --> 00:16:46,760
+and we click ok the same goes for a signal if we want to create a can signal inside
+
+127
+00:16:47,320 --> 00:16:54,040
+messages messages that we just created right button new and the process is
+
+128
+00:16:55,080 --> 00:17:05,160
+pretty much the same one for that we go through and went through for the node creation and account message creation
+
+129
+00:17:05,160 --> 00:17:22,200
+we can select here for example by order value type sign sign load double unit or scaling factor offset minimum maximum
+
+130
+00:17:24,760 --> 00:17:30,280
+and what we need to do for example in such a scenario we need to
+
+131
+00:17:30,280 --> 00:17:39,400
+link to link this signal to the can message that contains the signal itself so on the signal we go on messages
+
+132
+00:17:40,120 --> 00:17:43,720
+add we need to select from all the can messages
+
+133
+00:17:43,720 --> 00:17:49,320
+this message that we just created try this so okay
+
+134
+00:17:52,280 --> 00:17:53,080
+and here it goes
+
+135
+00:17:53,080 --> 00:18:07,400
+can db plus plus editor is very useful in order to not only create but also to modify existing dbc database
+
+136
+00:18:08,120 --> 00:18:19,320
+we can as you just saw we can find transmission and reception relationships we can adjust can signals
+
+137
+00:18:19,320 --> 00:18:25,880
+position inside the can message and so on let's go back to the
+
+138
+00:18:28,520 --> 00:18:32,680
+main canalizer window measurement setup window
+
+139
+00:18:35,080 --> 00:18:44,440
+as a canalizer user you will be able to analyze the bus communication depending from
+
+140
+00:18:44,440 --> 00:18:54,280
+the kind of communication so if it is a can if it is based on can protocol link protocol flex ray and so on
+
+141
+00:18:55,240 --> 00:18:56,360
+but there are a lot of
+
+142
+00:18:57,640 --> 00:18:59,960
+windows that will support you in your
+
+143
+00:19:00,520 --> 00:19:02,680
+analysis and in your
+
+144
+00:19:03,720 --> 00:19:04,040
+work
+
+145
+00:19:04,920 --> 00:19:05,720
+which are
+
+146
+00:19:06,600 --> 00:19:11,240
+the ones that we just mentioned before so let's go through them one by one
+
+147
+00:19:11,240 --> 00:19:19,480
+just to complete our basic setup configuration so we
+
+148
+00:19:20,920 --> 00:19:22,680
+configure the hardware side
+
+149
+00:19:24,360 --> 00:19:33,240
+we configure the offline source that we want to use for our demonstration a very important thing to do
+
+150
+00:19:33,240 --> 00:19:38,840
+right now is adding here on analysis stimulation
+
+151
+00:19:40,520 --> 00:19:44,520
+clicking on database management there can dbc that
+
+152
+00:19:45,640 --> 00:19:46,600
+we need to link
+
+153
+00:19:47,800 --> 00:19:55,800
+to the virtual can channel that we are using in order to review the log that we acquire and that we are
+
+154
+00:19:55,800 --> 00:20:08,280
+reviewing right now that's because otherwise we will not be able to recognize the can messages that are inside the log that we are reviewing
+
+155
+00:20:09,480 --> 00:20:09,880
+because
+
+156
+00:20:11,240 --> 00:20:17,320
+canalizer in order to correctly recognize the can messages needs a sort of let me say
+
+157
+00:20:17,880 --> 00:20:24,280
+and communication translator which is the can dbc according to a specific can message id
+
+158
+00:20:25,160 --> 00:20:25,960
+for example
+
+159
+00:20:27,080 --> 00:20:36,440
+canalizer will be able to recognize the message itself and so for example recognize which are the can signals inside the can message
+
+160
+00:20:37,400 --> 00:20:41,800
+which are those positions inside the can message so
+
+161
+00:20:41,800 --> 00:20:49,400
+analyzer will be able to convert the can signals values and so on but analyzer needs a source in order to
+
+162
+00:20:49,640 --> 00:20:59,800
+mapping a translator in order to perform all these actions and that is the dbc so on can channel one which is the one that we are
+
+163
+00:21:00,760 --> 00:21:02,760
+configured
+
+164
+00:21:02,920 --> 00:21:05,880
+we click with the right button add database and
+
+165
+00:21:05,880 --> 00:21:13,560
+and then we select the dbc that we firstly used in order to acquire the logo we are reviewing
+
+166
+00:21:17,240 --> 00:21:21,400
+and as you can see we just added for the channel one this dbc
+
+167
+00:21:22,040 --> 00:21:27,400
+here canalizer tells you the file name and the path where the file was extracted from
+
+168
+00:21:27,400 --> 00:21:35,640
+so first window that we are going to look at is trace window
+
+169
+00:21:36,920 --> 00:21:43,400
+as you can see on the trace layer bottom left there is already an already open trace window but
+
+170
+00:21:43,960 --> 00:21:50,280
+we can close it for example and we can insert it again and analyze the stimulation
+
+171
+00:21:51,240 --> 00:21:56,200
+clicking here on trace view trace and here it is
+
+172
+00:21:58,600 --> 00:22:00,600
+if we want to run the
+
+173
+00:22:01,320 --> 00:22:04,280
+simulation so review the already acquired data
+
+174
+00:22:05,240 --> 00:22:12,200
+on this file here we can go on trace and click on the top left button here start
+
+175
+00:22:12,200 --> 00:22:19,960
+as you can see there is a time reference here that is running a channel
+
+176
+00:22:21,640 --> 00:22:32,360
+here cam5 id this is the example id of this cam frame this is the data field
+
+177
+00:22:32,360 --> 00:22:45,240
+of this cam frame the one the method the one with id 119 but as you can see under name there isn't anything
+
+178
+00:22:46,600 --> 00:22:55,560
+and that's because we are using here on channel mapping the virtual cam channel one
+
+179
+00:22:56,520 --> 00:23:06,680
+while as you can see when this log was acquired it used channel cam5 so first of all
+
+180
+00:23:07,560 --> 00:23:13,080
+if it happens to you to be in this same scenario we need to go back here in the
+
+181
+00:23:13,080 --> 00:23:19,960
+measurement setup window right click here on the folder where we uploaded
+
+182
+00:23:19,960 --> 00:23:26,280
+the log that we want to review offline mode configuration
+
+183
+00:23:29,240 --> 00:23:35,960
+on the channel mapping layer here click add new set bus type
+
+184
+00:23:37,640 --> 00:23:45,160
+we are reviewing our can communication bus data so can source channel so basically what we need to do
+
+185
+00:23:45,160 --> 00:23:57,400
+one remember from the trace here just we need to re-address all the messages that were acquired on cam5
+
+186
+00:23:59,000 --> 00:24:08,120
+we need to re-map them to this nation channel one because this is the one that we are currently
+
+187
+00:24:08,120 --> 00:24:15,240
+used in order for the data so we just created a new channel mapping set called channel mapping set one
+
+188
+00:24:16,120 --> 00:24:23,800
+but we need we can also rename it but it doesn't matter this channel mapping setup will take all those
+
+189
+00:24:23,800 --> 00:24:33,880
+messages from cam5 source channel and we will remap them to the cam channel one let's click okay
+
+190
+00:24:33,880 --> 00:24:42,600
+right button again offline file list this is the file currently uploaded channel mapping here known
+
+191
+00:24:43,320 --> 00:24:50,200
+but we need to use the one that we just created we select it close it back to source
+
+192
+00:24:53,320 --> 00:24:56,280
+and we're on the log as you can see now
+
+193
+00:24:56,280 --> 00:25:05,000
+the channel the channel that is being recognized for all those can messages that were transmitted at
+
+194
+00:25:05,000 --> 00:25:15,880
+these time stamps here through all the log are now seen coming from can one and as you can see here
+
+195
+00:25:16,440 --> 00:25:25,880
+we are recognizing also the can message name because right now we are using correctly both the can
+
+196
+00:25:26,680 --> 00:25:42,680
+channel and also the can database so as you can see here the trace window allows you to basically look at
+
+197
+00:25:44,360 --> 00:25:52,520
+the transmission and reception of all the cam messages inside for example this offline log but that can be
+
+198
+00:25:52,520 --> 00:26:02,840
+be done as well on the other hand in online mode while for example performing an operation called sniffing which is
+
+199
+00:26:02,840 --> 00:26:11,320
+basically a passive listening of the campaign communication in real time and
+
+200
+00:26:13,240 --> 00:26:18,920
+you can perform several actions here for example on the trace window you can
+
+201
+00:26:18,920 --> 00:26:27,240
+have a detailed view of the communication so i'm selecting one message here you can see
+
+202
+00:26:28,280 --> 00:26:30,760
+which is the time stamp that was
+
+203
+00:26:32,920 --> 00:26:35,400
+acquired the direction ex
+
+204
+00:26:37,560 --> 00:26:41,400
+the name of the cam messages with this nid
+
+205
+00:26:41,400 --> 00:26:51,480
+the channel that it went through dlc.9 code the data field in extra decimal values byte per byte
+
+206
+00:26:52,120 --> 00:27:00,760
+and also the list of all the cam signals inside the cam message and the values that they've got at that time
+
+207
+00:27:02,040 --> 00:27:08,200
+that the message was sent you can have a similar signal value description here
+
+208
+00:27:09,160 --> 00:27:15,480
+for example just clicking expanding the cam message here on the left plus and here it is
+
+209
+00:27:17,640 --> 00:27:24,120
+basically those can signal values are the same ones that are present here on the data field
+
+210
+00:27:24,120 --> 00:27:30,680
+here in the decimal values which is this report here but the canalizer is converting
+
+211
+00:27:30,680 --> 00:27:40,120
+these data field according to the dbc that we associate to the scan channel so basically canalizer is taking
+
+212
+00:27:40,120 --> 00:27:48,600
+these data field in decimal values and using the dbc is recognizing the can signal position inside this
+
+213
+00:27:48,600 --> 00:27:57,240
+cam message and converting them according to the dbc factor offset and minimum and maximum
+
+214
+00:27:58,120 --> 00:28:09,240
+indications that are recording there you can perform other thing you can for example add some markers here
+
+215
+00:28:09,240 --> 00:28:16,520
+clicking with the red button on this gray column new markers so for example if you want to associate to this
+
+216
+00:28:16,520 --> 00:28:24,920
+specific specific time instant and who can message transmission or reception a specific level name
+
+217
+00:28:24,920 --> 00:28:39,480
+or no level marker try you can also add a comment and have a background color program color program color
+
+218
+00:28:40,120 --> 00:28:44,360
+you click ok and you have the marker here so just scrolling with the mouse
+
+219
+00:28:46,040 --> 00:28:48,920
+and pointing at it you will see even marker dry
+
+220
+00:28:50,680 --> 00:28:52,360
+mark the name and a comment
+
+221
+00:28:53,560 --> 00:28:54,920
+and you can remove it just
+
+222
+00:28:54,920 --> 00:29:02,680
+that you can remove it on the other hand if on the top left here you've got the detail view you can
+
+223
+00:29:02,680 --> 00:29:11,560
+add also statistics view which is a little bit different from the detail view because for example
+
+224
+00:29:12,120 --> 00:29:21,320
+statistic view we are pointing to a specific message and this those columns here are telling us
+
+225
+00:29:21,960 --> 00:29:31,800
+for example all the can signals inside that can message but also minimum maximum average value
+
+226
+00:29:34,040 --> 00:29:36,440
+we can also perform
+
+227
+00:29:39,160 --> 00:29:40,440
+several other things
+
+228
+00:29:41,160 --> 00:29:43,000
+for example we can have a difference view
+
+229
+00:29:44,440 --> 00:29:45,160
+selecting
+
+230
+00:29:45,160 --> 00:29:50,120
+different signals for example engine have to choose
+
+231
+00:29:51,960 --> 00:29:56,360
+here at this time stamp but it was also sent
+
+232
+00:29:57,960 --> 00:30:01,560
+previously or after this time reference
+
+233
+00:30:02,520 --> 00:30:08,440
+and so we can for example select it from trace window and have a
+
+234
+00:30:09,080 --> 00:30:12,680
+conversion between the signal values for example
+
+235
+00:30:12,680 --> 00:30:16,840
+respect to two different time instant and so on
+
+236
+00:30:18,920 --> 00:30:27,320
+there are other windows very useful for example the graphic window here that you can find when you open
+
+237
+00:30:27,320 --> 00:30:32,760
+a new configuration on the analysis layer here at the bottom of the main window
+
+238
+00:30:32,760 --> 00:30:44,520
+but as for the trace window you can go here top left a nice simulation and add a new graphic window just clicking on it
+
+239
+00:30:44,520 --> 00:30:49,320
+and this is very very useful because it can
+
+240
+00:30:50,280 --> 00:30:58,840
+can give you a visual reference for example i can signal evolution to in this case a radio parallel
+
+241
+00:30:59,640 --> 00:31:08,520
+so you can click on this blank column blank section here right button add signals
+
+242
+00:31:08,520 --> 00:31:12,600
+here we've got basically the whole dbc
+
+243
+00:31:13,240 --> 00:31:17,880
+that we can create this is the dbc name
+
+244
+00:31:20,520 --> 00:31:22,520
+so among all the can signals
+
+245
+00:31:23,480 --> 00:31:25,960
+you can choose whatever you want
+
+246
+00:31:27,000 --> 00:31:29,800
+but for example we can filter for can messages
+
+247
+00:31:30,360 --> 00:31:36,520
+so if we know that a specific signal that we are interested in is inside the can message
+
+248
+00:31:36,520 --> 00:31:44,200
+yes bcm fd9 you can search for the cam message and then we can signal inside of it
+
+249
+00:31:44,840 --> 00:31:48,840
+or we can also filter by the means so
+
+250
+00:31:50,200 --> 00:31:54,920
+the bus node that transmits that specific cam framework and signal
+
+251
+00:31:55,960 --> 00:31:58,120
+let's for example add the vehicle
+
+252
+00:31:58,120 --> 00:32:13,240
+let's check it and drag it here on the left just click on apply it will appear here okay
+
+253
+00:32:15,320 --> 00:32:21,000
+and as you can see here we've got its name but we do not have any value yet
+
+254
+00:32:21,000 --> 00:32:29,320
+and we've got just a whole blank window so what you need to do is run again canalizer top left
+
+255
+00:32:31,000 --> 00:32:36,600
+and you will see that now it's running to the log and you've got something moving here
+
+256
+00:32:37,960 --> 00:32:44,600
+so on the y-axis you see the calcium that we have the vehicle speed vso signal
+
+257
+00:32:45,400 --> 00:32:52,040
+the measuring unit the km per hour while on the x-axis you've got the time
+
+258
+00:32:54,280 --> 00:33:02,360
+if you want to adjust for example the whole graph according to the whole long time period acquired
+
+259
+00:33:02,360 --> 00:33:08,280
+you can click here fit x and here you are
+
+260
+00:33:08,280 --> 00:33:16,920
+you've got the evolution of the vehicle speed can signal to the whole candle as you can see it was
+
+261
+00:33:16,920 --> 00:33:23,400
+equal to zero for a very long time and then start increasing decreasing and so on so what you can do
+
+262
+00:33:23,400 --> 00:33:31,960
+is for example adjusting not only the x-axis but also the y-axis in order to have a better understanding
+
+263
+00:33:31,960 --> 00:33:41,560
+of the value that for example this can signal had during the log but if you want to have further
+
+264
+00:33:41,560 --> 00:33:51,320
+detail on specific values that you can signal had you can click on here so you can activate the measurement
+
+265
+00:33:51,320 --> 00:33:59,320
+cursor as you can see the top left a column just here the y one here so if you smooth
+
+266
+00:33:59,320 --> 00:34:10,120
+the measurement marker that we just added you will see near the cursor that you've got a value
+
+267
+00:34:10,120 --> 00:34:16,440
+represent of the value of the signal but also the time instant
+
+268
+00:34:16,440 --> 00:34:24,760
+and so let's move for example here when the vehicle speeds start increasing and you see the reflection
+
+269
+00:34:25,480 --> 00:34:32,840
+on the top left of the value but also on the marker measurement here axis that we added
+
+270
+00:34:33,800 --> 00:34:39,960
+if you want to perform a comparison between different time distance you can click here
+
+271
+00:34:39,960 --> 00:34:50,200
+so you will just activate the difference cursor you can see another column here here and another
+
+272
+00:34:50,920 --> 00:34:59,560
+measurement marker appeared here the red one so you can move for example marker the difference marker
+
+273
+00:34:59,560 --> 00:35:06,840
+and as you can see for this marker here you just have not only the value of the signal for that time
+
+274
+00:35:06,840 --> 00:35:16,280
+reference but also the t1 which is a time distance of course and the dt so the difference
+
+275
+00:35:17,720 --> 00:35:24,280
+time period between the two measurement markers and if you want to have
+
+276
+00:35:26,360 --> 00:35:33,000
+the same delta measurement but not for the time references between the two markers but for the
+
+277
+00:35:33,000 --> 00:35:40,680
+y values so the values of that you can see now between the two different time instances you can refer
+
+278
+00:35:40,680 --> 00:35:51,080
+to the p y here column so between marker blue marker and red one for example the vehicle speed difference
+
+279
+00:35:51,080 --> 00:36:00,840
+is equal to 80 kilometers per hour which means that if the blue marker the value of the vehicle speed was
+
+280
+00:36:00,840 --> 00:36:07,400
+equal to 36 basically meters per hour you've got some to add to it
+
+281
+00:36:08,600 --> 00:36:19,240
+80 kilometers for a total of 115 and 16 km per hour in order to add the red value the red marker value of the
+
+282
+00:36:19,240 --> 00:36:46,920
+can signal what you can do here is adding also a lot of several can signals because you can do that not only with this one can signal but basically all of the can signals inside of the dbc that we're using so for example always clicking here with the red button add can signal we can
+
+283
+00:36:46,920 --> 00:36:52,200
+and i don't know how for example the engine speed
+
+284
+00:36:55,640 --> 00:37:01,080
+can signal and need to run again
+
+285
+00:37:02,840 --> 00:37:04,360
+analyzer in order to have
+
+286
+00:37:07,320 --> 00:37:11,080
+an uploading of an upload of this can signal evolution
+
+287
+00:37:11,080 --> 00:37:15,080
+and as you can see we just have a
+
+288
+00:37:17,080 --> 00:37:19,880
+a sort of yellow let me say
+
+289
+00:37:21,720 --> 00:37:25,960
+value here that goes up and down this is the edge speed the one that we just
+
+290
+00:37:27,000 --> 00:37:27,400
+added
+
+291
+00:37:28,760 --> 00:37:32,760
+and the same things can be done with markers
+
+292
+00:37:33,720 --> 00:37:38,440
+but what you need to do in order to switch from
+
+293
+00:37:40,680 --> 00:37:45,880
+from a can signal analysis to the other one is selecting the one that you want to
+
+294
+00:37:46,360 --> 00:37:54,440
+refer to because if we select here the engine speed can signal the markers will tell the value of that can signal
+
+295
+00:37:54,440 --> 00:37:57,320
+not the vehicle speed for example anymore
+
+296
+00:37:58,760 --> 00:38:00,760
+so if we want to separate them
+
+297
+00:38:02,120 --> 00:38:04,920
+we can do that here so
+
+298
+00:38:06,120 --> 00:38:07,080
+we click on here
+
+299
+00:38:08,200 --> 00:38:10,520
+show signals in separate diagram
+
+300
+00:38:11,240 --> 00:38:12,280
+as you can see now
+
+301
+00:38:13,080 --> 00:38:16,360
+two can signals are splitted in two different
+
+302
+00:38:17,000 --> 00:38:18,520
+windows with the same
+
+303
+00:38:18,520 --> 00:38:27,320
+x reference or the same time distance we can again adjust the x axis and
+
+304
+00:38:28,120 --> 00:38:32,840
+adjust the all and fit all the signals y axis
+
+305
+00:38:35,800 --> 00:38:36,040
+so
+
+306
+00:38:37,640 --> 00:38:42,920
+these are some of the most important features on the graphic
+
+307
+00:38:43,880 --> 00:38:46,840
+window you can zoom in
+
+308
+00:38:48,200 --> 00:38:50,600
+example with specific term references and
+
+309
+00:38:51,400 --> 00:38:54,920
+adjust y axis you can
+
+310
+00:38:56,920 --> 00:38:58,840
+let's go back to the whole log here
+
+311
+00:38:58,840 --> 00:38:59,960
+you can click on here
+
+312
+00:39:00,600 --> 00:39:03,720
+which is drag zoom mode so instead of clicking
+
+313
+00:39:04,920 --> 00:39:06,680
+zooming in or zooming out
+
+314
+00:39:07,720 --> 00:39:09,480
+by one click at a time
+
+315
+00:39:09,480 --> 00:39:12,040
+you can click the drag and zoom function
+
+316
+00:39:12,040 --> 00:39:18,840
+and basically selecting the part of the graphs where you are interested in
+
+317
+00:39:21,080 --> 00:39:24,440
+and you can move signals up down
+
+318
+00:39:25,000 --> 00:39:28,520
+but there are a lot of feature here you can undo whatever you just did
+
+319
+00:39:29,400 --> 00:39:30,040
+and so on
+
+320
+00:39:31,320 --> 00:39:32,840
+it's very very useful
+
+321
+00:39:33,720 --> 00:39:36,200
+from a visual point of view
+
+322
+00:39:36,200 --> 00:39:46,200
+but let's now go back to the main measurement setup window and let's go through for example the
+
+323
+00:39:47,400 --> 00:39:51,960
+data here window let's double click here
+
+324
+00:39:54,360 --> 00:40:01,160
+right button add signals let's do that with the same signal that we just used
+
+325
+00:40:01,160 --> 00:40:02,680
+vehicle speed
+
+326
+00:40:04,280 --> 00:40:04,840
+and so
+
+327
+00:40:04,840 --> 00:40:05,240
+sig
+
+328
+00:40:06,760 --> 00:40:07,240
+fly
+
+329
+00:40:07,240 --> 00:40:08,120
+and
+
+330
+00:40:08,120 --> 00:40:10,600
+engine speed
+
+331
+00:40:13,480 --> 00:40:15,080
+okay they appear here
+
+332
+00:40:16,920 --> 00:40:19,960
+and what happens for example you see several
+
+333
+00:40:19,960 --> 00:40:23,480
+columns name value unit row value bar
+
+334
+00:40:24,440 --> 00:40:25,000
+which is a
+
+335
+00:40:26,040 --> 00:40:26,440
+sort of
+
+336
+00:40:27,400 --> 00:40:29,640
+progression bar which shows you
+
+337
+00:40:30,280 --> 00:40:30,680
+visual
+
+338
+00:40:31,560 --> 00:40:34,840
+from visual point of view the evolution of the can signal menu
+
+339
+00:40:35,320 --> 00:40:35,960
+if you run
+
+340
+00:40:40,360 --> 00:40:45,080
+an evolution of the can signals this is very useful when it is used
+
+341
+00:40:46,040 --> 00:40:46,680
+for example
+
+342
+00:40:47,800 --> 00:40:52,360
+while performing online activities so you are connected to a real bus
+
+343
+00:40:53,560 --> 00:40:55,560
+a real cam bus for example
+
+344
+00:40:56,520 --> 00:41:02,520
+where there is an ongoing communication between issues and you can have a visual reference for
+
+345
+00:41:02,520 --> 00:41:05,720
+specific scan signals the one that you are interested in
+
+346
+00:41:07,000 --> 00:41:08,920
+about the evolution and so on
+
+347
+00:41:09,880 --> 00:41:10,120
+so
+
+348
+00:41:10,120 --> 00:41:10,760
+um
+
+349
+00:41:11,560 --> 00:41:12,840
+basically data window
+
+350
+00:41:14,200 --> 00:41:16,280
+display as you just see
+
+351
+00:41:17,160 --> 00:41:17,880
+as you just saw
+
+352
+00:41:18,440 --> 00:41:19,720
+the values of
+
+353
+00:41:19,720 --> 00:41:23,560
+can signals or system variables diagnostic parameters
+
+354
+00:41:24,120 --> 00:41:26,440
+whatever you want in different types of
+
+355
+00:41:27,160 --> 00:41:28,040
+representation
+
+356
+00:41:28,920 --> 00:41:29,480
+and
+
+357
+00:41:29,480 --> 00:41:30,600
+they give you
+
+358
+00:41:31,400 --> 00:41:32,280
+sort of
+
+359
+00:41:32,280 --> 00:41:34,600
+graphical overview of those things
+
+360
+00:41:34,600 --> 00:41:36,280
+there are
+
+361
+00:41:37,880 --> 00:41:41,320
+other windows for example the can statistics one
+
+362
+00:41:42,760 --> 00:41:45,000
+as you can see they are all available here
+
+363
+00:41:45,480 --> 00:41:46,520
+if you want to open them
+
+364
+00:41:48,280 --> 00:41:49,400
+can statistics
+
+365
+00:41:50,600 --> 00:41:53,000
+here you've got different informations
+
+366
+00:41:54,840 --> 00:41:57,800
+for example regarding the bus activity
+
+367
+00:41:59,320 --> 00:42:00,120
+which can be
+
+368
+00:42:00,920 --> 00:42:01,800
+can lean
+
+369
+00:42:01,800 --> 00:42:02,520
+flex ray
+
+370
+00:42:02,520 --> 00:42:03,320
+whatever they are
+
+371
+00:42:03,320 --> 00:42:05,240
+during measurement
+
+372
+00:42:05,240 --> 00:42:08,520
+while operating in online mode or after a measurement
+
+373
+00:42:09,800 --> 00:42:14,200
+among those information there are as you can see the bus load percentage
+
+374
+00:42:15,960 --> 00:42:18,520
+the minimum sending in distance in
+
+375
+00:42:19,560 --> 00:42:20,360
+millisecond
+
+376
+00:42:22,280 --> 00:42:24,760
+or i don't know frame per bus
+
+377
+00:42:25,640 --> 00:42:26,680
+cheap state
+
+378
+00:42:26,680 --> 00:42:28,120
+transceiver errors
+
+379
+00:42:28,120 --> 00:42:30,040
+standard data
+
+380
+00:42:30,040 --> 00:42:30,600
+standard data
+
+381
+00:42:30,600 --> 00:42:31,160
+counters
+
+382
+00:42:31,160 --> 00:42:31,800
+counters
+
+383
+00:42:31,800 --> 00:42:32,920
+and so on
+
+384
+00:42:32,920 --> 00:42:34,520
+so if we run again
+
+385
+00:42:34,520 --> 00:42:36,680
+you will see for example the bus load
+
+386
+00:42:36,680 --> 00:42:37,000
+here
+
+387
+00:42:37,880 --> 00:42:40,120
+evolving or the standard data
+
+388
+00:42:41,160 --> 00:42:41,880
+calculation
+
+389
+00:42:44,200 --> 00:42:45,720
+and you will also have
+
+390
+00:42:46,360 --> 00:42:46,920
+not only
+
+391
+00:42:48,760 --> 00:42:51,240
+an indication of the current and last
+
+392
+00:42:52,200 --> 00:42:55,080
+values of those information but also
+
+393
+00:42:55,080 --> 00:42:57,480
+minimum minimum maximum and average value
+
+394
+00:43:00,440 --> 00:43:00,680
+so
+
+395
+00:43:01,560 --> 00:43:03,000
+let's move to
+
+396
+00:43:04,120 --> 00:43:07,320
+another very powerful feature that
+
+397
+00:43:08,360 --> 00:43:09,160
+analyzer
+
+398
+00:43:09,800 --> 00:43:11,720
+offers you which is
+
+399
+00:43:12,440 --> 00:43:14,280
+the diagnostic feature site
+
+400
+00:43:14,280 --> 00:43:16,200
+you can find it here
+
+401
+00:43:16,200 --> 00:43:16,760
+you can find it here
+
+402
+00:43:17,880 --> 00:43:18,440
+tools
+
+403
+00:43:24,200 --> 00:43:26,120
+on my bed
+
+404
+00:43:26,120 --> 00:43:28,120
+you see diagnostics here
+
+405
+00:43:28,120 --> 00:43:28,440
+sorry
+
+406
+00:43:29,000 --> 00:43:30,200
+here on the top left
+
+407
+00:43:30,200 --> 00:43:31,800
+so
+
+408
+00:43:32,920 --> 00:43:34,440
+what we can do here
+
+409
+00:43:34,440 --> 00:43:35,480
+basically is
+
+410
+00:43:36,040 --> 00:43:37,880
+analyzing and studying
+
+411
+00:43:37,880 --> 00:43:40,120
+also the diagnostic communication
+
+412
+00:43:40,760 --> 00:43:44,120
+according to the several diagnostic protocols
+
+413
+00:43:44,120 --> 00:43:46,600
+that can be used in the automotive sector
+
+414
+00:43:46,600 --> 00:43:47,320
+for example
+
+415
+00:43:48,280 --> 00:43:50,760
+the unified diagnostic services
+
+416
+00:43:50,760 --> 00:43:51,720
+standard one
+
+417
+00:43:51,720 --> 00:43:53,560
+or the keyword protocol
+
+418
+00:43:53,560 --> 00:43:57,800
+so the starting file
+
+419
+00:43:58,600 --> 00:44:00,280
+that needs to be used
+
+420
+00:44:00,280 --> 00:44:01,080
+for example
+
+421
+00:44:02,280 --> 00:44:05,080
+in order to perform this kind of analysis
+
+422
+00:44:05,080 --> 00:44:06,600
+is the
+
+423
+00:44:08,120 --> 00:44:08,920
+cdd
+
+424
+00:44:08,920 --> 00:44:11,240
+diagnostic
+
+425
+00:44:12,200 --> 00:44:12,440
+and
+
+426
+00:44:14,520 --> 00:44:15,640
+that can be done
+
+427
+00:44:16,200 --> 00:44:16,440
+here
+
+428
+00:44:17,080 --> 00:44:19,400
+adding diagnostic description
+
+429
+00:44:19,960 --> 00:44:22,120
+you can use basic descriptions
+
+430
+00:44:22,120 --> 00:44:23,400
+already available in
+
+431
+00:44:23,400 --> 00:44:24,440
+canadizer
+
+432
+00:44:24,440 --> 00:44:24,840
+as i
+
+433
+00:44:26,360 --> 00:44:27,240
+told you
+
+434
+00:44:27,240 --> 00:44:28,520
+there is already available
+
+435
+00:44:28,520 --> 00:44:30,680
+the uds or keyword protocol one
+
+436
+00:44:31,320 --> 00:44:31,560
+but
+
+437
+00:44:32,760 --> 00:44:33,480
+let's use
+
+438
+00:44:34,840 --> 00:44:35,720
+these here
+
+439
+00:44:36,680 --> 00:44:38,760
+let's search for a specific file
+
+440
+00:44:38,760 --> 00:44:39,480
+since i
+
+441
+00:44:40,520 --> 00:44:42,920
+i've got the cdb for my
+
+442
+00:44:43,960 --> 00:44:44,680
+for my program
+
+443
+00:44:44,680 --> 00:44:46,120
+so
+
+444
+00:44:48,200 --> 00:44:48,920
+search for it
+
+445
+00:44:57,000 --> 00:44:59,080
+we select the dot cdd file
+
+446
+00:44:59,080 --> 00:45:00,760
+canal data diagnostic file
+
+447
+00:45:03,320 --> 00:45:07,000
+and let's wait for it to be uploaded in canalizer
+
+448
+00:45:07,000 --> 00:45:13,800
+so as you can see
+
+449
+00:45:14,360 --> 00:45:17,320
+we just uploaded this file
+
+450
+00:45:17,320 --> 00:45:18,360
+this is the path
+
+451
+00:45:19,080 --> 00:45:21,960
+the specific interface that
+
+452
+00:45:22,840 --> 00:45:23,560
+we've used
+
+453
+00:45:23,560 --> 00:45:25,480
+and then we've described
+
+454
+00:45:25,480 --> 00:45:27,880
+for our kind of diagnostic communication
+
+455
+00:45:28,440 --> 00:45:28,840
+click ok
+
+456
+00:45:29,640 --> 00:45:30,760
+and then we click on
+
+457
+00:45:31,480 --> 00:45:33,000
+diagnostic parameters
+
+458
+00:45:37,400 --> 00:45:38,760
+what we can do here is
+
+459
+00:45:39,960 --> 00:45:40,440
+adding
+
+460
+00:45:41,880 --> 00:45:42,760
+a lot of things
+
+461
+00:45:45,160 --> 00:45:45,800
+for example
+
+462
+00:45:46,280 --> 00:45:46,920
+that would be
+
+463
+00:45:47,960 --> 00:45:48,280
+used
+
+464
+00:45:49,480 --> 00:45:50,120
+mostly
+
+465
+00:45:50,680 --> 00:45:52,520
+not be used in offline mode
+
+466
+00:45:53,240 --> 00:45:53,480
+but
+
+467
+00:45:54,360 --> 00:45:56,840
+it can be used in online mode
+
+468
+00:45:56,840 --> 00:45:58,440
+in order to interact
+
+469
+00:45:58,440 --> 00:45:59,240
+for example
+
+470
+00:45:59,800 --> 00:46:00,360
+with the
+
+471
+00:46:02,600 --> 00:46:04,200
+ECU under testing
+
+472
+00:46:04,200 --> 00:46:04,680
+for example
+
+473
+00:46:04,680 --> 00:46:05,480
+because
+
+474
+00:46:05,480 --> 00:46:06,360
+as you can see
+
+475
+00:46:06,360 --> 00:46:07,720
+if we are in offline mode
+
+476
+00:46:07,720 --> 00:46:08,600
+we cannot
+
+477
+00:46:08,600 --> 00:46:10,280
+use the diagnostic console
+
+478
+00:46:10,280 --> 00:46:11,960
+the cold memory here
+
+479
+00:46:11,960 --> 00:46:13,880
+window and the session control
+
+480
+00:46:13,880 --> 00:46:14,520
+neither the
+
+481
+00:46:14,520 --> 00:46:16,520
+OBE2 one
+
+482
+00:46:16,520 --> 00:46:17,800
+but as soon as
+
+483
+00:46:17,800 --> 00:46:20,200
+we switch to the online
+
+484
+00:46:20,200 --> 00:46:21,080
+configuration
+
+485
+00:46:21,080 --> 00:46:22,600
+even if we are not running
+
+486
+00:46:23,480 --> 00:46:24,200
+analyzer
+
+487
+00:46:24,200 --> 00:46:26,680
+and we are not even connected to
+
+488
+00:46:26,680 --> 00:46:27,960
+a real cam bus
+
+489
+00:46:29,560 --> 00:46:30,440
+let's just stay
+
+490
+00:46:31,400 --> 00:46:32,680
+in this configuration setup
+
+491
+00:46:32,680 --> 00:46:34,440
+just to show you
+
+492
+00:46:35,080 --> 00:46:36,040
+those windows here
+
+493
+00:46:36,040 --> 00:46:37,320
+diagnostic console
+
+494
+00:46:39,000 --> 00:46:39,240
+that
+
+495
+00:46:40,280 --> 00:46:40,840
+show us
+
+496
+00:46:40,840 --> 00:46:41,880
+for example
+
+497
+00:46:41,880 --> 00:46:42,440
+basically
+
+498
+00:46:43,000 --> 00:46:44,120
+all the information
+
+499
+00:46:44,120 --> 00:46:45,480
+that are contained
+
+500
+00:46:45,480 --> 00:46:47,080
+in the cdb file
+
+501
+00:46:47,880 --> 00:46:48,520
+for example
+
+502
+00:46:48,520 --> 00:46:49,480
+you've got
+
+503
+00:46:49,480 --> 00:46:50,680
+here the possibility
+
+504
+00:46:50,680 --> 00:46:51,640
+to change
+
+505
+00:46:51,640 --> 00:46:53,640
+the session control
+
+506
+00:46:53,640 --> 00:46:53,880
+that
+
+507
+00:46:54,520 --> 00:46:56,040
+the ECU under test
+
+508
+00:46:56,040 --> 00:46:56,680
+is using
+
+509
+00:46:56,680 --> 00:46:58,680
+in particular
+
+510
+00:47:00,680 --> 00:47:01,640
+double clicking here
+
+511
+00:47:01,640 --> 00:47:01,960
+you can
+
+512
+00:47:01,960 --> 00:47:03,800
+activate the
+
+513
+00:47:03,800 --> 00:47:05,400
+programming session
+
+514
+00:47:05,400 --> 00:47:06,520
+but as you can see
+
+515
+00:47:07,640 --> 00:47:09,240
+RKS can only be sent
+
+516
+00:47:09,240 --> 00:47:10,520
+during a running measurement
+
+517
+00:47:11,320 --> 00:47:11,880
+and now
+
+518
+00:47:11,880 --> 00:47:13,160
+canalyzer is not running
+
+519
+00:47:14,440 --> 00:47:15,720
+but even if we start
+
+520
+00:47:15,720 --> 00:47:16,680
+the measurement here
+
+521
+00:47:18,760 --> 00:47:20,280
+canalyzer will tell us
+
+522
+00:47:20,280 --> 00:47:22,200
+that we're missing the licenses
+
+523
+00:47:22,200 --> 00:47:23,640
+but also there is no
+
+524
+00:47:23,640 --> 00:47:25,320
+real hardware connected
+
+525
+00:47:25,320 --> 00:47:27,160
+so it's not useful
+
+526
+00:47:27,160 --> 00:47:28,120
+to run
+
+527
+00:47:28,120 --> 00:47:29,400
+services right now
+
+528
+00:47:29,400 --> 00:47:29,960
+as we
+
+529
+00:47:30,680 --> 00:47:32,360
+cannot work in an online mode
+
+530
+00:47:32,360 --> 00:47:32,520
+but
+
+531
+00:47:33,480 --> 00:47:34,360
+as you can see
+
+532
+00:47:34,360 --> 00:47:35,720
+we can change
+
+533
+00:47:35,720 --> 00:47:36,680
+not only the
+
+534
+00:47:36,680 --> 00:47:38,120
+session control
+
+535
+00:47:38,120 --> 00:47:39,080
+we can perform
+
+536
+00:47:39,080 --> 00:47:40,520
+an ECU reset
+
+537
+00:47:40,520 --> 00:47:41,400
+double clicking
+
+538
+00:47:41,400 --> 00:47:41,880
+always
+
+539
+00:47:42,600 --> 00:47:43,560
+we can
+
+540
+00:47:45,320 --> 00:47:46,040
+for example
+
+541
+00:47:47,000 --> 00:47:47,640
+here on
+
+542
+00:47:49,240 --> 00:47:50,360
+engineering parameters
+
+543
+00:47:50,360 --> 00:47:50,760
+we can
+
+544
+00:47:51,560 --> 00:47:52,280
+read
+
+545
+00:47:52,280 --> 00:47:53,080
+or write
+
+546
+00:47:53,080 --> 00:47:53,640
+write
+
+547
+00:47:53,640 --> 00:47:54,840
+all the RDIs
+
+548
+00:47:54,840 --> 00:47:56,200
+and DIDs
+
+549
+00:47:56,200 --> 00:47:57,400
+that are included
+
+550
+00:47:57,400 --> 00:47:57,800
+in the
+
+551
+00:47:58,600 --> 00:47:59,240
+CDD
+
+552
+00:47:59,800 --> 00:48:00,440
+we can
+
+553
+00:48:01,080 --> 00:48:01,640
+use the
+
+554
+00:48:02,600 --> 00:48:03,640
+IO control
+
+555
+00:48:04,360 --> 00:48:05,000
+commands
+
+556
+00:48:05,000 --> 00:48:05,640
+in order to
+
+557
+00:48:06,680 --> 00:48:07,240
+control
+
+558
+00:48:07,800 --> 00:48:08,360
+manually
+
+559
+00:48:09,000 --> 00:48:09,800
+actuators
+
+560
+00:48:11,160 --> 00:48:12,120
+we can run
+
+561
+00:48:12,680 --> 00:48:13,560
+teams
+
+562
+00:48:13,560 --> 00:48:14,200
+and so on
+
+563
+00:48:15,880 --> 00:48:16,280
+we can
+
+564
+00:48:16,280 --> 00:48:16,840
+for example
+
+565
+00:48:16,840 --> 00:48:17,400
+look at the
+
+566
+00:48:17,400 --> 00:48:18,280
+fault memory
+
+567
+00:48:18,280 --> 00:48:18,600
+here
+
+568
+00:48:18,600 --> 00:48:21,480
+according to
+
+569
+00:48:22,680 --> 00:48:23,640
+who we
+
+570
+00:48:23,640 --> 00:48:24,280
+want to
+
+571
+00:48:24,280 --> 00:48:25,560
+specifically do
+
+572
+00:48:25,560 --> 00:48:26,280
+you see here
+
+573
+00:48:26,280 --> 00:48:27,320
+the commands
+
+574
+00:48:27,320 --> 00:48:28,120
+the value
+
+575
+00:48:28,120 --> 00:48:29,400
+that we send
+
+576
+00:48:29,400 --> 00:48:29,960
+if we want
+
+577
+00:48:29,960 --> 00:48:30,440
+to run
+
+578
+00:48:30,440 --> 00:48:31,080
+a specific
+
+579
+00:48:31,080 --> 00:48:31,560
+command
+
+580
+00:48:33,480 --> 00:48:34,520
+what we want
+
+581
+00:48:34,520 --> 00:48:34,760
+to
+
+582
+00:48:36,040 --> 00:48:36,760
+specific
+
+583
+00:48:37,800 --> 00:48:38,200
+action
+
+584
+00:48:38,200 --> 00:48:38,920
+that we
+
+585
+00:48:38,920 --> 00:48:39,880
+want to perform
+
+586
+00:48:40,840 --> 00:48:41,080
+but
+
+587
+00:48:41,800 --> 00:48:42,600
+let me say
+
+588
+00:48:42,600 --> 00:48:43,160
+for the
+
+589
+00:48:43,160 --> 00:48:44,120
+full memory
+
+590
+00:48:44,120 --> 00:48:44,760
+analysis
+
+591
+00:48:44,760 --> 00:48:45,480
+this
+
+592
+00:48:45,480 --> 00:48:46,120
+analyzer
+
+593
+00:48:46,120 --> 00:48:46,760
+provides
+
+594
+00:48:46,760 --> 00:48:47,080
+you
+
+595
+00:48:47,080 --> 00:48:47,640
+already
+
+596
+00:48:47,640 --> 00:48:48,120
+a
+
+597
+00:48:48,120 --> 00:48:48,520
+value
+
+598
+00:48:48,520 --> 00:48:48,760
+to
+
+599
+00:48:48,760 --> 00:48:49,160
+window
+
+600
+00:48:49,160 --> 00:48:49,800
+the
+
+601
+00:48:49,800 --> 00:48:50,120
+right
+
+602
+00:48:51,960 --> 00:48:52,360
+one
+
+603
+00:48:52,360 --> 00:48:52,680
+right
+
+604
+00:48:52,680 --> 00:48:52,840
+to
+
+605
+00:48:52,840 --> 00:48:53,480
+diagnostic
+
+606
+00:48:53,480 --> 00:48:53,880
+console
+
+607
+00:48:53,880 --> 00:48:54,280
+for
+
+608
+00:48:54,280 --> 00:48:55,160
+memory
+
+609
+00:48:55,160 --> 00:48:55,400
+you
+
+610
+00:48:55,400 --> 00:48:55,800
+select
+
+611
+00:48:55,800 --> 00:48:56,440
+the
+
+612
+00:48:56,440 --> 00:48:57,000
+CDD
+
+613
+00:48:58,040 --> 00:48:58,520
+that we
+
+614
+00:48:58,520 --> 00:48:59,080
+uploaded
+
+615
+00:48:59,080 --> 00:48:59,640
+and here
+
+616
+00:49:00,520 --> 00:49:01,080
+you can
+
+617
+00:49:01,960 --> 00:49:02,520
+basically
+
+618
+00:49:03,480 --> 00:49:04,600
+have a review
+
+619
+00:49:04,600 --> 00:49:05,560
+of all the
+
+620
+00:49:05,560 --> 00:49:06,920
+DTCs that
+
+621
+00:49:06,920 --> 00:49:07,080
+are
+
+622
+00:49:09,560 --> 00:49:10,440
+present in the
+
+623
+00:49:10,440 --> 00:49:11,240
+error memory
+
+624
+00:49:11,240 --> 00:49:12,440
+for this
+
+625
+00:49:12,440 --> 00:49:13,080
+specific
+
+626
+00:49:13,080 --> 00:49:14,600
+ECU under
+
+627
+00:49:14,600 --> 00:49:15,160
+testing
+
+628
+00:49:15,160 --> 00:49:15,560
+right now
+
+629
+00:49:15,560 --> 00:49:16,280
+we cannot
+
+630
+00:49:16,280 --> 00:49:16,760
+perform
+
+631
+00:49:16,760 --> 00:49:17,240
+anything
+
+632
+00:49:17,240 --> 00:49:18,360
+yes we
+
+633
+00:49:18,360 --> 00:49:18,760
+are not
+
+634
+00:49:18,760 --> 00:49:19,400
+connected to
+
+635
+00:49:19,400 --> 00:49:19,720
+a real
+
+636
+00:49:19,720 --> 00:49:20,440
+ECU under
+
+637
+00:49:20,440 --> 00:49:20,680
+the loop
+
+638
+00:49:20,680 --> 00:49:20,920
+but
+
+639
+00:49:22,360 --> 00:49:23,240
+this is
+
+640
+00:49:23,240 --> 00:49:23,960
+something that
+
+641
+00:49:23,960 --> 00:49:25,160
+Catalyzer allows
+
+642
+00:49:25,160 --> 00:49:25,960
+you to do
+
+643
+00:49:25,960 --> 00:49:26,760
+and which is
+
+644
+00:49:26,760 --> 00:49:27,640
+very useful
+
+645
+00:49:28,360 --> 00:49:29,000
+in case
+
+646
+00:49:29,720 --> 00:49:30,280
+in the case
+
+647
+00:49:30,280 --> 00:49:30,920
+of where
+
+648
+00:49:30,920 --> 00:49:31,160
+you
+
+649
+00:49:32,360 --> 00:49:33,000
+do not have
+
+650
+00:49:33,000 --> 00:49:34,040
+the possibility
+
+651
+00:49:34,040 --> 00:49:34,440
+to use
+
+652
+00:49:34,440 --> 00:49:35,000
+for example
+
+653
+00:49:35,000 --> 00:49:35,960
+already
+
+654
+00:49:35,960 --> 00:49:37,160
+available tools
+
+655
+00:49:37,160 --> 00:49:37,640
+like
+
+656
+00:49:37,640 --> 00:49:38,680
+the analyzer
+
+657
+00:49:38,680 --> 00:49:39,000
+for
+
+658
+00:49:39,000 --> 00:49:40,280
+media programs
+
+659
+00:49:40,280 --> 00:49:40,600
+or
+
+660
+00:49:41,400 --> 00:49:42,040
+CDA
+
+661
+00:49:42,040 --> 00:49:42,440
+for
+
+662
+00:49:42,440 --> 00:49:42,840
+enough
+
+663
+00:49:42,840 --> 00:49:43,480
+programs
+
+664
+00:49:46,040 --> 00:49:46,840
+on
+
+665
+00:49:46,840 --> 00:49:47,560
+the other
+
+666
+00:49:47,560 --> 00:49:47,880
+hand
+
+667
+00:49:47,880 --> 00:49:48,920
+there is
+
+668
+00:49:48,920 --> 00:49:49,560
+another
+
+669
+00:49:49,560 --> 00:49:49,880
+window
+
+670
+00:49:49,880 --> 00:49:50,280
+that can
+
+671
+00:49:50,280 --> 00:49:50,600
+be used
+
+672
+00:49:50,600 --> 00:49:50,760
+the
+
+673
+00:49:50,760 --> 00:49:51,240
+session
+
+674
+00:49:51,240 --> 00:49:51,800
+control
+
+675
+00:49:51,800 --> 00:49:52,280
+as we
+
+676
+00:49:52,280 --> 00:49:53,400
+saw
+
+677
+00:49:53,400 --> 00:49:53,560
+in the
+
+678
+00:49:53,560 --> 00:49:54,280
+diagnostic
+
+679
+00:49:54,280 --> 00:49:54,840
+console
+
+680
+00:49:54,840 --> 00:49:55,240
+window
+
+681
+00:49:56,200 --> 00:49:56,680
+you can
+
+682
+00:49:56,680 --> 00:49:57,160
+change
+
+683
+00:49:57,160 --> 00:49:57,640
+session
+
+684
+00:49:57,640 --> 00:49:58,120
+control
+
+685
+00:49:58,920 --> 00:49:59,240
+using
+
+686
+00:49:59,240 --> 00:49:59,480
+a
+
+687
+00:49:59,480 --> 00:50:00,120
+dedicated
+
+688
+00:50:00,120 --> 00:50:00,520
+window
+
+689
+00:50:00,520 --> 00:50:00,840
+here
+
+690
+00:50:01,400 --> 00:50:01,880
+basically
+
+691
+00:50:01,880 --> 00:50:02,360
+perform
+
+692
+00:50:02,360 --> 00:50:02,840
+the same
+
+693
+00:50:02,840 --> 00:50:03,240
+thing
+
+694
+00:50:03,240 --> 00:50:03,800
+or you
+
+695
+00:50:03,800 --> 00:50:04,200
+can
+
+696
+00:50:04,200 --> 00:50:04,840
+unlock
+
+697
+00:50:04,840 --> 00:50:05,560
+secure
+
+698
+00:50:05,560 --> 00:50:06,040
+gateway
+
+699
+00:50:06,600 --> 00:50:07,080
+and
+
+700
+00:50:07,080 --> 00:50:08,120
+modify
+
+701
+00:50:08,120 --> 00:50:08,920
+unlock
+
+702
+00:50:08,920 --> 00:50:09,400
+security
+
+703
+00:50:09,400 --> 00:50:10,520
+accesses
+
+704
+00:50:10,520 --> 00:50:11,400
+RPC
+
+705
+00:50:11,400 --> 00:50:11,960
+reset
+
+706
+00:50:13,240 --> 00:50:14,280
+and
+
+707
+00:50:14,280 --> 00:50:14,760
+and so
+
+708
+00:50:14,760 --> 00:50:15,000
+on
+
+709
+00:50:15,000 --> 00:50:15,240
+so
+
+710
+00:50:16,520 --> 00:50:17,080
+the
+
+711
+00:50:17,080 --> 00:50:18,120
+diagnostic
+
+712
+00:50:18,120 --> 00:50:18,680
+side
+
+713
+00:50:18,680 --> 00:50:18,920
+of
+
+714
+00:50:18,920 --> 00:50:20,120
+Catalyzer
+
+715
+00:50:20,120 --> 00:50:20,760
+can be
+
+716
+00:50:20,760 --> 00:50:21,560
+very useful
+
+717
+00:50:21,560 --> 00:50:21,960
+as well
+
+718
+00:50:23,160 --> 00:50:23,800
+along with
+
+719
+00:50:23,800 --> 00:50:24,360
+all the other
+
+720
+00:50:24,360 --> 00:50:24,680
+windows
+
+721
+00:50:24,680 --> 00:50:25,240
+that we
+
+722
+00:50:25,240 --> 00:50:25,960
+have seen
+
+723
+00:50:26,680 --> 00:50:27,240
+since
+
+724
+00:50:27,240 --> 00:50:28,680
+we are
+
+725
+00:50:28,680 --> 00:50:29,480
+now configured
+
+726
+00:50:29,480 --> 00:50:30,200
+in online
+
+727
+00:50:30,200 --> 00:50:30,520
+mode
+
+728
+00:50:31,160 --> 00:50:31,560
+as I
+
+729
+00:50:31,560 --> 00:50:32,120
+was
+
+730
+00:50:32,120 --> 00:50:32,760
+showing you
+
+731
+00:50:32,760 --> 00:50:33,240
+before
+
+732
+00:50:35,080 --> 00:50:35,640
+we can
+
+733
+00:50:35,640 --> 00:50:35,880
+use
+
+734
+00:50:35,880 --> 00:50:36,520
+canalizer
+
+735
+00:50:36,520 --> 00:50:37,080
+also to
+
+736
+00:50:37,080 --> 00:50:37,640
+perform
+
+737
+00:50:38,760 --> 00:50:39,160
+unlock
+
+738
+00:50:39,160 --> 00:50:40,040
+so basically
+
+739
+00:50:40,040 --> 00:50:40,680
+we can
+
+740
+00:50:40,680 --> 00:50:41,400
+collect
+
+741
+00:50:41,400 --> 00:50:41,800
+data
+
+742
+00:50:42,440 --> 00:50:42,840
+starting
+
+743
+00:50:42,840 --> 00:50:43,240
+from
+
+744
+00:50:43,240 --> 00:50:43,320
+a
+
+745
+00:50:43,320 --> 00:50:44,360
+communication
+
+746
+00:50:46,200 --> 00:50:47,160
+and
+
+747
+00:50:47,160 --> 00:50:47,560
+we can
+
+748
+00:50:47,560 --> 00:50:48,040
+do that
+
+749
+00:50:48,040 --> 00:50:48,520
+enabling
+
+750
+00:50:48,520 --> 00:50:48,760
+here
+
+751
+00:50:48,760 --> 00:50:49,000
+so
+
+752
+00:50:49,000 --> 00:50:49,640
+in online
+
+753
+00:50:49,640 --> 00:50:50,040
+mode
+
+754
+00:50:50,040 --> 00:50:50,680
+enabling
+
+755
+00:50:50,680 --> 00:50:51,000
+here
+
+756
+00:50:52,360 --> 00:50:52,600
+this
+
+757
+00:50:52,600 --> 00:50:53,000
+block
+
+758
+00:50:54,600 --> 00:50:55,160
+login
+
+759
+00:50:56,680 --> 00:50:57,240
+we double
+
+760
+00:50:57,240 --> 00:50:57,720
+click on
+
+761
+00:50:57,720 --> 00:50:58,680
+this folder
+
+762
+00:50:58,680 --> 00:50:59,240
+we select
+
+763
+00:50:59,240 --> 00:51:00,120
+the destination
+
+764
+00:51:00,120 --> 00:51:00,600
+folder
+
+765
+00:51:00,600 --> 00:51:00,920
+and
+
+766
+00:51:00,920 --> 00:51:01,800
+the
+
+767
+00:51:01,800 --> 00:51:02,200
+name
+
+768
+00:51:02,200 --> 00:51:02,600
+of the
+
+769
+00:51:02,600 --> 00:51:03,000
+file
+
+770
+00:51:03,000 --> 00:51:03,240
+that
+
+771
+00:51:04,920 --> 00:51:05,320
+we want
+
+772
+00:51:05,320 --> 00:51:05,960
+to generate
+
+773
+00:51:06,680 --> 00:51:07,240
+and here
+
+774
+00:51:07,240 --> 00:51:07,800
+the file
+
+775
+00:51:07,800 --> 00:51:08,200
+format
+
+776
+00:51:08,200 --> 00:51:08,920
+will have
+
+777
+00:51:08,920 --> 00:51:09,400
+binary
+
+778
+00:51:11,000 --> 00:51:11,640
+log file
+
+779
+00:51:12,840 --> 00:51:13,240
+so
+
+780
+00:51:13,240 --> 00:51:13,640
+as soon
+
+781
+00:51:13,640 --> 00:51:14,120
+as you
+
+782
+00:51:14,120 --> 00:51:14,680
+for example
+
+783
+00:51:14,680 --> 00:51:15,240
+know
+
+784
+00:51:15,240 --> 00:51:15,640
+name
+
+785
+00:51:16,440 --> 00:51:16,840
+sorry
+
+786
+00:51:17,560 --> 00:51:17,880
+log
+
+787
+00:51:19,000 --> 00:51:20,040
+and
+
+788
+00:51:20,040 --> 00:51:20,520
+we do not
+
+789
+00:51:20,520 --> 00:51:20,840
+need to
+
+790
+00:51:20,840 --> 00:51:21,160
+change the
+
+791
+00:51:21,160 --> 00:51:21,880
+destination
+
+792
+00:51:21,880 --> 00:51:22,280
+folder
+
+793
+00:51:22,280 --> 00:51:22,840
+since
+
+794
+00:51:22,840 --> 00:51:23,480
+we will not
+
+795
+00:51:23,480 --> 00:51:23,960
+perform a
+
+796
+00:51:23,960 --> 00:51:24,520
+real log
+
+797
+00:51:25,400 --> 00:51:25,720
+you see
+
+798
+00:51:25,720 --> 00:51:25,960
+here
+
+799
+00:51:25,960 --> 00:51:26,440
+the name
+
+800
+00:51:26,440 --> 00:51:27,080
+of the
+
+801
+00:51:27,080 --> 00:51:27,400
+file
+
+802
+00:51:28,520 --> 00:51:29,640
+and
+
+803
+00:51:29,640 --> 00:51:31,160
+you can
+
+804
+00:51:31,160 --> 00:51:31,560
+set up
+
+805
+00:51:31,560 --> 00:51:31,640
+set up
+
+806
+00:51:31,640 --> 00:51:31,960
+here
+
+807
+00:51:31,960 --> 00:51:32,680
+a trigger
+
+808
+00:51:34,520 --> 00:51:35,480
+single trigger
+
+809
+00:51:35,480 --> 00:51:37,560
+that can be
+
+810
+00:51:37,560 --> 00:51:38,600
+started manually
+
+811
+00:51:38,600 --> 00:51:39,800
+stopped manually
+
+812
+00:51:39,800 --> 00:51:40,040
+or
+
+813
+00:51:41,160 --> 00:51:41,720
+can be
+
+814
+00:51:43,640 --> 00:51:44,280
+triggered by
+
+815
+00:51:44,280 --> 00:51:45,080
+the cable
+
+816
+00:51:45,080 --> 00:51:45,560
+so the
+
+817
+00:51:45,560 --> 00:51:46,280
+program node
+
+818
+00:51:46,280 --> 00:51:47,320
+itself
+
+819
+00:51:47,320 --> 00:51:47,800
+the code
+
+820
+00:51:47,800 --> 00:51:48,120
+that we
+
+821
+00:51:48,120 --> 00:51:48,600
+define
+
+822
+00:51:49,880 --> 00:51:50,360
+and then
+
+823
+00:51:52,200 --> 00:51:53,080
+you can
+
+824
+00:51:53,080 --> 00:51:53,400
+just
+
+825
+00:51:55,080 --> 00:51:55,720
+perform the
+
+826
+00:51:55,720 --> 00:51:56,120
+log but
+
+827
+00:51:56,120 --> 00:51:57,160
+right now
+
+828
+00:51:57,160 --> 00:51:57,720
+we cannot
+
+829
+00:51:57,720 --> 00:51:58,120
+do that
+
+830
+00:51:58,120 --> 00:51:59,560
+anyway
+
+831
+00:52:01,560 --> 00:52:02,440
+along with
+
+832
+00:52:02,440 --> 00:52:02,920
+all the
+
+833
+00:52:02,920 --> 00:52:03,720
+analysis
+
+834
+00:52:04,920 --> 00:52:05,960
+windows that
+
+835
+00:52:05,960 --> 00:52:06,440
+we have
+
+836
+00:52:06,440 --> 00:52:07,080
+just seen
+
+837
+00:52:08,680 --> 00:52:09,320
+as we were
+
+838
+00:52:09,320 --> 00:52:09,880
+mentioning
+
+839
+00:52:09,880 --> 00:52:10,840
+before
+
+840
+00:52:10,840 --> 00:52:11,560
+canalizer
+
+841
+00:52:11,560 --> 00:52:12,280
+allows you
+
+842
+00:52:12,280 --> 00:52:12,920
+also to
+
+843
+00:52:12,920 --> 00:52:13,800
+stimulate
+
+844
+00:52:13,800 --> 00:52:15,080
+and interact
+
+845
+00:52:15,080 --> 00:52:16,360
+with the
+
+846
+00:52:16,360 --> 00:52:16,680
+live
+
+847
+00:52:16,680 --> 00:52:17,560
+communication
+
+848
+00:52:17,560 --> 00:52:18,680
+in the
+
+849
+00:52:18,680 --> 00:52:19,240
+example
+
+850
+00:52:19,240 --> 00:52:19,880
+cambus
+
+851
+00:52:19,880 --> 00:52:20,040
+or
+
+852
+00:52:20,040 --> 00:52:20,600
+limbus
+
+853
+00:52:20,600 --> 00:52:21,720
+or whatever
+
+854
+00:52:21,720 --> 00:52:22,360
+communication
+
+855
+00:52:22,360 --> 00:52:23,000
+bus it is
+
+856
+00:52:23,560 --> 00:52:24,680
+that
+
+857
+00:52:24,680 --> 00:52:26,680
+you are
+
+858
+00:52:26,680 --> 00:52:27,240
+interacting
+
+859
+00:52:27,240 --> 00:52:27,720
+with
+
+860
+00:52:27,720 --> 00:52:28,280
+using the
+
+861
+00:52:28,280 --> 00:52:28,920
+analyzer
+
+862
+00:52:28,920 --> 00:52:29,400
+online
+
+863
+00:52:29,400 --> 00:52:29,720
+mooc
+
+864
+00:52:29,720 --> 00:52:30,440
+configuration
+
+865
+00:52:31,640 --> 00:52:32,520
+for example
+
+866
+00:52:33,640 --> 00:52:34,680
+a few of
+
+867
+00:52:34,680 --> 00:52:35,960
+the
+
+868
+00:52:35,960 --> 00:52:36,760
+means that
+
+869
+00:52:36,760 --> 00:52:37,640
+you can use
+
+870
+00:52:37,640 --> 00:52:38,280
+in order to
+
+871
+00:52:38,280 --> 00:52:38,920
+interact
+
+872
+00:52:39,960 --> 00:52:40,280
+with
+
+873
+00:52:40,280 --> 00:52:41,400
+a
+
+874
+00:52:41,400 --> 00:52:41,800
+real
+
+875
+00:52:41,800 --> 00:52:42,840
+communication
+
+876
+00:52:42,840 --> 00:52:44,280
+whatever
+
+877
+00:52:44,280 --> 00:52:44,760
+it is
+
+878
+00:52:44,760 --> 00:52:45,320
+is
+
+879
+00:52:45,320 --> 00:52:46,280
+the
+
+880
+00:52:46,280 --> 00:52:46,840
+click here
+
+881
+00:52:46,840 --> 00:52:47,160
+with the
+
+882
+00:52:47,160 --> 00:52:47,400
+right
+
+883
+00:52:47,400 --> 00:52:47,720
+bottom
+
+884
+00:52:48,600 --> 00:52:48,920
+can
+
+885
+00:52:48,920 --> 00:52:49,960
+practice
+
+886
+00:52:49,960 --> 00:52:52,280
+generator
+
+887
+00:52:52,280 --> 00:52:52,600
+let's
+
+888
+00:52:52,600 --> 00:52:53,240
+double click
+
+889
+00:52:53,240 --> 00:52:54,520
+here
+
+890
+00:52:54,520 --> 00:52:55,080
+you've got
+
+891
+00:52:55,080 --> 00:52:55,640
+this whole
+
+892
+00:52:55,640 --> 00:52:55,960
+new
+
+893
+00:52:55,960 --> 00:52:56,360
+blank
+
+894
+00:52:56,360 --> 00:52:57,960
+window
+
+895
+00:52:57,960 --> 00:52:58,280
+right
+
+896
+00:52:58,280 --> 00:52:59,800
+bottom
+
+897
+00:52:59,800 --> 00:53:00,200
+add
+
+898
+00:53:00,200 --> 00:53:00,600
+frame
+
+899
+00:53:00,600 --> 00:53:00,920
+from the
+
+900
+00:53:00,920 --> 00:53:01,880
+database
+
+901
+00:53:01,880 --> 00:53:03,560
+once again
+
+902
+00:53:03,560 --> 00:53:04,360
+we are starting
+
+903
+00:53:04,360 --> 00:53:04,840
+from the
+
+904
+00:53:04,840 --> 00:53:05,640
+dbc
+
+905
+00:53:05,640 --> 00:53:06,200
+file that
+
+906
+00:53:06,200 --> 00:53:06,840
+we upload
+
+907
+00:53:06,840 --> 00:53:07,160
+in the
+
+908
+00:53:07,160 --> 00:53:09,160
+analyzer
+
+909
+00:53:09,160 --> 00:53:09,720
+we can
+
+910
+00:53:09,720 --> 00:53:10,840
+add
+
+911
+00:53:10,840 --> 00:53:12,280
+specific
+
+912
+00:53:12,840 --> 00:53:14,280
+cammessage
+
+913
+00:53:14,280 --> 00:53:15,000
+selected
+
+914
+00:53:15,000 --> 00:53:16,440
+client
+
+915
+00:53:16,440 --> 00:53:17,000
+you can see
+
+916
+00:53:17,000 --> 00:53:18,280
+it just appeared
+
+917
+00:53:18,280 --> 00:53:19,400
+background
+
+918
+00:53:19,400 --> 00:53:20,440
+but we can also
+
+919
+00:53:20,440 --> 00:53:21,160
+add
+
+920
+00:53:21,160 --> 00:53:22,360
+a whole list
+
+921
+00:53:22,360 --> 00:53:23,160
+of
+
+922
+00:53:23,160 --> 00:53:23,880
+cammessages
+
+923
+00:53:23,880 --> 00:53:28,040
+cammessages
+
+924
+00:53:28,040 --> 00:53:30,040
+here
+
+925
+00:53:31,880 --> 00:53:32,120
+this
+
+926
+00:53:32,120 --> 00:53:32,760
+column here
+
+927
+00:53:32,760 --> 00:53:33,320
+we've got the
+
+928
+00:53:33,320 --> 00:53:33,800
+name
+
+929
+00:53:33,800 --> 00:53:34,920
+cammessage
+
+930
+00:53:34,920 --> 00:53:36,200
+all the
+
+931
+00:53:36,200 --> 00:53:36,600
+list
+
+932
+00:53:39,160 --> 00:53:39,960
+we
+
+933
+00:53:39,960 --> 00:53:40,520
+added
+
+934
+00:53:40,520 --> 00:53:41,480
+the
+
+935
+00:53:41,480 --> 00:53:42,440
+trigger
+
+936
+00:53:42,440 --> 00:53:43,000
+that we want
+
+937
+00:53:43,000 --> 00:53:43,640
+to use
+
+938
+00:53:43,640 --> 00:53:44,280
+in order
+
+939
+00:53:44,280 --> 00:53:45,560
+to
+
+940
+00:53:45,560 --> 00:53:45,960
+send
+
+941
+00:53:45,960 --> 00:53:49,800
+that we
+
+942
+00:53:49,800 --> 00:53:50,360
+want to send
+
+943
+00:53:50,360 --> 00:53:51,000
+that specific
+
+944
+00:53:51,000 --> 00:53:51,400
+message
+
+945
+00:53:51,400 --> 00:53:51,880
+for example
+
+946
+00:53:52,520 --> 00:53:53,080
+we can
+
+947
+00:53:53,080 --> 00:53:53,640
+manually
+
+948
+00:53:53,640 --> 00:53:54,200
+send it
+
+949
+00:53:57,080 --> 00:53:57,800
+once again
+
+950
+00:53:57,800 --> 00:53:58,600
+i'm not running
+
+951
+00:53:58,600 --> 00:53:59,080
+online
+
+952
+00:53:59,080 --> 00:53:59,400
+mode
+
+953
+00:53:59,400 --> 00:53:59,560
+but
+
+954
+00:54:00,840 --> 00:54:01,480
+we can
+
+955
+00:54:01,480 --> 00:54:02,600
+manually send it
+
+956
+00:54:02,600 --> 00:54:03,480
+clicking on here
+
+957
+00:54:03,480 --> 00:54:04,280
+or we can
+
+958
+00:54:05,240 --> 00:54:06,120
+for example
+
+959
+00:54:06,120 --> 00:54:06,840
+send it
+
+960
+00:54:06,840 --> 00:54:07,560
+periodically
+
+961
+00:54:07,560 --> 00:54:08,600
+so without having
+
+962
+00:54:08,600 --> 00:54:09,160
+to do that
+
+963
+00:54:09,160 --> 00:54:09,720
+manually
+
+964
+00:54:09,720 --> 00:54:11,080
+and the cycle
+
+965
+00:54:11,080 --> 00:54:11,480
+time
+
+966
+00:54:11,480 --> 00:54:12,920
+reported here
+
+967
+00:54:12,920 --> 00:54:13,560
+is the one
+
+968
+00:54:14,600 --> 00:54:15,560
+that was
+
+969
+00:54:15,560 --> 00:54:16,520
+extracted from
+
+970
+00:54:16,520 --> 00:54:17,320
+the dbc
+
+971
+00:54:17,320 --> 00:54:17,960
+file when
+
+972
+00:54:17,960 --> 00:54:19,000
+we selected
+
+973
+00:54:19,000 --> 00:54:19,640
+an important
+
+974
+00:54:19,640 --> 00:54:19,960
+year
+
+975
+00:54:19,960 --> 00:54:20,280
+this
+
+976
+00:54:20,280 --> 00:54:20,760
+cammessage
+
+977
+00:54:20,760 --> 00:54:21,560
+or it
+
+978
+00:54:21,560 --> 00:54:22,280
+can be also
+
+979
+00:54:22,280 --> 00:54:22,600
+done
+
+980
+00:54:22,600 --> 00:54:24,760
+manually
+
+981
+00:54:24,760 --> 00:54:32,360
+and we can
+
+982
+00:54:32,360 --> 00:54:33,560
+also
+
+983
+00:54:33,560 --> 00:54:34,760
+link
+
+984
+00:54:34,760 --> 00:54:35,960
+the
+
+985
+00:54:35,960 --> 00:54:36,600
+transmission
+
+986
+00:54:36,600 --> 00:54:36,760
+of
+
+987
+00:54:36,760 --> 00:54:37,240
+disc and
+
+988
+00:54:37,240 --> 00:54:38,120
+message
+
+989
+00:54:38,120 --> 00:54:38,840
+according to a
+
+990
+00:54:38,840 --> 00:54:39,640
+system variable
+
+991
+00:54:39,640 --> 00:54:40,200
+that can be
+
+992
+00:54:40,200 --> 00:54:40,680
+defined
+
+993
+00:54:40,680 --> 00:54:41,080
+in the
+
+994
+00:54:41,080 --> 00:54:41,400
+program
+
+995
+00:54:41,400 --> 00:54:44,680
+node
+
+996
+00:54:44,680 --> 00:54:46,440
+on the
+
+997
+00:54:46,440 --> 00:54:48,520
+other side
+
+998
+00:54:48,520 --> 00:54:48,920
+node
+
+999
+00:54:48,920 --> 00:54:49,720
+with defining
+
+1000
+00:54:49,720 --> 00:54:50,760
+which messages
+
+1001
+00:54:50,760 --> 00:54:51,320
+we want to
+
+1002
+00:54:51,320 --> 00:54:52,920
+send
+
+1003
+00:54:52,920 --> 00:54:53,720
+ones that are
+
+1004
+00:54:53,720 --> 00:54:54,120
+already
+
+1005
+00:54:54,120 --> 00:54:54,680
+present in the
+
+1006
+00:54:54,680 --> 00:54:55,160
+dbc
+
+1007
+00:54:55,160 --> 00:54:55,800
+or as we
+
+1008
+00:54:55,800 --> 00:54:56,280
+have seen
+
+1009
+00:54:56,280 --> 00:54:57,240
+before
+
+1010
+00:54:57,240 --> 00:54:57,800
+messages
+
+1011
+00:54:57,800 --> 00:54:59,240
+that we
+
+1012
+00:54:59,240 --> 00:54:59,880
+added
+
+1013
+00:54:59,880 --> 00:55:00,280
+in on
+
+1014
+00:55:00,280 --> 00:55:00,600
+radio
+
+1015
+00:55:00,600 --> 00:55:00,920
+exists
+
+1016
+00:55:00,920 --> 00:55:02,600
+in dbc
+
+1017
+00:55:02,600 --> 00:55:03,160
+um
+
+1018
+00:55:03,160 --> 00:55:03,960
+we can
+
+1019
+00:55:03,960 --> 00:55:04,840
+find
+
+1020
+00:55:04,840 --> 00:55:05,320
+how to
+
+1021
+00:55:05,320 --> 00:55:06,120
+send them
+
+1022
+00:55:06,120 --> 00:55:06,680
+we can
+
+1023
+00:55:06,680 --> 00:55:07,640
+change
+
+1024
+00:55:07,640 --> 00:55:09,400
+the values
+
+1025
+00:55:09,400 --> 00:55:09,880
+of the
+
+1026
+00:55:09,880 --> 00:55:10,920
+can signals
+
+1027
+00:55:10,920 --> 00:55:11,720
+inside of
+
+1028
+00:55:11,720 --> 00:55:12,520
+these
+
+1029
+00:55:12,520 --> 00:55:13,160
+of those
+
+1030
+00:55:13,160 --> 00:55:13,560
+kind of
+
+1031
+00:55:13,560 --> 00:55:14,120
+messages
+
+1032
+00:55:14,120 --> 00:55:14,760
+for example
+
+1033
+00:55:14,760 --> 00:55:15,400
+inside
+
+1034
+00:55:15,400 --> 00:55:17,720
+the cmfd2
+
+1035
+00:55:17,720 --> 00:55:19,000
+we can
+
+1036
+00:55:19,000 --> 00:55:20,120
+decide
+
+1037
+00:55:20,120 --> 00:55:20,760
+for example
+
+1038
+00:55:20,760 --> 00:55:21,640
+here
+
+1039
+00:55:21,640 --> 00:55:22,120
+maybe
+
+1040
+00:55:22,120 --> 00:55:22,760
+is that
+
+1041
+00:55:22,760 --> 00:55:23,960
+opens
+
+1042
+00:55:23,960 --> 00:55:24,520
+the bottom
+
+1043
+00:55:24,520 --> 00:55:25,080
+left
+
+1044
+00:55:25,080 --> 00:55:25,640
+the bottom
+
+1045
+00:55:25,640 --> 00:55:25,880
+side
+
+1046
+00:55:25,880 --> 00:55:26,200
+of the
+
+1047
+00:55:26,200 --> 00:55:27,000
+window
+
+1048
+00:55:27,000 --> 00:55:27,800
+the values
+
+1049
+00:55:27,800 --> 00:55:28,280
+of
+
+1050
+00:55:28,280 --> 00:55:28,840
+i don't know
+
+1051
+00:55:28,840 --> 00:55:29,160
+if you're
+
+1052
+00:55:29,160 --> 00:55:29,880
+records
+
+1053
+00:55:29,880 --> 00:55:31,240
+right now
+
+1054
+00:55:31,240 --> 00:55:33,080
+physical value
+
+1055
+00:55:33,080 --> 00:55:34,760
+by dbc
+
+1056
+00:55:34,760 --> 00:55:35,720
+by default value
+
+1057
+00:55:35,720 --> 00:55:36,280
+is equal to
+
+1058
+00:55:36,280 --> 00:55:36,680
+normal
+
+1059
+00:55:36,680 --> 00:55:39,800
+if you will
+
+1060
+00:55:39,800 --> 00:55:40,840
+and running
+
+1061
+00:55:40,840 --> 00:55:42,360
+the analyzer in online mode
+
+1062
+00:55:42,360 --> 00:55:44,760
+we could
+
+1063
+00:55:44,760 --> 00:55:46,120
+basically change
+
+1064
+00:55:46,120 --> 00:55:46,760
+that these
+
+1065
+00:55:46,760 --> 00:55:47,320
+can signal
+
+1066
+00:55:47,320 --> 00:55:47,880
+inside of
+
+1067
+00:55:47,880 --> 00:55:48,200
+these
+
+1068
+00:55:48,200 --> 00:55:48,440
+can
+
+1069
+00:55:48,440 --> 00:55:49,800
+message
+
+1070
+00:55:49,800 --> 00:55:50,920
+otherwise
+
+1071
+00:55:50,920 --> 00:55:51,400
+and we can
+
+1072
+00:55:51,400 --> 00:55:51,720
+do that
+
+1073
+00:55:51,720 --> 00:55:52,280
+basically for
+
+1074
+00:55:52,280 --> 00:55:52,680
+all the
+
+1075
+00:55:52,680 --> 00:55:53,000
+can
+
+1076
+00:55:53,000 --> 00:55:53,480
+signal
+
+1077
+00:55:53,480 --> 00:55:55,000
+inside of
+
+1078
+00:55:55,000 --> 00:55:55,400
+all the
+
+1079
+00:55:55,400 --> 00:55:56,040
+can messages
+
+1080
+00:55:56,040 --> 00:55:57,080
+that we
+
+1081
+00:55:57,080 --> 00:55:57,320
+that we
+
+1082
+00:55:57,320 --> 00:55:59,960
+add here
+
+1083
+00:56:01,720 --> 00:56:02,440
+and this
+
+1084
+00:56:02,440 --> 00:56:03,480
+is uh
+
+1085
+00:56:03,480 --> 00:56:04,360
+let me say
+
+1086
+00:56:04,360 --> 00:56:05,000
+a method
+
+1087
+00:56:05,000 --> 00:56:05,640
+that can
+
+1088
+00:56:05,640 --> 00:56:06,360
+be used
+
+1089
+00:56:06,360 --> 00:56:07,080
+when we want
+
+1090
+00:56:07,080 --> 00:56:08,040
+for example
+
+1091
+00:56:08,040 --> 00:56:09,560
+to send
+
+1092
+00:56:09,560 --> 00:56:10,120
+messages
+
+1093
+00:56:10,120 --> 00:56:11,080
+that are not
+
+1094
+00:56:11,080 --> 00:56:12,920
+sent in the
+
+1095
+00:56:12,920 --> 00:56:13,320
+real
+
+1096
+00:56:13,320 --> 00:56:13,880
+can bus
+
+1097
+00:56:13,880 --> 00:56:14,360
+that we are
+
+1098
+00:56:14,360 --> 00:56:16,920
+working on
+
+1099
+00:56:16,920 --> 00:56:17,560
+but
+
+1100
+00:56:17,560 --> 00:56:18,280
+when we want
+
+1101
+00:56:18,280 --> 00:56:20,280
+to
+
+1102
+00:56:20,280 --> 00:56:21,800
+some messages
+
+1103
+00:56:21,800 --> 00:56:23,160
+that we are
+
+1104
+00:56:23,160 --> 00:56:24,200
+creating
+
+1105
+00:56:24,200 --> 00:56:24,680
+let me say
+
+1106
+00:56:24,680 --> 00:56:25,080
+x
+
+1107
+00:56:25,080 --> 00:56:25,720
+novel
+
+1108
+00:56:25,720 --> 00:56:26,680
+because if
+
+1109
+00:56:26,680 --> 00:56:27,160
+we want to
+
+1110
+00:56:27,160 --> 00:56:27,880
+modify a
+
+1111
+00:56:27,880 --> 00:56:28,360
+message
+
+1112
+00:56:28,360 --> 00:56:28,920
+or a
+
+1113
+00:56:28,920 --> 00:56:29,320
+signal
+
+1114
+00:56:29,320 --> 00:56:29,720
+which is
+
+1115
+00:56:29,720 --> 00:56:30,200
+already
+
+1116
+00:56:30,200 --> 00:56:31,000
+sent
+
+1117
+00:56:31,000 --> 00:56:31,640
+that can
+
+1118
+00:56:31,640 --> 00:56:31,960
+bus
+
+1119
+00:56:31,960 --> 00:56:33,560
+by a
+
+1120
+00:56:33,560 --> 00:56:35,320
+real
+
+1121
+00:56:35,320 --> 00:56:35,960
+electronic
+
+1122
+00:56:35,960 --> 00:56:37,240
+control unit
+
+1123
+00:56:37,240 --> 00:56:38,040
+we cannot
+
+1124
+00:56:38,040 --> 00:56:40,520
+use the
+
+1125
+00:56:40,520 --> 00:56:41,160
+this
+
+1126
+00:56:41,160 --> 00:56:41,560
+block
+
+1127
+00:56:41,560 --> 00:56:42,680
+here
+
+1128
+00:56:42,680 --> 00:56:43,240
+we can
+
+1129
+00:56:43,240 --> 00:56:43,720
+interactive
+
+1130
+00:56:43,720 --> 00:56:44,360
+generator
+
+1131
+00:56:44,360 --> 00:56:44,680
+block
+
+1132
+00:56:44,680 --> 00:56:45,560
+because we
+
+1133
+00:56:45,560 --> 00:56:46,200
+would just
+
+1134
+00:56:47,000 --> 00:56:47,880
+overlap the
+
+1135
+00:56:47,880 --> 00:56:48,440
+message that
+
+1136
+00:56:48,440 --> 00:56:48,840
+we are
+
+1137
+00:56:48,840 --> 00:56:49,640
+sending to
+
+1138
+00:56:49,640 --> 00:56:50,040
+the one
+
+1139
+00:56:50,040 --> 00:56:50,520
+that is
+
+1140
+00:56:50,520 --> 00:56:51,080
+sent by
+
+1141
+00:56:51,080 --> 00:56:51,480
+the real
+
+1142
+00:56:51,480 --> 00:56:53,880
+issue
+
+1143
+00:56:53,880 --> 00:56:54,360
+if we
+
+1144
+00:56:54,360 --> 00:56:56,040
+want to
+
+1145
+00:56:56,040 --> 00:56:57,480
+instead
+
+1146
+00:56:57,480 --> 00:56:58,600
+perform
+
+1147
+00:56:58,600 --> 00:56:59,400
+sort of
+
+1148
+00:56:59,400 --> 00:56:59,960
+gateway
+
+1149
+00:56:59,960 --> 00:57:00,520
+and i
+
+1150
+00:57:00,520 --> 00:57:01,080
+suggest
+
+1151
+00:57:01,080 --> 00:57:01,480
+to go
+
+1152
+00:57:01,480 --> 00:57:01,880
+to the
+
+1153
+00:57:01,880 --> 00:57:02,520
+dedicated
+
+1154
+00:57:02,520 --> 00:57:03,560
+lesson
+
+1155
+00:57:03,560 --> 00:57:03,880
+in the
+
+1156
+00:57:03,880 --> 00:57:04,600
+academy
+
+1157
+00:57:04,600 --> 00:57:05,160
+for this
+
+1158
+00:57:05,160 --> 00:57:05,640
+part here
+
+1159
+00:57:05,640 --> 00:57:07,320
+regarding
+
+1160
+00:57:07,320 --> 00:57:08,360
+how the
+
+1161
+00:57:08,360 --> 00:57:08,840
+interactive
+
+1162
+00:57:08,840 --> 00:57:09,240
+generator
+
+1163
+00:57:09,240 --> 00:57:09,560
+block
+
+1164
+00:57:09,560 --> 00:57:09,960
+or the
+
+1165
+00:57:09,960 --> 00:57:10,520
+kpop
+
+1166
+00:57:10,520 --> 00:57:10,920
+program
+
+1167
+00:57:10,920 --> 00:57:11,480
+nodes can
+
+1168
+00:57:11,480 --> 00:57:12,360
+be used
+
+1169
+00:57:12,360 --> 00:57:13,080
+and when
+
+1170
+00:57:13,080 --> 00:57:13,560
+they should
+
+1171
+00:57:13,560 --> 00:57:14,120
+be used
+
+1172
+00:57:14,120 --> 00:57:14,920
+for testing
+
+1173
+00:57:16,200 --> 00:57:16,600
+we can
+
+1174
+00:57:16,600 --> 00:57:17,160
+use the
+
+1175
+00:57:17,160 --> 00:57:17,560
+program
+
+1176
+00:57:17,560 --> 00:57:18,360
+node here
+
+1177
+00:57:18,360 --> 00:57:19,080
+so always
+
+1178
+00:57:19,080 --> 00:57:20,120
+right bottom
+
+1179
+00:57:20,120 --> 00:57:20,920
+program node
+
+1180
+00:57:21,640 --> 00:57:22,360
+double click
+
+1181
+00:57:23,160 --> 00:57:24,360
+and right now
+
+1182
+00:57:24,360 --> 00:57:25,320
+it asks us
+
+1183
+00:57:25,320 --> 00:57:26,760
+to select
+
+1184
+00:57:26,760 --> 00:57:27,720
+an already
+
+1185
+00:57:30,440 --> 00:57:31,000
+available
+
+1186
+00:57:31,000 --> 00:57:31,720
+capable
+
+1187
+00:57:31,720 --> 00:57:32,200
+program
+
+1188
+00:57:32,920 --> 00:57:33,800
+for example
+
+1189
+00:57:33,800 --> 00:57:34,280
+i've already
+
+1190
+00:57:34,280 --> 00:57:34,920
+got one
+
+1191
+00:57:37,000 --> 00:57:37,640
+the gateway
+
+1192
+00:57:37,640 --> 00:57:38,200
+so i just
+
+1193
+00:57:38,200 --> 00:57:38,920
+uploaded this
+
+1194
+00:57:38,920 --> 00:57:39,240
+file
+
+1195
+00:57:40,680 --> 00:57:40,920
+and
+
+1196
+00:57:42,840 --> 00:57:43,720
+just wait a few
+
+1197
+00:57:43,720 --> 00:57:44,120
+seconds
+
+1198
+00:57:44,120 --> 00:57:44,440
+that
+
+1199
+00:57:44,440 --> 00:57:45,880
+file is
+
+1200
+00:57:47,480 --> 00:57:48,520
+being uploaded
+
+1201
+00:57:48,520 --> 00:57:49,080
+opened by
+
+1202
+00:57:49,080 --> 00:57:50,040
+canalizer
+
+1203
+00:57:50,040 --> 00:57:50,920
+you will be able
+
+1204
+00:57:50,920 --> 00:57:51,640
+to modify
+
+1205
+00:57:51,640 --> 00:57:52,120
+for example
+
+1206
+00:57:52,120 --> 00:57:52,760
+the manual
+
+1207
+00:57:52,760 --> 00:57:53,160
+code
+
+1208
+00:57:54,440 --> 00:57:55,160
+according to
+
+1209
+00:57:55,160 --> 00:57:57,000
+the action
+
+1210
+00:57:57,000 --> 00:57:57,320
+that you
+
+1211
+00:57:57,320 --> 00:57:57,640
+want to
+
+1212
+00:57:57,640 --> 00:57:57,880
+do
+
+1213
+00:57:57,880 --> 00:57:58,520
+for example
+
+1214
+00:57:58,520 --> 00:57:59,160
+this was
+
+1215
+00:57:59,160 --> 00:57:59,960
+a code
+
+1216
+00:57:59,960 --> 00:58:00,440
+people
+
+1217
+00:58:00,440 --> 00:58:01,400
+code
+
+1218
+00:58:01,400 --> 00:58:01,880
+written
+
+1219
+00:58:01,880 --> 00:58:02,120
+in order
+
+1220
+00:58:02,120 --> 00:58:02,840
+to perform
+
+1221
+00:58:02,840 --> 00:58:03,960
+a gateway
+
+1222
+00:58:03,960 --> 00:58:04,440
+amongst
+
+1223
+00:58:07,240 --> 00:58:07,640
+one
+
+1224
+00:58:07,640 --> 00:58:08,280
+ECU
+
+1225
+00:58:08,280 --> 00:58:09,320
+under testing
+
+1226
+00:58:09,320 --> 00:58:09,960
+and all
+
+1227
+00:58:09,960 --> 00:58:11,880
+the other
+
+1228
+00:58:11,880 --> 00:58:13,240
+ECUs
+
+1229
+00:58:13,240 --> 00:58:13,560
+in the
+
+1230
+00:58:13,560 --> 00:58:15,560
+cat bus
+
+1231
+00:58:15,560 --> 00:58:16,360
+but i suggest
+
+1232
+00:58:16,360 --> 00:58:16,840
+you to go
+
+1233
+00:58:16,840 --> 00:58:17,240
+through the
+
+1234
+00:58:17,240 --> 00:58:17,720
+dedicated
+
+1235
+00:58:17,720 --> 00:58:18,280
+lesson
+
+1236
+00:58:18,280 --> 00:58:18,920
+for this
+
+1237
+00:58:18,920 --> 00:58:19,480
+specific
+
+1238
+00:58:19,480 --> 00:58:20,600
+window
+
+1239
+00:58:20,600 --> 00:58:21,240
+regarding the
+
+1240
+00:58:21,240 --> 00:58:21,560
+data
+
+1241
+00:58:21,560 --> 00:58:22,520
+visualization
+
+1242
+00:58:23,240 --> 00:58:23,800
+another
+
+1243
+00:58:24,920 --> 00:58:26,360
+very useful
+
+1244
+00:58:26,360 --> 00:58:27,000
+thing that
+
+1245
+00:58:27,000 --> 00:58:28,200
+can be used
+
+1246
+00:58:28,200 --> 00:58:28,520
+is
+
+1247
+00:58:29,800 --> 00:58:30,360
+the panel
+
+1248
+00:58:30,360 --> 00:58:30,760
+feature
+
+1249
+00:58:32,120 --> 00:58:32,520
+that you
+
+1250
+00:58:32,520 --> 00:58:33,240
+can find
+
+1251
+00:58:33,240 --> 00:58:33,720
+here in
+
+1252
+00:58:33,720 --> 00:58:34,120
+tools
+
+1253
+00:58:35,400 --> 00:58:36,440
+panel designer
+
+1254
+00:58:38,200 --> 00:58:38,840
+so basically
+
+1255
+00:58:38,840 --> 00:58:39,480
+the panels
+
+1256
+00:58:39,480 --> 00:58:40,440
+are just
+
+1257
+00:58:40,440 --> 00:58:40,920
+graphical
+
+1258
+00:58:40,920 --> 00:58:41,400
+elements
+
+1259
+00:58:42,680 --> 00:58:43,160
+that you
+
+1260
+00:58:43,160 --> 00:58:43,800
+can use
+
+1261
+00:58:43,800 --> 00:58:44,120
+in order
+
+1262
+00:58:44,120 --> 00:58:45,080
+to modify
+
+1263
+00:58:45,080 --> 00:58:45,800
+or to
+
+1264
+00:58:45,800 --> 00:58:46,520
+visualize
+
+1265
+00:58:46,520 --> 00:58:47,800
+can
+
+1266
+00:58:47,800 --> 00:58:48,200
+single
+
+1267
+00:58:48,200 --> 00:58:48,760
+values
+
+1268
+00:58:48,760 --> 00:58:49,080
+or
+
+1269
+00:58:49,080 --> 00:58:49,880
+system
+
+1270
+00:58:49,880 --> 00:58:50,360
+variable
+
+1271
+00:58:50,360 --> 00:58:50,840
+values
+
+1272
+00:58:51,560 --> 00:58:52,120
+and
+
+1273
+00:58:52,120 --> 00:58:52,600
+they can
+
+1274
+00:58:52,600 --> 00:58:53,640
+be
+
+1275
+00:58:53,640 --> 00:58:54,360
+very easily
+
+1276
+00:58:54,360 --> 00:58:55,000
+created
+
+1277
+00:58:55,000 --> 00:58:55,640
+this one is
+
+1278
+00:58:55,640 --> 00:58:56,920
+a new
+
+1279
+00:58:56,920 --> 00:58:57,320
+panel
+
+1280
+00:58:57,320 --> 00:58:57,720
+they just
+
+1281
+00:58:57,720 --> 00:58:58,280
+created
+
+1282
+00:58:58,280 --> 00:58:59,560
+decided
+
+1283
+00:59:00,840 --> 00:59:01,640
+for example
+
+1284
+00:59:02,920 --> 00:59:03,320
+that's
+
+1285
+00:59:04,360 --> 00:59:05,160
+this list
+
+1286
+00:59:05,160 --> 00:59:05,560
+here
+
+1287
+00:59:05,560 --> 00:59:06,280
+to the right
+
+1288
+00:59:06,280 --> 00:59:07,080
+let's drag
+
+1289
+00:59:07,080 --> 00:59:07,640
+and drop
+
+1290
+00:59:07,640 --> 00:59:08,680
+drop
+
+1291
+00:59:08,680 --> 00:59:09,240
+i don't
+
+1292
+00:59:09,240 --> 00:59:09,560
+know
+
+1293
+00:59:09,560 --> 00:59:09,880
+let's
+
+1294
+00:59:09,880 --> 00:59:10,120
+see
+
+1295
+00:59:10,120 --> 00:59:12,520
+a bar
+
+1296
+00:59:12,520 --> 00:59:13,560
+or
+
+1297
+00:59:13,560 --> 00:59:14,040
+meter
+
+1298
+00:59:17,160 --> 00:59:18,120
+progress bar
+
+1299
+00:59:19,000 --> 00:59:19,240
+and
+
+1300
+00:59:21,240 --> 00:59:21,880
+what we want
+
+1301
+00:59:21,880 --> 00:59:22,440
+for example
+
+1302
+00:59:22,440 --> 00:59:22,920
+to see
+
+1303
+00:59:22,920 --> 00:59:23,320
+here
+
+1304
+00:59:24,840 --> 00:59:25,400
+is the
+
+1305
+00:59:25,400 --> 00:59:26,600
+visual representation
+
+1306
+00:59:26,600 --> 00:59:27,080
+i don't know
+
+1307
+00:59:28,040 --> 00:59:29,160
+vehicle speed
+
+1308
+00:59:29,160 --> 00:59:30,040
+we just did
+
+1309
+00:59:30,040 --> 00:59:30,680
+for the graph
+
+1310
+00:59:31,400 --> 00:59:32,440
+we click here
+
+1311
+00:59:32,440 --> 00:59:33,560
+and drag it
+
+1312
+00:59:33,560 --> 00:59:33,800
+here
+
+1313
+00:59:33,800 --> 00:59:35,720
+in order
+
+1314
+00:59:35,720 --> 00:59:37,320
+to link
+
+1315
+00:59:37,320 --> 00:59:37,880
+that cash
+
+1316
+00:59:37,880 --> 00:59:38,520
+signal to
+
+1317
+00:59:38,520 --> 00:59:39,720
+the two
+
+1318
+00:59:39,720 --> 00:59:40,120
+panels
+
+1319
+00:59:40,120 --> 00:59:40,440
+that we
+
+1320
+00:59:40,440 --> 00:59:40,680
+just
+
+1321
+00:59:40,680 --> 00:59:42,040
+created
+
+1322
+00:59:42,040 --> 00:59:42,360
+when you
+
+1323
+00:59:42,360 --> 00:59:42,840
+select a
+
+1324
+00:59:42,840 --> 00:59:43,240
+panel
+
+1325
+00:59:43,240 --> 00:59:44,200
+you can
+
+1326
+00:59:44,200 --> 00:59:45,000
+right
+
+1327
+00:59:45,000 --> 00:59:45,560
+click
+
+1328
+00:59:45,560 --> 00:59:46,200
+and go
+
+1329
+00:59:46,200 --> 00:59:46,920
+on
+
+1330
+00:59:46,920 --> 00:59:47,240
+show
+
+1331
+00:59:47,240 --> 00:59:48,280
+properties
+
+1332
+00:59:48,280 --> 00:59:48,680
+in order
+
+1333
+00:59:48,680 --> 00:59:49,000
+to for
+
+1334
+00:59:49,000 --> 00:59:49,400
+example
+
+1335
+00:59:49,400 --> 00:59:49,880
+define
+
+1336
+00:59:49,880 --> 00:59:50,600
+the minimum
+
+1337
+00:59:50,600 --> 00:59:51,480
+and maximum
+
+1338
+00:59:51,480 --> 00:59:52,680
+value
+
+1339
+00:59:52,680 --> 00:59:53,240
+of that
+
+1340
+00:59:53,240 --> 00:59:54,600
+panel
+
+1341
+00:59:54,600 --> 00:59:56,280
+you can
+
+1342
+00:59:56,280 --> 00:59:57,320
+choose
+
+1343
+00:59:57,320 --> 00:59:57,560
+one
+
+1344
+00:59:57,560 --> 00:59:58,120
+display
+
+1345
+00:59:58,120 --> 00:59:58,600
+on the
+
+1346
+00:59:58,600 --> 00:59:59,000
+value
+
+1347
+00:59:59,000 --> 00:59:59,400
+where you
+
+1348
+00:59:59,400 --> 01:00:01,160
+want
+
+1349
+01:00:01,160 --> 01:00:02,280
+to be
+
+1350
+01:00:02,280 --> 01:00:02,920
+to be seen
+
+1351
+01:00:03,800 --> 01:00:05,560
+and
+
+1352
+01:00:07,320 --> 01:00:08,200
+let's do that
+
+1353
+01:00:08,200 --> 01:00:10,120
+also for
+
+1354
+01:00:10,120 --> 01:00:11,000
+this other panel
+
+1355
+01:00:11,000 --> 01:00:11,560
+the meter
+
+1356
+01:00:11,560 --> 01:00:11,880
+here
+
+1357
+01:00:11,880 --> 01:00:12,360
+so let's
+
+1358
+01:00:12,360 --> 01:00:12,680
+change
+
+1359
+01:00:12,680 --> 01:00:13,640
+for example
+
+1360
+01:00:13,640 --> 01:00:16,200
+the angles
+
+1361
+01:00:16,200 --> 01:00:16,760
+it's very
+
+1362
+01:00:16,760 --> 01:00:17,160
+useful
+
+1363
+01:00:17,160 --> 01:00:18,280
+from
+
+1364
+01:00:18,280 --> 01:00:19,160
+a visual
+
+1365
+01:00:19,160 --> 01:00:19,800
+when you say
+
+1366
+01:00:19,800 --> 01:00:21,160
+final view
+
+1367
+01:00:21,160 --> 01:00:21,800
+value range
+
+1368
+01:00:21,800 --> 01:00:22,120
+for the
+
+1369
+01:00:22,120 --> 01:00:22,680
+vehicle speed
+
+1370
+01:00:22,680 --> 01:00:23,480
+level
+
+1371
+01:00:23,480 --> 01:00:23,880
+to the
+
+1372
+01:00:23,880 --> 01:00:24,360
+maximum
+
+1373
+01:00:24,360 --> 01:00:26,360
+150
+
+1374
+01:00:26,360 --> 01:00:26,840
+right now
+
+1375
+01:00:26,840 --> 01:00:28,120
+if you click
+
+1376
+01:00:28,120 --> 01:00:28,680
+the meter
+
+1377
+01:00:28,680 --> 01:00:29,640
+you will see
+
+1378
+01:00:29,640 --> 01:00:30,280
+that it is
+
+1379
+01:00:30,280 --> 01:00:30,680
+linked to
+
+1380
+01:00:30,680 --> 01:00:31,240
+the can
+
+1381
+01:00:31,240 --> 01:00:32,120
+signal
+
+1382
+01:00:32,120 --> 01:00:32,520
+vehicle
+
+1383
+01:00:32,520 --> 01:00:32,840
+speed
+
+1384
+01:00:32,840 --> 01:00:33,880
+vso
+
+1385
+01:00:33,880 --> 01:00:34,680
+sig
+
+1386
+01:00:34,680 --> 01:00:35,720
+link
+
+1387
+01:00:35,720 --> 01:00:36,280
+not link
+
+1388
+01:00:36,280 --> 01:00:37,080
+but
+
+1389
+01:00:37,080 --> 01:00:37,720
+and signal
+
+1390
+01:00:37,720 --> 01:00:38,520
+vehicle speed
+
+1391
+01:00:38,520 --> 01:00:39,320
+included in the
+
+1392
+01:00:39,320 --> 01:00:39,800
+break of
+
+1393
+01:00:39,800 --> 01:00:40,520
+mutual
+
+1394
+01:00:40,520 --> 01:00:41,160
+method
+
+1395
+01:00:41,160 --> 01:00:41,800
+and the
+
+1396
+01:00:41,800 --> 01:00:42,200
+same
+
+1397
+01:00:42,200 --> 01:00:42,680
+for the
+
+1398
+01:00:42,680 --> 01:00:43,160
+progress
+
+1399
+01:00:43,160 --> 01:00:44,280
+bar
+
+1400
+01:00:44,280 --> 01:00:44,920
+so you
+
+1401
+01:00:44,920 --> 01:00:45,240
+save
+
+1402
+01:00:45,240 --> 01:00:47,480
+it
+
+1403
+01:00:47,480 --> 01:00:49,480
+browse
+
+1404
+01:00:49,480 --> 01:00:50,040
+browse
+
+1405
+01:00:50,040 --> 01:01:05,160
+and here it is
+
+1406
+01:01:05,160 --> 01:01:05,800
+if you run
+
+1407
+01:01:05,800 --> 01:01:09,160
+analyzer in off the mode as you were doing
+
+1408
+01:01:09,160 --> 01:01:13,480
+or if you run
+
+1409
+01:01:13,480 --> 01:01:17,240
+run analyzer in off the mode as you were doing
+
+1410
+01:01:20,600 --> 01:01:21,160
+my bad
+
+1411
+01:01:24,600 --> 01:01:25,480
+let me add it again
+
+1412
+01:01:25,480 --> 01:01:41,160
+this is a
+
+1413
+01:01:41,160 --> 01:01:41,640
+x
+
+1414
+01:01:41,640 --> 01:01:42,440
+node
+
+1415
+01:01:42,440 --> 01:01:48,600
+part of it we just create again let's open one and create together this one
+
+1416
+01:01:48,600 --> 01:02:00,040
+one
+
+1417
+01:02:00,040 --> 01:02:04,760
+right here
+
+1418
+01:02:07,080 --> 01:02:09,480
+so if you run analyzer
+
+1419
+01:02:09,480 --> 01:02:21,320
+you will see that it was changing according to the
+
+1420
+01:02:23,560 --> 01:02:25,320
+vehicle speed value
+
+1421
+01:02:25,320 --> 01:02:30,520
+if you want to have a comparison for example you can add here
+
+1422
+01:02:30,520 --> 01:02:39,400
+the graph window so you can compare when you will see for example here
+
+1423
+01:02:39,400 --> 01:02:40,520
+vehicle speed evolving
+
+1424
+01:02:42,600 --> 01:02:43,720
+when you see the panel
+
+1425
+01:02:43,720 --> 01:02:46,360
+values evolving
+
+1426
+01:02:49,000 --> 01:02:52,440
+so it's just another way of representing
+
+1427
+01:02:53,080 --> 01:02:53,640
+let me say
+
+1428
+01:02:54,760 --> 01:02:57,240
+can signal or system variables value
+
+1429
+01:02:59,720 --> 01:03:03,640
+the only last feature that
+
+1430
+01:03:04,760 --> 01:03:05,480
+you could
+
+1431
+01:03:06,760 --> 01:03:08,600
+let's say dive deeper into it
+
+1432
+01:03:09,160 --> 01:03:09,560
+would be
+
+1433
+01:03:10,120 --> 01:03:12,040
+the program node and
+
+1434
+01:03:12,040 --> 01:03:13,240
+can interactive
+
+1435
+01:03:13,240 --> 01:03:14,360
+generator block
+
+1436
+01:03:14,360 --> 01:03:14,520
+but
+
+1437
+01:03:15,320 --> 01:03:17,080
+as i was mentioning you before
+
+1438
+01:03:18,120 --> 01:03:19,720
+there is a dedicated lesson
+
+1439
+01:03:20,280 --> 01:03:20,520
+for
+
+1440
+01:03:21,720 --> 01:03:22,520
+that topic
+
+1441
+01:03:22,520 --> 01:03:24,760
+so i would suggest you to go
+
+1442
+01:03:24,760 --> 01:03:25,000
+through
+
+1443
+01:03:26,040 --> 01:03:26,520
+that one
+
+1444
+01:03:27,320 --> 01:03:27,560
+and
+
+1445
+01:03:28,680 --> 01:03:29,240
+that's it
+
+1446
+01:03:29,240 --> 01:03:30,040
+that is just
+
+1447
+01:03:30,680 --> 01:03:32,440
+what we just had together was a
+
+1448
+01:03:33,480 --> 01:03:34,200
+high level
+
+1449
+01:03:35,320 --> 01:03:35,880
+lesson
+
+1450
+01:03:36,360 --> 01:03:37,160
+we say
+
+1451
+01:03:37,160 --> 01:03:39,560
+very basic regarding analyzer usage
+
+1452
+01:03:39,560 --> 01:03:39,800
+so
+
+1453
+01:03:39,800 --> 01:03:45,160
+i will be available for any verification
+
+1454
+01:03:45,720 --> 01:03:46,040
+needed
+
+1455
+01:03:46,600 --> 01:03:49,400
+i will be available to answer to any
+
+1456
+01:03:50,200 --> 01:03:51,560
+all of your questions
+
+1457
+01:03:52,680 --> 01:03:53,000
+and
+
+1458
+01:03:54,360 --> 01:03:54,600
+i
+
+1459
+01:03:55,720 --> 01:03:56,120
+just
+
+1460
+01:03:58,280 --> 01:03:58,920
+nothing else
+
+1461
+01:03:59,560 --> 01:04:00,920
+i will be available for
+
+1462
+01:04:01,560 --> 01:04:02,360
+for anything so
+
+1463
+01:04:03,080 --> 01:04:03,800
+enjoy your day
+
+1464
+01:04:04,520 --> 01:04:05,000
+have a
+
+1465
+01:04:05,000 --> 01:04:06,360
+have a good day
+
+1466
+01:04:06,360 --> 01:04:28,920
+see you
+

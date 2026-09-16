@@ -1,0 +1,1038 @@
+start	end	text
+0	2660	perfetto, so we are good to go
+2660	6700	ok
+6700	14940	ok, so
+14940	17100	what is
+17100	19640	Fabrizio, sorry
+19640	21440	yeah, just so
+21440	23240	dico il volo in italiano
+23240	25340	che stai registrando con OBS Studio
+25340	27980	e non so se sei già utilizzato
+27980	29980	ho visto che non hai però messo l'audio
+29980	30880	in ingresso
+30880	33640	quindi non penso che tu stai registrando la voce
+33640	35600	in realtà perché hai messo tanto cattura schermo
+35600	37680	devi fare un plus
+37680	39160	ma in realtà vedo che
+39160	41380	lo sto registrando
+41380	44040	perché vedo la barra che scorre
+44040	45160	eh, quello sì, ok
+45160	47480	la barra scorre, però se non la metti in fonti
+47480	48700	non te lo registra
+48700	51040	lo registra tutto quanto quello che vede in fonti
+51040	52320	lo schermo lo sta catturando
+52320	54240	l'audio là te lo mette in automatico
+54240	55840	che sente qualcosa
+55840	58340	però ovviamente e cattura audio
+58340	60740	penso per ti però audio è entrata
+60740	63680	cattura di un'entrata
+63680	69040	e del tuo microfono
+69040	71120	spesso perché io lo scelgo
+71120	71740	non lo scelgo
+71740	72840	sì sì, va bene, non lo scelgo
+72840	73740	grazie, grazie
+73740	74640	grazie, grazie
+74640	74740	grazie, grazie
+74740	76460	perché poi magari registravi
+76460	79080	e poi non si vede in attesa
+79080	80740	perché mi è già capitata a me anche
+80740	81900	ah, benissimo
+81900	83240	ok
+83240	85160	così dovrebbe andare
+85160	87640	ok, perfetto
+87640	91940	devo riavviare la registrazione oppure cattura comunque anche partendo da qui
+91940	94960	no, no, no, cattura da adesso
+94960	95800	da quando l'ho imposto
+95800	97320	ok, perfetto
+97320	100640	ok, grazie mille
+100640	102640	ok
+102640	103400	so
+103400	105640	vehicle function
+105640	106220	is
+106220	107920	vehicle function
+107920	108520	is basically
+108520	109300	a functional
+109300	109980	a functional
+109980	110520	specification
+110520	111620	for
+111620	112700	as you can
+112700	114200	as you can understand
+114200	114420	from
+114420	115400	as you can understand
+115400	116040	from the name
+116040	116560	regarding
+116560	116980	a
+116980	117560	vehicle
+117560	118200	functionality
+118200	121000	a
+121000	121280	functional
+121280	122020	specification
+122020	122760	is
+122760	124120	functional
+124120	124820	specification
+124820	125500	just
+125500	126900	is
+126900	127220	is
+127220	127340	is
+127340	127620	is
+127620	128140	is a document
+128140	128780	that
+128780	129940	includes
+129940	130780	all the
+130780	132340	all the
+132340	135480	all the tasks
+135480	135980	that a given
+135980	136600	functionality
+136600	137460	has to
+137460	139260	has to
+139260	139280	has to
+139280	140400	has to carry out
+140400	142460	including
+142460	143880	contents
+143880	144780	both functional
+144780	145720	and some
+145720	146340	and something
+146340	147020	also regarding
+147020	147680	the diagnostic
+147680	148500	of a given
+148500	149060	functionality
+149060	150580	but
+150580	151460	as you may
+151460	152020	already know
+152020	152520	some of you
+152520	153000	some of you
+153000	153420	at least
+153420	154260	the
+154260	155100	the diagnostic
+155100	155680	is not
+155680	157420	the master
+157420	158060	document of the
+158060	158480	diagnostic
+158480	159160	is not
+159160	160040	is not
+160040	160380	the vehicle
+160380	161160	function itself
+161160	161900	but is the
+161900	162460	is the
+162460	162820	CDP
+162820	165660	ok
+165660	166840	so
+166840	168260	a functional
+168260	168980	specification
+168980	170620	is
+170620	171060	a
+171060	173320	as I already
+173320	173560	said
+173560	174120	is a document
+174120	175280	and
+175280	175860	VF
+175860	176340	is
+176340	177280	must include
+177280	177800	everything
+177800	179060	that regards
+179060	179720	the history
+179720	180280	of the
+180280	180920	of the
+180920	181380	functionality
+181380	182120	so
+182120	182960	any changes
+182960	183580	that
+183580	185080	that are made
+185100	185380	to the
+185380	185900	functionality
+185900	187300	during
+187300	188120	during its
+188120	188680	existence
+188680	189460	from the
+189460	189720	beginning
+189720	190060	to the
+190060	190340	end
+190340	191220	have to be
+191220	191580	traced
+191580	192220	into this
+192220	192580	document
+192580	193920	so
+193920	194860	we'll see an
+194860	195200	example
+195200	195620	in the
+195620	195940	following
+195940	196600	but just
+196600	196960	keep in
+196960	197200	mind
+197200	197620	that
+197620	199020	that the
+199020	199480	changes
+199480	200400	are always
+200400	201300	are always
+201300	201540	kept
+201540	201800	track
+201800	202860	are always
+202860	203200	kept
+203200	203560	track
+203560	203940	of
+203940	205940	so
+205940	207440	at least
+207440	207800	the
+207800	208600	changes
+208600	209100	that
+209100	212000	are made
+212000	212840	across
+212840	213720	from
+213720	214340	one
+214340	215160	version
+215160	215360	to
+215360	215680	another
+215680	216800	so
+216800	218220	in the
+218220	218460	document
+218460	218860	you will
+218860	219080	see
+219080	219360	yeah
+219360	219640	but
+219640	220020	anyway
+220020	220300	you will
+220300	220400	see
+220400	220500	an
+220500	220780	example
+220780	220960	in
+220960	221040	the
+221040	221280	following
+221280	221740	so
+221740	222040	let's
+222040	222220	just
+222220	222440	give
+222440	222560	a
+222560	222920	theoretical
+222920	223840	overview
+223840	224080	and
+224080	224180	we
+224180	224320	will
+224320	224540	see
+224540	224920	a
+224920	225240	practical
+225240	225620	example
+225620	225780	in
+225780	225880	the
+225880	226100	following
+226100	229320	as I
+229320	229520	said
+229520	229640	the
+229640	229820	vehicle
+229820	230320	function
+230320	230800	is
+230800	231120	related
+231120	231340	to
+231340	231940	functionality
+231940	232280	and
+232280	232500	not
+232500	232700	to
+232700	232900	the
+232900	233620	component
+233620	234180	structure
+234180	234660	so
+234660	234840	it's
+234840	235100	something
+235100	235320	that
+235320	235560	is
+235560	235920	on
+235920	236060	a
+236060	236340	different
+236340	236620	level
+236620	236760	of
+236760	237560	abstraction
+237560	238180	to
+238180	238460	the
+238460	240860	hardware
+240860	241480	component
+241480	242140	or
+242140	243680	components
+243680	244860	because
+244860	245020	a
+245020	245240	vehicle
+245240	245800	functionality
+245800	246120	is
+246120	246480	not
+246480	248520	deployed
+248520	249120	is
+249120	249460	not
+249460	252480	embedded
+252480	253000	into
+253000	253220	a
+253220	253560	single
+253560	253880	may
+253880	254160	not
+254160	254380	be
+254380	254700	included
+254700	254920	into
+254920	255080	a
+255080	255440	single
+255440	255920	hardware
+255920	256520	component
+256520	257160	but
+257160	257440	a
+257440	257640	vehicle
+257640	258260	functionality
+258260	258500	could
+258500	258980	involve
+258980	259800	different
+259800	261300	issues
+261300	263160	sensors
+263160	263820	actuators
+263820	264140	and so
+264140	264380	on
+264380	265860	so
+265860	266020	the
+266020	266240	vehicle
+266240	266740	function
+266740	267100	is
+267100	267280	on
+267280	267400	a
+267400	267660	different
+267660	267920	level
+267920	268040	of
+268040	268900	abstraction
+268900	271380	than
+271380	271520	the
+271520	271760	physical
+271760	272140	layer
+272140	275220	the
+275220	275600	VF
+275600	275820	is
+275820	275980	the
+275980	276240	starting
+276240	276700	point
+276700	276880	that
+276880	277100	is
+277100	277320	used
+277320	277520	by
+277520	277660	the
+277660	278140	developers
+278140	278580	to
+278580	280020	write
+280020	280220	the
+280220	280460	software
+280460	280780	to
+280780	281340	code
+281340	281860	software
+281860	283460	so
+283460	284260	it
+284260	284560	shall
+284560	285000	be
+285000	285600	it
+285600	285740	should
+285740	285860	be
+285860	286080	quite
+286080	286460	clear
+286460	286740	and
+286740	287000	quite
+287000	287580	comprehensive
+287580	288080	of
+288080	288520	what
+288520	288800	the
+288800	289280	functionality
+289280	289640	has
+289640	289740	to
+289740	289940	do
+289940	292640	so
+292640	294240	let's
+294240	294420	go
+294420	294700	ahead
+294700	296840	this is
+296840	297440	where
+297440	297760	the
+297760	299220	vehicle
+299220	299680	function
+299680	300380	is on
+300380	300480	the
+300480	300640	left
+300640	301060	side
+301060	301360	of
+301360	301460	the
+301460	301880	cycle
+301880	303380	is
+303380	303680	at
+303680	303840	this
+303840	304160	level
+304160	304880	of
+304880	305160	the
+305160	306660	cycle
+306660	307280	so
+307280	308300	it's
+308300	308800	a
+308800	309860	requirement
+309860	310260	of
+310260	310720	it's
+310720	310840	a
+310840	311000	high
+311000	311240	level
+311240	311860	requirement
+311860	314740	higher
+314740	315040	than
+315040	315420	the
+315420	316280	software
+316280	316800	requirements
+316800	316940	for
+316940	317320	example
+317320	320360	and
+320360	320820	let's
+320820	321000	go
+321000	321300	ahead
+321300	324760	what
+324760	324940	are
+324940	325120	the
+325120	325780	functionalities
+325780	326040	for
+326040	326360	which
+326360	326640	we
+326640	326860	can
+326860	327360	find
+327360	327960	a
+327960	328660	corresponding
+328660	329160	VF
+329160	329980	as a
+329980	330460	document
+330460	331860	car access
+331860	332180	theft
+332180	332920	protection
+332920	333560	regarding
+333560	333980	vehicle
+333980	334220	level
+334220	335000	functionalities
+335000	335600	vehicle
+335600	336320	dynamics
+336320	337940	braking
+337940	338700	systems
+338700	341280	also
+341280	342320	things
+342320	342780	regarding
+342780	344020	vehicle
+344020	344560	access
+344560	347360	wiping
+347360	348460	everything
+348460	348900	that
+348900	349380	anything
+349380	349900	that is
+349900	350440	a
+350440	351000	functionality
+351000	351680	of
+351680	352180	any
+352180	353980	vehicle
+353980	354440	level
+354440	356640	I mean
+356640	357800	it could
+357800	358180	be a
+358180	358460	vehicle
+358460	358700	level
+358700	359260	functionality
+359260	359520	a
+359520	359680	power
+359680	359880	train
+359880	360460	functionality
+360460	361420	or
+361420	362460	ADAS
+362460	363040	functionality
+363040	363800	anything
+363800	364660	that is
+364660	365540	any
+365540	366540	functionality
+366540	367260	that is
+367260	368000	presented
+368000	368220	in the
+368220	368560	vehicle
+368560	369360	is
+369360	370120	formalized
+370120	370540	into
+370540	370840	a
+370840	372880	document
+372880	373540	like
+373540	375140	the one
+375140	375400	that we
+375400	375640	will see
+375640	376120	the following
+376120	379900	so
+379900	380820	this is
+380820	381080	the naming
+381080	381700	convention
+381700	383620	function
+383620	384160	name
+384160	385400	the name
+385400	386320	the number
+386320	386720	of the
+386720	387160	function
+387160	388240	and
+388240	389820	the number
+389820	390080	of the
+390080	390420	function
+390420	390860	and the
+390860	391180	release
+391180	391920	the version
+391920	392440	and the
+392440	392780	release
+392780	393140	of the
+393140	393500	function
+393500	400120	yeah
+400120	400620	here
+400620	400880	there's
+400880	401000	an
+401000	401540	example
+401540	402640	I'm
+402640	402760	an
+402760	403100	attino
+403100	403660	management
+403660	405600	this is
+405600	405720	the
+405720	406200	number
+406200	407000	this is
+407000	407020	the
+407020	407220	version
+407220	409240	number
+409240	409560	and the
+409560	409760	release
+409760	410200	number
+410200	428920	so as I
+428920	429200	said
+429200	429760	the
+429760	430360	vehicle
+430360	430600	function
+430600	431960	is something
+431960	432380	that is
+432380	432760	not
+432760	433740	that is
+433740	433920	not
+433920	434280	strictly
+434280	434680	related
+434680	435220	to the
+435220	435960	physical
+435960	436540	component
+436540	436960	and to
+436960	437060	the
+437060	437340	vehicle
+437340	438020	and to
+438020	438240	the
+438240	438900	platform
+438900	439600	to the
+439600	439780	vehicle
+439780	440380	architecture
+440380	441980	so in
+441980	442120	the
+442120	443440	document
+443440	443860	you may
+443860	444200	find
+444200	444600	something
+444600	445040	that
+445040	445480	some
+445480	445860	notes
+445860	446500	at the
+446500	446740	beginning
+446740	447140	of the
+447140	447520	vehicle
+447520	448000	function
+448000	449260	that report
+449260	449880	what are the
+449880	450200	changes
+450200	450560	that are
+450560	450860	made
+450860	451240	to that
+451240	451660	specific
+451660	452120	version
+452120	452380	of the
+452380	452580	vehicle
+452580	453080	function
+453080	454100	to
+454100	454500	adapt
+454500	455160	to a
+455160	455820	given
+455820	456380	architecture
+456380	457300	for
+457300	457740	example
+457740	459000	if a
+459000	459140	new
+459140	459520	platform
+459520	460020	is being
+460020	461200	developed
+461200	462260	but I
+462260	462600	want to
+462600	462900	port
+462900	463180	that
+463180	463640	functionality
+463640	464060	from
+464060	464400	an
+464400	464580	old
+464580	465080	architecture
+465080	465340	to
+465340	465680	another
+465680	466140	I
+466140	466300	may
+466300	466640	decide
+466640	466880	to
+466880	467080	use
+467080	467220	the
+467220	467380	same
+467380	467900	requirement
+467900	469020	the
+469020	469220	same
+469220	469480	vehicle
+469480	469920	function
+469920	470240	with
+470240	470480	some
+470480	470960	changes
+470960	471520	I
+471520	471700	can
+471700	472000	decide
+472000	472200	to
+472200	472420	carry
+472420	472720	over
+472720	472940	that
+472940	473380	functionality
+473380	473660	from
+473660	473820	the
+473820	474920	old
+474920	475420	architecture
+475420	475700	to
+475700	475820	the
+475820	475960	new
+475960	476160	one
+476160	477500	and
+477500	477620	at
+477620	477740	the
+477740	478000	beginning
+478000	478220	of
+478220	478340	the
+478340	478660	document
+478660	478900	you
+478900	479060	may
+479060	479400	find
+479400	479700	some
+479700	480000	notes
+480000	480440	regarding
+480440	480660	the
+480660	481120	changes
+481120	482420	that
+482420	482580	have
+482580	482720	been
+482720	483020	made
+483020	483180	to
+483180	483380	that
+483380	483860	version
+483860	484500	of
+484500	484740	the
+484740	486740	functionality
+486740	495620	the
+495620	495840	most
+495840	496240	important
+496240	496560	part
+496560	496680	of
+496680	496780	the
+496780	496960	vehicle
+496960	497400	function
+497400	497680	in
+497680	497820	my
+497820	498100	opinion
+498100	498300	at
+498300	498560	least
+498560	500560	for
+500560	500800	those
+500800	500940	of
+500940	501140	you
+501140	501600	that
+501600	501940	will
+501940	503920	actually
+503920	504220	it's
+504220	504800	important
+504800	505060	for
+505060	505400	everyone
+505400	506240	because
+506240	506860	it
+506860	508460	gives
+508460	509420	a
+509420	509740	graphical
+509740	510200	form
+510200	510380	to
+510380	510540	the
+510540	511200	interactions
+511200	512240	of
+512240	512360	the
+512360	512660	different
+512660	513040	parts
+513040	513200	of
+513200	513440	the
+513440	514480	different
+514500	515120	systems
+515120	515280	that
+515280	515360	are
+515360	515680	involved
+515680	515820	in
+515820	515900	the
+515900	516380	functionality
+516380	518100	is
+518100	518220	the
+518220	518540	functional
+518540	519020	diagram
+519020	519860	the
+519860	520220	functional
+520220	520660	diagram
+520660	521120	here
+521120	521440	you
+521440	522160	probably
+522160	522420	cannot
+522420	522780	see
+522780	522980	it
+522980	523240	very
+523240	523620	clearly
+523620	524800	but
+524800	526260	if
+526260	527000	you
+527000	527340	give me
+527340	527760	a second
+527760	528320	I
+528320	528640	can
+528640	530800	download
+530800	531120	the
+531120	531560	example
+531560	533920	so that
+533920	534300	you can
+534300	534580	see it
+534580	534700	in
+534700	535060	practice
+535060	556340	can
+556340	558500	oh
+558500	571800	Oh, something that I didn't, I mentioned at the beginning of the lesson that all the changes have to be, have to be traced into the, into the document.
+572780	583520	Inside the revision notes, you may find also this table like this. In this table are reported, are reported also change, the CRs, that is the change requests.
+583520	595940	This table, this table is, is a very short history of the changes that have been made, at least for, for, for bullet points.
+596000	601740	The main changes that have been made to the, that have been made to the vehicle function along its life.
+601740	618460	For example, here, you can see that the list of all the CRs, with all the paragraphs and the, all the paragraphs that have been modified in the parameters that, that, that are going to, that are, that have been added or deleted.
+618460	626740	Now, let's go to the important part, the functional diagram.
+626740	628500	Oops.
+648460	656740	As I already mentioned, the most important part is the functional diagram.
+657340	666640	Unfortunately, I don't have the original version of this document, because here the, during the, the, the PDF printing process, the, the functional diagram has been cut.
+666640	687460	But, uh, this is the functional diagram. The functional diagram, uh, formalizes all the interactions in terms of messages and signals that are exchanged, uh, between the different issues, uh, and the signals reported are the ones that are used by the, uh, by the given functionality.
+687460	708580	Here, you see that in the squares, the, the, the square, the, the, the square blocks, it's the issues, these ones are the signals that are used, that are given as input to the, to different issues, uh, coming, uh, that, uh, that, uh, that are outputs of other functionalities, basically, that are also reporting the functional diagrams.
+711040	713680	And, uh, this one is a physical button.
+713680	719140	Um, and, uh, this one is something that is displayed on the PC.
+719560	736300	This one could be, uh, could be lights, uh, messages that appear on the, uh, that appear in the dashboard, uh, butters and so on any physical or, uh, audio signal that is, uh, that is, um, that is a physical interface to the user.
+736300	756760	So, uh, the functional diagram gives, uh, a complete overview of, uh, all the interactions between the different components that are involved in a given functionality, the components and the, uh, signals and the, uh, respective messages that contain the signals.
+756760	781700	Another thing that I mentioned at the beginning of the presentation was that, uh, um, in the document, uh, there is, uh, um, along with the, with the notes that we, uh, that we just saw, uh, there will be some track of the changes that are made across the different versions of the vehicle function.
+781700	785460	Uh, uh, uh, what do I mean with this statement?
+785460	805100	I mean that, uh, when a change is made by, uh, by a CR, for example, going from one release to another, the things that, that are, uh, that have been changed respect to the old release are still present in the document.
+805100	823860	So that I can see the parts that have been modified or deleted, I can still see them in the document, for example, here, you can see the T red as a revision, there's the part that, uh, there's the part that have been modified and the parts that have been related that have been deleted are still present, but they are barred.
+823860	840540	So that, uh, uh, uh, this is a great help for both the developers that have to, uh, that have to change the software that have to change the software implementation, um, uh, and also for the, uh, for, for the ones that carry out the validation.
+840540	853280	Because, uh, uh, a change request involves, uh, a change in the software and also change in the test cases that you may, uh, that you may have already written, uh, to that point.
+853280	874700	So this is very useful because, uh, uh, if you keep track of the things that have been changed, you can, uh, you can just, you can directly go to the, uh, to the test list that you've already made and make the modifications to, uh, to the past, to the test cases that have been affected without touching the old ones.
+874700	897720	You can delete, uh, you can, uh, you can, uh, modify, you can, uh, by modifying the test cases, I mean that you delete the old ones and you write new test cases that adapt to the new release so that, uh, when you write a test list, you can, uh, you can keep trace of the, uh, of the changes that have been made so that you can, uh, that you can keep track of the applicability of a given requirement at a given time.
+897720	907020	So everything clear regarding the functional, uh, the functional diagram.
+909660	909900	Yeah.
+911400	911840	Okay.
+912760	914460	Guys, let's keep this interactive.
+914460	923360	So if you, at any time, if you have any questions, that's, uh, just, uh, just give a shout and let's stop so that we can clarify the doubts, uh, as they, uh, as they come in.
+923500	923920	Okay.
+927720	930540	Okay, thank you.
+930540	931500	So let's go ahead.
+936660	937220	Hmm.
+937220	937920	Okay.
+937980	940160	This part doesn't apply to this requirement.
+940200	954000	This is something that is, uh, this something that, uh, that relates to, uh, uh, uh, to a specific OEM this format, the format of the video of the VF is pretty much the same across different, uh, different suppliers,
+954000	967820	and the OEMs, uh, if there's one or, uh, or, uh, or, uh, but the structure of the, the structure and the contents of a VF are pretty much the same across different, uh, different suppliers.
+967820	977700	And the OEMs, so, yes, can I ask you a question about the, the functional diagram?
+977700	993280	So you said, as we see that if there are some changes in the, in the, there's a vital function, there are some changes that are deleted from the previous one, like, would you see something similar in the functional diagram as well?
+993280	1005760	Like, uh, like, uh, yeah, or you just see, like, what's, what's the new vehicle function doing so you can, uh, yeah, actually this one is, uh, yeah, I'll just answer your question.
+1005940	1016780	Yeah, uh, actually I, I wasn't very, I wasn't very precise on that regarding the functional diagram, since some changes have been made to the vehicle function here in the document, you find two functional diagrams.
+1016780	1026200	You find the old one and the new one, uh, the, uh, basically the, uh, so that you can compare the two.
+1026420	1037640	So you find the, uh, the, the functional diagram in case the change is affected, the functional diagram, uh, you will find the old diagram in, uh, part deleted.
+1037640	1039840	And then one that is, uh, that has been added.
+1040480	1046720	So in case the functional diagram is changed, you, uh, you would find, uh, both the old one and the new one so that you can compare the two.
+1046780	1055380	ok ok thank you ok thank you for your question
+1055380	1065340	ok so let's go on with the presentation and in case we need any help we can use the example
+1076780	1083620	this is something that relates to the everything that relates to a specific supplier i'm just
+1083620	1088280	going to skip it from the presentation i just want to give a complete overview so that you
+1088280	1094160	can have the so that you can have an overview you can have just the common elements across
+1094160	1103700	the different the different oems without without specifying on a on a particular one ok this
+1103700	1109940	one is the operating conditions the working conditions table this part of the document
+1109940	1115700	this table is in my opinion is very important but unfortunately sometimes it is not very
+1115700	1123980	this is not very carefully addressed because some some some people that that are that that
+1123980	1129540	right that right vehicle functions don't find this very useful so they don't address this
+1129540	1138880	in a in a very accurate way what does this table indicate this table indicates indicates
+1138880	1144700	what are the conditions for which are specific on the the vehicle conditions for which a specific
+1144700	1154620	content that corresponds to a specific paragraph in the in the vehicle function is applicable
+1154620	1159960	for example there may be in a specific functionality there may be some contents that are applicable
+1159960	1165820	some requirements that are applicable when the vehicle is in kiosk but are not applicable when
+1165820	1171740	the vehicle in uh in kion and vice versa some parts of the requirement that are applicable when
+1171740	1177340	the when the engine is running while it shall not be uh shall not be addressed it shall not be active
+1177340	1184780	when the uh when the vehicle is in kiosk for example or uh uh some contents some requirements that have to
+1184780	1193340	be excluded when the vehicle is cranking because why do uh for example uh um a valid example of a
+1193340	1199260	situation where a functionality should be included as it should be excluded during crank is the exclusion of
+1199260	1206140	of some diagnosis some diagnosis should be excluded when the vehicle is cranking because um due to the uh to
+1206140	1215660	the voltage drop on the uh on 12 volts bus some uh uh we may have some false diagnosis so some diagnosis
+1216380	1222860	actually almost a great part of the diagnosis should be excluded during the during engine cranking
+1222860	1231980	and uh the same we can tell also for excluded with battery discharge this table has normally more lines
+1232700	1238300	because we may have across different architectures they may have we may have different vehicle
+1238300	1244860	conditions for example this table is valid for a conventional powertrain while this for example an
+1244860	1249900	additional line that you may have with uh that you may find with uh for example with an hybrid architecture
+1250860	1259100	is uh when the vehicle is during uh is uh is uh is operating in a drive mode in a drive mode obviously the uh
+1259100	1266380	the engine is not running because the engine is off but the uh but the vehicle is uh but vehicle is
+1266380	1273100	is operational and is uh is producing traction okay clear
+1280860	1284620	questions regarding the working operation the working conditions table
+1290460	1297580	okay i do have a question what in the key of you on what is the plus 30 and plus 50
+1298220	1303820	like what does it indicate yeah basically it's just the indication of the uh it's just normally the
+1303820	1312620	indication of the uh it's the indication of the uh of the um of the um of the physical key of the physical
+1312620	1319420	key uh of the physical keeping the physical keeping i mean uh um key off means that uh this uh this
+1319420	1327900	varies along uh this varies uh this may vary uh from supplier to from oem to oem normally uh k15 is the
+1327900	1336860	the physical signal of the physical key okay okay so okay 15 uh k15 is on when the physical key is uh
+1336860	1347500	when the physical keys on that's okay okay thank you welcome okay when i said that this part is not
+1347500	1352860	uh it's not very carefully addressed sometimes you can find an example a valid example in the uh
+1352860	1360300	uh in the uh in the attached document for example here this part has not uh has not been uh very
+1360300	1365900	carefully addressed because uh this is basically the list of all the contents that are contained in
+1365900	1374060	this this document and uh and uh basically they're listed in for all operating from for all working
+1374060	1382060	conditions ignition off ignition on time with ignition of uh cut off during starting blah blah blah and all
+1382060	1387740	the all the requirements are all the requirements are listed and uh this is obviously not not true
+1387740	1393020	because uh i can tell you that uh for uh in this case there are some of these requirements that shall
+1393020	1399020	not be uh that shall not be active some contacts that that shall not be active during uh during uh
+1399020	1400860	during some operating conditions
+1404300	1406380	okay but let's go ahead
+1406380	1436220	okay this is just an extract from vf i'll just go through the example that is probably more clear
+1436380	1439580	than the uh than the screenshot of another requirement
+1445980	1446380	okay
+1449020	1455180	so some important information that are not listed in the presentation that can be found in the uh that
+1455180	1461500	can be found in the document uh is for example the list of the of the other vehicle functions that
+1461500	1469100	interact with this one here you can find in the uh in the external interfaces paragraph you can find
+1469100	1475180	the external inputs and the external the external inputs that is the um that is the vehicle functions
+1475180	1485740	the list of the vehicle functions that um that uh that give signals and messages to uh to this
+1485740	1497580	functionality as input like for example here pf026 pf606 pf092 these are all vehicle functionalities that produce
+1497580	1505020	outputs that are given as input to this functionality and they're listed in this part here
+1505020	1516860	same for the vehicle functions uh in this paragraph here you will find all the issues all the uh all the
+1516860	1524860	network nodes that are involved in this functionality bcm that is the body control module uh the slu that is
+1524860	1531900	the shifting level unit epc instrument panel cluster and mta that is managed transmission uh manual transmission
+1531900	1536700	automated that is basically the gearbox issue
+1541500	1548780	another very important part is this one that lists all the um sorry
+1551660	1557500	just going uh backwards to uh be sure that i didn't forget anything another very important part
+1557500	1564540	is this one as you can see uh in the first chapter of the vehicle function there's a lot of useful
+1564540	1570220	information because there's uh there's there's all the all the parts that are involved in terms of
+1570220	1577180	nodes and vehicle functions and as we will see in the following also networks signals and messages
+1577180	1585340	and internal variables that are involved in the function so uh so i'm spending a little bit of time in this
+1587420	1596940	okay so this is the list of the physical input outputs ipc display dot gui this is the assembly of
+1596940	1599580	all the all the um all the physical
+1599580	1610780	all the physical input outputs outputs outputs that are given to and by the user to the uh this is the
+1610780	1616940	way how the external world interacts with the with the vehicle functionality the external world i mean
+1616940	1623100	the driver in fact here in the list you can find the two things that are involved that is the power echo
+1623100	1629660	that is a physical button and the ipc display dot gui that is the assembly of all the signals these are
+1629660	1638300	for example the buzzer uh a telltale on the epc screen um uh something that appears in the in some
+1638300	1651020	display in the pc and so on in the information paragraph there's the list of the hardwired signals
+1651020	1665420	sheet live position dot info that is do you know what uh what dot info is what this uh what this uh suffix here
+1665420	1677820	mean dot info means that in softer terms it's a physics uh it's a it's an internal variable uh normally um
+1677820	1684300	um since it's also reporting in the paragraph this one it's a hardwired signal so it means that it's a
+1684300	1689100	it's an analogic it's a it's a physical signal coming from a from a physical component
+1691420	1697820	for example here shift alert position dot info it's the physical information in terms of combination of
+1697820	1704220	the pins that are connected to the uh to the that are connected to the to the shifting lever that goes
+1704220	1710060	in as an input to the to the functionality i think that this physical input this hardwired signal is
+1710060	1720220	connected to the mta but anyway you can find it in the yeah you can find yeah exactly here's the uh
+1720220	1725420	the shifting level unit shift level the position dot info this is a physical this is a physical signal
+1725420	1732620	that is the translation in term in is the um is the uh transposition of a physical input uh into of a
+1732620	1736940	turn of an outward signal into an internal variable the digital position the teams
+1739900	1747020	okay so the list of the internal variables the proper internal variables you can find them with
+1747020	1750220	the suffix dot info or dot dot rq
+1754060	1759500	and the list of all the signals that uh that are published on the different networks
+1759500	1766620	so hopefully with a short description although this is also the same description that you may find in
+1766620	1767820	the uh in the dbc
+1771100	1775180	so all the signals that are involved in the functionality on the beacon
+1775180	1778940	all the signals that are involved in the functionality are being published on the second
+1778940	1788300	and uh lean that in this case is not applicable since uh no lean components are involved by this
+1788300	1790620	functionality and so on
+1793100	1799100	that's the indication uh the indication paragraph that it's the um it's the list of the things that
+1799100	1800460	you find here in the box
+1800460	1808140	in the in the box uh in this box this shape here with the uh with the dome this rectangle with the
+1808140	1815820	dome is the uh is uh something is something that is um is the uh it's it's the assembly of all the
+1815820	1821260	physical the physical signals that come from the that come from the ipc that come that are um
+1821260	1829180	um as i said the uh the buzzers the uh all the all the internal variables that translate into a
+1829180	1835420	physical input output on the pc a physical output on the ipc either sound or visual
+1835420	1851340	okay this part here this paragraph is the core of the vehicle function because in this file in the
+1851340	1856460	functional requirement paragraph there's the um there's the list of all the contents that have to
+1856460	1862940	be uh that are part of the requirement of the legal functionality basically what the functionality has
+1862940	1872060	to do the tasks the data function ideas to carry out let's say the the uh the the also the algorithm
+1872060	1878620	the the algorithmic part is included if some some calculations have to be carried out or some actions
+1878620	1885340	have to be uh some actions some uh some signals have to be written in a seen a given way as a result
+1885340	1890940	of a combination of a given uh of a given out of the given inputs and so on everything is listed in
+1890940	1899660	this paragraph as i said this is the core of the functionality so let's uh let's give an eye to
+1899660	1903740	the presentation to see if there is something useful that can be added to this part
+1903740	1922460	there is something that relates to diagnosis
+1922460	1935420	actually there's not much information in this presentation so just um i'll directly go through
+1935420	1942060	the document so that you can have a valid uh valid concrete example of what we are talking about
+1942060	1948780	okay
+1948780	1952780	okay
+1952780	1954780	you
+1954780	1956780	you
+1972060	1980380	here there's the uh there's a list of the uh of the management of all the c of uh there's a
+1980380	1987180	all the every paragraph relates to the management of the signals that are elaborated by uh uh by um
+1988540	1989660	by specific issue
+1989660	1997660	for example
+2001420	2007180	i want to go into something more uh into something more uh more consistent
+2009340	2018380	like this part here for example
+2019660	2027180	okay
+2030780	2031260	okay
+2034380	2039340	oh something that uh something that uh that i didn't mention
+2040860	2045180	the the atomic contents that are listed in this part of the requirement
+2045180	2049500	is the for example bcm management esm management
+2053180	2055500	blinking buzzer warning and fail management
+2055500	2062460	for example this part here this paragraph blinking buzzer warning and fail management is something that
+2062460	2065420	you will find also in the working conditions table
+2065420	2072940	the specific content is that level of paragraph blinking buzzer warning and fail management
+2072940	2076140	is the content that has to be uh that has to be um
+2076140	2082220	uh that is to be active in that specific working condition
+2086860	2094940	okay for example this paragraph here relates this explains how should be managed the uh as you may
+2094940	2096860	understand the blinking buzzer and warning
+2100300	2107820	the uh the algorithms the the functionality that uh that is described in a document uh could be um
+2108460	2114140	could be explained could be uh physically formalized into uh in different ways
+2114140	2121260	a table is one of the ways that uh that could be used in a requirement in a bf to formalize uh
+2123500	2124780	to formalize a requirement
+2126060	2130700	for example here there's a combination of the inputs there's a combination this this
+2130700	2133500	combination of the inputs shall give this output
+2133500	2142060	uh this combination of the uh this combination of the shift level position and the tpbm status that
+2142060	2150060	is the uh the electronic parking brake status uh the combination of these two shall give this output
+2150060	2156780	shall be this output in terms of mismatch condition mismatch condition that translates into something
+2156780	2161740	that the issue no not with you the the functionality must do when the mismatch is detected
+2167020	2176060	in fact this table uh this table explains when the mismatch condition has to be uh has to be uh has
+2176060	2184220	to be detected and in the following you see what happens when the mismatch is detected for example
+2184220	2192220	to to to to to here mta shall send the status c this signal shall be a shall this signal shall be set
+2192220	2199500	to other cases on dawn when a mismatch is detected according to the tables above one and two
+2205020	2205500	okay
+2205500	2214620	gear changing request is another paragraph that is another content that is uh that has to be managed
+2214620	2220620	that can be managed in different uh in different vehicle operating conditions for example this uh
+2220620	2225420	this is a very uh this is a very good example the gear changing request shall not be managed when
+2225420	2231660	the ignition is off because when the ignition is off the vehicle is off everything is off the uh the uh
+2231660	2236860	the epic is off and so on the the vehicle is still with the electronic parking brake deployed and so
+2236860	2243820	on so this functionality shall not be uh shall not be managed when the ignition is off and so this uh
+2243820	2251100	this line here shall not be present in this field it's just to uh to give an example this is the
+2251100	2260060	result of a uh of a reckless copy paste from uh from probably the ignition on part anyway
+2261660	2276220	this is another form of uh of describing an algorithm that you may find in a vehicle function
+2277180	2278780	this is actually a very useful one
+2281420	2283660	uh that is the pseudocode
+2283660	2313340	uh this form is very useful to uh for both the for both the developers and uh
+2313660	2318460	the ones that are uh delegated to write the uh to draft the test cases
+2319900	2325740	because in this way in this way is very uh it's very easy to uh to find all the branches that have
+2325740	2328940	to be covered with the uh with a test list
+2332460	2338620	so as i said this part here regards uh is uh regards the algorithm so
+2338620	2348700	so let's go to some other important information that you may find in a uh that you may find in a
+2348700	2353500	view of function
+2353500	2368940	this is uh this is uh this is still the um the core of the of the functionality okay
+2372700	2378540	as i said you may find in the vehicle function document something that relates to the diagnosis
+2378540	2390460	although this is not the master requirement that is used for uh for diagnosis but um there may be
+2390460	2399180	some overlapping between the functional content and the diagnostic content why is that think about
+2399180	2405180	the recoveries the countermeasures that have to be uh put in place when a fault is detected
+2405180	2412620	uh this is something that is somewhere in between the uh diagnostic content and the functional content
+2413180	2418940	because it relates to diagnosis because it's triggered by the uh by the by the racing of a dtc
+2419660	2426620	but the countermeasure is something that acts on the functional level because it may affect the uh it
+2426620	2433340	may affect the vehicle functionality think about for example the um the the rating of the vehicle
+2433340	2439180	performance that is put in place when a fault is detected like an over temperature for example
+2439180	2445340	transmission over temperature transmission over temperature dtc dtc triggers countermeasure countermeasure
+2445340	2454460	countermeasure is vehicle in limited um in limited limited torque limited power or uh gear locked
+2455420	2457020	or a vehicle locked in neutral
+2457020	2465100	so dtc diagnostic content that triggers something on the physical the on the functional level
+2468220	2473740	so in the vehicle function you may still find something that relates to the vehicle diagnosis
+2474380	2485500	that is when a signal is set um when a signal is set uh to a given value due to a detection of
+2485500	2489180	fault condition a given dtc shall be set
+2491500	2498620	but the reference as you will find in a table like this is still it still refers to this stf
+2499260	2507180	the stf is the uh is the finalized finalized diagnosis document that is the cdd basically
+2507180	2518300	as i said there might be there may be there will be a paragraph relating to the uh relating to the
+2518300	2527340	recoveries although all this information shall be correspondent to what you will find in the cdd
+2527900	2531980	because in the cdd there will be a dtc table where the recoveries will be listed
+2531980	2538940	and obviously the vehicle function shall match with the cdd that is the master document of the diagnosis
+2538940	2554860	okay at the end of this paragraph of this chapter there's a um there's a there's this table that
+2554860	2556940	is quite important this table and this list
+2556940	2567020	in this list you can find the configuration parameters the configuration parameters is the list
+2567020	2572220	of all the parameters that are uh that are presented that are mentioned in the text above
+2573340	2580540	it could be for example a speed threshold or a temperature show a temperature threshold timers
+2580540	2591260	uh the bouncing times uh timeouts for uh for for detecting the uh for detecting a dtc and so on
+2592940	2599020	all these uh all these parameters will be listed at the end of this part of the vehicle function
+2601020	2607100	since these parameters have a numerical value that you may be aware you should be aware of when you
+2607100	2613340	both do uh when you bought into development or validation because uh this is very relevant
+2613340	2618940	because this parameter with these parameters although uh calibrateable uh you should know the value of
+2618940	2623020	this parameter because when you go to when you validate the functionality you shall know whether
+2623020	2629260	a speed uh whether if a spin threshold is five kilometers per hour or 50 kilometers per hour
+2630380	2632380	because it changes how the test is carried out
+2632380	2639180	the values of these uh the values of these calibrations are available at least the initial
+2639180	2646380	values are available here after the tables the table that lists all the parameters with the
+2646380	2652620	with the respective description there's this list that uh that gives at least the first trial value for
+2652620	2659660	these values although these values since are calibrateable uh the final value of this of these of these
+2659660	2665420	parameters could be different from the one that you find here because these ones are calibrations
+2665420	2672300	so here you will find the just initial trial the first trial value this could or could not be uh the
+2672300	2678300	the value of these parameters in the final implementation could or could not be equal to the one that you
+2678300	2691900	find here in this table okay this is uh uh this is a we went through all the document i think that i didn't forget
+2691900	2697100	anything but anyway i think that there's another presentation i want to see if i can find something
+2697100	2703500	useful in there but meanwhile um i'll take a 10 15 minutes break
+2703500	2711100	so that we can uh go and take a coffee and uh i can take a look so that we can go to the other
+2711100	2717260	presentation to see if there is something else that that is worth mentioning meanwhile do you have any
+2717260	2726140	questions now regarding what we've discussed so far no i don't have any questions questions anybody
+2726140	2741340	no everything clear no for me okay yes it's clear okay guys so let's take a 15 minutes break and see you
+2741340	2769740	at uh 11 40 okay okay okay nothing actually not not for me okay not for me okay so
+2771500	2776060	we're pretty much finished there is something a couple of things that uh things that i want to mention
+2776940	2781740	that uh that could be contained in a uh in a vehicle function document
+2784220	2791740	uh the first thing regards the uh the the functionality description the algorithm description
+2791740	2797180	the part that you found uh that you that you found in the previous document written as pseudo code
+2797180	2810140	uh this part uh this part uh this part here if condition then uh this shall happen another form that
+2810140	2819100	could be used to um to uh to describe uh to describe the algorithm could be um instead of pseudo code
+2819100	2833020	could be a uh fincit machine that is the uh that is something like uh that is something that looks
+2834060	2841740	that looks like this so there is different states there is different states and the transition between one
+2841740	2848300	state to another state is regulated by the uh is regulated by uh by uh by uh by condition or a set of
+2848300	2854220	conditions so the transition from state one to state two is uh is uh um
+2855900	2861580	uh submitted to the uh to the to the conditions that you find on the arrow this is another formalism
+2861580	2867820	that is used that is used to describe the uh that is used to describe the algorithm when the specific
+2867820	2873580	algorithm is uh can be synthesized as as a state machine
+2876460	2881500	okay this is another thing another thing that i wanted to mention that is present in the presentation
+2881500	2889580	but uh but we didn't find it in the document that i used as an example is the uh is everything that
+2889580	2898220	relates to the uh to the proxy there could be some part of a given functionality uh that could be
+2898780	2904220	that could be enabled by a value of a specific proxy parameter
+2906300	2913020	for example a specific functionality could be um could be uh could be applicable for an architecture
+2913020	2919420	that has for example a minor transmission and an automatic transmission but the functionality could
+2919580	2925900	have an additional content that is enabled when you have an automated transmission and not a manual
+2925900	2933500	transmission this is just an example uh in the algorithm in the in the core in the central part of
+2933500	2941100	the vehicle function in the main part uh you may find the paragraph like this that uh that states
+2941100	2947100	whether whether there are parts of the uh of the functionality some contents that are enabled by a
+2947100	2950780	value of a specific proxy parameter do any of you know what the proxy is
+2956620	2958220	all of you or none of you
+2961260	2966540	i have so some idea about the proxy proxy proxy
+2966540	2975260	can you say it again i cannot tell you very well
+2976060	2976540	sensor
+2978460	2980060	as far as i know yes
+2982860	2986780	basically the pro basically proxy is something that uh is a
+2986780	2998380	uh is basically something that is a set of parameters that is contained uh that is contained in issue that describes the um
+3000620	3007580	that describes the uh for example the trim level for example uh something that you may find in a proxy is
+3007580	3014700	uh uh uh is a type of transmission type of transmission manual automatic
+3016460	3020940	when these uh when the transmission is manual the proxy has to be set
+3021500	3026780	in the end of line phase has to be set to a given value whereas if the transmission is automatic
+3026780	3029820	shall be set to another value or climate
+3030540	3035820	manual climate or automatic climate shall be set to one value or to the other value
+3038460	3043820	some function some some parts of a given functionality may be submitted to the uh to
+3043820	3051420	to proxy parameters so as i said the there could be some slight differences some contents that are enabled
+3051420	3058300	by uh by specific proxy values that are set in the end of line phase and in the document you may you
+3058300	3065900	will find a table like this that says whether there is a um there is a there is some there is some
+3065900	3071820	functionality for example selection money t no suspension suspension button uh pressure that is uh
+3071820	3074940	that is enabled by the uh that is enabled by the proxy
+3077020	3081980	another thing that you may find that you may find in the central part at the end of the central part of
+3081980	3088940	the vf is whether this functionality um can wake up the uh can wake up the network or not
+3091740	3093500	you can wake up the can network or not
+3095660	3103420	and uh that's pretty much everything so some additional documents that you may find uh that you
+3103420	3110220	may use uh in uh in addition to the to the vf some documents that are that are that are useful
+3110940	3117420	to uh better understand the vf vehicle functionality is the dbc that describes all the signals on the on
+3117420	3123900	all the networks all the signals uh that that you find in our own in every network in the vehicle
+3124540	3129820	and the the cdd that contains all the diagnostic uh all the diagnostic stuff
+3129820	3139980	and of course if if in case the uh some uh some link network is involved in the functionality also the
+3139980	3143100	ldf file the link description file
+3145580	3151660	that is the equivalent of the dbc but for link network we can see it like a like a database like
+3151660	3159500	a dbc but but it's targeting to a totally network although as you may already know lin and ken are
+3160060	3160940	somewhat different
+3163740	3165340	okay okay
+3168860	3171820	okay guys that's pretty much everything the uh
+3173500	3176380	i finished we didn't take all the two hours like uh
+3176380	3183660	uh but uh but there's not much stuff to uh to talk about regarding the uh regarding the vf document
+3184700	3188380	so uh if you don't have any questions we can uh
+3188380	3196860	uh uh we can close it here and uh in case you have uh you have any questions uh upload these files
+3196860	3203580	on the kinetone academy this lesson because we don't have it there uh really actually you should
+3203580	3208940	have it available i'm pretty sure you have it because i took it from there i just unloaded it from
+3208940	3215580	there yeah it's there i also saw that yeah if you want i can give it a link
+3225740	3233740	it is not the same uh i just drop a presentation just i just i literally downloaded it from from uh
+3233740	3240620	from the uh from the uh from the space you have access to so i just send the link in the chat have
+3240620	3244620	a look once i'll record okay
+3249260	3249580	thank you
+3253180	3258380	okay so guys that's basically it in case you have any questions regarding the uh regarding vehicle
+3258380	3266540	functionalities you can uh you can uh you can either email me or uh or uh wrap me in the uh in the
+3266540	3270700	in google chat and everybody as soon as possible okay
+3274060	3282140	okay okay so guys thank you very much thank you for your time and uh have a nice day
+3282140	3290320	bye bye bye bye bye bye

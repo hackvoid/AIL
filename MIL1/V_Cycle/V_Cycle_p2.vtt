@@ -1,0 +1,7148 @@
+WEBVTT
+
+00:00.000 --> 00:08.960
+Hello everyone, I am Pasquale Perrotta, and this is the second module of V-Cycle Explanation.
+
+00:09.640 --> 00:16.780
+As all the lessons that I'm recording, the lesson will start just showing you the references, okay?
+
+00:17.180 --> 00:24.700
+So, here we have my reference, okay, name and surname, plus the, sorry, name and last name,
+
+00:24.700 --> 00:33.040
+and the email address, which is pasquale.perrotta, head sign kineton.it.
+
+00:33.820 --> 00:40.200
+I like to start in this way, because whenever you have, in case you have doubts after this explanation,
+
+00:40.420 --> 00:48.740
+or even after the explanation of the first module of the V-Cycle, and you have some curiosities, doubts, problems, whatever,
+
+00:48.740 --> 00:59.520
+you know, you can write an email to that, yeah, the email shown over there, or simply you can send me a message in chat.
+
+01:01.260 --> 01:14.760
+The aim of today's video recording is to go deeper into details about V-Cycle Explanation that you have already watched and received with the other video,
+
+01:14.760 --> 01:24.460
+V-Cycle Part 1. Why is this needed? This is needed because, because of, basically, one reason.
+
+01:25.240 --> 01:34.500
+In the, in the past video recording, what you have seen, basically, it's a simplified version of the V-Cycle,
+
+01:34.640 --> 01:38.020
+which looks like something like this, okay, which looks like this.
+
+01:38.020 --> 01:51.240
+I will not explain the V-Cycle again, using this scheme, because you have already had this explanation in the other video.
+
+01:51.420 --> 01:59.260
+So, I will be very fast on this slide, and then we will go through the reason why I'm recording this,
+
+01:59.500 --> 02:03.240
+let's say, deeper explanation about the V-Cycle.
+
+02:03.240 --> 02:11.020
+So, you have already seen this, so, as you know, the first and most important thing is the software requirements, okay?
+
+02:11.160 --> 02:13.360
+Everything starts from requirements.
+
+02:13.680 --> 02:19.620
+So, please, you will listen me or other people saying this many times.
+
+02:19.720 --> 02:25.220
+The requirements are the starting point for all the activities that we are going to do, okay?
+
+02:25.220 --> 02:31.480
+So, whatever you're doing, if you're working on the diagnosis, if you're working on network,
+
+02:31.780 --> 02:35.700
+if you're working in the car, the child, wherever you are working,
+
+02:36.340 --> 02:40.760
+the first input of the activities is always the requirements.
+
+02:41.940 --> 02:42.660
+Why so?
+
+02:43.400 --> 02:51.700
+Requirements are extremely important because we need a set of instructions that then have to be implemented in the software.
+
+02:51.700 --> 02:54.920
+So, here we have software requirements.
+
+02:55.100 --> 02:56.820
+Basically, these are documents, okay?
+
+02:56.900 --> 03:03.080
+Like Word documents, PDF documents, you know, textual documents, okay?
+
+03:03.960 --> 03:10.640
+These documents will, once they're prepared, let's say, they are shared to the software development team
+
+03:10.640 --> 03:13.380
+that will create an architecture of the software.
+
+03:13.980 --> 03:22.380
+We'll start to deeper these software architectures, starting to, let's say, think about big blocks
+
+03:22.380 --> 03:28.140
+that should, let's say, be part of the software itself.
+
+03:28.400 --> 03:34.560
+So, they will divide software in domains, but, yeah, we will not go into details now about that.
+
+03:34.560 --> 03:40.600
+And finally, the software developer team will write the actual code, okay?
+
+03:41.640 --> 03:47.500
+This will not be the aim of this lesson and probably of this learning phase.
+
+03:47.720 --> 03:55.240
+If you're following a validation program, we will not go through the phases of software architecture,
+
+03:55.500 --> 03:57.760
+software configuration, and software construction.
+
+03:59.240 --> 04:01.080
+But why this is important?
+
+04:01.180 --> 04:06.300
+This is important because the software developers will consider as an input software requirements.
+
+04:06.300 --> 04:12.600
+And then, once the software is ready, this software is delivered to the testing team
+
+04:12.600 --> 04:18.240
+that will start at the unit test phase, the integration test phase, and the functional test phase.
+
+04:18.240 --> 04:24.680
+There will be other lessons, probably the lessons related to the software verification,
+
+04:24.680 --> 04:31.480
+where we will enter every single block that we see here on the right side,
+
+04:31.560 --> 04:34.100
+the unit test, the integration test, and functional test.
+
+04:34.100 --> 04:43.540
+We will add some more details, but for the sake of this lesson, we will not enter these blocks.
+
+04:43.540 --> 04:54.460
+I want to just remind what the V-cycle looks like and add, in addition, that apart from the purple V that we see here,
+
+04:54.460 --> 04:56.440
+there are also gray blocks.
+
+04:56.640 --> 05:00.580
+These are functional test design, integration test design, and unit test design.
+
+05:00.580 --> 05:06.280
+So, basically, once we have the requirements, once we have software architecture or software design,
+
+05:06.700 --> 05:12.860
+we can start to develop some test cases, so we can prepare the tests that we have to do,
+
+05:12.980 --> 05:16.780
+starting to write them, and once we actually have the software,
+
+05:17.260 --> 05:23.500
+or the integrated hardware in the system, for example, system hardware in the loop,
+
+05:23.560 --> 05:25.820
+where we have more than one electronic control unit,
+
+05:25.820 --> 05:30.220
+or simply we have a car where we can perform a functional test,
+
+05:30.820 --> 05:33.180
+we can start to prepare all the tests,
+
+05:33.180 --> 05:37.320
+and once we have the bench to open the cars, we can actually perform the tests.
+
+05:37.720 --> 05:37.840
+Okay.
+
+05:38.740 --> 05:45.900
+So, this is a fast explanation about the V-cycle,
+
+05:46.080 --> 05:51.140
+and probably in the first module, something like this was already explained,
+
+05:51.400 --> 05:54.920
+and this V-cycle repeats itself in many phases of the project.
+
+05:54.920 --> 06:02.220
+So, about the design, about the requirements, about the software development,
+
+06:02.360 --> 06:03.120
+and stuff like this.
+
+06:03.180 --> 06:03.320
+Okay.
+
+06:03.400 --> 06:05.960
+So, this V-cycle will repeat itself many times.
+
+06:07.840 --> 06:12.960
+We finally get to the point of this second module.
+
+06:13.080 --> 06:16.040
+The point of this second module is to say,
+
+06:16.560 --> 06:18.660
+okay, this is wonderful.
+
+06:18.900 --> 06:21.720
+I mean, this is very clear, easy to understand.
+
+06:22.200 --> 06:23.200
+This is the process.
+
+06:23.640 --> 06:24.040
+Great.
+
+06:25.620 --> 06:26.140
+Question.
+
+06:26.580 --> 06:31.000
+How do we use this V-cycle in a real case scenario?
+
+06:31.220 --> 06:32.740
+Actually, I go to work.
+
+06:33.100 --> 06:35.200
+I sit on my chair in front of the computer.
+
+06:35.820 --> 06:36.260
+How?
+
+06:36.460 --> 06:38.920
+The V-cycle is going to affect my activities.
+
+06:39.660 --> 06:44.980
+So, the aim of this second module is to bring everything that you have seen
+
+06:44.980 --> 06:51.060
+in the previous presentation that is, let's say, general,
+
+06:51.060 --> 06:55.520
+and try to place this V-cycle on a real project.
+
+06:55.520 --> 07:04.120
+This is a project I was working on, and of course, I will not mention it for copyrights reasons,
+
+07:04.120 --> 07:10.180
+but this is actually a real case scenario I was working on,
+
+07:10.180 --> 07:17.680
+and we will see how all that we have said about the V-cycle actually applies also on a real case scenario.
+
+07:17.680 --> 07:23.080
+So, let's move to this other slide.
+
+07:23.080 --> 07:30.900
+You will not get this presentation yet because this is part of a bigger presentation
+
+07:30.900 --> 07:36.300
+that will arrive later in the validation learning and training program.
+
+07:36.300 --> 07:45.780
+But you can, you know, have a look at the video and then, let's say, use it to study.
+
+07:46.600 --> 07:48.260
+Let's just see something.
+
+07:48.260 --> 07:59.420
+Okay, there is a little spoiler here, but then, yeah, let's see what it is.
+
+08:00.360 --> 08:01.960
+So, what is that?
+
+08:03.240 --> 08:09.860
+I imagine that that's what you ask yourself once you have seen the first video,
+
+08:10.140 --> 08:14.680
+and then you received the exercise after the first video.
+
+08:14.680 --> 08:20.220
+In front of this slide, probably everyone would have asked himself or herself,
+
+08:20.680 --> 08:23.880
+okay, what am I supposed to do with this drawing?
+
+08:24.120 --> 08:25.460
+What are all these dots?
+
+08:25.640 --> 08:26.920
+What are this stuff?
+
+08:27.760 --> 08:31.940
+This is an intended shock, let's say, that we provide you
+
+08:31.940 --> 08:39.000
+because we want first to test how you react from the, let's say, didactical point of view
+
+08:39.000 --> 08:45.900
+that is the first module of this, of this, yeah, VooCycle topic
+
+08:45.900 --> 08:50.560
+and see what you're able to understand about something like this
+
+08:50.560 --> 08:55.620
+and how you would place the VooCycle here on a real case scenario.
+
+08:56.560 --> 09:00.580
+Of course, you are going to watch this video right after you have tried
+
+09:00.580 --> 09:05.860
+at least once or twice or three times to resolve the exercise, okay?
+
+09:06.760 --> 09:12.180
+Not everything is answerable from the exercise without this explanation,
+
+09:12.640 --> 09:13.920
+but part of it, it is.
+
+09:14.100 --> 09:18.280
+So, before you move on, please make sure that you have already shared
+
+09:18.280 --> 09:22.600
+one of your solutions of the exercise before this one will,
+
+09:22.760 --> 09:25.760
+this explanation will probably reply to all the questions
+
+09:25.760 --> 09:29.720
+that are asked for the VooCycle exercise.
+
+09:30.800 --> 09:31.740
+So, let's see.
+
+09:32.340 --> 09:35.520
+As you can imagine, this is a, yeah, of course,
+
+09:35.600 --> 09:37.920
+looking at the top part of the presentation,
+
+09:38.240 --> 09:40.040
+here we see a timeline, okay?
+
+09:41.340 --> 09:45.640
+What we really care about starts in 2020 and 2022.
+
+09:46.480 --> 09:51.780
+So, the lifespan of this project is 2020 to 2022.
+
+09:52.520 --> 09:54.320
+Let's start from the left part.
+
+09:54.320 --> 09:59.780
+So, the left part is the, let's say, first moments of a project, okay?
+
+10:00.160 --> 10:05.840
+And while we move on the right side of this slide,
+
+10:05.960 --> 10:07.860
+we are advancing in time.
+
+10:08.540 --> 10:12.540
+That means that the project is advancing as well,
+
+10:12.580 --> 10:14.300
+or at least it's supposed to advance.
+
+10:14.400 --> 10:17.720
+So, the maturity of the project is advancing.
+
+10:17.720 --> 10:22.240
+So, as you see here, in the top left part of the slide,
+
+10:22.340 --> 10:23.440
+there is the program approval.
+
+10:24.300 --> 10:27.200
+Program approval is something that really happens
+
+10:27.200 --> 10:30.180
+at a very high level of the project, okay?
+
+10:31.060 --> 10:31.660
+Oh, yeah.
+
+10:31.760 --> 10:34.700
+Well, probably we can use the, once again,
+
+10:34.860 --> 10:39.180
+the most used software in the engineering world,
+
+10:39.180 --> 10:40.600
+which is paint.
+
+10:41.600 --> 10:43.860
+So, let's use it so we can draw,
+
+10:44.060 --> 10:48.660
+we can draw something in here, okay?
+
+10:48.980 --> 10:50.880
+Okay, let's keep 100% for now.
+
+10:51.920 --> 10:52.880
+Okay, great.
+
+10:52.880 --> 10:56.680
+So, here we have the program approval, okay?
+
+10:56.760 --> 10:57.800
+I'll mark it in red.
+
+10:58.160 --> 11:01.740
+Here, guys, this is a very high level,
+
+11:02.060 --> 11:03.500
+high management decision.
+
+11:03.680 --> 11:05.140
+So, it's the management deciding,
+
+11:05.300 --> 11:08.660
+okay, we are going to create,
+
+11:08.800 --> 11:12.040
+to work on this project, okay?
+
+11:12.040 --> 11:19.520
+I don't know, let's call it ST project, okay?
+
+11:20.160 --> 11:22.980
+So, our card is the ST project, okay?
+
+11:23.260 --> 11:29.680
+This is the project plan for the ST project, okay?
+
+11:29.900 --> 11:31.560
+This is a fictional card.
+
+11:32.860 --> 11:36.360
+Then, let's analyze some of these lines.
+
+11:36.360 --> 11:41.020
+I would see, we will work on the spec freeze,
+
+11:41.740 --> 11:43.780
+PCR fleet, eco,
+
+11:44.320 --> 11:47.960
+and then this line starting from here onward,
+
+11:48.520 --> 11:51.460
+this line onward, and stuff like this.
+
+11:52.440 --> 11:54.300
+Let's start from the spec freeze.
+
+11:54.700 --> 11:57.080
+The spec freeze is the moment
+
+11:57.080 --> 12:04.460
+when a set of requirements are freeze, okay?
+
+12:04.460 --> 12:09.220
+Frozen freeze, you pick the right way
+
+12:09.220 --> 12:10.520
+to pronounce it or to say.
+
+12:11.220 --> 12:12.460
+This means that, okay,
+
+12:13.540 --> 12:17.000
+at this date, the 22nd of May,
+
+12:17.480 --> 12:18.240
+we will have,
+
+12:18.780 --> 12:22.420
+I'm just, you know, inventing numbers.
+
+12:22.600 --> 12:24.320
+I don't remember the actual numbers,
+
+12:25.220 --> 12:26.200
+but we will have,
+
+12:26.620 --> 12:30.340
+let's put it, let's make it smaller.
+
+12:30.340 --> 12:38.660
+We'll have like 25% of the requirements
+
+12:38.660 --> 12:41.080
+will be ready,
+
+12:41.520 --> 12:42.360
+and most of all,
+
+12:42.560 --> 12:45.420
+they will be official, okay?
+
+12:45.800 --> 12:49.860
+So, this means that 25% of the requirements are ready.
+
+12:51.760 --> 12:53.260
+As you can see here,
+
+12:53.260 --> 12:57.080
+there is a delta time
+
+12:57.080 --> 13:01.100
+that passes from here to here, okay?
+
+13:01.920 --> 13:04.340
+This time, this delta time, let's see,
+
+13:04.740 --> 13:07.400
+is the time where once we know
+
+13:07.400 --> 13:09.080
+that this program is going to happen,
+
+13:09.440 --> 13:12.480
+then there will be a team
+
+13:12.480 --> 13:15.520
+working on writing the requirements.
+
+13:15.520 --> 13:18.600
+So, here, we will have
+
+13:18.600 --> 13:22.580
+what is the up-left part of the V cycle,
+
+13:22.960 --> 13:23.900
+the software requirement.
+
+13:24.080 --> 13:25.560
+Do you remember the previous slide
+
+13:25.560 --> 13:28.620
+where we had this first block
+
+13:28.620 --> 13:33.040
+up-left side of the V cycle?
+
+13:33.420 --> 13:34.120
+Here it is.
+
+13:34.520 --> 13:36.180
+So, here, there will be a team
+
+13:36.180 --> 13:38.060
+writing software requirement.
+
+13:38.880 --> 13:40.620
+Of course, they will need some time
+
+13:40.620 --> 13:41.780
+to write these requirements,
+
+13:42.220 --> 13:44.340
+so they start writing the requirements,
+
+13:44.340 --> 13:47.720
+and they will need one month,
+
+13:47.820 --> 13:48.620
+two months, three months.
+
+13:48.680 --> 13:49.920
+It depends on how much,
+
+13:50.500 --> 13:52.200
+how many requirements we want to share
+
+13:52.200 --> 13:55.420
+for this date, the 22 of May.
+
+13:55.740 --> 13:57.480
+But then we will arrive that
+
+13:57.480 --> 14:01.420
+the 22 of May,
+
+14:01.840 --> 14:03.700
+the 0A release will be ready.
+
+14:03.920 --> 14:05.960
+This means that 25% of the requirement
+
+14:05.960 --> 14:06.980
+will be shared.
+
+14:09.760 --> 14:11.480
+This is a timeline, okay?
+
+14:11.480 --> 14:13.700
+Remember always to look both
+
+14:13.700 --> 14:16.600
+to the timeline on the top part of the slide
+
+14:16.600 --> 14:19.780
+and the timeline that we are working on here, okay?
+
+14:20.320 --> 14:22.980
+As soon as we go on the right part of the slide,
+
+14:23.120 --> 14:24.420
+we are advancing in time.
+
+14:25.180 --> 14:27.660
+You see, there are also other releases
+
+14:27.660 --> 14:28.980
+that we will have the 1A,
+
+14:29.120 --> 14:30.180
+we will have the 2A,
+
+14:30.920 --> 14:31.720
+but in general,
+
+14:32.120 --> 14:35.360
+as your general understanding,
+
+14:35.360 --> 14:38.080
+we will not have just three releases,
+
+14:38.260 --> 14:39.800
+0A, 1A, and 2A.
+
+14:40.240 --> 14:41.300
+In my experience,
+
+14:41.400 --> 14:44.260
+I've seen 0A, 0B,
+
+14:44.960 --> 14:48.660
+the 0C, 1A, and 2A.
+
+14:48.800 --> 14:51.240
+These are five milestones,
+
+14:51.420 --> 14:52.460
+let's say, for the requirements.
+
+14:52.840 --> 14:54.980
+And you can understand that from 0A,
+
+14:55.140 --> 14:56.640
+we will have the 25%,
+
+14:56.640 --> 15:00.080
+I don't know, 0B, 50%,
+
+15:00.080 --> 15:01.640
+0C, 75%,
+
+15:01.640 --> 15:03.680
+1A, 100% of the requirements.
+
+15:04.120 --> 15:07.400
+And then we will have another
+
+15:07.400 --> 15:10.540
+and last release of the requirements
+
+15:10.540 --> 15:13.880
+where we simply modify what was not working before
+
+15:13.880 --> 15:16.100
+if we realize that there was something wrong
+
+15:16.100 --> 15:16.800
+on the requirements.
+
+15:16.800 --> 15:21.180
+So we will have a last release of the requirement,
+
+15:21.360 --> 15:22.060
+that is the 2A.
+
+15:22.060 --> 15:24.420
+As you see here,
+
+15:24.500 --> 15:27.860
+there are no other phases after this 2A.
+
+15:27.980 --> 15:30.320
+So this means that all the requirements
+
+15:30.320 --> 15:34.060
+must be ready and finished
+
+15:34.060 --> 15:36.380
+within the 2A.
+
+15:36.560 --> 15:37.600
+After the 2A,
+
+15:37.920 --> 15:40.860
+there will be no new requirements.
+
+15:40.860 --> 15:45.740
+Of course, this is an ideal perspective,
+
+15:45.880 --> 15:46.280
+let's say.
+
+15:46.380 --> 15:48.660
+This is an ideal situation.
+
+15:48.660 --> 15:54.020
+Quite likely in the likelihood of a project,
+
+15:54.180 --> 15:55.560
+in the reality of the project,
+
+15:56.000 --> 15:58.640
+it happens that we will have other requirements
+
+15:58.640 --> 16:00.620
+in late phases of the project.
+
+16:00.760 --> 16:02.320
+But this is an emergency case.
+
+16:02.740 --> 16:04.420
+Most of the requirements should be closed
+
+16:04.420 --> 16:06.480
+or at least 100% of the requirements
+
+16:06.480 --> 16:09.260
+should be closed up and running,
+
+16:09.500 --> 16:10.000
+let's say,
+
+16:10.400 --> 16:12.160
+not modifiable,
+
+16:12.920 --> 16:14.320
+from the 2A on.
+
+16:14.320 --> 16:17.820
+The 2A is the last time
+
+16:17.820 --> 16:20.560
+we can upload update requirements.
+
+16:20.760 --> 16:20.840
+Okay.
+
+16:21.680 --> 16:23.020
+But let's move back
+
+16:23.020 --> 16:24.380
+to what we were saying before.
+
+16:24.800 --> 16:27.740
+So when the requirements are released here,
+
+16:28.140 --> 16:29.420
+let's say here we have
+
+16:29.420 --> 16:30.820
+the software requirement release.
+
+16:30.920 --> 16:31.040
+Okay.
+
+16:31.080 --> 16:33.120
+Where the 25% of the requirements are written.
+
+16:33.780 --> 16:35.460
+As you remember from the presentation
+
+16:35.460 --> 16:36.500
+I was showing before,
+
+16:36.600 --> 16:39.520
+so let's move back for one second.
+
+16:40.300 --> 16:41.760
+Here you see the software requirements
+
+16:41.760 --> 16:42.800
+is the first step.
+
+16:42.800 --> 16:44.800
+Then there will be other steps.
+
+16:44.940 --> 16:46.780
+These steps will be part of
+
+16:46.780 --> 16:49.760
+the software development team.
+
+16:49.880 --> 16:51.820
+So we will not see anything
+
+16:51.820 --> 16:52.900
+that happens between
+
+16:52.900 --> 16:55.180
+the release of the requirements
+
+16:55.180 --> 16:57.740
+and the release of the first software.
+
+16:58.120 --> 17:00.480
+The release of the first software,
+
+17:00.600 --> 17:01.340
+in this case,
+
+17:01.540 --> 17:04.400
+considering just ECHO1 timeline,
+
+17:04.880 --> 17:06.420
+is this B100.
+
+17:06.420 --> 17:08.640
+So as you see,
+
+17:08.760 --> 17:10.400
+the B100 is released,
+
+17:10.640 --> 17:15.120
+was released on 16th of September 2020,
+
+17:15.640 --> 17:16.700
+while the requirements
+
+17:16.700 --> 17:21.160
+were released 22th of May 2020.
+
+17:21.800 --> 17:24.460
+So there were like four months
+
+17:24.460 --> 17:25.720
+between the two releases.
+
+17:26.560 --> 17:28.120
+What happened in these two months?
+
+17:28.240 --> 17:29.080
+In these two months,
+
+17:29.180 --> 17:30.320
+it happened that
+
+17:30.320 --> 17:32.860
+the requirements were shared
+
+17:32.860 --> 17:34.040
+with the software developers.
+
+17:34.520 --> 17:35.620
+The software developers
+
+17:35.620 --> 17:37.160
+discussed the requirements
+
+17:37.160 --> 17:45.260
+with the specification engineer,
+
+17:45.380 --> 17:46.420
+so the engineer
+
+17:46.420 --> 17:47.460
+that wrote the requirement.
+
+17:47.620 --> 17:48.440
+So there is a discussion
+
+17:48.440 --> 17:50.760
+between the requirement engineer
+
+17:50.760 --> 17:53.580
+and the software developers.
+
+17:54.120 --> 17:55.980
+And once they agree on everything,
+
+17:56.860 --> 17:58.580
+then the requirements are,
+
+17:58.720 --> 17:59.780
+let's say, finalized.
+
+17:59.780 --> 18:00.660
+So these requirements
+
+18:00.660 --> 18:02.480
+are agreed between the parties.
+
+18:02.960 --> 18:04.640
+And then the software developer team
+
+18:04.640 --> 18:06.360
+starts to work on the requirement
+
+18:06.360 --> 18:08.340
+and to actually implement them
+
+18:08.340 --> 18:08.900
+in the software.
+
+18:09.420 --> 18:09.820
+How?
+
+18:10.100 --> 18:12.280
+First, creating a software architecture,
+
+18:12.560 --> 18:13.660
+then a software design,
+
+18:13.760 --> 18:16.480
+and finally constructing the software.
+
+18:22.160 --> 18:24.660
+So the requirements are shared
+
+18:24.660 --> 18:27.160
+and agreed between
+
+18:27.160 --> 18:28.680
+the requirement engineer
+
+18:28.680 --> 18:30.240
+and the software development team.
+
+18:31.220 --> 18:31.800
+And finally,
+
+18:31.920 --> 18:33.220
+the software development team
+
+18:33.220 --> 18:34.360
+starts to work on them.
+
+18:34.840 --> 18:35.900
+They create an architecture,
+
+18:36.080 --> 18:37.100
+they design the software,
+
+18:37.280 --> 18:38.400
+and they write the software.
+
+18:39.260 --> 18:41.040
+Then they release the software.
+
+18:41.360 --> 18:43.480
+So here we are simply
+
+18:43.480 --> 18:45.520
+descending the left part
+
+18:45.520 --> 18:46.560
+of the cycle, okay?
+
+18:47.020 --> 18:51.280
+So this was the software requirement,
+
+18:51.920 --> 18:52.160
+okay?
+
+18:52.460 --> 18:54.580
+And here we start to go down the V
+
+18:54.580 --> 18:57.160
+until we have the release
+
+18:57.160 --> 18:58.240
+of the first software.
+
+18:59.200 --> 19:00.800
+So they build the software
+
+19:00.800 --> 19:02.140
+and then they give us,
+
+19:02.380 --> 19:04.920
+so let's go down here for a while.
+
+19:05.400 --> 19:08.220
+And then we start to raise the V,
+
+19:08.620 --> 19:08.980
+okay?
+
+19:09.720 --> 19:13.580
+Where we find the first part
+
+19:13.580 --> 19:15.360
+that really matters
+
+19:15.360 --> 19:17.460
+to us that are following
+
+19:17.460 --> 19:18.660
+the validation program.
+
+19:19.440 --> 19:20.040
+So remember,
+
+19:20.300 --> 19:21.940
+this is the software requirement block.
+
+19:22.080 --> 19:23.920
+Then we have the software architecture block.
+
+19:23.920 --> 19:26.040
+We have the software design block.
+
+19:26.260 --> 19:28.220
+Here we have the software construction.
+
+19:29.140 --> 19:30.880
+And then we will have the,
+
+19:31.960 --> 19:32.400
+let's see,
+
+19:32.480 --> 19:34.060
+here at the phase of unit testing.
+
+19:34.540 --> 19:36.060
+So here we will receive
+
+19:36.060 --> 19:38.100
+the first software.
+
+19:39.560 --> 19:41.700
+Where we upload this software,
+
+19:42.040 --> 19:44.720
+so we have a bunch of lines of code,
+
+19:45.140 --> 19:45.440
+okay?
+
+19:46.080 --> 19:48.120
+But then we have to test this software.
+
+19:48.120 --> 19:50.120
+So to test this software,
+
+19:50.260 --> 19:53.220
+we will need a benchtop.
+
+19:53.680 --> 19:55.780
+You will see different stuff
+
+19:55.780 --> 19:57.020
+about these benchtops,
+
+19:57.140 --> 19:58.600
+different kind of benchtops,
+
+19:58.700 --> 19:59.220
+the car,
+
+19:59.720 --> 20:00.640
+and stuff like this.
+
+20:00.720 --> 20:01.720
+So hardware in the loop,
+
+20:01.820 --> 20:02.700
+software in the loop,
+
+20:02.920 --> 20:04.740
+whatever, okay?
+
+20:04.780 --> 20:06.460
+There will be many strategies
+
+20:06.460 --> 20:07.820
+to perform these tests.
+
+20:07.980 --> 20:10.180
+But for the sake of this explanation,
+
+20:10.880 --> 20:13.760
+we consider as an hypothesis
+
+20:13.760 --> 20:16.040
+that before we received the software,
+
+20:16.040 --> 20:17.820
+there was a team working
+
+20:17.820 --> 20:19.760
+in preparing the benchtop for us,
+
+20:19.820 --> 20:20.020
+okay?
+
+20:20.460 --> 20:21.380
+This will be clearer
+
+20:21.380 --> 20:24.100
+once you move forward
+
+20:24.100 --> 20:25.960
+to the training program.
+
+20:26.500 --> 20:27.360
+But for now,
+
+20:27.460 --> 20:28.280
+let's consider that
+
+20:28.280 --> 20:30.000
+we already have a benchtop
+
+20:30.000 --> 20:31.280
+that is ready to be tested.
+
+20:31.420 --> 20:32.540
+So we have a benchtop.
+
+20:33.060 --> 20:35.800
+We have the electronic control unit one.
+
+20:36.440 --> 20:37.900
+And when we receive the software
+
+20:37.900 --> 20:40.160
+related to the electronic control unit one,
+
+20:40.160 --> 20:44.140
+then we flash or upload the software
+
+20:44.140 --> 20:46.460
+on the electronic control unit
+
+20:46.460 --> 20:48.220
+and we start the test.
+
+20:49.680 --> 20:50.320
+Question.
+
+20:51.040 --> 20:52.660
+What kind of test do we start?
+
+20:53.520 --> 20:56.820
+Guys, please remember always
+
+20:56.820 --> 20:59.020
+that the starting point
+
+20:59.020 --> 21:00.700
+and the full purpose
+
+21:00.700 --> 21:01.680
+of the verification,
+
+21:02.160 --> 21:02.920
+of the validation,
+
+21:03.340 --> 21:04.160
+and in general,
+
+21:04.720 --> 21:05.940
+the testing activities
+
+21:05.940 --> 21:07.740
+is to make sure
+
+21:07.740 --> 21:08.920
+that the software
+
+21:08.920 --> 21:10.960
+and so the system
+
+21:10.960 --> 21:12.440
+behaves
+
+21:12.440 --> 21:14.420
+as the requirements
+
+21:14.420 --> 21:15.700
+described,
+
+21:16.240 --> 21:16.520
+okay?
+
+21:17.160 --> 21:18.180
+This is the reason
+
+21:18.180 --> 21:19.140
+why the requirements
+
+21:19.140 --> 21:20.300
+are always
+
+21:20.300 --> 21:22.600
+the most important phase,
+
+21:22.940 --> 21:23.280
+okay?
+
+21:24.060 --> 21:25.900
+They are extremely important
+
+21:25.900 --> 21:27.620
+because they are the input document
+
+21:27.620 --> 21:28.360
+for everything.
+
+21:29.000 --> 21:30.480
+Whenever we have to test,
+
+21:30.620 --> 21:31.660
+what we test
+
+21:31.660 --> 21:32.840
+is that the software
+
+21:32.840 --> 21:34.300
+behaves according
+
+21:34.300 --> 21:35.440
+to the requirements,
+
+21:35.880 --> 21:36.080
+okay?
+
+21:37.300 --> 21:39.100
+Requirements must enter
+
+21:39.100 --> 21:40.000
+in your head.
+
+21:40.100 --> 21:40.440
+I don't know
+
+21:40.440 --> 21:41.480
+if you want to
+
+21:41.480 --> 21:43.280
+tattoo
+
+21:43.280 --> 21:44.920
+these requirements
+
+21:44.920 --> 21:45.760
+on your heart.
+
+21:46.080 --> 21:47.160
+You want to write
+
+21:47.160 --> 21:48.620
+requirements everywhere
+
+21:48.620 --> 21:50.720
+on your copybook,
+
+21:50.840 --> 21:51.180
+wherever,
+
+21:51.340 --> 21:53.140
+put as a screen saver
+
+21:53.140 --> 21:54.220
+on your computer.
+
+21:54.860 --> 21:56.320
+What is extremely important
+
+21:56.320 --> 21:57.240
+is that you remember
+
+21:57.240 --> 21:58.660
+that the input
+
+21:58.660 --> 22:00.020
+of all,
+
+22:00.540 --> 22:00.980
+all,
+
+22:01.500 --> 22:02.800
+all the activities
+
+22:02.800 --> 22:04.200
+that you will see here
+
+22:04.200 --> 22:05.020
+in this company
+
+22:05.020 --> 22:06.740
+starts from
+
+22:06.740 --> 22:07.960
+the requirements,
+
+22:08.400 --> 22:08.640
+okay?
+
+22:09.460 --> 22:09.780
+So,
+
+22:10.680 --> 22:12.240
+this is actually,
+
+22:12.680 --> 22:13.660
+again,
+
+22:13.920 --> 22:14.560
+an experience
+
+22:14.560 --> 22:15.520
+that I had.
+
+22:15.940 --> 22:16.100
+So,
+
+22:16.240 --> 22:17.420
+I was working
+
+22:17.420 --> 22:18.220
+on this project
+
+22:18.220 --> 22:19.040
+when I received
+
+22:19.040 --> 22:20.640
+B100 software.
+
+22:21.160 --> 22:22.400
+There was another team
+
+22:22.400 --> 22:23.840
+working on a benchtop.
+
+22:24.120 --> 22:25.660
+This team provided me
+
+22:25.660 --> 22:26.320
+the benchtop.
+
+22:26.700 --> 22:27.940
+I had the electronic
+
+22:27.940 --> 22:29.060
+control unit one.
+
+22:29.420 --> 22:30.800
+I flashed the software
+
+22:30.800 --> 22:31.840
+and I had
+
+22:31.840 --> 22:32.580
+to make sure
+
+22:32.580 --> 22:33.320
+that the software
+
+22:33.320 --> 22:34.280
+behaved according
+
+22:34.280 --> 22:35.860
+to the 25%
+
+22:35.860 --> 22:36.660
+of the requirements
+
+22:36.660 --> 22:37.420
+that were shared
+
+22:37.420 --> 22:38.480
+on the zero errorings,
+
+22:38.760 --> 22:39.020
+okay?
+
+22:39.520 --> 22:39.820
+So,
+
+22:39.900 --> 22:40.380
+we have
+
+22:40.380 --> 22:42.560
+a bunch of requirements
+
+22:42.560 --> 22:43.660
+and we make sure
+
+22:43.660 --> 22:44.660
+that these requirements
+
+22:44.660 --> 22:46.980
+are properly implemented
+
+22:46.980 --> 22:47.640
+in the software,
+
+22:47.900 --> 22:48.200
+okay?
+
+22:49.480 --> 22:51.280
+As you see here,
+
+22:51.340 --> 22:52.360
+there is a similarities
+
+22:52.360 --> 22:53.120
+in colors,
+
+22:53.280 --> 22:53.580
+okay?
+
+22:53.580 --> 22:53.920
+So,
+
+22:54.180 --> 22:55.280
+this light blue
+
+22:55.280 --> 22:56.560
+is the same light blue
+
+22:56.560 --> 22:57.260
+that we have
+
+22:57.260 --> 22:58.740
+on all these points,
+
+22:58.820 --> 22:59.100
+okay?
+
+22:59.860 --> 23:01.100
+I'm just focusing
+
+23:01.100 --> 23:02.180
+on the development
+
+23:02.180 --> 23:03.140
+of ECO1,
+
+23:03.340 --> 23:04.360
+but as you've already
+
+23:04.360 --> 23:05.600
+seen in the introduction
+
+23:05.600 --> 23:06.680
+videos about
+
+23:06.680 --> 23:08.180
+the e-architecture
+
+23:08.180 --> 23:09.500
+or generally
+
+23:09.500 --> 23:10.440
+of all the electronic
+
+23:10.440 --> 23:11.180
+control units
+
+23:11.180 --> 23:11.720
+that you have
+
+23:11.720 --> 23:12.160
+on a car,
+
+23:12.640 --> 23:13.900
+you may realize
+
+23:13.900 --> 23:14.900
+that there are
+
+23:14.900 --> 23:15.780
+like 30,
+
+23:16.200 --> 23:16.680
+40,
+
+23:17.180 --> 23:18.700
+50 electronic
+
+23:18.700 --> 23:19.660
+control units
+
+23:19.660 --> 23:20.960
+inside the car.
+
+23:20.960 --> 23:21.400
+So,
+
+23:22.040 --> 23:23.320
+what we say
+
+23:23.320 --> 23:24.300
+for one electronic
+
+23:24.300 --> 23:25.120
+control unit
+
+23:25.120 --> 23:26.500
+may apply also
+
+23:26.500 --> 23:27.500
+for other 30,
+
+23:27.660 --> 23:27.920
+40,
+
+23:27.940 --> 23:29.060
+or 50 electronic
+
+23:29.060 --> 23:29.900
+control units.
+
+23:31.440 --> 23:32.940
+We have requirements
+
+23:32.940 --> 23:33.760
+that are related
+
+23:33.760 --> 23:34.660
+to the bull car,
+
+23:34.920 --> 23:36.400
+so it means
+
+23:36.400 --> 23:37.320
+that these requirements
+
+23:37.320 --> 23:39.060
+to be properly
+
+23:39.060 --> 23:39.640
+implemented
+
+23:39.640 --> 23:41.440
+need the collaboration
+
+23:41.440 --> 23:43.200
+of many electronic
+
+23:43.200 --> 23:43.980
+control units
+
+23:43.980 --> 23:45.500
+or some requirements
+
+23:45.500 --> 23:46.300
+that are specific
+
+23:46.300 --> 23:47.420
+for one electronic
+
+23:47.420 --> 23:48.160
+control unit.
+
+23:48.620 --> 23:49.200
+But anyway,
+
+23:49.380 --> 23:49.720
+we will
+
+23:49.720 --> 23:51.980
+deep this
+
+23:51.980 --> 23:53.520
+topic
+
+23:53.520 --> 23:54.140
+in further
+
+23:54.140 --> 23:54.800
+lessons.
+
+23:55.740 --> 23:56.300
+So,
+
+23:56.380 --> 23:56.880
+we arrived
+
+23:56.880 --> 23:57.720
+at the unit test
+
+23:57.720 --> 23:58.040
+phase.
+
+23:58.160 --> 23:58.300
+Okay,
+
+23:58.340 --> 23:58.920
+do you remember
+
+23:58.920 --> 23:59.620
+we are here?
+
+23:59.860 --> 24:00.800
+Why unit test?
+
+24:02.260 --> 24:02.820
+Especially
+
+24:02.820 --> 24:05.060
+for the first
+
+24:05.060 --> 24:06.100
+part of the project,
+
+24:06.660 --> 24:08.000
+you do not
+
+24:08.000 --> 24:08.560
+have
+
+24:08.560 --> 24:10.560
+a
+
+24:10.560 --> 24:12.400
+system
+
+24:12.400 --> 24:13.260
+that looks
+
+24:13.260 --> 24:14.000
+like the final
+
+24:14.000 --> 24:14.500
+product.
+
+24:14.960 --> 24:15.180
+So,
+
+24:15.220 --> 24:15.480
+basically,
+
+24:15.660 --> 24:16.280
+we do not
+
+24:16.280 --> 24:17.060
+have a car.
+
+24:17.060 --> 24:17.960
+we do not
+
+24:17.960 --> 24:19.120
+have a very
+
+24:19.120 --> 24:19.780
+advanced
+
+24:19.780 --> 24:21.440
+hardware in the
+
+24:21.440 --> 24:21.800
+loop that
+
+24:21.800 --> 24:22.640
+simulate the car
+
+24:22.640 --> 24:23.360
+because we are
+
+24:23.360 --> 24:23.980
+at the beginning
+
+24:23.980 --> 24:24.680
+of the project.
+
+24:25.240 --> 24:25.340
+So,
+
+24:25.420 --> 24:25.740
+at the beginning
+
+24:25.740 --> 24:26.500
+of the project,
+
+24:26.620 --> 24:26.820
+here,
+
+24:26.900 --> 24:28.040
+we just focus
+
+24:28.040 --> 24:28.820
+on one
+
+24:28.820 --> 24:29.540
+electronic
+
+24:29.540 --> 24:30.420
+control unit.
+
+24:30.760 --> 24:31.400
+This is why
+
+24:31.400 --> 24:32.360
+here we mentioned
+
+24:32.360 --> 24:33.600
+the unit test,
+
+24:33.860 --> 24:35.160
+which is focusing
+
+24:35.160 --> 24:35.820
+on testing
+
+24:35.820 --> 24:36.760
+just our
+
+24:36.760 --> 24:37.640
+component.
+
+24:37.900 --> 24:38.040
+So,
+
+24:38.140 --> 24:38.420
+here,
+
+24:38.500 --> 24:39.220
+most of the time,
+
+24:39.320 --> 24:39.720
+we have
+
+24:39.720 --> 24:41.340
+a simplified
+
+24:41.340 --> 24:42.180
+hardware in the
+
+24:42.180 --> 24:42.760
+loop where there
+
+24:42.760 --> 24:43.800
+is an ideal
+
+24:43.800 --> 24:44.680
+and simplified
+
+24:44.680 --> 24:45.840
+model of a car,
+
+24:45.840 --> 24:47.220
+the only
+
+24:47.220 --> 24:48.540
+available hardware
+
+24:48.540 --> 24:49.460
+is our
+
+24:49.460 --> 24:50.440
+electronic control
+
+24:50.440 --> 24:51.140
+unit and we
+
+24:51.140 --> 24:51.840
+work only
+
+24:51.840 --> 24:52.660
+with the
+
+24:52.660 --> 24:53.500
+electronic control
+
+24:53.500 --> 24:54.200
+unit 1,
+
+24:54.460 --> 24:55.180
+testing the
+
+24:55.180 --> 24:55.940
+software B100.
+
+24:57.120 --> 24:58.180
+You see here
+
+24:58.180 --> 24:58.800
+there are many
+
+24:58.800 --> 24:59.520
+other software,
+
+24:59.680 --> 25:00.700
+B110,
+
+25:01.040 --> 25:02.000
+B120,
+
+25:02.360 --> 25:02.960
+and stuff like
+
+25:02.960 --> 25:03.240
+this.
+
+25:03.980 --> 25:04.940
+This can be
+
+25:04.940 --> 25:05.980
+both because
+
+25:05.980 --> 25:06.940
+the 0A
+
+25:06.940 --> 25:07.580
+requirements
+
+25:07.580 --> 25:08.560
+couldn't be
+
+25:08.560 --> 25:09.200
+implemented
+
+25:09.200 --> 25:10.560
+fully in
+
+25:10.560 --> 25:11.500
+B100 and
+
+25:11.500 --> 25:12.020
+maybe they
+
+25:12.020 --> 25:12.760
+splitted part
+
+25:12.760 --> 25:13.480
+in B100,
+
+25:13.720 --> 25:14.740
+part in B110
+
+25:14.740 --> 25:15.580
+and other
+
+25:15.580 --> 25:16.940
+part of B120,
+
+25:17.480 --> 25:18.420
+but also because
+
+25:18.420 --> 25:19.200
+once we start
+
+25:19.200 --> 25:19.660
+testing,
+
+25:20.920 --> 25:22.660
+we can have
+
+25:22.660 --> 25:23.560
+problems and
+
+25:23.560 --> 25:24.440
+we will see
+
+25:24.440 --> 25:25.180
+what happens
+
+25:25.180 --> 25:25.860
+in that case.
+
+25:27.120 --> 25:28.240
+Let's focus on
+
+25:28.240 --> 25:29.160
+something very
+
+25:29.160 --> 25:29.960
+important that
+
+25:29.960 --> 25:30.840
+is up here.
+
+25:31.020 --> 25:31.140
+So,
+
+25:31.220 --> 25:32.020
+I slightly
+
+25:32.020 --> 25:33.140
+delete this
+
+25:33.140 --> 25:35.520
+part because
+
+25:35.520 --> 25:37.200
+I want to
+
+25:37.200 --> 25:38.040
+focus on
+
+25:38.040 --> 25:40.080
+this timeline,
+
+25:40.460 --> 25:41.040
+this one.
+
+25:41.040 --> 25:42.480
+this is the
+
+25:42.480 --> 25:43.460
+timeline of
+
+25:43.460 --> 25:44.400
+the vehicles.
+
+25:45.860 --> 25:46.460
+Let's
+
+25:46.460 --> 25:47.200
+explain this
+
+25:47.200 --> 25:47.560
+better.
+
+25:48.600 --> 25:49.000
+Where you
+
+25:49.000 --> 25:49.500
+see here
+
+25:49.500 --> 25:50.260
+Mule 1,
+
+25:50.500 --> 25:51.580
+Mule 1 is
+
+25:51.580 --> 25:52.320
+the first
+
+25:52.320 --> 25:53.800
+prototype ever
+
+25:53.800 --> 25:54.540
+of that
+
+25:54.540 --> 25:55.200
+project.
+
+25:55.960 --> 25:56.600
+This is a
+
+25:56.600 --> 25:57.320
+car that is
+
+25:57.320 --> 25:58.460
+built by hand
+
+25:58.460 --> 25:58.900
+basically.
+
+25:59.260 --> 25:59.400
+Okay?
+
+25:59.980 --> 26:00.220
+So,
+
+26:00.460 --> 26:02.460
+parts of
+
+26:02.460 --> 26:03.140
+other cars
+
+26:03.140 --> 26:03.720
+are taken,
+
+26:04.240 --> 26:04.580
+they're put,
+
+26:04.820 --> 26:05.500
+they're all
+
+26:05.500 --> 26:05.960
+together,
+
+26:06.080 --> 26:06.420
+they're put
+
+26:06.420 --> 26:06.840
+together,
+
+26:06.840 --> 26:07.260
+and we
+
+26:07.260 --> 26:07.660
+create
+
+26:07.660 --> 26:08.220
+first
+
+26:08.220 --> 26:08.900
+prototype.
+
+26:10.760 --> 26:11.660
+Is this
+
+26:11.660 --> 26:12.220
+just a
+
+26:12.220 --> 26:12.620
+random
+
+26:12.620 --> 26:13.300
+prototype?
+
+26:13.720 --> 26:14.000
+No.
+
+26:14.500 --> 26:14.880
+Probably
+
+26:14.880 --> 26:15.800
+10% of
+
+26:15.800 --> 26:16.300
+this car
+
+26:16.300 --> 26:17.560
+will be
+
+26:17.560 --> 26:20.760
+what we
+
+26:20.760 --> 26:21.860
+will find
+
+26:21.860 --> 26:22.140
+in the
+
+26:22.140 --> 26:22.860
+final product,
+
+26:23.120 --> 26:23.600
+while the
+
+26:23.600 --> 26:24.600
+90% of
+
+26:24.600 --> 26:24.940
+the car
+
+26:24.940 --> 26:25.460
+is something
+
+26:25.460 --> 26:25.920
+different.
+
+26:26.540 --> 26:26.720
+So,
+
+26:26.760 --> 26:27.160
+the purpose
+
+26:27.160 --> 26:27.740
+here is
+
+26:27.740 --> 26:28.180
+just to
+
+26:28.180 --> 26:29.040
+test the
+
+26:29.040 --> 26:30.040
+10% of
+
+26:30.040 --> 26:30.400
+the car
+
+26:30.400 --> 26:32.960
+that will
+
+26:32.960 --> 26:33.500
+be actually
+
+26:33.500 --> 26:34.220
+part of
+
+26:34.220 --> 26:34.700
+the final
+
+26:34.700 --> 26:35.220
+product.
+
+26:35.220 --> 26:37.100
+Why I'm
+
+26:37.100 --> 26:37.720
+focusing on
+
+26:37.720 --> 26:37.940
+this?
+
+26:38.020 --> 26:38.540
+I'm focusing
+
+26:38.540 --> 26:38.940
+on this
+
+26:38.940 --> 26:39.720
+because this
+
+26:39.720 --> 26:40.320
+means that
+
+26:40.320 --> 26:41.900
+before this
+
+26:41.900 --> 26:42.960
+16th of
+
+26:42.960 --> 26:43.480
+November,
+
+26:44.200 --> 26:44.720
+before,
+
+26:44.900 --> 26:45.200
+there are
+
+26:45.200 --> 26:45.720
+no cars.
+
+26:46.320 --> 26:46.460
+Okay?
+
+26:46.900 --> 26:47.280
+So,
+
+26:47.400 --> 26:47.680
+we are
+
+26:47.680 --> 26:48.320
+working on
+
+26:48.320 --> 26:48.820
+a project
+
+26:48.820 --> 26:49.660
+to create
+
+26:49.660 --> 26:50.080
+a car,
+
+26:50.400 --> 26:50.980
+to work
+
+26:50.980 --> 26:51.400
+on this
+
+26:51.400 --> 26:51.880
+car that
+
+26:51.880 --> 26:52.340
+we call
+
+26:52.340 --> 26:52.720
+ST
+
+26:52.720 --> 26:53.160
+project,
+
+26:53.860 --> 26:54.740
+but before
+
+26:54.740 --> 26:55.620
+16th of
+
+26:55.620 --> 26:56.120
+November,
+
+26:56.740 --> 26:57.360
+if everything
+
+26:57.360 --> 26:58.040
+goes according
+
+26:58.040 --> 26:58.340
+to the
+
+26:58.340 --> 26:58.540
+plan,
+
+26:58.840 --> 26:59.320
+we have
+
+26:59.320 --> 27:00.480
+no car.
+
+27:01.320 --> 27:01.620
+So,
+
+27:01.720 --> 27:02.600
+this explains
+
+27:02.600 --> 27:03.620
+you why
+
+27:03.620 --> 27:04.480
+we focus
+
+27:04.480 --> 27:05.200
+first on
+
+27:05.200 --> 27:05.920
+unit test
+
+27:05.920 --> 27:06.300
+because at
+
+27:06.300 --> 27:06.720
+the beginning
+
+27:06.720 --> 27:07.560
+it's extremely
+
+27:07.560 --> 27:08.860
+important first
+
+27:08.860 --> 27:09.500
+to test that
+
+27:09.500 --> 27:10.080
+the single
+
+27:10.080 --> 27:10.820
+unit works
+
+27:10.820 --> 27:11.260
+properly.
+
+27:12.000 --> 27:12.300
+Then,
+
+27:12.420 --> 27:12.880
+once we
+
+27:12.880 --> 27:13.300
+move in
+
+27:13.300 --> 27:13.820
+the timeline,
+
+27:14.160 --> 27:14.440
+we will
+
+27:14.440 --> 27:15.320
+have other
+
+27:15.320 --> 27:15.880
+electronic
+
+27:15.880 --> 27:16.780
+control unit,
+
+27:17.640 --> 27:18.160
+let's say
+
+27:18.160 --> 27:18.620
+in a way
+
+27:18.620 --> 27:19.280
+debugged,
+
+27:19.360 --> 27:19.980
+or at least
+
+27:19.980 --> 27:21.000
+other components
+
+27:21.000 --> 27:21.620
+that start
+
+27:21.620 --> 27:22.340
+to be more
+
+27:22.340 --> 27:22.820
+mature,
+
+27:23.280 --> 27:23.820
+and we can
+
+27:23.820 --> 27:24.220
+move to
+
+27:24.220 --> 27:24.600
+the next
+
+27:24.600 --> 27:25.200
+phase of
+
+27:25.200 --> 27:25.960
+the system
+
+27:25.960 --> 27:27.840
+testing,
+
+27:28.060 --> 27:28.180
+okay?
+
+27:28.220 --> 27:28.860
+The integration
+
+27:28.860 --> 27:29.420
+testing,
+
+27:29.560 --> 27:29.780
+sorry.
+
+27:30.160 --> 27:30.400
+So,
+
+27:30.400 --> 27:31.100
+we don't
+
+27:31.100 --> 27:31.800
+have just
+
+27:31.800 --> 27:32.620
+the test
+
+27:32.620 --> 27:33.240
+of one
+
+27:33.240 --> 27:34.720
+component,
+
+27:34.720 --> 27:35.120
+but then
+
+27:35.120 --> 27:35.520
+we start
+
+27:35.520 --> 27:35.900
+to put
+
+27:35.900 --> 27:36.380
+together
+
+27:36.380 --> 27:37.180
+more
+
+27:37.180 --> 27:37.720
+electronic
+
+27:37.720 --> 27:38.140
+control
+
+27:38.140 --> 27:38.600
+units.
+
+27:39.640 --> 27:40.400
+This is
+
+27:40.400 --> 27:41.100
+needed because,
+
+27:41.300 --> 27:41.700
+as I was
+
+27:41.700 --> 27:42.080
+mentioning
+
+27:42.080 --> 27:42.560
+before,
+
+27:43.020 --> 27:43.780
+the requirements
+
+27:43.780 --> 27:44.780
+are the
+
+27:44.780 --> 27:45.740
+feature that
+
+27:45.740 --> 27:46.300
+we have on
+
+27:46.300 --> 27:46.720
+cars,
+
+27:46.860 --> 27:47.440
+most of
+
+27:47.440 --> 27:48.360
+them imply
+
+27:48.360 --> 27:49.040
+the collaboration
+
+27:49.040 --> 27:49.660
+of more
+
+27:49.660 --> 27:50.120
+than one
+
+27:50.120 --> 27:50.600
+electronic
+
+27:50.600 --> 27:51.300
+control unit.
+
+27:51.720 --> 27:52.320
+I always
+
+27:52.320 --> 27:52.620
+do the
+
+27:52.620 --> 27:53.160
+example of
+
+27:53.160 --> 27:53.500
+the cruise
+
+27:53.500 --> 27:53.880
+control,
+
+27:54.000 --> 27:54.360
+or for
+
+27:54.360 --> 27:54.720
+example,
+
+27:54.820 --> 27:55.440
+the adaptive
+
+27:55.440 --> 27:56.260
+cruise control.
+
+27:56.400 --> 27:56.860
+The adaptive
+
+27:56.860 --> 27:57.920
+cruise control
+
+27:57.920 --> 27:58.540
+is a feature
+
+27:58.540 --> 27:59.780
+that allows
+
+27:59.780 --> 28:00.360
+you to
+
+28:00.360 --> 28:01.080
+follow a
+
+28:01.080 --> 28:01.660
+car without
+
+28:01.660 --> 28:02.480
+just braking
+
+28:02.480 --> 28:03.280
+or accelerating.
+
+28:03.440 --> 28:03.720
+The car
+
+28:03.720 --> 28:04.040
+will do
+
+28:04.040 --> 28:04.620
+everything by
+
+28:04.620 --> 28:05.020
+itself.
+
+28:05.660 --> 28:06.020
+In order
+
+28:06.020 --> 28:06.400
+to do
+
+28:06.400 --> 28:06.660
+that,
+
+28:06.760 --> 28:07.080
+the car
+
+28:07.080 --> 28:07.480
+needs to
+
+28:07.480 --> 28:08.160
+read information
+
+28:08.160 --> 28:08.640
+from the
+
+28:08.640 --> 28:09.000
+radar,
+
+28:09.440 --> 28:09.780
+from the
+
+28:09.780 --> 28:10.140
+camera,
+
+28:10.560 --> 28:10.920
+and then
+
+28:10.920 --> 28:11.400
+accelerate
+
+28:11.400 --> 28:12.200
+by itself,
+
+28:12.520 --> 28:13.380
+brake by
+
+28:13.380 --> 28:13.800
+itself.
+
+28:14.200 --> 28:14.360
+So,
+
+28:14.540 --> 28:14.960
+all these
+
+28:14.960 --> 28:16.740
+devices are
+
+28:16.740 --> 28:17.500
+not controlled
+
+28:17.500 --> 28:18.700
+just by one
+
+28:18.700 --> 28:19.220
+electronic
+
+28:19.220 --> 28:19.960
+control unit,
+
+28:20.320 --> 28:20.680
+but there
+
+28:20.680 --> 28:21.400
+are more
+
+28:21.400 --> 28:22.000
+than one,
+
+28:22.120 --> 28:22.460
+there are
+
+28:22.460 --> 28:22.680
+two,
+
+28:22.840 --> 28:23.040
+three,
+
+28:23.200 --> 28:23.400
+four,
+
+28:23.680 --> 28:24.400
+five electronic
+
+28:24.400 --> 28:25.200
+control units
+
+28:25.200 --> 28:26.460
+working to
+
+28:26.460 --> 28:27.560
+make the
+
+28:27.560 --> 28:28.580
+adaptive cruise
+
+28:28.580 --> 28:29.320
+control working
+
+28:29.320 --> 28:29.880
+properly in
+
+28:29.880 --> 28:30.200
+the car.
+
+28:31.120 --> 28:31.440
+So,
+
+28:32.080 --> 28:32.640
+it's okay
+
+28:32.640 --> 28:33.420
+that I have
+
+28:33.420 --> 28:34.220
+the single
+
+28:34.220 --> 28:35.300
+electronic control
+
+28:35.300 --> 28:36.060
+unit working
+
+28:36.060 --> 28:36.580
+properly,
+
+28:36.880 --> 28:37.360
+but then,
+
+28:37.460 --> 28:38.780
+in order to
+
+28:38.780 --> 28:39.480
+make this
+
+28:39.480 --> 28:40.560
+feature working
+
+28:40.560 --> 28:41.480
+properly also
+
+28:41.480 --> 28:42.380
+on a car,
+
+28:42.520 --> 28:43.180
+so that actually
+
+28:43.180 --> 28:44.080
+a driver can
+
+28:44.080 --> 28:44.880
+use an adaptive
+
+28:44.880 --> 28:45.680
+cruise control,
+
+28:46.080 --> 28:46.800
+it's extremely
+
+28:46.800 --> 28:47.720
+important that
+
+28:47.720 --> 28:48.400
+not just the
+
+28:48.400 --> 28:49.100
+unit works,
+
+28:49.380 --> 28:50.060
+but that also
+
+28:50.060 --> 28:50.820
+the different
+
+28:50.820 --> 28:52.900
+units participating
+
+28:52.900 --> 28:53.340
+with this
+
+28:53.340 --> 28:54.580
+feature talk
+
+28:54.580 --> 28:55.600
+properly to
+
+28:55.600 --> 28:56.220
+each other
+
+28:56.220 --> 28:57.500
+and make
+
+28:57.500 --> 28:58.060
+sure that the
+
+28:58.060 --> 28:58.800
+adaptive cruise
+
+28:58.800 --> 28:59.420
+control will
+
+28:59.420 --> 29:00.120
+work properly
+
+29:00.120 --> 29:00.760
+on a car.
+
+29:01.500 --> 29:01.660
+So,
+
+29:01.800 --> 29:02.580
+before we
+
+29:02.580 --> 29:03.500
+arrive to
+
+29:03.500 --> 29:04.220
+the testing
+
+29:04.220 --> 29:05.120
+phase in
+
+29:05.120 --> 29:05.880
+the car,
+
+29:06.500 --> 29:07.240
+we perform
+
+29:07.240 --> 29:08.180
+first unit
+
+29:08.180 --> 29:08.580
+test,
+
+29:08.920 --> 29:10.000
+then integration
+
+29:10.000 --> 29:10.480
+test,
+
+29:10.620 --> 29:11.120
+so we start
+
+29:11.120 --> 29:11.880
+to put together
+
+29:11.880 --> 29:12.460
+the electronic
+
+29:12.460 --> 29:13.280
+control units
+
+29:13.280 --> 29:13.960
+and see what
+
+29:13.960 --> 29:14.540
+happens when
+
+29:14.540 --> 29:15.060
+they talk to
+
+29:15.060 --> 29:15.520
+each other
+
+29:15.520 --> 29:16.220
+and if they
+
+29:16.220 --> 29:16.920
+talk properly
+
+29:16.920 --> 29:17.300
+to each
+
+29:17.300 --> 29:17.540
+other,
+
+29:18.260 --> 29:18.880
+and finally,
+
+29:19.020 --> 29:19.700
+we arrive to
+
+29:19.700 --> 29:20.060
+the last
+
+29:20.060 --> 29:20.480
+phase,
+
+29:20.620 --> 29:20.740
+okay,
+
+29:20.840 --> 29:21.320
+now this
+
+29:21.320 --> 29:22.540
+V is a bit
+
+29:22.540 --> 29:22.900
+weird,
+
+29:23.020 --> 29:23.540
+let's say
+
+29:23.540 --> 29:24.040
+it's something
+
+29:24.040 --> 29:24.640
+like this,
+
+29:25.900 --> 29:26.440
+we arrive to
+
+29:26.440 --> 29:26.800
+the last
+
+29:26.800 --> 29:27.640
+phase here,
+
+29:28.060 --> 29:28.560
+that is
+
+29:28.560 --> 29:29.000
+the new
+
+29:29.000 --> 29:29.340
+one,
+
+29:29.460 --> 29:30.080
+so here
+
+29:30.080 --> 29:30.820
+finally we
+
+29:30.820 --> 29:31.560
+have the
+
+29:31.560 --> 29:32.460
+first car,
+
+29:33.000 --> 29:33.600
+on a car
+
+29:33.600 --> 29:34.360
+we do not
+
+29:34.360 --> 29:35.240
+focus only
+
+29:35.240 --> 29:35.720
+on the
+
+29:35.720 --> 29:36.840
+single unit,
+
+29:37.160 --> 29:37.500
+but we
+
+29:37.500 --> 29:38.720
+focus on the
+
+29:38.720 --> 29:39.760
+whole system
+
+29:39.760 --> 29:40.400
+performing
+
+29:40.400 --> 29:41.000
+functional
+
+29:41.000 --> 29:41.500
+tests,
+
+29:41.500 --> 29:43.020
+so now
+
+29:43.020 --> 29:43.940
+we see that
+
+29:43.940 --> 29:44.460
+there is a
+
+29:44.460 --> 29:44.900
+connection
+
+29:44.900 --> 29:45.640
+between this
+
+29:45.640 --> 29:46.220
+V cycle
+
+29:46.220 --> 29:46.860
+that is
+
+29:46.860 --> 29:47.420
+on a slide
+
+29:47.420 --> 29:48.080
+and a
+
+29:48.080 --> 29:48.580
+V cycle
+
+29:48.580 --> 29:49.780
+seen on
+
+29:49.780 --> 29:50.100
+a real
+
+29:50.100 --> 29:50.620
+project,
+
+29:50.880 --> 29:51.120
+okay,
+
+29:52.520 --> 29:53.300
+so let's
+
+29:53.300 --> 29:53.800
+see if I
+
+29:53.800 --> 29:54.220
+can
+
+29:54.220 --> 29:56.640
+clean a
+
+29:56.640 --> 29:57.220
+bit the
+
+29:57.220 --> 29:57.720
+mess that
+
+29:57.720 --> 29:58.300
+I created
+
+29:58.300 --> 29:58.980
+over here,
+
+30:01.560 --> 30:03.040
+maybe it's
+
+30:03.040 --> 30:03.600
+better just
+
+30:03.600 --> 30:04.080
+to move
+
+30:04.080 --> 30:05.020
+here directly,
+
+30:05.020 --> 30:06.960
+so we're
+
+30:06.960 --> 30:07.780
+at this
+
+30:07.780 --> 30:08.160
+point,
+
+30:08.720 --> 30:10.220
+here you
+
+30:10.220 --> 30:11.020
+see we
+
+30:11.020 --> 30:12.040
+have the
+
+30:12.040 --> 30:13.160
+first V
+
+30:13.160 --> 30:13.720
+cycle
+
+30:13.720 --> 30:15.840
+drawn on
+
+30:15.840 --> 30:18.440
+a real
+
+30:18.440 --> 30:20.160
+project
+
+30:20.160 --> 30:22.240
+plan
+
+30:22.240 --> 30:22.840
+card,
+
+30:22.840 --> 30:24.220
+so I
+
+30:24.220 --> 30:24.400
+have a
+
+30:24.400 --> 30:24.740
+look at
+
+30:24.740 --> 30:24.960
+this
+
+30:24.960 --> 30:25.260
+slide
+
+30:25.260 --> 30:26.120
+for a
+
+30:26.120 --> 30:26.420
+while,
+
+30:26.420 --> 30:52.300
+okay,
+
+30:52.440 --> 30:52.940
+this is the
+
+30:52.940 --> 30:53.580
+final slide,
+
+30:53.720 --> 30:55.860
+so you
+
+30:55.860 --> 30:56.340
+see that
+
+30:56.340 --> 30:57.120
+V cycle
+
+30:57.120 --> 30:57.760
+repeats
+
+30:57.760 --> 30:58.540
+itself
+
+30:58.540 --> 30:59.320
+many,
+
+30:59.320 --> 31:00.060
+many,
+
+31:00.060 --> 31:01.340
+many times,
+
+31:01.480 --> 31:01.660
+okay,
+
+31:01.840 --> 31:02.560
+this is just
+
+31:02.560 --> 31:03.140
+a qualitative
+
+31:03.140 --> 31:03.980
+expression,
+
+31:04.280 --> 31:04.440
+okay,
+
+31:04.900 --> 31:05.640
+this doesn't
+
+31:05.640 --> 31:06.000
+mean that
+
+31:06.000 --> 31:06.440
+we have
+
+31:06.440 --> 31:06.660
+I don't
+
+31:06.660 --> 31:06.760
+know,
+
+31:06.820 --> 31:07.040
+1,
+
+31:07.120 --> 31:07.260
+2,
+
+31:07.400 --> 31:07.700
+3,
+
+31:07.700 --> 31:08.180
+4,
+
+31:08.280 --> 31:08.500
+5,
+
+31:08.580 --> 31:08.760
+6,
+
+31:08.760 --> 31:09.460
+I drawn
+
+31:09.460 --> 31:09.820
+just
+
+31:09.820 --> 31:10.640
+6 V
+
+31:10.640 --> 31:11.040
+cycles,
+
+31:11.160 --> 31:11.480
+but V
+
+31:11.480 --> 31:11.720
+cycle
+
+31:11.720 --> 31:12.220
+repeats
+
+31:12.220 --> 31:13.660
+itself
+
+31:13.660 --> 31:14.760
+over and
+
+31:14.760 --> 31:15.120
+over
+
+31:15.120 --> 31:15.600
+again,
+
+31:16.360 --> 31:16.800
+why,
+
+31:17.040 --> 31:17.740
+because I
+
+31:17.740 --> 31:18.120
+received
+
+31:18.120 --> 31:18.580
+the B100,
+
+31:18.820 --> 31:19.180
+then I
+
+31:19.180 --> 31:19.440
+start
+
+31:19.440 --> 31:19.860
+testing,
+
+31:20.040 --> 31:20.280
+let's
+
+31:20.280 --> 31:20.600
+say I
+
+31:20.600 --> 31:20.920
+start
+
+31:20.920 --> 31:21.320
+testing
+
+31:21.320 --> 31:21.740
+something
+
+31:21.740 --> 31:21.980
+in
+
+31:21.980 --> 31:22.540
+Mule 1,
+
+31:23.540 --> 31:24.220
+which is
+
+31:24.220 --> 31:26.380
+the first
+
+31:26.380 --> 31:27.200
+prototype or
+
+31:27.200 --> 31:28.120
+even while
+
+31:28.120 --> 31:29.440
+testing in
+
+31:29.440 --> 31:30.340
+my electronic
+
+31:30.340 --> 31:31.200
+control unit,
+
+31:31.280 --> 31:32.040
+in the unit
+
+31:32.040 --> 31:32.420
+test,
+
+31:32.740 --> 31:33.420
+I realized
+
+31:33.420 --> 31:33.780
+there is
+
+31:33.780 --> 31:34.480
+something wrong,
+
+31:34.780 --> 31:35.300
+there might be
+
+31:35.300 --> 31:36.040
+something wrong
+
+31:36.040 --> 31:36.860
+on the requirements,
+
+31:37.120 --> 31:38.340
+there could be
+
+31:38.340 --> 31:39.120
+something wrong
+
+31:39.120 --> 31:40.160
+on the
+
+31:40.160 --> 31:41.080
+software side,
+
+31:41.280 --> 31:41.880
+and stuff like
+
+31:41.880 --> 31:42.140
+this,
+
+31:42.680 --> 31:43.220
+but if
+
+31:43.220 --> 31:43.800
+something is
+
+31:43.800 --> 31:44.520
+not working,
+
+31:45.060 --> 31:45.700
+which means
+
+31:45.700 --> 31:46.440
+if the
+
+31:46.440 --> 31:47.220
+software and
+
+31:47.220 --> 31:47.740
+the system
+
+31:47.740 --> 31:48.340
+are not
+
+31:48.340 --> 31:49.520
+behaving as
+
+31:49.520 --> 31:50.440
+the requirement
+
+31:50.440 --> 31:51.220
+expects,
+
+31:52.120 --> 31:53.340
+then I
+
+31:53.340 --> 31:55.180
+raise an
+
+31:55.180 --> 31:55.540
+issue,
+
+31:55.820 --> 31:56.140
+saying,
+
+31:56.300 --> 31:56.400
+okay,
+
+31:56.440 --> 31:56.780
+there is an
+
+31:56.780 --> 31:57.200
+issue with
+
+31:57.200 --> 31:57.660
+the system,
+
+31:58.320 --> 31:58.900
+the issue
+
+31:58.900 --> 31:59.720
+is analyzed
+
+31:59.720 --> 32:00.240
+by,
+
+32:01.180 --> 32:01.960
+first of
+
+32:01.960 --> 32:02.240
+all,
+
+32:02.340 --> 32:02.860
+by us,
+
+32:03.260 --> 32:03.560
+so we
+
+32:03.560 --> 32:04.160
+perform a
+
+32:04.160 --> 32:05.140
+first analysis,
+
+32:06.000 --> 32:06.360
+and then,
+
+32:07.000 --> 32:08.220
+or someone
+
+32:08.220 --> 32:09.000
+will help us,
+
+32:09.120 --> 32:09.520
+and then if
+
+32:09.520 --> 32:10.160
+it's a
+
+32:10.160 --> 32:10.860
+software
+
+32:10.860 --> 32:11.480
+requirement,
+
+32:12.220 --> 32:13.540
+then the
+
+32:13.540 --> 32:15.480
+software must
+
+32:15.480 --> 32:16.920
+be modified,
+
+32:17.460 --> 32:18.140
+so again,
+
+32:18.300 --> 32:18.980
+could be an
+
+32:18.980 --> 32:19.460
+architectural
+
+32:19.460 --> 32:20.160
+problem,
+
+32:20.360 --> 32:20.920
+a design
+
+32:20.920 --> 32:21.440
+problem,
+
+32:21.440 --> 32:22.100
+or simply
+
+32:22.100 --> 32:22.940
+a one-line
+
+32:22.940 --> 32:24.060
+code problem,
+
+32:24.960 --> 32:26.100
+the software
+
+32:26.100 --> 32:26.640
+is modified,
+
+32:26.960 --> 32:27.500
+and then a
+
+32:27.500 --> 32:27.960
+new version
+
+32:27.960 --> 32:28.540
+of the software
+
+32:28.540 --> 32:29.240
+is released,
+
+32:29.380 --> 32:29.820
+so we will
+
+32:29.820 --> 32:30.620
+have another,
+
+32:31.000 --> 32:31.400
+let's say,
+
+32:31.480 --> 32:32.100
+V cycle,
+
+32:32.960 --> 32:33.860
+but this time,
+
+32:34.020 --> 32:34.740
+this line of
+
+32:34.740 --> 32:35.400
+the unit test
+
+32:35.400 --> 32:36.280
+will not pass
+
+32:36.280 --> 32:36.780
+through the
+
+32:36.780 --> 32:37.540
+B100,
+
+32:37.900 --> 32:38.520
+but will pass
+
+32:38.520 --> 32:39.760
+for B110.
+
+32:39.760 --> 32:41.580
+so every
+
+32:41.580 --> 32:42.160
+time you
+
+32:42.160 --> 32:42.440
+have a
+
+32:42.440 --> 32:43.180
+software release,
+
+32:43.280 --> 32:43.580
+there will
+
+32:43.580 --> 32:43.980
+be a
+
+32:43.980 --> 32:44.500
+V cycle,
+
+32:44.880 --> 32:45.140
+okay,
+
+32:46.300 --> 32:47.860
+or again,
+
+32:48.000 --> 32:48.600
+in case the
+
+32:48.600 --> 32:49.120
+problem were
+
+32:49.120 --> 32:49.840
+the requirements,
+
+32:50.040 --> 32:50.360
+because there
+
+32:50.360 --> 32:51.260
+was something
+
+32:51.260 --> 32:51.960
+not clear,
+
+32:52.140 --> 32:52.920
+or a requirement
+
+32:52.920 --> 32:53.440
+was not
+
+32:53.440 --> 32:54.220
+properly written,
+
+32:54.700 --> 32:55.200
+then the
+
+32:55.200 --> 32:55.600
+V cycle
+
+32:55.600 --> 32:56.660
+repeats itself,
+
+32:57.240 --> 32:58.020
+and requirements
+
+32:58.020 --> 32:58.940
+are modified,
+
+32:59.640 --> 33:00.620
+eventually there
+
+33:00.620 --> 33:01.520
+is a 0B
+
+33:01.520 --> 33:01.900
+release,
+
+33:01.980 --> 33:02.460
+as we were
+
+33:02.460 --> 33:03.360
+mentioning before,
+
+33:03.700 --> 33:04.300
+so an updated
+
+33:04.300 --> 33:05.000
+version of the
+
+33:05.000 --> 33:05.520
+requirements,
+
+33:05.520 --> 33:08.680
+a new
+
+33:08.680 --> 33:09.280
+software is
+
+33:09.280 --> 33:09.640
+developed,
+
+33:09.960 --> 33:10.460
+and then a
+
+33:10.460 --> 33:10.900
+new software
+
+33:10.900 --> 33:11.580
+is released,
+
+33:11.820 --> 33:13.140
+and we keep
+
+33:13.140 --> 33:14.140
+testing the
+
+33:14.140 --> 33:14.760
+requirements,
+
+33:14.920 --> 33:15.060
+okay,
+
+33:15.100 --> 33:15.660
+so we start
+
+33:15.660 --> 33:16.700
+testing activities,
+
+33:17.280 --> 33:18.780
+still trying
+
+33:18.780 --> 33:20.120
+to make sure
+
+33:20.120 --> 33:20.540
+that the
+
+33:20.540 --> 33:20.880
+software,
+
+33:21.060 --> 33:21.540
+and then the
+
+33:21.540 --> 33:21.900
+system,
+
+33:22.500 --> 33:23.400
+behaves according
+
+33:23.400 --> 33:23.880
+to the
+
+33:23.880 --> 33:24.320
+requirements,
+
+33:24.700 --> 33:24.920
+okay,
+
+33:25.300 --> 33:26.740
+okay,
+
+33:26.900 --> 33:27.900
+so the
+
+33:27.900 --> 33:28.400
+V cycle
+
+33:28.400 --> 33:29.420
+repeats itself
+
+33:29.420 --> 33:30.000
+many,
+
+33:30.200 --> 33:30.540
+many,
+
+33:30.540 --> 33:31.540
+many times,
+
+33:31.660 --> 33:31.820
+okay,
+
+33:31.820 --> 33:32.440
+so just keep
+
+33:32.440 --> 33:33.080
+in mind that
+
+33:33.080 --> 33:33.660
+this is a
+
+33:33.660 --> 33:34.300
+process that
+
+33:34.300 --> 33:34.680
+you will
+
+33:34.680 --> 33:35.740
+always work
+
+33:35.740 --> 33:36.060
+with,
+
+33:36.180 --> 33:36.400
+okay,
+
+33:36.700 --> 33:37.840
+let's go
+
+33:37.840 --> 33:38.480
+back to
+
+33:38.480 --> 33:42.080
+this picture,
+
+33:42.320 --> 33:42.880
+so we were
+
+33:42.880 --> 33:44.100
+focusing here
+
+33:44.100 --> 33:45.660
+on this
+
+33:45.660 --> 33:46.260
+timeline,
+
+33:46.700 --> 33:47.560
+we have just
+
+33:47.560 --> 33:48.340
+mentioned the
+
+33:48.340 --> 33:48.980
+new one,
+
+33:49.360 --> 33:50.720
+this is just
+
+33:50.720 --> 33:51.620
+an invented
+
+33:51.620 --> 33:52.140
+number,
+
+33:52.340 --> 33:52.440
+okay,
+
+33:52.440 --> 33:53.040
+this is not
+
+33:53.040 --> 33:54.640
+actually true,
+
+33:54.860 --> 33:55.620
+but let's
+
+33:55.620 --> 33:56.320
+see that on
+
+33:56.320 --> 33:57.020
+the new one,
+
+33:57.900 --> 33:59.000
+10% of the
+
+33:59.000 --> 34:00.140
+car is
+
+34:00.140 --> 34:00.500
+the,
+
+34:00.780 --> 34:01.980
+what we will
+
+34:01.980 --> 34:03.060
+actually find,
+
+34:03.520 --> 34:03.880
+and the
+
+34:03.880 --> 34:04.720
+final project,
+
+34:04.840 --> 34:05.180
+so the
+
+34:05.180 --> 34:05.660
+car that
+
+34:05.660 --> 34:06.080
+is actually
+
+34:06.080 --> 34:07.360
+sold to
+
+34:07.360 --> 34:09.940
+people,
+
+34:10.320 --> 34:11.240
+while 90%
+
+34:11.240 --> 34:11.760
+is something
+
+34:11.760 --> 34:12.140
+else.
+
+34:12.760 --> 34:13.640
+As we move
+
+34:13.640 --> 34:14.160
+on on the
+
+34:14.160 --> 34:14.540
+timeline,
+
+34:14.960 --> 34:16.460
+so moving
+
+34:16.460 --> 34:16.940
+on on the
+
+34:16.940 --> 34:17.280
+timeline,
+
+34:17.500 --> 34:18.200
+it means that
+
+34:18.200 --> 34:19.340
+the software
+
+34:19.340 --> 34:19.760
+is,
+
+34:20.040 --> 34:20.660
+every time
+
+34:20.660 --> 34:21.040
+there is a
+
+34:21.040 --> 34:21.700
+software release,
+
+34:21.820 --> 34:22.220
+the software
+
+34:22.220 --> 34:22.780
+is better,
+
+34:22.900 --> 34:23.260
+the software
+
+34:23.260 --> 34:23.680
+is more
+
+34:23.680 --> 34:24.200
+complete,
+
+34:24.720 --> 34:25.740
+we are testing
+
+34:25.740 --> 34:26.180
+that the
+
+34:26.180 --> 34:27.560
+software complies
+
+34:27.560 --> 34:27.900
+with the
+
+34:27.900 --> 34:28.420
+requirements,
+
+34:28.680 --> 34:29.260
+there is also
+
+34:29.260 --> 34:29.900
+another release
+
+34:29.900 --> 34:30.160
+of the
+
+34:30.160 --> 34:30.660
+requirements,
+
+34:31.240 --> 34:32.280
+so it means
+
+34:32.280 --> 34:32.940
+that having
+
+34:32.940 --> 34:33.680
+a new set
+
+34:33.680 --> 34:34.300
+of requirements,
+
+34:34.480 --> 34:34.920
+we will have
+
+34:34.920 --> 34:35.440
+a software
+
+34:35.440 --> 34:36.060
+which will
+
+34:36.060 --> 34:36.960
+contain more
+
+34:36.960 --> 34:37.760
+requirements and
+
+34:37.760 --> 34:38.480
+stuff like this,
+
+34:38.560 --> 34:38.720
+okay,
+
+34:39.480 --> 34:40.680
+so we
+
+34:40.680 --> 34:42.080
+are getting,
+
+34:42.180 --> 34:42.720
+as soon as we
+
+34:42.720 --> 34:43.200
+move on the
+
+34:43.200 --> 34:43.760
+right side,
+
+34:43.860 --> 34:44.740
+a better software
+
+34:44.740 --> 34:45.340
+or a more
+
+34:45.340 --> 34:46.200
+complete software,
+
+34:46.740 --> 34:48.020
+then we will
+
+34:48.020 --> 34:48.640
+arrive to the
+
+34:48.640 --> 34:49.140
+face of the
+
+34:49.140 --> 34:49.560
+Mule 2,
+
+34:49.720 --> 34:50.320
+the Mule 2,
+
+34:50.480 --> 34:51.140
+and once again,
+
+34:51.280 --> 34:51.880
+here guys,
+
+34:51.980 --> 34:52.920
+I'm inventing
+
+34:52.920 --> 34:53.580
+these numbers,
+
+34:53.800 --> 34:53.940
+okay,
+
+34:53.980 --> 34:54.800
+so I'm not sure
+
+34:54.800 --> 34:55.640
+it's like this,
+
+34:55.840 --> 34:56.820
+something around
+
+34:56.820 --> 34:57.140
+this,
+
+34:57.300 --> 34:57.700
+but yeah,
+
+34:58.400 --> 34:59.620
+Mule 2 is still
+
+34:59.620 --> 35:00.160
+a prototype,
+
+35:00.160 --> 35:00.900
+but in this
+
+35:00.900 --> 35:01.580
+case we will
+
+35:01.580 --> 35:02.720
+have that 50%
+
+35:02.720 --> 35:03.320
+of the car
+
+35:03.320 --> 35:04.060
+is actually
+
+35:04.060 --> 35:05.120
+the car
+
+35:05.120 --> 35:05.680
+that we will
+
+35:05.680 --> 35:07.860
+find on the
+
+35:07.860 --> 35:08.200
+market,
+
+35:08.420 --> 35:08.840
+while the
+
+35:08.840 --> 35:09.700
+other 50%
+
+35:09.700 --> 35:10.220
+is something
+
+35:10.220 --> 35:10.600
+else,
+
+35:11.720 --> 35:12.500
+please keep
+
+35:12.500 --> 35:12.840
+in mind
+
+35:12.840 --> 35:13.240
+that the
+
+35:13.240 --> 35:13.840
+Mule 1
+
+35:13.840 --> 35:14.340
+is the
+
+35:14.340 --> 35:15.880
+first actual
+
+35:15.880 --> 35:16.760
+car for
+
+35:16.760 --> 35:17.620
+that project,
+
+35:18.200 --> 35:19.280
+so it means
+
+35:19.280 --> 35:19.600
+that you
+
+35:19.600 --> 35:20.660
+have one
+
+35:20.660 --> 35:21.160
+car,
+
+35:21.520 --> 35:21.760
+okay,
+
+35:23.160 --> 35:25.240
+then Mule 2,
+
+35:25.700 --> 35:26.840
+since it is
+
+35:26.840 --> 35:27.820
+similar to
+
+35:27.820 --> 35:28.380
+the final
+
+35:28.380 --> 35:28.820
+product,
+
+35:29.000 --> 35:29.420
+it makes
+
+35:29.420 --> 35:29.860
+sense to
+
+35:29.860 --> 35:30.380
+have more
+
+35:30.380 --> 35:31.000
+than one
+
+35:31.000 --> 35:31.420
+Mule,
+
+35:31.860 --> 35:32.460
+one than
+
+35:32.460 --> 35:33.000
+more car,
+
+35:33.120 --> 35:33.540
+so that we
+
+35:33.540 --> 35:34.080
+can start
+
+35:34.080 --> 35:34.700
+performing
+
+35:34.700 --> 35:35.520
+some tests,
+
+35:35.840 --> 35:36.000
+okay,
+
+35:36.780 --> 35:37.360
+keep in mind
+
+35:37.360 --> 35:37.800
+that it's
+
+35:37.800 --> 35:38.580
+very helpful
+
+35:38.580 --> 35:39.460
+and easy
+
+35:39.460 --> 35:40.040
+to work
+
+35:40.040 --> 35:40.340
+on an
+
+35:40.340 --> 35:40.800
+HIL,
+
+35:41.060 --> 35:41.280
+because,
+
+35:41.420 --> 35:41.660
+so an
+
+35:41.660 --> 35:42.080
+hardware in
+
+35:42.080 --> 35:42.320
+the loop,
+
+35:42.380 --> 35:44.100
+because we
+
+35:44.100 --> 35:44.580
+have just
+
+35:44.580 --> 35:45.440
+one real
+
+35:45.440 --> 35:45.820
+hardware,
+
+35:46.020 --> 35:46.360
+which is the
+
+35:46.360 --> 35:46.760
+electronic
+
+35:46.760 --> 35:47.640
+control unit
+
+35:47.640 --> 35:48.380
+that we
+
+35:48.380 --> 35:48.920
+are testing,
+
+35:49.440 --> 35:50.100
+but then
+
+35:50.100 --> 35:52.640
+everything
+
+35:52.640 --> 35:53.020
+that is
+
+35:53.020 --> 35:53.620
+around the
+
+35:53.620 --> 35:54.000
+electronic
+
+35:54.000 --> 35:54.640
+control unit
+
+35:54.640 --> 35:55.140
+is just
+
+35:55.140 --> 35:55.600
+a model,
+
+35:55.760 --> 35:56.340
+is ideal,
+
+35:56.600 --> 35:57.020
+so there
+
+35:57.020 --> 35:57.460
+are some
+
+35:57.460 --> 35:57.980
+situations
+
+35:57.980 --> 35:58.400
+that we
+
+35:58.400 --> 35:59.280
+cannot test
+
+35:59.280 --> 36:00.320
+or some
+
+36:00.320 --> 36:00.780
+problems
+
+36:00.780 --> 36:01.180
+that we
+
+36:01.180 --> 36:01.740
+could not
+
+36:01.740 --> 36:03.340
+realize and
+
+36:03.340 --> 36:03.940
+understand
+
+36:03.940 --> 36:05.040
+testing it
+
+36:05.040 --> 36:05.480
+from the
+
+36:05.480 --> 36:05.920
+hardware in
+
+36:05.920 --> 36:06.160
+the loop,
+
+36:06.240 --> 36:06.900
+but then
+
+36:06.900 --> 36:08.120
+that will
+
+36:08.120 --> 36:08.800
+be clear
+
+36:08.800 --> 36:09.460
+if we
+
+36:09.460 --> 36:09.860
+test it
+
+36:09.860 --> 36:10.100
+in the
+
+36:10.100 --> 36:10.340
+car,
+
+36:10.560 --> 36:10.840
+okay,
+
+36:11.080 --> 36:12.380
+so guys,
+
+36:12.380 --> 36:12.800
+in the
+
+36:12.800 --> 36:13.220
+past,
+
+36:13.500 --> 36:13.900
+all the
+
+36:13.900 --> 36:14.500
+tests were
+
+36:14.500 --> 36:15.020
+done on
+
+36:15.020 --> 36:16.260
+prototypes,
+
+36:16.660 --> 36:16.900
+okay,
+
+36:17.240 --> 36:17.920
+in the past
+
+36:17.920 --> 36:18.200
+when the
+
+36:18.200 --> 36:18.500
+car were
+
+36:18.500 --> 36:19.020
+mechanical
+
+36:19.020 --> 36:19.640
+and all
+
+36:19.640 --> 36:20.040
+of this
+
+36:20.040 --> 36:20.460
+software
+
+36:20.460 --> 36:21.040
+stuff was
+
+36:21.040 --> 36:21.360
+not
+
+36:21.360 --> 36:22.600
+reality,
+
+36:23.040 --> 36:23.380
+everything
+
+36:23.380 --> 36:24.020
+was done
+
+36:24.020 --> 36:24.780
+using these
+
+36:24.780 --> 36:25.300
+prototypes,
+
+36:25.300 --> 36:26.300
+prototypes,
+
+36:26.300 --> 36:26.500
+but prototypes
+
+36:26.500 --> 36:28.840
+are very
+
+36:28.840 --> 36:30.000
+expensive to
+
+36:30.000 --> 36:30.420
+be done,
+
+36:30.860 --> 36:31.200
+it's very
+
+36:31.200 --> 36:33.080
+slow
+
+36:33.080 --> 36:33.760
+activities,
+
+36:33.760 --> 36:34.440
+if you
+
+36:34.440 --> 36:35.260
+break a
+
+36:35.260 --> 36:35.700
+prototype,
+
+36:35.840 --> 36:36.120
+then to
+
+36:36.120 --> 36:36.620
+have another
+
+36:36.620 --> 36:36.900
+one,
+
+36:36.960 --> 36:37.420
+it takes
+
+36:37.420 --> 36:37.980
+weeks,
+
+36:38.400 --> 36:39.080
+so it's
+
+36:39.080 --> 36:39.660
+very slow
+
+36:39.660 --> 36:40.020
+and very
+
+36:40.020 --> 36:40.520
+expensive,
+
+36:40.520 --> 36:41.000
+so in
+
+36:41.000 --> 36:41.460
+order to
+
+36:41.460 --> 36:42.120
+save money,
+
+36:42.600 --> 36:42.900
+we are
+
+36:42.900 --> 36:43.420
+trying to
+
+36:43.420 --> 36:43.900
+push
+
+36:43.900 --> 36:44.560
+everything,
+
+36:44.840 --> 36:45.320
+to do
+
+36:45.320 --> 36:45.940
+everything that
+
+36:45.940 --> 36:46.480
+is possible
+
+36:46.480 --> 36:46.880
+on a
+
+36:46.880 --> 36:47.360
+hardware in
+
+36:47.360 --> 36:47.600
+the loop,
+
+36:47.720 --> 36:48.040
+which is,
+
+36:48.240 --> 36:48.520
+let's say,
+
+36:48.560 --> 36:48.940
+easy to
+
+36:48.940 --> 36:49.640
+configure it,
+
+36:50.100 --> 36:50.820
+easy to
+
+36:50.820 --> 36:51.400
+replace,
+
+36:51.620 --> 36:52.760
+easy to
+
+36:52.760 --> 36:55.340
+improve and
+
+36:55.340 --> 36:55.920
+stuff like
+
+36:55.920 --> 36:56.200
+this,
+
+36:56.560 --> 36:57.100
+or not
+
+36:57.100 --> 36:57.580
+easy in
+
+36:57.580 --> 36:57.920
+itself,
+
+36:58.020 --> 36:58.680
+but easier
+
+36:58.680 --> 36:59.380
+than having
+
+36:59.380 --> 36:59.840
+a car,
+
+37:00.160 --> 37:00.380
+okay,
+
+37:00.620 --> 37:01.420
+and for
+
+37:01.420 --> 37:01.800
+sure,
+
+37:02.280 --> 37:03.360
+less expensive
+
+37:03.360 --> 37:03.980
+and much
+
+37:03.980 --> 37:04.400
+faster.
+
+37:06.040 --> 37:06.560
+Again,
+
+37:06.680 --> 37:07.120
+once we
+
+37:07.120 --> 37:07.560
+move on,
+
+37:07.700 --> 37:08.160
+we have
+
+37:08.160 --> 37:08.600
+another
+
+37:08.600 --> 37:09.140
+development
+
+37:09.140 --> 37:09.580
+of the
+
+37:09.580 --> 37:09.820
+car,
+
+37:09.960 --> 37:10.500
+we arrive
+
+37:10.500 --> 37:10.800
+at the
+
+37:10.800 --> 37:11.080
+BP,
+
+37:11.300 --> 37:11.760
+which is,
+
+37:11.920 --> 37:12.260
+which are
+
+37:12.260 --> 37:12.660
+the vehicle
+
+37:12.660 --> 37:13.240
+production,
+
+37:13.780 --> 37:14.140
+here,
+
+37:14.460 --> 37:15.020
+once again,
+
+37:15.360 --> 37:15.600
+let's say,
+
+37:15.660 --> 37:16.080
+we have
+
+37:16.080 --> 37:17.340
+that 80%
+
+37:17.340 --> 37:18.540
+of the
+
+37:18.540 --> 37:19.200
+car is
+
+37:19.200 --> 37:19.740
+what we
+
+37:19.740 --> 37:20.520
+will actually
+
+37:20.520 --> 37:21.340
+find on
+
+37:21.340 --> 37:21.860
+the market,
+
+37:21.860 --> 37:23.980
+and 20%
+
+37:23.980 --> 37:24.700
+is still
+
+37:24.700 --> 37:25.460
+something else,
+
+37:25.600 --> 37:25.740
+okay,
+
+37:25.820 --> 37:26.320
+so there are
+
+37:26.320 --> 37:26.820
+still some
+
+37:26.820 --> 37:27.280
+parts that
+
+37:27.280 --> 37:27.700
+will be
+
+37:27.700 --> 37:28.320
+not really
+
+37:28.320 --> 37:29.660
+part of
+
+37:29.660 --> 37:30.000
+the final
+
+37:30.000 --> 37:30.560
+project.
+
+37:31.340 --> 37:31.700
+Vehicle
+
+37:31.700 --> 37:32.280
+production
+
+37:32.280 --> 37:32.680
+phase,
+
+37:32.760 --> 37:33.240
+maybe even
+
+37:33.240 --> 37:34.160
+85%,
+
+37:34.160 --> 37:34.520
+okay,
+
+37:34.580 --> 37:34.860
+so it
+
+37:34.860 --> 37:35.240
+means that
+
+37:35.240 --> 37:35.700
+this car
+
+37:35.700 --> 37:36.340
+is actually
+
+37:36.340 --> 37:36.980
+very close
+
+37:36.980 --> 37:37.300
+to the
+
+37:37.300 --> 37:37.860
+final one.
+
+37:38.840 --> 37:39.340
+Once we
+
+37:39.340 --> 37:39.640
+have a
+
+37:39.640 --> 37:40.040
+car that
+
+37:40.040 --> 37:40.600
+is so
+
+37:40.600 --> 37:41.260
+close to
+
+37:41.260 --> 37:41.840
+the final
+
+37:41.840 --> 37:42.240
+one,
+
+37:42.360 --> 37:42.800
+this means
+
+37:42.800 --> 37:43.600
+that performing
+
+37:43.600 --> 37:44.460
+tests on
+
+37:44.460 --> 37:44.960
+this car
+
+37:44.960 --> 37:45.360
+will be
+
+37:45.360 --> 37:45.800
+extremely
+
+37:45.800 --> 37:46.280
+helpful,
+
+37:46.280 --> 37:46.840
+because it
+
+37:46.840 --> 37:47.360
+will help
+
+37:47.360 --> 37:48.400
+us to
+
+37:48.400 --> 37:49.160
+understand
+
+37:49.160 --> 37:50.200
+if everything
+
+37:50.200 --> 37:50.920
+is working,
+
+37:50.920 --> 37:51.600
+not just
+
+37:51.600 --> 37:51.980
+in a
+
+37:51.980 --> 37:52.500
+laboratory
+
+37:52.500 --> 37:53.460
+or using
+
+37:53.460 --> 37:54.100
+a simulator,
+
+37:54.520 --> 37:55.280
+but also
+
+37:55.280 --> 37:56.440
+using actually
+
+37:56.440 --> 37:56.900
+the car
+
+37:56.900 --> 37:57.300
+in the
+
+37:57.300 --> 37:57.660
+street.
+
+37:59.120 --> 38:00.160
+PS is the
+
+38:00.160 --> 38:01.000
+pre-series
+
+38:01.000 --> 38:02.660
+car, so
+
+38:02.660 --> 38:03.280
+here, let's
+
+38:03.280 --> 38:03.800
+say that
+
+38:03.800 --> 38:05.840
+95%
+
+38:05.840 --> 38:06.360
+of the
+
+38:06.360 --> 38:06.900
+car or
+
+38:06.900 --> 38:07.280
+even
+
+38:07.280 --> 38:09.040
+98%
+
+38:09.040 --> 38:09.480
+of the
+
+38:09.480 --> 38:10.420
+car is
+
+38:10.420 --> 38:13.500
+the car
+
+38:13.500 --> 38:13.800
+that we
+
+38:13.800 --> 38:14.280
+will have
+
+38:14.280 --> 38:14.780
+at the
+
+38:14.780 --> 38:15.020
+end.
+
+38:15.020 --> 38:16.280
+PRA
+
+38:16.280 --> 38:18.920
+is, let's
+
+38:18.920 --> 38:19.360
+say, here
+
+38:19.360 --> 38:19.880
+we have
+
+38:19.880 --> 38:20.720
+that actual
+
+38:20.720 --> 38:21.540
+cars are
+
+38:21.540 --> 38:22.960
+already
+
+38:22.960 --> 38:23.980
+delivered to
+
+38:23.980 --> 38:24.500
+the management
+
+38:24.500 --> 38:24.920
+of the
+
+38:24.920 --> 38:25.580
+client, just
+
+38:25.580 --> 38:28.860
+to see
+
+38:28.860 --> 38:30.220
+how a
+
+38:30.220 --> 38:31.620
+car is
+
+38:31.620 --> 38:35.840
+actually
+
+38:35.840 --> 38:36.520
+performing
+
+38:36.520 --> 38:37.460
+used by
+
+38:37.460 --> 38:38.620
+a normal
+
+38:38.620 --> 38:39.560
+driver, so
+
+38:39.560 --> 38:40.680
+a driver that
+
+38:40.680 --> 38:41.020
+is not
+
+38:41.020 --> 38:42.040
+technician, but
+
+38:42.040 --> 38:42.500
+a normal
+
+38:42.500 --> 38:43.380
+person having
+
+38:43.380 --> 38:44.640
+the car, and
+
+38:44.640 --> 38:45.260
+finally, if
+
+38:45.260 --> 38:45.880
+everything is
+
+38:45.880 --> 38:47.120
+going well, then
+
+38:47.120 --> 38:47.780
+we will
+
+38:47.780 --> 38:48.860
+arrive to
+
+38:48.860 --> 38:50.000
+this phase, which
+
+38:50.000 --> 38:50.680
+is the most
+
+38:50.680 --> 38:52.500
+important phase, the
+
+38:52.500 --> 38:53.260
+one that we
+
+38:53.260 --> 38:54.500
+always look at,
+
+38:54.940 --> 38:55.920
+which is, in
+
+38:55.920 --> 38:56.600
+this case, called
+
+38:56.600 --> 38:57.640
+job one.
+
+38:58.060 --> 38:59.220
+Job one is
+
+38:59.220 --> 39:00.120
+the day when
+
+39:00.120 --> 39:00.620
+the production
+
+39:00.620 --> 39:01.440
+starts, the
+
+39:01.440 --> 39:02.160
+production, in
+
+39:02.160 --> 39:02.800
+series, of
+
+39:02.800 --> 39:03.200
+the car
+
+39:03.200 --> 39:03.820
+starts.
+
+39:03.820 --> 39:05.060
+this is a
+
+39:05.060 --> 39:05.500
+name that
+
+39:05.500 --> 39:06.240
+is used by
+
+39:06.240 --> 39:06.700
+a specific
+
+39:06.700 --> 39:07.840
+client, there
+
+39:07.840 --> 39:08.320
+are other
+
+39:08.320 --> 39:09.160
+clients that
+
+39:09.160 --> 39:09.960
+call it in a
+
+39:09.960 --> 39:10.840
+different way, for
+
+39:10.840 --> 39:13.800
+example, simply
+
+39:13.800 --> 39:15.340
+SOP, start
+
+39:15.340 --> 39:17.700
+of production, or
+
+39:17.700 --> 39:19.540
+simply production, or
+
+39:19.540 --> 39:20.600
+deliver, final
+
+39:20.600 --> 39:21.500
+delivery, whatever,
+
+39:21.720 --> 39:22.500
+there are all
+
+39:22.500 --> 39:23.320
+kind of names for
+
+39:23.320 --> 39:24.400
+this phase, but
+
+39:24.400 --> 39:25.180
+what is extremely
+
+39:25.180 --> 39:26.020
+important for you
+
+39:26.020 --> 39:26.580
+is that you
+
+39:26.580 --> 39:27.340
+have always
+
+39:27.340 --> 39:28.260
+in mind, where
+
+39:28.260 --> 39:28.940
+is this job
+
+39:28.940 --> 39:29.520
+one, when
+
+39:29.520 --> 39:30.240
+is this job
+
+39:30.240 --> 39:31.080
+one, and
+
+39:31.080 --> 39:32.240
+when are the
+
+39:32.240 --> 39:33.100
+main milestone
+
+39:33.100 --> 39:33.540
+of the
+
+39:33.540 --> 39:34.380
+project, so
+
+39:34.380 --> 39:34.780
+that you
+
+39:34.780 --> 39:39.380
+know when
+
+39:39.380 --> 39:40.280
+the project is
+
+39:40.280 --> 39:40.680
+going to
+
+39:40.680 --> 39:41.180
+finish, and
+
+39:41.180 --> 39:41.580
+when the
+
+39:41.580 --> 39:41.880
+car is
+
+39:41.880 --> 39:42.540
+actually sold.
+
+39:42.880 --> 39:43.240
+So it
+
+39:43.240 --> 39:43.580
+means that
+
+39:43.580 --> 39:43.940
+from the
+
+39:43.940 --> 39:44.580
+job one
+
+39:44.580 --> 39:46.120
+on worth, the
+
+39:46.120 --> 39:46.800
+car started
+
+39:46.800 --> 39:47.460
+to be produced
+
+39:47.460 --> 39:48.080
+and sold
+
+39:48.080 --> 39:48.500
+on the
+
+39:48.500 --> 39:48.900
+market.
+
+39:56.460 --> 39:57.020
+The
+
+39:57.020 --> 39:57.580
+suggestion
+
+39:57.580 --> 39:58.660
+here, so
+
+39:58.660 --> 39:59.560
+is always to
+
+39:59.560 --> 39:59.940
+have in
+
+39:59.940 --> 40:00.800
+mind big
+
+40:00.800 --> 40:01.540
+picture of
+
+40:01.540 --> 40:02.140
+the project,
+
+40:02.260 --> 40:03.240
+okay, when
+
+40:03.240 --> 40:03.620
+you will
+
+40:03.620 --> 40:04.520
+start working,
+
+40:04.620 --> 40:05.020
+okay, now
+
+40:05.020 --> 40:05.700
+it's very
+
+40:05.700 --> 40:06.820
+soon, because
+
+40:06.820 --> 40:07.180
+you have
+
+40:07.180 --> 40:08.160
+just, you
+
+40:08.160 --> 40:08.800
+know, probably
+
+40:08.800 --> 40:09.320
+the second
+
+40:09.320 --> 40:10.300
+day of the
+
+40:10.300 --> 40:11.500
+company, when
+
+40:11.500 --> 40:11.760
+you are
+
+40:11.760 --> 40:12.340
+watching this
+
+40:12.340 --> 40:14.980
+video, you
+
+40:14.980 --> 40:16.300
+will know, you
+
+40:16.300 --> 40:17.600
+will have no
+
+40:17.600 --> 40:19.560
+idea of what
+
+40:19.560 --> 40:20.060
+you are going
+
+40:20.060 --> 40:20.880
+to do in
+
+40:20.880 --> 40:21.940
+the activities,
+
+40:22.100 --> 40:23.440
+but this is a
+
+40:23.440 --> 40:25.020
+suggestion that
+
+40:25.020 --> 40:25.960
+I give at
+
+40:25.960 --> 40:27.540
+every stage of
+
+40:27.540 --> 40:28.540
+the career, one
+
+40:28.540 --> 40:29.280
+person, when it
+
+40:29.280 --> 40:30.240
+starts, or even
+
+40:30.240 --> 40:31.820
+when they're
+
+40:31.820 --> 40:32.820
+an expert or
+
+40:32.820 --> 40:33.900
+senior profiling
+
+40:33.900 --> 40:34.520
+the company,
+
+40:35.140 --> 40:36.560
+have always a
+
+40:36.560 --> 40:37.940
+big picture of
+
+40:37.940 --> 40:38.580
+what is going
+
+40:38.580 --> 40:39.280
+on here,
+
+40:39.460 --> 40:39.640
+okay.
+
+40:40.440 --> 40:41.340
+A work could
+
+40:41.340 --> 40:42.100
+become very
+
+40:42.100 --> 40:43.140
+abstract, I
+
+40:43.140 --> 40:44.080
+mean, during
+
+40:44.080 --> 40:45.240
+this validation
+
+40:45.240 --> 40:46.120
+training, you
+
+40:46.120 --> 40:48.080
+will see a
+
+40:48.080 --> 40:49.360
+huge focus on
+
+40:49.360 --> 40:50.400
+variables, on
+
+40:50.400 --> 40:51.360
+the bit, this
+
+40:51.360 --> 40:52.260
+bit goes to
+
+40:52.260 --> 40:53.240
+one, this bit
+
+40:53.240 --> 40:54.240
+goes to zero,
+
+40:54.240 --> 40:55.040
+the variable
+
+40:55.040 --> 40:55.700
+goes to
+
+40:55.700 --> 40:57.260
+three, this
+
+40:57.260 --> 40:58.420
+will go to
+
+40:58.420 --> 40:59.540
+50 and
+
+40:59.540 --> 41:00.040
+stuff like
+
+41:00.040 --> 41:00.680
+so, things
+
+41:00.680 --> 41:01.220
+that looks
+
+41:01.220 --> 41:03.360
+like abstract
+
+41:03.360 --> 41:04.240
+with no
+
+41:04.240 --> 41:05.200
+physical meaning,
+
+41:05.380 --> 41:05.940
+but this is
+
+41:05.940 --> 41:06.600
+actually the
+
+41:06.600 --> 41:07.480
+contrary, because
+
+41:07.480 --> 41:08.200
+everything you're
+
+41:08.200 --> 41:08.760
+going to do
+
+41:08.760 --> 41:10.160
+is going to
+
+41:10.160 --> 41:10.980
+affect the
+
+41:10.980 --> 41:11.960
+volt vehicle, so
+
+41:11.960 --> 41:12.600
+always ask
+
+41:12.600 --> 41:13.440
+yourself, okay,
+
+41:13.760 --> 41:14.260
+what is going
+
+41:14.260 --> 41:15.580
+to happen if I
+
+41:15.580 --> 41:16.980
+do something on
+
+41:16.980 --> 41:17.580
+the software,
+
+41:18.000 --> 41:18.460
+what is going
+
+41:18.460 --> 41:19.240
+to happen on
+
+41:19.240 --> 41:19.940
+the high level
+
+41:19.940 --> 41:20.600
+point of view,
+
+41:20.660 --> 41:21.840
+because it
+
+41:21.840 --> 41:22.780
+will have a
+
+41:22.780 --> 41:24.860
+general effect
+
+41:24.860 --> 41:26.000
+on a car, and
+
+41:26.000 --> 41:27.180
+so will affect
+
+41:27.180 --> 41:27.800
+also this
+
+41:27.800 --> 41:28.620
+plan, okay.
+
+41:29.620 --> 41:30.440
+So, always
+
+41:30.440 --> 41:31.080
+looking at the
+
+41:31.080 --> 41:31.740
+plan, as you
+
+41:31.740 --> 41:32.420
+see here,
+
+41:32.540 --> 41:33.300
+here, there
+
+41:33.300 --> 41:33.840
+are these
+
+41:33.840 --> 41:36.080
+signs, okay,
+
+41:36.460 --> 41:37.280
+this is the
+
+41:37.280 --> 41:38.120
+symbol of
+
+41:38.120 --> 41:38.880
+ice, this is
+
+41:38.880 --> 41:39.520
+the symbol of
+
+41:39.520 --> 41:40.440
+sun, and
+
+41:40.440 --> 41:41.300
+here you have
+
+41:41.300 --> 41:41.860
+them again.
+
+41:42.560 --> 41:43.400
+These are
+
+41:43.400 --> 41:44.340
+symbols of
+
+41:44.340 --> 41:44.840
+the winter
+
+41:44.840 --> 41:45.760
+tests that are
+
+41:45.760 --> 41:46.920
+done on the
+
+41:46.920 --> 41:47.760
+snow, and
+
+41:47.760 --> 41:48.240
+these are the
+
+41:48.240 --> 41:48.880
+summer tests
+
+41:48.880 --> 41:49.720
+usually done in
+
+41:49.720 --> 41:50.600
+the desert or
+
+41:50.600 --> 41:52.360
+extremely hot
+
+41:52.360 --> 41:53.180
+countries.
+
+41:54.000 --> 41:55.220
+So, having in
+
+41:55.220 --> 41:56.240
+mind that this
+
+41:56.240 --> 41:56.820
+is going to
+
+41:56.820 --> 41:57.700
+happen, so
+
+41:57.700 --> 42:01.260
+in this
+
+42:01.260 --> 42:02.360
+moment, in
+
+42:02.360 --> 42:03.500
+this period of
+
+42:03.500 --> 42:04.560
+the year, there
+
+42:04.560 --> 42:05.500
+will be winter
+
+42:05.500 --> 42:07.160
+tests, I will
+
+42:07.160 --> 42:08.420
+make sure that
+
+42:08.420 --> 42:10.060
+even though, even
+
+42:10.060 --> 42:10.920
+if the software
+
+42:10.920 --> 42:12.380
+is not, you
+
+42:12.380 --> 42:13.240
+know, we are
+
+42:13.240 --> 42:14.680
+still working on
+
+42:14.680 --> 42:16.900
+B200 series,
+
+42:17.180 --> 42:17.840
+okay, so we are
+
+42:17.840 --> 42:18.760
+implementing the
+
+42:18.760 --> 42:19.800
+1A requirements,
+
+42:20.300 --> 42:21.220
+so we will have
+
+42:21.220 --> 42:21.840
+also another
+
+42:21.840 --> 42:22.280
+release of
+
+42:22.280 --> 42:22.880
+requirements,
+
+42:23.260 --> 42:24.000
+there will be a
+
+42:24.000 --> 42:24.540
+lot of other
+
+42:24.540 --> 42:25.480
+software in the
+
+42:25.480 --> 42:26.940
+future, so we
+
+42:26.940 --> 42:27.700
+know that the
+
+42:27.700 --> 42:28.560
+software is not
+
+42:28.560 --> 42:29.660
+still the best
+
+42:29.660 --> 42:30.300
+and the perfect
+
+42:30.300 --> 42:31.740
+one, but I
+
+42:31.740 --> 42:33.460
+will, I know
+
+42:33.460 --> 42:34.680
+that these two
+
+42:34.680 --> 42:35.940
+weeks, there
+
+42:35.940 --> 42:37.220
+will be people
+
+42:37.220 --> 42:38.660
+working in a
+
+42:38.660 --> 42:39.580
+car on the
+
+42:39.580 --> 42:40.940
+snow, so I
+
+42:40.940 --> 42:41.640
+will have to
+
+42:41.640 --> 42:42.360
+give the
+
+42:42.360 --> 42:43.760
+highest priority
+
+42:43.760 --> 42:44.440
+to all the
+
+42:44.440 --> 42:45.160
+activities that
+
+42:45.160 --> 42:46.160
+are related to
+
+42:46.160 --> 42:47.460
+the management
+
+42:47.460 --> 42:48.200
+of, I don't
+
+42:48.200 --> 42:48.640
+know, the
+
+42:48.640 --> 42:49.500
+ether of the
+
+42:49.500 --> 42:50.160
+battery packs.
+
+42:50.160 --> 42:50.640
+the battery
+
+42:50.640 --> 42:52.860
+pack will
+
+42:52.860 --> 42:53.940
+work in
+
+42:53.940 --> 42:55.580
+a specific
+
+42:55.580 --> 42:56.620
+temperature range
+
+42:56.620 --> 42:57.620
+and they need
+
+42:57.620 --> 42:58.520
+to have the
+
+42:58.520 --> 42:59.180
+batteries always
+
+42:59.180 --> 43:00.080
+working at that
+
+43:00.080 --> 43:01.040
+temperature range,
+
+43:01.320 --> 43:02.140
+so if the
+
+43:02.140 --> 43:03.140
+ether is not
+
+43:03.140 --> 43:04.720
+working, either
+
+43:04.720 --> 43:05.800
+the battery pack
+
+43:05.800 --> 43:06.760
+will stop working
+
+43:06.760 --> 43:08.140
+so the electric
+
+43:08.140 --> 43:09.220
+vehicle will be,
+
+43:09.320 --> 43:10.880
+will stuck, or
+
+43:10.880 --> 43:11.440
+even the
+
+43:11.440 --> 43:12.620
+air conditioner, I
+
+43:12.620 --> 43:13.500
+mean, let's
+
+43:13.500 --> 43:14.300
+consider people
+
+43:14.300 --> 43:15.380
+working at minus
+
+43:15.380 --> 43:15.980
+10 degrees,
+
+43:16.100 --> 43:16.600
+probably they
+
+43:16.600 --> 43:17.140
+will get
+
+43:17.140 --> 43:18.580
+frozen if
+
+43:18.580 --> 43:19.160
+they don't
+
+43:19.160 --> 43:19.460
+have the
+
+43:19.460 --> 43:20.140
+air conditioner
+
+43:20.140 --> 43:20.580
+or the
+
+43:20.580 --> 43:21.200
+ether working
+
+43:21.200 --> 43:22.940
+properly, so
+
+43:22.940 --> 43:23.480
+this is
+
+43:23.480 --> 43:25.040
+probably the
+
+43:25.040 --> 43:26.040
+contents to
+
+43:26.040 --> 43:26.920
+verify, to
+
+43:26.920 --> 43:29.340
+test, will
+
+43:29.340 --> 43:31.240
+be a lot,
+
+43:31.500 --> 43:32.200
+so among
+
+43:32.200 --> 43:33.380
+all the tests
+
+43:33.380 --> 43:33.980
+that you have
+
+43:33.980 --> 43:36.340
+to do, having
+
+43:36.340 --> 43:37.200
+a big picture
+
+43:37.200 --> 43:37.900
+of the project
+
+43:37.900 --> 43:38.660
+will help you
+
+43:38.660 --> 43:39.280
+to give the
+
+43:39.280 --> 43:40.060
+right priority
+
+43:40.060 --> 43:40.660
+of the stuff,
+
+43:40.660 --> 43:42.600
+and here we
+
+43:42.600 --> 43:43.060
+are always
+
+43:43.060 --> 43:43.740
+talking about
+
+43:43.740 --> 43:44.480
+the VOOCYCLE,
+
+43:44.920 --> 43:46.060
+you know, we
+
+43:46.060 --> 43:47.060
+have not changed
+
+43:47.060 --> 43:47.880
+the topic, because
+
+43:47.880 --> 43:48.840
+again, the VOOCYCLE
+
+43:48.840 --> 43:49.800
+is something like
+
+43:49.800 --> 43:51.320
+this, then we
+
+43:51.320 --> 43:51.900
+will have another
+
+43:51.900 --> 43:52.840
+requirements here,
+
+43:52.960 --> 43:53.400
+so we will
+
+43:53.400 --> 43:54.220
+have something like
+
+43:54.220 --> 43:55.540
+this, and
+
+43:55.540 --> 43:56.440
+arriving to the
+
+43:56.440 --> 43:57.480
+move 2, and
+
+43:57.480 --> 43:59.680
+so on, okay, so
+
+43:59.680 --> 44:01.100
+what I'm trying
+
+44:01.100 --> 44:02.200
+to say here is
+
+44:02.200 --> 44:03.320
+that this is an
+
+44:03.320 --> 44:04.280
+actual plan where
+
+44:04.280 --> 44:05.300
+you can actually
+
+44:05.300 --> 44:06.800
+apply the
+
+44:06.800 --> 44:07.600
+concepts that
+
+44:07.600 --> 44:08.780
+you got from
+
+44:08.780 --> 44:10.000
+the VOOCYCLE
+
+44:10.000 --> 44:10.640
+lesson, okay,
+
+44:10.660 --> 44:13.300
+these are the
+
+44:13.300 --> 44:14.180
+winter tests, these
+
+44:14.180 --> 44:15.860
+are the summer
+
+44:15.860 --> 44:16.580
+tests, and then
+
+44:16.580 --> 44:17.140
+we will repeat
+
+44:17.140 --> 44:18.120
+them once the
+
+44:18.120 --> 44:20.480
+everything is
+
+44:20.480 --> 44:22.060
+clearer, not
+
+44:22.060 --> 44:22.620
+everything is
+
+44:22.620 --> 44:23.400
+clearer, but the
+
+44:23.400 --> 44:24.320
+software is more
+
+44:24.320 --> 44:25.620
+mature, we have
+
+44:25.620 --> 44:26.340
+the VOOCYCLE
+
+44:26.340 --> 44:27.520
+cars, so it's
+
+44:27.520 --> 44:28.040
+much more
+
+44:28.040 --> 44:28.780
+meaningful to
+
+44:28.780 --> 44:29.880
+perform tests on
+
+44:29.880 --> 44:30.460
+these kind of
+
+44:30.460 --> 44:31.200
+cars and
+
+44:31.200 --> 44:32.320
+softwares, because
+
+44:32.320 --> 44:33.260
+the project is
+
+44:33.260 --> 44:33.880
+almost at the
+
+44:33.880 --> 44:34.420
+end, so it
+
+44:34.420 --> 44:34.840
+means that
+
+44:34.840 --> 44:36.160
+everything is,
+
+44:36.620 --> 44:37.140
+let's say,
+
+44:37.320 --> 44:38.780
+almost already
+
+44:38.780 --> 44:40.040
+working properly,
+
+44:40.200 --> 44:40.420
+okay,
+
+44:40.660 --> 44:59.920
+keep looking at
+
+44:59.920 --> 45:01.760
+the slide, there
+
+45:01.760 --> 45:02.360
+are so many
+
+45:02.360 --> 45:03.260
+things that we
+
+45:03.260 --> 45:04.820
+could mention,
+
+45:04.820 --> 45:07.560
+one of the, so
+
+45:07.560 --> 45:08.880
+we have, let's
+
+45:08.880 --> 45:11.540
+say, described
+
+45:11.540 --> 45:12.500
+this timeline
+
+45:12.500 --> 45:14.640
+about cars,
+
+45:16.040 --> 45:17.820
+this timeline
+
+45:17.820 --> 45:18.600
+related to the
+
+45:18.600 --> 45:19.500
+VOOCYCLE that
+
+45:19.500 --> 45:19.960
+are called
+
+45:19.960 --> 45:20.680
+Quality
+
+45:20.680 --> 45:21.700
+Gate, I will
+
+45:21.700 --> 45:22.640
+not really go
+
+45:22.640 --> 45:23.420
+into details
+
+45:23.420 --> 45:24.500
+about it, because
+
+45:24.500 --> 45:25.180
+this is, let's
+
+45:25.180 --> 45:25.460
+say, an
+
+45:25.460 --> 45:26.460
+advanced content,
+
+45:26.460 --> 45:27.300
+so we are going
+
+45:27.300 --> 45:28.220
+to review this
+
+45:28.220 --> 45:29.160
+slide further in
+
+45:29.160 --> 45:30.380
+the future, what
+
+45:30.380 --> 45:31.000
+is important
+
+45:31.000 --> 45:31.900
+here is to
+
+45:31.900 --> 45:32.660
+describe the
+
+45:32.660 --> 45:33.700
+PCR fleet
+
+45:33.700 --> 45:35.100
+thing, okay,
+
+45:35.160 --> 45:35.640
+this is the
+
+45:35.640 --> 45:36.260
+PCR fleet
+
+45:36.260 --> 45:38.380
+timeline, so the
+
+45:38.380 --> 45:39.080
+VOOCYCLE that
+
+45:39.080 --> 45:39.680
+we mentioned
+
+45:39.680 --> 45:40.400
+before, it
+
+45:40.400 --> 45:41.080
+applies, as I
+
+45:41.080 --> 45:41.700
+was saying, not
+
+45:41.700 --> 45:42.640
+just on one
+
+45:42.640 --> 45:43.480
+electronic control
+
+45:43.480 --> 45:44.260
+unit, but this
+
+45:44.260 --> 45:45.300
+process applies to
+
+45:45.300 --> 45:46.120
+all the electronic
+
+45:46.120 --> 45:48.020
+control units, so
+
+45:48.020 --> 45:49.860
+there will be, I
+
+45:49.860 --> 45:50.480
+don't know, we
+
+45:50.480 --> 45:51.240
+have 50
+
+45:51.240 --> 45:52.180
+electronic control
+
+45:52.180 --> 45:52.940
+units, we will
+
+45:52.940 --> 45:54.560
+have 50 VOOCYCLE
+
+45:54.560 --> 45:55.580
+in parallel going
+
+45:55.580 --> 45:57.380
+on, but of
+
+45:57.380 --> 45:58.100
+course, the car
+
+45:58.100 --> 45:58.540
+that we are
+
+45:58.540 --> 45:59.300
+working on is
+
+45:59.300 --> 46:00.320
+just one, okay,
+
+46:00.400 --> 46:01.680
+so the system, we
+
+46:01.680 --> 46:02.400
+are actually
+
+46:02.400 --> 46:04.060
+debugging and
+
+46:04.060 --> 46:04.880
+the system on
+
+46:04.880 --> 46:05.360
+which we are
+
+46:05.360 --> 46:06.120
+improving the
+
+46:06.120 --> 46:06.760
+quality, because
+
+46:06.760 --> 46:07.620
+let's move back
+
+46:07.620 --> 46:08.700
+here, if you
+
+46:08.700 --> 46:09.580
+see the VOOCYCLE,
+
+46:10.040 --> 46:11.180
+the left part is
+
+46:11.180 --> 46:11.640
+the software
+
+46:11.640 --> 46:12.520
+development part,
+
+46:12.900 --> 46:13.900
+but then the
+
+46:13.900 --> 46:14.940
+right part is the
+
+46:14.940 --> 46:15.940
+quality assurance,
+
+46:16.200 --> 46:17.060
+and as you see, as
+
+46:17.060 --> 46:17.920
+we move on the
+
+46:17.920 --> 46:18.940
+right side, we
+
+46:18.940 --> 46:19.720
+move from unit
+
+46:19.720 --> 46:20.260
+test to the
+
+46:20.260 --> 46:20.940
+functional test,
+
+46:21.260 --> 46:21.980
+we are basically
+
+46:21.980 --> 46:24.060
+improving the
+
+46:24.060 --> 46:25.620
+quality of the
+
+46:25.620 --> 46:27.140
+system, okay, so
+
+46:27.140 --> 46:27.820
+even though we
+
+46:27.820 --> 46:29.620
+have 50 small
+
+46:29.620 --> 46:32.340
+systems, and 50
+
+46:32.340 --> 46:32.860
+teams, for
+
+46:32.860 --> 46:33.820
+example, working
+
+46:33.820 --> 46:34.900
+on these different
+
+46:34.900 --> 46:35.860
+electronic control
+
+46:35.860 --> 46:37.220
+units, then there
+
+46:37.220 --> 46:38.100
+must be some
+
+46:38.100 --> 46:39.080
+common points
+
+46:39.080 --> 46:40.360
+where all these
+
+46:40.360 --> 46:41.220
+electronic control
+
+46:41.220 --> 46:42.020
+units, all this
+
+46:42.020 --> 46:43.080
+work come together
+
+46:43.080 --> 46:44.220
+and put on the
+
+46:44.220 --> 46:45.080
+car, everything
+
+46:45.080 --> 46:46.800
+works, this is
+
+46:46.800 --> 46:47.940
+actually what a
+
+46:47.940 --> 46:50.140
+PCR is, PCR
+
+46:50.140 --> 46:51.380
+is basically a
+
+46:51.380 --> 46:52.760
+release of a
+
+46:52.760 --> 46:53.580
+group of
+
+46:53.580 --> 46:55.060
+software that
+
+46:55.060 --> 46:55.880
+put all
+
+46:55.880 --> 46:57.420
+together on a
+
+46:57.420 --> 46:58.440
+car will be
+
+46:58.440 --> 46:59.380
+able to
+
+46:59.380 --> 47:00.080
+properly
+
+47:00.080 --> 47:00.520
+implement
+
+47:00.520 --> 47:01.660
+everything that
+
+47:01.660 --> 47:02.540
+is listed, in
+
+47:02.540 --> 47:03.160
+this case, in
+
+47:03.160 --> 47:03.960
+0A
+
+47:03.960 --> 47:06.540
+requirements, so
+
+47:06.540 --> 47:06.940
+specification,
+
+47:07.660 --> 47:08.020
+release.
+
+47:08.340 --> 47:09.200
+Once again, you
+
+47:09.200 --> 47:09.940
+see the
+
+47:09.940 --> 47:10.940
+color that are
+
+47:10.940 --> 47:11.800
+similar, okay?
+
+47:12.660 --> 47:13.740
+So this means that
+
+47:13.740 --> 47:14.860
+1A will implement
+
+47:14.860 --> 47:15.640
+everything that is
+
+47:15.640 --> 47:16.500
+being described in
+
+47:16.500 --> 47:18.820
+0A, the 2A
+
+47:18.820 --> 47:19.920
+PCR release will
+
+47:19.920 --> 47:20.820
+implement everything
+
+47:20.820 --> 47:21.580
+that has been
+
+47:21.580 --> 47:23.220
+defined in 1A, and
+
+47:23.220 --> 47:23.880
+stuff like this.
+
+47:23.880 --> 47:24.940
+of course, we
+
+47:24.940 --> 47:26.440
+have only 2A as
+
+47:26.440 --> 47:29.200
+a final release of
+
+47:29.200 --> 47:30.480
+the requirements, but
+
+47:30.480 --> 47:31.300
+we will have more
+
+47:31.300 --> 47:33.900
+than one, so more
+
+47:33.900 --> 47:35.100
+than the 2A
+
+47:35.100 --> 47:36.140
+release, we have
+
+47:36.140 --> 47:37.740
+the 3A, 4A, 5A, 6A,
+
+47:37.800 --> 47:38.520
+and stuff like this.
+
+47:38.560 --> 47:39.740
+We will go deeper
+
+47:39.740 --> 47:40.820
+into details about
+
+47:40.820 --> 47:41.900
+this slide once we
+
+47:41.900 --> 47:42.620
+will get to the
+
+47:42.620 --> 47:43.680
+right topic, but
+
+47:43.680 --> 47:44.340
+what you have to
+
+47:44.340 --> 47:45.580
+know is that once
+
+47:45.580 --> 47:46.520
+we put everything on
+
+47:46.520 --> 47:47.840
+a car, car is a
+
+47:47.840 --> 47:49.620
+very complex system
+
+47:49.620 --> 47:50.500
+where there are a
+
+47:50.500 --> 47:51.300
+lot, lot of
+
+47:51.300 --> 47:52.760
+systems talking to
+
+47:52.760 --> 47:53.260
+each other,
+
+47:53.400 --> 47:54.560
+collaborating, and
+
+47:54.560 --> 47:55.420
+working to make
+
+47:55.420 --> 47:56.240
+sure that one
+
+47:56.240 --> 47:57.020
+feature works
+
+47:57.020 --> 47:57.480
+properly.
+
+47:57.980 --> 47:58.680
+Once again, we
+
+47:58.680 --> 47:59.080
+can do the
+
+47:59.080 --> 47:59.820
+example of the
+
+47:59.820 --> 48:00.520
+adaptive cruise
+
+48:00.520 --> 48:00.900
+control.
+
+48:01.020 --> 48:01.720
+The adaptive cruise
+
+48:01.720 --> 48:02.720
+control works
+
+48:02.720 --> 48:03.980
+using the work
+
+48:03.980 --> 48:05.780
+of many teams
+
+48:05.780 --> 48:07.220
+that have worked
+
+48:07.220 --> 48:07.920
+on the
+
+48:07.920 --> 48:08.880
+powertrain
+
+48:08.880 --> 48:09.760
+electronic control
+
+48:09.760 --> 48:10.560
+unit, battery
+
+48:10.560 --> 48:11.220
+pack control
+
+48:11.220 --> 48:12.460
+unit, ADAS
+
+48:12.460 --> 48:13.480
+electronic control
+
+48:13.480 --> 48:14.400
+unit, all this
+
+48:14.400 --> 48:14.680
+stuff.
+
+48:15.160 --> 48:16.180
+So when the
+
+48:16.180 --> 48:17.840
+1A release of
+
+48:17.840 --> 48:19.540
+PCR happens, it
+
+48:19.540 --> 48:20.320
+means that all
+
+48:20.320 --> 48:21.000
+the suppliers
+
+48:21.000 --> 48:22.020
+have to provide
+
+48:22.020 --> 48:23.860
+a software that
+
+48:23.860 --> 48:25.560
+once put in a
+
+48:25.560 --> 48:27.000
+car, is able to
+
+48:27.000 --> 48:28.540
+make on a car
+
+48:28.540 --> 48:29.500
+this feature
+
+48:29.500 --> 48:30.140
+working.
+
+48:30.740 --> 48:31.640
+So it means that
+
+48:31.640 --> 48:32.360
+the brake has to
+
+48:32.360 --> 48:33.280
+properly talk to
+
+48:33.280 --> 48:33.860
+the powertrain
+
+48:33.860 --> 48:35.920
+electronic control
+
+48:35.920 --> 48:36.320
+unit.
+
+48:36.860 --> 48:38.400
+They both have to
+
+48:38.400 --> 48:39.060
+talk to the
+
+48:39.060 --> 48:39.740
+battery pack.
+
+48:39.840 --> 48:40.540
+Everything has to
+
+48:40.540 --> 48:41.160
+talk with the
+
+48:41.160 --> 48:43.360
+ADAS.
+
+48:43.440 --> 48:44.260
+ADAS has to
+
+48:44.260 --> 48:45.040
+send all the
+
+48:45.040 --> 48:46.080
+information in the
+
+48:46.080 --> 48:47.120
+right time to the
+
+48:47.120 --> 48:47.720
+other electronic
+
+48:47.720 --> 48:48.420
+control unit.
+
+48:48.420 --> 48:50.040
+So all these
+
+48:50.040 --> 48:51.120
+echoes must work
+
+48:51.120 --> 48:52.040
+properly together
+
+48:52.040 --> 48:53.020
+and all these
+
+48:53.020 --> 48:54.000
+echoes must have
+
+48:54.000 --> 48:55.540
+specific software
+
+48:55.540 --> 48:56.500
+to make this
+
+48:56.500 --> 48:57.440
+feature working
+
+48:57.440 --> 48:58.180
+properly on a
+
+48:58.180 --> 48:58.380
+car.
+
+48:58.740 --> 48:58.960
+Okay.
+
+48:59.160 --> 49:00.060
+And this happens
+
+49:00.060 --> 49:00.640
+every time.
+
+49:00.800 --> 49:01.640
+This is 1A, 2A,
+
+49:01.720 --> 49:02.880
+3A, 4A, 5A,
+
+49:02.960 --> 49:03.320
+6A.
+
+49:03.420 --> 49:04.500
+So as we move
+
+49:04.500 --> 49:05.360
+on the right
+
+49:05.360 --> 49:05.840
+side of the
+
+49:05.840 --> 49:06.620
+project, we are
+
+49:06.620 --> 49:07.260
+advancing.
+
+49:07.560 --> 49:08.360
+We are advancing
+
+49:08.360 --> 49:09.380
+on the timeline.
+
+49:10.220 --> 49:10.640
+And this means
+
+49:10.640 --> 49:11.140
+that everything
+
+49:11.140 --> 49:12.420
+will be...
+
+49:12.420 --> 49:14.140
+So in 1A,
+
+49:14.140 --> 49:15.640
+part of the car
+
+49:15.640 --> 49:16.340
+will work,
+
+49:16.600 --> 49:18.340
+2A, we have
+
+49:18.340 --> 49:19.020
+more contents
+
+49:19.020 --> 49:19.520
+working,
+
+49:19.700 --> 49:21.780
+3A, the car
+
+49:21.780 --> 49:22.520
+works quite
+
+49:22.520 --> 49:23.760
+well, 4A, we
+
+49:23.760 --> 49:24.360
+have almost
+
+49:24.360 --> 49:25.880
+everything we
+
+49:25.880 --> 49:26.560
+have just to
+
+49:26.560 --> 49:27.600
+tune parameters,
+
+49:28.180 --> 49:29.520
+5A is just
+
+49:29.520 --> 49:30.440
+looking forward
+
+49:30.440 --> 49:31.020
+to the production,
+
+49:31.220 --> 49:31.960
+6A is the
+
+49:31.960 --> 49:32.600
+final release
+
+49:32.600 --> 49:33.220
+where everything
+
+49:33.220 --> 49:33.880
+has to work
+
+49:33.880 --> 49:35.480
+properly.
+
+49:35.480 --> 49:40.300
+final words
+
+49:40.300 --> 49:41.420
+about this
+
+49:41.420 --> 49:41.900
+slide.
+
+49:42.500 --> 49:42.980
+Well, we
+
+49:42.980 --> 49:43.800
+can...
+
+49:43.800 --> 49:44.200
+We could
+
+49:44.200 --> 49:46.120
+keep describing
+
+49:46.120 --> 49:46.920
+what are
+
+49:46.920 --> 49:48.540
+these, you
+
+49:48.540 --> 49:50.740
+know, rectangles
+
+49:50.740 --> 49:51.280
+here, the
+
+49:51.280 --> 49:52.300
+purple one, the
+
+49:52.300 --> 49:53.500
+green one, blue
+
+49:53.500 --> 49:54.380
+one, the
+
+49:54.380 --> 49:55.120
+orange one.
+
+49:55.560 --> 49:55.800
+Okay.
+
+49:55.900 --> 49:57.320
+So there are a
+
+49:57.320 --> 49:57.840
+lot of things
+
+49:57.840 --> 49:58.420
+that we could
+
+49:58.420 --> 49:59.300
+mention, but
+
+49:59.300 --> 50:02.220
+the general and
+
+50:02.220 --> 50:03.420
+final suggestion
+
+50:03.420 --> 50:04.100
+that I would
+
+50:04.100 --> 50:05.200
+give you, and I
+
+50:05.200 --> 50:06.440
+already gave you
+
+50:06.440 --> 50:07.600
+before, so it's
+
+50:07.600 --> 50:08.400
+just repetition.
+
+50:09.260 --> 50:10.120
+Every time you
+
+50:10.120 --> 50:10.740
+perform an
+
+50:10.740 --> 50:11.840
+activity, please
+
+50:11.840 --> 50:13.400
+have in mind the
+
+50:13.400 --> 50:14.920
+general idea of
+
+50:14.920 --> 50:15.680
+the project, the
+
+50:15.680 --> 50:17.100
+general timing of
+
+50:17.100 --> 50:17.760
+the project.
+
+50:18.420 --> 50:19.280
+These documents,
+
+50:20.000 --> 50:22.780
+if you work on
+
+50:22.780 --> 50:25.320
+this, on a
+
+50:25.320 --> 50:26.060
+specific client,
+
+50:26.240 --> 50:27.640
+you will actually
+
+50:27.640 --> 50:28.820
+find this kind of
+
+50:28.820 --> 50:29.780
+layout, because it's
+
+50:29.780 --> 50:30.840
+still used, okay,
+
+50:30.900 --> 50:31.780
+for projects of
+
+50:31.780 --> 50:33.120
+2023, 2024,
+
+50:33.260 --> 50:33.560
+2025.
+
+50:33.780 --> 50:34.820
+So you will
+
+50:34.820 --> 50:36.640
+see still this
+
+50:36.640 --> 50:37.020
+kind of
+
+50:37.020 --> 50:37.380
+layout.
+
+50:38.160 --> 50:39.480
+But even other
+
+50:39.480 --> 50:40.520
+clients, other
+
+50:40.520 --> 50:41.220
+care makers,
+
+50:41.460 --> 50:43.060
+whoever, there is
+
+50:43.060 --> 50:45.140
+always, always a
+
+50:45.140 --> 50:46.320
+general plan of
+
+50:46.320 --> 50:47.120
+the project we are
+
+50:47.120 --> 50:47.800
+working on.
+
+50:48.240 --> 50:48.940
+So the
+
+50:48.940 --> 50:50.320
+suggestion here is
+
+50:50.320 --> 50:51.520
+do not just
+
+50:51.520 --> 50:52.880
+focus on your
+
+50:52.880 --> 50:54.520
+specific activity,
+
+50:54.940 --> 50:56.160
+just looking at
+
+50:56.160 --> 50:57.960
+your screen and
+
+50:57.960 --> 50:59.160
+thinking only on
+
+50:59.160 --> 51:00.060
+your test to be
+
+51:00.060 --> 51:01.320
+executed, but
+
+51:01.320 --> 51:02.380
+always ask to
+
+51:02.380 --> 51:03.200
+you're responsible.
+
+51:03.940 --> 51:05.260
+Can I have a
+
+51:05.260 --> 51:06.300
+general overview of
+
+51:06.300 --> 51:07.400
+the timing of the
+
+51:07.400 --> 51:08.400
+project I'm working
+
+51:08.400 --> 51:08.660
+on?
+
+51:08.980 --> 51:10.120
+I know that these
+
+51:10.120 --> 51:11.820
+things looks like
+
+51:11.820 --> 51:13.720
+obvious for you
+
+51:13.720 --> 51:14.860
+right now, but I'm
+
+51:14.860 --> 51:15.660
+sure, and I've seen
+
+51:15.660 --> 51:17.120
+so many people going
+
+51:17.120 --> 51:17.960
+through this program
+
+51:17.960 --> 51:18.660
+and then start
+
+51:18.660 --> 51:19.120
+working.
+
+51:19.120 --> 51:20.200
+Then once you start
+
+51:20.200 --> 51:21.380
+working, you are so
+
+51:21.380 --> 51:22.940
+overwhelmed by
+
+51:22.940 --> 51:26.800
+technical thing that
+
+51:26.800 --> 51:27.640
+you have to learn,
+
+51:27.800 --> 51:29.160
+the deadline to meet
+
+51:29.160 --> 51:30.140
+and stuff like this
+
+51:30.140 --> 51:30.920
+that you will
+
+51:30.920 --> 51:32.320
+completely forget to
+
+51:32.320 --> 51:33.000
+have a general
+
+51:33.000 --> 51:34.120
+perspective of the
+
+51:34.120 --> 51:34.500
+project.
+
+51:34.980 --> 51:36.060
+But just take your
+
+51:36.060 --> 51:37.180
+time and remember
+
+51:37.180 --> 51:38.180
+having a general
+
+51:38.180 --> 51:39.320
+perspective of the
+
+51:39.320 --> 51:40.640
+project will help
+
+51:40.640 --> 51:45.060
+you very much to
+
+51:45.060 --> 51:47.020
+focus on what is a
+
+51:47.020 --> 51:48.260
+real priority in that
+
+51:48.260 --> 51:49.260
+period and what is
+
+51:49.260 --> 51:50.300
+not, why an
+
+51:50.300 --> 51:51.640
+activity has to be
+
+51:51.640 --> 51:52.540
+done in one week
+
+51:52.540 --> 51:53.340
+and why another
+
+51:53.340 --> 51:54.220
+activity has to be
+
+51:54.220 --> 51:55.220
+done in three weeks
+
+51:55.220 --> 51:56.180
+and stuff like this.
+
+51:56.180 --> 51:58.540
+okay, so just to
+
+51:58.540 --> 51:59.900
+close with the
+
+51:59.900 --> 52:00.860
+proper slide and
+
+52:00.860 --> 52:02.500
+not just the screen
+
+52:02.500 --> 52:03.420
+that I was doing,
+
+52:03.960 --> 52:04.960
+it's very, very
+
+52:04.960 --> 52:07.380
+important that we
+
+52:07.380 --> 52:09.160
+do not just think
+
+52:09.160 --> 52:10.400
+of the cycle as
+
+52:10.400 --> 52:14.680
+this draw on a
+
+52:14.680 --> 52:15.660
+slide that is,
+
+52:15.820 --> 52:16.560
+okay, very easy to
+
+52:16.560 --> 52:17.260
+understand, but
+
+52:17.260 --> 52:19.080
+extremely far from
+
+52:19.080 --> 52:21.400
+the daily life
+
+52:21.400 --> 52:22.000
+activities.
+
+52:23.080 --> 52:24.740
+This is not true
+
+52:24.740 --> 52:25.760
+true at all because
+
+52:25.760 --> 52:27.560
+the VOOCYCLE will
+
+52:27.560 --> 52:30.020
+also apply on
+
+52:30.020 --> 52:32.460
+real case project
+
+52:32.460 --> 52:34.880
+card, project plan
+
+52:34.880 --> 52:36.260
+here, and you can
+
+52:36.260 --> 52:37.340
+see this VOOCYCLE
+
+52:37.340 --> 52:38.880
+repeating itself over
+
+52:38.880 --> 52:39.740
+and over again
+
+52:39.740 --> 52:41.500
+until the project
+
+52:41.500 --> 52:43.520
+gets to the final
+
+52:43.520 --> 52:44.780
+part, which is the
+
+52:44.780 --> 52:45.260
+production.
+
+52:46.120 --> 52:46.940
+Please remember
+
+52:46.940 --> 52:48.660
+that, okay, that we
+
+52:48.660 --> 52:49.640
+are debugging the
+
+52:49.640 --> 52:50.620
+software, so we are
+
+52:50.620 --> 52:51.620
+making sure that the
+
+52:51.620 --> 52:52.480
+software works
+
+52:52.480 --> 52:54.560
+properly, but the
+
+52:54.560 --> 52:56.480
+final goal is to
+
+52:56.480 --> 52:58.760
+sell cars that
+
+52:58.760 --> 53:00.540
+behave properly.
+
+53:01.320 --> 53:02.420
+Consider always
+
+53:02.420 --> 53:03.740
+yourself in a car
+
+53:03.740 --> 53:04.780
+and think, okay,
+
+53:04.980 --> 53:06.780
+would I like this
+
+53:06.780 --> 53:07.500
+behavior of the
+
+53:07.500 --> 53:07.720
+car?
+
+53:08.060 --> 53:09.000
+Would I like that
+
+53:09.000 --> 53:10.120
+while I'm driving on
+
+53:10.120 --> 53:11.420
+a highway, something
+
+53:11.420 --> 53:12.600
+goes wrong and the
+
+53:12.600 --> 53:13.520
+car doesn't realize
+
+53:13.520 --> 53:13.960
+anything?
+
+53:14.480 --> 53:15.560
+Would I like that I
+
+53:15.560 --> 53:16.680
+have to spend like
+
+53:16.680 --> 53:20.640
+5,000 hero just to
+
+53:20.640 --> 53:21.460
+understand a small
+
+53:21.460 --> 53:22.380
+problem that could
+
+53:22.380 --> 53:23.380
+have been very clear
+
+53:23.380 --> 53:24.480
+if I had done the
+
+53:24.480 --> 53:25.840
+proper testing phase?
+
+53:26.260 --> 53:27.460
+So ask always these
+
+53:27.460 --> 53:28.760
+questions, put yourself
+
+53:28.760 --> 53:32.940
+in the car and have
+
+53:32.940 --> 53:34.580
+always a big
+
+53:34.580 --> 53:38.280
+perspective view on
+
+53:38.280 --> 53:39.360
+the activities that
+
+53:39.360 --> 53:40.160
+you are doing.
+
+53:40.320 --> 53:41.640
+VOOCYCLE is just,
+
+53:41.640 --> 53:43.820
+it's not just a V
+
+53:43.820 --> 53:45.200
+drawn on a paper,
+
+53:45.700 --> 53:47.060
+it's a process that
+
+53:47.060 --> 53:49.160
+we actually follow on
+
+53:49.160 --> 53:50.260
+a daily basis.
+

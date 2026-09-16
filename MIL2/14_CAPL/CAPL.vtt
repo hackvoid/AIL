@@ -1,0 +1,992 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+Hi all, I'm Massimiliano Schettino and today we will talk about CAPL.
+
+00:06.000 --> 00:11.000
+CAPL is an acronym and it stands for CAN ACCESS programming language.
+
+00:11.000 --> 00:20.000
+The CAPL is a C-like programming language and it is a very powerful instrument we have when we want to execute test cases
+
+00:20.000 --> 00:29.000
+or when we want to simulate or emulate electronic control units while we are using vector tools like CANALYZER or CANO.
+
+00:29.000 --> 00:38.000
+The first thing you should know about CAPL is that it is a procedural language. It is controlled by events.
+
+00:38.000 --> 00:48.000
+We will have several program blocks or so-called event procedures that will be executed when a certain event will occur.
+
+00:48.000 --> 01:03.000
+The type of events we are talking about are key press event, occurrence of messages, CAN, LIN or Ethernet or some action that occurs cyclically such as the timers.
+
+01:03.000 --> 01:22.000
+Here you can see a CANO configuration window and in order to write a CAPL code we have to access the CAPL browser and we can do that directly from the session tool or by double-clicking a program nodding configuration.
+
+01:22.000 --> 01:27.000
+This is what you can see when you open a vector CAPL browser.
+
+01:27.000 --> 01:42.000
+On the left side you can find the F3 with all the defined variables while on the right side you can find a list of events and system and you can drag and drop the events from the list inside the code.
+
+01:42.000 --> 01:51.000
+In simple tab you can find also network messages and signal and again you can drag and drop them directly into the code.
+
+01:51.000 --> 01:57.000
+As you can see in central window you can write your code.
+
+01:57.000 --> 02:04.000
+If you open a blank script it contains just an int block and a variable one.
+
+02:04.000 --> 02:13.000
+The first one will allow you to add libraries to the code while the second one is useful to define and initialize your variables.
+
+02:13.000 --> 02:17.000
+And after the variables block you can continue writing your code.
+
+02:17.000 --> 02:36.000
+One of the first important features of the CAPL is that once you have configured canalizer or CANO and you have linked a CAN database the CAPL browser will recognize the messages and signals names directly from the database.
+
+02:36.000 --> 02:43.000
+And so you can choose the message you are interested in directly while you are typing its name.
+
+02:43.000 --> 02:50.000
+Each CAPL code consists of three distinct parts.
+
+02:50.000 --> 03:00.000
+The first one the global variable declaration is the part where you declare and initialize the variable you will see when you use in the rest of the code.
+
+03:00.000 --> 03:09.000
+The second one event procedures is the main part of the code where you write the actions to be performed when an event occurs.
+
+03:09.000 --> 03:16.000
+The third one is the user defined function where you can define and create your own custom functions.
+
+03:16.000 --> 03:20.000
+Let's talk about the first one the variables.
+
+03:20.000 --> 03:25.000
+In CAPL we can find the same data types of C language.
+
+03:25.000 --> 03:31.000
+It has the integer variables floating point numbers or the declaration of arrays.
+
+03:31.000 --> 03:38.000
+But we can find also different variables such as CAN message and TIMERS.
+
+03:38.000 --> 03:46.000
+All the variables except for the timer can or cannot be initialized in the declaration.
+
+03:46.000 --> 03:55.000
+If a variable is not manually initialized, it will be automatically initialized by the compiler, usually to the zero value.
+
+03:55.000 --> 04:08.000
+Today we will not focus on integer variables and long point numbers, but we will focus our attention on the other one, CAN messages and TIMERS.
+
+04:08.000 --> 04:20.000
+There are two types of TIMERS, the ones based in seconds that are called simply TIMERS and ones based in milliseconds called MS TIMERS.
+
+04:20.000 --> 04:23.000
+They have to be initialized.
+
+04:23.000 --> 04:29.000
+We have no other choice, otherwise we cannot use a timer inside the code.
+
+04:29.000 --> 04:34.000
+Obviously their scope is to generate time events.
+
+04:34.000 --> 04:50.000
+We will define them in variables, as you can see in the example, by writing TIMER or MS TIMER and writing the name T or T1.
+
+04:50.000 --> 05:01.000
+Then, inside our code, we will initialize the timer giving them a value with the proper function called SETTIMER.
+
+05:01.000 --> 05:15.000
+In the example, we initialize the second timer T to 10 seconds and the milliseconds timer T1 to 100 milliseconds.
+
+05:15.000 --> 05:20.000
+When we initialize a timer, the timer starts.
+
+05:20.000 --> 05:38.000
+For what concerns the other variables, the messages, we can declare them thanks to their message identifier, if we have no database, or also to their message name if the database has been linked to the configuration.
+
+05:38.000 --> 05:52.000
+As you can see in the example, we can use the identifier in hexadecimal or in decimal, we can use the name inside the database, or we can decide to define it later.
+
+05:52.000 --> 06:01.000
+But in each case, we define also a name, M1, 2, 3, or 4, that we will use inside the code.
+
+06:01.000 --> 06:10.000
+After we have defined a message, we can have access to different information of it.
+
+06:10.000 --> 06:30.000
+As you can see here, if you write the name you gave to the message, in this case M1, and dot, you can have access to the message identifier, to the data linked code.
+
+06:30.000 --> 06:39.000
+To the direction of the transmission, to the remote transmission request, or to the time points and units.
+
+06:39.000 --> 06:49.000
+Now that we have finished with the overview on the variables, we can continue with the main part of the CAPL code.
+
+06:49.000 --> 06:55.000
+We have always to remember that it is an event procedure code.
+
+06:55.000 --> 07:00.000
+And so we will talk about the event procedures.
+
+07:00.000 --> 07:16.000
+The main event procedure you can use in CAPL are on message, for the receipt of the akin message, on key, if we want to do something when we press a key on our laptop keyboard.
+
+07:16.000 --> 07:21.000
+On pre-start, for the initialization of the measurement.
+
+07:21.000 --> 07:24.000
+On start, when the measurement starts.
+
+07:24.000 --> 07:30.000
+On stop of measurement, if we have to do something when the measurement ends.
+
+07:30.000 --> 07:40.000
+On error active, passive, or pass off, that reacts for specific diagnostic condition.
+
+07:40.000 --> 07:43.000
+On timer, if a timer elapses.
+
+07:43.000 --> 07:47.000
+On error frame, if an error frame occurs.
+
+07:47.000 --> 07:48.000
+On error frame occurs.
+
+07:48.000 --> 07:52.000
+And on environment variable.
+
+07:52.000 --> 07:55.000
+That is useful only for canon.
+
+07:55.000 --> 08:03.000
+Cause, a canalizer does not give the possibility to use the environment variables.
+
+08:03.000 --> 08:14.000
+And you will use this block each time the value of the environment variable will change.
+
+08:14.000 --> 08:17.000
+Now we will see them one by one.
+
+08:17.000 --> 08:19.000
+And let's start with the messages.
+
+08:19.000 --> 08:32.000
+On message will allow us to write a block that will be executed each time a certain message will be received on a certain can.
+
+08:32.000 --> 08:37.000
+We can react to a message thanks to ID.
+
+08:37.000 --> 08:39.000
+Decimal or extra decimal.
+
+08:39.000 --> 08:41.000
+To the name.
+
+08:41.000 --> 08:43.000
+We can find the database.
+
+08:43.000 --> 08:47.000
+Or we can define it thanks to the chip.
+
+08:47.000 --> 08:50.000
+That is a specific path.
+
+08:50.000 --> 08:53.000
+Composed by the name of the can.
+
+08:53.000 --> 08:59.000
+In which the message travel.
+
+08:59.000 --> 09:04.000
+And then the ID.
+
+09:04.000 --> 09:08.000
+But we can also react to several messages.
+
+09:08.000 --> 09:14.000
+With the star we react to all messages in all the buses.
+
+09:14.000 --> 09:22.000
+With the name of the can dot star we react to all messages of a single network.
+
+09:22.000 --> 09:32.000
+And then thanks to a range of IDs.
+
+09:32.000 --> 09:39.000
+We can react to all messages with identifier between the extremes we define.
+
+09:39.000 --> 09:43.000
+In this case one hundred and two hundred.
+
+09:43.000 --> 09:48.000
+Here it is shown an example.
+
+09:48.000 --> 09:52.000
+Of what we call with the name of gateway.
+
+09:52.000 --> 09:55.000
+In the first part we define a message.
+
+09:55.000 --> 09:58.000
+In can one bus.
+
+09:58.000 --> 10:01.000
+34 is the ID.
+
+10:01.000 --> 10:03.000
+And send message one.
+
+10:03.000 --> 10:06.000
+Is the name we give to the message.
+
+10:06.000 --> 10:07.000
+In second part.
+
+10:07.000 --> 10:09.000
+We say that.
+
+10:09.000 --> 10:11.000
+Each time.
+
+10:11.000 --> 10:14.000
+The can one dot thirty one message.
+
+10:14.000 --> 10:15.000
+Is received.
+
+10:15.000 --> 10:17.000
+What we do.
+
+10:17.000 --> 10:19.000
+Is declare.
+
+10:19.000 --> 10:21.000
+Another message.
+
+10:21.000 --> 10:22.000
+This time.
+
+10:22.000 --> 10:24.000
+In the can two.
+
+10:24.000 --> 10:25.000
+Bus.
+
+10:25.000 --> 10:27.000
+And with name.
+
+10:27.000 --> 10:28.000
+Send message two.
+
+10:28.000 --> 10:30.000
+But the ID.
+
+10:30.000 --> 10:31.000
+Will be always the same.
+
+10:31.000 --> 10:32.000
+34.
+
+10:32.000 --> 10:33.000
+The.
+
+10:33.000 --> 10:34.000
+Keyword is.
+
+10:34.000 --> 10:35.000
+We will see this.
+
+10:35.000 --> 10:36.000
+Later.
+
+10:36.000 --> 10:37.000
+In this lesson.
+
+10:37.000 --> 10:38.000
+But for now.
+
+10:38.000 --> 10:39.000
+You have just to know.
+
+10:39.000 --> 10:40.000
+That.
+
+10:40.000 --> 10:41.000
+With this declaration.
+
+10:41.000 --> 10:42.000
+We put.
+
+10:42.000 --> 10:43.000
+Send message two.
+
+10:43.000 --> 10:44.000
+Equal.
+
+10:44.000 --> 10:45.000
+To the message.
+
+10:45.000 --> 10:46.000
+Can one dot thirty four.
+
+10:46.000 --> 10:47.000
+We modify something.
+
+10:47.000 --> 10:48.000
+Inside.
+
+10:48.000 --> 10:49.000
+Send message two.
+
+10:49.000 --> 10:50.000
+In this case.
+
+10:50.000 --> 10:51.000
+The byte four.
+
+10:51.000 --> 10:52.000
+And we put it.
+
+10:52.000 --> 10:53.000
+Equal to zero.
+
+10:53.000 --> 10:54.000
+And we put it.
+
+10:54.000 --> 10:55.000
+Equal to zero.
+
+10:55.000 --> 10:56.000
+We modify something.
+
+10:56.000 --> 10:57.000
+Inside.
+
+10:57.000 --> 10:58.000
+Send message two.
+
+10:58.000 --> 10:59.000
+In this case.
+
+10:59.000 --> 11:00.000
+The byte four.
+
+11:00.000 --> 11:01.000
+And we put it.
+
+11:01.000 --> 11:02.000
+Equal to zero.
+
+11:02.000 --> 11:03.000
+And then.
+
+11:03.000 --> 11:04.000
+We send.
+
+11:04.000 --> 11:05.000
+Inside.
+
+11:05.000 --> 11:06.000
+Inside.
+
+11:06.000 --> 11:07.000
+The bus.
+
+11:07.000 --> 11:08.000
+In this case.
+
+11:08.000 --> 11:09.000
+Is.
+
+11:09.000 --> 11:10.000
+Can two.
+
+11:10.000 --> 11:11.000
+The send message.
+
+11:11.000 --> 11:12.000
+Two.
+
+11:15.000 --> 11:16.000
+The scope.
+
+11:16.000 --> 11:17.000
+Of.
+
+11:17.000 --> 11:18.000
+This.
+
+11:18.000 --> 11:19.000
+Very.
+
+11:19.000 --> 11:20.000
+Simple.
+
+11:20.000 --> 11:21.000
+But.
+
+11:21.000 --> 11:22.000
+Useful.
+
+11:22.000 --> 11:23.000
+Example.
+
+11:23.000 --> 11:24.000
+Is that.
+
+11:24.000 --> 11:25.000
+We have the possibility.
+
+11:25.000 --> 11:26.000
+To.
+
+11:26.000 --> 11:27.000
+Receive.
+
+11:27.000 --> 11:28.000
+One message.
+
+11:28.000 --> 11:29.000
+Or.
+
+11:29.000 --> 11:30.000
+Multiple message.
+
+11:30.000 --> 11:31.000
+From.
+
+11:31.000 --> 11:32.000
+Them.
+
+11:32.000 --> 11:33.000
+And.
+
+11:33.000 --> 11:34.000
+Them.
+
+11:34.000 --> 11:35.000
+In.
+
+11:35.000 --> 11:36.000
+Another game.
+
+11:36.000 --> 11:37.000
+Let's.
+
+11:37.000 --> 11:38.000
+Continue with the.
+
+11:38.000 --> 11:39.000
+Keyboard.
+
+11:39.000 --> 11:40.000
+Events.
+
+11:40.000 --> 11:41.000
+We can.
+
+11:41.000 --> 11:42.000
+React.
+
+11:42.000 --> 11:43.000
+To.
+
+11:43.000 --> 11:44.000
+The precperce of key a.
+
+11:44.000 --> 11:45.000
+To space bar.
+
+11:45.000 --> 11:46.000
+To.
+
+11:46.000 --> 11:49.000
+If one.
+
+11:49.000 --> 11:56.200
+then to the combination of control f12 to the page up button to the home button
+
+11:56.840 --> 11:59.960
+or to any kind of keypress
+
+12:03.000 --> 12:11.640
+this kind of reaction could be very helpful when you want an output when the user decide that you
+
+12:11.640 --> 12:23.080
+want it and as usual now we will see an example we define an integral variable counter and we put it
+
+12:23.080 --> 12:33.400
+initially equal to zero each time we will press the key a we will write on the right window of canoe
+
+12:33.400 --> 12:44.360
+or canalizer a certain text in this case a total of a percentage d or where percentage g will be
+
+12:44.360 --> 12:53.800
+replaced by the value of counter in that moment and then messages and the id of the messages counted
+
+12:55.240 --> 13:02.360
+on the right we will see that each time the message with a certain id is received in a certain can
+
+13:04.040 --> 13:15.720
+counter is increased and the message is sent and each time other kind any other kind of message
+
+13:16.360 --> 13:24.840
+but also the one with the id we can find here we will send it inside the can
+
+13:24.840 --> 13:37.000
+from these lines we can easily understand that this cpl code is done for a
+
+13:38.840 --> 13:43.960
+a canalizer tool because for the canalizer tool we have always
+
+13:43.960 --> 13:57.880
+to write output this when we react to a message otherwise the the message will be not sent to the ecu under test
+
+13:58.920 --> 14:02.440
+while in in canon it will be not necessary
+
+14:02.440 --> 14:14.760
+let's focus again our attention on the timers and now we know how to declare and initialize the timer but
+
+14:14.760 --> 14:22.360
+then we have to do something when they expire and the event we will use in this case will be on timer
+
+14:22.360 --> 14:33.320
+timer timers are very useful when we want to develop cyclic action or to do something after a delay as we saw
+
+14:34.280 --> 14:43.240
+in previous slides the function set timers need two parameters one the first one is the name of the timer
+
+14:43.240 --> 14:53.880
+and second one is its length um it could be both a timer in second or an ms timer in milliseconds
+
+14:54.520 --> 15:02.440
+and in these two cases it will vary also the maximum length in the first case in fact
+
+15:02.440 --> 15:12.760
+uh we can count up to one thousand seven hundred ninety nine seconds in the second time in seven case i'm
+
+15:12.760 --> 15:28.120
+sorry we can count up to 65535 milliseconds if we want to use a timer cyclically we have two options
+
+15:28.120 --> 15:38.520
+functions the first one will be to set a normal timer wait that it elapses and then set it again
+
+15:39.400 --> 15:47.880
+the second one is using a proper function of the cpl language that is set timer cyclic that each time
+
+15:47.880 --> 15:51.000
+will elapse it will reset it again
+
+15:51.000 --> 16:03.240
+and here you can see the difference between the two type of timers in both codes we define a message
+
+16:04.120 --> 16:15.880
+and the timer when we press a we set a timer but on the left we do it once so once the timer will be elapsed
+
+16:15.880 --> 16:29.320
+no other block will be triggered while on the right part we set a cyclic timer and so if we continue reading
+
+16:29.320 --> 16:36.840
+the code when the timer elapses the message will be sent multiple times
+
+16:36.840 --> 16:51.480
+until we don't stop the timer or the measurement stops on the left instead we will send the message in output just once
+
+16:54.760 --> 17:01.240
+if you think that the most part of the ken messages are periodical so they are cyclic
+
+17:02.200 --> 17:06.600
+the set timer cyclic can be very useful
+
+17:09.480 --> 17:16.760
+let's then talk about the reaction to the system events we are talking about pre-start start and stop
+
+17:16.760 --> 17:26.520
+measurement it is what happen when we press the start and the stop measurement button on canalizer or canon
+
+17:26.520 --> 17:44.040
+we can use this kind of blocks just once in our code we have always to remember that the cpl is a
+
+17:44.040 --> 17:54.520
+procedural language and so the first block that will be executed is the pre-start and no other block
+
+17:54.520 --> 18:01.640
+can be executed in parallel when we press the go button in canalizer or canoe
+
+18:02.680 --> 18:09.480
+we can then thanks to the pre-start block initialize variable read data from files
+
+18:09.480 --> 18:16.440
+or write something in the right window since the measurement is not started yet we cannot send
+
+18:16.440 --> 18:27.080
+can messages into the bus or set timer after the press start then we can do whatever is written in
+
+18:27.080 --> 18:37.640
+on start block and then here we can set timer or send messages into the bus but also initialize
+
+18:37.640 --> 18:46.840
+environment variable if we are using canal at this time the measurement starts when you press the stop
+
+18:46.840 --> 18:57.800
+button then a on-stop measurement event is executed at this point not only the measurement finish but we
+
+18:57.800 --> 19:05.240
+can also print statistics in right window or output messages into the bus or write a log file
+
+19:07.720 --> 19:17.560
+continuing we have the error events obviously this is not the scope of this lesson to talk about these
+
+19:17.560 --> 19:27.080
+different kind of errors or states but i just want to underline that this kind of event are very useful
+
+19:27.080 --> 19:37.080
+useful if we want to monitor the error states of an issue and if we want to terminate the measurement if
+
+19:37.080 --> 19:47.000
+necessary or if we want to execute a reset if the bus of state is reached we can also
+
+19:47.000 --> 20:02.040
+also access the error counter that lead the issue to reach these states thanks to the keyword error count in tx or in rx
+
+20:03.880 --> 20:07.160
+and in the last part of the slide you have a little example
+
+20:07.160 --> 20:16.680
+on what you can do with this kind of event and thanks to the error counter
+
+20:19.480 --> 20:27.560
+now that the event overview is finished i just want to do a quick recap on the most used expression
+
+20:27.560 --> 20:37.080
+that you can find in cpl but obviously you can find in all chip based language and so the instruction blocks
+
+20:37.640 --> 20:48.440
+the if condition blocks the if f block the switch case default blocks loops as for while and while
+
+20:49.160 --> 20:53.080
+the continue and break instruction the continue and break instruction and the return instruction
+
+20:55.320 --> 20:58.040
+and the syntax is the same of the c language
+
+21:01.160 --> 21:07.320
+for what concern the keyword is that we have found several times in the previous examples
+
+21:07.320 --> 21:14.680
+as you have probably already understood it refers to the element
+
+21:17.320 --> 21:25.000
+of the event block in which it is contained here are two examples one for a canned message
+
+21:25.560 --> 21:33.800
+and so the first this on the left will refer to the message with id 10 100 i'm sorry and on the right
+
+21:33.800 --> 21:44.760
+instead it is referring to an environment variable called variable one and this will refer to the value of this variable
+
+21:47.160 --> 21:56.280
+now that the first part of this lesson is ended i want to propose you a summarizing example in which
+
+21:56.280 --> 22:03.960
+we want to simulate the behavior of an issue called the body control module
+
+22:05.160 --> 22:14.600
+as you can see the first part includes exploit and second part we define some variables two messages
+
+22:15.880 --> 22:20.680
+one integer one this infotainment steering with control management
+
+22:21.560 --> 22:28.200
+uh we put it equal to zero and so it is not enabled it means that probably
+
+22:29.640 --> 22:32.520
+if it is equal to one it will be enabled
+
+22:35.320 --> 22:44.280
+each time we receive the bcm underscore comment we read the value of one of its messages one of its signal i'm sorry
+
+22:44.280 --> 22:55.000
+and if it is if the the signal named operational mode status is equal to four five six seven eight
+
+22:55.800 --> 23:03.800
+and so if we add ignition on and press start and start and cranking or ignition on and you know we will
+
+23:03.800 --> 23:10.840
+enable the management otherwise you know other cases we will not enable it
+
+23:10.840 --> 23:18.840
+why we need to enable or disable the infotainment steering wheel contrast management
+
+23:19.800 --> 23:26.440
+because when we press a button uh into the the panel
+
+23:29.320 --> 23:35.960
+the panel view of a canoe or canalizer the code will check the value of this
+
+23:35.960 --> 23:49.240
+this variable and if it the management is enabled it will put a signal value inside the message
+
+23:49.240 --> 23:59.320
+svc i'm talking about command underscore 11 c does equal to a variable an environment variable value
+
+24:00.040 --> 24:10.760
+otherwise it will do nothing in case in which management is enabled it will also output the message so the message
+
+24:10.760 --> 24:21.880
+will be sent on can and at each environment variable command 11 12
+
+24:21.880 --> 24:32.600
+and then 13 14 it is assigned a certain button as you can see a down button and right button
+
+24:34.600 --> 24:36.440
+uh okay button and up button
+
+24:40.440 --> 24:47.160
+it is something that can be done uh thanks to the panel editor in can or canalizer
+
+24:47.720 --> 24:51.480
+and you will see it better also in a calm lesson
+
+24:55.400 --> 25:03.480
+and the idea is that normally the the button value is so the environment variable value is equal to zero
+
+25:03.480 --> 25:12.760
+and each time it changes and it became equal to one if we consider the the first instruction for example
+
+25:12.760 --> 25:19.960
+then if the management is enabled this is the only case in which something will happen
+
+25:21.320 --> 25:27.960
+the command underscore 11 status will be equal to one and the message will be sent
+
+25:29.400 --> 25:31.160
+otherwise nothing will happen
+
+25:31.160 --> 25:41.880
+as i was saying before first most specific part is ended but now i will speak also about the
+
+25:44.280 --> 25:50.600
+correlation and the differences between two tools very powerful
+
+25:50.600 --> 25:56.440
+as easy block and cpl are
+
+25:59.240 --> 26:06.920
+during test activity both on vehicle and hardware in the loop it will happen very often that you have
+
+26:06.920 --> 26:11.080
+to change signals video we are talking about
+
+26:11.080 --> 26:22.760
+signals of messages sent by real issues in some cases you cannot just put the hardware in the loop or the vehicle
+
+26:23.640 --> 26:31.000
+in the condition for which the real issue send that signal that you need for several reasons
+
+26:31.880 --> 26:36.600
+dangerous condition for the drivers possible damages to vehicle components
+
+26:37.320 --> 26:40.920
+difficult vehicle condition or tests particularly long
+
+26:43.160 --> 26:44.360
+or in condition
+
+26:46.520 --> 26:54.120
+not so easy irreplicatable other application cases are loss of communication between real issues
+
+26:54.840 --> 27:01.480
+or impossibility fault it is message counter or cyclical randomness check servers
+
+27:01.480 --> 27:09.160
+in this case something that could really help us are the easy blocks and the cpl code
+
+27:11.240 --> 27:17.000
+you should already know that on can there could be several kind of frames
+
+27:17.880 --> 27:25.720
+on event cyclic on event or just the cyclic ones and according to the signal type
+
+27:26.440 --> 27:30.280
+we can choose the type of gateway that we should use
+
+27:33.640 --> 27:43.720
+if you need to work just with on event messages on it we can use with no issues the interactive generator block
+
+27:43.720 --> 27:54.200
+and thanks to it you can manually modify the signals and messages parameters
+
+27:55.800 --> 28:06.440
+in using the eg block you put the node in parallel with the canvas and so you have not to interrupt
+
+28:06.440 --> 28:09.960
+the bus and this hold the t connection
+
+28:12.120 --> 28:20.440
+again it is not the purpose of this lesson to explain how the eg block works but what you need to know
+
+28:20.440 --> 28:33.080
+is that this tool is very powerful because it allows you with no kind of knowledge of c or other language
+
+28:34.200 --> 28:43.160
+to modify as you prefer each message or signal inside a dbc and so the signals value
+
+28:43.160 --> 28:51.400
+value if the message has to be sent or not cycle time and so on and so on
+
+28:53.960 --> 29:03.560
+but the main characteristic of dg is the possibility to configure and interactively send messages during
+
+29:03.560 --> 29:11.560
+a running measurement online it means that you have not to prepare nothing before you start the measurement
+
+29:12.280 --> 29:16.920
+but you can change everything during the measurement run
+
+29:21.320 --> 29:23.880
+this slide summarize what i've just said
+
+29:28.680 --> 29:35.640
+the cpl instead is used to generate and send cyclic and cyclic uneven messages
+
+29:35.640 --> 29:47.960
+in this case you need to physically interrupt the canvas you have to put the cpl and so the concase
+
+29:48.600 --> 29:58.360
+between the two issue and in this case also adding the terminal resistance 120 ohm for each canvas
+
+29:58.360 --> 30:10.760
+this wire scheme is called s connection this is an example of gateway if you remember it is something
+
+30:10.760 --> 30:22.200
+similar to one of the first example we have seen in this lesson and it is useful to pass each message that is
+
+30:22.200 --> 30:34.840
+received in one can to the other can and vice versa without we modify nothing it is used only if you want to listen
+
+30:35.720 --> 30:51.480
+what the issues are saying it could be useful for diagnostic needed for example let's read one block and then the others
+
+30:51.480 --> 31:01.960
+obviously obviously will be the same for each message sent on ken2 we define a message
+
+31:01.960 --> 31:13.400
+variable for ken1 and if the direction of the message on ken2 is not received so it is transmitted
+
+31:13.400 --> 31:21.480
+then we will not do nothing we will exit from this block otherwise if the direction is received
+
+31:22.120 --> 31:28.200
+we will send the message called msg in ken1 and we will exit
+
+31:31.880 --> 31:40.360
+instead if we want to modify something inside the message for example a signal value what we can do
+
+31:41.080 --> 31:54.600
+is to choose a key in this case will be one or zero in order to modify a variable we define in the variables block
+
+31:55.240 --> 32:03.160
+the x variable and if we press one the variable will be equal to one zero the variable will be equal to zero
+
+32:03.160 --> 32:04.760
+so
+
+32:08.120 --> 32:17.880
+if x is equal to one and the id is equal to a certain value because obviously we want just to modify the
+
+32:17.880 --> 32:29.080
+signal of one single message we will define the message that we will send in the other can we will modify the
+
+32:29.080 --> 32:30.760
+signal that we want
+
+32:34.360 --> 32:45.640
+in this case we will calculate also the crcr of the message and we will send in output the message as it is
+
+32:45.640 --> 32:56.600
+in all the other cases so for the other messages and in case we have not pressed the key one
+
+32:58.600 --> 33:02.280
+we will do the gateway as it was in the previous slide
+
+33:02.280 --> 33:14.760
+so which are the common uses of the cpl the first one we have already seen for the specific cyclic on
+
+33:15.560 --> 33:22.920
+cyclic uneven messages if we want to set a loss of communication between real issues you can imagine
+
+33:22.920 --> 33:32.680
+that it is very simple the only thing that you have to do is avoid that the signals and messages you
+
+33:32.680 --> 33:36.600
+receive on a can will be sent in output on the other can
+
+33:36.600 --> 33:49.320
+to set impossible data transmission reception always thanks to modification we have already seen
+
+33:50.760 --> 33:59.400
+to change multiple signals on the same time as have you seen in the ag block since it is something that
+
+33:59.400 --> 34:09.640
+we have to do manually and during the measurement we can do just one by one and at the end to change signals
+
+34:09.640 --> 34:18.600
+belonging to different campuses thanks to double gateway at the end the ag can do just a single gateway
+
+34:18.600 --> 34:33.880
+and i would conclude with the last summarizing slide on the advantages and disadvantages of cpl and the easy block
+
+34:34.760 --> 34:43.160
+for the cpl we have the possibility to change a signal independently from the type of frame it belongs
+
+34:43.160 --> 34:54.600
+since it is a code language it is very flexible and adaptable it gives us the possibility to change
+
+34:54.600 --> 34:59.480
+signal in two different can in same time as we have already said
+
+35:01.800 --> 35:11.160
+and it gives a wide range of programming the only limit is our capability to program it obviously
+
+35:11.880 --> 35:19.240
+it has a lot of advantages it has a lot of advantages it will have also some disadvantages it need to write
+
+35:19.240 --> 35:28.120
+a c plus plus script so if someone is not too good to use the c plus plus languages will have some
+
+35:28.120 --> 35:36.760
+difficulties but not so many i would say you need to physically interrupt canvas
+
+35:36.760 --> 35:49.480
+c plus it is not like the eg block and above a breakout box is needed for this purpose on the other side the eg block
+
+35:49.480 --> 35:58.360
+is very very easy and fast to configure and to use it does not interrupt the can since it requires just
+
+35:58.920 --> 36:09.240
+a t connection the disadvantages the main disadvantage is that it gives the possibility to change only message
+
+36:09.240 --> 36:21.720
+an event since once you press to send on the eg block the message will be sent just once and there is nothing
+
+36:21.720 --> 36:24.840
+that you can do to see who cyclically send it
+
+36:29.160 --> 36:40.120
+i will say that that's all thanks for your attention i hope that my explanation was clear the slides were clear
+
+36:40.120 --> 36:49.560
+and i will say goodbye
+
+36:49.560 --> 36:51.560
+you
+

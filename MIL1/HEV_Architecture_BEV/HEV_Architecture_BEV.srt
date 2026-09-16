@@ -1,0 +1,2724 @@
+1
+00:00:00,000 --> 00:00:04,360
+Okay, then, I think we're ready. I shall share the screen.
+
+2
+00:00:10,300 --> 00:00:11,940
+Okay, so.
+
+3
+00:00:16,200 --> 00:00:17,780
+Okay, here we are.
+
+4
+00:00:19,000 --> 00:00:23,840
+So I guess you have already had this morning.
+
+5
+00:00:23,960 --> 00:00:27,720
+I partially listened to the lesson of this morning.
+
+6
+00:00:27,720 --> 00:00:35,820
+So it was based on all kind of hybrid application that you...
+
+7
+00:00:35,820 --> 00:00:42,520
+Oh, by the way, if you have questions or other stuff, please just interrupt me because I don't see the meeting.
+
+8
+00:00:43,860 --> 00:00:48,400
+So is there someone that wants to say something? Because I hear something in my earphone.
+
+9
+00:00:50,960 --> 00:00:52,680
+No? Okay, nice.
+
+10
+00:00:53,740 --> 00:00:54,920
+You can hear me, right?
+
+11
+00:00:57,720 --> 00:00:58,060
+Yes.
+
+12
+00:00:58,720 --> 00:00:59,120
+Yes.
+
+13
+00:00:59,920 --> 00:01:01,060
+Okay, okay, great.
+
+14
+00:01:02,320 --> 00:01:10,200
+So I would start just with this first slide, and then we will just jump all the slides related to the hybrid applications.
+
+15
+00:01:10,200 --> 00:01:25,240
+So even though this scheme is for, let's say, like children, this is pretty helpful to let us understand the main feature of an electric vehicle.
+
+16
+00:01:25,240 --> 00:01:42,840
+So basically, as we move from the conventional vehicles to the old electric vehicles, of course, step by step, all the fuel that is needed or the emissions that the car produces just reduce and then disappear.
+
+17
+00:01:42,840 --> 00:01:58,760
+Of course, of course, that disappear from the car in itself, but then considering that the big part of the electric energy is produced using fossil fuel, anyway, fossil product,
+
+18
+00:01:58,760 --> 00:02:16,820
+then we are just moving this kind of consumption from the car directly to the car to somewhere else, okay, to the plants or places where this electric energy is produced, actually.
+
+19
+00:02:16,820 --> 00:02:19,520
+And, of course, we will have the related emissions.
+
+20
+00:02:20,720 --> 00:02:38,660
+There are many studies where the total calculation of the emissions and all the pollution that is created using electric vehicles is, anyway, generally lower than an internal combustion engine car.
+
+21
+00:02:38,660 --> 00:02:49,240
+So here, and I guess I heard Lorenzo saying that keep using this kind of cars will slowly kill us or something like this.
+
+22
+00:02:50,120 --> 00:02:59,320
+So, yeah, I believe moving to a greener solution is definitely needed for the health of the planet.
+
+23
+00:03:00,060 --> 00:03:07,840
+It looks very green topic, this one, but, yeah, that's the truth, basically.
+
+24
+00:03:08,660 --> 00:03:16,980
+So, of course, you see here there are all these stylo, you know, these small batteries.
+
+25
+00:03:17,620 --> 00:03:28,100
+It's not just a representation because actually the battery pack are built with the series of all these batteries, okay.
+
+26
+00:03:29,160 --> 00:03:36,820
+In my experience, usually, yeah, it depends, of course, on the size of the battery pack and the power that has to produce,
+
+27
+00:03:36,820 --> 00:03:40,820
+the nominal voltage, the nominal voltage, the battery pack works, too.
+
+28
+00:03:40,900 --> 00:03:44,820
+So, there are many factors on which the number of battery depends on.
+
+29
+00:03:44,980 --> 00:03:54,980
+But, in my experience, usually, the battery pack is made by 200, 300, 150 of this kind of batteries.
+
+30
+00:03:54,980 --> 00:04:03,880
+So, almost like stylo batteries, they're generally bigger than this.
+
+31
+00:04:04,880 --> 00:04:16,060
+So, you don't think in a normal stylo battery, they're just bigger, usually are between one kilo and two kilos.
+
+32
+00:04:16,060 --> 00:04:22,340
+So, they're heavier, of course, but, yeah, they're as simple as that.
+
+33
+00:04:22,660 --> 00:04:26,760
+Okay, so, no big revolution how the battery pack is made.
+
+34
+00:04:26,760 --> 00:04:36,640
+Yeah, I'll jump a bit between the slides, so I won't cover the slides that Florenza has already covered.
+
+35
+00:04:37,460 --> 00:04:49,040
+So, you already know, you have heard probably in all the advertisements that maybe you have also seen these kind of cars in the street.
+
+36
+00:04:49,040 --> 00:04:57,000
+So, Beth vehicle is a battery electric vehicle, so it's a vehicle that the only energy source is the battery pack.
+
+37
+00:04:57,440 --> 00:04:57,540
+Okay.
+
+38
+00:04:59,640 --> 00:05:08,200
+The first application, let's say, of a full electric vehicle are with 400 volt battery, like the case of 500 Elettrica,
+
+39
+00:05:08,200 --> 00:05:24,080
+but the recent application aims to have a higher level of voltage, so you will probably work with application where the battery pack works at 800 volt, 1200 volt,
+
+40
+00:05:24,300 --> 00:05:26,080
+so the voltage is pretty high.
+
+41
+00:05:26,900 --> 00:05:37,920
+And keep in mind that it's not only a matter of voltage, but the current that this kind of cars produces are extremely high.
+
+42
+00:05:38,200 --> 00:05:39,820
+Or at least are deadly high.
+
+43
+00:05:39,820 --> 00:05:40,380
+Okay.
+
+44
+00:05:40,960 --> 00:05:49,940
+So, consider that I remember an activity that I was doing exactly in this kind of car that you see here,
+
+45
+00:05:50,120 --> 00:06:01,140
+and when you push the accelerator pedal, you had a current flow of around 200 ampere, 230 ampere.
+
+46
+00:06:01,140 --> 00:06:12,360
+And just keep in mind that with 0.5 or even more or even less of a direct current to the body can kill a person.
+
+47
+00:06:12,800 --> 00:06:17,100
+So, 0.5 against 230.
+
+48
+00:06:17,100 --> 00:06:25,140
+So, you can understand that the current flow inside an electric vehicle is pretty dangerous stuff.
+
+49
+00:06:25,440 --> 00:06:30,000
+So, we will see that from software point of view, or you will see once you start working,
+
+50
+00:06:30,460 --> 00:06:33,540
+on software point of view and also on hardware point of view,
+
+51
+00:06:34,020 --> 00:06:38,240
+there are a lot of countermeasures against, well, to protect this flow.
+
+52
+00:06:38,240 --> 00:06:38,960
+Okay.
+
+53
+00:06:39,060 --> 00:06:45,080
+Because the amount of current that flows inside these wirings are extremely high
+
+54
+00:06:45,080 --> 00:06:48,900
+and can be very, very dangerous, extremely dangerous, actually deadly.
+
+55
+00:06:49,260 --> 00:06:49,380
+Okay.
+
+56
+00:06:50,660 --> 00:06:52,860
+Of course, I don't want to scare you, but yeah.
+
+57
+00:06:53,980 --> 00:06:58,720
+This is why we have to work properly so that everything is safe and no one gets hurt.
+
+58
+00:06:58,720 --> 00:07:05,880
+And you see also here another thing, which I guess Lorenzo already mentioned.
+
+59
+00:07:06,440 --> 00:07:16,580
+One of the features of the electric vehicle is that looking at the curve of torque produced against the RPM,
+
+60
+00:07:16,880 --> 00:07:20,200
+so the rotation per minute of the vehicle, of the engine,
+
+61
+00:07:20,860 --> 00:07:24,100
+the torque produced is very high, is immediately high.
+
+62
+00:07:24,100 --> 00:07:24,660
+Okay.
+
+63
+00:07:24,660 --> 00:07:27,540
+So, while with the...
+
+64
+00:07:27,540 --> 00:07:34,220
+I know it's not extremely professional, but let's use it for one second.
+
+65
+00:07:35,200 --> 00:07:42,700
+The graphic of torque against RPM for an internal combustion engine is something like this.
+
+66
+00:07:42,880 --> 00:07:42,980
+Okay.
+
+67
+00:07:43,540 --> 00:07:45,340
+Kind of a bell.
+
+68
+00:07:45,880 --> 00:07:50,600
+While for the electric vehicles, electric engines, it's something like this.
+
+69
+00:07:50,600 --> 00:07:54,840
+So, almost immediately you have the highest amount of work.
+
+70
+00:07:54,980 --> 00:07:57,580
+It's like this, and then it decreases dramatically.
+
+71
+00:07:58,060 --> 00:07:58,180
+Okay.
+
+72
+00:08:00,400 --> 00:08:04,620
+But you can read all of this stuff almost everywhere on the internet.
+
+73
+00:08:04,960 --> 00:08:08,140
+Probably I should add a slide here would be helpful.
+
+74
+00:08:09,040 --> 00:08:16,220
+But this is extremely helpful also what we are seeing here.
+
+75
+00:08:16,940 --> 00:08:17,460
+Even in black.
+
+76
+00:08:17,460 --> 00:08:28,540
+To, let's see, immediately clear a false myth about electric vehicles.
+
+77
+00:08:30,440 --> 00:08:32,440
+A lot of people...
+
+78
+00:08:32,440 --> 00:08:32,580
+Yeah.
+
+79
+00:08:33,040 --> 00:08:37,740
+Guys, first of all, whenever you have doubts or you want to know something, please interrupt me.
+
+80
+00:08:37,840 --> 00:08:38,000
+Okay.
+
+81
+00:08:38,060 --> 00:08:41,660
+Because I have no idea if someone is raising hands or...
+
+82
+00:08:41,660 --> 00:08:42,720
+So, just interrupt me.
+
+83
+00:08:42,840 --> 00:08:43,160
+Don't worry.
+
+84
+00:08:43,160 --> 00:08:54,240
+One of the false myths about electric vehicles is that electric vehicles have an automatic gearbox.
+
+85
+00:08:55,720 --> 00:08:56,880
+An automatic transmission.
+
+86
+00:08:56,880 --> 00:09:24,660
+And this is related to this graphic that I was showing you, especially for this part.
+
+87
+00:09:24,660 --> 00:09:33,860
+If someone is talking, I cannot hear.
+
+88
+00:09:39,860 --> 00:09:41,200
+Can I ask a question?
+
+89
+00:09:41,840 --> 00:09:44,300
+Marianna, do you want to see something?
+
+90
+00:09:44,300 --> 00:09:48,340
+No, no, no, I don't have any questions.
+
+91
+00:09:49,140 --> 00:09:49,680
+Ah, okay.
+
+92
+00:09:50,120 --> 00:09:50,440
+Sorry.
+
+93
+00:09:50,600 --> 00:09:53,180
+I was just hearing noises from the microphone.
+
+94
+00:09:54,140 --> 00:09:55,280
+Okay, well, anyway.
+
+95
+00:09:56,940 --> 00:09:58,180
+Any guess?
+
+96
+00:09:58,180 --> 00:10:11,700
+So, another question.
+
+97
+00:10:11,700 --> 00:10:23,040
+Did you have the idea, or did you know, or have you heard any time in your life that electric vehicles had an automatic transmission?
+
+98
+00:10:23,040 --> 00:10:35,040
+Sorry, the question is why it doesn't have an automatic transmission, because it's just a DC motor that is controlled with...
+
+99
+00:10:35,040 --> 00:10:37,540
+It cannot be controlled with gears.
+
+100
+00:10:37,540 --> 00:10:57,280
+Okay, okay, this is correct, but there is another thing to be added, because it's true that the motor cannot be controlled by a gearbox, okay, but the gearbox is mechanical, which is the purpose of a gearbox.
+
+101
+00:10:57,280 --> 00:11:05,520
+The purpose of the gearbox is converting the torque of the engine and sending it to the wheels.
+
+102
+00:11:06,900 --> 00:11:07,940
+Okay, great.
+
+103
+00:11:08,080 --> 00:11:16,940
+And this is done also using the electric motor, but there will be a reduction mechanisms.
+
+104
+00:11:16,940 --> 00:11:20,260
+But, yeah, the aim will be the same.
+
+105
+00:11:20,380 --> 00:11:27,740
+So, also, with an electric motor, we can produce torque and then send it to, let's say, transmit it to the wheels.
+
+106
+00:11:28,480 --> 00:11:36,440
+So, why do we need a gearbox in an internal combustion engine, and why with electric motors we don't need it?
+
+107
+00:11:36,640 --> 00:11:37,980
+We don't need the gearbox.
+
+108
+00:11:37,980 --> 00:11:57,860
+Like, in the first phases of an IC, like internal combustion engine, the torque is very high, and it must be reduced in some way.
+
+109
+00:11:57,960 --> 00:11:58,980
+And this is done by the gearbox.
+
+110
+00:11:58,980 --> 00:12:12,540
+But, in an electrical motor, we can control it, like, with stage, like the picture that you did, that you draw, the beginning of it is controlled by electrical controllers, you know?
+
+111
+00:12:13,260 --> 00:12:21,560
+Well, you know, it's not really like this, because the torque that is produced with an internal combustion engine is more, let's say, gradual.
+
+112
+00:12:22,080 --> 00:12:27,560
+So, the highest amount of torque is not at the beginning, so with very few rpms.
+
+113
+00:12:27,560 --> 00:12:45,680
+This would mean that when you turn on the engine, at the first, I don't remember, actually, the English term for it, but when the rpm of the internal combustion engine are low, the torque produced is not very, very high.
+
+114
+00:12:45,680 --> 00:12:57,500
+And just, please do not get confused with the first gear, because the daily experience is that with the first gear, you have a high torque.
+
+115
+00:12:57,500 --> 00:13:03,940
+But, it's basically because the mechanism is built, so that you have high torque here, oops, sorry.
+
+116
+00:13:06,240 --> 00:13:11,040
+You have high torque here, so for very few rpm, and then it drops.
+
+117
+00:13:11,040 --> 00:13:25,440
+So, with the first gearbox, you know that the, you can go at, I don't know, 20 kilometers per hour, 30 kilometers per hour, so you get the torque immediately, but then the speed of the vehicle would be 30 kilometers per hour.
+
+118
+00:13:25,440 --> 00:13:40,700
+So, the difference here, and the reason why we need the gearbox is that with an internal combustion engine, we need more kind of mechanisms, so that we can move the torque up to this level.
+
+119
+00:13:40,700 --> 00:13:54,340
+So, now that we have these different, let's say, carves like this, and this helps the vehicle to speed up, okay, so to get, guys, sorry, just one second, I have a call, I have to pick, sorry.
+
+120
+00:13:55,000 --> 00:13:55,160
+Yes.
+
+121
+00:13:55,160 --> 00:13:55,200
+Yes.
+
+122
+00:13:55,200 --> 00:13:55,700
+Yes.
+
+123
+00:13:55,700 --> 00:13:56,200
+Yes.
+
+124
+00:13:56,200 --> 00:13:56,700
+Yes.
+
+125
+00:13:56,700 --> 00:13:57,700
+Yes.
+
+126
+00:13:57,700 --> 00:13:58,700
+Yes.
+
+127
+00:13:58,700 --> 00:13:59,700
+Yes.
+
+128
+00:14:10,700 --> 00:14:11,700
+Yes.
+
+129
+00:14:11,700 --> 00:14:24,700
+Yes.
+
+130
+00:14:24,700 --> 00:14:25,700
+Yes.
+
+131
+00:14:25,700 --> 00:14:26,700
+Yes.
+
+132
+00:14:26,700 --> 00:14:27,700
+Okay.
+
+133
+00:14:27,700 --> 00:14:28,700
+Here I am again.
+
+134
+00:14:28,700 --> 00:14:29,700
+No, sorry.
+
+135
+00:14:29,700 --> 00:14:31,020
+Yes, please.
+
+136
+00:14:31,020 --> 00:14:31,800
+Oh, yes.
+
+137
+00:14:31,800 --> 00:14:39,980
+I think it's because of the motors architecture like P1, P2, and P1, P4, when the ICE is done,
+
+138
+00:14:39,980 --> 00:14:51,420
+the uh like it is directly sent to the p4 so uh p4 will like uh it is transmitted directly
+
+139
+00:14:52,380 --> 00:14:58,700
+no no but this is not a matter of uh of architecture of hybrid or stuff like this
+
+140
+00:14:58,700 --> 00:15:05,980
+the only reason here is that the the in an electric vehicle as you see the blue line
+
+141
+00:15:05,980 --> 00:15:13,260
+the torque is almost constant and is immediately at the highest value almost
+
+142
+00:15:14,140 --> 00:15:20,700
+from the beginning okay this curve is even more steep it's almost immediate immediately you
+
+143
+00:15:20,700 --> 00:15:28,620
+receive the highest work this will help the car to start very fast and i don't know if you have ever
+
+144
+00:15:28,620 --> 00:15:33,580
+driven an electric vehicle but usually the acceleration of these vehicles is very great
+
+145
+00:15:33,580 --> 00:15:43,340
+and in addition the torque is high for a wide range of rpm of the of the engine this means that you
+
+146
+00:15:43,340 --> 00:15:53,100
+can get also a high quite high speed just with one gear so this means that there's no automatic
+
+147
+00:15:53,100 --> 00:15:58,300
+transmission because in an electric vehicle there is no gearbox just because with one gear let's say
+
+148
+00:15:58,300 --> 00:16:05,660
+so with one mechanism we can get from zero to the highest the maximum speed of that electric vehicle
+
+149
+00:16:05,660 --> 00:16:14,700
+okay this is a physical reason behind how it works an electric vehicle an electric engine where you have
+
+150
+00:16:14,700 --> 00:16:21,100
+the torque a maximum torque from the beginning while with an internal combustion engine to get the torque
+
+151
+00:16:21,100 --> 00:16:29,740
+enough torque to move the vehicle from zero to 200 you need more gears and more uh yeah ratio between
+
+152
+00:16:29,740 --> 00:16:38,380
+the propulsing uh mechanical part and uh uh how to say and the one that is then connected to the
+
+153
+00:16:39,020 --> 00:16:45,500
+tires okay so this is the reason why in the internal combustion engine we need a gearbox while
+
+154
+00:16:45,500 --> 00:16:51,580
+in an electric vehicle there is no gearbox because there is a direct transmission and this is done
+
+155
+00:16:51,580 --> 00:17:00,300
+because the engine has the maximum torque sorry there is a bit of noise i don't know if you can hear me
+
+156
+00:17:00,300 --> 00:17:10,940
+properly we can hear you okay okay because here there is a lot of noise okay um yeah so this is a
+
+157
+00:17:10,940 --> 00:17:17,180
+force myth because it's not an automatic transmission in electric vehicle but the electric vehicle does not
+
+158
+00:17:17,180 --> 00:17:27,020
+have any gearbox because thanks to the physics behind a dcmo a a electric motor then we can get to the
+
+159
+00:17:27,020 --> 00:17:37,900
+proper speed uh without the need of a gearbox okay i'll take it as a yes if you have doubts please
+
+160
+00:17:37,900 --> 00:17:50,140
+now it's time to ask questions yes got it thank you okay nice uh in fact if you look your internet on
+
+161
+00:17:50,140 --> 00:17:58,140
+speed records or the record from for a car to go from zero kilometers zero kilometers per hour to 100
+
+162
+00:17:58,140 --> 00:18:05,500
+kilometers per hour uh first positions are always always for electric vehicles because they are able to
+
+163
+00:18:05,500 --> 00:18:12,380
+produce a huge amount of torque immediately yeah but it's going to be only for one or two times not
+
+164
+00:18:12,380 --> 00:18:22,220
+more uh yeah well that's uh that's true uh but uh yeah please do this comment again later in this
+
+165
+00:18:22,220 --> 00:18:31,580
+presentation and i'll add a couple of things about it okay uh so let's see what to which are the main
+
+166
+00:18:31,580 --> 00:18:38,060
+components and considering everything that we have said before then you see that there is no gearbox here
+
+167
+00:18:38,060 --> 00:18:44,940
+okay here it's written gearbox but this is not the proper definition because this is just a reduction
+
+168
+00:18:44,940 --> 00:18:54,620
+mechanisms uh to have the proper torque to uh tires but it's just a one gear so it's a dire basically a
+
+169
+00:18:54,620 --> 00:19:01,180
+direct propulsion from the engine to the tires with only one mechanisms of reduction it's like you have one
+
+170
+00:19:01,180 --> 00:19:10,460
+gear in fact when you use the electric vehicle you have what is called shifter so you can use the p as
+
+171
+00:19:10,460 --> 00:19:19,580
+parking r as a retro and as neutral and d as drive so you move forward so you can just move forward
+
+172
+00:19:19,580 --> 00:19:29,100
+backward or stop that's it this is why gearbox is not the gearbox that you imagine from a normal internal
+
+173
+00:19:29,100 --> 00:19:38,140
+combustion engine car okay and why i mentioned the gearbox this is part of a wider uh idea that i would
+
+174
+00:19:38,140 --> 00:19:45,500
+like to share with you today a concept of the idea the gearbox is extremely complex mechanisms okay it
+
+175
+00:19:45,500 --> 00:19:53,900
+requires a lot of mechanical parts the oil to make everything smooth you know to make everything working
+
+176
+00:19:53,900 --> 00:20:02,300
+properly uh a lot of mechanical rotating parts uh these mechanisms that have to work together so it's a
+
+177
+00:20:03,020 --> 00:20:09,660
+a very complex let's say it's a mechanical but complex system with electric vehicles there's no need
+
+178
+00:20:09,660 --> 00:20:16,860
+of gearbox and these uh works let's say in favor of the electric vehicles because they are
+
+179
+00:20:16,860 --> 00:20:26,060
+very simple okay compared to the internal combustion engine so the traditional cars whatever the ones that we
+
+180
+00:20:26,060 --> 00:20:34,300
+have always seen and both uh until recent years uh an electric vehicle is much more simpler okay there are
+
+181
+00:20:34,300 --> 00:20:43,180
+less components uh it's less complex for me the hybrid vehicles are our miss uh for both from the hardware
+
+182
+00:20:43,180 --> 00:20:48,860
+point of view and software point of view because you have the complexity of an electric car the complexity
+
+183
+00:20:48,860 --> 00:20:56,540
+of an internal combustion engine of course you gain an advantage in the emission consumption and stuff like
+
+184
+00:20:56,540 --> 00:21:05,820
+this but it's a it's a yeah a very very complex system the electric an electric vehicle is very very easy
+
+185
+00:21:05,820 --> 00:21:13,500
+uh someone that hates the electric vehicle says that they are washing machine with the tires because
+
+186
+00:21:13,500 --> 00:21:20,860
+basically you have an electric engine just moving the tires and then the battery that powers it okay
+
+187
+00:21:21,500 --> 00:21:29,740
+uh so it's very as simple as that other everything else is just the chassis and all the normal stuff that
+
+188
+00:21:29,740 --> 00:21:37,180
+you need in a car but the propulsion part is really easy uh in fact if we see if we have a look at the main
+
+189
+00:21:37,180 --> 00:21:46,780
+components of an electric vehicle we see first of all on here the battery pack okay so yeah this is an
+
+190
+00:21:46,780 --> 00:21:55,100
+example 38 kilowatt uh hour but you know it depends really the size of the battery pack is very uh
+
+191
+00:21:55,100 --> 00:22:01,980
+uh it depends on the car that you're buying it depends on so many factors there's no a specific
+
+192
+00:22:01,980 --> 00:22:10,380
+book what is a rule actually is that to place the battery pack at the bottom of the vehicle uh putting
+
+193
+00:22:10,380 --> 00:22:22,060
+the weight here will help the will put the center of gravity i guess it's the definition uh lower so the
+
+194
+00:22:22,060 --> 00:22:28,140
+dynamic of a car is even better so this is basically the rule the where to place the battery pack about
+
+195
+00:22:28,140 --> 00:22:37,500
+how big it is and how to build it uh it still have to research and development because we have commercial
+
+196
+00:22:37,500 --> 00:22:45,660
+solutions of course but these commercial solutions are not extremely efficient uh so yeah there are huge
+
+197
+00:22:45,660 --> 00:22:51,260
+investments to fix what is the actual limitation of an electric vehicle and this the battery pack
+
+198
+00:22:52,540 --> 00:23:01,500
+so battery pack then we have the power electronics bay uh basically this is a huge system in this case
+
+199
+00:23:01,500 --> 00:23:10,220
+where we have the the inverter first of all the inverter is needed because the battery pack let's say works
+
+200
+00:23:10,220 --> 00:23:20,380
+with the dc current but then we need a uh alternate alternate three alternative current with the delay of 120
+
+201
+00:23:20,380 --> 00:23:24,860
+degrees for the physical um it's a uh
+
+202
+00:23:26,700 --> 00:23:33,020
+phenomenon that regulates this kind of angles okay so we need something that change the the current from
+
+203
+00:23:34,300 --> 00:23:37,900
+continuous current to alternate current and this is the inverter
+
+204
+00:23:37,900 --> 00:23:54,380
+uh so fdcu and fdcc are electronic control units but we will see them later uh the charger uh yeah they did i should really change this slide because these names are a bit uh confusing to be honest so anyway we have the charging system in general uh but the charging system uses any way the inverter
+
+205
+00:23:54,380 --> 00:24:10,860
+or specific wirings for the DC
+
+206
+00:24:10,860 --> 00:24:17,500
+we charge so there's no specific component called charger okay there's a charging system
+
+207
+00:24:18,940 --> 00:24:22,220
+and then we have a DC DC converter so this is interesting
+
+208
+00:24:22,940 --> 00:24:31,580
+uh we have said that we need a device that moves that transforms and converts the current from direct current
+
+209
+00:24:31,580 --> 00:24:38,860
+to AC current to AC current so that we can uh uh uh propel in a way uh the electric engine okay
+
+210
+00:24:39,740 --> 00:24:47,820
+so we need this device that changes from direct to direct why should i need a a device that performs a DC DC
+
+211
+00:24:48,700 --> 00:24:59,180
+conversion because AC DC we have said okay we need something that uh changes from DC to AC to let the engine work
+
+212
+00:24:59,180 --> 00:25:06,460
+and contrary AC DC also but then we will see why we need the contrary as well
+
+213
+00:25:07,340 --> 00:25:14,220
+but why do we need the DC DC uh to regulate the voltage of what
+
+214
+00:25:16,380 --> 00:25:21,340
+uh the voltage to charge uh the battery
+
+215
+00:25:21,340 --> 00:25:30,300
+battery or maybe the voltage that the battery produced so we need the voltage regulator and we
+
+216
+00:25:30,300 --> 00:25:39,900
+use a DC DC converter no so basically to to recharge the the battery pack there is a specific system okay
+
+217
+00:25:39,900 --> 00:25:48,300
+so there is a set of wiring so the switches and stuff like this uh that will uh you know you just connect
+
+218
+00:25:48,300 --> 00:25:54,460
+to the battery back to the battery back to the car so the battery back to a a charging station in the street
+
+219
+00:25:54,460 --> 00:26:01,740
+or wherever and then there is a let's say what is called the handshake between the power supply
+
+220
+00:26:02,300 --> 00:26:12,460
+station yeah yeah the charging station and uh the car so it's not used for recharge so any other guess
+
+221
+00:26:12,460 --> 00:26:24,540
+uh i think it's used for when we have regenerated energy that we want to pull it back to the battery oh
+
+222
+00:26:24,540 --> 00:26:29,340
+sorry guys uh one second the client is asking for me just one second
+
+223
+00:26:29,340 --> 00:26:44,380
+if if he is going to call me then i'll uh shortly stop the the call let me see if i can manage it just
+
+224
+00:26:44,380 --> 00:26:45,740
+talking through the chat
+
+225
+00:26:45,740 --> 00:27:07,900
+okay guys just a couple of minutes
+
+226
+00:27:07,900 --> 00:27:17,980
+take a bite
+
+227
+00:27:20,140 --> 00:27:21,900
+uh
+
+228
+00:27:24,940 --> 00:27:26,940
+um
+
+229
+00:27:28,940 --> 00:27:34,940
+um
+
+230
+00:27:34,940 --> 00:28:04,920
+One minute and I am done.
+
+231
+00:28:04,940 --> 00:28:34,920
+One minute and I am done.
+
+232
+00:28:34,940 --> 00:29:04,920
+One minute and I am done.
+
+233
+00:29:04,940 --> 00:29:34,920
+One minute and I am done.
+
+234
+00:29:34,940 --> 00:30:04,920
+One minute and I am done.
+
+235
+00:30:04,940 --> 00:30:18,940
+I am recording minutes of nothing.
+
+236
+00:30:18,940 --> 00:30:46,940
+One minute and I am done.
+
+237
+00:30:48,940 --> 00:31:10,940
+One minute and I am done.
+
+238
+00:31:10,940 --> 00:31:34,940
+One minute and I am done.
+
+239
+00:31:34,940 --> 00:31:40,100
+Okay, guys, I hope I won't have other interruptions.
+
+240
+00:31:40,520 --> 00:31:45,140
+I apologize for it, but in parallel I am working for the client as well.
+
+241
+00:31:45,140 --> 00:31:55,800
+Anyway, I didn't hear the last reply that was given, so could you repeat, please?
+
+242
+00:31:55,800 --> 00:31:59,640
+Why do we need DC to DC converter?
+
+243
+00:31:59,640 --> 00:32:04,220
+Yeah, well, that's the question that I asked you.
+
+244
+00:32:04,220 --> 00:32:05,220
+Yeah.
+
+245
+00:32:05,220 --> 00:32:06,220
+Yeah.
+
+246
+00:32:06,220 --> 00:32:07,220
+Yeah.
+
+247
+00:32:07,220 --> 00:32:09,220
+Yeah.
+
+248
+00:32:09,220 --> 00:32:27,940
+We need this kind of converters so we can send the current from the battery back, for example, when it's storage to other issues that need to energize, for example, the instrument cluster, the EPS or EVAC or other issues.
+
+249
+00:32:27,940 --> 00:32:38,940
+They need the lower voltage, not as it's coming from the battery storage, and the second reason I think it's for the regenerative energy that is stored back to the battery.
+
+250
+00:32:38,940 --> 00:32:57,940
+Okay, so yes, this is very close to the right answer, actually it is the right answer, so there are components in a car that are directly powered from the battery pack, for example, the engines and electric engines.
+
+251
+00:32:57,940 --> 00:33:22,940
+Because most of the electric cars have got not just one engine, sometimes two, sometimes three, sometimes four engines, or four wheels, so yeah, we have this kind of situations and possibilities, but then we have a lot, a lot of devices that works with, I don't know, 12V, 5V, 3V, so wow.
+
+252
+00:33:22,940 --> 00:33:32,940
+This is the reason why we need the DC DC converter, but not to directly power this element.
+
+253
+00:33:32,940 --> 00:33:42,940
+The DC DC converter will help to power one thing, which is, for you, what could be it?
+
+254
+00:33:46,940 --> 00:33:49,940
+Do you have a battery on your car?
+
+255
+00:33:49,940 --> 00:33:52,940
+Yeah, the battery is used for the starter.
+
+256
+00:33:52,940 --> 00:33:54,940
+How big is that battery?
+
+257
+00:33:54,940 --> 00:33:55,940
+It's a normal battery?
+
+258
+00:33:55,940 --> 00:33:56,940
+It's a normal battery.
+
+259
+00:33:56,940 --> 00:33:58,940
+Like 81V?
+
+260
+00:33:58,940 --> 00:34:02,940
+Yes, it's a normal 12V battery.
+
+261
+00:34:02,940 --> 00:34:10,940
+So, in the electric vehicles, there is still the 12V battery, okay?
+
+262
+00:34:10,940 --> 00:34:11,940
+Okay.
+
+263
+00:34:11,940 --> 00:34:12,940
+Okay.
+
+264
+00:34:12,940 --> 00:34:24,940
+This battery then supplies all the devices that work with the 5V, 3V, 12V, the headlights, the electronic control units, the electric screens and whatever.
+
+265
+00:34:24,940 --> 00:34:41,940
+So, all this usual stuff that you have in the car are still powered by the 12V battery, but in the internal combustion engine cars, this battery is powered by the engine itself.
+
+266
+00:34:41,940 --> 00:34:53,940
+Okay, so the engine rotates, and through this rotation we can produce electric energy and supply this battery back, a small battery of 12V.
+
+267
+00:34:53,940 --> 00:35:06,940
+But, in an electric vehicle, we don't have the internal combustion engine anymore, so there is no, let's say, rotating part that we can use to supply this.
+
+268
+00:35:06,940 --> 00:35:11,940
+There's not an alternator that can produce 12V.
+
+269
+00:35:11,940 --> 00:35:12,940
+Yes.
+
+270
+00:35:12,940 --> 00:35:13,940
+So, how it's done here?
+
+271
+00:35:13,940 --> 00:35:22,940
+Basically, the car is provided with a DC-DC converter, so that the electric current basically is taken from the battery pack.
+
+272
+00:35:22,940 --> 00:35:29,940
+But, since the battery pack works with a voltage that is much higher than the voltage of a normal battery that is 12V,
+
+273
+00:35:29,940 --> 00:35:41,940
+then we need the DC-DC converter, so that the voltage is adapted and the current can flow from the battery pack to the 12V battery,
+
+274
+00:35:41,940 --> 00:35:51,940
+so that this battery is always supplied and recharged properly, and then everything can work as usual, so business as usual in a car.
+
+275
+00:35:51,940 --> 00:35:52,940
+Okay?
+
+276
+00:35:52,940 --> 00:36:02,940
+So, remember, also in an electric vehicle, you don't have only the huge battery pack that provides the current for the propulsion,
+
+277
+00:36:02,940 --> 00:36:11,940
+but also you have the traditional 12V battery, because all the loads that work with the low voltage,
+
+278
+00:36:11,940 --> 00:36:20,940
+where low I mean 12V, 5V, 3V, 8V, whatever, all these kind of devices are powered by the 12V battery,
+
+279
+00:36:20,940 --> 00:36:28,940
+and to avoid that the charge of this 12V battery just drains out, then we have a DC-DC converter,
+
+280
+00:36:28,940 --> 00:36:35,940
+so that we can take the current from the battery pack and then provide this current to the 12V battery,
+
+281
+00:36:35,940 --> 00:36:39,940
+so that the 12V battery is supplied as well.
+
+282
+00:36:39,940 --> 00:36:40,940
+Okay?
+
+283
+00:36:40,940 --> 00:36:44,940
+Then, what you were saying before, I don't remember who was talking before,
+
+284
+00:36:44,940 --> 00:36:53,940
+saying that we need to give the power supply to the electric vehicle, control the Vito Diego's and all this stuff,
+
+285
+00:36:53,940 --> 00:37:00,940
+this is true, but it's the 12V that provides enough power supply to these components,
+
+286
+00:37:00,940 --> 00:37:08,940
+while the 12V battery itself is supplied by the battery pack.
+
+287
+00:37:08,940 --> 00:37:09,940
+Okay?
+
+288
+00:37:11,940 --> 00:37:12,940
+Okay.
+
+289
+00:37:12,940 --> 00:37:14,940
+So, I have one question.
+
+290
+00:37:14,940 --> 00:37:19,940
+What about in the mild hybrid concept that has a 48V network?
+
+291
+00:37:19,940 --> 00:37:25,940
+So, also here we have a DC-DC current from the 12V to 48V?
+
+292
+00:37:25,940 --> 00:37:31,940
+I believe there is the same concept also in this kind of cars.
+
+293
+00:37:31,940 --> 00:37:34,940
+I'm not sure because I've never worked on hybrid application,
+
+294
+00:37:34,940 --> 00:37:41,940
+but I guess this applies every time we have a delta of voltage, a huge delta of voltage,
+
+295
+00:37:41,940 --> 00:37:49,940
+so there is also a conversion involved to make sure that everything is, you know, works with the expected, yeah, voltage once again.
+
+296
+00:37:49,940 --> 00:38:01,940
+Again, I've never worked on hybrid application, so I can't say that in this specific mild hybrid application there is a DC-DC converter,
+
+297
+00:38:01,940 --> 00:38:04,940
+but I believe there must be something like this.
+
+298
+00:38:04,940 --> 00:38:09,940
+But anyway, in that case, you still have the internal combustion engine,
+
+299
+00:38:09,940 --> 00:38:16,940
+so you can, anyway, you have the traditional solution that we have always had in the cars.
+
+300
+00:38:16,940 --> 00:38:22,940
+Probably there is the DC-DC converter, but yeah, probably we can ask this question before I answer it.
+
+301
+00:38:22,940 --> 00:38:23,940
+Yeah, yeah.
+
+302
+00:38:23,940 --> 00:38:28,940
+Send him an email, add me as well, and we can discuss the solution there in any time.
+
+303
+00:38:28,940 --> 00:38:30,940
+Okay, thank you.
+
+304
+00:38:30,940 --> 00:38:43,940
+Okay, so again, main components, battery pack, engines of course, no gearbox as we said, the only thing that is a reduction mechanism,
+
+305
+00:38:43,940 --> 00:38:50,940
+but that's it, so we have like one gear, we can move forward and we can move backward, but that's it.
+
+306
+00:38:50,940 --> 00:39:05,940
+And the recharge system, okay, here there is the symbol of this organ that we use to connect the car to the,
+
+307
+00:39:05,940 --> 00:39:10,940
+yeah, the recharging station or whatever.
+
+308
+00:39:10,940 --> 00:39:19,940
+Okay, so let's move to another slide.
+
+309
+00:39:19,940 --> 00:39:30,940
+Yeah, just one note before moving on and looking directly at the network topology of an electric vehicle
+
+310
+00:39:30,940 --> 00:39:35,940
+and how they're dislocated in a car.
+
+311
+00:39:35,940 --> 00:39:42,940
+As someone was saying before, we can use the, and as I was mentioning as well,
+
+312
+00:39:42,940 --> 00:39:48,940
+we can use the electric motor to move forward and to move backward, okay?
+
+313
+00:39:48,940 --> 00:39:58,940
+This is done using basically these three alternative currents with a delay of 120 degrees.
+
+314
+00:39:58,940 --> 00:40:07,940
+So if we make this electromagnetic field rotating in one direction, then we can make the car moving forward.
+
+315
+00:40:07,940 --> 00:40:19,940
+If we invert the rotation of this electromagnetic field, then we can make the car moving backward.
+
+316
+00:40:19,940 --> 00:40:25,940
+And this is normal when you put D to move forward and R to move backward.
+
+317
+00:40:25,940 --> 00:40:34,940
+But in case you were moving forward, I don't know, let's say you are in Vesuvio, for example, in Naples.
+
+318
+00:40:34,940 --> 00:40:50,940
+And then once you have done all your pictures to put on Instagram and stuff like this, then you have to go home and you leave, I don't know, just at the beginning of the mountain.
+
+319
+00:40:50,940 --> 00:40:56,940
+Then you will drive for like 14 kilometers in a negative slope.
+
+320
+00:40:56,940 --> 00:41:04,940
+In that case you won't need to accelerate because the slope is negative, so the car will just move thanks to gravity.
+
+321
+00:41:04,940 --> 00:41:10,940
+In this case we have the engine that is mechanically moving forward.
+
+322
+00:41:10,940 --> 00:41:19,940
+But then we can decide to put the electromagnetic field rotation inverse to the actual direction of the engine.
+
+323
+00:41:19,940 --> 00:41:23,940
+In this case the engine can be used as a generator.
+
+324
+00:41:23,940 --> 00:41:32,940
+So in this case we are not using power, because we don't need power to move the vehicle to power the electric vehicle.
+
+325
+00:41:32,940 --> 00:41:39,940
+But then we are regenerating basically, so we are producing electric energy that is then stored in the battery pack.
+
+326
+00:41:39,940 --> 00:41:49,940
+So this is called, yeah, this is the, it's not the regenerative braking, but yeah, it's a mechanism of regeneration.
+
+327
+00:41:49,940 --> 00:42:03,940
+That is used every time we want to, we are moving forward, but then we inverse the rotation of the electromagnetic field.
+
+328
+00:42:03,940 --> 00:42:10,940
+So basically all you have to know, then of course if you want more details you can study hundreds of books about it,
+
+329
+00:42:10,940 --> 00:42:13,940
+and I'm not an expert at all about all this stuff.
+
+330
+00:42:13,940 --> 00:42:21,940
+But in general the electric engine can use both, can be used both as a generator and as a motor.
+
+331
+00:42:21,940 --> 00:42:26,940
+Basically motor when we want to move forward, or you know, we want to use retro.
+
+332
+00:42:26,940 --> 00:42:37,940
+And as a generator whenever, I don't know, the car can move by itself because we are a negative slope or whatever.
+
+333
+00:42:37,940 --> 00:42:47,940
+And we can produce electricity that helps us to, let's say, recharge the battery.
+
+334
+00:42:47,940 --> 00:42:49,940
+Can I make a question?
+
+335
+00:42:49,940 --> 00:42:50,940
+Yeah, sure.
+
+336
+00:42:50,940 --> 00:43:01,940
+Just out of curiosity, if we are on top of the hill and our car is 100% charged, and then we go upside the hill like we go down.
+
+337
+00:43:01,940 --> 00:43:04,940
+In this case our engine is in charging mode.
+
+338
+00:43:04,940 --> 00:43:09,940
+Where does the energy that we get goes, like our battery is 100% charged?
+
+339
+00:43:09,940 --> 00:43:20,940
+Yeah, this is a good question actually, and this was a software bug that was found many years ago.
+
+340
+00:43:20,940 --> 00:43:29,940
+Because it can happen that you go on a mountain and then you charge the battery because you are in a luxurious hotel or whatever,
+
+341
+00:43:29,940 --> 00:43:34,940
+you have everything that is needed to charge your car, and then you go downhill.
+
+342
+00:43:34,940 --> 00:43:40,940
+In that case the software must be able not to use the motor as a generator.
+
+343
+00:43:40,940 --> 00:43:44,940
+So basically you do not regenerate anything.
+
+344
+00:43:44,940 --> 00:43:47,940
+So there's no...
+
+345
+00:43:47,940 --> 00:43:53,940
+There are software logics that it's like slightly accelerating the car.
+
+346
+00:43:53,940 --> 00:43:59,940
+I'm not really sure, I don't remember actually the exact logic behind it, but it depends on the car maker anyway.
+
+347
+00:43:59,940 --> 00:44:05,940
+But the general rule is that of course there is a limit in the state of charge.
+
+348
+00:44:05,940 --> 00:44:16,940
+So if the state of charge the software is already high, or you are already at 100%, then these mechanisms of regeneration shouldn't apply.
+
+349
+00:44:16,940 --> 00:44:25,940
+But that's a problem that was found out a few years ago, because when all the testing started about electric vehicles,
+
+350
+00:44:25,940 --> 00:44:32,940
+then also these kinds of tests were done, and there were some problems related to the battery packs were found,
+
+351
+00:44:32,940 --> 00:44:44,940
+because the engine, all the electrical systems trying to regenerate electricity, but the battery pack was already full.
+
+352
+00:44:44,940 --> 00:44:51,940
+So there were hardware problems, let's say.
+
+353
+00:44:51,940 --> 00:45:01,940
+So the downhill scenario is just one of the scenarios, but the most common one is when you have to brake.
+
+354
+00:45:01,940 --> 00:45:10,940
+Of course we have brakes on our car, but as you know, the traditional brakes is just a, let's say, waste of energy.
+
+355
+00:45:10,940 --> 00:45:16,940
+Because you brake, there is friction between the mechanical parts and the...
+
+356
+00:45:16,940 --> 00:45:18,940
+Yeah, mechanical parts basically.
+
+357
+00:45:18,940 --> 00:45:22,940
+So this energy is just released as heat.
+
+358
+00:45:22,940 --> 00:45:27,940
+Okay, so it's a waste of energy, the traditional brake.
+
+359
+00:45:27,940 --> 00:45:31,940
+In electric vehicles, then we use the regenerative braking.
+
+360
+00:45:31,940 --> 00:45:37,940
+So whenever we want to brake, first of all, if we brake, there is these mechanisms of regeneration.
+
+361
+00:45:37,940 --> 00:45:48,940
+So the car, as soon as we press the brake, the car software, let's say the software in the electronic control unit already knows that it has to regenerate.
+
+362
+00:45:48,940 --> 00:45:53,940
+Okay, so the braking force is stronger, because there is no...
+
+363
+00:45:53,940 --> 00:45:59,940
+There's not only the action of the mechanical brakes, but there is also the action of the engine.
+
+364
+00:45:59,940 --> 00:46:02,940
+Okay, working as a generator.
+
+365
+00:46:02,940 --> 00:46:07,940
+There are some features, and this is the most extreme one, the one pedal drive,
+
+366
+00:46:07,940 --> 00:46:14,940
+where you can basically drive your car using only the accelerator pedal, because when you want to move forward, you accelerate.
+
+367
+00:46:14,940 --> 00:46:22,940
+Whenever you don't want to move forward, and you want to brake, you simply remove the foot from the accelerator pedal,
+
+368
+00:46:22,940 --> 00:46:28,940
+then the regenerative braking will be so strong that the car is like braking.
+
+369
+00:46:28,940 --> 00:46:35,940
+And without braking, okay, so you are just using the... you are pressing the accelerator pedal and removing the accelerator pedal.
+
+370
+00:46:35,940 --> 00:46:44,940
+So just removing the foot from the accelerator pedal, the engine will work so strongly as a generator that the car will brake.
+
+371
+00:46:44,940 --> 00:46:47,940
+So you won't need to use the brake system.
+
+372
+00:46:47,940 --> 00:46:51,940
+Because the brake system, once again, is a loss of energy, okay?
+
+373
+00:46:51,940 --> 00:46:53,940
+It's a loss of energy in form of heat.
+
+374
+00:46:53,940 --> 00:47:02,940
+In this way, with the one pedal drive feature, we just remove the foot from the accelerator pedal, and then the car will brake.
+
+375
+00:47:02,940 --> 00:47:07,940
+I tried it, it's very strange for, let's say, using this kind of cars.
+
+376
+00:47:07,940 --> 00:47:18,940
+But this is the way to optimize the recovery of energy, because the main pain of an electric vehicle, software, hardware, blah, blah, blah, blah,
+
+377
+00:47:18,940 --> 00:47:22,940
+is to extend the range of a battery pack.
+
+378
+00:47:22,940 --> 00:47:31,940
+I don't know if you remember, yeah, if you were for sure much younger than me, but I remember a few years ago,
+
+379
+00:47:31,940 --> 00:47:41,940
+the highest amount of estimated range was of, I don't know, 100 kilometers, 150 kilometers for electric vehicles.
+
+380
+00:47:41,940 --> 00:47:54,940
+Now we are easily talking about 300, 400, 500, and, for example, I don't know, Tesla says 700, but just because the battery pack is bigger.
+
+381
+00:47:54,940 --> 00:47:56,940
+Yeah, so, okay.
+
+382
+00:47:56,940 --> 00:48:06,940
+But anyway, both the hardware and software, the whole aim is to extend the range.
+
+383
+00:48:06,940 --> 00:48:07,940
+Why so?
+
+384
+00:48:07,940 --> 00:48:14,940
+Because, yeah, once again, the battery pack are the actual limit of an electric vehicle that takes time to recharge them.
+
+385
+00:48:14,940 --> 00:48:21,940
+Every time you recharge a battery, then the lifespan of the battery pack is reduced, and stuff like this.
+
+386
+00:48:21,940 --> 00:48:28,940
+So there are plenty of parameters that says, okay, let's keep this battery alive as long as possible,
+
+387
+00:48:28,940 --> 00:48:31,940
+and reduce the amount of recharge as long as possible.
+
+388
+00:48:31,940 --> 00:48:39,940
+So everything is done from the hardware and specifically software point of view to recover energy as much as possible.
+
+389
+00:48:39,940 --> 00:48:40,940
+Okay.
+
+390
+00:48:40,940 --> 00:48:45,940
+And one pedal drive for regenerative braking in general.
+
+391
+00:48:45,940 --> 00:48:52,940
+It's a way, so every time you want to brake, just reduce the amount of braking force produced by mechanical brakes,
+
+392
+00:48:52,940 --> 00:49:02,940
+that is energy loss, and using the regeneration, so using the electric motor as generator.
+
+393
+00:49:02,940 --> 00:49:03,940
+Okay.
+
+394
+00:49:03,940 --> 00:49:09,940
+There are a lot, lot of features to recover energy, but this is the most important one.
+
+395
+00:49:09,940 --> 00:49:13,940
+Okay, so negative slope, every time you brake, and things like this.
+
+396
+00:49:13,940 --> 00:49:25,940
+Of course, guys, you will have these slides, probably they are already available in the classroom.
+
+397
+00:49:25,940 --> 00:49:32,940
+So, yeah, you can meet them again, and using the video, which I'm going to upload,
+
+398
+00:49:32,940 --> 00:49:38,940
+then you can listen again to some stuff, but it's not suggesting modification or improvement to us,
+
+399
+00:49:38,940 --> 00:49:42,940
+so you will have everything to study.
+
+400
+00:49:43,940 --> 00:49:53,940
+Review of the same today, my electric vehicle, the hybrid, plug-in hybrid, torque path, okay, torque path.
+
+401
+00:49:53,940 --> 00:49:54,940
+Okay.
+
+402
+00:49:54,940 --> 00:49:59,940
+So, one second.
+
+403
+00:49:59,940 --> 00:50:02,940
+Okay.
+
+404
+00:50:06,940 --> 00:50:08,940
+Okay, there's your topology.
+
+405
+00:50:08,940 --> 00:50:21,940
+So, guys, this lesson, I believe, I'm sure Lorenzo said it the same, this lesson is an introduction lesson, okay, just to make you aware of the projects we are going to work on.
+
+406
+00:50:21,940 --> 00:50:22,940
+Most of the projects we work on.
+
+407
+00:50:22,940 --> 00:50:34,940
+Most of the projects we work on are electric vehicles, different kinds of hybrid vehicles, you have seen, there are a lot, lot of them.
+
+408
+00:50:34,940 --> 00:50:44,940
+And then there are also fuel cell electric vehicles, where basically hydrogen is used to produce electricity,
+
+409
+00:50:44,940 --> 00:50:51,940
+then battery path is supplied by the electricity produced by hydrogen, and then the electric vehicle is the same.
+
+410
+00:50:51,940 --> 00:51:00,940
+So, it changes only the source of energy, but then the technology of the electric vehicle is the same.
+
+411
+00:51:00,940 --> 00:51:04,940
+So, these are the projects we work on basically now.
+
+412
+00:51:04,940 --> 00:51:05,940
+And this is an introduction.
+
+413
+00:51:05,940 --> 00:51:17,940
+These last few slides are, let's say, more concrete in a way, because we are actually looking at specific architecture.
+
+414
+00:51:17,940 --> 00:51:18,940
+Okay.
+
+415
+00:51:18,940 --> 00:51:24,940
+So, one of the possible architecture of a vehicle.
+
+416
+00:51:24,940 --> 00:51:31,940
+So, this is document, let's see, I have some zoom, okay, yes.
+
+417
+00:51:31,940 --> 00:51:37,940
+This document is called network topology, as you see from the title of the slide.
+
+418
+00:51:37,940 --> 00:51:48,940
+The network topology is a document where all the connection of all the electronic control units and how they're connected,
+
+419
+00:51:48,940 --> 00:51:53,940
+which are the connections among them, among them are shown.
+
+420
+00:51:53,940 --> 00:51:54,940
+Okay.
+
+421
+00:51:54,940 --> 00:52:04,940
+So, you're actually looking at all these boxes here, red boxes and whatever, all of these are electronic control units.
+
+422
+00:52:04,940 --> 00:52:05,940
+Okay.
+
+423
+00:52:05,940 --> 00:52:12,940
+So, you can easily see that there are 30, 40 of them and this is just one of two pages.
+
+424
+00:52:12,940 --> 00:52:21,940
+I've just added one page here, not to scare you too much, but yeah, so that's what we have basically.
+
+425
+00:52:21,940 --> 00:52:26,940
+Let's say the range of 30, 40, 50 electronic control units.
+
+426
+00:52:26,940 --> 00:52:35,940
+So, considering that we have so many electronic control units, we have even a lot, lot of networks, kind of networks.
+
+427
+00:52:35,940 --> 00:52:43,940
+So, here, on the bottom right part of this slide, you see there are all the kinds of networks.
+
+428
+00:52:43,940 --> 00:53:00,940
+So, we have the CAN-C, CAN-FD, LIN, Ethernet, LBDS, BHCAN, Hardwire, so we have a lot, lot, lot of different kinds of networks.
+
+429
+00:53:00,940 --> 00:53:01,940
+Okay.
+
+430
+00:53:01,940 --> 00:53:04,940
+The main difference is about the speed.
+
+431
+00:53:04,940 --> 00:53:05,940
+Okay.
+
+432
+00:53:05,940 --> 00:53:07,940
+But I guess you already know it.
+
+433
+00:53:07,940 --> 00:53:14,940
+There should be a slide somewhere in the network lesson.
+
+434
+00:53:14,940 --> 00:53:20,940
+Ah, no, for you new guys who are going to have this lesson probably on Friday.
+
+435
+00:53:20,940 --> 00:53:23,940
+But anyway, these are different kinds of networks.
+
+436
+00:53:23,940 --> 00:53:26,940
+And the main difference is about the speed.
+
+437
+00:53:26,940 --> 00:53:31,940
+So, how much information they can share in a specific amount of time.
+
+438
+00:53:31,940 --> 00:53:33,940
+But you will see it.
+
+439
+00:53:33,940 --> 00:53:35,940
+Why am I showing you this?
+
+440
+00:53:35,940 --> 00:53:39,940
+First, to start to enter inside the car.
+
+441
+00:53:39,940 --> 00:53:50,940
+Because this lesson, and also the previous lesson, you have always seen general overviews about cars, programs, the cycle, and everything from the outside.
+
+442
+00:53:50,940 --> 00:53:59,940
+This is a first step to enter inside the car and to see how actually a car is done.
+
+443
+00:53:59,940 --> 00:54:09,940
+I'm a mechanical engineer, so when I finished university, I thought that the vehicle was just engine, tires, and chassis.
+
+444
+00:54:09,940 --> 00:54:16,940
+But actually those parts are so standard and so well known that there's nothing new about those stuff.
+
+445
+00:54:16,940 --> 00:54:19,940
+Everything that is new is on this kind of stuff.
+
+446
+00:54:19,940 --> 00:54:22,940
+And that's a luck for us.
+
+447
+00:54:22,940 --> 00:54:26,940
+So that Kineton can grow and all of us have a job.
+
+448
+00:54:26,940 --> 00:54:28,940
+So, nice done.
+
+449
+00:54:28,940 --> 00:54:29,940
+Market.
+
+450
+00:54:29,940 --> 00:54:30,940
+Global market.
+
+451
+00:54:30,940 --> 00:54:32,940
+But anyway.
+
+452
+00:54:32,940 --> 00:54:33,940
+Okay.
+
+453
+00:54:33,940 --> 00:54:34,940
+So let's see.
+
+454
+00:54:34,940 --> 00:54:35,940
+Among.
+
+455
+00:54:35,940 --> 00:54:36,940
+Yeah.
+
+456
+00:54:36,940 --> 00:54:37,940
+Someone wants to see something.
+
+457
+00:54:37,940 --> 00:54:38,940
+Okay.
+
+458
+00:54:38,940 --> 00:54:41,940
+Issues from Tirana.
+
+459
+00:54:41,940 --> 00:54:42,940
+We had an internet problem.
+
+460
+00:54:42,940 --> 00:54:43,940
+Now we are back online.
+
+461
+00:54:43,940 --> 00:54:44,940
+Okay.
+
+462
+00:54:44,940 --> 00:54:45,940
+Okay.
+
+463
+00:54:45,940 --> 00:54:46,940
+Nice.
+
+464
+00:54:46,940 --> 00:54:47,940
+No.
+
+465
+00:54:47,940 --> 00:54:48,940
+So I was.
+
+466
+00:54:48,940 --> 00:54:49,940
+I was.
+
+467
+00:54:49,940 --> 00:54:50,940
+I was.
+
+468
+00:54:50,940 --> 00:54:51,940
+I was.
+
+469
+00:54:51,940 --> 00:54:52,940
+I was.
+
+470
+00:54:52,940 --> 00:54:53,940
+I was.
+
+471
+00:54:53,940 --> 00:54:54,940
+I was.
+
+472
+00:54:54,940 --> 00:54:55,940
+I was.
+
+473
+00:54:55,940 --> 00:54:56,940
+I was.
+
+474
+00:54:56,940 --> 00:54:57,940
+I was.
+
+475
+00:54:57,940 --> 00:54:58,940
+I was.
+
+476
+00:54:58,940 --> 00:54:59,940
+I was.
+
+477
+00:54:59,940 --> 00:55:00,940
+I was.
+
+478
+00:55:00,940 --> 00:55:01,940
+No.
+
+479
+00:55:01,940 --> 00:55:02,940
+So I was saying that.
+
+480
+00:55:02,940 --> 00:55:03,940
+Yeah.
+
+481
+00:55:03,940 --> 00:55:08,940
+Basically we can have 30, 40, 50 electronic control units in a car.
+
+482
+00:55:08,940 --> 00:55:13,940
+So focusing on each one of them would be crazy.
+
+483
+00:55:13,940 --> 00:55:18,940
+So my idea is here is just loop them in different domains.
+
+484
+00:55:18,940 --> 00:55:21,940
+So on the.
+
+485
+00:55:21,940 --> 00:55:23,940
+It's not very clear from this side.
+
+486
+00:55:23,940 --> 00:55:26,940
+But on the right side you see a green.
+
+487
+00:55:26,940 --> 00:55:29,940
+A green square here.
+
+488
+00:55:29,940 --> 00:55:30,940
+This part group.
+
+489
+00:55:30,940 --> 00:55:32,940
+Everything that is related to the vehicle.
+
+490
+00:55:32,940 --> 00:55:35,940
+So all the electronic control units that manage.
+
+491
+00:55:35,940 --> 00:55:38,940
+Everything that is not related to the power.
+
+492
+00:55:38,940 --> 00:55:39,940
+The.
+
+493
+00:55:39,940 --> 00:55:40,940
+The.
+
+494
+00:55:40,940 --> 00:55:41,940
+The propulsion.
+
+495
+00:55:41,940 --> 00:55:42,940
+Okay.
+
+496
+00:55:42,940 --> 00:55:43,940
+So I don't know.
+
+497
+00:55:43,940 --> 00:55:44,940
+You have the stereo.
+
+498
+00:55:44,940 --> 00:55:45,940
+For example.
+
+499
+00:55:45,940 --> 00:55:46,940
+You have the headlights.
+
+500
+00:55:46,940 --> 00:55:48,940
+You have the windscreen.
+
+501
+00:55:48,940 --> 00:55:49,940
+You have.
+
+502
+00:55:49,940 --> 00:55:50,940
+I don't know.
+
+503
+00:55:50,940 --> 00:55:53,940
+Other kind of electronic control units that manage.
+
+504
+00:55:53,940 --> 00:55:54,940
+I don't know.
+
+505
+00:55:54,940 --> 00:55:55,940
+Amplifiers.
+
+506
+00:55:55,940 --> 00:55:56,940
+Are the players.
+
+507
+00:55:56,940 --> 00:55:57,940
+The cluster.
+
+508
+00:55:57,940 --> 00:55:58,940
+You know.
+
+509
+00:55:58,940 --> 00:55:59,940
+The screen that you have in front of you.
+
+510
+00:55:59,940 --> 00:56:01,940
+So all these kinds of stuff that.
+
+511
+00:56:01,940 --> 00:56:02,940
+Are not.
+
+512
+00:56:02,940 --> 00:56:03,940
+Strictly.
+
+513
+00:56:03,940 --> 00:56:04,940
+Exactly.
+
+514
+00:56:04,940 --> 00:56:05,940
+And.
+
+515
+00:56:05,940 --> 00:56:06,940
+Related.
+
+516
+00:56:06,940 --> 00:56:07,940
+To.
+
+517
+00:56:07,940 --> 00:56:08,940
+The propulsion.
+
+518
+00:56:08,940 --> 00:56:09,940
+On the left.
+
+519
+00:56:09,940 --> 00:56:10,940
+Side.
+
+520
+00:56:10,940 --> 00:56:11,940
+Here we have all the electronic control units.
+
+521
+00:56:11,940 --> 00:56:12,940
+Guys.
+
+522
+00:56:12,940 --> 00:56:13,940
+Of course.
+
+523
+00:56:13,940 --> 00:56:14,940
+When I say electronic control units.
+
+524
+00:56:14,940 --> 00:56:15,940
+Here.
+
+525
+00:56:15,940 --> 00:56:22,580
+also all the sensors and all the actuators that might be connected to these electronic
+
+526
+00:56:22,580 --> 00:56:29,700
+control units okay but you will see later in the future also in other lessons that to an
+
+527
+00:56:29,700 --> 00:56:36,180
+electronic control unit we have a lot of connections so here when you see an electronic
+
+528
+00:56:36,180 --> 00:56:42,340
+control unit this involves also the thing also all the sensors and actuators that are connected
+
+529
+00:56:42,340 --> 00:56:50,820
+to them so the left part here in light blue is the ADAS domain so everything that is related to the
+
+530
+00:56:51,380 --> 00:56:58,900
+autonomous driving assistance something like this should be the acronym i don't remember
+
+531
+00:56:58,900 --> 00:57:03,380
+but basically these are all the electronic control units that manage i don't know the radar
+
+532
+00:57:03,380 --> 00:57:11,140
+the video camera the sensors the you know whatever that is used to help the driver driving or to have
+
+533
+00:57:11,140 --> 00:57:25,060
+an automatic driving yeah the half part here in orange well i cannot see or read it properly but
+
+534
+00:57:25,060 --> 00:57:34,340
+here we have the second gateway and partly also this big red square here this is the body control module
+
+535
+00:57:34,340 --> 00:57:43,220
+and let's focus on this one the the stretched red square here that is the security gate remote so
+
+536
+00:57:43,220 --> 00:57:49,140
+basically this electronic control unit and this set of electronic control units are just used to avoid
+
+537
+00:57:49,140 --> 00:57:58,820
+that someone from the outside can in a way enter the traffic of your car and half the car or create
+
+538
+00:57:58,820 --> 00:58:05,700
+problems let's consider an example of an automatic autonomous driving vehicle and everything is controlled
+
+539
+00:58:05,700 --> 00:58:12,900
+by the electronic control units and another enters the car and forces the car to go in a wall of course
+
+540
+00:58:12,900 --> 00:58:21,300
+there's a huge danger and with that we are currently having let's say that the market now is focusing a lot on
+
+541
+00:58:21,300 --> 00:58:27,220
+the cyber security mechanisms and the security mechanisms in general to avoid that the car can easily be
+
+542
+00:58:27,220 --> 00:58:34,020
+hacked okay and the component and the electronic control unit that most of all works on this safety
+
+543
+00:58:34,020 --> 00:58:41,460
+stuff is in security okay and this is this one uh so you have this kind of electronic control unit that
+
+544
+00:58:41,460 --> 00:58:47,140
+separates basically the whole car that you see below here to the outside world
+
+545
+00:58:49,780 --> 00:58:53,460
+both if the electronic control units are connected over internet
+
+546
+00:58:53,460 --> 00:58:57,460
+and also if a car is not is not connected to internet
+
+547
+00:58:59,220 --> 00:59:01,380
+it protects also from the physical connection
+
+548
+00:59:01,940 --> 00:59:08,260
+i don't know most of you already know but there is usually the bottom left part of the steering wheel
+
+549
+00:59:08,260 --> 00:59:14,260
+there is a connector called obd connector and that is the connection between the inside part
+
+550
+00:59:14,260 --> 00:59:20,660
+of a car and the outside world and the second gateway is able to protect also all kind of attempts
+
+551
+00:59:21,300 --> 00:59:28,420
+or at least that's the aim of damaging the car or hacking the car from from the outside world
+
+552
+00:59:30,580 --> 00:59:37,940
+the fourth domain and this is the one let's say where i always focused my attention so basically
+
+553
+00:59:37,940 --> 00:59:46,180
+i work i started working in kinadon four years and a half ago and for four years i worked basically on this
+
+554
+00:59:46,180 --> 00:59:53,860
+domain okay in the power train domain for electric cars uh what do we have in this domain this domain
+
+555
+00:59:53,860 --> 01:00:00,340
+we have all the electronic control units managing the propulsion and these are the main components
+
+556
+01:00:00,340 --> 01:00:05,140
+that we have seen before basically so there is an electronic control unit managing the battery pack of
+
+557
+01:00:05,140 --> 01:00:12,580
+course uh there is the the two motors here because this was an application with the two motors one from the
+
+558
+01:00:12,580 --> 01:00:20,100
+front axle and one from the rear axle uh then we have the onboard charger control module so here this
+
+559
+01:00:20,100 --> 01:00:27,060
+is an electronic control unit managing the recharge of battery pack and then we have the auxiliary power
+
+560
+01:00:27,060 --> 01:00:30,660
+module module this is the DC DC converter converter i was talking about before
+
+561
+01:00:32,420 --> 01:00:43,700
+uh in this um yeah in this present oh i can use this one so uh yeah this is the power train domain let's
+
+562
+01:00:43,700 --> 01:00:50,820
+say that con let's say groups all the electronic control units that just uh manage the propulsion so in
+
+563
+01:00:50,820 --> 01:00:58,420
+case of an electric vehicle we have the battery pack the recharge the the inverter which is basically
+
+564
+01:00:58,420 --> 01:01:06,900
+managed by the engine and uh the engine itself and the DC DC converter so these are the main and then of
+
+565
+01:01:06,900 --> 01:01:13,220
+course guys there is the brain of an electric vehicle which is the vehicle domain control module module
+
+566
+01:01:13,220 --> 01:01:19,460
+this is the power train electronic control unit so it's the engine that managed sorry it's the
+
+567
+01:01:19,460 --> 01:01:26,260
+echo that managed the engine in the past we only have one electronic control unit managing the engine in
+
+568
+01:01:26,260 --> 01:01:37,460
+itself now the is not called anymore engine control module hscn as it was called in the past but now we
+
+569
+01:01:37,460 --> 01:01:44,420
+have a more complex name because this kind of vehicle does not manage just the engine but more of the power
+
+570
+01:01:44,420 --> 01:01:52,420
+the propulsion system okay so this is kind of the brain for the propulsion part of the car okay and this
+
+571
+01:01:52,420 --> 01:01:54,340
+is called vehicle domain control module
+
+572
+01:01:57,220 --> 01:02:06,580
+last slide then we are done for today and you can have a slight sort of time to ask questions this is
+
+573
+01:02:07,140 --> 01:02:13,860
+let's say another kind of representation of all the main components i was talking i was mentioning you
+
+574
+01:02:13,860 --> 01:02:21,300
+before with the addition of two things that i didn't mention uh purposely and we can describe them now here
+
+575
+01:02:26,340 --> 01:02:34,740
+okay sorry yeah so we see all the things that you were mentioning before like the engine the electric
+
+576
+01:02:34,740 --> 01:02:41,140
+motor which usually are permanent motor because the level of maintenance needed is much lower
+
+577
+01:02:41,780 --> 01:02:48,420
+so they're they are brushless so the maintenance for this kind of models is very very very low
+
+578
+01:02:49,700 --> 01:02:57,860
+we have inverter that we said they're needed we have the battery pack here and this is fundamental we have the
+
+579
+01:02:57,860 --> 01:03:05,300
+recharging charging system and let's add something about the charging system so we have a specific
+
+580
+01:03:05,300 --> 01:03:14,900
+uh wiring and system for the dc charging is that so to recharge the the battery pack with the dc charging
+
+581
+01:03:15,540 --> 01:03:22,500
+by the way the dc charging is the fast charge okay so whenever you listen to ah there is the file a
+
+582
+01:03:23,380 --> 01:03:33,860
+charger station uh with the fast charge that means that you can directly charge the battery in dc okay so dc
+
+583
+01:03:33,860 --> 01:03:40,740
+charge is the fast charge ac charge is let's say the slow charge okay the one that everyone complains
+
+584
+01:03:40,740 --> 01:03:50,020
+about yeah that's done in dc with the dsc charge so for the dc charge and dc charge ac charge have two
+
+585
+01:03:50,020 --> 01:03:58,580
+different uh wirings and systems this is necessary guys for a physical reason because the with the dc
+
+586
+01:03:58,580 --> 01:04:08,420
+dc charge being a fast charge it means that the current flow is higher so to be able to cope with
+
+587
+01:04:08,420 --> 01:04:17,940
+higher currents we need thicker wires to manage all the energy that goes through okay uh for the ac charge
+
+588
+01:04:17,940 --> 01:04:27,620
+the system uh yeah there's another part that another yeah wirings because the current and the the physics
+
+589
+01:04:27,620 --> 01:04:34,260
+behind it the recharged battery is different and this is the let's say slow charge in both cases
+
+590
+01:04:34,260 --> 01:04:45,220
+there is a this was shown probably a few slides ago but where you see this ebse this is a small electronic
+
+591
+01:04:45,220 --> 01:04:53,860
+control units that manage the connection of the what is called gun you know the the i don't know how
+
+592
+01:04:53,860 --> 01:05:00,660
+to translate it in english properly but it should be gun or recharge you know the wire that you connect
+
+593
+01:05:00,660 --> 01:05:07,780
+from the power supply station to the car and this electronic control unit is fundamental because there are
+
+594
+01:05:07,780 --> 01:05:16,500
+specific sensors usually called proximity sensors where they uh with these sensors uh the electronic
+
+595
+01:05:16,500 --> 01:05:22,660
+control unit knows when we are trying to connect this kind of gun and once it is connected then there is
+
+596
+01:05:22,660 --> 01:05:31,620
+the handshake so a kind of communication between the charging station and the uh the car then this kind
+
+597
+01:05:31,620 --> 01:05:38,500
+electronic control unit is responsible to lock properly the connection so there will be actually
+
+598
+01:05:38,500 --> 01:05:47,060
+a small motor extremely small actuator basically that will lock mechanically the gun to the car so
+
+599
+01:05:47,060 --> 01:05:54,580
+there will be a kind of mechanical hook that just will block the gun with the car this is very important
+
+600
+01:05:54,580 --> 01:06:01,060
+guys because once again consider that probably it's not even 0.5 ampere probably 0.05 ampere
+
+601
+01:06:01,620 --> 01:06:10,500
+there is the threshold of deadly current for people and when you recharge a car or when you are using the car
+
+602
+01:06:10,500 --> 01:06:19,460
+the amount of current that is that is flowing is much much much higher than 0.5 so the car maker cannot
+
+603
+01:06:19,460 --> 01:06:30,660
+risk of any kind of contact of these parts uh yeah should avoid the contact of human of humans to this kind of
+
+604
+01:06:30,660 --> 01:06:36,900
+parts because there are an amount there is an amount of current that is deadly okay so also the connection
+
+605
+01:06:36,900 --> 01:06:42,820
+let's consider you are charging with a DC charging inlet the car and there are 80 ampere flowing
+
+606
+01:06:42,820 --> 01:06:53,220
+you cannot risk that someone will just uh touch this gun and then get electrocuted and die okay so this is everything
+
+607
+01:06:53,220 --> 01:06:58,580
+that is related to the charging to the this electric current system and whatever everything has to be
+
+608
+01:06:58,580 --> 01:07:05,620
+secured and isolated in the electric vehicles you will also see that all the high voltage system are
+
+609
+01:07:05,620 --> 01:07:12,740
+with the in orange okay so this is also visible if you open the trunk of a car of an electric vehicle you
+
+610
+01:07:12,740 --> 01:07:19,620
+see some orange parts whenever you see orange parts just stay away not touch not play with them okay this
+
+611
+01:07:19,620 --> 01:07:28,260
+is a also a high sight warning to say okay these are the high voltage parts and here there is a
+
+612
+01:07:28,260 --> 01:07:38,740
+a high current quite likely okay this is also the reason why this wire here is orange okay because they will be
+
+613
+01:07:38,740 --> 01:07:47,700
+actually orange in the car as well okay um so this is one of the two things i didn't mention so this
+
+614
+01:07:47,700 --> 01:07:56,100
+blocking system mechanical blocking system of the gun another part well there are more than one but
+
+615
+01:07:56,100 --> 01:08:01,780
+this group of devices in compressor battery coolant heater and electric coolant heater
+
+616
+01:08:04,820 --> 01:08:15,060
+the battery pack has a specific uh property it works properly in a specific temperature range
+
+617
+01:08:16,100 --> 01:08:24,740
+that's around 30 degrees most of the time in an automotive field okay so this battery pack has to work
+
+618
+01:08:24,740 --> 01:08:35,540
+around 30 degrees so i don't know where all of you live but in naples sometimes the when you leave a car
+
+619
+01:08:36,180 --> 01:08:44,740
+under the sun the car in itself can get extremely hot or i don't know i live in turin for example and
+
+620
+01:08:44,740 --> 01:08:52,260
+during winter there are mornings where there are minus four minus five minus six or whatever in those cases if
+
+621
+01:08:52,260 --> 01:08:58,900
+you try to use the car and the temperature is that low the performance of the battery is extremely
+
+622
+01:08:58,900 --> 01:09:06,900
+reduced and using the battery out of that range will reduce the lifespan of the battery itself so
+
+623
+01:09:07,540 --> 01:09:15,220
+another critical feature of an electric vehicle is the the the the temperature management so you will see
+
+624
+01:09:15,220 --> 01:09:20,980
+that one of the most complex system inside an electric vehicle is the one that manages the temperature of the
+
+625
+01:09:20,980 --> 01:09:27,460
+battery pack okay so we will have all the devices that are needed to cool down the battery if it's too hot
+
+626
+01:09:27,460 --> 01:09:35,860
+or to heat the battery if to if it's too cold okay and these are part of the devices that are used so
+
+627
+01:09:35,860 --> 01:09:42,100
+there's a compressor and a heater battery coolant heater electric coolant heater so there are many many
+
+628
+01:09:42,100 --> 01:09:48,660
+devices and these are directly supplied by the battery pack you see there is a direct connection because then all
+
+629
+01:09:48,660 --> 01:09:57,380
+the other loads are supplied by the 12 volt battery as we were mentioning before i have other documents
+
+630
+01:09:57,380 --> 01:10:04,100
+on paper that i cannot show you especially because i'm recording but you will see that there are so many
+
+631
+01:10:04,100 --> 01:10:12,500
+devices related to it that the temperature system is quite complex because as i was saying the main point
+
+632
+01:10:12,500 --> 01:10:17,140
+is to keeping the battery the the the temperature of the battery pack specifically in a
+
+633
+01:10:19,300 --> 01:10:24,980
+even quite narrow range that is around 30 degrees okay and
+
+634
+01:10:26,820 --> 01:10:32,820
+this will be and that's why i mentioned in past lessons probably in the full cycle videos if you have
+
+635
+01:10:32,820 --> 01:10:38,500
+already seen it the all the tests that had to be done for the winter tests in the car
+
+636
+01:10:38,500 --> 01:10:45,300
+uh i put the attention on it on the thermal management system not only because they were going
+
+637
+01:10:45,300 --> 01:10:51,700
+people were going for the winter tests but also because that system is very complex and it requires
+
+638
+01:10:51,700 --> 01:10:56,340
+a lot of work from the hardware point of view but also from the software point of view because it
+
+639
+01:10:59,860 --> 01:11:05,860
+requires the collaboration not just of the vehicle domain control module so the power train electronic
+
+640
+01:11:05,860 --> 01:11:11,380
+control module but also the battery pack control module the echoes that manage all this device and
+
+641
+01:11:11,380 --> 01:11:15,860
+stuff like this so it's not that easy and it's quite complex actually to be honest
+
+642
+01:11:17,220 --> 01:11:21,540
+all the other stuff we have mentioned last thing that i would mention because yeah we are
+
+643
+01:11:23,380 --> 01:11:32,180
+very linked and i should very do other stuff in the client is this part of contactor main it's a bit
+
+644
+01:11:32,180 --> 01:11:43,940
+small but yeah i i believe you could see it so the battery uh works let's say in this example for i at a nominal voltage of 400
+
+645
+01:11:46,980 --> 01:11:53,940
+you have many devices that are directly powered by the battery pack but their nominal voltage would be
+
+646
+01:11:53,940 --> 01:12:07,940
+i don't know from 200 to 300 okay so they would expect the voltage a supply voltage of 200 or let's say 200 250 whatever
+
+647
+01:12:07,940 --> 01:12:13,700
+each of these devices have a specific voltage that should that expects to work properly
+
+648
+01:12:13,700 --> 01:12:24,820
+to avoid the sudden uh delta of current and off voltage to these devices uh there is no direct
+
+649
+01:12:24,820 --> 01:12:31,060
+connection of the battery pack to these devices and then ramp up of the voltage and current to the power
+
+650
+01:12:31,060 --> 01:12:40,180
+supply these devices but there is a pre-charge system that slowly and in a controlled way raise the voltage from
+
+651
+01:12:40,180 --> 01:12:49,300
+zero to i don't know usually 200 volt and then once this pre-charge has been done then the pre-charge
+
+652
+01:12:49,300 --> 01:12:54,900
+system is disconnected and the main contactor is connected so that the battery pack is actually
+
+653
+01:12:54,900 --> 01:13:00,980
+connected to the full car and all the high voltage devices that must be directly supplied by the battery
+
+654
+01:13:00,980 --> 01:13:07,460
+pack are connected so they will be connected on already charged network and there will be no huge delta for
+
+655
+01:13:07,460 --> 01:13:15,860
+these devices so the lifespan of these devices will be longer as well this is clearer on other schemes
+
+656
+01:13:15,860 --> 01:13:22,900
+but i cannot share these schemes for now especially because we are recording but as soon as you will enter
+
+657
+01:13:22,900 --> 01:13:31,140
+in a specific client or whatever my suggestion is always to ask for electrical schemes because even though
+
+658
+01:13:31,140 --> 01:13:38,580
+we will work on the software so sometimes we will focus on the value of the variable the bit that goes to zero
+
+659
+01:13:38,580 --> 01:13:45,860
+that goes to one the string that has this specific name and stuff that looks like abstract in reality
+
+660
+01:13:45,860 --> 01:13:51,460
+everything has a direct connection to the physical world and what really helps you to understand the
+
+661
+01:13:51,460 --> 01:13:58,260
+physical part of the vehicle is having the electrical schemes always with you okay so this lesson is just an
+
+662
+01:13:58,260 --> 01:14:07,540
+productive lesson to hybrid engines and to vehicles and electric vehicles but here is the main suggestion
+
+663
+01:14:07,540 --> 01:14:15,620
+about everything whenever you start to work on an activity always ask for the electrical schemes and
+
+664
+01:14:16,420 --> 01:14:21,940
+which is the network topology and which is yeah the general topology of the powertrain system okay
+
+665
+01:14:22,740 --> 01:14:29,620
+because we are yeah once again we are working on quality of cars okay we are not working on the bit that goes to one and
+
+666
+01:14:30,340 --> 01:14:36,660
+it's meaningless that bit that goes to one has a higher consequence and the consequence that you
+
+667
+01:14:36,660 --> 01:14:41,060
+it's easier to be understood if you have the electrical schemes with you okay
+
+668
+01:14:41,060 --> 01:14:54,500
+so guys this looks like a huge huge monologue but i hope i hope you got something from this lesson
+
+669
+01:14:57,220 --> 01:14:59,220
+yeah it was useful for me thank you
+
+670
+01:14:59,220 --> 01:15:11,540
+uh last thing um there is most in most of the presentation there is a page of contacts
+
+671
+01:15:12,340 --> 01:15:20,100
+uh this slide is not done uh because we have to feel uh good people
+
+672
+01:15:20,100 --> 01:15:27,540
+or we have to raise our self-esteem or whatever these names are put there so that you can use them
+
+673
+01:15:27,540 --> 01:15:32,420
+as a reference in case you have doubts in case you have you want to know more in case you want more
+
+674
+01:15:32,420 --> 01:15:40,420
+material or whatever okay so uh you can use them we can you already know you can contact me lorenzo say
+
+675
+01:15:40,420 --> 01:15:47,140
+the same alessandro bruno is another probably the most expert one that we have on electric vehicles so
+
+676
+01:15:47,140 --> 01:15:56,020
+use this okay take this time seriously to improve your skills so that once you will start the client
+
+677
+01:15:57,460 --> 01:16:05,300
+you will have a good advantage for people there in tirana you can ask to the previous academy and yeah
+
+678
+01:16:05,300 --> 01:16:10,820
+feedback or about the experience suggestions and whatever because they are starting to work now so
+
+679
+01:16:10,820 --> 01:16:18,820
+they are already to the next step that you will do a few weeks probably so yeah that's it
+
+680
+01:16:22,980 --> 01:16:31,300
+uh if you don't have questions or other stuff i would say that we can end the lesson here and
+
+681
+01:16:31,300 --> 01:16:50,740
+yeah that is going to be whole for me it's okay i don't have uh any questions thank you for the time
+

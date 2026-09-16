@@ -1,0 +1,112 @@
+Hello to everyone, I am Massimiliano Schettino and today we will follow a lesson on EE architecture.
+Electrical electronic architecture refers to the convergence of electronics, software and wiring into one integrated system.
+Let's see why we are talking about this topic in Automotive Filed.
+As we can read here, today an average new automobile includes more than 40 electronic controllers or ECUs, 5 miles of wiring and more than 10 million lines of software code.
+This is necessary in order to manage the ever increasing number of functions needed to make our vehicle ever more efficient, comfortable and smart.
+Such as ADAS, Automatic Emergency Break, Powertrain, BSM and so on.
+And their number is said to grow further.
+How are these ECUs connected?
+The main communication protocols used in Automotive Filed are CAN and LIN, but currently the Ethernet is increasingly being utilized, especially for ADAS system and connection between cluster and navigator.
+And we can also find FlexRay and most ones.
+These communication protocols have different transmission speeds.
+LIN is the slowest one with a bauderate of 20 Kbps.
+Then we have CAN, FlexRay and the top Ethernet with more than 100 Mbps.
+But if nowadays so performing protocols are available, why the less performing ones are still used?
+The reason is very easy, the cost reduction.
+In fact, LIN is still used for easy use with limited functionalities, like solar sensors, EBS or Intelligent Battery System or Siren.
+Since these secondary components are not safety-relevant TCUs and don't need a fast IO, it is acceptable to use a low speed connection.
+The EE architecture characterizes all the work that is done before the production of the ECUs.
+Network and software architecture, diagnosis and hardware standard.
+In network architecture, we find ECUs that will be present in the vehicle and how they are connected to each other.
+Software one includes code lines and schematics.
+Another very interesting part is the diagnostic standard, where we can also find the fault memory section for detecting faults in the vehicle.
+Hardware one, in the end, concerns the guidelines to follow for the physical realization of the component.
+All the other and successive steps as components and vehicle application tasks are not part of EEAE.
+In detail, there are various topics related to EE architecture, like VF, vehicle function, which explains certain functionalities of the vehicle as external light or automatic emergency brake.
+Other important parts are diagnostic requirements and network management.
+If you are wondering what sleep and wake-up management mean, you have to know that sleep mode is one of the operating states of the vehicle.
+This is activated when we turn off it to prevent battery discharge.
+In this state, all these use stop communication and deactivate all unnecessary loads, like internal and external lights, but some of them remain awake, waiting for some specific inputs.
+This status, in fact, is kept until one of these inputs is received, triggering the wake-up event.
+For example, an input could be inserting the key into the car's doors to open it.
+Action detected by the BCM that in turn will wake up all the others is used.
+The graph in this slide shows us the difference in voltage values and so in power consumption during the different phase of the sleeping process.
+When the key off command is sent, the ECUs continue communicating for some seconds, then they all turn off in order to minimize power consumption.
+For the wake-up, it is exactly the opposite.
+The key drivers for network architecture are integration, busload, cybersecurity, and autosar.
+Obviously, each of them has its own importance, but probably the two most fundamental features are busload capacity and cybersecurity.
+Busload should always be less than 60-65% of maximum bus capacity in order to avoid missed messages or latency issues.
+But over the years, with the increase of number of issues and of their functionalities, it has become increasingly difficult to comply with this limit.
+In addition to technology's improvement, we have to consider the introduction of new CAN type.
+In speed increasing order, their names are BCAN, BHCAN, CCAN, and finally FDCAN.
+As the baud rate increases, so does the busload capacity.
+In the end, there is also the possibility of finding multi-CAN network.
+Usually, a CAR contains 3-4 separate CANs, but in the same cases, we can find a few shared buses for a lot of issues.
+An example is a C1 CAN for ECM, BSM, BCM, and others in a VDB-Cellantis vehicle.
+As for cybersecurity, as cars become smart and networked, just think about the apps for the management of battery in BHV, it has battery electric vehicles.
+The risk and danger of being attacked by hackers increases, and so always new strategies must be put in place to prevent criminals from entering the vehicle or causing damage to people during driving maneuvers.
+This slide and the next one focus on an already introduced topic, the vehicle function.
+This type of document analyzes the interaction between different issues, but can concern a single car line and EE architecture.
+A very characteristic element we can find in VFs is the functional diagram, which shows how the involved issues interact each other and which messages are sent and received.
+This is an example of battery system vehicle function.
+We can recognize CAN messages as a status BHPCM, battery charge status, internal variables like key in ignition status, and proxy variables as battery type second EBS type.
+Arrows and rhombus in the scheme allow us to distinguish input from outputs for each node.
+A totally different type of graphic is network topology.
+It shows all these use and networks in an architecture, usually divided in macro functionalities.
+In this image we can recognize chassis, powertrain, body, and so on.
+Different network types have different colors, and often also main sensors and actuators are shown.
+The architecture in this example, the CUSW, has a star topology with the BCM as central hub.
+The BCM is a very important ECU, responsible for the sleep, wake up, to open and close doors, but in this case it fulfills also the fundamental task of the gateway.
+If an ECU needs to send a message to other ECUs with which it is not directly connected, the BCM receives this message from the sender and retransmits it, as it is, in the network of the target ECU.
+It is what happens when, for example, ECM sends a message to BH in order to visualize some information on the cluster, like radars ones.
+With more modern network topologies, like Atlantis NextGen, which includes internet connection, a top player at BCM is needed, called the Secure Gateway.
+It is responsible to separate telematic part from the vehicle one, for a better organization and to prevent cyber attacks.
+SGW, in fact, is a firewall which stops old messages, if not present in the list of the permitted ones, that are trying to pass from the telematic to the vehicle part.
+Another example is BEV's network topology of an electric 500, which is even more complex.
+We can find more ECUs and CANs, both for the telematic part and the vehicle one.
+Here BCM and SGW are fused in the same package.
+This part of lesson will focus on networks.
+In the previous slides, we have already seen that different types of communication protocols are used in Automotive, each of them with its own characteristic and body rate.
+From previous topologies, it should be clear that the most used network is the CAN one, and that, again, different classes of CAN exist.
+BCAN has 50 Kbps of body rate, BHCAN 125, CCAN 500 and FDCAN up to 15 Mbit.
+The choice of the CAN type depends by the purpose.
+Next-gen architecture, for example, has three CAN.
+Two three CANs for safety functionalities like engine, BSM, backsystem and others, while BHCAN is used for infotainment.
+Let's see them in detail.
+C1 CAN has a front part that connects together adaptive cruise control, engine control module and anti-lock braking system, and a rear part with particular component, like the one named AALA.
+They are isolators, also called Mammut, and their scope is to isolate the ECUs in case of electric failure, in order to protect sensitive elements and to quickly identify the fault origin.
+An important detail is that all these uses have two pins for CAN, CAN low and CAN high, except for ABS, which has four pins.
+This condition allows ABS to continue working even with a fault on the front or rear CAN side.
+This is fundamental, since ABS manages breaks and emergency calls.
+GMA-AT architecture has a similar C1 network topology, with some more easy use, like TCM, its transmission control module, and isolators.
+C2 CAN has a very similar topology with C1 CAN. What changes is mainly the ECUs.
+BHCAN connect together telematic ECUs, like instrument panel cluster, entertainment telematic module, telematic box module, and so on.
+In the end, if CHU issues need to exchange very important and fast messages, there is the possibility to find a private CAN.
+The example in this slide is a network that connects the adaptive cruise control to the apathic line feedback.
+In this way, it is also possible to decrease the other CAN busload.
+If CAM protocol is the most common one, LIN is the second.
+It is used for sensors, actuators, and for not too complex CCUs, as EBS , UAM ,
+WWSM , windshield wiper smart motor, etc.
+We can usually find 3-4 LIN for BCM and 1 LIN for ECM, but this number can obviously change according to the project.
+The OBD port is a connector usually placed under the steering wheel of each car, and that constitutes the access point to the entire vehicle.
+It's scope is to allow authorized people to operate diagnostic operations and or tests, but it could be used also for criminal accesses.
+For this reason, it is directly connected to the security gateway.
+Through the OBD port, it is possible to send and receive messages on the main vehicle CAN, as you can see from the pinout on the left.
+But it allows also to execute electrical tests, measuring line voltages and terminance resistances.
+Since we know that the potential difference between CAN-A and CAN-Low is in the range 0.5-1.5 volts,
+and that the terminator resistor is of 120 ohm, a simple multimeter can detect electrical faults inside the vehicle.
+I hope you all enjoyed my lesson, and for any doubt or question, here you can find my email.
+I can only say thank you for your attention and goodbye.
+If you looked there if you can see the further obvious reparations already, let me show you all the time!!!
+Let me show you about pois.
+If you look at your port of Google-Luc 해요, let me give up your espion để jeep on.
+This video is a guerrilla satisfyn 들어�謝謝 David fields every time, and that a hundred ans it is interesting for you to understand why.
+I am relieved to be xi can beHey, if you look before.
+I would put your own うm and adjust his at work.
+I actually have this on your TV and track as your feedback.
+You can take this video tab to guide your charts.
+Let everyone say with after creating ansel cœur aches and the other thing.
+I can lange coverÓ a spot on their kontRAC building.
+klimaC building.
+For appeal is there.
+I can get a few minutes from two minutes.

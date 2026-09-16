@@ -1,0 +1,373 @@
+start	end	text
+0	13840	Hi all, today we are going to have a little discussion on process, in particular we will
+13840	23200	introduce process in the automotive framework with the particular attention to the general
+23200	30720	bicycle model which is the development process mostly used in automotive sector.
+32400	43680	Okay, let's see briefly the contents of this lesson. We will make a brief introduction to the
+43680	49360	automotive framework, so we will present some numbers and facts about the automotive framework
+49360	58720	just to introduce you to this work. Then we will go on with the simple definition of process,
+59440	65200	simple and generic definition of process, then we will apply it to the automotive framework, then we
+65200	73600	will discuss the v-cycle process, a particular development process which is established in
+73600	83120	aerospace industry, and then it's been used in every integration environment such as also the
+83120	90320	automotive industry, and then we will conclude with an example of running the cycle process to
+92000	94160	to clear the idea on how it is used.
+94160	103680	Okay, some interesting facts and figures about the automotive industry. The automotive industry is
+103680	119280	very old, it began in 1860 and it has more than 150 years of history. This whole time, automotive industry
+119280	128640	industry has been full of technology challenges. You can think about for example the evolution of internal
+128640	137760	combustion engine, its optimization for efficiency and technological impact or for example the goals reached
+137760	145040	in the fields of safety, so how to make the vehicles more safe and secure.
+145040	154400	The introduction of electronics and software inside the vehicles, the autonomous driving concept
+154400	160640	and the electric propulsion development which are the topics very hot right now.
+162320	174080	So the whole history of the automotive sector has been a technological race to improve, to get better,
+174720	181440	or to introduce new technology and new services inside the industry.
+184560	195200	Some interesting numbers just to introduce you to the industry. These data are updated to 2017 but
+195200	211840	are still actual and usable. In these last years, almost 100 millions of vehicles have been produced yearly. The trend is
+211840	224480	descending. This is also because of Covid. This might surprise you, but most units are produced in China, actually.
+224480	230960	Where in 2018 were produced more vehicles than USA, Japan, Germany and Italy combined. So 28 millions.
+231840	242720	But on the other hand, quality, which can be improperly measured as revenues of an automotive car maker,
+242720	253360	are dominated by European, in particular Germans, which score with three groups in the top 10.
+253360	258480	in the top 10. The first one is Volkswagen Group, which includes Volkswagen, Audi, Porsche,
+259360	268400	Skoda, Lamborghini and Bentley brands. And had revenues for 260 billions, so it's first.
+269680	275840	At third place, the Demi Group, which is composed by brands Mercedes-Benz, Smart and Maybach. And in the
+275840	280320	seventh place, BMW Group Group with BMW, Mini and Ross-Royce.
+283440	292640	Okay, so now let's focus a bit more on this object, the car, the vehicle, but let's try to think about it
+296560	305280	by the means of the people that want to produce it, they want to build it, not the one that want
+305280	315520	to buy it and use it. So let's be in the shoes of the car maker. What is a car for a car maker?
+316480	322960	Well, first of all, it is a purpose built layers of components. What does it mean purpose built?
+323920	333040	It means that a vehicle, when it is designed, when it is created, it has to accomplish, it has to satisfy
+333040	343760	a mission. For example, you can think about a small city car. Its mission will be low fuel consumption,
+344800	356400	space optimization, in order to make it easy to park, for example, in large cities. It has to be small,
+356400	368160	it has to be cheap to produce and so on. This is the mission of the vehicle. For example, for a sports
+368160	375040	car, car maker, such as Ferrari, the mission can be completely different. The mission for a Ferrari car
+376320	385760	will be something like, okay, I want very, very, very high power. So I want 1000 horsepower for my engine,
+385760	398960	I want a fun to drive, I want increased performance, I want luxury and the best materials
+400320	408400	achievable, no matter the cost and so on. So the mission is the first thing that the car maker think
+408400	416800	go up, think about when it's starting to design a new car. And this, it is also a layers of components.
+418320	421040	The vehicle, it's, it does not
+423840	433120	start in the design phase as a whole object, but it is composed by several layers, such as the mechanical
+433120	440240	layers, the hardware and software layers, the electronic layers, or for example, the liquids, the oils, the
+442000	449200	glues that are composed and so on. All these layers must to work together in order to
+449920	458640	allow the car to accomplish its mission. It is easy to understand that the complexity of
+458640	465840	assembling and make a product of these multiple layers is very high. And this brings us to the
+466880	474160	the main reason of this lesson, the main cause of this lesson, such a such is an appropriate
+474160	478720	organizational effort is required in order to manage this complexity in design.
+478720	492000	Okay, let's briefly view also how how a car is built from scratch to the final product. We can divide the
+493280	502240	the phase of car building of and car designing in in four sub phases. The first one is of course design and
+502240	508080	development. In this phase, we start from scratch, we start from paper, we define the mission of the
+508720	516640	of the vehicle of the car. And we start to develop it by for example, using objects.
+518000	524880	I think you for sure heard about it, such as prototypes that are that are
+528240	534320	particular development vehicles with part of functionalities implemented in order to
+534320	538640	test it and develop it. For example, you will have the prototype to test the engine, the prototype to
+539600	545200	some part of the electronics and so on. During this design and development phase, you will
+546720	552640	you will get better and better prototypes that will start to resemble the final product that you start
+552640	558720	to resemble a car that is actually accomplishing the mission. Once you have accomplished this goal,
+558720	565600	so you have a car that is actually what you wanted to be in the first place, you start with the second phase,
+565600	572160	which is productization. So you obtain the car, but now you want to be sure that you can produce it
+572720	582320	in a controllable and serial way so that it can be produced in large number, for example.
+582320	589040	After productization, you start with the serial production, so your your factory is ready to
+589840	597920	replicate that beautiful prototype in a large number of cars. And there's also a fourth phase,
+597920	605600	which is after selling the car, which is called servicing. This is the services you provide to the
+605600	615600	final user after the car is sold, is on the street. I think you for sure heard some time about the
+617360	625440	recall campaign from some car maker, for example, you discover that there is a small defect in a part of
+625440	635200	your vehicle and then you send a message, you communicate to the people that own that vehicle
+635200	640880	to bring it back to the workshop in order to fix it. This is a typical case of servicing
+643040	644240	phase process.
+646640	655760	We will focus in this lesson, in this discussion, in the first phase, the design and development.
+655760	662560	So we will describe the process that is meant to be used for design and development. It is also used
+662560	669200	for product product productization, but we will not be telling that we will focus on design and development phase.
+672080	681200	Okay, another interesting information is who builds a car. Most people are used to think that it's the
+681200	686800	car maker who make all the effort and all the work to produce a car, but these are that is actually not
+686800	700560	true. And we can get convinced about that by starting with dividing our vehicle in different abstraction
+700560	706320	layers. We start from the topper one, the vehicle abstraction layer, so the whole vehicle
+706320	711280	schematization. Inside this full vehicle schematization there will be, for example,
+712000	718240	a sub-level, the subsystem of our vehicle. Inside the subsystem there will be a single component,
+718240	725120	such as an electronic control unit in ECU. Inside these single parts there are
+726160	733600	the elemental parts that are used to produce such objects, like for example, for an electronic control
+733600	739200	unit there will be a microcontroller, transistor, capacitors, and so on.
+739200	748720	On the left of the slide you see that the influence, the ownership of the
+751280	758080	of the OEM, which means Original Equipment Manufacturer, that is a technical name for
+758080	770800	calling the car maker such as FCA, Ferrari or Audi, is decreasing the most we go in deeper detail of what is used to build the car.
+770800	781680	The OEM has for sure the ownership of the whole vehicle level, because it knows the mission of the vehicle,
+781680	789680	he knows how the vehicle shall be in the end, and of course he has the knowledge on vehicle level.
+789680	796560	And let's see how, when we descend into the phase of, into the level of subsystem,
+798560	808400	the OEM often it's not capable, it does not have a specific knowledge about the peculiar subsystems, so
+808400	820560	it uses the aid of a specialistic suppliers that have knowledge in those subsystems that could help
+820560	832800	provide the equipment to build the car. There are actually some OEMs that have knowledge also in subsystems,
+832800	843040	one typical example is Ferrari, which is capable of designing the vehicle as a whole, but also it has strong
+843040	853120	knowledge in engine construction, so the subsystem engine is completely done in Ferrari.
+853120	866000	But most of times, the OEMs ask for help for the such called tire one supplier. A tire one supplier is a supplier
+866560	875360	that provides equipment directly to the OEM. A typical example of a famous tire one is a Brembo for the braking system.
+875840	883040	Brembo is specialized in designing a braking subsystem for a lot of vehicles, and it is widely used
+883120	888720	used by the most performing car for the most performing car for day braking system.
+891520	898240	The tire one is also in charge, for example, of the production of parts of the subsystem, such as the
+898240	906560	electronic control units, but even for a tire one, it's often impossible to produce every single part
+906560	922880	product that is required for the manufacture of a subsystem, which is why they have the tire two suppliers,
+922880	930960	that are suppliers that provide equipment to the tire one, equipment that is specialized for the production of
+930960	938400	the subsystem. For example, a tire one, which wants to develop a new electronic control unit, may ask
+938400	946880	help for, for example, NVIDIA or ST Electronics for a new microcontroller to be used inside the ECU.
+946880	954640	So, as you can see, it's not the car maker that makes all the effort, the car maker has the idea of the mission,
+954640	961440	but there is a lot of actors involved in the design and the manufacturing of a vehicle.
+961440	971440	And this is another view on the complexity of the process of development of a new vehicle.
+973920	982880	So, keeping this complexity in mind, let's start to introduce the concept of process. What is a process?
+984640	998800	Well, we can for start giving a small introduction on the concept PPT, which stands for people,
+998800	1004720	process and tools, which is a concept of success in organizing and improve the operational efficiency
+1004720	1014080	of a business. It states that in order to have an efficient operational effort inside the business,
+1014320	1022720	you have to rely on people, of course, so their skills and their knowledge. You have to have the
+1022720	1033520	appropriate tools to perform the work, but all of these aspects shall be connected by a process. What is
+1033520	1040080	a process? A process is a series of steps and actions taken in order to produce a particular goal.
+1040080	1051200	So, it articulates the how aspect of an organization. How do we do what we want to do? The process
+1052160	1058640	describes the how. How would the process interact with tools and people? It is important that people
+1058640	1064560	have clear roles in the process and that they fully understand it. So, the process helps people to
+1064560	1072160	fulfill the role and to interact with each other. And, of course, tools can improve the process, make it
+1072160	1079760	faster. You can think, for example, to what can be done with pencil and paper and what can be done with
+1079760	1090880	the personal computer for designing a visual. We can make a very simple example of a process that you
+1090880	1104160	will see it's actually applicable to any kind of problem. And a process can very simply
+1104160	1113280	schema-schematized in this way. I have an idea or a need. I want to accomplish something.
+1115040	1124320	So, I need to have a product that implement that idea. And then I need to check if the product
+1124320	1137600	is accomplish my idea or not. You can make a simple example of a cooking example that is very simple
+1137600	1145200	to understand. Let's imagine that you want a pizza. You want to eat a pizza and you decide that you want
+1145200	1152720	to do it on your own. So, the idea is I want a pizza and I want to do it on my own. The first thing
+1152720	1158880	you do, you ask, for example, to your mother or your grandmother or you search in the internet for
+1158880	1167440	recipes. So, a list of steps that describe how the pizza is made. At the end, you will have a product,
+1167440	1175920	a pizza, no matter how it is actually. The first thing you do after you have a pizza, you will eat a slice,
+1175920	1181920	you will try a slice, then maybe the pizza is good. So, fine, you accomplished your idea, you accomplished
+1181920	1189280	your goal, but maybe it's not so good. So, what are you going to do? You start again,
+1189280	1198960	you go back in this process to see what went wrong. For example, did you use the correct recipe?
+1198960	1210160	Did you describe it properly? Maybe you understand that you don't have the manual skills to do the pizza
+1210160	1217280	yourself. So, your new process will be, okay, I just search for a good pizza restaurant on Just Eat and I
+1217280	1224400	will order from that and I will try again. This kind of process is very simple, but it's actually
+1224400	1234320	applicable and it is actually applied even to very complex environment and it is very useful because
+1234320	1245440	we can start to introduce some specific naming convention of what is used in automotive industry
+1245440	1252800	and in general in process for industrial application. Maybe you also heard some of these
+1255840	1264080	names or concepts. The first is requirements. The requirements are the way we express our idea and
+1264080	1271200	our need. Technically, it's a singular documented need that the product aims to satisfy. For example,
+1271200	1281680	when I want to define the mission of my vehicle, I will write down things like, okay, I want 1000 horsepower.
+1281680	1286960	That is a requirement. I want something that will become a goal for my project.
+1288240	1298240	Another important terminology is deliverables. Deliverables is a tangible or intangible good or service
+1298240	1305840	product as a result of a project or part of a project. That is important. The product is not only
+1305840	1316560	the final product, but also all the things that I make during the process to help obtaining the final
+1316560	1324720	product. For example, we were talking earlier of a pizza. The piece of paper on which I write
+1324720	1331440	the recipe is deliverable. It's a product because it can be checked, it can be modified, it can be
+1333440	1342400	tracked and so on. So also the output of single phases of the process are deliverables, are products.
+1344400	1350640	The last term, very important, is validation. The validation is a procedure meant to check if a
+1350640	1358400	product meets the product meets the requirements. So it's actually what we also call testing. We test
+1359520	1365120	our final product to see if the requirements, if the idea and the needs we expressed at the beginning
+1365120	1376560	are actually satisfied. As I was saying, this very simple concept can be applied even to a complex
+1377120	1388320	environment like the automotive industry. For example, nothing forbid me to put in cascade the phases of the
+1388320	1397280	design of a vehicle. I can start with a very high level vehicle concept, as we said before, OEM based.
+1397280	1406720	So we will have the writing of the requirements for the definition of the mission. For example,
+1406720	1413200	we can have another phase after that, the system design and the system architecture. We, for example,
+1413200	1422240	we will produce a drawing with the ECU topology, how the ECU are connected between each other, how they
+1422240	1426320	communicate. So the standards that allow us the communication between ECU. These are
+1430080	1438560	requirements made at system level. Then we can descend to the subsystem, where we apply this simple
+1438560	1448240	process to subsystems, usually lead led by tier one. Then we can apply this process. So requirements,
+1448240	1455440	product and the validation to component design. So the requirements for the single components that
+1457120	1462240	are used for manufacturing this subsystem. And then we are a phase in which we implement everything.
+1462240	1467840	And of course, we will have the validation phase, the testing phase. So for each phase,
+1467840	1473520	we will have its testing phase, its validation phase. Component design will have component testing.
+1473520	1480320	Subsystem design will have integration testing. So we integrate the components inside the subsystem
+1480320	1485680	and see if the subsystem is actually doing what it is meant to do. And then we have a phase of
+1485680	1492960	functional testing, which is a testing at vehicle level. So we check, we test if the vehicle is
+1492960	1495680	performing the way we define in the mission.
+1495680	1505120	Okay. There is actually this kind of process is called waterfall. As you see, every phase is
+1506960	1512800	as a beginning and an end, and you have to do the first phase in order to proceed to the other. So you
+1512800	1517360	have first to do the vehicle concept, then you will go to the system and assign and so on.
+1517360	1526080	But there is actually another way to to see how this phase we were talking about are connected
+1526080	1534080	between each other. And this lead us lead us to the famous recycle model that we will describe now.
+1536000	1543760	Let's just put the very same phases of the process we've seen before, but in a different fashion,
+1543760	1553040	in a different way. Let's put all the design part on a left branch starting from the vehicle
+1555360	1560560	schematization. So we've got concept and system design architecture, then subsystem design,
+1560560	1568240	then component design. Let's put implementation on the bottom and let's start with another branch
+1568240	1574400	on the right with all the component testing, components integration and functional.
+1576480	1582000	We can call the left branch design and development branch, right branch quality assurance branch.
+1582800	1591600	And the horizontal dimension in this case is the project management. So how I manage these phases
+1591600	1598080	all together, but in another way, it's also the time of the project. We start from the left and we end
+1598080	1609360	on the right always. An important thing we can notice by putting the phases in this shape is that there is
+1609360	1619120	actually some affinity between the phases on the design branch and the phases on the testing on the quality
+1619120	1627680	assurance branch. They are thematically similar.
+1628800	1637120	one to another. So, for example, I can think about parallelizing some activities,
+1638480	1647120	for example, on vehicle level. When I write my requirement regarding vehicle concept and system design,
+1647120	1659840	for example, I could involve my colleagues in functional testing, which do not have anything to test
+1659840	1667280	yet, but they can check my requirement. They can give additional eyes, they can put other brains
+1668160	1673360	on my requirements, they can check it, they can see if they are coherent, they are consistent,
+1673360	1679280	they are testable and so on. They can actually help me improve the quality of my requirement phase. And the
+1679280	1688320	same goes for integration test and unit test design. So the colleagues from the right branch can be involved
+1688320	1696000	before the product is actually manufactured, before the testing can start, in order to make a verification
+1696000	1705520	application or on the work on made in the design phase. This is a way of parallelizing activity to
+1705520	1715440	to make more activity in the time unit and also to improve quality. It has been
+1715440	1722000	demonstrated, especially for the software development that this kind of approach, this physical approach
+1722640	1727280	can lead to a higher quality once you reach the implementation phase. For example,
+1727280	1743520	the number of bugs that a software developed with this process is 50% less than using the waterfall approach,
+1743520	1748960	so without this additional check.
+1748960	1762080	The activity can be parallelized also inside the same branch. As we said, the horizontal dimension
+1762080	1770160	can also be seen as the time and let's make an example just to make you understand how the activities
+1770160	1777120	can be parallelized. Let's assume that the width of the block of the phases are actually the time
+1777120	1785760	required to end the whole phase. As we can see, by putting in a v-shape, the projection on the time axis
+1787040	1795520	of two blocks, for example, subsystem design and component design is less than the sum of the
+1796160	1802080	singular time required for subsystem design and component design. This is because it is possible to
+1802080	1809280	do the same kind of verification, the same kind of check between these two processes. So while I'm, for
+1809280	1817040	example, in subsystem design, I can do part of the work and then give it to the component design colleagues
+1817040	1826320	that can check if they can understand it, if it's feasible, if it's consistent and so on. So they can make
+1826320	1833440	in parallel this additional check in order to save time, in order to save project time.
+1835280	1843520	A really important feature of the Divocycle is that it's completely scalable. What does it mean?
+1844640	1851760	We are now seeing the Divocycle process applied to the whole vehicle, but what about, for example,
+1851760	1862240	if we explore the subsystem design phase, I can use the Vocycle, for example, for the software of my subsystem.
+1863680	1872160	So I can adapt the phase and I will have a software requirement phase and software architecture and
+1872160	1879040	software design configuration on the design and development branch. And I will have unit testing,
+1879040	1884960	integration testing and functional testing of the whole software. The process is exactly the same,
+1884960	1891040	but it's used to develop the software. This is very important because it allows the various actors
+1891040	1896880	we've seen before, the OEM, for example, Tire 1 and Tire 2, to speak the same language when they
+1896880	1903440	interact with each other for the design and development of vehicle subsystem and components.
+1904320	1910080	They can use the same terminology, they can use the same phases, and it's very easy for them to coordinate
+1910080	1914720	between each other when they are applying the very same process, the Vocycle process.
+1916560	1924560	There are also advanced use of the Vocycle process. For example, it is possible to make iteration or to
+1924560	1935680	apply the agility concept to it. This means, for example, I can make iteration, for example, between two
+1936480	1942720	consequent phases of my process in order to improve quality. So I can reiterate the process more and
+1942720	1950080	more time on small parts of the design in order to improve the quality. And I also can do iteration
+1950080	1959840	of the quality assurance brands. For example, I can do subsystem design, integration testing, reiterating
+1959840	1966800	it, adding new functionalities to every iteration in order to keep things under control and improve
+1966800	1969520	quality. The same for component design and component testing.
+1969520	1980880	So let's make a very quick example of a running Vocycle.
+1984240	1991840	From now on, you will see on the top right of the slide the phase of the process in which we are.
+1991840	2005440	So you don't get lost with the discussion. For the example, we will imagine we want to
+2006320	2016320	introduce a new functionality in our airbag subsystem, in our vehicle. Now the airbag system is a critical
+2016320	2024960	module module of a vehicle because it has the safety of the driver and the occupant of the vehicle are
+2024960	2032000	involved. And basically, an airbag system has two requirements, two main requirements. It has to
+2032000	2037680	deploy flawlessly in case of a major accident. So it has to deploy always in case of an accident.
+2037680	2044080	But at the same time, it doesn't have to deploy, never has to deploy when it is not required because
+2044080	2049760	it is dangerous when it is deployed like that. So it is easy to understand that the
+2049760	2055440	malfunction of the airbag system shall be promptly and properly notified to the final user. The final
+2055440	2065680	user has to know when, for any reason, the airbag system of his vehicle is not functioning. So let's
+2065680	2072320	imagine we want to introduce, we want to add this notification feature to our car.
+2072320	2082560	And for example, the first thing we may be reasoning about is how I do this notification, where I put
+2082560	2088400	this notification physically inside the car. For example, the first candidate could be the
+2089360	2095760	IPC subsystem, the instrument panel cluster, which is the first thing the driver see when he's driving.
+2097120	2102000	So for example, our first requirement could be that this notification of one function can be
+2102000	2112240	installed in our instrument panel cluster. Then again, we say that airbag system is involved in
+2112240	2119760	functional safety. Our team from functional safety suggests that the mechanism providing the malfunction
+2119760	2126000	notification shall be reliable. We don't want that the notification itself, it's not working for some
+2126000	2143200	reason. So they gave us a metric. For example, they can tell us, I want that the notification is 99% reliable. I want it
+2144000	2148000	to be working 99% of the time. So it should be to be field proof to a certain degree. This is a second requirement at high level, a vehicle concept that we have. Another requirement is that it should be
+2148000	2158240	to be field proof to be field proof to be field proof to a certain degree. This is a second requirement at high level, a vehicle concept that we have. Another example of a requirement at vehicle level,
+2158240	2160560	for example, our homologation colleagues
+2163440	2167600	inform us that there are there are constraints on how
+2167600	2176960	how the notification is given in particular they told us they tell us that a very peculiar icon must be used
+2177680	2184640	and we can choose the color between orange and red, which is red. So we have a dirt requirement. The icon shall be
+2185280	2187600	shaped like to one that is
+2189360	2193680	enforced by the homologation regulations and the color will be red.
+2193680	2202800	So the typical deliverables of the vehicle concept
+2204800	2211680	are basically specification requirements. We put the requirements in a document, in a document that can be
+2214000	2217840	managed, modified and kept and tracked
+2217840	2225840	in which we list all the desired functionalities, the definition of the vehicle mission, homologation
+2225840	2230880	constraints and so on. So it's basically a document.
+2233280	2242160	So what we do with the requirements we wrote at vehicle level, we transfer them to our system design team
+2243120	2249360	and then we start to analyze it and see what they shall do in order to satisfy those requirements.
+2250720	2258560	For example, our system design colleagues tell us that the vehicle has been designed with a domain-based
+2258560	2260080	topology. So we will have
+2262240	2262960	the ECU
+2264800	2266080	connected to each other
+2266080	2281600	and managed by a domain controller, the PWT ECU in this picture. The same for the chassis,
+2282640	2284720	the infotainment and the body, for example.
+2286320	2292320	They tell us, okay, the airbag control unit, the green one, is in the chassis domain.
+2293040	2298080	The instrument panel cluster, the red one, is in the infotainment domain. They are not in the same domain.
+2298640	2299200	We have to...
+2300800	2303200	First thing to do is to allow the communication
+2303760	2305920	of the information of the malfunction between
+2306720	2309280	the airbag control unit and the instrument panel cluster.
+2311360	2316000	So they produce the new requirements on their level
+2316800	2325360	to allow the communication between the two subsystems. It will, of course, involve also the chassis
+2325840	2333040	and the infotainment domain controllers. They will write a new protocol, a new message for the
+2333040	2338720	communication protocol that will transport the information of malfunction from the ACU
+2339520	2342000	subsystem to the IPC subsystem.
+2344400	2350320	So that the IPC, once this information is received, can turn on the lamp of the warning
+2350880	2356400	of the warning icon and warn the user that its airbag controller is malfunctioning.
+2359280	2360240	But also
+2360240	2368880	So, from the requirement at the PICOR level, we had the request that the malfunction notification
+2368880	2377840	shall be reliable, shall be very reliable. So our system engineers decide to violate locally
+2377840	2388320	the isolation of the domains by adding a direct communication between the ACU and the IPC
+2390560	2397280	in order to transport the very same information with a different medium. In this case,
+2397280	2403520	it's a simple pin-to-pin electrical communication. So when the ACU detect a malfunction, we will send
+2403520	2411360	the message on the communication bus and also will raise the voltage on this pin-to-pin communication
+2411360	2418560	in order to give the information to the IPC in two different ways. We actually
+2418560	2423680	create the redundancy in order to improve the reliability of the system.
+2425760	2429760	Okay. Typical derivables of this phase.
+2430480	2436560	It's, for example, the ACU topology, like the picture you are watching now.
+2437280	2442240	Of course, it will be more detailed, but basically how the ACU are connected between each other.
+2442240	2450320	The communication bus specification, so the list of messages that every ACU exchange with the others.
+2451040	2456960	And there may be documents, called vehicle functions, that are specification,
+2456960	2464320	specific specification, detailed on the subsystem functionalities. For example,
+2464320	2470720	there will be a document called airbag management, which explains all the functionalities that are related
+2470720	2483920	to the airbag subsystem. With these requirements at system level, we can now involve the subsystem designer,
+2483920	2493920	typically a tier one or more than one tier one, with our system requirements. For example, we will send
+2493920	2502480	the system requirements to the suppliers that provide us the airbag control unit. And we say, okay,
+2503920	2509920	these are the functionalities we want to implement. Just modify your subsystem in order to comply with it.
+2509920	2517040	The same will be done with the IPC and the Enforcement Chassis Domain Controller. So, for example, the ACU
+2517040	2526800	tier one will decide that it shall be possible by its subsystem to have diagnostic functionality implemented,
+2526800	2537360	because it has to be capable of detecting an error upon itself. For example, the software shall be capable of
+2537360	2543280	detecting if an actuator or a sensor is disconnected or it's not working,
+2543280	2552880	testing and so on. And so that the information of my function can be produced and can be put on the
+2552880	2563680	communication bus and on the dedicated pin. In a similar way, the tier one from the IPC will modify its
+2563680	2569920	subsystem in order to accept the information from the communication bus and the dedicated pin.
+2570720	2578240	the software will be modified in order to interpret this information and use to trigger the turning on of
+2578240	2588560	the lamp to get red light behind the icon on the dashboard. For the two domains controller,
+2591040	2599360	in this case, it's done what is called the gateway. So, the chassis and the infotainment will
+2599360	2609040	receive the information from the ECU in their domain and will just put it on the other communication
+2609040	2615120	channel in order to allow the switch of domain. So, to transfer the information without modification to
+2615120	2626400	the other domain. At this level, we typically have deliverables such as the hardware schematics or the
+2626400	2633120	so-called software design and software requirements specification. So, everything which is the software
+2633120	2639120	of the subsystem is produced in this phase and we also have the input output specification of the subsystems.
+2641520	2646480	Then we go at components level. The components for even for a simple application like that will be
+2646480	2653280	thousands. So, we'll just focus on the most important one, the most visible one, which is
+2653280	2665920	the red light, the red lead. And of course, the tire one that produces the IPC, it's not also a producer of lead,
+2665920	2674240	a manufacturer of lead. So, they will call a tire two specialized in building of lead light.
+2674240	2685520	They will ask for a red lead. And the tire two will provide, for example, a catalog of or a spreadsheet of
+2686160	2694720	possible candidates. The tire one can choose the one that is more appropriate for the application and it
+2694720	2707360	will install it in the subsystem. This is the usual way to interact with tire two. So, you don't develop a new lead
+2707360	2716080	for the application, but you just choose an already existing lead, which is a good match for your application.
+2716080	2726960	And then we have all the components. We have designed the subsystems and non-vehicle concept. We are done. So, we can implement
+2727600	2738800	all the modification and we will start to test it. Of course, you start testing at component level. So, the lower level. But
+2738800	2751600	let me ask you something. It is possible, for example, do you believe it's possible to test
+2752160	2757520	the lead before it's actually installed in the vehicle? The answer is, of course, yes. You can
+2757520	2766160	parallelize the activity testing and, for example, you can use a little bench with just minimal electronics
+2766160	2775840	in order to test if the lead does turn on when the current is applied or not. So, you don't have
+2775840	2782240	actually to wait for the whole implementation to test it. This is another way in which you can
+2782240	2788400	parallelize activities in the vehicle. Basically, for the component testing, but this is also applicable
+2788400	2799120	for every kind of testing. The testing activity itself is basically making the right questions and
+2799120	2806480	providing the answer. For the lead, for example, the question can be, does the lead turn when powered?
+2807200	2817680	The components work as it is intended to do? The answer to this question is the test result. So, you do the
+2817680	2824240	test and you check it. Yes or no. It does work or it does not work. If it does not work, let's see
+2824240	2833040	what the problem is. Typical unit tests. So, typical test component level are, for example, a simple piece
+2833040	2840640	of electronics like the lead or capacitor or so on. The testing of a single software module or portion of
+2840640	2848240	software, the testing of electrical harness and so on. The main deliverable of every testing phase,
+2848880	2854640	it's the test result document. So, a list of tests with the result of the test that you can share
+2855840	2864320	with whom may be interested in the test result. Same approach with the integration test at subsystem level. So,
+2864320	2873600	also, you introduce the modification to all the subsystems and you start testing the single subsystem
+2873600	2880160	without putting it in a vehicle. This is also can be done without a full integration in the vehicle. So, you don't
+2880160	2889680	need a fully implemented vehicle to test at this level. You just need to, for example, use an hardware in the loop,
+2889680	2898720	a simulator in which you just connect your single subsystem to see if it does react correctly to the
+2898720	2907360	stimulation from the outside. For example, you can test your air brake control unit at another in the loop
+2907360	2915040	bench. You can, for example, disconnect manually a sensor and test if the software detect it and raise an
+2915040	2925040	error. You can test if, after an error is raised, the information is properly communicated through
+2925600	2934960	the communication bus and dedicated pin and so on. The same can be done for the testing on the IPC subsystem
+2934960	2940560	and infotainment HSC domain controllers. So, you can just test the single subsystem without putting in the
+2940560	2950080	vehicle. The same deliverable is present here as any test phase. So, the integration test result document
+2950720	2958320	but also, usually in this phase, there can be another output, another result which is
+2959840	2966880	commonly called a change request. What is the change request? Imagine the case that you are testing your
+2966880	2976880	subsystem, you discover that actually the implementation is compliant to the requirement. So, it is correct
+2977840	2984240	by a formal point of view, but the behavior, the final behavior, the physical behavior of the subsystem
+2984960	2994160	is not compliant to what it shall be the mission or the expected behavior of the component. In this case,
+2994160	3007120	you highlight this problem by doing a change request. So, you go back to your design colleagues and say,
+3007120	3013680	okay, this is implemented as the requirement says, but maybe it's the requirement itself that is
+3015840	3022560	that is wrong or that is not detailed enough, that is not 100% correct. So, we have to change it,
+3022560	3029120	we have to modify it. So, you actually go back, you go back to the left branch, you modify the requirements
+3029120	3036480	and do another time the cycle in order to see if you corrected the problem.
+3039840	3048240	Same goes for the test at vehicle level, so for the functional tests. In this case, we will actually
+3048240	3055360	implement everything in a vehicle. Usually, in this phase, at the end, a vehicle is required we don't
+3055360	3063600	implement. You do the functionality test, the acceptance test, and for example, you will
+3065520	3074240	analyze things like, okay, I'm setting the car. There is a malfunction. Do I see the icon? The icon
+3074240	3079600	it's evident, it's visible, the color is the right one, the shape is the right one, and so on.
+3080400	3087040	So, the final implementation does satisfy my original requirements at vehicle level.
+3088720	3095280	And again, you will have an integration test result document for this phase, and
+3095280	3102880	if required, a change request if some other problem is detected at this level.
+3105920	3114880	Okay, this was the collection on the cycle. Those are my contacts. If you want to have
+3114880	3123040	clarification or if you have questions to ask, just feel free to contact me by email or on chat.
+3123040	3126080	Thank you, and have a nice day.

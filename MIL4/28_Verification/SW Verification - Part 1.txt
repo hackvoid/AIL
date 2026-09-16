@@ -1,0 +1,853 @@
+okay okay here we are so let me share the screen
+do you see the screen guys
+yes yeah you should see verification software at some point yes okay yeah what
+no sorry okay nice well so this is a very huge topic verification software actually
+a lot of people have worked on it personally I've done this activity for two years and a half working
+on electric vehicles and this is a very first step to make you very close to what are going
+to be the activities that you might do for for kinaton this is a very long topic comparable to
+diagnosis let's say so hopefully we're gonna have a few exercises and review with other colleagues as
+well and we might have also some openings for this kind of activities so specific effort would be
+needed here so as every real teacher which I'm not but as every real teacher starts let's start with
+some definitions so for this lesson I picked a couple of definitions that I liked let's start from the
+first one that I called academic definition so this is let's say the correct definition to
+yeah define what is software verification so we can even try to read it software verification
+is a discipline of software engineering whose goal is to assure that software fully satisfies all the
+expected requirements let's clarify something immediately well today now you're alone in the office but
+tomorrow when other people will join you can ask them how I stressed out the importance of what I'm going
+to do requirements when you read the requirements here you know I don't know you can do a murales in your
+office saying requirements you can I don't know draw requirements on your copy book you can have a tattoo
+requirements on your right or left arm whatever it helps you just remember the importance of requirements
+so let's read it again software verification is a discipline of software engineering whose goal is to
+assure that software fully satisfies all the expected requirements so the requirements are always
+the input for our activities okay we work with the software most likely we will perform some tests
+our goal is to assure that the software behaves according to the requirements so if I don't have the
+requirements I don't know what to test I don't know how to test and most of all I don't know if the test
+is okay or not okay because I don't know if the expected result is according to the requirements okay so
+what you should learn from this lesson specifically is the how important requirements are and that
+these requirements are always the input for our activities okay and this applies to everything I mean
+to the diagnosis to can network stuff to general software features we're gonna see
+all of them start with requirements and then tests test cases will come test execution will come test results
+will come okay but the extremely important thing is the importance of requirements
+and this is let's say first definition then I'll add I've added a second definition which you know it's a name
+that I gave so you I do not suggest you to write useful definition of software verification over google because I
+might be scared of the results that will come out but yeah this is the one that I like the main goal of
+verification is to ensure that software is compliant with new requirements once again requirements are mentioned okay
+so again I don't know if the meanwhile meanwhile I'm talking you are already deciding if you should get a tattoo or ask Mario
+on Gino to paint the walls writing requirements you know I don't know you will let me know at the end of the lesson
+but the common point here is the importance of requirements as you might already notice there are some differences between these definitions
+and we will go through them in the next slides but since I'm a bit probably not just a bit older than you
+I see this kind of war between you these two definitions as this battle between these two characters but I'm not sure
+for some of you know stack and three do you know this video game yeah I know nice wow I know it so all the video game is so famous or you were as old as me so one of the two stuff
+No, I am 25, but I used to play it when I was young.
+I also played Mortal Kombat.
+We have some gamers here in the office.
+Wow, nice.
+Last time I did the lesson, people were very happy when I showed this video game.
+And I was happy too, because I didn't feel that old.
+Anyway, so let's see how these two definitions, let's say, battles between each other,
+even though they are really defining the same stuff.
+So let's start from the academic definition.
+Yeah, here is a kind of, it's written again.
+Let's go through it.
+So there are positive aspects and aspects that I would like to clarify.
+So the positive aspect of this definition is that, of course, it's a proper definition.
+Okay, it's in theory the correct one.
+So if someone asks you, what is software verification?
+Then this answer will be probably the correct one.
+Okay, so it's a discipline of software engineering whose goal is to assure that software fully satisfies all the expected requirements.
+Whenever you say software, checking that the software is compliant with requirements,
+when you say that, you are almost 90% of times correct when they ask you something about it.
+Okay, so, yeah, again, requirements.
+That's the first thing that you should think of when talking about software verification or testing in general.
+Okay, the only thing that it has to be commented or clarified here is the word fully.
+As you see, I circle it with an orange kind of circle.
+So, why so, we will see more in details why it's needed to comment it.
+But in general, it's like this.
+So when we work on a software or we have to test the software,
+we have to make sure that the software satisfies all the requirements.
+Okay, so in theory, this is correct.
+But we will see that we can start work in the middle of the project.
+Some requirements are copied from another project and were already tested.
+Some other requirements are not applicable.
+So in the working activities, sometimes we, well, not sometimes,
+most of the times we don't have to test the requirements of all the components of all the car
+because probably some of them have been already satisfied.
+Some of them are not applicable or some of them have been just copied from another project.
+And in this new project, that part of the software is the same.
+So probably the does have to be tested again.
+Okay, so fully is correct.
+Satisfying all the requirements is correct in general.
+But when we arrive to work on the practical stuff,
+it's a bit tricky.
+Okay, because we don't have to do everything back again every time.
+Guys, just one sec.
+I received an important message I should take.
+Okay.
+So that's why, since I didn't like completely this definition,
+I added this definition as well, which is the useful one.
+Here I like because there are a couple of things that
+give me the chance to explain even better the verification.
+First of all, is the main goal of a verification.
+This means that there are other goals of a verification,
+and we will see them in the next slides.
+But the main difference compared to the other definition is that here,
+to ensure that the software is compliant with new requirements.
+So, as always, as I'm saying already probably it's already the 10th time that I'm saying this,
+as always, we have to make sure that the software is compliant with the requirements.
+But in the previous definition, they said that it has to be compliant with fully satisfies the requirements.
+So it means all the requirements must be satisfied.
+In this definition, let's say it's the same, but when it comes to actually perform the tests,
+what we do is to make sure that the software is compliant with the new requirements.
+Why this is important, because the old requirements are not important anymore.
+No, they're important, but since they're already, I don't know,
+old requirements, maybe they have been already tested,
+or maybe we already know that on the software are satisfied.
+So what we do basically here is to be, to test new requirements,
+because that will refer to a new part of the software, okay.
+Is this clear, guys, is the first distinction between the two?
+Yes, yes, it's clear.
+Okay, of course, guys, this is a weaker definition, because
+the proper definition is the previous one.
+The main goal, that the goal of the verification is to ensure that the software fully satisfies the requirement.
+Okay, so this is the definition of verification.
+But when we start working, you will notice that we won't test all the requirements every time,
+but you will work on a delta, on new requirements, on something that is new,
+or there was a problem before, so you never work every time on all the requirements.
+But the final goal is to be compliant with all the requirements.
+Okay, okay, so guys, sorry, once again, for the message that I was getting.
+Okay, okay, let's move on.
+So here it comes again, your dearest friend or enemy, according to how you
+felt about it the first time you saw it, that is the WooCycle.
+So where are we with the verification?
+I won't go through the WooCycle again, because you already have two lessons about it,
+so I'm sure that those two lessons are more than enough to understand the basics of the WooCycle.
+Here is just an overview, just to remind you, and to show you once again, that the first thing,
+also in the WooCycle, as is probably been already said in the videos, is the requirements.
+Here it says software requirements, because this WooCycle is specific for the software,
+but consider that for everything that is has to be,
+that, you know, it's related to a project, there is a requirement to do it.
+Okay, so here it's software requirements, but there might be also other kind of requirements,
+also about, I don't know, the materials to be used, the packaging, how to ship this stuff,
+you know, there might be requirements for everything.
+Basically, it's the client asking how to do something, okay, and this will become a requirement.
+In this case, it's a software requirement, but there might be also other kind of requirements as well, okay.
+So, once again, first step is having the software requirements.
+We will, we have some slides after, but basically requirements really are just documents, okay.
+Think of it as, I don't know, a Word document, a PDF document, whatever, it's text, okay, most of the time,
+saying the software should behave like this, and there is an explanation of how a specific behavior should be,
+what is the behavior that has to be reached, okay.
+This document is then shared with the software developers.
+Software developers might be of the same company, might be of an external company, might be one person,
+might be 300 people, okay, whatever, so there's not a specific rule.
+I work with the clients where sometimes the software developers were internal,
+some other times are external, so this distinction between internal and external is important,
+because, of course, if the team is internal, you share the same tools, probably you have the same permissions of tools,
+so it's much easier to communication, and you can get further access to the software as well.
+If the software developers are external, so basically the client is giving the,
+the burden, let's say, of doing the software to an external company, then quite likely you will have
+few restrictions and limitations, because probably you use two different tools, a discussion on how to make
+everything compatible must be done, or even stupidly you cannot talk, for example, over teams, for example,
+because you are from two different companies, so this distinction between having the team internal or external
+creates some practical issues, let's say, but for now this is a very
+introductory lesson about verification, so we not, we will not go through all these very specific details.
+Anyway, when a requirement is written, so when we have this document explaining how the software should behave,
+and remember, it's just a piece of paper, okay, so there's nothing, you just have a piece of paper with a few stuff written on it,
+then this document is given to the software developers, the software developers, of course, will not start
+immediately doing the, the, the, the code, okay, the code lines, so first of all there will be a software architecture,
+where will they kind of design how software should be built from a very high level point of view,
+and then from software architecture, we move to software design and software de-verification,
+where from this big picture, then you start to clarify specific parts of the software,
+finally getting to the software construction, where the actual code is written, okay,
+this lesson, generally guys, the training that you are following follow, focuses on the testing part,
+so what happens, what happens on the left side, is not a big concern of this training,
+I'm actually working on software requirements, so in case are needed, I can give you further
+explanations and stuff, but what we really care about is everything that comes here,
+from the right side, let's say of this cycle, okay, so I'm just explaining also the left part,
+to give you a general idea of where it starts our activity, so where our, the input for our activities
+were born, and when it comes the time when we have to work on it, okay,
+great, so once we arrive to the software construction, then the software actually will be released,
+once we have the software, then it comes, when, then it comes the time when we can start working,
+because as a test engineer, the input for our activities are, let's say, two, basically, one
+is the software requirements, because we have to know which is the intended behavior of the software,
+two, of course, is the software, otherwise we don't know what to test, and third, of course,
+we will need an hardware in the loop or a vehicle, but we will see it later in the slides.
+Is this clear, guys, until here?
+Yes.
+Cindy, did you want to make a question?
+No, I was just going to say yes.
+Okay, nice, great.
+Well, so let's move on then.
+Yeah, yeah, here, just a note, the left part of the cycle, here we are in the software development phase,
+once the software is ready, then we go on the right side, which is the quality assurance of the software,
+because basically, on the left side, the software is prepared, here is ready, of course, already the
+software developers perform some tests, but the tests that they perform are not on very complex systems
+that we will use at work, so our job will be to raise, let's say, the quality of the software, which
+means making sure that once this software is used, in our case, on the real system, which means on the
+vehicle, it's not going to be dangerous, it will perform as expected, and stuff like this, okay,
+so basically, we raise the quality of the software itself.
+Verification side generally lies here, okay, so we receive the software and then we perform unit tests
+about it, so we focus just on one module or one component, so one electronic control unit,
+we make sure that the software works properly, and then we'll start a new kind of tests further,
+the integration tests and functional tests, which imply more complex hardware in the room,
+or even the vehicle itself, so when we talk about verification, basically, we are stuck here, let's say,
+in software, let's say, construction, but it's not our case, because we are not software developers,
+what we do, basically, is the unit test section, but once again, the next slides, we will have
+further details about it. So we have already mentioned it, and these are the points that we will go through,
+first of all, the software requirements, I hope you are already making your mind what you get,
+what, sorry, I'm sure it was an incredible, incredibly smart thing to do, but I didn't hear anything,
+didn't understand, but I trust you, it was a very nice thing to say, so anyway, software requirements,
+which are the, or general requirements, which are the starting point, always, why the saying main goal
+is very important, because the main goal of verification is to ensure that software is compliant
+with requirements, but there are also other goals that we should achieve, and also the difference between
+fully and new, some of the stuff I've already, let's say, explained in advance, but we will have a
+dedicated slides for it. Okay, so, first of all, software requirements, as I already said before,
+these are the first, first step in the whole cycle as well, the starting point, so even though we are on
+the right side of the cycle, it's important to know what are these software requirements, because these
+are going, morning, morning, sorry for being late, but there were a lot of traffic on my way,
+okay, okay, I'm just sorry, thank you, okay,
+so starting point is, as I was saying, software requirements,
+and these are the inputs for all our activities, so whenever you start an activity,
+for one client or another, the first thing that is, of course, related to tests and stuff,
+one of the first questions to ask is, can I have the requirement for this specific,
+I don't know, feature that I should test, it's important, guys, to ask, and probably to ask many
+times, because in some situations, it's not that easy to have requirements, the process is not as smooth
+as it's supposed to be, it's not as rich as it should be, so sometimes you should, you work on some
+features without having the requirements, so this should not happen, first of all, ask always about
+requirements, requirements are one of the input for your activities, without them, you are doing
+you're just playing with the software, with the hardware in the loop, with the vehicle, okay,
+again, here is, this is an example of a requirement, okay, so as you see, this is a document,
+okay, probably this is an informative part, some of the requirements related to the software are,
+let's say, very short, they're defined as atomic, okay, so the requirement should give you just one
+instruction, a software requirement, if this signal is equal to three, then this variable goes to false,
+for example, this is a proper requirement, very short, with one instruction, they're defined as atomic,
+okay, so unit, basically, but also there are some parts of the requirements where the architecture
+is explained where, you know, more high level requirements are, this is an example, so this is an example
+related to, yeah, I mean, electric propulsion, and this is an example of an architecture, whatever,
+this is one of the case, yeah, so basically, the, the, the, the software developer team will just get
+this document, and out of this document, some other requirements should be, uh, defined,
+and, guys, just to think of something, I don't know if you remember, uh, the cycle exercise that we did,
+there was a timeline, we have the same timeline in these slides as well, but later in the presentation,
+as you remember, from the point the project is accepted, to the moment where we have the car,
+it, uh, probably, there is, uh, nine months or ten months of, you know, wait, uh, it, it means that
+when we start writing the requirements, we don't even have the car, in some cases, so the requirements,
+of course, cannot be so very, very specific, because we are just writing a document, so we cannot
+anticipate all the problems that the car might have, or we cannot know where it's important to specify
+the specific feature for the software stuff, so consider that the requirement at the beginning must
+be very general, so very high level, just a very high level explanation of how the car or specific
+system or specific component should work, but then, uh, during the timeline of the
+project, so as soon as the project goes on, the requirements get, uh, more detailed every time,
+okay, so these, I'm saying this, because this requirement that you see here is a very high level
+explanation, okay, it's just an example of an architecture where you can find the basics for
+every electric car, okay, so this is not a very detailed explanation of how
+a car should work and what, what the software should contain just looking at this picture, okay, so
+probably this is a first explanation, first requirement, early requirement in the project,
+probably from these requirements a lot of others followed, okay,
+so
+main goal, so this is the slide I really care about, so slide 9 is the, on the second place of things to
+learn from this lesson, the first one, as you might know already, is about requirement, uh, I remember I had,
+let me think about it, because I remember I had the catchphrase for the, the class before yours,
+uh, yeah, it was, uh, have the requirement, read the requirement, understand the requirement,
+and, uh, make sure that the software is compliant with this requirement, it should be something like
+this, and you can ask other people when they'll be back in the office, but yeah, so, and I repeated,
+repeated that sentence and that phrase, like, uh, 50 times in lesson, uh, yeah, so have the requirement,
+for sure, because as I would say that usually when you go to a client, the process is not as defined as
+it should be and always supposed to be like in the slides, so first, uh, first the task is to get
+the requirement, so have the requirement, the second task is read the requirements,
+third task is understand the requirements, because otherwise you are doing, I don't know,
+monkey, uh, work where you just perform mechanical stuff without understanding anything,
+the first step is to make sure that the software is compliant with the requirements, because this is
+actually the, the, the goal of our activity and why we are paid for if you work as a verification,
+validation engineer, okay, uh, main goal, so let's see why this slide is so important,
+first thing, as we were saying software requirements, once again, uh, we have said that the goal is to
+make sure that the software is compliant with this requirement, so if the software is compliant, 100
+compliant with the requirements, then, uh, we are working properly and this is, let's say, uh, a model expression
+of a manager happy when you declare that the software is 100 compliant with requirements, okay,
+but this is just one part, so let's see what there is, uh, left to discuss, we haven't mentioned
+this central part, the gray one, the famous test cases, which I don't know if you've already written
+in the past, or for sure you have heard about them, is extremely important to, uh, write down
+the manual words that you do while you perform the tests, for many reasons, so you, as I was saying,
+the input of your activities are requirements, okay, so you enter the office, you sit at your table,
+uh, whatever you find on your desk, in your computer, or wherever, this pile of requirements, okay,
+so just a document, once again, so you, you have accomplished the first task, which is half the
+requirement, the second task is read the requirement, so you take this file, you start reading the
+requirements, third task is to understand the requirement, so what are we talking about,
+fourth task is to make sure that the software is compliant with the requirement, so,
+to get to the, the first, for the fourth task, oh, sorry guys, the battery is low, give me just, uh, one minute,
+last night, the battery is full of Cincinnati.
+So, um, we have out- ills-
+Thank you.
+So to accomplish the fourth step, which is making sure that the software is compliant with the requirements, I have to do a couple of things.
+So one is to, that I'm already suggesting you, which is writing the test cases.
+So why do you think it's important to write test cases?
+Let's think together about it.
+Because an option could be, okay, I have the software, I have, let's say, a bench stop where I can perform the tests.
+I just do the tests.
+And then I say, yeah, okay, it works.
+So why should I write test cases?
+I see at least a couple of reasons, but let's have an open discussion about it.
+So we can document everything and show to the client?
+Yeah, kind of like it.
+So document everything and show to the client.
+What do you mean with show to the client?
+Why should you show?
+To verify what we have done.
+Yeah, to show that we've made some progress maybe.
+And to see if it's according to the requirements or it's working well.
+Yeah, it also helps for future work.
+Okay, okay.
+So let's say, for example, when...
+We've got a couple of good reasons.
+Maybe they have to be said in a slightly different way, but they're right fast.
+Yeah, please go ahead.
+Maybe to see if the software has issues and it's not working properly.
+And why should we write test cases for it?
+I'm not saying it's wrong.
+Yeah, I get it.
+I get it.
+So we write the test cases, we test them, and then we see if we have problems or not.
+So we write the test cases.
+I believe we think that, like, what will be the...
+How do we say?
+The nature, not the nature.
+Anyway.
+It's all in my head, but I don't know how to explain it to you.
+So.
+Maybe it's to make it easy for future tests.
+Or maybe to verify the software meets the requirements.
+And, like, we imagine what the future will be for the software.
+So we test in different cases.
+So we think about all the cases that the software will go through.
+Like, we think for the future.
+Oh, so the software works in different conditions.
+Yeah.
+Yeah.
+The conditions.
+Okay.
+Let's try to wrap up all the nice things that you gave me about it.
+So, okay.
+First of all, we, you know, we have a document.
+Sometimes we don't have the software yet.
+So, sometimes the client might ask, okay, start to write test cases.
+Because you can, let's say, anticipate some work.
+So you start writing test cases, reading, having the requirement, reading the requirement, and understanding the requirement.
+So that once you have the software and the benchtop or the car that you should use is ready, you already have all the maneuvers done.
+So, when some of you were saying, oh, to make it easier, to make the other activities easier, the testing activities easier, or saying something like this.
+Yeah, that's correct.
+That's one of the goal of writing test cases.
+So, I take the requirements, I write test cases, and maybe I share these test cases to another team that will perform test cases.
+So, they won't have to have the requirement, read the requirement, understand the requirement, stuff like this, because all of these steps have been done by you.
+Okay, so this is one of the reasons to write test cases, to have clear maneuvers to perform, let's say, to verify that requirement.
+Another thing is, has probably seen you, I don't know who was saying, to show a kind of progress to the client.
+This is not exactly true, because we have another staff to show that we have done activities, we will see later, but it's very important to have also test cases where we can say, okay, we have done, today, we have done 10 test cases, 20 test cases, 50 test cases.
+Okay, in our world, that's a key parameter for showing progress, not just to the client, but whoever, whoever is your responsible, in Kinet or wherever, it will work.
+Okay, and if you say, I performed 50 test cases, and your responsibility is, okay, which one, and you have nothing, how can you say you performed 50 test cases?
+So, writing test cases is also very important, for, to show progress that you've done on the activities.
+There are also other reasons why we write test cases.
+Let's say, you perform, you have requirement, you write the test cases, so you have a maneuver, you perform it, okay, then for some reason, there are problems, or that feature has to be tested again.
+Maybe, maybe, in eight months, since the first time you performed the test.
+How can I perform the same test, exactly, the same test again, if I don't have the maneuver written down?
+So, it's extremely important to run the test cases, also because the same test might, might be executed, not just in one software, but also, eventually, potentially, in all the softwares,
+the same test cases, from that point on, and sometimes, you can be asked to perform the same tests, even one year later, you performed the first time that cast, that test, okay.
+So, even though, while you are doing the test, it looks stupid to write down all the steps, like, I go in K-On, I set this variable to 3, which means, I don't know, dot open, for example.
+Then I wait five seconds, then I, you know, when you're doing that, it's very, let's say, stupid, you don't need that, all those details, because you think, okay, I know how to do it.
+But, but think in perspective, you might be, uh, asked to perform the exact same test, one year later, or two years later, it happened to me to perform some tests, one year later, on a specific feature, maybe I'll tell you about that later.
+And you really should trust your version, the past version of yourself, about doing him or her a good job here, because otherwise, it's going to be a mess.
+Okay, so, we, we said to make life easier to other tests, let's say, to say it in a proper way, writing the, let's say, checklist, so a list of tests to be executed, this is one reason, second reason is to show progresses, which is not exactly true, but more or less.
+Another thing, as we said, is to, yeah, have a bunch of tests, and, uh, written in a specific way, so that we can, uh, perform these tests again later in the future.
+The most important thing, guys, anyway, is that the software, software requirements are fully implemented in the software, okay, so the software is compliant with the requirements.
+So, the process, once that we have the requirements, and each requirement must be covered at least by one test cases.
+So, here we are saying that each line, okay, each instruction, the requirement, must have at least a test case is linked to it, because in this way, we are saying that every part of the requirements are covered at least by one test.
+So, this means getting, this means getting close to achieving the fourth step that I was saying before, I'll just remember you that the first step is have the requirement, second step is read the requirement, the third step is understand the requirement, then let's say we have a fourth step, which is writing test cases, and then the fifth step is, uh, make sure that the software is compliant with the requirements, okay, so yeah, five steps.
+The fourth step, which is, you know, make us very close to achieving the final goal of the verification activities, which is making sure that the software is compliant with the requirements.
+How can I be sure that the software is compliant with the requirements?
+Well, first of all, I have to make sure that each line, so each requirement, each instruction that I have in the requirement is covered at least, at least by one test cases.
+Then you can have two test cases, then you can have two test cases per requirement, three test cases per requirement, maybe there is a requirement that is a bit tricky, so you cover it with the 20 test cases, okay, so there is no really a high threshold on this.
+There is no real high threshold on this, uh, the battery is a lower threshold, the lower threshold is to have at least, at least one test cases linked to each requirement.
+Now that I'm working on requirements, I might even say that you must have at least two test cases on requirement, one saying the software should work like this, and another test case is saying, okay, when the software, when I perform a maneuver different from the one explained in the requirement, then the software shouldn't behave as written in the requirement.
+So the positive one, so the positive one and the negative one, okay, this is the rule generally accepted.
+So the one test case is very minimum for, you know, doing a, almost, let's say, poor job, two test cases is actually a good way to improve your work.
+Okay, so we are, we arrived at a point where we have the requirement, we have read the requirement, we have understood, hopefully, the requirement, we wrote the test cases, then what should I do?
+In case you didn't get is a question for you guys.
+Something the requirements.
+Well, can you be much more specific?
+So think, really think of yourself entering the office, you enter, you sit at the table, you have your file of requirements, probably digital file of requirements, you have them, you read them, understand them.
+Then you open, I don't know, an Excel file, for example, you write your test cases, then what you have again, you just have a word file explaining how software should behave.
+And then you have an Excel file saying which are the maneuvers to be done.
+Then, is this enough to say, yeah, the car will work.
+So we do the maneuvers, and then make the test.
+Yeah, of course, of course, guys, that's the main part.
+Okay, it's extremely important, again, to have the requirement, read the requirement, understand the requirement, write test cases.
+Of course, these are all fundamental steps, but then, of course, we have to perform the tests, otherwise, you know, we're just, we stop just right before the main part.
+So we perform the test, okay, according to the test cases that we've written, and the bench top, or anyway, what we have to perform the tests, we might find ourselves doing unit tests, which means tests on a specific component.
+So I don't know, one electronic control unit, for example, or on tests of integration, integration test, which means testing a, you know, a more complex bench top where we have more than one electronic control unit or more than one module talk to each other.
+So maybe you are testing some features that involve more than one electronic control unit, so two, three, five electronic control units talking to each other, for example.
+And also we can get to functional tests, which are high, let's say, tests from a high level point of view, I would say, I would call them driver point of view.
+So just think always of yourself entering the car and doing maneuvers, okay, so everything that you might do in the car that can be considered as a functional test.
+So not really getting into details of the variables inside the electronic control unit, but just caring about the maneuver to be done in the vehicle.
+Okay, so basically, I don't know, I will open the door, I turn right side, the steering wheel, I put in the car, first gear or whatever, okay, this kind of maneuvers.
+Then what is missing here.
+So we have said, we have the requirement, we did the requirement, we understand the requirement, we write test cases, we perform the test cases, then,
+what happens here so you have a test case saying open the door turn the car on try to move the
+car with door open okay this is the maneuver you do it then
+then we see if everything is okay and if everything is okay I don't know what is the next step then
+but if it has a problem we check the requirements
+why you check the requirement if there is a problem or maybe we check our test cases I
+think we send it back so they can fix it yeah they can fix it for developers guys so I give
+you 15 seconds to think better about it give me just one minute you think about it I have to write
+okay
+okay so you were saying something that i like which means i do the test cases and
+if something is wrong i check the requirements so it's not really clear this part
+so please let's uh let's think and discuss about it again so we perform test cases then
+uh then uh if the if the tests are going bad uh we will we'll say that
+the team to remake the requirements so we can check them again and if the requirements are okay
+we can go to the next stage i have a couple of questions so uh first one
+how can you know that requirements are not okay that's the first question why do you say uh
+maybe i see if the requirements are maybe it's something missing that uh we can do the test cases
+yeah no no might be might be but the requirements are wrong
+i just want to know why you started all i see if the requirement is wrong consider that most of the
+the time requirements are an input to your activities so most of the time they should be
+correct or sometimes so it's very rare that the problem are the requirements that's why i'm asking
+why you started questioning immediately the requirements it can be of course it can happen but requirements are wrong
+but yeah that's the second question the first question that i want to ask is you told me if
+the test is going bad how can you know the test is going bad let's say
+it doesn't tell the output that we act so and what is the output that you are expecting
+now maybe for example if we expect the one it it gives for example zero and it throws a matter
+no no it's that that's clear away from the requirements oh oh finally finally that's what
+i wanted to hear guys the requirements are our input and the requirement says how the software should
+behave so i write i read the requirement that says okay you enter the car if you have the door open and
+you try to move the car the car won't move for example okay so this is an example of requirement okay
+then you read requirement you write this case you say okay so the maneuver is i open the door i turn on
+the car i insert the car i insert the first gear and the car the requirement does not just say the
+manual says the manual the requirement says also what is the expected behavior the expected behavior is
+the car will not move okay so when you write the test cases you perform the full maneuver saying open the
+door key on turn on the car put first gear and try to move then the way to say that the test is okay
+or the test is not okay so i suggest to you not to use the test is going bad going bad is not really
+this is scientific the scientific part let's say here is or okay meaning the software is compliant with
+the requirement or not okay the software is not compliant with the requirement okay you we have just two
+options here no others so how can i know if a test is okay or a test is not okay
+simply reading having reading understanding the requirements in the test cases you will not
+write just the maneuver you will write the maneuver so there is a section that is called i don't know
+test steps uh where to be done procedure of tests whatever okay every client has his own name but the
+important thing is step is to write down all the steps and the maneuvers to be done but you have also
+another column saying which are the the let's say the acceptance criteria the expected behavior behaviors
+to accept the test here again everyone has fun choosing different names but the main idea is i have
+the maneuver in the requirements i have the maneuver let's say the intended behavior so the maneuver plus the
+intended behavior and in this way i can know if a test is okay or a test is not okay is this clear guys
+it's extremely important to know this because how can you know if a test is okay or not okay if you don't
+have you don't have you don't read and you don't understand the requirements
+so to sum up you have the requirement you read them understand them you write test cases you perform
+test cases and you put an okay or a not okay in your report according to the expected behavior
+uh from uh from uh from the requirement itself okay
+it's clear thank you great
+okay so we have written test cases we have uh
+we're adding the report okay or not okay and stuff like this
+then
+what should i do while doing the test for example what should i do once i have the result
+there are a couple of things more that i want to know
+uh check again write a report
+yeah okay we have the report we have written okay or not okay great
+so there are two things that are missing the first one is if i'm supposed to do something while i
+like perform the test cases or i have to add the specific information inside the report apart
+from the result and the second one is how should i behave when i have an okay or when i have a not okay
+so first thing i'm doing the test and i put okay for example in the report should i do something more
+from the technical point of view so we have uh maybe maybe suggest your own modifications
+modification or what for example
+uh extra uh extra requirements that you have tested on your own or maybe you suggest some changes
+extra requirements that you have tested on your own so okay in general of course if there are
+improvements to the requirements or to the members because yeah as i was saying maybe you can find
+yourself working with test cases written by someone else okay this this can be a case of activities as
+well in that case of course if you see something to be improved yeah sure but uh this is something you
+know why is this this lesson is important this lesson is important because it tries to give you a process
+process it's important because okay the process is clear but then when you'll start working and you don't know
+that you don't know the bank stop you don't understand the requirement maybe you don't have the requirements
+because uh the person that should share the requirement is enjoying the national holiday in albania you
+know all kind of problems that you might face you have a daily target of things to
+get done i don't know for example 100 tests per day 100 is crazy now let's say five let's say five
+so you do not get too much scared five tests per day nice you don't know anything you don't know what
+to do so the file the final thing done at the end of the day is zero tests zero tests then the day after
+you start to get requirements but you don't know the the bench top so just the day after you perform
+just one test maybe you did it even in a wrong way it comes the third day you have the chance to talk to
+someone they tell you oh look this requirement this test is completely wrong you're supposed to do like
+this so at the end of the day you perform one test but it was the one of the day before so where i'm getting
+at with this big apparently stupid monologue when you start working at the beginning you will
+let's say have a lot of delay on the targets that the client will set for you so the the temptation
+let's say you will have is okay let's jump some steps so that i can achieve the target that the client
+gave me and i won't get you know bad reviews or whatever so you say yeah i have the requirements
+but i already have the test cases written by someone so i don't need to read them i don't
+need to understand the requirements let's directly jump to perform the test okay this this can be a
+strategy but it's a very short-term strategy the long-term strategy is trying to understand exactly how
+the process works trying to stick with it the beginning it's normal to be delay with the target
+but i assured you that you will start just conveniently forgetting the process because you
+have to speed up your activities this is why i'm focusing so much how should be the process because
+this is very important to work like this because this will improve a lot quality of your work
+might be slower at the beginning but then you will get much faster and most of all better
+and more comprehensive of stuff about car in the future that's why it's extremely important to focus on it
+so all of this to say yeah improvements okay okay but there are other two important stuff that i'm not
+hearing so we performed the test okay do you think the client or kinet or whoever will just trust your word
+i mean i'm sure you are all extremely nice people meant for paradise from here to 100 years from today but
+you know you're doing an activity you just write the excel file saying ah yeah these tests are okay
+is the client supposed to believe you on your word or do we have some other some something
+so we have to send them a report of the work that we have done sorry the work that we are done until that moment
+okay the report can be i don't know word file a powerpoint file an excel file that is just a
+we can we can record it oh nice that's what i wanted to hear so whatever you do as whatever
+guys and we whatever you do the report is fundamental because at the end of the day we talk through reports
+you know we don't open every time all the record and stuff because we trust the person but this is on
+a daily basis then it might be the case or it happens of course it happens uh quite often that we have to
+show what we have done not through reports but through a report the famous log also the log that you did
+using the analyzer that time or the analyzer that time so all the log that you performed and then analyzed
+offline later that's what actual this is the process when performing tests so once again we have an
+additional step have the requirement read the requirement understand the requirement write test cases
+perform test cases and while performing them record them recording test that we are doing and of course
+checking if the behavior of the software is compliant with the requirement in that case we put okay
+if it's not compliant then we put not okay so this is important guys because when you have to start a
+discussion about a specific maneuver or something yeah the maneuver performed can be helpful to quick to
+understand quicker quickly what you did in that log but then the way to communicate between teams is using
+the record that you did that's the only way because those are actual data not your word or your report or your
+maneuver okay i can make them up whenever i want about the reports about maneuvers i can fake maneuvers three
+years later oh yeah i did like this you know no one might question in that case with the record yes with
+the record is official it's the actual record of what you did on the car and that's the proof of our work and the
+proof most of all that uh looking and analyzing that uh record we see that the software is actually compliant with the requirements and the
+okay that we put on the report is justified not just because we are good people and our okay can be in trust but also
+because there is a set of data that confirms that the behavior of the software is compliant with the requirements
+and the only way we have to show it is through record it might be actually the most important thing
+of our activities but let's say from the legal point of view is this clear guys this is extremely important
+all of these steps are important so i hope you're getting them writing them down uh you will have this
+lesson recorded so you can listen or you create some you know you know those youtube videos like 10 minutes of
+someone doing something yeah you can make a video youtube video of myself saying have the requirement read
+the requirement understand the requirement write test cases perform maneuvers while recording them
+um setting the result okay according to the requirements to make sure that software is compliant with the
+requirements that case okay it's not compliant with regard requirements that case is not okay
+clear guys do you have questions doubts
+you want to resign after this lesson yeah all comments are appreciated maybe we're sick this coming
+okay
+so what happens if i put okay so we clear the first part okay second part what is the expect let's say what
+what should we do if the test is okay what should we do if the test is not okay
+uh i think in both cases we should communicate it to the to our colleagues like yeah either if it's okay
+we should speak to our colleagues that everything went fine and this test
+passed all the validation and also if it's not okay
+okay again tell them that it's not okay how frequent for you uh it depends on the importance of the test i think
+and uh
+yeah i like a lot this answer because i would accept it also let's say daily basis even though it depends i
+mean it depends on the activities because if you have milestone i don't know a touch point meeting every week
+for example if you agree to discuss the results every week it can be okay to give weekly results even though
+i uh i prefer having let's say daily report because it really gives you the idea of where you are heading
+your activities even for yourself and not not necessarily to share with the manager but just to have
+yourself an idea on on a daily basis how your work is doing and going so for sure let's say we have a every
+three days uh uh progress meeting with the the manager so every three day we communicate the results
+but i like luck when you said depends on the importance of the test because
+if it's okay most of the time okay you put okay in the report uh you moved from
+i don't know 50 percent of activities done to 50.02 okay we are all happy we are advancing great
+the the main thing happens when the test is not okay so if it's a small not okay
+okay and okay you put a not okay and then after three days you will say you will explain to the manager
+look i performed 100 tests i don't know 90 were okay and 10 were not okay so among those 10 are not okay
+there is this one that is very it gives a lot of problems okay so if you find a test that is very
+dangerous it's important to let's say alert people above you immediately of course guys before starting
+all these warnings and stuff it's important that you are sure that that's not okay so before you just
+express your thoughts be sure of have performed a proper analysis of what you're doing but yeah anyway
+so the frequent frequency is i don't know daily for example or i don't weekly or every three days
+every two days whatever but my suggestion is daily because you will have daily targets so if you have
+daily targets i would say i have a daily update of the report that's my suggestion and if something
+very bad happens for example you realize that performing a specific maneuver the car will start
+accelerate by itself then that might worth mentioning as soon as possible to the manager saying look
+i found this very weird behavior it looks very dangerous so what should we do should we do this that
+and stuff like this and have a let's say discussion with someone in a higher position than doing that this
+moment okay do you think is enough just to work your manager
+the answer might be yes okay i'm not saying it's necessarily wrong but do you think it's enough
+uh so just the manager i think maybe it's uh needed but not enough you also have to uh communicate to your
+teammates because our testes may be implied in there
+i know like it may be like a waterfall logic if uh if something is wrong in our uh task it may imply
+directly to another colleague task and we have to communicate as soon as possible uh yeah this is
+correct but it's not the main the main it's not the main thing for a specific reason i'll ask you a
+question what is the main what is the goal of verification
+uh to verify whether all the requirements are in the right function are functioning right
+or say that let's say in a slightly different way that the software is compliant with the requirements
+yeah yeah so when you perform a test and you declare that this test is not okay you're basically
+basically saying the software is not compliant so our goal in the end is to make sure that the software
+is compliant with the requirement so when there is a not okay what do you think should be the next
+action okay to warn the manager or the teammates because maybe their activities might be affected these
+are all yeah organized things to do but warning people that something is not working
+it's not enough to fix the problem the software will not fix by itself just because you will tell
+people ah it's not working so what do you think should be the next step the next action to do
+uh maybe we can suggest them a solution by our role
+uh okay two things suggest to them with them second of all how can you know what is the solution
+i don't know i i don't know if it's our job but we can communicate with software engineering to make
+the new software complained with the requirements okay okay this i like guys there is this work
+uh we work with clients that are so big that uh it's very hard you know to have a full picture of it
+so to work properly we have to be aware of which are the input of our activities and which are the outputs
+okay so we which are the team that we work with from where the input of our activities come and where the
+output of our activities go in this case we have said for the past wow it's 10 no no break yeah you are brave
+anyway we have said for one hour and a half almost that there is a person writing requirements okay let's
+say team writing requirements this team so the first uh let's say the interaction that you have
+is with the software requirements team eventually because you will write the test cases so you see
+that the input of one of your activities is having the requirement okay so one of the interaction that
+you might have is with the requirements team okay and that's the first thing second thing is that
+this requirement are received also by the software development team the software development team reads the
+requirement they understand the requirement there is a requirement licitation but yeah you we will not
+go through those steps there finally the software developers will produce a software and will publish a
+software for you so you will get a let's do something like this okay let's use the most powerful tool of all time
+name which is paint okay so here as as i was saying we have the first interaction okay let's say we we are this part that cases and text execution okay we are here
+this is not really professional but yeah that that's us okay nice this is the first interaction with the software requirements team or requirements team because you receive the requirements
+sometimes you don't have a direct connection with the requirements team sometimes you just receive the documents and that's it okay but that's the that's the first interaction
+another interaction that you have is with the software development team okay that cares about this part
+the interaction so here we have uh write it in a better here
+here we have the requirements okay as an input here as input we have
+here we have
+here
+we have software
+great
+then what is our what we do we here we are just receiving stuff okay so what we do back to these clips
+so if the if everything is okay then we have an output saying okay uh software is compliant okay
+so our report goes out to the management saying we have covered i don't know 50 of the requirements and
+the software is compliant with these 50 of requirements okay nice
+the thing is when it's not okay we perform an analysis
+saying okay the requirement says that uh if i try to drive the car with the door open the car will not move
+so most of the time we have to consider the requirements as frozen the requirement arrives
+you when they have been already discussed accepted and stuff like this so most of the time the problem
+are not the requirements so let's consider the requirements are correct if the requirements are
+correct and then you perform the maneuver and the uh the software does not behave as you expect
+then you have to do something to warn what the software developers so here there is an interaction
+back to the software developers saying look the software is not working properly so considering
+that the requirements are okay we can ignore this part because we say okay this part is correct
+we open an issue we open a ticket we open a point you know there are different we raise an issue everyone says every
+clients talk about it as in a different way but basically we open an issue to the software development team
+saying look you have given us a software that is not compliant to requirement so you should make something
+different they will analyze not your report not your maneuver not your mail they will analyze your record
+your log this is the way to talk to the other team so that's why it's so important to record the
+managers first of all to let's say demonstrate that you worked and what you do second of all is whenever
+there is a problem or for some reason we have to analyze what you did the only way to talk between
+teams is using the recordings nothing else of course the mail will help with your describing what was going on
+of course the reference to the requirement helps of course the test maneuver helps you know all this
+stuff are very helpful but at the end of the day the software developer will care about the behavior of the system
+not your behavior okay of course we do a first analysis like i see that the variable that should go to
+three stays stuck to zero in that case it's very evident the issue and you say look the issue might be
+this variable that is stuck to zero but of course it's up to you to understand what was the problem
+so you always perform first let's say a pre-analysis of the issue but then if the software is not compliant
+with the requirements we just raise an issue and warn in an official way with an email or with a
+tool i don't know the tool that i've seen to the clients are i don't know jira or polarion or mantis
+or jama or whatever really there are there are a lot of tools for the issue tracking but most of
+the time when there is a not okay in your report it cannot stay in your report it must go somewhere
+else and this somewhere else is warning the software developer team if it's a software problem
+or the requirements team if it's a requirement problem okay in fact i added here all these marks
+to say there is an extremely important stuff which is the issue tracking if it is okay then we move on
+the whole report with all the okays and all the reports and everything if it's not okay it's up to you to
+manage the issue until the issue is fixed so first of all you say look this is not okay i open a ticket
+i open a point i raise an issue whatever to the software developers team they will read your problem
+eventually they will ask for clarification they will ask for the maneuver they will ask for the software
+that you were working on if you were working on an hil if you were working on a card so they will ask you
+a bunch of questions once the issue is clear they will analyze the issue then they will tell you okay
+we have found the problem solution will enter in the next software and then the cycle starts back again
+so they've moved from software architecture or software design or software construction directly
+they will change the software they will produce a new software and you will receive the new software
+how can you know that now the behavior is fixed because you in the past have written the test cases
+so you know exactly which is the maneuver to be repeated in the exact same way you perform the same test
+with the new software containing the it's called the bug fix and you declare and record the
+the maneuver and you check that now the test is okay because they fixed software once all this cycle is done
+then you can move on because now the software is compliant with the requirement
+is this clear guys
+yes
+yes clear
+okay
+great
+so yeah here you know what one said all of these this is the main part of the lesson okay right after the
+the uh the requirement stuff so having the requirement reading the requirement understanding the requirement
+writing test the cases recording the maneuver that we do so while we perform the test
+putting the okay
+or not okay in the report according to the expected behavior coming from the requirements
+if the test if the test is okay then okay if the test is not okay then we have to raise an issue to the right
+team according it's a problem of the software of requirement or something else okay
+this is extremely important this is the part i really care about and it will be really help you
+uh working properly then we start to move more on the practical part here we mentioned the unit test
+integration test the functional test so let's see what are the components that we might use for perform these tests
+uh we can have oh sorry okay yeah uh we can find ourselves working on the component uh
+uh on the component uh
+hardware in the loop they're called the component hardware in the loop because basically what you have
+is just one component which is an electronic control unit like this one this is the real hardware
+and then you have an hardware in the loop or model simulating the card okay
+in this case this um configuration is an easy configuration because you have just one real hardware
+and all the everything else is a model so it's easy to configure it because every you can simulate
+whatever because the there is a model of the car there's not the real cars you you can change the the
+the tire size you can i don't know force the the the speed to 300 kilometers per hour you know whatever
+it's a model so you can do whatever you want the only real thing is the electronic control unit and the
+software inside this electronic control unit for this reason it's very flexible because of course you can
+also perform some tests with a very dangerous situation i don't know driving to 200 kilometers per hour
+downhill for example would be very dangerous for a driver but it's not a problem on a simulator
+sometimes this kind of system is too simplified because uh you know
+at the end of the day okay the goal is to make sure that software is compliant with the requirements
+okay and the subsequent thing is that once we put this software in an electronic control unit and then
+in a car the car first of all should be safe no one will buy a car that after 100 kilometers just
+broke broke down break down uh doesn't break just accelerate or or stuff i hope you remember all the
+problems that i guess healthy had on the highway while we were discussing about the diagnosis
+so you don't want to buy those kind of car so i cannot rely on the safety and the proper behavior
+of the car just basing everything on tests done with just this echo and a motor okay so this kind of
+setup is very extremely helpful for the early stage of the of the project the i've actually worked most of
+the time this kind of setup with one electronic control unit so you can focus a lot on this echo
+most of the time this activity is done with power train electronic control units because they are the
+most important one but then once you have performed the test with this kind of simulator then for sure
+the next phase of testing will move to a much complex system it can be called the system
+hardware in the loop integrated hardware in the loop integrated system you know whatever the name can be
+whatever the difference here is that you just you don't have just one hardware real hardware coming
+from the car you might have two hardware three hardware i don't know like two electronic control units
+three electronic control units five electronic control units you might have also some sensors some
+activators there are i've seen some benchtops where you can even find the steering wheel the headlight
+so you basically there is the whole car just be basically without the chassis and the plastic part
+around but apart from that everything is there steering wheel the arrows the stereo everything okay even the horn
+you know everything in that case of course the complexity is higher so while in the previous configuration
+you can force the model to do weird stuff in this case you really have to be careful because now you
+start to have real component one of the examples that i'm thinking of is the tests done with the battery pack
+and the inverter and all the electric motors in that case you cannot force a you know high power because
+you have actually the battery so you have to be very careful in performing these crazy maneuvers because in that case
+you will actually have a source of energy giving actual electricity out so that can be a problem okay the system is less flexible of course
+and here i introduced the the concept of significance i'm not sure this is the right translation from english
+because in italian for now let's use significance but the concept is what i was explaining before meaning
+the final goal is to ensure that the software is compliant with the requirements okay and the
+some basic consequence of this is that once we put everything in the car everything is safe and everything
+is working properly so if i just test one hardware and the bull car is a model of course those kind of tests can help me
+but i cannot trust them 100 because i'm just testing one part of the car while the rest is a model so the significance
+let's say the meaning uh of uh let's say the level of trust i can say uh of that test on a bull car
+is limited because we are just testing one part with this kind of bench top we're starting to test not
+just the small part of the car but the bigger part of the car it's not the car yet so we are not testing
+the full system but we are starting to test the system that is closer to the car so we're starting to test
+something that can be compared somehow with the car that's what i mean with significant or level of trust
+let's see
+finally we have the functional test
+functional test as i was saying are tests done and driver level point of view so you can find yourself
+working in you know this is i guess alfa romeo julia for example
+uh this might be a mclaren of some sort so someone might find yourself working in alfa romeo someone
+here or this mclaren for example these are just random pictures taken from internet or from uh
+let's say old time people like some of you you might like working on ducato you know they're all kind
+everything for all tastes you know um here the complexity is at its highest of course uh the car
+you cannot really change stuff on the car okay so that's the system that's the full system so the
+complexity is very high because when we when i say complexity it's a 360 degrees because when you work
+in the car you can have all sorts of problems not just software related you can have i don't know
+tires the flat tire so you cannot use the car because you have one tire less for example
+or i don't know that the battery of your computer is low so you cannot do a test of 30 minutes out
+in the street uh or the battery of the car is low because i don't know you forgot something on and the
+day after the battery is out you cannot do the tests so at the end of the day you will have a delay
+the manager will ask why you have a delay and then you have to explain you know all of this stuff uh you
+can find dead animals in the car as well you know i've heard and seen very strange stuff in the car so
+it's not just software related but when you go on real world all kind of stuff can happen it's not
+flexible as i was saying and of course the significance is at this highest because this is we are actually
+testing the system okay so we cannot get closer than this to the car that we will actually uh sell okay
+um
+yeah here there is an italian quotation well it's translated to italian it's for a man there are
+few innocents uh way to kept it busy which is making money uh why i'm seeing this uh because most of the time
+when we work on a project it's very rare that we work on a new project most of the time the projects are
+considered as carry over a carry over a carry over means we take you know an old project or a previous
+project and then we use part of that project and we make a new car so when you listen to all those fancy
+advertisements in the car on the tv saying ah the new car x new version of uh you know whatever car
+uh most of the time almost 95 percent of the times that's not the new car at all sometimes it's the
+same car of a previous one just they changed slightly the headlight form or this you know shape of
+whatever interior part yeah new car basically the car is the same uh why am i saying the same because
+it's the same uh from the hardware point of view because they built the car the same factory
+eventually or with the same architecture but also they copy actually the software from one project
+and they start another project starting from the previous one okay so we most of the time you will
+listen talking about the level of carry over i don't know 50 carry over 75 of carry over 100 of carry over
+which means it's the same software just probably some headlights will change or some very minor stuff will
+change why we do that we do that because in this way we save a lot a lot a lot of money
+guys when i graduated i'm the mechanical engineer and when i finished university i thought yeah
+well car car is all about engines all about tires is all about chassis yeah whatever that's my dream
+when i finished university but then i realized that there's nothing about it because on road car
+engine is always the same tires are always the same you know it's so standardized everything from the
+mechanical point of view that's there's very left to be done honestly uh but on the software side
+all the money basically went on testing the software side at least on road cars
+so that's why i'm in this field still because this is where the the the the the the money goes on road
+cars in testing activities so to save money of people working performing tests or you know all the
+verification engineers that are supposed to verify that are supposed to have the requirement read the
+requirement understand the requirement write test cases perform the test cases while recording
+making sure that the test is complies met meets accepting criteria so that the software is compliant
+with the requirement and making sure that if it's not compliant the tester will raise an issue and will
+follow it until it's fixed and the software then behaves according to the requirement
+all of this you just forget about it because you have the same software as before you just use the
+work done by someone else of course you cannot trust 100 to send everything so there will be some
+activities but if you completely take one software from a previous project that you use on a new project
+with the same hardware the same software same architecture whatever then the testing activities will be
+much smaller and the money spent on the project will be much less so you see that every time there is
+a carryover of everything most of the times and
+really five percent of the cars are new on the market all the others are just copy of others
+okay this is the let's see last slide uh part uh almost everything i said in the cycle part two lesson
+is what i said when i do when i usually do this lesson so i won't really go through this slide
+a lot uh because we have covered everything but what something that i want to do is just giving you
+a last concept before stopping because really i've never talked for two hours without stop since a long
+time uh which is the the question of the questions the king of the question the queen of questions
+of about verification that is what is the difference between verification and validation
+boom you know explosion civil wars among people and clients uh going crazy and stuff this is the
+question that most of the time they ask the first one is what is the verification and all steps to be done
+and we have covered it with the list i told you before but then they will ask okay what is the
+difference between verification and validation uh you will slowly understand by doing it but let's
+try to explain looking at this picture so in the early phase of the project uh we have the usual you
+know i just go i'll move on because this is the same slide that i used for the cycle part two lesson
+so we have the first part of the project where basically we have
+approval from the high management of the project then there is a software requirements team that start
+writing the requirements okay these requirements then are shared to the software development team
+software development team produce the software and shares the software with you great
+at the beginning we uh this is let's say a new project okay let's consider these slides is
+representing a new project so first of all we have to make sure that the software is compliant with the
+requirement and we know now that that's the process the verification we have defined the verification okay so making
+sure that the software is compliant with the requirement great and that's what we basically do so there's not
+much more to be said about verification i already spent two hours about it
+so let's focus on the right part of this slide where you see there is this purple rectangle b and b in purple that starts really late in the project
+that's when the validation starts why not the verification started here because uh yeah that's the first software
+would be 100 for example the verification started here in september 2020 and went on or most indefinitely while the validation started for some reason one year later
+what happened this one year during this one year the verification team ensured that the software was and is compliant with the requirement
+once we make sure that the software is compliant with all the requirements so we have
+all the requirements expected for the project and the software developers have implemented everything
+coming from the requirements and the verification team has verified that all the required software is compliant with all
+the requirements when we arrive at this point and it comes the time that we test again all the requirements but this
+time inside the card while why we do this because in this case we are sure that the software generally in hil
+uh you know on uh prototypes so in a not in a let's say uh cts car or a car that is very close to the
+production one but just prototypes so we use basically development tools we make sure that the software works
+properly with development tools but once we are sure that the software is compliant with all the requirements
+then we have to make sure that everything works properly also in the car so having the software compliant
+with the requirement says okay that the software is should be saved to go in the car then it starts the validation
+phase where all the requirements are tested again but in the car in order to tune some parameters
+to make sure that the behavior is not just compliant with the requirements but also is okay from the
+driver point of view i mean let's consider we have a map of i accelerate 10 percent of the accelerator pedal
+and i get the 15 newton meters of torque for example okay maybe the requirement is met but then i put this
+software inside the car and the car does you know there are vibrations there are sudden acceleration the
+feeling of accelerating is not correct or is not the one desired actually by the market so in that case
+the software is working properly but it's not really like how it should be the final car in that case you start
+tuning some parameters where the logic of the software works because it has been already verified by the
+verification team but there are some parameters to be tuned some constants to be tuned inside the software
+which are called calibrations that will be adjust during the validation activities so to sum up everything and close
+everything here because it's late finally i need to break you too probably what is the difference between
+a verification and validation verification we know verification is uh the activity of ensuring that the software is compliant with the requirement
+the validation so the difference between the verification and validation is that the validation
+performs basically the same activities so ensuring that the system is uh behaves according to the requirement
+starting starting from the assumption that the software has been already verified so i consider that the software doesn't have bugs so the software is working properly because
+it has been already verified and the validation checks that the system in itself so basically these are activities done on the car most of the times
+the system the system behaves according not just to the requirement because i expect that but also that the behavior is like the expected one and the desired one at high level
+consider guys once again that the requirements are written one here in the house before of the car so i cannot imagine all the side corner corner cases the side scenarios that i can get
+once i get once i have a car so maybe there are some adjustments to be done some other stuff that i couldn't test into the hil i have to test in the car
+so i basically repeat everything that has been done in the verification phase i do it again
+in the car so having a system that is much closer to the final tool at the final the
+of the car that is sold on the market starting from the assumption that the software has been verified so
+i'm supposed not to work on the software logic but just on these tuning parameters called calibrations
+that will adjust the behavior of the car so finally i can sell in the market a car that is not only compliant
+with the requirements but it's also let's say nice to drive and is actually compliant with the main idea of
+the client okay so the intended idea of the client of the car
+okay so uh we can uh let's see uh discuss about these slides a lot because there are a lot of stuff that
+we haven't mentioned by the quality gate pg uh the mule part but i guess this part is covered also in
+boost cycle part two so my suggestion for today would be to uh review what we have done today
+uh eventually have a look also the full cycle too if you do not recollect it because this focus just on
+this last part and having the knowledge of what we have said about
+uh verification this can be helpful for you to have a wider picture of this slide as well
+and uh yeah i guess we will talk again tomorrow just starting from this point on
+because from this part on then it starts the operative part
+where we start to focus on writing the test cases how to write the test cases
+uh how we want to check while performing test cases and stuff like this but
+these are just focuses on what we have said that slide 10 i guess nine nine yeah this one okay
+so this is the focus i would like you to have and write down
+uh wherever you want on your body on the wall of the office on the floor ceiling or whatever having the
+requirement understanding the requirement sorry reading the requirement no sorry having the requirement
+reading the requirement understanding the requirement writing the test cases perform test cases
+uh while recording them and then uh checking that the the behavior meets the requirement setting okay or if it's not okay
+raising an issue and following the issue until the issue is fixed we will see that to write test cases there are further
+information information information information to be added but we will see tomorrow where we will continue from this slide
+okay uh there is also other material in the folder there are also some exercises but for today i would like you to
+focus on this just create the scheme of the process and we will uh discuss it
+tomorrow again and we will slide uh slowly move to a more operative part
+of course uh if there are questions this is time to ask or uh if they come after
+the explanation please reach to me at this after okay okay
+do you have uh questions
+it's all clear thank you for me it's clear too thank you great so thank you all guys and see you tomorrow
+see you bye bye bye

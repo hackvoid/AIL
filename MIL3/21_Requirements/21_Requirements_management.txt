@@ -1,0 +1,383 @@
+okay okay we're ready i will start the presentation
+tell me you can see me
+yes so i can see okay here we are
+okay uh as i said we are talking i think that you really know if we talk about the spice
+what we are talking about isn't it uh i'm sorry to interrupt you uh can we record this video
+yeah yeah can you record it and also if you do it and then you can send it to me which should be a
+good thing because i had to but i'm not actually i can do this with for some problems so if you
+record it and send it to me uh it will be a very good thing sorry to interrupt ciao gabriele thanks
+for the lesson i just connected for the sole purpose of recording so i am recording the
+the lesson and i will okay okay so i won't be active in the lesson just here for record okay
+thanks yeah good thing because i have problems with my microphone so i am using uh i think to
+to present and i think to uh talk because i wish to do this it would be a very good thing thank you
+okay thanks okay so we start uh we are talking about uh a spice and
+uh how you can uh read on the on the here the proposal of the spice is to improve and value the
+performance of the development process and ecosystem of industry industries uh it is a specific variant of
+international standard diesel and actually it allows the best way to have a good process to uh fulfill our
+project to do our things and uh i think that you already know uh something about the bicycle
+that is a cycle that is used in a spice to uh develop a good software i think that you should
+already know the the thesis about uh develop and testing today we'll talk about the requirement part
+that is uh in the up and the left part of the cycle uh you can see here that we have uh more parts of
+this uh requirement uh um requirement part and uh here we can you can read that we have
+the requirement elicitation uh the system requirement analysis and software requirement because if we're
+talking about uh the development of software we have a level for uh system requirement uh analysis that
+will tell you uh what do we what do our system have to do what can the kind of things have we have to
+develop and how the the part of software requirement analysis that will tell us which software with
+which implementation will do the things that uh we need to uh fulfill our system requirements
+uh we start with some definition and some properties that uh our requirements uh need
+need to be a good thing actually just to give you a better introduction uh the rest of our work will be
+some documents uh that will be stored in our cases in some server and in these documents it will be all
+the description of our work but we have to find a proper way to do this thing a first definition that
+we can have is the difference between the functional requirement that is uh what the system shall do
+and not the functional requirement that is uh what the system shall be the difference is that in the
+second one is a moral description of the system uh while a functional requirement is a description of
+our implementation and all the things that we do have to work so a definition for example of an
+inputs outputs and the procedure of our software
+a good writing requirement should have some characteristics the first one is that should be
+clear and ambiguous so there should be only one way to interpret the requirement let's see some
+examples if we frame right and the system shall not accept the password longer than 15 characters
+actually we don't have a good description because we don't know actually if uh something different
+from this is possible if uh a password of 16 cards arrives to us what the system shall do and we actually
+don't know so it's important to to write something like if the user is the password longer than 15 characters
+then the system shall display an error message and shall ask the user to correct it so we describe the all the
+things that system do does and we don't have some misinterpretation of of our functionalities
+every requirement that we write should be stable the requirement can be refined by means of inspection
+analysis demonstration of tests for example if you write a system must refresh the data very quickly we don't have
+uh a way to test this thing because uh uh this is not the description that can be uh it can have an
+representation for everyone the same so a good requirement should be the system has refresh the data each
+0 5 milliseconds we can actually test these things because for example if the data refresh more than this time
+we can tell that the task the test the test is failed
+uh the requirements should be feasible the requirements should be double with existing constraints
+um for example the replacement control system shall be styled with this no disruption of the production
+but the good requirement should be the replacement control c but uh control system shall be started
+causing no more than two days of production destruction just because usually on the
+software on the software on the hardware we have some uh constraints and we should respect it for
+example we cannot demand a system that can avoid the physical constraints or it should be do things
+faster than our technology allow us to do our things
+there are a lot of other properties that will speed up on these things it should be consistent
+uh because we should uh we probably have a full document with a lot of things and a requirement of
+functionality should not interfere with other requirements so uh the book should be a consistent uh
+consistency about all the things we have it should be atomic because uh for example uh since we have
+uh it's it depends on the testable property because uh uh at each requirement we should
+uh assign a test and if you wait if you write the things like um in case of our temperature over current
+over over state over both the system shall board the change but actually um here we have a true
+requirement because we should have three tests assigned to this property because for example uh we respect
+the part of our temperature probably our current is not implemented and the over voltage doesn't work
+and if we don't have a uh right like in the like above uh we should not plan um test for everything that we have
+and should not um find which things works which not with which parts have errors and when we have to change
+uh our work and last things it should be traceable um since i i said you before that uh we have more level requirements
+system parts or per part and also the test we should have a traceability between all the parts of our documents
+so if you have a software required script and implementation we should know uh where this implementation comes from
+for which functionality we have to do these things and we will see how these things is done
+in some software that i will show you later
+we switch to the other slides
+this one
+i said you before that there are some software that we use to implement the requirements uh in the slide
+before the word there are some slides about uh about a software named doors but i will show you
+something more about another software this is called polaro because i gave the license here
+and the slides show you some things about the software but later in the end of the lesson we have a
+quick introduction to this software how to use it and uh other section and all the things are done
+so we start with the slides from some bit introduction and then we will see on the software uh some example
+actually um uh the requirement documents appears like like this and it's a document with a lot of
+objects you can see that we have uh usually uh this is a screen about polarion and here we have a
+description description description of our things and uh in the right part in the left part we have a
+code and unique code that is associated with a single requirement um actually if we do some change
+change and uh we've or we delete this requirement this code will still be assigned to this one because we
+have to have just a bit in the time about our documents here in the left we have an icon an icon that
+actually uh see us what kind of requirement is this because we have an icon for software we will have
+uh an icon icon for system an icon for uh for text and more in the right part we have uh some properties
+we can usually cast on these things that because because uh our item our requirement is not just a
+description but is anything with a lot of properties that say us a lot of things about how to develop
+so for example um these properties can be the severity let's say at last um if the this requirement
+is a must have a should evidence to have or something that is deprecated they will not have to implement
+it is very useful for developers because it's good to set some priority because in the when we drop we
+probably start with must have things and then when everything is finishing test and we can
+we can go to should dev and later to the other the others
+there is here a status that tells us uh the status of the requirement not the status of the
+implementation because when we write probably we start usually we start from a drop status
+uh when we write the things when you have the finished to write we uh switch back to uh i
+review the average status and then in a probably verified rejected uh and also this uh machine can
+change you know how many people work on the things online level of people that can review approve and test
+things but the important part is when we are here we can make some modification later we cannot if we
+want to modify our require when you have to come back this is start to the status so i will we will
+see you later in polaro that we if if we are not in draft the document the the requirement is blocked
+um here uh we can see also other properties like dd that we can see also in the document
+but also uh the traceability part because here i've written uh which should the requirements are
+connected to this one um as parent is referred to uh uh to the leader of the chapter for example and
+it's related to his pro here is a relation with another item in another document
+so uh with these links we can fulfill accessibility between them with between documents but we will
+see an example later uh here we showed for example that here it was a requirement about uh can message
+that says that that information used in the system is uh carried by this message and in that link we can
+connect with the description of the message with other properties that we can find in the dbc
+uh also this is another view that we will uh you will see uh later in the software that
+it is a representation with all the levels uh just to have a better interpretation of how many links that
+could we have and here uh have some on uh some of charts that we can have because uh as you said
+before we are using a proper software to do these things uh actually we could also use some uh an excel
+not word because we have a lot of properties but an excel should be good and also we will see that we can
+uh every reporting from polarion to excel but the good things to have a software that is done just
+for this is because it can give us some uh for some reports that can be used to have a global view of
+our project for example here we have a coverage report that tell us that a part of our requirement got
+the coverage and that part doesn't so later we can print a report discovering which part which
+requirement doesn't have a coverage and uh complete our our documents but also uh some graphic about
+the develop to treat to have trees about uh how things are done what things are done what which not
+and so we can have a better view of our project
+here another report uh i i took up before about coverage report uh here we can see that for
+example a system requirement have a software requirement have a software requirement assigned
+but the order doesn't so we can know uh that we are still to write some software requirement and
+where and about which functionalities
+this is another view of the same report but in a table way
+and before we uh continue with this part i will tell you if you have some questions
+if everything is clear of if you have some questions about these things
+okay
+um just a little things um why these things is important because uh uh if we work in uh automotive
+uh environment but also in other uh environment and it is uh secretica for example for uh um
+for uh for train for uh for planes we should have um a develop that follow a lot of rules because we cannot
+um release a software that have problems if we sell a car with the software that have bugs we should
+uh uh have we should have some problem that could cause people to die cars to stop working
+and so in different uh difference from us other kindle software for example um from uh um
+um cell phone software from some app that could be work could be crash and uh sometimes a new version
+of software released the software car should not be updated should be should uh be uh should uh should
+work from the day one and should not the problem because uh uh the risk that of these things that is
+sometimes very high so uh that's for this that we have to uh have developed that starts from requirement
+then the develop the testing and all the parts that can show us that everything is done and everything is done correctly
+here we have um a test report that also is made by polarion
+because every um um after that we have written everything that our software needs after develop
+we should start with the testing part so we should write the test associated to our implementation
+and then run some test run that tell us uh for example here we have test run which three tests
+we can execute this and then we can report that uh which some tests are passed some tests are waiting
+uh and we have other two status so failed and blocked that's because probably uh some tests depends on the
+result on other one probably have to start the car uh to do 10 meters and then to do to try to to stop the
+car if the second part is not fulfilled you cannot test the third part so uh we can have the block test
+because the test has been not be done because the previous one failed so we we can we could not try
+this thing and so when we try our things we have these three status which tell us which things gone good
+and which one bad how we write our test here we should usually have a step instead i start up here for
+example and the expected result and uh here we can select if test is passive either blocking and i write
+if it failed the block actually the we can write the actual result for which happen and not for the
+developer to find the bugs errors and the correction that has to be done
+also the test should be have just a bit with software so we spare software we have just a bit with
+uh with the with the test and the test uh should be connected with the bug founded if the test is not
+be done and here in plan we also can store the bug uh the change and everything that uh should
+give us a good responsibility of all of all our work in the time
+okay before to proceed with this part we will have a little a better view of this thing on the software
+any question
+okay excuse me i have a question yeah that part that you were explaining about the hierarchy of the
+requirement can you explain a little bit more about it
+i can hear you very well if you can repeat
+uh you were explaining a little bit about the hierarchy of the requirements
+i don't know it was too much uh before so
+okay hello we will give you some example right this paper so you understand
+how we better how these things works okay thank you
+let's find some project we can play with
+okay this is a browser um a software that can can make us to navigate by browser so actually i'm
+working in chrome and i can connect to this software uh inserting the the ep of the server that should be an
+internal ep actually is set here enables uh i'm working uh already on the server so we just i just have localhost
+but otherwise you should input to the ep and the program service then when you log in with
+uh your user and password you arrive here here we have the name of project and you can navigate with older project
+this is the home in home we find the description on uh on uh every part of our project
+that you can find here in this part let's see something hello here we start with
+let's be slow
+with the requirements section here we have um description like input and output because uh we
+start with the project scope where it is bright and everything about the project uh in um in a not
+specific way so we have also the evolution plan uh responsibilities a lot of information about
+our project and uh starting from this document we have enough to put about a system required
+specification document
+here the second level
+let's see for example
+we'll we'll just make a little change to
+have you so you can see the things better
+uh
+here we are in this document it is about document about the system required specification we have
+all these items of you uh you can see the the id here a title and here a description
+um it is actually a test project it's not a really project that we use but it's just used for
+uh academy for for testing for uh allow people to try some functionalities of the software
+but actually here we can see uh some system requirement for example that should be an easy
+to operate with excessive training things like this
+and um here on the right we have some properties that are displayed on the document and here in the
+the right panel we can modify these properties and we have the severity the status since for example the
+status is reviewed if you try to write something it's actually not in change but if we
+uh perform an action rework and we save the document
+with a little weight the status of our item change and now we are able to write something
+in the requirement and make some modification when we are done we save
+a bit slow today it's a bit slow today and we perform an actual review so we block this description
+of the data um in this part usually you have some uh description of the system so description of
+functionalities and not a proper description of the implementation that you have in the next part here
+in the design part
+we have input to the previous document and as output to the software software requirements
+specification document with a description of the implementation here we can find some uml
+we can find some input description we can find a lot of things here here are some
+examples but it depends a lot of uh which project we are we are describing uh you can find some uh text
+description but also some pseudo code usually some uh part of code so a lot of things uh some figures
+and if we navigate it we can find that for example software requirement item is connected to a system required
+document uh system requirement item but also it it is verified by some from some tests that we can find in the next session
+if we go back
+the same part we also have here the software test case specification if we open this document we'll find
+all the tests that are associated to our software items with some steps some step description and some expected
+record record results when someone want to test these things it should create a text section
+test session add this item to access it to the test section session and uh try it and report the result
+here we have a different uh way to read it because uh uh the test part is always made by
+a table with the steps and other things we can actually uh customize this part but we always save the table for the
+three or four part of our more part of our test
+and just to give you some more information
+we go back to the software requirement specification part and we give a better look to the single item
+here uh i said before that here we have some properties that are already shown the document
+here we are some probably that you can we can change the properties but if you open the item
+we have a full look about the single item with all the properties um uh that it have priority
+initial estimate i spent a lot of things and also some custom properties that we that we can add to
+the item uh but to add some custom properties we should navigate in the
+um in the administration part i will not show you uh actually it's today because uh it is a things that
+uh is by the only usually but uh by people that administrate the project and the usual the work that
+uh user uh does is to fulfill the information not to customize but if someone uh uh needs this part
+we can uh make another quick lesson introduction to customize project uh but let's see some of the
+most important things here on uh upright we have the history
+that uh show us actually this is not uh realistic because we no action on these things but uh usually
+here we have all the version of the item because uh uh we could change the uh our description for
+example 10 times and here we could find probably if we just to see another one
+okay here we have uh some two uh version of this item that tell us that this has been modified two
+years ago or three years ago so here we can see the action of the modification and with these things we can
+see the history of an item or the history of the document because usually uh we could uh we probably
+we could want to know how these things things change in the times and and we want to retrospective
+some implementation to know for example uh in that uh one years before what was the description of
+these things because actually description exchange and implementation with it
+so to have a repository actually it uh polarion implements a repository that can allow us to see
+the history of item documents and also the history of the older project
+for all the project we have a section section here above that is baseline section actually we have no
+baseline saved but uh the difference between history and baseline is that here we can create a baseline
+for today for example today we have release we can delete a baseline tool for the release and we have
+we can navigate all the project in that day for the for the status in the day that we create the baseline so
+um it's not about the single item but this is old items so we can navigate we can change documents and
+see all the things that was done in uh probably for one hour one year before or the day of a specific release
+here instead we have in the first part here we have a lot of section for the parts of our develop
+uh i just to do the you the required the same part but uh we have also the risk part the development part
+of trace develop and the maintenance that we will not see because actually is um all the same scheme
+and uh it's not so important to see all of them
+actually we have some other documents for the sky in this part that is still connected to the previous one
+but let's go to see other things about the software
+um here we have some section with documents and item but if if we want to explore this um
+not the section but for example all the system requirements that can be stored in more documents
+here we have a section with all work item that we can open and we can see all the objects that are
+storing documents so we have not a document view but the table view of all things that we have we can
+filter here for type for example or we can create here filters about i don't know some properties for
+example all the item that is should have and we can load the table about all the item for example that
+has been created from someone or that have a association with some things
+and it is good because also we can export these things with an excel file
+we can select which properties we want to export usually there is always the id the title
+and also the description but you can see that the first three are blocked for example the quart
+the fourth one no id is always blocked because we can't not change it because it's assigned by the
+software but for example we can we can uh want to unblock the description because we want to export
+this excel to someone that don't have this of the access to polarion but we want that you can add some
+more text description to some to some item and then when when we do these things i will just show you
+when we export this and we modify the excel we actually can re-import the excel and import all the
+modification this is why polarity is not also software when where you want to work but it's uh first a
+storageable document and not all people that work here should be have the access to all the information
+all the items all the things but probably we just want to export a file to someone that probably could
+be also in some other society some other part of the world we share this thing with him here we see
+that since we have the the title block and he cannot change anything but it can change the description part
+add some things save this file and send it back to us and we can run the import part and we can
+update our storage of our documents and our items
+instead here we have a document section with all the documents for divided for
+for part design development etc and we can see all the documents but also the report associated to
+documents i showed you some of this report before in the slides and here where you can find it
+also we have a dashboard farm that we can customize where there is all the graphs that we can need to
+understand the status of our project so how many issues we have how many of them in process how many
+change requests uh and all other things that we need but we can create more charts about things that we want
+to have a quick view to administrate properly the our our project
+okay some questions
+okay so we'll take a quick break of 10 minutes and we will do the other slides that
+uh we have to explain to finish the lesson so see you back in 10 minutes
+see you
+so
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+you
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+
+
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.
+Thank you.

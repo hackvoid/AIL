@@ -1,0 +1,572 @@
+Welcome everybody to this training. In the first part of this training there will be an introduction on the heel system and why it's important to use an heel, why it's necessary to use an heel and in the second part there will be a training on control desk, how to use control desk.
+The first question is why is heel important, so why it's needed to have a heel simulation. The answer to this question is because the heel simulation allows you to link together computer simulation and vehicle testing.
+So the heel gives you the possibility to have a real-time application while using real components like for example sensor and actuators.
+The application that runs on the heel is composed basically of physics-based or mathematical models.
+So starting from the mathematical models we create a Simulink model. Simulink model is then translated into code. The code is run on the application.
+We can imagine in the real world to have another in the loop like in the first picture. In the first picture there is the controller and the process.
+The controller, the role of the controller is to control the inputs to the process, then read the output from the process, then calculate an error and on the base of this error adjust the inputs to give to the process.
+In the simulation we can recreate the real world to have the hardware as controller and then the simulation instead of the real process.
+So the simulation recreates the behavior of the process while the hardware is responsible for the controller.
+Now let's see together what are the advantages of using a heel.
+Of course the heel reduce the cost of testing. Let's imagine that if we want to test on a mule the costs are higher than testing on a heel system.
+Another important aspect of the heel is the reproducibility. What does it mean?
+It means that it is possible to reproduce, for example, a bug. If we found a bug, having the heel gives the possibility to reproduce the same error many times.
+Because we are able to recreate the conditions to let the bug appear.
+Another main aspect of the heel usage is the safety. Some tests are not safe to be done on a real vehicle.
+Let's imagine a short battery on the accelerator pedal. It has a high level of danger.
+So in this case we perform the same maneuver on a hill. So in this case we lower the possibility, we reduce the possibility to have dangerous condition for the driver to zero.
+On the other hand, there can be some critical aspects. One critical aspect is to develop an accurate model of the real plant. In other words, we have to model the real plant as close as possible to the reality.
+Meaning that it is possible to recreate the same conditions as in the real vehicle. The more the model is accurate, so the more the model is close to the real plant, the better will be the test we are able to perform and the better are the results that we're going to have.
+Let's analyze now a hill architecture. In yellow you will find what are the simulated parts in a hill architecture. While in green there will be the real hardware present in a hill architecture.
+The real components more often are sensors and actuators. It is possible to simulate sensors and actuators and it is also possible to have real sensors and actuators.
+Then usually there is one or multiple issues under test. So the real issue is connected to the hill, to the simulator.
+Other issues are most often simulated because there is a percentage of hill architecture that don't have all the issues real. For your information, there are some architectures that have all the real issues.
+Like for example, like for example, lab car. Then there is the physical system. So the model that recreates the plant that runs on the simulator.
+Following the arrows, you can see the exchange of information. For example, the physical system gives inputs to the sensors. The sensors gives output to the issue under test that analyze the inputs and creates some outputs in two other issues.
+And they also receive information from other issues. But the main important thing about hill architecture is the issue that provides output to the actuators. Then the actuators gives a feedback to the physical system. So this is how we close the loop in a hill architecture.
+This is a typical system. This is a typical system architecture in which we have the PC, on which we have some tools. In this case, there is an example of tool from this space, control desk, and also, for example, configuration desk.
+The connection between the PC, configuration desk. The connection between the PC and the Skalexio is made usually through an Ethernet.
+Then there is the connection between the ECU, the ECU, the ECU, the ECU under test, for example, one or multiple.
+This connection, for example, this connection, for example, is made of I.O. channels. The I.O. can have multiple shapes, for example, can be an analog, I.O., digital I.O., resistive, PBM, engine simulation, and so on.
+So, the Skalexio exchanges information with real ECU, so sends, for example, inputs to the real ECU.
+The ECU elaborates using the software flashed on the ECU. The information coming from the Skalexio creates some output that is sent back to the Skalexio.
+The PC is responsible for the part of configuration of the Skalexio, but this is not the main topic of this lesson, and also for control desk.
+Control desk just gives you an interface to the model.
+So, using control desk on our PC, we can have an interface with the model running on the Skalexio.
+So, we are going to be able to see inputs and outputs of the model running on the Skalexio.
+It's important to specify that, with respect to the simulation, in this system architecture, so using Skalexio, we have a real-time application running on the target.
+In fact, the real-time application is running on Skalexio.
+Let's analyze these pictures together.
+There is the Skalexio in the middle, which has IO hardware, fault injection units, loads for unit under test, processing hardware, and battery simulation.
+So, the power supply unit.
+The Skalexio exchanges information with the device under test, so the ECU, for example, and to the simulation model.
+The simulation model is the model loaded inside the Skalexio.
+Then, we have the possibility to interface with Skalexio using, as already said, control desk, but also other platforms, like automation desk for test automation,
+model desk for model parameterization, motion desk, and also third-party software.
+Before moving to the second part of this training, so how to use control desk, let's reassume what are the features of a Skalexio system.
+The first important thing is the run of the real-time application.
+So, the hill, with respect to the sealed mill, which are software in the loop and model in the loop, gives the possibility to have real-time application running.
+The Skalexio, through the boards, can generate sensor signals to the ECU.
+So, generates the outputs of the Skalexio that are inputs to the ECU.
+At the same time, it can reach command signals from actuators and also read inputs of the ECU.
+Inputs from the ECU, sorry.
+It provides battery voltage to the ECU.
+So, each ECU needs to have battery voltage, so the power supply to work.
+The Skalexio provides to the ECUs the battery voltage to work.
+And then, another important thing is that the Skalexio is able to simulate faults.
+FIU stands for Fault Injection Unit.
+So, using the Skalexio, it's possible to simulate faults and then analyze the behavior of the ECU when those faults are simulated.
+Now, let's move on to Control Desk.
+Control Desk is a tool from this space that gives you the possibility to directly interface with the model.
+So, as you already said, the model is present and is running on the real-time application on the Skalexio.
+Control Desk is the interface from the user to the model.
+So, using Control Desk, it's possible, for example, to change inputs, analyze the outputs, having access to the bus for CAN connection, link connection, ethernet connections, and so on.
+Using Control Desk is possible to access calibration, measuring, and diagnostics of the ECU.
+So, when the ECU is connected to the real-time application, using Control Desk is possible to perform some tests.
+So, let's imagine there is a new software release.
+The software is flashed on the ECU.
+We want to test the software.
+We connect the ECU to the HILD simulator and then we are able, using Control Desk, to perform maneuvers.
+And see how the new software behaves, so how the software behaves after these maneuvers are performed.
+Now, let's move on to Control Desk.
+So, in this case, I'm going to show you an application, a real-time application.
+So, we're going to see how to use Control Desk, what is possible to do, what is possible to see and to analyze using Control Desk.
+So, this is the window that you have as soon as you open Control Desk.
+For each application, this window may change, it will change, basically.
+But, it's important to have clear in mind that even if the layout is different, what is possible to achieve is the same.
+So, the functionalities of Control Desk are the same.
+First step is to go online.
+Go online means that we're going to start the online calibration for Control Desk.
+So, we run the application.
+The application, after going online, is running on the simulator.
+So, we're going to see the real-time behavior of the model.
+As you can see here, as soon as I went online, this variable started to change, because they are representing the real behavior of these components, in this case, the TVA.
+Second thing to do is to give battery to the ECU.
+As already said, the Skalexio system has the possibility to give power supply to the ECU.
+In this case, I'm going to click here and have the main supply active.
+In this case, this is 24 volts, but usually you will find 12, 14 volts.
+It's the same.
+It's the same.
+In my application, the level of battery is 24.
+Then, I'm going to show you how to flash using JTAG.
+JTAG memtool is a program to flash the ECU.
+Flashing the ECU is possible using Inca and so on.
+In my application, I flash using JTAG.
+It's important that I show you these because it's possible to understand that there are many ways to flash an ECU.
+In this case, I go on key on.
+I click here to start flashing.
+I select my ECU type and then I'm able to flash.
+For example, in this case, I take the hex file and I'm able to flash.
+So, I select the hex file, I go here and I'm going to flash.
+In the meanwhile, I can show you some other outputs like, for example, CAN A status and CAN C status.
+In my application, there are only two CANs.
+Using these LEDs is possible to understand the status of the CAN.
+If the LED is green, for example, the CAN is working.
+Otherwise, if it's red, the CAN is not working.
+There are other information that we can see using this main layout.
+Like, for example, the main current, some temperatures, some pressures and so on.
+Now, the flash is finished.
+I can, for example, go on key on and then perform the crank and go in engine running.
+In this case, I can see the RPMs varying in time.
+The velocity in this case is zero because we are not accelerating.
+As you can see, here we have the accelerator pedal.
+And in this case, the pedal is to zero percentage of pressure.
+I can move, for example, go on first gear.
+You can see here and then accelerate.
+You will see the velocity changing.
+You can change gear.
+And the velocity is now changing.
+The RPMs are changing and everything is working.
+Now, another question can be, what if we want to see, to analyze a variable that is not present, for example, in this layout.
+We can create a new layout here.
+We can insert a new layout.
+We will have a blank page.
+Then, moving inside, in this case, let me restore the view.
+This is another important tip.
+It's possible to have something missing on the panels.
+You can, every time, reset view set.
+And, as you can see, it appeared, here, a new window that before was not present.
+So, for example, let's suppose that by mistake I closed this window.
+This window is not present anymore.
+I can reset here and the window will appear again.
+Now, just for example, let's go and search for another variable.
+Like, for example, here, an engine variable.
+I can take a variable.
+I can drag and drop it into the layer.
+Control Desk gives you the possibility to choose how you want to visualize the variable.
+For example, time plotter, display, and so on.
+I can add a display.
+So, for example, this is the boost pressure in this case.
+And, I can also add a time plotter to see how this variable changes in time.
+So, I will minimize this window.
+And, this is the time plotter for the pressure.
+Now, I go to the home.
+I start the measuring.
+And, I will see the behavior of the pressure in time.
+So, in this case, there is, here, the time changing.
+This is the pressure changing.
+And, as soon as I stop the measurement, the variable stops.
+So, in this case, it's possible to perform analysis on variables using time plotter, using displays, and so on.
+Control Desk gives you an interface also with networks.
+In this case, there is this panel called bus navigator.
+Analyzing the structure of the bus navigator, it's possible to see that, in this case, for example, we have two can.
+This is the first controller, and this is the second controller.
+So, we have two can.
+Of course, we have two controllers.
+So, we have two transceivers present on the real Skalexio system.
+This is, this gives you information about the real hardware present on the Skalexio.
+Adding some boards, it's possible to have numerous time.
+Sorry, adding some boards, it's possible also to have multiple cans, multiple links, and so on.
+Each board adds some transceivers to have can communications.
+In this case, if I expand here the can, I can see all the messages, and if I go here, I can see the signals.
+It's possible to have some filters.
+In this case, I can add the transmitted and the received messages, only the transmitted messages, and only the received messages.
+As you can see, it changes also the shape of this block.
+So, the received messages have this arrow on the left.
+Otherwise, the transmitted messages has the black arrow on the left.
+Now, I will filter for both transmitted and received messages, and I will add, for example, in my layout, the, what is called, generate ticks layout.
+So, when I add this, I will add this layout here.
+In this layout, I can see that we have some information about the message.
+For example, I have information about the ID of the message.
+If the message is cyclic enabled, the cycle time that can be changed.
+So, I can change, for example, the cycle time here.
+I have a button to kick out the message.
+So, if I press this button, the message will be send.
+And I have here information about the Rx times.
+So, here on the left, we have the global time, and here we have the delta time between two messages.
+As we can see, it varies, but it's close to 0.5.
+That is actually the cycle time it's present here.
+If I change the cycle time here, also the delta time here changes.
+So, I'm changing the cycle time in real time.
+I put back the cycle time to 0.5.
+And here, we have this panel to change the raw bytes.
+So, if you know how the message is structured, we can select here the raw bytes.
+We can change byte per byte.
+And then, if we press kick out, this message with the byte that I choose will be sent.
+Let's restore the condition.
+And in this bottom part, information about the signals are present.
+In this case, in this message, there is only one signal.
+This is the signal name.
+We can select the source, so if we want the source to be the input, so the model, or a
+constant value.
+Constant value that I can choose here.
+As you can see, if I put constant value, the signal value is equal to the constant that
+I'm choosing.
+Otherwise, if I put it back to input, the value will go back to the input coming from the
+model.
+Now, let's add a message that is transmitted, sorry, that is received.
+So, I go here, I generate the layout.
+And I will see here that this is a transmitted message.
+In this case, transmitted from the ECU and received to the simulator.
+So, in this case, the informations are different.
+So, since this is a received message, we cannot change some values.
+So, this is only for visualizing the values.
+In this case, this is the message, called A and B. This is the cycle time, 1 second.
+Here, information about the status of the message.
+This is the data that the message is carrying.
+And here are the signals.
+In this case, we have five different signals.
+Here are the values.
+And here the units of measure.
+In this case, we know that analyzing this message, we have the signal called ambient air
+temperature.
+So, we know that the simulated ambient air temperature is 28.5 degrees Celsius.
+Then, we can also add multiple messages.
+So, let's see.
+Let's use a filter for transmitted messages.
+I will select these five and I will generate a layout.
+In this case, it generates a layout for each message.
+So, as you can see, here on the top, I can switch between layouts.
+Switching between layouts, I am changing the layout displaying the messages.
+To delete a layout, it's possible to click here.
+It will ask if you want to change the layout or not.
+And it's also possible to create a layout for each single message.
+So, in this case, we select more than a message.
+We drag and drop the message here.
+I will click here and it will create a single bus navigator array with all the messages here.
+In the bottom part, I can switch between messages here.
+So, this is a compact view of multiple messages.
+And for each message, I will have each signal.
+So, here I can show you how it changes and so on.
+So, this is just a compact view.
+So, we created a layout.
+In this layout, we have different messages.
+Control Desk gives you the possibility to monitor the messages exchanged on a network.
+For example, if I close this menu, I can see here I have the controller.
+So, I can add an unfiltered monitor on this controller.
+So, I will see the exchange of messages of that transceiver.
+So, let's add a monitor.
+I can have here, I can select the name.
+I can change the name.
+I can select the ring buffer.
+I can select the milliseconds in which it will update.
+If I click OK, I will have this window.
+Then, I can start the monitoring and I will see all the messages exchanged on the can.
+In this case, I can, for example, here change the view.
+I can have a static view or I can have a continuous view.
+I can select tail scrolling or head scrolling.
+I can clear the monitoring.
+And here, I can select the kind, the type of the network.
+I can pause the acquisition here.
+I can stop the acquisition here.
+And, as already said, I can clear the monitor here.
+It's possible to see also the signals.
+So, for example, if I start the monitoring and I freeze it for simplicity,
+I can see here the name of the message.
+If I open this menu, I will see all the signals in this message.
+For each signal, I have information about the, if it is an Rx message or a Tx message.
+I have information about the DLC, the information about the time,
+and information about the data that that signal is carrying.
+I can do this for multiple messages.
+And also, here I can see the direction of the message.
+So, in this case, we have all Rx messages.
+But, it's possible to see the transmitted messages as well.
+Now, let's suppose we have the necessity to record some variables from control desk.
+So, first of all, I will take the variable.
+For example, here I will put, let's see, multiple values together.
+So, for example, here I will drag and drop them on the layout.
+I will select a variable array.
+So, this is an array, where I can see all the variables that I've added.
+Then, I will go here, in measurement configuration, on recorders.
+I will create a new recorder.
+This is my new recorder.
+As you can see, here, there are no variables.
+But, if I select, if I block this window, I select the variables.
+For example, I want to record only the first three.
+I can drag and drop them here in the recorder.
+In this case, when I do start measuring, these variables will be recorded and saved.
+I can select the recorder.
+I can go on properties and I can select, for example, the name, if it's active, and all
+the options, all the properties of my recorder.
+I can add a prefix.
+I can select the file type, the recording file type.
+For example, an EDF or an MDF.
+This is the preview.
+So, the preview of the name.
+I can add the experiment.
+And, I can also decide if I want to automatically export the file.
+I can select the folder.
+For example, on the desktop.
+I can select the file type.
+In this case, it automatically adds two more file types in CSV and MAT file.
+And, for example, let's select a CSV file.
+And, I can use a start condition here.
+I can select the trigger rule and so on.
+So, let's make an example.
+If I go here, I go on start measuring.
+I go on here.
+Let's see if it's running.
+It is active.
+Let's do stop measuring.
+In this case, nothing happens.
+Because I only started the measuring.
+But, I didn't click start recording.
+So, I go start measuring again.
+I go here.
+On start immediate recording.
+So, let's see if it's running.
+Let's see if it's running.
+Let's see if it's running.
+It is active.
+Let's do stop measuring.
+Let's do stop measuring.
+In this case, nothing happens.
+Because I only started the measuring.
+But, I didn't click start recording.
+So, I go start measuring again.
+I go here.
+On start immediate recording.
+I can see that the recorder becomes red.
+Here, I have information about the recording.
+So, the name of the recorder.
+The time that it's going on.
+And then, as soon as I click stop recording.
+I stop the measurement.
+I go on the desktop.
+And we'll see if it's running.
+I go here.
+I go here.
+On start immediate recording.
+I can see that the recorder becomes red.
+Here, I have information about the recording.
+So, the name of the recorder.
+The time that it's going on.
+And then, as soon as I click stop recording.
+It's still measuring.
+I stop the measurement.
+I go on the desktop.
+and I will see my file. I can open the file using Excel for example
+and I will see information about my recording.
+So in this case this is a CSV so this is not the best way to read a CSV file
+but here I have all the information that I have recorded.
+Another feature of control desk is the possibility to simulate electrical error.
+To do that we are going to insert an EES port that stands for electrical error simulation port.
+I can insert a new EES port.
+We go next.
+Before adding it I have to select the port configuration file.
+So I go here I select the button and this is the EES port config file for my application.
+Then I can move on and click finish.
+It will generate an electrical error simulation port where I have the error set here.
+I have the path of the path on which I can move on and the EES port config file for my application.
+Then I can move on and click finish.
+It will generate an electrical error simulation port where I have the error set here.
+I have the path of the path on which I can generate the electrical error.
+So let's go here for example and add these.
+Let's add a signal.
+For example this one.
+I will drag and drop it here.
+Then I have to configure the type of error.
+Selecting this box and going on properties I can see what is the error category.
+In this case I can choose between interrupt, pin to pin, short to ground, short to battery and short to potential.
+In this case let's suppose I want to perform a test on short to ground.
+This is the error type.
+In this case it is a simple short to ground.
+Then after selecting short to ground we can see that here.
+Here there is this symbol of the ground and the signal connected directly to ground.
+If I select the signal it gives me information about the type of error.
+So I can select if I want to perform this electrical error with load or without load.
+I can select without load.
+This is the signal name, the path of the signal name.
+And then here I have the allowed error category.
+So all the possible error that I can simulate.
+In this case we are performing a short to ground without load.
+But I can select any of these.
+If I go here and I do download, I do activate and then trigger.
+In this case I trigger the error.
+So if I go to analyze this high side of the LNG tank relay one for example.
+I can see that it will be present an electrical error that connects it to the ground.
+To remove the error.
+To remove the error I do deactivate.
+I will unload the error.
+I will close this panel.
+And I will disconnect the EES port.
+Here I can add multiple signals.
+For example in this case let's add all these signals.
+And I can perform simultaneously different type of error.
+Going back to the main layout.
+I can do.
+I can shift to the neutral gear.
+I can go on key off.
+So I will turn off the engine.
+And then for example.
+Here I can simulate a bus off on can A.
+So I will in this case simulating a bus off on can A.
+I can do it also on can C.
+I can reset the can A.
+So I will remove the bus off.
+I will remove the bus off from here.
+I can reset the can.
+I can reset the can.
+And I can also perform a model reset.
+With this button.
+I can reset everything from the model.
+I have also the possibility to.
+In this case select the RPMs.
+And I can fix them.
+So let's try.
+I go on key on.
+I can fix this value of RPM to 2000.
+As soon as I click this button.
+The RPMs.
+Will go to.
+2000.
+And.
+The engine running.
+Now let's remove.
+From here.
+And let's analyze.
+This other layout.
+This layout.
+I present.
+All the temperatures.
+Pressures.
+Switches.
+And lambda.
+Also valves.
+Position and sensors.
+That it's possible to use.
+During the test.
+In this case.
+If I want to modify.
+For example.
+The manifold pressure.
+I can.
+Put here.
+Value.
+And.
+As soon as.
+I click this button.
+It will override.
+The value.
+Coming from the model.
+So in this case.
+I'm.
+Forcing.
+The manifold pressure.
+To be.
+A thousand.
+Pascal.
+I will.
+Remove.
+The switch.
+And I pull.
+It back.
+To zero.
+Of course.
+It's possible.
+To create.
+Different.
+Layouts.
+Based on.
+What we need.
+And.
+Let's.
+Insert.
+A new.
+Layout.
+And.
+Let's.
+Insert.
+A new.
+Layout.
+And.
+Let's.
+Insert.
+A new.
+Layout.
+And.
+Let's.
+Insert.
+A new.
+Layout.
+And.
+Add.
+For.
+Example.
+A couple.
+Of.
+Variables.
+In.
+This.
+Case.
+Let's.
+See.
+If.
+I can.
+Let's.
+See.
+Let's.
+Add.
+Those.
+Two.
+Variables.
+And.
+Add.
+Let's.
+Add.
+Those.
+Two.
+Variables.
+And.
+Add.
+switch.
+Just.
+têm.
+Pass.
+We.
+These.
+Two.
+Variables.
+Two.
+Variables.
+As.
+Numeric.
+In.
+This case.
+I.
+Thank.
+I.
+Let's.
+find.
+Variable.
+That.
+Is.
+An.
+For example, the temperature sensor of the rail, I can add it as a numeric input, I can
+also add the rail pressure, also the engineeristic value, and I am able to change those values
+because they are inputs.
+It's also possible to connect multiple inputs to a single box.
+So let's add two variables, in this case I'll lead this one to this box, in this way.
+So I go on variables, I select the variable that I want to add, in this case this one.
+Drag, drop it on the box.
+Then it will override the values.
+If I can select this one, and I select also this one.
+If I select the variable here, I put it here as numeric input, I right click on this variable,
+and I drag and drop it on main variable, I can select if I want to copy the variable here,
+if I want to move here, and I can connect to a new instrument, and also I can connect as additional
+right variables.
+If I select the variable, if I select the variable, if I select the variable, I go on properties,
+I will see here that I have one additional right variable, there is one connection.
+Then, let's suppose I want to create a new, numeric input, like for example, in this way.
+I can see that this is the name, block and variable, if I select it, go on here.
+I can change the colors, the border style, and so on.
+I can change the height, the width, and so on of the text, change the color, and also I can change
+the text box color, if I need to.
+Now, let's suppose I want to add this variable here, I will drag and drop it right here,
+I will drag and drop it here,
+then I will copy this variable here, sorry, I will move this variable here.
+I will add it from the variable browser, so let's reduce this window, let's put this here,
+here, I select the variable, I drag and drop it on the new, numeric input, and it will have the value of the variable.
+If I select, here, also this value, with the right click, I drag and drop it here, I will connect as an additional, right,
+So now, when I change this value here, it changes both the engineering value, and both the physical value.
+So, in this case, as you can see, as you can see, with one numeric input, I can change two variables, it's not true, the control, so in this case, if I change those,
+you will not see a change here, as you can see, as you can see, you will see the change only for the physical value, if I change the engineering value, it will remain the same.
+Going back to the slides, you can see that you can create, in the working area, many inputs, for example, in this case, we can create a panel for signal generator, in which we can change the frequency,
+frequency, the amplitude, the frequency, the amplitude, and the offset, and in this case, in the right part, we're going to see the variables changing in time using the time plotter.
+So, the inputs that we can select are many, I will quickly show you, what are the inputs, so going back to control desk, those are all the instrument that you can select, for outputs, for example, bar display, for input,
+a knob, a knob, numeric input, a slider, and so on, so those are all the inputs and outputs that you can select.
+Lastly, it's important also to note that there are present some help guides from this space, I will show you how to access them, if you go on file, there is the help here,
+and from here you can access to the space help, using the space help, PDF files, so, for example, I go on PDF files, I will see all the PDFs present on my PC, for example, I can go on control desk,
+bus navigator, bus navigator, bus navigator, I will open it, and I have the help of control desk, made directly from this space, on which I can see all the features, all the possibility that control desk offers.
+Here I can go, for example, here I can go, for example, in the introduction, to the bus navigator, and I can study it, even if I don't know how to perform some tests, some maneuvers, and so on.
+So, the help of this space is really important, and this space provides the help for every tool, for example, automation desk, control desk, and so on.

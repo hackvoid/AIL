@@ -1,0 +1,2674 @@
+start	end	text
+0	6000	Hello everyone, I'm Pasquale Perrotta and this is the Module 2 of Diagnosis topic.
+6000	16000	There will be three modules, the first one already available for the Diagnosis introduction,
+16000	22000	the second one which is related to default management, and the third one which will be
+22000	28000	a walkthrough of the UDS to understand how to read it, how to use it, and things like this.
+28000	34000	But in the Module 2, we will work exactly for default management.
+34000	40000	In particular, we will understand what is the status of the DTC,
+40000	45000	analyzing the behavior of each of these eight bits.
+45000	52000	The introduction that I gave for the Diagnosis is very general to make you aware
+52000	57000	what is the Diagnosis, why do we use the UDS, why it is important to use it,
+57000	61000	and things like this. But that was pretty an introductory lesson,
+61000	68000	and not being very practical, being quite, let's say, far from the practical use of the UDS.
+68000	76000	So the intention of these two further modules is to make you closer to the concrete activities
+76000	81000	that you are going to do once you work for a client.
+81000	87000	And these will be very, very, very helpful for whatever activities you are going to do,
+87000	92000	which is going to be validation, verification, hardware-in-the-loop configuration, everything.
+92000	96000	So this will come in handy every time.
+96000	101000	Of course, in the slides and also in the norms that you will get, there are definitions.
+101000	106000	So everything that I'm going to say is reported already in the norms.
+106000	114000	So this lesson is a way to make things easier or to raise in you doubts about you understood.
+114000	122000	But anyway, everything is already reported and present in the slides and the norms
+122000	124000	for other presentations and things like this.
+124000	128000	So you have the references in case of problems.
+128000	133000	I please refer to your references.
+133000	138000	So here there is a definition and most of all some names.
+138000	150000	But I would like to use, as always, a tool that for me is very helpful, which is paint.
+150000	153000	I already prepared a couple of things that could be helpful.
+153000	160000	But here I would just like to mention two additional things.
+160000	167000	So as we said probably in the previous module, or if not, I'm going to tell you now.
+167000	175000	Every time we refer to a diagnostic trouble code, the DTC, we need three bytes to refer to it.
+175000	181000	So the identification number for the specific diagnostic trouble code is based on three bytes.
+181000	184000	Okay, so we will have something like this.
+184000	190000	I write it here, you know, in a small character and dimension.
+190000	197000	So we will have, I don't know, I'm just inventing, you know, a possible diagnostic trouble code
+197000	202000	that could be, I don't know, 01, 22, 92, for example.
+202000	203000	Okay.
+203000	207000	Okay, we can make it even a bit bigger.
+207000	208000	Okay.
+208000	215000	So as you see here, so I already write something, then we will understand what is that.
+215000	218000	So let's put, let's make it be even bigger.
+218000	219000	Okay.
+219000	227000	So as I was saying the identification, so the ID of the diagnostic trouble code is based on
+227000	231000	three bytes and I'm going to show you them.
+231000	236000	So this is the first byte, this is the second byte, and this is the third byte.
+236000	237000	Okay.
+237000	243000	But every time we ask to the electronic control unit the list of errors that the electronic
+243000	247000	control unit has stored inside it, and we will see how to do that.
+247000	248000	Okay.
+248000	249000	Okay.
+249000	255000	So probably this module or in the next module, we see how to do actually concrete way this
+255000	256000	request.
+256000	262000	We will always see and realize that the echo will reply always at least with four bytes.
+262000	263000	Okay.
+263000	265000	If there is an error present in this case.
+265000	270000	So where three bytes are related to the identification number of diagnostic trouble code.
+270000	274000	So let's say this is the first, this is the second, and this is the third.
+274000	278000	But then we will also have the fourth byte.
+278000	283000	This fourth byte is the status of DTC we are referring to.
+283000	284000	Okay.
+284000	290000	So this 8f that you see is, you know, a combination of 8 bit.
+290000	294000	And according to the values of this 8 bit, we will have a specific value.
+294000	295000	8f is an hexadecimal.
+295000	300000	So according to the bit, the value of the bits that we will have here, we will have a
+300000	303000	specific value of this 8f.
+303000	308000	So please remember, we will see how to ask to the electronic control unit the list of
+308000	310000	errors, for example.
+310000	316000	But just keep in mind, for starters, that the diagnostic, every diagnostic trouble code is
+316000	318000	expressed with three bytes.
+318000	323000	And then, and this is a statical, I mean, it's a static means it's just an identification
+323000	324000	number.
+324000	325000	Okay.
+325000	328000	Like, I don't know the ID of a can frame.
+328000	329000	Okay.
+329000	331000	That is an ID and it's a static.
+331000	333000	So this is not, this does not change.
+333000	338000	What actually changed is the fourth byte because the fourth byte is the representation
+338000	341000	of the actual status of the DTC.
+341000	346000	Please guys, as always, do not learn things by earth.
+346000	354000	So status of DTC is not just a name or a, you know, funny combination of words that someone
+354000	356000	in the past decide to use.
+356000	361000	Status of DTC actually means the status of the diagnostic trouble code.
+361000	364000	Always refer to the concrete things.
+364000	365000	Okay.
+365000	366000	Concrete examples.
+366000	372000	Let's always think about we are having a problem with our car and we are driving the
+372000	373000	car on the highway.
+373000	376000	So I already did this example in the past module.
+376000	377000	Okay.
+377000	385000	And what it really, what really matters is to understand what is the problem, make sure
+385000	390000	that the car and so the software behaves properly so that everything is safe.
+390000	394000	We can preserve the safety of the drivers, the system and all the things that we have
+394000	395000	said.
+395000	396000	Okay.
+396000	404000	But once we, you know, everything is safe and, you know, all the safety part is achieved,
+404000	407000	then it's very important for us to understand what is the status of the error.
+407000	412000	This is from the high level point of view, but this is also important during the development
+412000	413000	phase.
+413000	418000	If you're performing some tests that require that the error memory is clean and you have
+418000	419000	no errors stored.
+419000	424000	And then you have an error always present inside, or you have an error generally in your electronic
+424000	425000	control unit.
+425000	427000	The first step is to understand.
+427000	428000	Okay.
+428000	429000	The error of error is it.
+429000	433000	I have three bytes telling me which is the identification number.
+433000	438000	So I can actually refer and understand what is this error.
+438000	447000	And then looking at the fourth byte, I can see, okay, just analyzing the value of this eight
+447000	451000	bit, I can understand if the error is present, if the error is not present.
+451000	457000	If the error was present in the previous monitoring cycle, if it was present two monitoring cycles
+457000	460000	ago, if it's just stored, if there is a lump on.
+460000	465000	So these are all information that we can retrieve just looking at this fourth byte.
+465000	466000	Okay.
+466000	469000	So this is extremely important.
+469000	475000	I've mentioned something that might sound new for you, which is the monitoring cycle,
+475000	485000	but we will go through it while explaining this because we will have basically three definitions
+485000	487000	that we are going to give today.
+487000	490000	So one, let's make it a bit smaller.
+490000	494000	One is the monitoring cycle.
+494000	500000	One is the driving, oops, driving cycle.
+500000	504000	And another one is the warm up cycle.
+504000	507000	So we will have three definitions.
+507000	508000	Okay.
+508000	516000	For starters, let's, of course, these definitions in a way are reported on the norms.
+516000	517000	Okay.
+517000	521000	So, once again, you don't have to remember everything by earth.
+521000	527000	You just have to know, you know, where to look at, in this case, to the norm, or, you
+527000	532000	know, just have the material to study and to read so that you know the definition of this
+532000	533000	kind of stuff.
+533000	537000	Please do not just study by earth.
+537000	543000	Try to understand from the physical point of view what does it mean, all of this stuff.
+543000	550000	So, to start with, we will define the monitoring cycle, a cycle that goes from the K off, sorry,
+550000	555000	from the K on to K off.
+555000	556000	Okay.
+556000	558000	Monitoring cycle.
+558000	559000	Okay.
+559000	561000	Once again, let's analyze the word cycle.
+561000	562000	So it's a cycle.
+562000	563000	Okay.
+563000	568000	We are monitoring a period of something, but monitoring what?
+568000	569000	Okay.
+569000	570000	Once again, here.
+570000	571000	Okay.
+571000	572000	I can even type it here.
+572000	573000	Okay.
+573000	575000	Just to make things even clearer.
+575000	588000	We are talking about a, here, the status of DTC.
+588000	589000	Okay.
+589000	592000	Please always remember what we are talking about.
+592000	593000	Okay.
+593000	594000	Status of DTC.
+594000	597000	So what are we monitoring in this cycle?
+597000	598000	The status of the DTC.
+598000	599000	Okay.
+599000	600000	The two things are interconnected.
+600000	602000	They are connected together.
+602000	603000	Okay.
+603000	604000	So monitoring cycle.
+604000	608000	This is a cycle where we monitor the status of the DTC.
+608000	615000	And then we have the driving cycle.
+615000	623000	The driving cycle is basically a monitoring cycle with an additional condition, which is
+623000	625000	turning the engine on.
+625000	626000	Okay.
+626000	632000	So we will have the conditions that we already told, I already told you before, which is
+632000	637000	monitoring a cycle plus engine on.
+637000	645000	So you can understand that also the warmup cycle is still a cycle, but it contains more
+645000	647000	than one condition or two conditions.
+647000	650000	So it contains the condition of the monitoring cycle.
+650000	652000	So K on to K off.
+652000	655000	It contains the condition of the driving cycle.
+655000	662000	So you have to turn on the engine, but there are also additional conditions.
+662000	663000	Why I'm generic.
+663000	668000	I'm generic because it depends on the kind of car you're working with.
+668000	674000	For example, for the internal combustion engine, there could be specific conditions like to turn
+674000	684000	the engine on and having a specific delta temperature in the refrigerant liquid of the, yeah.
+684000	685000	Sorry.
+685000	686000	Sorry.
+686000	691000	The temperature of the water of the engine.
+691000	697000	There must, there must be a delta temperature of 25, 22 or 22.5 degrees.
+697000	701000	But actually I don't remember exactly, but it's written in the norm.
+701000	702000	So, okay.
+702000	705000	As I said to you before, you don't remember, no problem.
+705000	706000	You just read the norm.
+706000	708000	That's not a problem at all.
+708000	713000	And this is for the internal combustion engine, but there are different conditions for the hybrid,
+713000	720000	the hybrid propulsion systems, and even more different from the electric propulsion systems.
+720000	723000	Like there is a condition on time.
+723000	726000	You have to stay in Kayon for a specific amount of time.
+726000	733000	You have to drive the car with the speed faster than 30 kilometers per hour for a specific amount of time.
+733000	736000	So it's a more restrictive condition.
+736000	742000	So while we move down here in this small scheme, we are just adding conditions.
+742000	743000	Okay.
+743000	749000	So starting from the monitoring cycle, which is the, let's say the easiest one to get, getting
+749000	755000	to the warmup cycle where actually we have a more strict, let's say conditions.
+755000	758000	And there is a specific reason for it.
+758000	765000	So we will understand why do we have these three different scenarios and give you some details
+765000	770000	about it.
+770000	771000	Okay.
+771000	776000	So, okay, it's right.
+776000	781000	Please keep, while you watch this video, it might be helpful to have this scheme in front
+781000	782000	and ahead of you.
+782000	783000	Okay.
+783000	788000	So it's easier to understand names, but they're real, real, very, very simple.
+788000	794000	So let's try to do without the support of the scheme, but would be helpful for you to have it.
+794000	799000	So let's start to read from right-hand side to the left side.
+799000	800000	Okay.
+800000	802000	Bit zero, test field.
+802000	812000	So here we are in the hypothesis that the diagnostic trouble code in question, which is 01-22-92,
+812000	818000	is monitored every, I don't know, 10, every 100 milliseconds.
+818000	819000	Okay.
+819000	825000	So this means that remembering everything that we have said in the past module, which is,
+825000	834000	you know, all the definition of the diagnosis, the fact that the Diego must be able to retrieve signals, compare signals,
+834000	839000	process signals in a specific amount of time with a specific cycle time, stuff like this.
+839000	851000	Here we work in the hypothesis that every 10 milliseconds, sorry, 100 milliseconds, we will have a check on the status of DTC.
+851000	852000	Nice.
+852000	857000	This is very important for many reasons.
+857000	871000	First of all, because according to the kind of electronic control unit you will work with, you will find that most of the DTCs are with a specific cycle time check.
+871000	880000	So it means that every, I don't know, 10 milliseconds, 50 milliseconds, 100 milliseconds, the status of DTC is checked.
+880000	889000	This is mostly true for powertrain electronic control unit because they manage critical components like the accelerator pedal,
+889000	894000	like the water temperature, battery temperature, for example, and stuff like this.
+894000	908000	But if we move to other electronic control units, like, I don't know, I don't know, headlights or the cluster or the LTM radio or whatever,
+908000	915000	most of the time the check on the DTC is not cyclical but is on event.
+915000	924000	So you must do something, for example, pressing a button to control the status of a specific DTC.
+924000	925000	Okay.
+925000	928000	Or to test that everything is okay for that DTC.
+928000	934000	Here, for the sake of this explanation, we will say that the check is cyclical.
+934000	941000	So every 100 milliseconds, there's going to be a check on the status of this DTC.
+941000	950000	So let's consider that this DTC, the 0122.92, is an open load on, I don't know, a specific component.
+950000	951000	Okay.
+951000	955000	So basically, the fault is I have an open load.
+955000	959000	So basically, I don't know, a wire that has been cut.
+959000	967000	And whenever the load is open, so there is a missing pin or basically the wire is cut, then the fault is injected.
+967000	970000	So I have actually an electrical problem.
+970000	976000	So let's consider this example and let's go through these bits.
+976000	981000	Bit 0 is the test fail.
+981000	983000	It's called test fail.
+983000	999000	So it says in a very clear way, also from the definition, that this bit will be 0 if the last test executed was okay.
+999000	1007000	This means that I'm in the conditions to perform a check on the status of the DTC.
+1007000	1015000	This check has been done, and the last time this check has been done, if it's 0, then it means that the test was okay.
+1015000	1018000	So there were no problems encountered.
+1018000	1027000	If there was, there is a problem, then, so the test fails, then this bit goes to 1.
+1027000	1028000	Okay.
+1028000	1034000	So please remember, this is the result of the last test executed.
+1034000	1038000	Why I'm stressing out this concept?
+1038000	1041000	Because there are two main things to be said about it.
+1041000	1045000	First of all, there must be the conditions to perform a test.
+1045000	1053000	So I'm saying, I'm putting myself in the easy example of 100 milliseconds cycle time.
+1053000	1054000	Okay.
+1054000	1059000	So in this case, I know that every 100 milliseconds, a test is going to happen.
+1059000	1064000	In the hypothesis that this is the only thing that we need, just the elapsing of time.
+1064000	1070000	It's not like this, because to perform a test, the electronic control unit must be supplied.
+1070000	1075000	The software should support the check of the retrieving of these signals.
+1075000	1078000	The hardware has to be able to perform this kind of test.
+1078000	1082000	So there are also other preconditions, which now I'm not mentioning.
+1082000	1089000	For now, let's just consider that the only condition that we need is that we need 100 milliseconds to elapse,
+1089000	1096000	so that the echo has all the time to perform the checks related to this error.
+1096000	1097000	Okay.
+1097000	1100000	In this case, we already have all the preconditions.
+1100000	1110000	But in the example of, as I was mentioning before, specific, let's say, minor electronic control units that do not have this kind of logic,
+1110000	1118000	but I have a logic on event, so I have to do something, the test will be executed every time, for example, I push a button.
+1118000	1127000	Because the only way to check if the circuit behind the button is working or not is by pressing the button, trying to actuate it, basically.
+1127000	1136000	So in that case, I will not have a test every 100 milliseconds, but I will have a test every time I push the button.
+1136000	1137000	Okay.
+1137000	1138000	So this is very different.
+1138000	1145000	So keep in mind that here we are in the hypothesis of a cycle time on the status of the DTC check.
+1145000	1146000	Okay.
+1146000	1148000	Every 100 milliseconds, a check happens, no other word.
+1148000	1149000	Okay.
+1149000	1153000	It's not that easy, but for the sake of the explanation, yeah, now it's that easy.
+1153000	1154000	Okay.
+1154000	1165000	This means that if we have a, let's say, a check every 100 milliseconds, let's say that here, here,
+1165000	1167000	the monitoring cycle starts.
+1167000	1168000	Okay.
+1168000	1172000	So here we have an event of KON.
+1172000	1173000	Okay.
+1173000	1179000	So once we have the KON, we are starting a monitoring cycle.
+1179000	1180000	Okay.
+1180000	1196000	This means that, okay, now I'll stretch a bit timeline, but let's consider that here, oops, sorry, here, 100 milliseconds are elapsed.
+1196000	1197000	Okay.
+1197000	1200000	So this is, this is 100 milliseconds.
+1200000	1201000	Okay.
+1201000	1202000	Okay.
+1202000	1207000	Let's use the text box 100, oops, 100 milliseconds.
+1207000	1208000	Okay.
+1208000	1209000	Great.
+1209000	1225000	Considering that this is 100 milliseconds, then as I was saying, I will stretch the timeline because
+1225000	1234000	I need this specific scheme for, to explain the bit six, but anyway, it means that here,
+1234000	1239000	after 100 milliseconds, I will have the first test executed.
+1239000	1247000	So if here, after 100 milliseconds, the test fails, then this bit goes to one.
+1247000	1250000	If the test is okay, the bit stays to zero.
+1250000	1256000	But I, I said before that this is the, the, the result of the last test executed.
+1256000	1261000	So it means that after 100 milliseconds, I have an update and it updates to zero to one,
+1261000	1267000	according to, if you have or not the error, but then there will be one other 100 milliseconds.
+1267000	1272000	Then another 100 milliseconds, 100, 100, 100, 100, and so on.
+1272000	1276000	This means that every time, every time, guys, please remember this.
+1276000	1284000	Every time I have 100 milliseconds elapse, I have an update here, here, here, here, here,
+1284000	1286000	here, here, here, here, and here.
+1286000	1287000	Okay.
+1287000	1293000	So every time I, if the condition is just that the check is done every 100 milliseconds, then
+1293000	1297000	every 100 milliseconds, I will have an update of this bit.
+1297000	1302000	So if we consider that here, the error is present, here, this will be one.
+1302000	1304000	Maybe here, I still have the problem.
+1304000	1306000	It's one, one, one.
+1306000	1308000	Then the error disappears.
+1308000	1313000	So I will have zero, zero, zero, zero, zero, zero, for example.
+1313000	1314000	Okay.
+1314000	1319000	So please remember, this is the result of the last test executed.
+1319000	1330000	So if I execute test every 100 milliseconds, it means that that bit is updated every 100 milliseconds.
+1330000	1335000	Guys, this is very important because when you will work with the diagnostic tools or simply,
+1335000	1340000	you will look for the logs in Chem, most of the time, you will see a static value.
+1340000	1341000	Okay.
+1341000	1342000	For example, 8f.
+1342000	1345000	So for you, it will mean that that bit is always to one.
+1345000	1350000	Then we see why I'm saying that with 8f, the bit zero is one.
+1350000	1353000	You will see always as it doesn't one.
+1353000	1360000	But in reality, if you, in the low level, let's say from the hardware point of view,
+1360000	1366000	and also from the software point of view, that bit is always updated every 100 milliseconds in this case.
+1366000	1367000	Okay.
+1367000	1374000	Even if you see that it's a stacked one, it's not stacked one, because that is updated at every test that is executed.
+1374000	1378000	In this case, the test is executed every 100 milliseconds.
+1378000	1382000	It means every 100 milliseconds, we will have the update of the bit zero.
+1382000	1383000	Okay.
+1383000	1384000	Nice.
+1384000	1391000	So now let's consider that we have this bit two one, for example.
+1391000	1392000	Okay.
+1392000	1393000	Because the test is failing.
+1393000	1394000	Okay.
+1394000	1397000	Let's consider the last time we have the test here fails.
+1397000	1398000	Okay.
+1398000	1399000	So the test fails here.
+1399000	1400000	And then this one.
+1400000	1401000	Great.
+1401000	1407000	Bit one test failed this monitoring cycle.
+1407000	1414000	So now we start to use this idea, the idea of the monitoring cycle from K on to K off.
+1414000	1422000	The bit one, yeah, let's see the logic behind the bit one being zero or one.
+1422000	1435000	So if at least one test is executed and that test fails in that monitoring cycle, so from a K on to a K off,
+1435000	1437000	that bit will go to one.
+1437000	1444000	So if I have at least one test failed in this monitoring cycle, then this bit will go to one.
+1444000	1452000	If I have no error test failed in this monitoring cycle, then that bit goes to zero.
+1452000	1453000	Okay.
+1453000	1461000	So in this case, if we consider here that we have had a K on event, and then where there is this green bar,
+1461000	1467000	we have a K off event, and then a K on to start a new monitoring cycle.
+1467000	1473000	Here we have a monitoring cycle, you know, because we have had a K on and we have had a K off.
+1473000	1476000	So this is a monitoring cycle.
+1476000	1484000	According to the definition that I gave you, and according to the definition that UDS gives you,
+1484000	1490000	as we see here, we have plenty of tests failed here.
+1490000	1495000	So even with one test failed, so let's consider that everything here is okay,
+1495000	1506000	but we have this first error, this first check failing, then we will have one test executed,
+1506000	1512000	at least one test executed failed, so this means that we will, the bit one will go to one,
+1512000	1518000	because we will, we would have one test failed in this monitoring cycle.
+1518000	1519000	Okay.
+1519000	1524000	So once you have a test failed, that bit goes to one and stays to one,
+1524000	1530000	because we already have one test failed in this monitoring cycle, so it stays to one,
+1530000	1538000	and that bit is not updated anymore until we move to the next monitoring cycle.
+1538000	1539000	Okay.
+1539000	1548000	So once I have the error here, it means that the bit one goes to one and stays to one until the end of the monitoring cycle.
+1548000	1549000	Okay.
+1549000	1553000	So it's not updated like the bit zero every 100 milliseconds.
+1553000	1558000	No, once I have at least one test failed in this monitoring cycle,
+1558000	1561000	then the bit goes to one and stays to one.
+1561000	1562000	Okay.
+1562000	1568000	Guys, please remember, it's extremely important to remember,
+1568000	1574000	that it's not enough just to do K-ON and K-OFF to perform a monitoring cycle.
+1574000	1579000	The monitoring cycle expects also a test to be executed.
+1579000	1580000	Okay.
+1580000	1586000	So if you are in this case, okay, you have a test every 100 milliseconds,
+1586000	1592000	so you make sure that at least 100 milliseconds elapsed so that you know that the test has been executed,
+1592000	1593000	and we are okay.
+1593000	1597000	So we can know if a test is failed or is passed.
+1597000	1605000	But if I'm in the case of a DTC that requires an action, and I do not perform the action,
+1605000	1612000	so I do not press a button, for example, it means that in that monitoring cycle, I'm not performing a test.
+1612000	1616000	So for the purpose of the status of DTC and everything we are going to see,
+1616000	1622000	that monitoring cycle does not count because we don't know if the test failed or the test passed
+1622000	1624000	because we didn't perform the test.
+1624000	1625000	Okay.
+1625000	1630000	Please be very careful on all the conditions needed to perform the test.
+1630000	1637000	In this case, we are considering as an hypothesis that the only condition is that the echo takes 100 milliseconds
+1637000	1640000	to perform these tests, and that's it.
+1640000	1646000	But there might be further conditions to make the DTC check happening.
+1646000	1647000	Okay.
+1647000	1651000	So please always keep in mind.
+1651000	1655000	Bit 2 should be the pending DTC, if I will remember.
+1655000	1657000	Yes, pending DTC.
+1657000	1665000	The pending DTC is the same as the bit 1, but bit 1 considers just one monitoring cycle.
+1665000	1668000	The bit 2 considers two monitoring cycles.
+1668000	1669000	Okay.
+1669000	1685000	So the bit 2 says, goes to 1 if we have at least one test failed in this monitoring cycle or in the previous monitoring cycle.
+1685000	1686000	Okay.
+1686000	1698000	So let's say we are here, the bit 2 checks that we have, if we have a test executed and failed here or here.
+1698000	1699000	Okay.
+1699000	1704000	So if we have an error in this monitoring cycle or in the previous monitoring cycle, like in this case,
+1704000	1707000	because as we have seen here, it is the demonstration.
+1707000	1711000	In the first monitoring cycle, we have plenty of tests failed.
+1711000	1713000	This bit goes to 1.
+1713000	1723000	So it's the same thing of the bit 1, but considers not just one monitoring cycle, but considers two monitoring cycles.
+1723000	1725000	So I hope this is clear.
+1725000	1734000	Of course, I suggest you to listen to this topic many times if you need to control the norm, everything.
+1734000	1735000	Okay.
+1735000	1747000	So now in the example that I'm doing, I'm considering that the final status that we will get is ATEF.
+1747000	1751000	Then I will explain what is that, but let's move step by step.
+1751000	1762000	So we have, we have called the test failed, which is the, a bit that gives me the result of the last test executed.
+1762000	1770000	So in this case, every test is executed every 100 milliseconds.
+1770000	1774000	It means that that bit is updated every 100 milliseconds.
+1774000	1778000	Then we have the bit 1, test failed this monitoring cycle.
+1778000	1792000	It means that if a test is failed, at least one test failed in this monitoring cycle, then this bit goes to 1.
+1792000	1795000	Bit 2 pending DTC is the same.
+1795000	1812000	So if we have two, if we have at least one test executed and failed in this monitoring cycle or in the previous monitoring cycle, then this bit goes to 1.
+1812000	1813000	Okay.
+1813000	1815000	Now we're ready to move to the bit 3.
+1815000	1817000	The bit 3 is a stored DTC.
+1817000	1829000	So this is easy because this bit goes to 1 if the error code, so the diagnostic trouble code, is saved inside the electronic control unit physical memory.
+1829000	1830000	Okay.
+1830000	1836000	So if the error is saved inside the electronic control unit memory, then this bit is 1.
+1836000	1837000	Okay.
+1837000	1847000	In this case, we are considering that we are having problems and as soon as a test, let's say, as soon as a test fails or, yeah.
+1847000	1848000	Yeah.
+1848000	1849000	Yeah.
+1849000	1850000	Yeah.
+1850000	1851000	Let's see.
+1851000	1861000	Every time, if the, at least one error, the one test fails, then the error is stored inside the electronic control unit and the bit 3 will go to 1.
+1861000	1862000	Okay.
+1862000	1867000	Now, okay, so let's move on.
+1867000	1876000	Bit 4 and bit 5, they are not used in most of the applications, specifically for the EMEA market.
+1876000	1879000	So European, African, and stuff like this.
+1879000	1882000	So this bit, quite likely you will see them as a stock.
+1882000	1883000	Okay.
+1883000	1893000	So they could be both 0, 0, 0, or they could be 1, 1, 1, 0, or 0, 1.
+1893000	1894000	Okay.
+1894000	1895000	Whatever.
+1895000	1896000	Most of the time they are stuck.
+1896000	1897000	Why?
+1897000	1905000	Because they refer to a specific maneuver of clearing their memory using the error code.
+1905000	1908000	Or memory using a specific service feature.
+1908000	1912000	But this is not used in the EMEA market.
+1912000	1917000	So most of the time you will see this bit stuck to 0.
+1917000	1924000	Since this is not a rule, I mean, these are two bits that are expected in the status of the DTC.
+1924000	1937000	When you start working on a specific activity, in case you were working with diagnosis or whenever you face the diagnosis, make sure to ask what is the behavior of bit 4 and bit 5.
+1937000	1941000	Ask the question, are these bits used or not?
+1941000	1943000	If not, which is the value they are stuck to?
+1943000	1948000	Because in my experience, they have always been 0, 0.
+1948000	1956000	But I have also seen 1, 1 or 1, 0, 0, 1, all kinds of combinations, really.
+1956000	1966000	So whenever you start, just ask if these bits are used and if they are not used, then which is the value they are stuck to?
+1966000	1975000	Of course, in case you need the behavior of bit 4 and bit 5, everything is explained in the norm and also in the slides.
+1975000	1977000	So you will have support about it.
+1977000	1982000	But for now, let's consider the easiest example where these bits are not used.
+1982000	1985000	So we will pretend they are stuck to 0, okay?
+1985000	1988000	So we consider that they are both 0 here.
+1988000	1994000	So these other combinations can be erased.
+1994000	2004000	Bit 6, okay, now we arrive at the situation where I needed this timeline bit stretched.
+2004000	2010000	So let's consider the example of, you know, let's go back to the bit 0.
+2010000	2019000	We have said that the bit 0 is updated with the last test executed on this DTC.
+2019000	2023000	And that to perform a test, we need at least 100 milliseconds.
+2023000	2026000	So every 100 milliseconds, a test is executed.
+2026000	2032000	Okay, so we have a clear idea of what happens from here on, okay?
+2032000	2035000	Because we have here 100 milliseconds.
+2035000	2037000	We have the result of the first test.
+2037000	2039000	We know that this has failed.
+2039000	2048000	And then we put this bit for specifically at this time to 1.
+2048000	2049000	Okay, great.
+2049000	2051000	But what happens here?
+2051000	2060000	We didn't see anything of what happens between the KON to the execution of the first test.
+2060000	2066000	Here, in this 100 milliseconds, basically the electronic control unit is retrieving the signals,
+2066000	2071000	is comparing them, is processing them, is trying to understand if the problem is present or not.
+2071000	2074000	So, how can we understand it?
+2074000	2085000	So, the only way we have to understand that a test is in execution is using the bit 6.
+2085000	2091000	Bit 6 is called test not completed this monitoring cycle.
+2091000	2095000	All right, so once again, the name is quite self-explanatory, okay?
+2095000	2101000	So, now I will pretend that we are in these 100 milliseconds.
+2101000	2108000	So, while I'm in these 100 milliseconds, it means that I'm still waiting for the first test to be executed.
+2108000	2118000	So, I don't have the information about the bit 0 because I don't know the result of the last test executed in this monitoring cycle, okay?
+2118000	2124000	So, the bit 0 will stay to the value of the last test executed.
+2124000	2128000	That probably was, you know, before this KON, okay?
+2128000	2131000	In another monitoring cycle that we do not see here, okay?
+2131000	2136000	So, if the test was okay, then the bit 0 is 0.
+2136000	2139000	If the test failed, then it was 1, okay?
+2139000	2141000	As clear, as simple as that.
+2141000	2150000	But we don't have the information, for example, on bit 1 because I don't know if an error is present or not in this monitoring cycle
+2150000	2154000	because in this monitoring cycle, I have no test executed, okay?
+2154000	2164000	So, in case I request the status of the DTC or simply I'm just reading the KON while I'm performing the KON
+2164000	2174000	and after I've performed the KON and I'm in these 100 milliseconds, the bit 6 will stay to 1 for this full period.
+2174000	2181000	Because in this full period, I have not test, not completed this monitoring cycle.
+2181000	2184000	It means I don't know what is the status.
+2184000	2187000	I'm still performing a test.
+2187000	2190000	I'm still performing the first test.
+2190000	2196000	So, until the first test is executed in this monitoring cycle, this bit will go to 1.
+2196000	2203000	It means that the bit 6 here, the bit 6 is 1 for these 100 milliseconds.
+2203000	2210000	As soon as the first test is executed, the bit 6 goes to 0 because one test has been executed.
+2210000	2215000	Then, if it's okay, then it means that bit 0 will go to 0.
+2215000	2220000	If it's not okay, the bit 0 will go to 1.
+2220000	2223000	And according to these values, the bit 1 will evolve as well.
+2223000	2224000	The bit 2 will evolve as well.
+2224000	2226000	The bit 3 will evolve as well.
+2226000	2227000	And stuff like this.
+2227000	2232000	So, it is very important to understand that in this first moment from the KON
+2232000	2238000	where we start the monitoring cycle and we don't have at least one test executed,
+2238000	2242000	the bit 6 will stay to 1 because it will tell the user,
+2242000	2246000	okay, look, I'm performing the test, but I'm not done yet.
+2246000	2248000	I'm still performing the first test.
+2248000	2253000	So, I don't have a clear picture of this monitoring cycle what is happening.
+2253000	2257000	Right after the 100 milliseconds, in this case, we will have a first test
+2257000	2260000	and the bit 6 will go to 0.
+2260000	2261000	Okay.
+2261000	2267000	So, basically, the bit 6 just will tell us if at least one test has been executed
+2267000	2268000	in this monitoring cycle.
+2268000	2272000	And if one test has been executed in this monitoring cycle,
+2272000	2277000	then the bit 6 is 0 because it means, okay, we already have done one test
+2277000	2279000	and we are done.
+2279000	2284000	But if we are in this first 100 milliseconds where we have no tests executed,
+2284000	2288000	then the bit 6 will stay to 1 until we execute the first test.
+2288000	2292000	But for what we are saying now, this can be considered as 0.
+2292000	2302000	bit 7 is the easiest one because the bit 7 goes to 1 in case there is the need of a lamp.
+2302000	2303000	Okay.
+2303000	2304000	Okay.
+2304000	2313000	So, if we need to turn on a warning indicator, a malfunctioning indicator lamp, the meal lamp,
+2313000	2318000	for example, the bit 7 will go to 1.
+2318000	2324000	It means the echo is requesting to turn on a lamp.
+2324000	2325000	Okay.
+2325000	2328000	Malfunctioning indication lamp.
+2328000	2329000	Be careful.
+2329000	2340000	This is a request done, for example, by the powertrain electronic control unit to the electronic control unit that actually manages the lamps.
+2340000	2349000	For example, if we are having a problem on the accelerator pedal, it's not the powertrain electronic control unit that manages directly the lamp.
+2349000	2350000	Okay.
+2350000	2354000	The lamp will be managed by the APC, the cluster.
+2354000	2361000	So, this 7 bit that goes to 1 is just a request to turn on a lamp.
+2361000	2368000	And then another echo will receive this information over can and will turn on the lamp.
+2368000	2375000	So, now we have a full picture of a potential example of a status of DTC.
+2375000	2379000	But here I see just a string of bits.
+2379000	2383000	Values of 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1.
+2383000	2384000	Okay.
+2384000	2387000	So, how do we get to this 8th half?
+2387000	2392000	So, this is a very easy operation of translation, basically.
+2392000	2404000	So, we start from the assumption that you can find everywhere on internet that we have this kind of association between physical values and hexadecimal values.
+2404000	2416000	So, if we, 1 in a physical value is 1 in hexadecimal, 2 is 2, 3 is 3.
+2416000	2419000	Well, format is completely messed up here.
+2419000	2421000	So, yeah.
+2421000	2425000	Let's make things a bit better.
+2425000	2426000	Let's take here.
+2426000	2452000	We're gonna create 4, equal 4, 5, equal 5, 6, equal 6, 7, equal 7, 8, equal 8, 9, equal 9, 10, equal A, 11, equal B, 12, equal C, 13, equal A, 11, equal B, 12, equal C, 13, equal A.
+2452000	2464000	13 equal D, 14 equal E, 15 equal F.
+2467000	2477280	So, keeping in mind this table, okay, where we have on the left side the decimal value and on the right side the hexadecimal value,
+2477280	2484280	we can split these status of DTC in two parts here, okay, in two groups.
+2484280	2492280	So, there is a very easy conversion formula to achieve what we are seeing.
+2492280	2511280	So, this is, the formula is this one, two times zero times the value of the bit, okay, x, plus two times one times the value of the bit one.
+2511280	2515280	Sorry for the very bad writing.
+2515280	2536280	Plus two times two times the value of the second bit, plus two times three, oops, two times three times the value of the bit three.
+2536280	2546280	So, what we have here, two times zero is one, one, times the value of bit zero, which is one.
+2546280	2562280	So, we have one times one, one, plus two times one is two, times the value of the bit one, which is one.
+2562280	2575280	So, we will have two, plus two times two is four, times the value of the bit two, which is one.
+2575280	2587280	So, finally, we have four, plus two times three is eight, plus the value of the bit three, which is one, and this is eight.
+2587280	2595280	Eight plus four is twelve, plus two is fourteen, plus five is fifteen.
+2595280	2601280	So, finally, everything turns out in being f.
+2601280	2606280	Do you see here? We have the f, it's right here, okay?
+2606280	2608280	Same idea for this other sign.
+2608280	2614280	So, the formula is the same, two times zero, two times one, two times two, two times three.
+2614280	2615280	Here, we have all zeros.
+2615280	2622280	So, these factors will just elicitate because they are times zero, so they will get cancelled.
+2622280	2632280	The only factor that we will have is two times three times the value of the bit, let's say three, yeah, three of the group.
+2632280	2637280	This is one, two times, two times three is eight, times one is eight.
+2637280	2641280	So, the final status here will be eight.
+2641280	2652280	So, the final result, if you put together the two groups, is eight f.
+2652280	2662280	As you can see, guys, you just need to ask the electronic control unit the status of the DTC inside the memory or the status of the specific DTC.
+2662280	2670280	And only looking at this fourth bit, this eighth F, I already know a lot of information.
+2670280	2674280	I know that the last test executed failed because the bit zero is one.
+2674280	2677280	So, it means that I actually, I'm having problems.
+2677280	2683280	Because if the last test executed always fails, it means that I actually have the problem.
+2683280	2686280	This problem is present, so, in this monitoring cycle.
+2686280	2691280	So, while I'm using the car, while I'm in K-On with my car, I have a problem.
+2691280	2693280	So, the car must be checked.
+2693280	2697280	The problem was not present just now in this monitoring cycle.
+2697280	2702280	But having the bit two to one, it means that this problem was present also in the previous monitoring cycle.
+2702280	2705280	So, this is not a new problem.
+2705280	2710280	This is a problem that I already had in the previous monitoring cycle.
+2710280	2717280	In addition, since the test failed, I always, I also have this problem inside the electronic control unit memory.
+2717280	2724280	So, yeah, the ED, this DTC is saved in the error memory because I see that the bit three is to one.
+2724280	2728280	So, we're asking the electronic control unit the status of DTC.
+2728280	2736280	You know, I know that I must find this ED because it is saved inside the electronic control unit.
+2736280	2737280	The bit six is to zero.
+2737280	2742280	So, I know that in this monitoring cycle, at least one test has been done.
+2742280	2751280	So, it means that at least one, the error, the test was done and failed also because the, you know, because of all the values of the previous bits.
+2751280	2754280	Bit seven is to one.
+2754280	2760280	It means that I should, if I enter the car, I should expect also a lump on it.
+2760280	2772280	So, just looking at this 8F and knowing how to translate the different combination of bits into hexadegimal, I have all this information.
+2772280	2773280	I should expect a lump.
+2773280	2774280	I know that I have a problem.
+2774280	2775280	The problem is stored.
+2775280	2779280	The problem was present, not just now, but also in the previous monitoring cycle.
+2779280	2784280	And everything, at least one test has been done in this monitoring cycle because bit six is to zero.
+2784280	2794280	So, all this stuff, I know just looking at one byte, at least the fourth byte, just looking at it, I have all this information.
+2794280	2800280	So, you can understand the power of this bit and this status of the DC.
+2800280	2813280	Because just looking at the byte, I have a lot, a lot, a lot of information just knowing the different combination of this bit.
+2824280	2829280	So, all this video is to show you all the information going on.
+2829280	2833280	My first question is maybe perhaps not just staggering into any way or not.
+2833280	2834280	But yes, I who are!
+2834280	2836280	And give me your last announcement for the Lethal has participated again.
+2836280	2837280	So, WOE believed in the report.
+2837280	2839280	I would come back just by few weeks and begin to make the report with the wong.
+2839280	2840280	So, I have dubious.
+2840280	2841280	I think no question is, I would look as if so.
+2841280	2842280	Maybe we can sleep regularly in the days of this video.
+2842280	2848280	But then the way that the system will charge the car game, or this is not really normal or something that this looks like the pain will get a copy of itself.
+2848280	2849280	So, if I am doing that, I would say the first thing of the wake of time at the end of the day.
+2849280	2850280	Okay, the main app on our nextICK, sort of the ep парom.
+2850280	2852280	.
+2880280	2882280	.
+2882280	2884280	.
+2884280	2886280	.
+2886280	2888280	.
+2888280	2890280	.
+2890280	2892280	.
+2892280	2894280	.
+2894280	2896280	.
+2896280	2898280	.
+2898280	2900280	.
+2900280	2902280	.
+2902280	2904280	.
+2904280	2906280	.
+2906280	2908280	.
+2908280	2910280	.
+2910280	2912280	.
+2912280	2914280	.
+2914280	2916280	.
+2916280	2918280	.
+2918280	2920280	.
+2920280	2922280	.
+2922280	2924280	.
+2924280	2926280	.
+2926280	2928280	.
+2928280	2930280	.
+2930280	2932280	.
+2932280	2934280	.
+2934280	2936280	.
+2936280	2938280	.
+2938280	2940280	.
+2940280	2942280	.
+2942280	2944280	.
+2944280	2946280	.
+2946280	2948280	.
+2948280	2950280	.
+2950280	2952280	.
+2952280	2954280	.
+2954280	2956280	.
+2956280	2958280	.
+2958280	2960280	.
+2960280	2962280	.
+2962280	2964280	.
+2964280	2966280	.
+2966280	2968280	.
+2968280	2970280	.
+2970280	2972280	.
+2972280	2974280	.
+2974280	2976280	.
+2976280	2978280	.
+2978280	2980280	.
+2980280	2982280	.
+2982280	2984280	.
+2984280	2986280	.
+2986280	2988280	.
+2988280	2990280	.
+2990280	2992280	.
+2992280	2994280	.
+2994280	2996280	.
+2996280	2998280	.
+2998280	3000280	.
+3000280	3002280	.
+3002280	3004280	.
+3004280	3006280	.
+3006280	3008280	.
+3008280	3010280	.
+3010280	3012280	.
+3012280	3014280	.
+3014280	3016280	.
+3016280	3018280	.
+3018280	3020280	.
+3020280	3022280	.
+3022280	3032280	.
+3032280	3034280	.
+3034280	3036280	.
+3036280	3038280	.
+3038280	3039280	.
+3039280	3040280	.
+3040280	3042280	.
+3042280	3062700	For example, in the example of this explanation, we were referring to a powertrain module, and usually the engine control module, let's say the echo that manages the engine, does not manage directly the lamps.
+3062700	3077920	So this is just a request to the echo that will actually manage the lamp. So the echo will read the request coming from this electronic control unit, and according to the kind of request that it receives, then the echo will turn on a specific lamp.
+3077920	3088940	Okay, so this is the situation, and we arrived to explain why this is defined as 8f, as remember we divide this in two parts, this is 8, and this is f.
+3088940	3102520	Okay, so I can write it here, 8f. Okay, this is everything that we have explained, this is how it finished, the last module, the part one of module two.
+3103220	3110360	But there are some topics to be discussed yet to close this module two.
+3110360	3133900	So, okay, for me it's important to understand the actual status of the DTC, so in this case, the status of the DTC is 8f, so if you recollected the information, and all the stuff explained in the module, the first part of module two, then you will realize that now, okay, we have an active fault.
+3133900	3140900	Okay, we have some kind of problem, okay, we have some kind of problem right now, but this is not on the only thing that matters to me.
+3140900	3157320	Another very important thing is once I have the status of a DTC that is actually active, then I'm always, I'm also interested in, you know, clearing the error memory.
+3157320	3169080	So, okay, I have a problem, but then I'm always interested in resolving the problem, you know, because most of the time when you have this kind of problems, then these will reflect on a high level point of view.
+3169220	3182140	I mean, you are driving your car, you have a problem on the accelerator pedal, so it will mean that, I don't know, as we said in the example, the car will slow down, then it will turn off, then probably you can turn it on,
+3182140	3187660	but then you can just drive up to, I don't know, 10 kilometers per hour, just move the car out of the street.
+3188120	3202820	So, if you keep having this problem, then your car will be useless, because you still have a problem on the accelerator pedal, nothing can be done, you know, in that case, if we do not, do not take actions, and, you know, everything will stay like this.
+3202820	3213420	So, there is actually the voo process of going to the past status, and that's what we are going to explain today.
+3215640	3228500	Another thing to remember is that, is the hypothesis that we have over here, so I changed color, I don't know, let's take purple, so that we have a check on the status of DTC, everyone under DTC.
+3228500	3241600	So, of course, I'm interested, as I was saying, to move from, I don't know, we moved from 0-0, for example, status of DTC, and now we are in 8F.
+3242340	3246600	Of course, I'm interested in moving back from 8F to 0-0.
+3247100	3252960	Why? In this way, when I have 0-0, again, it means that, first of all, I don't have the problem anymore.
+3252960	3269120	I won't have reaction recoveries anymore, because, as I said, once you have a DTC, one of the features of a DTC is not only that I have a code inside an electronic control unit that's just a piece of metal with electrical boards and stuff,
+3269120	3282680	But I actually care, I'm more, I only care, actually, that the car reacts, so that I won't get, the car won't get damaged, and most of all, we don't get hurt, and no one gets, you know, very hurt.
+3283180	3291400	So, I'm really interested in this stuff, but once I'm safe, I've stopped the car safely, and I'm alive, and, you know, everything is fine,
+3291400	3301660	Then, I want to come back to normal, and bring my car back to this old functionality, so this is why I want to move, again, from the status 8F to the status 0-0.
+3302760	3310460	So, this implies, first of all, to remember the behavior and the definition of all these bits that we have over here,
+3310460	3321560	But also, here, gets into account what we were mentioning in the module 2, part 1, and that we are explaining right now.
+3322580	3327900	So, the concept of monitoring cycle, or driving cycle, or warm-up cycle.
+3328420	3332800	So, let's start from the bit 0, this is the easy one.
+3332800	3339200	So, as we said, the bit 0 is the last, the result of the last test executed.
+3339920	3347540	So, as we, you know, considering the easy hypothesis that we made, let's draw a timeline.
+3347980	3353840	Yeah, I still use a purple line, that's trying to make it as straight as possible.
+3354660	3361280	Okay, this is the best I can do, and the best I can do is kind of nice, actually.
+3361280	3375700	Okay, then, let's make yourself more, I don't know, whatever lines, these here, here, here, here, here, here, here, and stuff like this.
+3375800	3385260	Okay, that quality, let's say, was not very, okay, so at least let's give a kind of dignity to these lines.
+3385260	3390260	Okay, so let's work with this, it's not perfect, but yeah, we can work something out.
+3390760	3397020	So, let's say we are in this monitoring cycle, and here, in this place, we have the status atif.
+3397220	3400420	Okay, so everything starts here with atif.
+3400420	3408220	Then, as you remember from the last part that you watched, and if you don't remember, please watch it back.
+3409260	3417600	When we say that there is a cyclical check on this DTC, it means that every 100 milliseconds, a test is done of this DTC.
+3417600	3421120	And if the test passes, then bit 0 goes to 0.
+3421220	3425580	If the test is failed, because there is a problem, then this bit will stay to 1.
+3425980	3433860	So, in this case, when we still have atif, it means that a test has been executed, and the test fails.
+3434500	3438260	But then, there will be, you know, a delta time of 100 milliseconds.
+3438580	3441100	Okay, let's consider that these are 100 milliseconds.
+3441100	3449180	For some reason, let's say, for some reason, the fault was, is not present anymore.
+3449180	3465620	Okay, or we can also consider, let's say, more concrete example that here, you stop the car, so you arrived, you arrived to, you know, the mechanics here, that the status is atif.
+3465620	3477760	So, you brought the car there with the floor problems, the lamp is on, the car can't accelerate, you just go for 3 hours, 10 kilometers per hour, just move the car out of the way and get to the first mechanics.
+3477960	3479580	So, this is everything that happened.
+3479720	3480400	You stop the car.
+3480400	3501240	Then, of course, you turn on the car, again, and as you know, in the first 100 milliseconds, there are no tests executed, so the bit 1 will go to 0, bit 6 will go to 1, and then we have, once again, a test.
+3501240	3506920	Okay, so, then, we have other 100 milliseconds.
+3508280	3520580	When you bring the car here, the mechanics, you know, I don't know, just, he does his check and realizes that the status is atif and you have an actual problem on the accelerator pedal,
+3520580	3531320	let's consider that in this point, the mechanics just, you know, repair, so read the error memory, realizes that you have a problem on the accelerator pedal,
+3531540	3539960	and he fixes, he or she fixes the problem on the accelerator pedal, so you won't have the problem on the potential meter anymore, okay?
+3539960	3555940	So, in the strange example that the mechanic will work, staying in K-On, so it means that you, suddenly, the fault, you know, reason is not present.
+3556700	3564740	So, if we have here the problem, and then, hypothetically, in this moment, mechanics just solves the problem, okay?
+3564760	3567460	We will move to the red, so that it is easier.
+3567460	3569780	So, here, the problem is solved.
+3570620	3580440	After 100 milliseconds, a new test is executed, and this time, since the mechanic repaired everything, then we don't have the problem anymore.
+3581420	3583700	But what is the change here?
+3583780	3587840	Considering that we are still in this monitoring cycle, okay?
+3587860	3590780	We are talking about the left side here, okay?
+3590800	3596800	We are still in this monitoring cycle, okay?
+3596800	3603680	So, yeah, this is not the best, you know, writing ever, but, yeah, that should be effective anyway.
+3604000	3607260	So, on the left, we are still in this monitoring cycle.
+3608500	3612340	After 100 milliseconds, this is 100 milliseconds, the error is not present anymore.
+3612340	3618360	So, here, the only change that we have is that the last test executed passed.
+3618800	3622040	So, the change is actually here, okay?
+3622500	3624480	So, let's give some numbers here.
+3624560	3626040	We use the Roman numbers.
+3626040	3639120	This is the first, this is the second, this is the third, this is the fourth, fifth, sixth, and whatever.
+3639280	3644700	If we need something, then we will use the other part of the sheet.
+3645260	3647220	But, anyway, we are here in the first one.
+3647220	3652500	So, the only change that I can see here is on the bit zero.
+3652680	3656720	So, the bit zero changed in the first monitoring cycle, this one.
+3657260	3659120	So, what will be the actual status?
+3659300	3665480	We will have zero here, and then one, one, one, zero, zero, zero, one.
+3665540	3666580	So, it's everything the same.
+3667200	3672520	Since it's everything the same, here, we only have eight E, okay?
+3673120	3673720	Why?
+3673860	3677160	Because this will be one, one, one, and zero.
+3677620	3682560	So, two times three times one is eight, plus four, plus two.
+3683000	3688880	This is going to be 14, 14 easy, and then we have eight E, okay?
+3689660	3695460	Of course, if you don't remember anything of this, if you don't really know what I'm talking about,
+3695460	3700880	just please watch again, module two, and eventually also module one.
+3700880	3703780	If it's not clear at all, okay?
+3703920	3709740	But, just focus on the first part of module two, and this, what I'm talking about, will be very, very clear.
+3710560	3715780	So, actually, here, the status at the first one, the recycle, is going to be eight E, okay?
+3716420	3721340	Okay, I can even type it here, maybe, see if you're eight E.
+3723100	3725220	Okay, then what happens?
+3725220	3731860	The status will be always eight E here, because we, I don't know, now, 10, 100, 100, 100.
+3732180	3734080	So, let's see, we have other tests.
+3734640	3739320	The status will be always eight E here, because the last test executed now is passing.
+3739520	3741580	So, the bit zero stays to zero.
+3741580	3752460	But, since we are still in this monitoring cycle, the bit one stays to one, because we have had at least one failure, which was this one, in this monitoring cycle.
+3752720	3758860	This means that bit one stays to one, bit two stays to one, bit three stays to one, and stuff like this, okay?
+3759120	3760200	Then, great, perfect.
+3760200	3766960	Then, we turn off the car, and turn on the car again.
+3767840	3771840	So, let's consider that we moved in the second monitoring cycle.
+3772760	3779980	Of course, there will be the usual 100 milliseconds, where we don't know if the error is present or not.
+3780140	3788880	So, the bit six will go to one, because, you know, we are about to wait, and bit one will go to zero,
+3788880	3791340	because we don't know if an error is present or not.
+3792360	3799140	So, in the meanwhile, here, we will have CC as a status, okay?
+3799620	3805160	Because, the bit six will go to one, bit two, sorry, bit one will go to zero.
+3805520	3814240	So, we will have 1100, 1100, that is CC, because it's 12, 12 CC, okay?
+3814240	3819700	Again, if you don't know what I'm talking about, just watch again the first part of module two,
+3819780	3821120	and everything should be clear.
+3821540	3829540	If not, just send me an email, or to automotive training, automotive.training, at sign, kinecon.it.
+3830680	3837180	Anyway, so, this is, before we have the first test, so, in this first 100 milliseconds,
+3837180	3841340	we will have the status is CC, but then we will have the first test.
+3841520	3848540	Since we don't have the error anymore, since we don't have the error anymore,
+3849040	3858180	then we will have that bit zero stays to zero, because the last test executed, this one, passed.
+3859220	3860980	So, bit zero stays to zero.
+3860980	3865640	But, in this monitoring cycle, we don't have any fault.
+3865980	3870500	So, it means that, in this case, also the bit one goes to zero,
+3870640	3875060	and this change happens in the second monitoring cycle, okay?
+3875500	3881420	So, considering that we still have other checks that pass, you know, always in green,
+3882240	3888700	the status of this second monitoring cycle will be 8C, okay?
+3888700	3894060	Because we have zero, zero, one, one, zero, zero, zero, zero, one, okay?
+3896280	3899420	We will have a separate discussion about bit seven,
+3899880	3903380	and the norm and the slides will really help you about this,
+3903440	3909800	because there are different, let's say, management of the lamp,
+3909940	3914700	according to what kind of lamp management that DTC requires.
+3914700	3919060	So, these, the slides will really help you clarify this.
+3920040	3922280	But, anyway, so, we have this situation.
+3923140	3924760	The bit two will stick to one,
+3924980	3928640	because in the previous monitoring cycle, we still had a fault.
+3928920	3931180	You see, here, this 8F is still present.
+3931180	3936960	So, since the bit two says that the bit two goes to one
+3936960	3940520	if an error is present in this monitoring cycle
+3940520	3942680	or in the previous monitoring cycle,
+3942820	3945780	considering that in both of them, we have had at least one test.
+3946200	3949360	We have had at least one test in this monitoring cycle
+3949360	3950800	and also in the previous one,
+3951160	3953960	and in the previous one, one of the tests failed,
+3953960	3956660	so, the bit two stays to one, okay?
+3956900	3962240	So, the status that we have in the second monitoring cycle is HC, okay?
+3964020	3964540	Great.
+3964980	3966520	But, here, what happens here?
+3966600	3971580	We have a monitoring cycle with no fault, okay?
+3973040	3973560	Great.
+3975040	3975840	Let's move on.
+3976080	3979060	We will have a separate discussion also about the bit three, okay?
+3979060	3981360	So, for now, let's focus on the first ones.
+3983380	3984780	We don't need this anymore.
+3984900	3986900	It was just an example, okay?
+3987340	3988400	And this we don't need.
+3988660	3989340	Okay, nice.
+3993300	3996040	Third monitoring cycle, usual stop.
+3996040	4001300	So, here, once again, we have 100 milliseconds,
+4001560	4005420	where we don't know if there is an error or not in this monitoring cycle.
+4005420	4010140	So, the status will be, once again, CC, okay?
+4011580	4014560	It will be CC, but then what happens?
+4014840	4019480	When we have the test here in this part,
+4020180	4023260	then, here, we will have the second monitoring cycle
+4023260	4025620	where no fault has been recorded
+4025620	4029440	because we have had at least one test executed,
+4029700	4032080	and this test executed passed
+4032080	4036060	because we don't have the fault reason anymore.
+4036860	4037840	So, in this case,
+4038040	4043200	we will have that the bit two goes to zero as well
+4043200	4045780	because we have this monitoring cycle
+4045780	4050020	or the previous monitoring cycle
+4050020	4051640	with no errors.
+4052620	4056100	It means that the bit two can go to zero as well,
+4056100	4061620	and this change happens in the third monitoring cycle, okay?
+4062480	4064400	So, what we have here,
+4064580	4065820	here, we have the situation
+4065820	4072620	where the new status is going to be 8, 8, okay?
+4073840	4075080	It's going to be 8, 8
+4075080	4079520	because we have 0, 0, 0, 1, 0, 0, 0, 1, okay?
+4080300	4080780	Great.
+4081580	4083380	The situation stays the same.
+4083500	4088900	Here, we have 8, 8, 8, 8, 8, 8, 8, 8, 8,
+4088900	4091380	and we get here that we are still 8, 8.
+4092500	4095180	Once again, we have a fourth monitoring cycle
+4095180	4098560	where we don't know if the test is present or not.
+4098700	4103860	So, we will have a status of C8
+4103860	4106900	because the bit six goes to one
+4106900	4109260	and everything is 1, 0, 0, 0.
+4109800	4112620	And then, once we have this test that passes,
+4112740	4113500	because once again,
+4113640	4118520	here, we don't have the fault reason anymore,
+4119600	4120620	this will become...
+4123100	4127300	And, okay, here, it depends on the fault management,
+4128200	4129780	lump fault management, okay?
+4130100	4132340	But now, we can consider that
+4132340	4136340	since we have three monitoring cycles
+4136340	4138560	without an error present,
+4139020	4141100	then also the lump will turn off.
+4141400	4142800	You will see that there is a
+4142800	4144100	mill-on-1 management,
+4144760	4147100	mill-on-2 management,
+4147340	4148940	mill-on-3 management,
+4149300	4150700	mill-off management.
+4151040	4155120	So, we have different kinds of management for lumps.
+4155620	4156480	Mill-off, of course,
+4156540	4158120	it means there is no need for a lump.
+4158720	4159900	Mill-on-1, it means that
+4159900	4162080	the lump will turn on immediately,
+4162080	4165140	and turn on immediately.
+4165440	4166060	Mill-on-2,
+4166700	4169080	it means that the lump will turn on
+4169080	4170720	after two cycles with the error.
+4170820	4171540	And mill-on-3,
+4171660	4173400	it means that the lump will turn on
+4173400	4175500	after three cycles when we have the fault.
+4175960	4178080	But then, for the...
+4178080	4178920	There should be...
+4178920	4180120	There is a different management
+4180120	4181940	to turning off the lump.
+4182520	4183860	And the turning off of lamps
+4183860	4187880	usually happens after three monitoring cycles
+4187880	4189640	without a fault.
+4189640	4190160	Of course,
+4190720	4192940	there could be some derogation to the norm.
+4193060	4193980	So, that's why I'm saying
+4193980	4195800	it can happen like this.
+4196520	4198400	But for this kind of behavior,
+4198560	4199460	refer to the norms.
+4199600	4200120	And, of course,
+4200200	4201940	refer to requirements of the project
+4201940	4202840	you're working on.
+4202980	4204700	Because there might be some derogation
+4204700	4205280	to the norm,
+4205800	4206060	UDS,
+4206060	4207560	or simply,
+4207980	4208620	you know,
+4208820	4209860	just read the norm
+4209860	4210720	and find out
+4210720	4212140	which is the exact behavior.
+4213320	4214220	But here,
+4214380	4215200	we consider that
+4215200	4216520	after three cycles
+4216520	4218260	without an error present,
+4218420	4220120	then the lump will turn off.
+4220360	4221760	So, the final status here
+4221760	4223580	will be 0, 8.
+4224020	4224340	Okay.
+4225620	4226220	Okay.
+4226400	4226780	Nice.
+4226780	4230320	So, we have clarified everything
+4230320	4233380	that led us to arrive
+4233380	4234560	to this status.
+4234900	4235620	0, 8.
+4236140	4238080	0, 8 means that we all...
+4238080	4239360	So, this is the change
+4239360	4241000	that happens here
+4241000	4243440	in the fourth monitoring cycle.
+4245020	4246400	So, we are arriving
+4246400	4248700	to the final status of 0, 8.
+4249080	4250940	How can I manage these three?
+4251160	4252100	This is, let's say,
+4252100	4252820	the tricky one.
+4252820	4255420	First of all,
+4255580	4256800	here we have to do
+4256800	4257760	a distinction
+4257760	4259660	between two kinds of...
+4259660	4259760	Okay.
+4259860	4260380	Now, probably,
+4260500	4261580	I will need more space.
+4261700	4261860	Okay.
+4261900	4263520	So, I hope this is still clear.
+4264260	4265900	So, here we have
+4265900	4267360	to make a distinction
+4267360	4268780	between two kinds...
+4268780	4269640	Let's make it bigger.
+4271220	4272920	Two big kinds
+4272920	4274340	of electronic control units.
+4274640	4275000	Okay.
+4275500	4275980	So,
+4277280	4278960	I will write that here.
+4278960	4285540	Let's start from
+4285540	4287980	the non-power-train
+4287980	4291620	power-train echo
+4291620	4294160	and then we have
+4294160	4298500	the power-train echo.
+4300380	4300620	So,
+4300940	4302380	why should I distinguish
+4302380	4303220	between the two?
+4304080	4304460	So,
+4305460	4307420	for non-power-train
+4307420	4308940	electronic control unit,
+4308940	4311060	the management
+4311060	4312860	of the Bith3
+4312860	4313780	is just,
+4314460	4314700	you know,
+4314900	4316360	it's enough
+4316360	4317200	for the management
+4317200	4318080	of Bith3
+4318080	4319260	to remember
+4319260	4320820	this definition.
+4321060	4321180	Okay.
+4321340	4322240	Definition of the
+4322240	4323100	monitoring cycle.
+4324280	4324520	So,
+4324620	4325380	as you remember,
+4325640	4326940	and you can read this
+4326940	4327780	from the slides
+4327780	4328800	or from the norm,
+4329220	4331700	once an error code
+4331700	4332200	is saved
+4332200	4333040	inside the electronic
+4333040	4333780	control unit,
+4334300	4334960	we have
+4334960	4336000	that the error code
+4336000	4336620	is stored
+4336620	4337160	inside the
+4337160	4338420	EEPROM
+4338420	4339140	of the EECU
+4339140	4340980	for 40,
+4341480	4342280	for now we say,
+4342400	4343000	cycles.
+4343480	4343620	Okay.
+4344240	4344500	So,
+4344640	4345840	for the non-power-train
+4345840	4347200	electronic control unit,
+4347480	4348540	it might be
+4348540	4351580	40 monitoring cycles.
+4352160	4352360	Okay.
+4352700	4353540	This is a
+4353540	4354180	calibratable
+4354180	4355920	value,
+4356260	4357120	so the norm
+4357120	4357960	suggests
+4357960	4358840	it to be
+4358840	4359440	40,
+4359560	4360300	but it's not
+4360300	4360860	mandatory.
+4360860	4361840	you can
+4361840	4363020	set it
+4363020	4363260	as
+4363260	4364240	60,
+4364480	4364760	you can
+4364760	4365180	set it
+4365180	4365380	as
+4365380	4365920	20,
+4365920	4366520	you can
+4366520	4366980	set it
+4366980	4367380	as
+4367380	4369060	800,
+4369380	4369580	you know,
+4369920	4370220	it's a
+4370220	4371240	calibratable value,
+4371380	4371660	but
+4371660	4372680	it's a
+4372680	4374240	common use
+4374240	4374620	of this
+4374620	4376040	value
+4376040	4376560	is
+4376560	4377320	40.
+4377660	4377820	Okay.
+4378720	4379060	So,
+4379200	4379840	let's say,
+4379920	4380760	for non-power-training
+4380760	4382180	electronic control unit,
+4382640	4383160	we have,
+4383500	4384000	we need
+4384000	4385020	40
+4385020	4386640	monitoring cycles
+4386640	4388020	without
+4388020	4388800	errors
+4388800	4390700	to delete
+4390700	4391540	this DTC
+4391540	4392280	from the error
+4392280	4392720	memory.
+4393060	4393340	Okay.
+4394280	4394500	So,
+4394560	4395080	this means
+4395080	4395620	that
+4395620	4397700	can we
+4397700	4398220	count
+4398220	4398800	this
+4398800	4399980	monitoring
+4399980	4400540	cycle?
+4401000	4401820	This monitoring
+4401820	4402720	cycle cannot
+4402720	4403740	be counted
+4403740	4404360	because there
+4404360	4404880	is an error.
+4405260	4405580	Okay.
+4406300	4406680	Can we
+4406680	4407240	count this?
+4407700	4408160	Yes.
+4408340	4409560	I'll switch
+4409560	4409960	color.
+4410380	4410760	We can
+4410760	4411360	count this
+4411360	4411660	monitoring
+4411660	4412060	cycle
+4412060	4412580	because there
+4412580	4412900	is no
+4412900	4413180	error.
+4413180	4414120	we can
+4414120	4414860	count this.
+4415660	4416020	It's okay.
+4416200	4416400	So,
+4416620	4417040	here is
+4417040	4417560	40.
+4418600	4419400	Here is
+4419400	4419880	39.
+4421100	4421900	Here is
+4421900	4422580	38.
+4423320	4424120	Here is
+4424120	4424980	37.
+4426020	4426660	36.
+4427620	4428260	35.
+4428560	4429280	And so on.
+4430020	4430320	So,
+4430520	4431260	consider that
+4431260	4431980	this monitoring
+4431980	4433180	cycle is,
+4433380	4433620	you know,
+4433680	4434280	every time you
+4434280	4434820	use the car.
+4434920	4435040	Okay.
+4435040	4435760	You turn on
+4435760	4436280	the car,
+4436840	4437200	for example,
+4437480	4437960	or in
+4437960	4439080	this case,
+4439180	4439800	considering that
+4439800	4440240	we are just
+4440240	4440640	using the
+4440640	4441380	monitoring cycle,
+4441480	4442080	every time you
+4442080	4442420	perform
+4443180	4444240	you are
+4444240	4445340	actually doing
+4445340	4445800	a monitoring
+4445800	4446340	cycle.
+4446940	4447420	So,
+4447760	4448420	every time you
+4448420	4448940	turn on the
+4448940	4449620	car and then
+4449620	4450220	you turn off
+4450220	4450620	the car,
+4451280	4451980	considering that
+4451980	4452720	this is on
+4452720	4453880	and this is
+4453880	4454660	off every
+4454660	4455120	time.
+4455120	4455400	So,
+4455540	4455780	on,
+4455860	4456160	off,
+4456220	4456420	on,
+4456420	4456680	off,
+4456720	4457120	on,
+4457120	4457640	off,
+4457700	4458040	on,
+4458040	4458520	off,
+4458600	4458840	on,
+4458840	4459500	off,
+4459500	4459940	on,
+4460100	4460500	off,
+4460500	4460980	on,
+4460980	4461500	off,
+4461500	4462120	and stuff like
+4462120	4462360	this.
+4462920	4463540	Then it means
+4463540	4464100	that every time
+4464100	4464580	you use your
+4464580	4464860	car,
+4465020	4466020	and there is
+4466020	4466440	no error,
+4466800	4467360	then it's
+4467360	4468400	counted as a
+4468400	4469220	monitoring cycle
+4469220	4470340	without fault,
+4470460	4470760	so the
+4470760	4471620	counter decreases.
+4471620	4474180	It means that
+4474180	4475600	from this point
+4475600	4476220	on,
+4476660	4478380	for other 37
+4478380	4480200	times you will
+4480200	4481320	perform monitoring
+4481320	4481940	cycles,
+4482160	4483680	you will still
+4483680	4484960	have inside the
+4484960	4485840	error memory
+4485840	4487220	this DTC that
+4487220	4488180	we wrote here.
+4488680	4488720	So,
+4488780	4490120	DTC is 01,
+4490240	4490900	22,
+4491620	4492160	92,
+4492520	4493320	08.
+4493560	4494820	You will have
+4494820	4496000	this status for,
+4496660	4497360	in general,
+4497460	4498540	for 40 monitoring
+4498540	4499060	cycles,
+4499060	4500060	but from this
+4500060	4500880	point on it's
+4500880	4501380	going to be for
+4501380	4502720	37 monitoring
+4502720	4503860	cycles on.
+4504280	4504500	So,
+4504620	4505280	if this line
+4505280	4505920	continues,
+4506440	4507240	once we arrive
+4507240	4507880	to the end,
+4508300	4509660	so I put a
+4509660	4511260	checkered flag
+4511260	4512140	here to say
+4512140	4513200	that we arrived
+4513200	4513820	to the last
+4513820	4514640	monitoring cycle,
+4515080	4515920	then here the
+4515920	4516640	status will be,
+4516740	4517360	this is the,
+4517920	4518520	let's say we
+4518520	4519760	arrive to 1,
+4519900	4520420	this is 1,
+4521240	4521680	and then the
+4521680	4522380	next one is
+4522380	4523020	going to be
+4523020	4523560	0,
+4523740	4524200	0,
+4524340	4525020	final status
+4525020	4525640	use of the
+4525640	4526120	DTC.
+4531820	4532880	In this case,
+4532980	4533560	for non-power
+4533560	4534300	training electronic
+4534300	4535060	control unit,
+4535180	4535700	we are saying
+4535700	4536600	it's enough to
+4536600	4537260	use monitoring
+4537260	4537840	cycles,
+4537980	4538320	so K-ON,
+4538420	4538680	K-OFF,
+4538760	4539760	but you can
+4539760	4540400	understand,
+4540720	4541220	eventually,
+4541680	4542460	the risk
+4542460	4543460	behind this
+4543460	4543980	strategy.
+4544840	4545600	If I know
+4545600	4546020	about this
+4546020	4546440	strategy,
+4546580	4546980	that I have
+4546980	4547760	a very serious
+4547760	4548600	problem on my
+4548600	4548840	car,
+4549020	4549980	it will just
+4549980	4551100	need,
+4551200	4551800	we will just
+4551800	4553560	need to do
+4553560	4554420	40 times
+4554420	4554820	K-ON,
+4554820	4555160	K-OFF,
+4555260	4555520	K-ON,
+4555560	4555800	K-OFF,
+4555900	4556120	K-ON,
+4556120	4556380	K-OFF,
+4556480	4556780	K-OFF,
+4556780	4557080	K-OFF,
+4557080	4557500	K-OFF,
+4557860	4558420	and then the
+4558420	4558840	error will
+4558840	4559320	disappear.
+4560140	4561340	But if I have
+4561340	4562760	a small issue,
+4563000	4563200	like,
+4563280	4563780	I don't know,
+4564320	4565260	a problem on
+4565260	4566160	an amplifier,
+4566540	4567800	or simply one
+4567800	4568400	of the lead
+4568400	4569400	inside my car
+4569400	4570360	is not turning
+4570360	4570680	on,
+4570740	4571280	for example,
+4571840	4572400	and then for
+4572400	4572840	some reason
+4572840	4574020	I try to fix
+4574020	4574580	it and I
+4574580	4575300	perform 40
+4575300	4575920	times K-ON,
+4576020	4576260	K-OFF,
+4576360	4576540	K-ON,
+4576600	4576820	K-OFF,
+4577340	4577960	then the error
+4577960	4578660	will disappear
+4578660	4579320	and there's
+4579320	4579600	going to be
+4579600	4580640	no trace of
+4580640	4581080	this error
+4581080	4581600	inside the
+4581600	4581980	electronic
+4581980	4582620	control unit
+4582620	4583560	for very
+4583560	4585160	small problem
+4585160	4585620	or for
+4585620	4586620	smaller problems
+4586620	4587300	this is not
+4587300	4587760	a problem,
+4587980	4588100	okay,
+4588340	4588860	sorry for
+4588860	4590480	this mix
+4590480	4591060	of words,
+4591520	4591820	but that's
+4591820	4592500	not a huge
+4592500	4593220	issue because
+4593220	4593640	the issue
+4593640	4594040	is very
+4594040	4594380	small,
+4594720	4595020	so even
+4595020	4595500	though we
+4595500	4595840	forced,
+4595940	4596160	let's say,
+4596180	4596640	the system
+4596640	4597120	to delete
+4597120	4598420	this error
+4598420	4598940	from the
+4598940	4599520	EEPROM
+4599520	4600100	just doing
+4600100	4600660	this 40
+4600660	4601360	times K-ON,
+4601420	4601680	K-OFF,
+4602320	4602820	it's not a
+4602820	4603500	big deal,
+4603500	4604060	it doesn't
+4604060	4604340	matter,
+4604440	4604740	it's not a
+4604740	4605180	big deal.
+4606920	4607720	But when
+4607720	4608720	we talk about
+4608720	4609440	power train
+4609440	4610020	electronic
+4610020	4610800	control unit,
+4610960	4611540	the power train
+4611540	4612020	electronic
+4612020	4612780	control unit
+4612780	4613340	manages,
+4614460	4615820	let's say,
+4615880	4616660	very serious
+4616660	4617100	problem,
+4617220	4617560	and also
+4617560	4618560	the problem,
+4618720	4619160	the DTC
+4619160	4619720	that we were
+4619720	4620460	talking about
+4620460	4621320	in this
+4621320	4621840	example,
+4622440	4623060	is the DTC
+4623060	4624760	related to,
+4624840	4625360	I don't know,
+4625500	4625920	the accelerator
+4625920	4626300	pedal,
+4626580	4626800	okay,
+4627520	4628740	so it is
+4628740	4629880	very important
+4629880	4630720	that if there's
+4630720	4631940	been a problem
+4631940	4632840	in the accelerator
+4632840	4633320	pedal,
+4633980	4634560	then there
+4634560	4635200	would be
+4635200	4637180	history of
+4637180	4640800	this problem
+4640800	4641560	inside the
+4641560	4641780	EEPROM
+4641780	4642320	of the
+4642320	4642720	electronic
+4642720	4643420	control unit.
+4643560	4644040	So for the
+4644040	4644580	power train
+4644580	4645080	electronic
+4645080	4645900	control unit
+4645900	4646720	it's very
+4646720	4647620	important to
+4647620	4648380	keep track
+4648380	4648960	of these
+4648960	4649420	kind of
+4649420	4649920	problems
+4649920	4650620	and to
+4650620	4651140	keep them
+4651140	4651760	inside the
+4651760	4652240	electronic
+4652240	4653100	control unit
+4653100	4653600	for,
+4653960	4654620	let's say,
+4654740	4655400	a longer
+4655400	4656140	time,
+4656200	4656640	but it's
+4656640	4657120	not the
+4657120	4657520	time,
+4657620	4657900	the key
+4657900	4658360	parameter
+4658360	4658820	here.
+4659060	4659640	The key
+4659640	4660120	parameter
+4660120	4661120	here is
+4661120	4662020	a different
+4662020	4662700	kind of
+4662700	4663120	cycle,
+4663280	4663620	but it's
+4663620	4664140	not just
+4664140	4664700	the simple
+4664700	4665180	monitoring
+4665180	4665740	cycle
+4665740	4666200	that we
+4666200	4666460	saw
+4666460	4666880	before,
+4667240	4667560	so it's
+4667560	4668100	not going
+4668100	4668320	to be
+4668320	4668700	enough
+4668700	4669160	to have
+4669160	4669620	just a
+4669620	4670060	key-off
+4670060	4671220	40 times,
+4671400	4671900	but there
+4671900	4672300	will be
+4672300	4673160	additional
+4673160	4674040	conditions
+4674040	4675220	to consider
+4675220	4677580	a VOOL
+4677580	4678200	cycle
+4678200	4678800	without
+4678800	4679700	an EEPROM
+4679700	4680500	okay,
+4680940	4681540	so for the
+4681540	4682020	power train
+4682020	4682520	electronic
+4682520	4683260	control unit
+4683260	4684080	the counter
+4684080	4684520	will be
+4684520	4684960	the same,
+4685140	4685280	I mean,
+4685520	4686340	we are still
+4686340	4687180	talking about
+4687180	4689420	40 cycles
+4689420	4690780	without
+4690780	4691800	an EEPROM,
+4691820	4692340	but what
+4692340	4692860	kind of
+4692860	4693360	cycles?
+4693360	4694220	for the
+4694220	4694800	power train
+4694800	4695380	electronic
+4695380	4696200	control unit
+4696200	4697120	we refer
+4697120	4698020	to
+4698020	4699580	warm-up
+4699580	4700340	cycle.
+4701720	4702600	In the
+4702600	4702920	norms,
+4703040	4703340	you should
+4703340	4703960	find the
+4703960	4704380	definition
+4704380	4704880	of the
+4704880	4705260	warm-up
+4705260	4705720	cycle,
+4705900	4707200	but these
+4707200	4707700	days,
+4707920	4708040	the
+4708040	4708500	warm-up
+4708500	4708880	cycle
+4708880	4709460	definition
+4709460	4709940	can
+4709940	4710920	slightly
+4710920	4711500	change
+4711500	4712060	according
+4712060	4712660	to the
+4712660	4713100	kind of
+4713100	4713420	vehicle
+4713420	4713740	you're
+4713740	4714080	using.
+4714220	4714320	For
+4714320	4714700	example,
+4714840	4715280	we have
+4715280	4715740	a specific
+4715740	4716300	definition
+4716300	4717420	for a
+4717420	4717840	diesel
+4717840	4718500	engine
+4718500	4719080	warm-up
+4719080	4719560	cycle,
+4720160	4720760	we have
+4720760	4721220	a specific
+4721220	4721760	definition
+4721760	4722200	for a
+4722200	4722580	hybrid
+4722580	4723140	engine
+4723140	4724380	warm-up
+4724380	4724840	cycle,
+4725160	4725820	different
+4725820	4726280	definition
+4726280	4727060	of electric
+4727060	4727540	vehicle,
+4727660	4727980	warm-up
+4727980	4728320	cycle.
+4728440	4728540	So,
+4728860	4729420	according to
+4729420	4729780	the kind
+4729780	4730220	of vehicle
+4730220	4730700	that you're
+4730700	4731020	using,
+4731160	4731600	you might
+4731600	4732720	find yourself
+4732720	4733680	using
+4733680	4734320	different
+4734320	4734700	things,
+4734900	4735220	shall we?
+4735220	4735820	go ahead.
+4735820	4736120	So,
+4736120	4737660	the idea
+4737660	4738320	is that
+4738320	4739000	we cannot
+4739000	4740080	use the
+4740080	4740440	monitoring
+4740440	4741200	cycle as
+4741200	4741480	I was
+4741480	4741940	describing
+4741940	4742720	before just
+4742720	4742920	with
+4742920	4743400	maneuver
+4743400	4743860	key-off
+4743860	4744260	key-on,
+4744260	4745120	but since
+4745120	4745380	it is
+4745380	4745580	very
+4745580	4746040	important
+4746040	4746980	to track
+4746980	4747800	these
+4747800	4748480	DTCs
+4748480	4749340	inside the
+4749340	4749740	electronic
+4749740	4750700	control unit
+4750700	4751600	physical
+4751600	4752080	memory,
+4752460	4753100	then there
+4753100	4753320	are
+4753320	4753840	additional
+4753840	4754520	conditions.
+4754860	4755080	Which
+4755080	4755400	are these
+4755400	4755800	additional
+4755800	4756360	conditions?
+4756620	4756820	So,
+4757120	4757680	let's start
+4757680	4758040	from the
+4758040	4758320	monitoring
+4758320	4758820	cycle.
+4758960	4759360	The monitoring
+4759360	4759980	cycle is
+4759980	4760420	just
+4760420	4761540	key-on,
+4761640	4762020	key-off.
+4762400	4762520	So,
+4762640	4763080	if I do
+4763080	4764320	40 times
+4764320	4764560	key-on,
+4764620	4764920	key-off,
+4765100	4765760	then I
+4765760	4765980	have,
+4766500	4766960	without an
+4766960	4767200	error,
+4767760	4768460	I achieved
+4768460	4769180	these 40
+4769180	4770200	cycles without
+4770200	4770640	error,
+4770780	4771340	and that's it.
+4772700	4773800	Let's look
+4773800	4774660	at a more
+4774660	4775400	severe,
+4775500	4776040	let's say,
+4776380	4776840	cycle,
+4777000	4777480	that is the
+4777480	4778620	driving cycle.
+4779200	4779420	So,
+4779500	4779880	the driving
+4779880	4781040	cycle contains
+4781040	4782420	the, let's
+4782420	4782500	say,
+4782520	4783240	the conditions
+4783240	4783880	of the
+4783880	4784240	monitoring
+4784240	4784800	cycle,
+4785080	4785660	so key-on,
+4785740	4786020	key-off,
+4786620	4787300	but there
+4787300	4787660	is an
+4787660	4788400	additional
+4788400	4789080	condition,
+4789300	4789600	that is
+4789600	4790060	the engine
+4790060	4790340	on.
+4791100	4791320	So,
+4791400	4791920	every time
+4791920	4792440	you read
+4792440	4792920	the driving
+4792920	4793460	cycle,
+4793700	4794120	it means
+4794120	4794840	that it's
+4794840	4795380	not enough
+4795380	4795840	just to
+4795840	4796320	have to
+4796320	4796680	turn on
+4796680	4797040	the car
+4797040	4797720	with key-on
+4797720	4798660	and then
+4798660	4799060	key-off,
+4799140	4799440	but then
+4799440	4799980	you have to
+4799980	4800540	perform the
+4800540	4800920	key-on
+4800920	4802300	turning on
+4802300	4803040	the engine,
+4803860	4804920	and when
+4804920	4805320	you turn
+4805320	4805620	off,
+4805780	4806300	then the
+4806300	4806660	driving
+4806660	4807100	cycle
+4807100	4807500	will be
+4807500	4807720	done.
+4809000	4809240	The
+4809240	4809900	warm-up
+4809900	4810640	cycle is
+4810640	4811320	an even
+4811320	4811780	more
+4811780	4812680	severe
+4812680	4813820	cycle,
+4813960	4814360	because it
+4814360	4814880	contains
+4814880	4815360	not just
+4815360	4815500	the
+4815500	4815980	maneuvers
+4815980	4816360	of the
+4816360	4816660	monitoring
+4816660	4817140	cycle,
+4817620	4818100	not just
+4818100	4818220	the
+4818220	4818840	condition of
+4818840	4819240	the driving
+4819240	4819640	cycle,
+4820000	4820540	but contains
+4820540	4820880	also
+4820880	4821700	additional
+4821700	4822440	conditions.
+4823080	4823760	Once again,
+4823840	4824400	it depends
+4824400	4824740	on the
+4824740	4825240	kind of
+4825240	4825980	vehicle you're
+4825980	4826740	working with.
+4826860	4827460	For example,
+4827640	4828300	for diesel
+4828300	4828980	application,
+4829700	4830240	then we will
+4830240	4830900	have that
+4830900	4831760	the conditions
+4831760	4832480	are, of course,
+4832560	4832920	you have to
+4832920	4833640	go in key-on,
+4834120	4834480	of course,
+4834540	4835000	you have to
+4835000	4835520	turn on
+4835520	4836080	the engine,
+4836540	4837020	and there is
+4837020	4837380	also a
+4837380	4837780	specific
+4837780	4838700	condition of
+4838700	4839440	the delta
+4839440	4840620	temperature of
+4840620	4841420	the refrigerant
+4841420	4842040	liquid of
+4842040	4842520	the engine.
+4843020	4843260	So,
+4843360	4843880	there must be
+4843880	4844320	a delta
+4844320	4845420	temperature of,
+4845500	4846140	if I will
+4846140	4846520	remember,
+4846660	4848740	22.5
+4848740	4849380	degrees,
+4849840	4850440	and this
+4850440	4851000	delta
+4851000	4853620	is valid
+4853620	4854560	only if we
+4854560	4856240	reach a
+4856240	4857400	temperature
+4857400	4858220	value of
+4858220	4859120	the refrigerant
+4859120	4860960	liquid higher
+4860960	4861620	than 70
+4861620	4862080	degrees.
+4864160	4865140	For hybrid,
+4865140	4865800	the application
+4865800	4866520	is different.
+4866680	4867340	For electric
+4867340	4867960	application,
+4868120	4868580	for example,
+4868660	4869820	you must stay
+4869820	4870400	in key-on
+4870400	4871000	for a specific
+4871000	4871540	amount of
+4871540	4871960	time.
+4872340	4873300	You have to
+4873300	4875300	stay in
+4875300	4875720	idle,
+4875880	4876180	so with
+4876180	4876940	the engine
+4876940	4877480	on,
+4877960	4879300	without moving
+4879300	4880100	for a specific
+4880100	4881140	amount of
+4881140	4881460	time,
+4881940	4882820	and you have
+4882820	4883440	to drive
+4883440	4884260	your car
+4884260	4884820	with the
+4884820	4885120	speed
+4885120	4887620	faster than
+4887620	4888300	30 kilometers
+4888300	4888820	per hour
+4888820	4889720	for a specific
+4889720	4890280	amount of
+4890280	4890560	time.
+4891380	4891920	So, of course,
+4892220	4892800	according to the
+4892800	4893460	kind of project
+4893460	4894000	you're working
+4894000	4894520	on, you will
+4894520	4895400	have separate
+4895400	4896360	definitions and
+4896360	4897100	use of this
+4897100	4897940	warp-up cycle.
+4899300	4899800	I know
+4899800	4901020	they sound
+4901020	4901860	all like
+4901860	4902940	strange
+4902940	4903600	rules to
+4903600	4904120	be followed,
+4904340	4904760	but here
+4904760	4905440	there is a
+4905440	4906540	very simple
+4906540	4907480	idea behind
+4907480	4907760	it.
+4909060	4909860	If I just
+4909860	4910480	use as a
+4910480	4910940	condition
+4910940	4911820	key-on-key-off,
+4912000	4912740	it means that
+4912740	4913360	even if I
+4913360	4913940	don't use
+4913940	4914360	the car,
+4914580	4915160	just doing
+4915160	4915860	40 times
+4915860	4916420	key-on-key-off,
+4916500	4916960	key-on-key-off,
+4917040	4917500	key-on-key-off,
+4917940	4918760	then I'm
+4918760	4919180	like,
+4919880	4922960	you know,
+4923040	4924400	I'm kind
+4924400	4926060	of joking
+4926060	4926560	with the
+4926560	4927040	electronic
+4927040	4927820	control unit,
+4928000	4928220	you know?
+4928500	4929060	I'm just
+4929060	4930480	making fun
+4930480	4930780	of the
+4930780	4931160	electronic
+4931160	4931980	control unit,
+4932100	4932540	pretending
+4932540	4933100	that I'm
+4933100	4933680	using the
+4933680	4933920	car,
+4934200	4934800	while actually
+4934800	4935320	I'm just
+4935320	4936300	doing this
+4936300	4937280	stupid joke
+4937280	4937760	with the
+4937760	4938120	keys.
+4938940	4939700	The idea
+4939700	4941320	about this
+4941320	4942380	warm-up cycle
+4942380	4942860	is that
+4942860	4944580	if I have
+4944580	4945640	an error,
+4946200	4947300	I will need
+4947300	4947800	to keep
+4947800	4948420	track
+4948420	4950500	of these
+4950500	4953620	errors
+4953620	4954060	inside
+4954060	4954540	Viprom
+4954540	4956000	as long
+4956000	4956320	as it
+4956320	4956580	does.
+4957260	4957540	So,
+4958160	4958760	it means that
+4958760	4959440	I have to
+4959440	4960240	make sure
+4960240	4961020	that for
+4961020	4962700	40 times
+4962700	4963840	I actually
+4963840	4964840	used the
+4964840	4965200	car,
+4966140	4966620	the error
+4966620	4967200	was not
+4967200	4967580	present,
+4967800	4968540	and only
+4968540	4969520	after these
+4969520	4970360	40 times
+4970360	4970720	where I
+4970720	4971360	really
+4971360	4971940	used the
+4971940	4972180	car,
+4972880	4973400	then I
+4973400	4974580	feel the
+4974580	4975160	echo and
+4975160	4975600	the software
+4975600	4976560	will feel
+4976560	4977180	confident
+4977180	4978400	in deleting
+4978400	4979600	the error
+4979600	4980040	from the
+4980040	4980420	electronic
+4980420	4981200	control unit,
+4981280	4981660	because it
+4981660	4981920	means,
+4982060	4982220	okay,
+4982780	4983460	it's 40
+4983460	4984220	cycles that
+4984220	4984600	the car
+4984600	4985140	is working
+4985140	4985600	properly,
+4985600	4986200	so I don't
+4986200	4986640	need to
+4986640	4987160	keep track
+4987160	4987520	of this
+4987520	4988200	error anymore.
+4988960	4989140	So,
+4989280	4989720	why do we
+4989720	4990100	have all
+4990100	4990280	these
+4990280	4990920	conditions?
+4991080	4991400	If we
+4991400	4993160	think about
+4993160	4993760	the conditions
+4993760	4994180	of the
+4994180	4994540	electric
+4994540	4995020	vehicle,
+4995600	4996100	of course,
+4996180	4996680	if I use
+4996680	4997040	the car,
+4997100	4997580	for example,
+4997580	4998360	to go out
+4998360	4998840	and buy
+4998840	4999400	milk,
+4999560	5000040	or to
+5000040	5000840	go out
+5000840	5001100	and,
+5001220	5001520	you know,
+5001980	5002580	just going
+5002580	5002980	to a
+5002980	5003340	party,
+5003520	5003720	to a
+5003720	5004040	disco,
+5004460	5004720	to a
+5004720	5005080	museum,
+5005280	5005800	or whatever,
+5006520	5007040	for sure,
+5007120	5007720	I will have
+5007720	5008220	the car
+5008220	5008920	in K-ON,
+5009060	5009540	for example,
+5009620	5009980	because I
+5009980	5010320	have to
+5010320	5011600	set the
+5011600	5012640	navigator,
+5013160	5013420	okay,
+5013460	5013660	and that's
+5013660	5013920	the first
+5013920	5014680	condition to
+5014680	5015460	have the
+5015460	5016180	car just
+5016180	5016900	in K-ON
+5016900	5017320	for a
+5017320	5017640	specific
+5017640	5018040	amount
+5018040	5018600	of time,
+5019240	5020040	for sure,
+5020160	5020440	I will
+5020440	5020820	drive,
+5020980	5021340	I will
+5021340	5021680	stay
+5021680	5022320	like in
+5022320	5022780	standby
+5022780	5023480	for a
+5023480	5023620	few
+5023620	5024200	seconds
+5024200	5024920	with the
+5024920	5025160	engine
+5025160	5025420	on,
+5025500	5026680	because I'm
+5026680	5027700	100% sure
+5027700	5028060	that on
+5028060	5028540	my way
+5028540	5029020	I will
+5029020	5031800	find traffic
+5031800	5032220	lights,
+5032360	5032620	especially
+5032620	5033000	if you
+5033000	5033340	live in
+5033340	5033700	Torino,
+5034620	5035780	and that's
+5035780	5036100	the second
+5036100	5036560	condition,
+5036920	5037620	and if I'm
+5037620	5038100	using the
+5038100	5038420	car,
+5038560	5038860	especially
+5038860	5039300	if I have
+5039300	5039640	people
+5039640	5040120	with me,
+5040200	5040580	just to
+5040580	5041060	show off
+5041060	5041460	that I'm
+5041460	5041900	able to
+5041900	5042300	drive,
+5042800	5043740	then probably
+5043740	5045420	quite like
+5045420	5045980	I'll
+5045980	5046620	drive my
+5046620	5047100	car for
+5047100	5047520	a specific
+5047520	5048160	amount of
+5048160	5048720	time to
+5048720	5049100	a speed
+5049100	5049960	faster than
+5049960	5050560	30 km
+5050560	5051180	per hour,
+5051360	5052440	so these
+5052440	5053220	are all
+5053220	5054760	a set of
+5054760	5055980	conditions that
+5055980	5057940	are all
+5057940	5058760	present when
+5058760	5059480	you really
+5059480	5059980	use the
+5059980	5060220	car,
+5060360	5060760	so all
+5060760	5060900	these
+5060900	5061300	additional
+5061300	5061820	conditions
+5061820	5062640	are meant
+5062640	5065440	to simulate
+5065440	5065840	let's say
+5065840	5066940	real driving
+5066940	5067400	cycle,
+5067980	5068540	and if
+5068540	5069200	for 40
+5069200	5069940	times I
+5069940	5071060	have all
+5071060	5071760	these conditions
+5071760	5072360	and there
+5072360	5072900	is no
+5072900	5073540	fault,
+5074060	5074800	then I
+5074800	5075600	feel confident
+5075600	5076200	that from
+5076200	5077220	this 08
+5077220	5077800	I can
+5077800	5078580	move to
+5078580	5079160	0,
+5079340	5079700	0,
+5079700	5080160	okay,
+5080420	5081620	so if in
+5081620	5082480	all these
+5082480	5084280	cycles that
+5084280	5084560	I was
+5084560	5085000	referring
+5085000	5085560	before,
+5085980	5086720	we didn't
+5086720	5087860	do just
+5087860	5089080	key-off,
+5089200	5089480	key-on,
+5089600	5090020	but also
+5090020	5090740	key-on,
+5091420	5092020	engine-on,
+5092700	5094100	then engine
+5094100	5094600	install,
+5094860	5095100	you know,
+5095240	5096280	standby for
+5096280	5096640	a specific
+5096640	5097180	amount of
+5097180	5097540	time,
+5097540	5099880	then driving
+5099880	5101780	the speed
+5101780	5102380	faster than
+5102380	5102920	30 km
+5102920	5103540	per hour
+5103540	5103980	for a
+5103980	5104280	specific
+5104280	5104780	amount of
+5104780	5105000	time,
+5105340	5105640	or I
+5105640	5105880	don't know,
+5105920	5106160	if you
+5106160	5106700	are using
+5106700	5107100	an internal
+5107100	5107560	combustion
+5107560	5108300	engine car,
+5108760	5109580	then simply,
+5109700	5109900	you know,
+5109960	5110500	turning on
+5110500	5110900	the engine,
+5111060	5111520	keeping on
+5111520	5111920	the engine
+5111920	5112500	for a
+5112500	5112760	specific
+5112760	5113280	amount of
+5113280	5113620	time,
+5113780	5114240	so that
+5114240	5115100	the delta
+5115100	5115640	temperature
+5115640	5116600	of the
+5116600	5117620	refrigerant
+5117620	5118020	liquid
+5118020	5118760	goes
+5118760	5120460	higher than
+5120460	5121300	70 degrees
+5121300	5121640	with a
+5121640	5122100	delta of
+5122100	5122940	22.5
+5122940	5123200	degrees,
+5123280	5123460	you know,
+5123840	5124360	all these
+5124360	5125060	conditions
+5125060	5125760	that look
+5125760	5126300	like just
+5126300	5126880	a set of
+5126880	5127180	roads,
+5127180	5128180	actually
+5128180	5128840	simulation
+5128840	5129300	of a
+5129300	5129720	real
+5129720	5130280	case
+5130280	5131300	use of
+5131300	5131460	the
+5131460	5131720	car,
+5132520	5132820	and
+5132820	5134640	if we
+5134640	5135160	consider
+5135160	5135520	that
+5135520	5136080	in all
+5136080	5136520	these
+5136520	5137240	monitoring
+5137240	5137760	cycles,
+5137880	5138180	all these
+5138180	5138640	conditions
+5138640	5139140	are met,
+5139680	5140780	then we
+5140780	5141080	can
+5141080	5141760	consider
+5141760	5142280	a
+5142280	5143600	discount
+5143600	5144340	decreasing
+5144340	5144980	until
+5144980	5146340	we get
+5146340	5146900	to zero
+5146900	5147380	and
+5147380	5147980	this
+5147980	5148720	status,
+5148960	5149420	you know,
+5149540	5149740	the status
+5149740	5150020	of the
+5150020	5150240	DTC
+5150240	5151140	will become
+5151140	5151440	zero,
+5151540	5151760	zero,
+5152360	5152680	and
+5152680	5153600	the DTC
+5153600	5154280	is actually
+5154280	5154820	deleted
+5154820	5155420	from the
+5155420	5155900	electronic
+5155900	5156800	control unit.
+5157180	5161220	I hope
+5161220	5161600	this is
+5161600	5161960	clear,
+5162140	5162620	otherwise
+5162620	5164660	the nice
+5164660	5165440	exercise to
+5165440	5165800	be done
+5165800	5166840	is using
+5166840	5167580	one of the
+5167580	5168060	facilities
+5168060	5168620	that we
+5168620	5169160	have in
+5169160	5169580	the company
+5169580	5170580	or even
+5170580	5171120	one of the
+5171120	5171640	facilities
+5171640	5172500	you're using
+5172500	5173280	on your
+5173280	5174320	work and
+5174320	5174800	just trying
+5174800	5175340	to perform
+5175340	5176100	this exercise.
+5176340	5176620	So you
+5176620	5178280	actually set
+5178280	5178780	the DTC,
+5179720	5180360	so, you know,
+5180440	5181040	perform the
+5181040	5181680	fault condition,
+5181780	5182200	I don't know,
+5182240	5182940	an open load
+5182940	5183440	on a
+5183440	5183700	can
+5183700	5184160	network,
+5184300	5184800	for example,
+5184980	5185460	or on a
+5185460	5185860	sensor,
+5186160	5186460	whatever,
+5186680	5187140	you open
+5187140	5187980	load,
+5188480	5188820	you see
+5188820	5189100	that there
+5189100	5189300	is a
+5189300	5189640	DTC,
+5190120	5190460	you will
+5190460	5191240	probably read
+5191240	5192160	the status
+5192160	5192500	byte,
+5192640	5192980	can be
+5192980	5193460	8F,
+5193540	5193880	can be
+5193880	5194460	0F,
+5194560	5194760	whatever,
+5195760	5196340	and then you
+5196340	5196880	check for
+5196880	5197600	this specific
+5197600	5198800	DTC if there
+5198800	5199320	is a
+5199320	5200240	monitoring cycle
+5200240	5200840	to be done
+5200840	5201460	or a
+5201460	5202180	warm-up cycle
+5202180	5202680	to be done,
+5203060	5204040	and while you
+5204040	5204940	are working
+5204940	5205380	on it,
+5205380	5206020	you perform
+5206020	5206580	K-off,
+5206680	5206900	K-on
+5206900	5207420	without the
+5207420	5207580	error,
+5207580	5207920	and you
+5207920	5208620	see how
+5208620	5209540	the status
+5209540	5210480	byte evolves
+5210480	5211740	to become
+5211740	5212660	from 8F
+5212660	5213400	or 0F
+5213400	5214240	to 0,
+5214360	5214660	0,
+5214660	5215320	using the
+5215320	5216100	monitoring cycle
+5216100	5216640	or the
+5216640	5217420	warm-up cycle.
+5219040	5219920	If you read
+5219920	5220420	through the
+5220420	5220940	slides,
+5221100	5221480	there is
+5221480	5222220	a specific
+5222220	5225240	diagnostic
+5225240	5226260	service to
+5226260	5227060	retrieve
+5227060	5227920	the amount
+5227920	5228560	of
+5228560	5233440	cycles
+5233440	5234080	left
+5234080	5235340	to get
+5235340	5236600	to the
+5236600	5236840	status
+5236840	5237180	0,
+5237180	5237540	0,
+5237540	5238340	and this
+5238340	5238700	can be
+5238700	5239220	retrieved
+5239220	5239480	with
+5239480	5239720	the
+5239720	5240000	service
+5240000	5241700	1906.
+5243300	5243780	So,
+5243940	5244200	as you
+5244200	5244560	remember,
+5244720	5246100	19 is
+5246100	5246620	the service,
+5246840	5248280	02 is
+5248280	5248940	the
+5248940	5251420	subservice
+5251420	5251920	to read
+5251920	5252320	the error
+5252320	5252700	memory.
+5253360	5253520	So,
+5253700	5254200	we can
+5254200	5254840	even write
+5254840	5255400	that here.
+5256020	5256160	So,
+5256240	5256600	we have
+5256600	5257780	1902
+5257780	5262340	error
+5262340	5263900	memory
+5263900	5267140	1906
+5267140	5268140	1904
+5268140	5272080	snapshot
+5272080	5274140	1906
+5274140	5279080	extended data
+5279080	5279980	record.
+5279980	5281920	extended
+5281920	5282980	data
+5282980	5284020	record.
+5284020	5285780	You can read
+5285780	5286700	all the information
+5286700	5287520	in the chapter
+5287520	5289280	of the UDS
+5289280	5290000	norm about
+5290000	5290760	1906.
+5290760	5291920	This is the
+5291920	5292920	usual service
+5292920	5293400	19,
+5293400	5294200	the subservice
+5294200	5294820	06,
+5294820	5295880	that is used
+5295880	5296420	to read the
+5296420	5297100	extended data
+5297100	5297480	record,
+5297480	5298460	which gives you
+5298460	5300140	a few information.
+5300140	5300900	Among this
+5300900	5301460	information,
+5301540	5302420	one of the information
+5302420	5303420	is the amount
+5303420	5304920	of cycles
+5304920	5306800	needed
+5306800	5307520	to
+5307520	5309640	clear
+5309640	5310700	the error
+5310700	5311700	from the
+5311700	5312440	error memory.
+5312580	5312720	So,
+5312760	5313700	you just request
+5313700	5314420	1906
+5314420	5315700	related
+5315700	5315960	to
+5315960	5316500	201
+5316500	5317160	2292,
+5317640	5318760	and the answer
+5318760	5319800	will be the amount
+5319800	5320200	of,
+5320360	5321540	among all the information
+5321540	5322340	that are provided,
+5322800	5323360	the amount
+5323360	5324100	of cycles
+5324100	5324920	left to
+5324920	5326380	delete the error
+5326380	5326780	from the
+5326780	5327280	error memory.
+5327280	5332120	Last thing
+5332120	5332620	to say,
+5332720	5333320	of course,
+5334700	5335700	this is
+5335700	5337760	the behavior
+5337760	5338540	of the software
+5338540	5339680	once we sell
+5339680	5341040	the car.
+5341340	5341660	So,
+5341720	5342460	we sell the car
+5342460	5343040	with all the
+5343040	5343380	echo
+5343380	5344040	and the echo
+5344040	5344800	that we
+5344800	5345480	validated.
+5346220	5346680	So,
+5346760	5347340	this is the
+5347340	5349220	intended behavior
+5349220	5350800	once the car
+5350800	5351480	is out there.
+5351600	5351880	Because,
+5352020	5352540	as I said,
+5352580	5353400	it's very important
+5353400	5354240	to keep track
+5354240	5354760	of the error
+5354760	5355460	if I have
+5355460	5356220	an error
+5356220	5356560	on the
+5356560	5357060	electronic
+5357060	5357540	control.
+5357700	5358260	If I had
+5358260	5359840	an error
+5359840	5360280	on the
+5360280	5361080	accelerator pedal,
+5361560	5362320	I would be
+5362320	5363560	glad if the
+5363560	5364700	echo knows
+5364700	5365220	about it
+5365220	5365900	and remembers
+5365900	5366300	it.
+5366360	5366500	So,
+5366560	5367160	next time
+5367160	5368000	I bring the
+5368000	5368400	car to the
+5368400	5368800	mechanics
+5368800	5369460	for doing
+5369460	5369960	some kind
+5369960	5370120	of
+5370120	5370540	maintenance,
+5370800	5371340	it appears
+5371340	5372060	that I have
+5372060	5372580	any problem
+5372580	5372840	with the
+5372840	5373520	accelerator pedal.
+5373980	5374260	So,
+5374320	5374620	it won't
+5374620	5375280	happen again.
+5375440	5375920	Probably,
+5376660	5377100	I don't know,
+5377140	5377480	they will
+5377480	5378100	replace it
+5378100	5378520	anyway,
+5378680	5379400	just in case
+5379400	5379840	and stuff
+5379840	5380260	like this.
+5380320	5380400	So,
+5380400	5380740	it's very
+5380740	5381140	important
+5381140	5381660	we have
+5381660	5381800	to.
+5382700	5382920	So,
+5383020	5383300	this is
+5383300	5383700	important
+5383700	5384480	during the,
+5384620	5384840	let's
+5384840	5385080	say,
+5385360	5385800	when we
+5385800	5386400	sell
+5386400	5387000	power.
+5387940	5388320	But,
+5388920	5389800	while we're
+5389800	5390180	doing,
+5390500	5391060	during the
+5391060	5391440	development
+5391440	5391900	phase,
+5391960	5392240	of course,
+5392300	5392800	if I have
+5392800	5393420	to validate
+5393420	5394280	the behavior
+5394280	5395500	of a DTC,
+5396140	5396560	and please
+5396560	5397080	remember,
+5397240	5397520	in the
+5397520	5398100	powertrain
+5398100	5398620	electronic
+5398620	5399380	control unit,
+5399540	5399880	we might
+5399880	5400700	also have
+5400700	5401780	300,
+5401780	5403080	350,
+5403080	5404940	400,
+5404940	5406120	DTCs.
+5406860	5407120	So,
+5407280	5408060	just imagine
+5408060	5408840	doing every
+5408840	5409940	test that
+5409940	5410320	you do,
+5410720	5411240	every time
+5411240	5411580	you have
+5411580	5412240	to perform
+5412240	5413420	40
+5413420	5414600	monitoring
+5414600	5415340	cycles,
+5415820	5416240	40
+5416240	5416760	warm-up
+5416760	5417280	cycles,
+5417440	5417620	you know,
+5417680	5417960	it will
+5417960	5418560	take like
+5418560	5419320	10 years
+5419320	5420060	to validate
+5420060	5421520	all the
+5421520	5423280	DTCs
+5423280	5423760	inside a
+5423760	5424120	project.
+5424800	5425000	So,
+5425320	5426400	to simplify,
+5426900	5428360	there are
+5428360	5429240	many tricks,
+5429240	5429700	let's say,
+5429780	5430280	to simplify
+5430280	5431000	the activities
+5431000	5431360	of the
+5431360	5431780	testers,
+5432200	5432720	but the
+5432720	5433120	main
+5433120	5433540	trick,
+5433640	5433920	let's say,
+5433980	5434260	that is
+5434260	5435040	always used,
+5435400	5436340	is using
+5436340	5437260	this specific
+5437260	5438960	service,
+5439400	5439820	which is
+5439820	5439980	the
+5439980	5440880	service 14,
+5441040	5441920	service 14,
+5441920	5442680	that is used
+5442680	5443700	to delete
+5443700	5444380	the error
+5444380	5444960	memory.
+5444960	5446120	so you
+5446120	5446460	just
+5446460	5447400	launched
+5447400	5448400	service 14
+5448400	5448660	in a
+5448660	5449360	specific way
+5449360	5450240	and the
+5450240	5450640	EEPROM
+5450640	5451220	will get
+5451220	5452280	deleted
+5452280	5453320	about the
+5453320	5454920	DTCs
+5454920	5455820	stored inside
+5455820	5456380	the electronic
+5456380	5456720	quantum
+5456720	5457120	environment.
+5457580	5458140	In order
+5458140	5458800	to delete
+5458800	5459920	the EEPROM
+5459920	5460740	about the
+5460740	5461160	electronic
+5461160	5462400	DTCs,
+5462740	5463160	the service
+5463160	5463680	to be sent
+5463680	5463980	is the
+5463980	5464620	14 with
+5464620	5467040	the additional
+5467040	5467680	3 bytes
+5467680	5468820	FFFF.
+5469380	5470060	So,
+5470180	5470540	using
+5470540	5471060	this
+5471060	5471760	service,
+5472260	5472740	services
+5472740	5473400	and services,
+5473400	5474400	then we
+5474400	5474760	are going
+5474760	5475320	to delete
+5475320	5476200	all the
+5476200	5478320	DTCs
+5478320	5478600	inside
+5478600	5479240	the electronic
+5479240	5479640	quantum
+5479640	5479980	load.
+5480420	5480880	Of course,
+5480980	5481240	if you
+5481240	5481500	want
+5481500	5482360	details
+5482360	5482880	about
+5482880	5483100	this
+5483100	5483420	service,
+5483540	5483820	everything
+5483820	5484120	is
+5484120	5484500	listed
+5484500	5484780	and
+5484780	5485240	explained
+5485240	5485680	inside
+5485680	5485820	the
+5485820	5486200	EDS.
+5486800	5487080	So,
+5487320	5487560	I
+5487560	5489120	suggest
+5489120	5489340	you
+5489340	5489860	to go
+5489860	5490240	there
+5490240	5490520	for
+5490520	5491100	further
+5491100	5493940	details.
+5494080	5494420	But anyway,
+5494520	5494840	it's very
+5494840	5495280	important
+5495280	5495680	that we
+5495680	5496080	have
+5496080	5496960	this
+5496960	5497580	service
+5497580	5498000	because
+5498000	5498720	without
+5498720	5499120	this
+5499120	5499540	service,
+5499620	5499820	every
+5499820	5500240	time to
+5500240	5500680	validate
+5500680	5500860	the
+5500860	5501220	DTC
+5501220	5501640	will
+5501640	5501920	take
+5501920	5502460	10
+5502460	5502760	years.
+5502760	5503340	In
+5503340	5503520	this
+5503520	5503780	way,
+5503880	5504120	once
+5504120	5504260	I
+5504260	5504680	realized
+5504680	5504980	that
+5504980	5505440	okay,
+5505560	5506020	39,
+5506160	5506700	38,
+5506820	5506980	the
+5506980	5507220	status
+5507220	5507520	goes
+5507520	5507720	to
+5507720	5508280	08,
+5508460	5508700	then
+5508700	5509920	I
+5509920	5510080	don't
+5510080	5510280	know,
+5510360	5510520	I
+5510520	5511220	arrived
+5511220	5511400	to
+5511400	5511880	35,
+5512200	5512380	then
+5512380	5512540	I
+5512540	5512900	requested
+5512900	5513340	service
+5513340	5514080	1906,
+5514680	5514860	I
+5514860	5515260	realized
+5515260	5515440	that
+5515440	5515600	it's
+5515600	5515940	actually
+5515940	5516440	35,
+5516680	5516800	so
+5516800	5517140	everything
+5517140	5517420	is
+5517420	5517920	working.
+5518920	5519280	So,
+5519720	5520060	once
+5520060	5520260	you're
+5520260	5520420	done,
+5520500	5520660	okay,
+5520720	5520920	I'm
+5520920	5521200	sure
+5521200	5521480	that
+5521480	5521860	this
+5521860	5522340	logic
+5522340	5522560	is
+5522560	5522920	working,
+5523100	5523220	I
+5523220	5523520	just
+5523520	5523900	use
+5523900	5524380	service
+5524380	5525060	14
+5525060	5526560	FFFF,
+5526960	5527140	the
+5527140	5527320	error
+5527320	5527700	memory
+5527700	5527960	will
+5527960	5528180	get
+5528180	5528540	deleted,
+5528780	5528940	so
+5528940	5529180	the
+5529180	5529500	status
+5529500	5529820	will
+5532760	5533500	00.
+5534500	5534960	Okay,
+5535420	5536840	so
+5536840	5537060	I
+5537060	5537340	hope
+5537340	5537620	this
+5537620	5538400	clarifies
+5538400	5539060	everything
+5539060	5539740	related
+5539740	5540180	to
+5540180	5541540	going
+5541540	5541860	back
+5541860	5542020	to
+5542020	5542160	the
+5542160	5543000	status
+5543000	5543420	00.
+5544180	5544860	Of
+5544860	5545220	course,
+5545520	5546540	there
+5546540	5546860	are
+5546860	5547760	all the
+5547760	5548300	information
+5548300	5548900	inside
+5548900	5549080	the
+5549080	5549440	slides
+5549440	5549680	and
+5549680	5550020	inside
+5550020	5550160	the
+5550160	5550440	norm.
+5550860	5550980	There
+5550980	5551180	will
+5551180	5551440	be
+5551440	5551580	a
+5551580	5552140	third
+5552140	5552700	module
+5552700	5553260	related
+5553260	5553500	to
+5553500	5553840	how
+5553840	5554100	to
+5554100	5554500	read
+5554500	5554740	the
+5554740	5555240	UDS
+5555240	5555720	chapter.
+5556060	5556180	They
+5556180	5556360	are
+5556360	5556700	all
+5556700	5556920	the
+5556920	5557200	same,
+5557280	5557400	so
+5557400	5557560	for
+5557560	5557860	all
+5557860	5558380	services
+5558380	5558880	we
+5558880	5559020	will
+5559020	5559280	have
+5559280	5559520	the
+5559520	5559860	same
+5559860	5560820	structure
+5560820	5561480	of
+5561480	5561680	the
+5561680	5562040	chapter
+5562040	5562740	and
+5562760	5563300	with
+5563300	5563860	that
+5563860	5564480	third
+5564480	5565000	module
+5565000	5565340	then
+5565340	5565500	you
+5565500	5565680	will
+5565680	5566060	have
+5566060	5566700	everything
+5566700	5566940	you
+5566940	5567180	need
+5567180	5567400	to
+5567400	5567720	start
+5567720	5568260	working
+5568260	5568660	on
+5568660	5568880	the
+5568880	5569300	facilities
+5569300	5569620	that
+5569620	5569740	you
+5569740	5570020	have
+5570020	5570380	both
+5570380	5570580	on
+5570580	5570760	your
+5570760	5571120	work
+5571120	5571840	or
+5571840	5572320	for
+5572320	5572800	training
+5572800	5573380	purposes
+5573380	5573940	in
+5573940	5574360	all
+5574360	5575080	Kineton
+5575080	5578040	offices.
+5579240	5580060	In case
+5580060	5580380	something
+5580380	5580720	is not
+5580720	5581020	clear,
+5581180	5581380	some
+5581380	5581860	improvements
+5581860	5582160	are
+5582160	5582480	needed,
+5582620	5582780	there
+5582780	5582940	are
+5582940	5583180	some
+5583180	5583480	kind
+5583480	5583720	of
+5583720	5584560	problems,
+5584840	5585040	once
+5585040	5585280	again,
+5585360	5585460	you
+5585460	5585620	can
+5585620	5585920	write
+5585920	5586120	to
+5586120	5587460	pasquale.perrota
+5587460	5587860	at
+5587860	5588260	sign
+5588260	5589440	kineton.it
+5589440	5590160	or
+5590160	5591740	automotive.training
+5591740	5592220	at
+5592220	5592640	sign
+5592640	5594180	kineton.it

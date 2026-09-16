@@ -1,0 +1,101 @@
+start	end	text
+320	6320	Hello, my name is Fabio Brescia and today I'll talk to you about electric machines.
+13680	20560	In the last period we see the trend of the most of all automotive brands to switch their focus
+20560	27680	to the electric motors. We see this trend for fight the CO2 emission and try to reduce it.
+27680	36560	For motor drives we mean that devices that convert the onboard electrical energy to desired mechanical
+36560	44560	motion and they are the main technology for the hybrid and electric vehicle. Meanwhile electric
+44560	53680	machines are the key element of motor drive technology. The general requirements of electric
+53680	62160	machines for automotive are high torque density and high power density, wide speed range covering
+62160	70000	low speed creeping and high speed cruising to cover all the speed of the car without a gearbox,
+70720	80320	high efficiency over wide torque and speed ranges to reduce the losses power, wide constant power
+80320	87040	operating capability, low acoustic noise to the comfort of the driver, reasonable cost.
+89200	96240	Electric device can be defined as an electromechanical device for converting electrical energy into
+96240	104800	mechanical energy. In the right you can see the scheme of the typical architecture to convert electrical
+104800	112960	energy from the electric source into mechanical energy on the mechanical load. So this is the basic
+113600	122160	architecture of motion control system. We can see electric source that provides the energy to the drive
+122160	133120	system in the automotive field is the battery package. Power electronic converter that interfaces the motor with the power source and provides the motor with adjustable voltage
+133120	153120	current current and or frequency. The controller provides the appropriate control signals to the power converter by comparing the input command for speed and position with the actual values measured through sensors.
+153120	160800	The electric motor is the electric motor. The electric motor is the electric motor is the main device that converts the electric energy to the mechanical energy.
+161600	171760	The sensor needs to return the position or the velocity or the current of the actuator to the motion controller in order to close the control loops.
+172880	181440	The mechanical components transform the motion of the actuator into the desired load motion.
+183520	194560	In this lesson we can see in particular the electric motors. Just a reminder an electric motor converts the electrical energy into mechanical energy.
+195120	206640	The main layout of the electric motor consists in a cylindrical structure with a fixed part called stator and a moving one called rotor.
+206640	216960	We can find windings or permanent magnets in both of the structures to achieving different electrical and magnetic performances.
+217840	226000	The energy conversion happens in the interaction between the magnetic field of the two structures.
+226000	237200	We can see the main quantities of the electric machines.
+237200	246400	We can see the main quantities of the electric machines.
+246400	256240	In a motor, the induced EMF always acts to reduce the current in the loop.
+256800	260400	That's why it's called the back EMF.
+260400	272400	Faraday-Numann-Lens law establishes that the induced current in a loop is in the direction that creates a magnetic field that opposes
+272960	278000	the change in magnetic flux through the area enclosed by the loop.
+278720	284800	The induced current tends to keep the original magnetic flux through the circuit from changing.
+284800	290480	Here you can find the definition of the torque.
+302720	308320	In this slide we can see a first classification of the all-electric machines.
+308320	316560	In this lesson we will focus on the motors with permanent magnets and the induction motors.
+317120	325040	But first we must talk to the DC motors to understand how the technologies start their history.
+331200	337760	The benefits of the DC machines are that they can be used for simple operation
+337760	342560	with a simple motor control because the speed is proportional to the voltage.
+343520	346160	They are cheapest and simplest motor.
+347360	351600	The disadvantages are that requires high maintenance,
+352160	355760	daily generate sparks and they have a short life.
+356320	360000	All these problems are due to the presence of the brush.
+362000	365360	Motor technology is very mature and well developed,
+365920	371520	but for the automatic brand is no longer attractive for electric vehicle propulsion.
+372800	379840	It is no longer attractive for all the disadvantages of the DC motor and the demand of
+380720	385680	high efficiency, high power density and maintenance-free operation.
+385680	391680	On the right you can find the basic architecture of the DC machine.
+392800	400240	You can see the stator, external, equipped with salient poles, works as an inductor
+400240	406720	and can be realized with excitation windings or with permanent magnets.
+406720	414640	The final rotor, consisting of a cylinder of magnetic material, works as an armature.
+415280	424160	On the periphery of the rotor are uniformly distributed slots where the active conductors are hosed.
+424960	429760	The set of active conductors constitutes a closed circuit.
+429760	435120	The part in the air between the stator and rotor is called air gap.
+435120	439600	In this area, the magnetic field has the greatest intensity.
+440320	445200	The rotator is mounted on the same shaft as the rotor.
+445200	452960	This is for the purpose of supplied windings with the power supply voltage and ensure that the torque generated
+452960	459440	by the current that passes through is constant or at least any direction.
+459440	470080	The brush scrolls on the collector and electrically connect it to the external terminals of the machine.
+470640	480000	The presence of the system commutator brushes causes various issues, mainly the continuous maintenance
+480000	483760	required and undesired sparking.
+483760	502400	In this slide, you can find the working principle of the DC machines.
+506400	512480	The DC machine can work as a motor if the direction of the voltages and the currents
+512480	514240	are those shown in the picture.
+516720	523520	The E is made greater than V, the armature current is reversed and the machine switches
+524160	533360	to operate as a brake because the torque reverses becoming negative and instead of being a driving force
+533360	535360	it becomes braking.
+535360	544720	The DC machine in this condition works as a generator so it takes the energy from the load
+544720	551680	and converts it into electricity that can be dissipated or recovered.
+552960	559120	In this slide, you can see the four quadrant of operation of the DC machines.
+559120	567120	In this part, we will talk about the inverter.
+567120	574000	This device transforms the DC quantities in quantities in AC.
+575360	580960	The inverter design depends on the technology of power devices.
+580960	591920	Nowadays, the insulated gate bipolar transistor-based inverter is most attractive and has been widely
+591920	594560	accepted by modern electric vehicles.
+595680	603440	The selection of power devices is based on the voltage rating is at least twice the nominal battery voltage.
+603440	611280	The current rating is large enough so that there is no need to connect several power devices in parallel.
+611840	619600	The switching speed is sufficiently high to suppress motor harmonics and acoustic noise.
+620720	629200	Classified inverters of induction or permanent magnet motor into voltage-fed and current-fed types.
+629200	637440	But the current-fed inverters are rarely used for electric vehicle propulsion because of the need
+638400	642720	of a large series inductance to emulate a current source.
+644320	651120	In electric vehicle propulsion, it is preferred to use voltage-fed inverters because they are very simple
+651120	653600	and can have power flow in either direction.
+653600	659680	The control strategies can be classified as PWM or six-steps.
+661040	669760	The structure of the inverter is the same but changes the switching control technique of the various static switches.
+671520	681040	For PWM, it is the acronym of pulse-width modulation, so the period is the same but width changes.
+681040	685280	The PWM control is the comparison between
+686560	699120	modulating sinusoid of amplitude as and frequency fs and triangular carrier wave of constant amplitude at and frequency ft
+699680	706000	with at greater than as and ft greater than fs.
+706000	714320	When the value assumed by one of the modulators exceeds that of the triangular carrier,
+714320	718960	the switch s of the corresponding phase is turned on.
+720000	727600	When the value assumed by one of the modulators is less than that of the triangular carrier,
+727600	728800	it is turned off.
+728800	734480	On the right, you can see an example of the PWM.
+736000	744720	In the six-step for square wave control strategy, the switch is alternately closed and open for a time equal to
+745280	751440	T over 2, where T is the period of the alternating output voltage.
+751440	763360	The inverter changes state every T over 6 and can assume six different states, called active states.
+764080	771040	The amplitude of the output voltage depends only on V and the state of the switches.
+771040	779600	If you sum the voltage due to the branch, we can have the voltage fed to the inverter.
+780640	785680	Active vehicle propulsion requires the motor drives offering forward motoring,
+785680	790320	forward regeneration, backward motoring and backward regeneration.
+790320	798240	The forward regeneration is essential to capture the braking energy to increase the driving range per charge
+798240	801840	by over 10 percent.

@@ -1,0 +1,581 @@
+Okay, guys, I'm starting to share also my screen.
+Now I think you've seen already Canalizer, right?
+Yes, correct.
+Canoo is an extension of Canalizer.
+It's more regarding simulating environment and the capability of Canoo is also to manage Vector Simulator.
+So here are the slides present on the course.
+Here is this card, how to create a new configuration from scratch.
+And yes, this will be the base to start doing things with Canoo.
+Let's go through this and meanwhile we are going to create the configuration as it is.
+If you have any question, please raise your hand and ask it.
+Okay, so while with Canalizer you were in series with the network, with Canoo you can simulate different issues.
+So the main thing we have to do is to create a new configuration and to start understanding what's the difference between measurement setup and simulation setup.
+Let's go and let's just start doing this.
+So we are going to create a new empty configuration.
+We start from a default one which is completely empty and we create it.
+Then we have to configure our buses.
+So we go into hardware configuration, define number of channels, the boot rate and the hardware channel associated with it.
+Then we are going to set number of Can and Lin that we want in our configuration.
+At the moment I have a VN1630A, a simple can case which has four channels.
+I don't know exactly which transceivers are on that.
+So I will set just for easy way of doing it, two Can channels and no Can, no Lin channels.
+So we are going to create, two channels are already created.
+We are going to go to channel usage.
+Okay.
+Here we can set as many Can network we want.
+From hardware, channel usage.
+We go and select how many Can we want.
+And then here we can set the boot rate of each channel.
+And if we want to have an online simulation or an offline simulation.
+We'll see later what is the difference between them.
+Now, once we have created these two channels, let's try to create three channels just to show you what's changing.
+Here it's not changing anything.
+But if we go into simulation setup, you can see that here we have Can network.
+We can add different Can network.
+And if we add the fourth Can network, it is saying that you cannot assign a network to it.
+So we have to increase number of channels in the Canva system.
+So, here we have created our three Can network.
+Here you can see that this is the channel mapping, which is the same thing you see in Canalizer basically.
+And here also the configuration of the boot rate and stuff like this is the same as you were looking at Canalizer.
+This is the newest part, the simulation setup, which you were already seeing here.
+So let's go there and let's map our channel.
+Here we have VN1630 channel 1, VN1630 channel 2.
+And here we can have a WitterCAM bus for now.
+Okay.
+Now, the next step to do is to associate a database to these Can networks.
+How do we do that?
+Just give me a second.
+Okay.
+Then we're going to add network databases here.
+Just simply doing right click on databases and press add.
+So now I have a couple of, this is the one you are using for your exercises.
+So I'll upload this one.
+And so now we have our database uploaded here.
+What do we do with that?
+Let's go through the simulation here.
+Here it says how to add the Can network.
+We have already seen that.
+Here it's just to understand what you need to import from the database.
+And here is if you want to simulate different nodes.
+So let's go there and let's start simulating just one node.
+Let's enlarge this one.
+Insert network node.
+And this one is saying that you have put an ECU on that.
+Here is the node panel.
+The node panel, once you have configured it, it is going to allow you to edit the different frames,
+which are present on the network, the different signals.
+How to configure this?
+Right click on it and press configuration.
+It is going to say, how do you want to call it?
+In this case, we have only one issue, which is the EMS.
+Let's put it here.
+And which is the state?
+If it's simulated or it's off?
+Which is the difference?
+Simulated is going to run a simulation on it.
+Off is going to mute basically this node on the network.
+So let's start with an off state.
+Okay.
+And this one is a node specification.
+If you have a DLL, you want to simulate it, you can do that.
+Okay.
+And here it's saying on which bus it's available this node.
+Okay.
+Let's not care about that.
+Now you can see that here, some frames are present on this.
+How do we enable them?
+We need to enable the simulation of this one.
+You can do like this and go back to configuration and press simulated,
+or you can simply press a space bar on it.
+And it's going to enable the node.
+Here you have the node panel and you can change the value of the signals
+and send them out.
+Once you send them out, they're going to keep the same value
+until you don't switch off the simulation from here.
+You start to stop the simulation and then it's going to change the values.
+Is it clear until now?
+Yes, it is.
+Yes.
+Okay.
+Perfect.
+Another thing you can do is to add other issues.
+Let's move to another network and let's upload another database,
+which hopefully is containing more issues.
+Give me one second.
+Mask and downloads.
+This one.
+This one.
+This one.
+Okay.
+Okay.
+Here they are different.
+Okay.
+Okay.
+Here they are different.
+Okay.
+Here they are different.
+This one.
+Okay.
+Come on.
+And there is another one.
+Okay.
+Now you can see that we put two nodes on the network.
+What it means is that if we connect this to a real network,
+we will have those two nodes plus the other part of the network,
+which is here.
+Okay.
+We are simulating those two nodes and keeping real the other part of the network.
+How do we change those kind of signals?
+Always in the same way.
+Node panel and we will have the messages for it.
+Node panel, we will have the messages for it.
+Okay.
+What is the power of Kanoe?
+If we open here, we can create a .can file, which you should already know that it's a
+couple file, basically.
+And we call it EMS underscore the underscore EDS, EBC.
+Okay.
+Okay.
+Yeah.
+We will post it.
+It's going to open the couple browser and we can create a live simulation of this node.
+So basically it would be like we are going to simulate a real issue on a, on a, we simulate
+a real issue on a real environment.
+Okay.
+Okay.
+But we can simulate different issues in a real environment.
+While in, in, in canalizer, we were just being in series with the, with the node.
+We were going to simulate.
+Okay.
+Now, here it's a seal with the simulation setup.
+Okay.
+Okay.
+So here you can change the blocks to simulation or real time mode by doing this way.
+Right click on the network and you can switch your blocks to simulation, real time mode,
+this network simulation or real time mode.
+So you can even simulate the entire network or you can measure it real time.
+If you press it, it's going to be simulated.
+I don't think we can start it because we don't have any channel assigned.
+Let's go back to our channel.
+Let's delete this one.
+Let's see if it's going to start.
+Yeah, there are BLDCs, so we cannot start.
+Anyway, in case you're connected to a real environment, you are going to just measure it.
+So if we would have connected to a CAN network, here on the trace, we would have seen some signals.
+Okay?
+Then we are going to move even to the measurement setup.
+You're quite familiar with this, isn't it?
+This is something you've already done in Canalizer.
+So here is the block for logging.
+Here you can create another desktop.
+That can be...
+Analysis is already there, so let's open this one.
+Here you can put trace windows, graphic windows, data windows, say sticker and statics.
+Okay?
+Then...
+Let's move over.
+Here it's saying the same, you were saying before, that you can open a node panel and set a different value to different signals.
+And broadcast it by pressing this icon here.
+And here you can have a graphic windows for the entire can statistics, for the different signals you want to measure.
+And here, the difference is that you cannot type the program node or interactive generator blocks, because you will do everything from here.
+So, network node, think about it as a program node, while a can interactive generator block, you have to add frames from databases.
+And so you can add as many frames as you wish.
+And you will have the same can ichi, which is present on Canalizer, for example.
+Then, what other things you can add?
+You can add an XML test module, a .NET test module, or a replay block can.
+With the replay block can, you can add a source file here, which can be any kind of login file.
+So it can be an ASCII, a BLF, an MF4, just to say the most known one.
+And you can put it here, you can map the channels of this, so that you don't have to replay this only on one network, but you will have different sources and different targets.
+So you can put even whatever is coming from CAN2, put it on CAN1.
+Okay?
+And you can simulate what is your acquisition, your log, and you can replay it on the real network.
+So it's even good to have this, because think about an order-in-the-loop environment.
+A CAN2 order-in-the-loop environment.
+You have a measurement from the car, and you want to reproduce it on the hill.
+You will just have to insert a replay block, map correctly the CAN networks, and just press play, and you will have a simulation of the real environment.
+Clear until now.
+I will ask if it's clear every frame, it's great, more or less.
+Ah, okay, it's easy, it's clear.
+Guys?
+Yes, it's clear.
+Okay, perfect.
+Then here is basically the same you have seen with the canalizer, that you can add graphic windows, where you can add signals from the databases, or variables in case you have an XCP simulation,
+or different system variables to be measured.
+We'll talk about system variables maybe later.
+You would have seen or read them in the lesson on Cample.
+But, yeah, we'll see how we can use them here.
+Hopefully.
+Then, here, it's all the different views you can have, if you want to change the different displays.
+For the samples and stuff like this.
+Here is how to split the axis, the Y axis, to have each signal on a different axis.
+You can do it by pressing CTRL and comma, and in order to have a cursor difference.
+If you want to have this single cursor, you will have to press CTRL plus the dot.
+Then, here, it's saying about the replay block.
+You can add filters on that, in order to not filter the ECU that, for example, is your device under test at the moment on the simulator.
+And, let's see how to do that.
+You will add the replay block, and you will insert a filter here.
+The filter is going to filter whatever is coming from this database, affected node messages, the received messages.
+But, received and transmitted, and you apply it.
+So, it's going to filter everything, which is coming from there.
+In every direction, transmitted and received.
+And, you can filter out even messages only.
+So, you can put those five messages.
+And, you can filter only if they are received, for example.
+Okay.
+Then, last slide, and then we are going to do something.
+You can insert network nodes in the simulation setup.
+And, this allows you, as we have seen, to insert couple scripts to simulate the different ECUs.
+Network nodes are used also to control BT systems.
+And, there are couple test modules.
+What is a couple test module?
+Let's try to do that.
+This couple test module is a test which is run in real time while reading the CAN network.
+And, executing operation real time.
+Let's see how it works.
+I should do some examples already.
+Let me just check if we can find them.
+Thank you.
+Here, let's see.
+okay let's try to open this one
+it's going to report a lot of errors but it is what we want to see
+okay so do not think about the definition of the variables and includes one
+you're going to create a void function which is now called mean test you can assign the title of to a test module and a description
+then you're going to call test cases you see this one is the name of this test case
+what's the difference between this and for example with the studio that for this one you don't need an extra license with the studio
+but you can you will have to write the code manually basically
+so here is how you call system variables with the
+the at the beginning and you will have different values
+i think that this couple is written for dp system
+so this is the core tool connections as you would have another simulator you would call them in a different way
+but the good thing is that you can change the name of this variable as you wish by creating different system variables
+i'll show you how to do that you go into environment
+see you go to system variables and you can create other system variables
+i don't need some of the office that's going to get started at all
+but essentially lead them
+you don't give it the initial power let's define it as a 32 bit
+okay here you have created a namespace which is the block they are belonging to
+so we would have called them for example
+yield let's copy from here the connections
+okay
+so now if you press here
+yield connections it's going to recognize it and it's going to recognize also shanty one
+okay
+so in this way it's going to change this value
+to this one and you can do the same even with the database because here
+we already have our now a symbols
+we are going to have our signals
+the signals which are present inside the database
+okay
+furthermore
+and then we will see
+here it's filtering for network symbols
+we can filter also for variables
+and here we'll have all the system variables we have defined
+okay
+now
+for example let's suppose you want to simulate the press of the start button
+okay
+we are going to define in a system variable
+always in this connection or for example we put a new one called vehicle as a container let's say
+and this one is the start button
+okay
+the initial value is zero the minimum is zero the maximum is one because it's a press and press
+and we create it okay
+now we go here just in that in couple usually you should put on start for example
+right
+have you done the lessons on couple
+yes
+okay
+so here the difference is that you don't want to have an on start
+it's saying that this is not allowed in test model the event handler
+you will always have a test case and inside the test case you are going to do a sequence of operation
+so you will never have an on event in this one
+okay
+you can even define system variables
+for these
+you
+you
+the
+you
+you
+you
+you
+And this system variable can be called inside it.
+So, let's suppose that you define those two test cases, okay?
+And here you pass them a variable, enable, here and there.
+You can change the value of this system variable from outside in order to enable or disable a different test case.
+Okay?
+So, this one is running live inside the simulation.
+So, it's always running.
+When you press play, it's always going to run.
+If you want to rerun it, it's going to rerun every single test which is present inside here.
+With this thing, you're going to check or uncheck if you want enable or disable it.
+How do you do that?
+And here you can create panels.
+Hello.
+Yes, we can give you.
+Thank you.
+This is a useful thing if you have to simulate a lot of things and you want to have under control a lot of things.
+Because, in this case, you can put some checklists, where they are.
+For example, you can put radio buttons here.
+And from the properties, what you can do is call it in a different way.
+So, this one will be this one.
+And this one will be this other one.
+And you can associate this with a symbol.
+Okay?
+Here, I don't know why you have all the...
+Ah, symbol filter is signal.
+Instead, we want a variable.
+And we will enable this one.
+And we're going to associate the other one to the other.
+Okay?
+Yes.
+You save it.
+I am presenting the screen.
+Can you see my screen?
+Another one.
+Okay.
+Okay.
+You can change, for example, here, the background color.
+You can put...
+Start in color.
+Ah.
+Yes.
+Which is the need.
+That's the need.
+That's the need.
+Start coming from the...
+Check box.
+Group button.
+Yes.
+There's a container.
+And stuff like this.
+So, what I wanted to say to you is that...
+I think that you're going to write...
+Just a check of this case.
+Just give me a second, please.
+Okay.
+Are you getting a lot of noise from here?
+Yes.
+I think so.
+Okay.
+If you do not understand, please, guys, tell me.
+I'll try to fix it.
+I don't know how.
+But, yeah.
+Think about...
+You are doing...
+You're writing some kind of check for...
+Without changing anything.
+Just checking signals.
+For example, that the speed is reaching 100 kph while driving in 50 gear and the accelerator
+is full-pressed.
+Stupid example.
+You can put here a test case and you can allow it to run real-time while you are measuring
+variables.
+Okay.
+And, in this case, you will have a check directly on the car of what you need to test.
+Okay.
+Meanwhile, you can enable or disable the control of this test case.
+Here, you can open the different panels you have.
+For example, view panel one.
+Here, you can enable and disable the test case.
+I don't know why it's not the same thing in case.
+But, yes, because it's a radio button.
+No, no, no.
+Let's check button, for example.
+The second is 25.
+Yes, exactly.
+They have different...
+The configuration is basically the same.
+It's just that this one can be activated and deactivated, the other one is not.
+It's going to update directly, and it's going to be activated and deactivated.
+In this way, you can activate and deactivate it in real-time.
+Furthermore, it's using this kind of functions.
+It's going to create a report that you can analyze after the measurement.
+Okay?
+Yes.
+So, here, for example, there are functions.
+While you, with the couple, you're writing something like onSignalChange, onSysVar or onSignal,
+here, you can write test wait for signal in range, match outside range or available.
+So, for example, test wait for signal available is the first time it says wait for the availability
+of all signal of a send node.
+And, here, you have to set... to pass it, a Db node and a maximum waiting time.
+So, in case the maximum waiting time has passed and the signal...
+or all the signal are not yet received, it's going to report a test phase,
+because it was waiting more than expected to achieve that condition.
+Clear?
+Yes.
+Perfect.
+So, the last thing I want to show you was...
+Here, once you've created the tests, you can recall them from here.
+In the window test, there is test modules.
+Furthermore, you can create a test environment, where you insert double test modules, and you
+can run outside the simulation setup.
+Okay.
+In this way, you can double click on it.
+You can configure it to say on and off, to start immediately, or to start an environment variable,
+on a system variable, on key, furthermore, and the state of the test module.
+You can map it to a system variable.
+Then, if you want a report or not, which components are useful for it, and on which bus it is done.
+Here, you can edit test module.
+As we did before, it's going to open a .cam file.
+Here, inside, there is the debug.
+Never used it.
+You will not use it.
+Don't worry.
+And here, is if we want to reset the verdict, assign a failed result.
+Once you've run the test, you can open the report directly from here.
+Okay.
+And you will have them here, that you can run directly from here.
+The test setup, instead, it's going to take test units from VT system, from VT Studio, sorry.
+So you're going to create a test configuration, but you need test units.
+And it's going to look for vector test units.
+Here, you can add the diagnostics device.
+The diagnostic device, I don't know if you have seen it on, on Canalizer.
+I think so.
+It's basically the same as you were looking at the analyzer or stuff like this.
+You can say here, on this scan, we have a diagnostic description.
+So we have a diagnostic device, a tester, basically.
+You need the CDPDX or MDX file.
+Let me see if I have one.
+Sorry.
+I need to check on the, UI CDD somewhere on the, on the lessons, right?
+I need to check on the, UI CDD somewhere on the, on the lessons, right?
+Analysis and as well.
+Yes.
+Yes.
+This should be one.
+Okay.
+Okay.
+Okay.
+Okay.
+Okay.
+Okay.
+Okay.
+Okay.
+Okay.
+We're going to see which is the protocol, Diagnostic N,
+the target group, which are all the services,
+and it's a physical request instead of a functional group request.
+Do you know the difference between physical and functional?
+No.
+Okay, physical, it's targeting to a specific node.
+So, for example, I'm asking to the engine control module something.
+So, I have a direct request with a specific token ID addressing to the ECU 60,
+for example, in this case, while the tester is F1.
+I expect a response with this ID from the specific ECU to the tester.
+The functional is I'm asking to powertrain different information.
+You see that the KNIT is different, but even the ECUs are different,
+and this is part of the group, of a specific group.
+This is useful for OBD specification.
+Basically, when you need to check all the powertrain units,
+all the braking system and stuff like this, you will have functional addressing.
+While the physical addressing is specific to the single ECU,
+which can be the body, which can be the transmission, the engine, the DSP,
+the, I don't know, the seat modules, and stuff like this.
+Here, you don't have to configure anything,
+because it's everything configured inside the CDD.
+The only thing you could do is to add the DLL for the CDD key.
+Have you seen what is the CDD key?
+This one?
+The security access.
+Do you know where it is?
+Basically, this is the first, basically the first interspace board, let me say.
+So the original interspace board, as it is.
+And now, as well.
+Okay, I don't think so.
+So the security access is the way to unlock the unit,
+especially for production unit, not the development issues.
+You need to unlock the security access.
+It's done by an end shaking between the tester and the unit.
+Basically, you are requesting a seed and you are sending a key to the unit,
+according to the seed you have received.
+And this way, the issue is kind of unblocked.
+And this allows you to run routines, to change parameters inside,
+directly from the diagnostic.
+Furthermore, it's allowing you to enter programming session,
+and to download a software on the unit.
+So this is important, but it's something the owner of the software needs to provide.
+So once we have created this, we are going to have these two windows,
+but I prefer to use this one, which is a diagnostic console.
+And here you can see a session control, to go into default session, programming session,
+extended session, or end of line session.
+Then you have this, you are the reset and stuff like this,
+and you will have all the routines, all the IO control,
+and everything which is present in the CDD,
+it's going to be present on it.
+So you can do all the diagnostics directly from here.
+You have a tool which you can do.
+Then what other things can be done?
+We don't have this license, but anyway, it's possible to do even XCP.
+We'll see next week with the Canapé.
+What is the CP?
+You have already done a lesson of Inca, right?
+Please reply, guys.
+Yes.
+Yes.
+Yes.
+Yes.
+Okay.
+Canapé is the brother of Inca.
+But while Inca is made from ITAS,
+and it's more used from a German manufacturer for the power chain side,
+Canapé is made by Vector, and it's used for almost every issue.
+So while engine developers are more confident with Inca,
+because the major part of the issues are made by Bosch,
+and Bosch made also the basic software,
+when they want a measurement, they want it in a format
+which can be compatible with Inca.
+So they want to adopt that file instead of an MDF or an MFO file.
+But yeah, we are going to use a lot of Canapé in validation activities,
+because it allows to do the same exact things of Inca,
+and it's maybe even easier to use,
+and more compatible with all other tools that we use in validation activities.
+With Cano, you can measure XEP.
+It's a little bit...
+Cano is not meant for doing calibration.
+It's more used to do simulations of a network and acquisition.
+Furthermore, Cano can also measure variables on internet, on LIM, and stuff like this.
+For now, we have only seen how to configure a Cannetwork,
+but it's possible to measure internet networks, LIM networks,
+flex-ray networks, and whatever networks you think about.
+And with specific licenses, it's possible even to access the standard decalibration protocol,
+which is the XEP or the CCP,
+with another window here in the diagnostics.
+Then I think we have seen everything in this,
+because this analysis window is the same as it is for Canalyzer, basically.
+So, yeah, that's it, I think for now.
+Please, ten minutes, you have questions to ask?
+Yes, as for now, yes.
+No, Roberto, personally, for me, it's clear.
+I have to read the slides, and I'm checking if something is not clear.
+Roberto, are we going to have the lesson recorded?
+Yeah, I recorded it.
+Yeah, I recorded it.
+Okay, yeah, nice.
+Thank you.
+No questions for me, so far.
+All good.
+Okay, guys, if everything is clear, well, I would suggest you to read again the slides.
+There is less than what we said.
+We need to be updated, let's say.
+I will talk to Andrea to do that.
+And if you have any doubts, please send me an email.
+And I think that next week, between Thursday and Friday, we will have a lesson on Canapé.
+Okay.
+And for now, we're also taking consideration of the requests.
+Yeah.
+That's it from my side.
+If you don't have any questions, I think you can talk to me.
+Thank you.
+All right.
+Thank you, Robbie.
+Ci vediamo.
+Thank you.
+Bye.
+Bye.
+Bye.
+Bye.
+Bye.
+Bye.

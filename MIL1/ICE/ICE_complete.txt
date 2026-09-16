@@ -1,0 +1,1245 @@
+you should be able to see my screen yes okay so let's have a start this is the
+basic this is the basic design of our internal combustion engines so here in
+this slide you can see the you can see the names of the main parts of the of
+the engine of a four-stroke engine okay let's talk let's spend just a word about
+the basic operation as we as the name says the four-stroke engine has four main
+phases intake compression expansion and exhaust I use the animation in order to
+to have a clear idea here let's wait for the cycle to start again so intake phase
+compression expansion and exhaust phase respectively so what happens can you see
+the can you see the ad arrow the pointer yes okay great yes okay okay so what
+happens is that during the intake phase the the mixture of air and the fuel
+because of course we need both in order to in order for the combustion to occur we
+need both air that contains oxygen that that is the oxidizer of the combustion
+reaction and the fuel that is the this the fuel that that is oxidized that burns
+basically and allows us to allows us to to get some mechanical work at the
+crankshaft power engine so through the intake manifold the air fuel mixture is
+sucked in the combustion chamber that is this part here then the motion of the
+piston compresses the air fuel mixture then there is this there is this guy here
+this guy here is only presenting spark ignition engine in in fact this is
+called the spark plug that is what triggers the that is what triggers the
+combustion the operation of a diesel engine is slightly different than the we
+will see it in the following so the air fuel mixture is sucked in through the
+intake manifold compressed then there is the spark plug that triggers the
+that triggers the combustion the combustion of curse the the gas contained into the
+combustion chambers expand so that basically they push the piston downwards and
+the the the connecting rod gives a torque at the crankshaft level that is the
+mechanical work that that is the the the final goal of an internal combustion
+engine that is getting metamechanical work at the crankshaft level and then the
+motion of the piston pushes the exhaust gases out of the combustion chamber these
+two guys here are the valves the poppet valves that regulate the the flow of the
+intake and the exhaust gases inwards and outwards the the combustion chambers the
+combustion chamber the the two camshafts that are this particular shape you can see it here if you
+basically you see it in just one on just one plane the actual shape of a of a camshaft is
+like this basically these these profiles this this particular shape is made in such a way that
+while the the camshaft is rotating at some point it pushes the it can regulate the it can push the
+the the poppet valve and open the the manifold the intake and exhaust manifold respectively
+okay so let's see some relevant parameters for for internal combustion engines first of all some some
+important names top dead center that is the that is the the top level the the the highest level reached
+by the by the motion of the piston bottom that center that is the the the the lowest point reached
+by the motion of the of the piston the difference between the the distance between the top dead center
+and bottom dead center is called the pistol stroke other important parameters that you may have heard
+of is the displacement that is uh basically in practice the displacement is the overall volume of
+all the combustion chambers of an engine because as you uh as you could probably know an engine is normally
+not made of just one cylinder except for uh for uh for example uh scooters scooters and mopeds uh
+most of the times have a single cylinder engines while for cars is the uh normally we have uh we have
+several cylinders from uh two to n cylinders so basically the displacement is the sum of the uh of the
+volumes of the volumes of the volumes swept by the by the piston in fact here you can see uh the uh if i denote
+the bore with b and the stroke by s this is the area of the piston uh times the uh the stroke is the volume
+swept by the piston times nc that is the number of cylinder in the uh in the engine so it's the overall volume
+swept by the by the by the piston another important parameter is the compression ratio that is the
+ratio between the volume at bottom that center and volume at top that center volume at bottom and the
+bottom that center is the it's the maximum volume of the combustion chamber also including the dead volume
+up here and the uh the volume at top dead center is basically the the dead volume the area that is not
+the volume the volume that is not swept by the by the piston up here so the compression ratio gives
+an idea it gives you an idea of how much we compress the air fuel mixture uh during the during the engine
+operation another important parameter but actually not that relevant because since uh since we'll be
+dealing uh mainly with uh with engines with car engines this uh this parameter will always be it's
+a design parameter and will be always something around one basically the difference is that the
+broadly the stroke ratio is the ratio between the bore and the stroke of the of the of the engine
+here in the animation you can see what happens with different uh stroke ratios
+if you have a lower stroke ratio uh with the equal engine speed will we're going to have an higher uh
+piston speed respect to an engine with an higher stroke ratio
+with uh with equal uh with equal um energy speed you see here that the the these three engines these
+three uh these three engines have uh have the same rotational speed but the uh the piston speed is different for
+these three okay then another another important parameter is the air fuel ratio that is the uh the ratio
+between the uh between the the master the the air mess flow and the end of your flow
+okay now let's uh talk specifically about um spark ignition engines that is gasoline engines
+uh in uh in standard the um spark ignition engines the um what happens is that what we are uh what is
+accessing the combustion chamber um through the intake manifold is uh an air fuel mixer
+so imagine that we have this uh this stream of air fuel mixer that is accessing the um the the combustion
+chamber chamber that is compressed and then there is the spark plug that triggers the combustion
+what happens after that the spark plug is triggered the combustion
+that we have uh uh that we have a flame front that is this guy here this orange this orange area here
+that moves radially from the spark plug the place where the uh where the spark is triggered
+towards the the outer part of the combustion chamber so we have this uh like this combustion waves
+this combustion wave that moves from the spark plug towards the the outer part of the combustion chamber
+for a traditional uh oh okay another important thing is that obviously the uh since the combustion
+occurs occurs in the uh in the flame front the flame front will have uh burnt gases at its shoulder and
+will have a fresh air fuel mixer ready to be burned in front of it
+so another important thing for uh for traditional spark ignition engine is that the air fuel mixer is stoichiometric
+what does stoichiometric means do any of you know what stoichiometric mixture means
+i think from what i've read and seen that is a mixture that the air and fuel are in the ratio that
+uh when the exhaust happens we don't have like salt or only monoxide carbon yeah basically it's the uh yeah
+it's uh it's uh yeah it's that's basically it basically the stoichiometric ratio is the air fuel mixture
+ratio for which we have complete combustion of the fuel without um and at exhaust there is no partial
+combustion products and no excess oxygen so basically we're going to have just complete combustion
+products at the exhaust and the most important thing no residual oxygen at the uh at the exhaust
+so all the oxygen at our disposal all the oxygen contained in the air that we've uh that we've that
+we've uh sucked in the combustion chamber has been used so no excess oxygen at the exhaust
+uh this uh for um this is stoichiometric the um the the stoichiometric ratio is established it's a
+quite precise number and it depends on the fuel for gasoline it's uh 14.7 something it's around that
+number as you will see in the following and it depends on the uh it strictly depends on the fuel
+it's a different number for uh for for gasoline it's a different number for uh it's another number
+for uh for a methane it's another number for uh lpg and it's another number for uh let's say i don't know
+other uh other fuels used in spark ignition engines for uh ethanol alcohol for example or uh methanol okay
+so uh keep in mind that the uh that ideally the air fuel mixture that we use in our spark ignition
+engine ideally should be always stoichiometric so no excess oxygen at the exhaust
+in a spark ignition engine another important thing is that torque is regulated by modulating the airflow
+let's see what do i mean when i say that the uh that the torque and hence power is regulated by
+modulating the airflow roughly speaking without this is a totally general formula we can see the power
+expressed as the product of an efficiency that is a function of the uh of the operating point of the
+engine the operating point of the engine is defined by engine speed and um and torque and output torque
+this is an efficiency so this is dimensionless times the
+times the fuel flow times the um hi is a parameter is the heating value of the of the fuel that we're using
+so this this parameter basically indicates how much energy we get when burning a given
+quantity of uh given quantity of uh given quantity of that fuel so it's expressed as a unit of energy
+divided by a by a mass so it's uh kilojoules per kilograms a kilogram kilojoules per kilogram and
+it's a parameter it's fixed it depends only on the fuel so since we know that the um that the the mixer in a spark
+ignition engine engine shall always be stoichiometric um we can express the the fuel the the the the fuel flow as
+uh the uh air flow the air mass flow divided by the air fuel ratio and we know that this number should be fixed
+for a spark ignition engine so basically we can express the the the fuel mass flow like this like this product
+one divided by air fuel ratio times the uh the master flow the air mass flow
+since this is fixed the only thing that i can that i can act on in this formula in order to change the
+power is the um is the uh air mass flow so this is what i mean when i say that in a spark ignition engine
+the the torque and that's the power is regulated by modulating the airflow because this is the only quantity
+this is the only variable where i can act in order to uh to vary the power of the engine
+is this clear any questions so far
+clear it's clear okay great let's go ahead
+so let's have another word on the on the importance of having a stoichiometric creation in an engine
+as i said the um for a gasoline engine the air fuel the stoichiometric air fuel ratio uh is uh is
+around there is something around this number it's something around the 14.7
+what happens in case the um in case when in cases when the air fuel ratio is not this number but is a
+higher or lower in case of rich mixer what happens to the engine is that the uh the engine this is all
+this is always in case when the uh when the mixer is not excessively rich the uh the engine operates
+almost normally so i mean that the user that when you're driving your car you cannot realize that the
+mixer is slightly rich when the when this ratio is around uh let's say 16 16 dot something you won't see
+any difference any you won't have any any strange feeling when driving your car because the uh the engine
+will operate almost normally but what will happen it will happen if this if this value is higher than
+expected it means that there is um sorry if this value is lower than expected in case of rich mixer
+what will happen is that this happens because the uh the fuel flow is higher than what it should be in
+order for a vast geometric mixture so it means that there will be not enough oxygen to burn all this
+fuel so at exhaust we're gonna find the partial fuel oxidates oxidation products like hc it's uh it's
+hydrocarbons for that are hydrocarbons coming from the partial combustion of the gasoline carbon monoxide
+that is another partial combustion products uh and uh and soot soot is the um is the uh is the carbon uh
+is the carbon particulate that gives smoke at the exhaust
+and um all these are pollutants all these are pollutants and if we are uh injecting if we are you
+giving to the engine more fuel than uh then uh than necessary what will happen is that the fuel consumption
+will be higher than expected because more fuel than necessary is going to be used by the engine
+the opposite case is the case of lean mixer that is when the air fuel ratio is higher than 14.7
+so it means that allegedly we are either injecting uh less fuel than expected or we are aspiring more
+air than expected so ifr is going to be a number uh above 14.7 in terms of operation we are we are
+probably going to have irregular operation misfire so it means that the combustion doesn't uh the
+combustion doesn't doesn't progress smoothly it doesn't progress the combustion cannot be uh the
+combustion is not good
+another important thing is that the the flame front uh that is this guy here the the image the uh the
+the abstract surface where you can imagine that the combustion occurs this moves with a finite speed
+radially from the spark plug towards the other part of the combustion chamber with a finite speed
+when the mixture is lean the flame front is going to be slower than expected
+you can see the flame front as a as a flame literally you can see it as a flame
+so if it moves slower and so it means that the combustion takes more time to occur it means that you
+have a live flame uh that uh that stays for longer into the combustion chamber so basically you have this
+flame that is eating the metal parts of the uh of the of the engine that are exposed to this flame all
+the inner parts of the engine that are exposed to the combustion and this may lead to overheating
+overheating may cause engine knock and printing your pre-ignition for those of you that don't know
+what uh what knock and pre-ignition are we're going to see it in the following but just keep in mind that
+in case of lean mixer uh of course there are engines that are designed in order to uh in order to
+operate in lean mixer conditions because that there are some advantages in working these conditions
+but it should be engines designed especially for running on a on a lean mixer
+but for an engine not designed not designed as such the uh the result will be an increase
+an increase in the mechanical and thermal stresses although as i said in some cases for engine especially
+designed to operate in a to operate with the lean mixer there could be an um an increase in the
+efficiency but keep in mind that the uh physical damage to the engine can be done it could be
+counter-intuitive because it's it would expect that if i use more if i use more uh if i use more fuel
+there will be much much more heat and so the the engine could could get overheated but no overheating
+occurs when actually i'm using less fuel than expected so in case only mixture that is a far
+more dangerous condition for the edge in respect to the rich mixture conditions
+okay so let's have a word about combustion that occurs in the um in a spark ignition engine as i said
+the the the flame front moves with a finite speed that is high but not really high compared to the um to the uh to the uh to the speed of the to the engine speed
+because the engine speed is could be any number between 1000 and uh let's say normally for a for a for a car
+from could be any number between 1000 and 6000 rpm 6000 rpm if you think about it it's a lot because it means
+that you have the uh that you have the piston going up and down a hundred times a second that is not that is
+not trivial so it's a it's quite high it's quite a high speed so it becomes relevant how much time the combustion
+combustion takes to uh takes to occur so as i said the combustion uh the uh the flame front uh takes uh
+moves with a finite speed so and uh in order to have an increase in pressure so that the uh the piston
+can be pushed downwards and produce a mechanical torque at the ground shaft uh it means that imagine a
+a very uh a very slow picture that you can uh that you can see the combustion chamber and you can see
+with the the flame front progressing the pressure will increase some will increase as the flame front
+progresses progresses from the from the spark plug towards the outer part of the combustion chamber
+so it means that in order to have a pressure high enough to produce uh uh to produce a a force at the
+piston level i shall have the um i shall have the the the flame front to be uh to be quite fast i mean in
+order to have an appreciation a substantial pressure increase i need to have the combustion to be uh to
+be almost total at this level do you agree but as i said the combustion takes some time to uh take some
+time to occur and since the piston is moving is moving quite fast it means that i have to trigger
+the spark plug i have to trigger the i have to trigger the spark a little bit in advance respect to the
+time when the piston gets to the top at that to the top that center so i need some spark advance so spark
+advance is a time that is a actually a spark advance is a is an angle is the angle respect to the top dead
+center that i trigger the spark that i uh that i trigger the combustion by uh by lighting the the spark plug
+is the is the angle before the before the top dead center that i have to use in order to have an
+unappreciatable pressure level when the piston gets to the top dead center that is the the moment where
+the pressure has to be high enough in order to push the piston downwards is this clear
+yes okay let's say the let's say the let's see the the opposite case for you if it's not completely
+clear to to some of you what will happen if i if i trigger the combustion when the piston is already
+at the top dead center what will happen is that the i trigger the combustion i have the piston at the
+top dead center the combustion starts but the pressure will i will have a a good extent of a sufficient
+amount of the mixer that is burnt when the piston has already gone down gone downwards so the pressure
+increase would wouldn't be that uh wouldn't be i won't have the peak pressure in a good position for
+the piston in order to in order to to together to to harvest the maximum energy at the crankshaft level
+so i need some spark advance i need to trigger the combustion some degrees before the top dead center
+typically the spark advances are somewhere between uh are somewhere between 15 or even 10 up to 40 in
+some cases for uh for since since since engines uh since um um uh later engines have the ability to
+regulate to uh to to vary the the spark advance during engine operation basically the uh the the spark advance
+could be uh is normally the most most common value is between 15 and 25 but uh modern engines are able
+to regulate the spark advance anywhere between uh between uh 10 15 degrees and even 40 degrees in some
+cases for very low load okay but keep in mind that what happens if the spark advance is too high
+here in this graph in this chart here you see the you see the the pressure as a function of the
+as a function of the uh of the crank angle here 360 is the top dead center so here for this case here
+15 degrees it happens what i uh what i uh what i mentioned that last that is i um i triggered the
+combustion too late so just a few degrees before the top dead center so what happens is that the pressure
+peak is very low on the other hand what happens when i trigger the combustion a lot before the a lot
+before the the top dead center i have a very high pressure i have a very high peak pressure
+uh so ideally i can gather the maximum energy from the grankshaft but in this case what happens is that
+before the top dead center the pressure is already very high so i could have an increase of the mechanical
+stresses because the piston has to push has to push towards a high pressure level so that's why the uh that's
+why the spark advance should be high but not not too high because if it's too high what happens is that
+uh is that again have an increase of of the mechanical of the thermal and mechanical stresses in the engines
+because what happens to i guess when i compress it it's temperature increases so that's why there's
+there's also an increase of the uh of the thermal stresses uh along with uh with an increase of the
+mechanical stresses that's because of this another thing that could happen is uh once again engine knock
+and uh engine knock as we will see in the in the following and uh unless i use higher octane
+uh number fuels octane number is a quality index for uh for for fuels that indicates the uh the maximum
+extent that i can uh to to which i can compress a stereometric mixture of air and a given fuel uh before
+it um before it uh it uh burns until the combustion starts on its own without triggering to it with the spark plug
+so it's the it's the maximum extent to which i can compress the uh an air fuel stoichiometric mixture
+before it uh uh setting yourself uh self burns self-ignite self ignites
+the higher it is the better it is it's typically somewhere between 95 and 100 for gasoline uh while
+while it can reach uh it can reach 120 for some fuels like methane questions
+no
+okay so uh let's go ahead in this slide something i wanted to mention is also the influence of the
+compression ratio of the um oh something i uh something i didn't mention that is the most important
+thing is that higher spark advance increases the peak pressure and does it increases the power and the
+the power in deficiency why does it increase the power it increases the power because i have an
+higher peak pressure so imagine this case 30 degrees with respect to 15 degrees uh in this case i'm
+going to have with the same amount of fuel with the same fuel usage i'm going to have an higher
+pressure so i'm going to have an higher power uh respect to this case when the spark advance is too low
+so with a uh with an higher spark advance ideally i will have an higher efficiency higher power and thus
+higher efficiency with the same amount of fuel use but i cannot increase the spark advance too much
+because otherwise it will happen what i mentioned before that is increase of mechanical and thermal stresses
+because the piston is moving towards uh towards a high pressure level
+okay so something about the compression ratio because it's uh it's uh it's something that goes um that goes
+with the uh with the spark advance the spark advance um it's uh it's uh it's a parameter it's something
+that i can act on during engine operation while the compression ratio it's something designed that
+it's something that is designed i mean there is actually a couple of engines with variable compression
+ratio on the market but it's not what i'm trying to talk about here let's think about the uh the the
+simple the the basic configuration of an internal combustion engine so the compression ratio it's a
+design parameter it's something i cannot change during engine operation so higher compression ratios
+lead to higher efficiency you can see the chart here of the influence of uh for an ideal for ideal
+engines the influence of the compression ratio on the efficiency the higher the compression ratio the
+higher the efficiency for the reasons for the same reasons that i mentioned when i talked about the
+the spark advance an higher compression ratio increases the mechanical and thermal stresses because i
+need to compress more my fuel mixture and could lead to engine knock and self ignition because if i compress
+too much the fuel mixture it will self-ignite unless i use a higher octane number fuels
+so an important note is that if i want to have an engine with a with an higher compression ratio
+i have to act on the spark advance i may have to reduce the spark advance in order to uh in order
+to avoid the phenomenon the the phenomena that i just mentioned that is engine knock and self ignition
+turbocharged engines since the uh probably some of you may not know what turbocharged engines
+are uh basically it's engines that where the fuel mixture is compressed by an external compressor
+in the following we'll see how these engines since the the mixture is already compressed by this
+compressor in beforehand uh may have to use lower compression ratios thus reducing the basic thermal
+efficiency of the engine but this is uh just keep in mind that normally higher compression ratios lead
+to higher efficiency but the compression ratio cannot be too high in order to avoid uh engine
+knock and self ignition and keep in mind that it is a design parameter so you cannot change it
+during engine operation so we mentioned a few times before misfire knock and pre-ignition
+now let's see what these three things are all these three are combustion defects misfire when does misfire
+when does misfire happen misfire happens when the fuel is too much diluted into the intake air
+so it means that the that the mixer is too lean the air fuel ratio is too high in this case i don't have
+enough fuel so the combustion cannot occur what happens is that uh what happens is that i have my unburned fuel
+and uh and there that is uh that it is charged at the exhaust of the engine and this is pollutants
+and of course the driver is not happy because he's feeling a jerk in the in the engine acceleration
+and uh um and uh i'm throwing away money and uh it's of course pollutants that i am discharging at
+the exhaust of the engines out of the engine the opposite case is choke the case of choke is when
+the fuel is too little diluted into the intake air so it means that there is too much fuel respect to the
+air that i'm sucking into the combustion chains also in this case the combustion cannot occur
+the consequence is that i'm discharging unborn the fuel at the exhaust that is again pollutants
+and the driver is not happy because the uh since the combustion has not occurred for that cycle i will
+feel a jerk in the engine in the engine in the engine torque now let's talk about knock and pre-ignition
+that is the two phenomena that has that have to be avoided that have to be avoided in order to uh
+to break the engine what is knock knock is when the combustion is triggered by some other hot
+hot spot that is normally the edge of the exhaust valve in the combustion chamber after the start of
+the combustion triggered by the spark plug so you can see the animation here that what happens i have
+the the combustion triggered by the spark plug the combustion progresses um in some other place inside
+the combustion chamber i have another hot spot that triggers the creation of another flame front
+what happens is that i have two flame fronts that collide when the two flame fronts collide
+i have the release of a shock wave the shock wave progress inside the combustion chamber and basically
+is like i'm giving a i'm hitting with the hammer the the engine end so this is a very a very impulsive
+a very strong impulsive mechanical shock that i'm giving to the engine so it's something that in the long
+run may create the potential may create damage to the engine so knock happens when there is another
+hot spot that can trigger the combustions the combustion after the uh after the spark plug
+pre-ignition is very similar to knock but it's uh it's a lot worse respect to to knock because while
+less knock is acceptable in some way to have a few cycles where i have a little bit of knock of engine
+knocking that has to be of course mitigated that has to be mitigated it has to be controlled in order
+not to have mechanical damage pre-gnition is uh is worse it could cause a lot of damage to the engine
+so this happens uh pre-gnition occurs when the combustion is triggered by also still by some other
+hot spot in the combustion chamber but the combustion is triggered before the start of the combustion by the
+the spark plug so it means that the combustion is triggered by this hot spot a lot before the uh
+the piston reaches the top dead center so basically um it's like i have a you it's like i'm having an
+angie it's like i'm trying to use a huge spark advance i'm trying to use to use a huge spark advance
+and i have uh i have two combustions at the same time once again the collision of the two flame fronts
+a lot before the top dead center may cause uh causes a a dramatic increase in the mechanical and thermal
+stresses but pre-ignition is normally while knock may occur during the normal engine operation especially
+if i'm uh with uh with the with engine that uh that that are designed to operate with a lean with a lean
+mixer pre-ignition is something that could that should be avoided in uh that should be avoided always
+because uh the lot of damage that it can cause it's uh it's very high the amount of damage it can cause
+the pre-ignition is always a symptom it's always something that happens in when the uh when something
+is not working properly in the engine it could be caused by overheating so it means that the the
+cooling circuit of my engine is not working as it should the compression ratio is too high so it means
+that i've totally that i've totally messed up the design of my engine uh or uh yeah well basically
+that's it break mission normally occurs when there's a when there's something that is not working as
+expected in the engine normally overeating
+okay now let's see how we um how we we control the we control the fuel flow in uh how we control the
+fuel flow and that's the power in an engine as i said the power the torque and that's the power in
+internal combustion engine in a spark ignition engine is controlled by modulating the fuel flow
+so uh that's uh that's uh that's a schematic where you can see all the uh where you can see all the
+sensor where all the sensors involved in the uh in the process and let's follow this uh uh this uh
+this uh this this list in order to understand what happens as i said the air fuel mixer should be
+stoichiometric uh when the in order to have a fuel mixture an air fuel mixer that is stoichiometric uh
+as i said i have to regulate the um the airflow the airflow is modulated by this guy here that is the uh
+the throttle valve it's basically a valve that is uh that is able to choke the intake manifold in order
+to modulate the airflow how does it modulate the airflow if i choke it it's like when i have a so
+when i'm drinking my coke with a with a straw and i um and i close the straw with my fingers
+so basically what changes here since the volumetric flow for the uh the volume flow of the of the
+gases that i'm sucking inside the combustion chamber is fixed because it's fixed by the piston motion what
+changes is the air density inside the straight here between the um between the throttle valve and the
+uh and the combustion chamber what changes is the density when the valve is closed when this valve
+is closed the density is low when this valve is fully open the the density is higher so i have the uh
+the the density of the the air um the air density at atmospheric conditions when this valve is fully open
+so keep in mind that the throttle opening angle is related to the accelerator pedal pressure i mean
+when i say that they're related i mean that they are not mechanically connected but they are strictly
+related so keep in mind that the uh the more i push the accelerator pedal the more the throttle valve
+opens of course there is an actuator here with actuated with some logic by the engine control unit
+but uh but i mean they are very closely very closely related
+so once i've understood how i modulate the airflow inside the engine
+uh in order to uh in order to have a stoichiometric uh stoichiometric mixture i have to understand how much
+fuel to inject with this guy here that is the fuel injector located right before the intake port where
+the valve closes the intake manifold
+so i need to know how much fuel to inject
+the intake so if i since i want to have stoichiometric ratio i have to know exactly how much fuel i have to know
+um i have to know how much air i'm sucking inside the combustion chamber
+so in order to uh to know the uh the mess of air that i'm uh that i've uh uh that i've sucked inside the combustion
+chamber i need to uh to evaluate i need this all these sensors here basically this is not always present but
+these two the e80 and the map are always present what are these three guys maf is the mass air flow sensor
+this is not always present but it's a present of many times that is a sensor that is able to
+directly measure the uh the master flow the massive flow rate while these two guys here are the intake
+air temperature sensor and the uh manifold absolute pressure sensor so they are able to measure the
+pressure and temperature of the air inside the intake manifold why do i need to know the uh the
+pressure and the temperature inside the intake manifold because like that i can evaluate the i can
+calculate the air density once i know the air density the volume the volumetric airflow is established
+because it's grossly uh it's grossly fixed because it's established by the piston motion
+i can calculate the mess i can i can i can produce an estimate of the of the airflow
+so uh
+as i said uh once i know the mess uh the mess uh the the the mess of air that i've sucked inside the
+combustion chamber i know the how much fuel i need to inject inside the inside my combustion chamber as
+well in order to have the stoichiometric ratio i may need some feedback action some feedback in order to
+have a very precise regulation of the of the air of the air fuel ratio inside the engine
+this feedback this feedback action comes from the lambda sensor that is located at the exhaust
+because there are transients there during especially during transient conditions uh transient conditions
+uh errors in the measurements of temperature pressure and so on or at um at very high energy speeds
+uh or uh for uh uh phenomena dynamic phenomenon the dynamic phenomena in the uh in the intake and exhaust
+manifold uh there are many factors that can affect the goodness that may produce a little error on my
+estimate of the uh of the um of the m dot intake of the messware that i've uh that i've sucked inside the combustion
+chamber so in order to have a very good regulation of the uh of the of the fuel ratio i need some feedback action
+that comes from the lambda sensor the lambda sensor is able just keep in mind that it is able to measure
+the the concentration of the oxygen at the exhaust ideally as we said if we have stoichiometric combustion
+we are not going to have oxygen at the exhaust but some of you may say i have an oxygen at exhaust even in uh
+in a rich mixer conditions right
+so how does it work
+it works that i have a baseline estimate of the uh of the master flow coming right by the sensors here
+the signals coming from the sensors here are used by the engine control unit in order to compute
+a first estimate of the of the of the air mess flow and eject some fuel based on that estimate
+at the exhaust uh the lambda sensors says that there is no oxygen at the exhaust the engine control module
+uh takes this information from the lambda sensors and decide and establishes to inject for the next
+cycle a little bit less of a little bit less of fuel so once again injector injects a little bit less
+of fuel that respect to the previous cycle the combustion occurs this time the lambda sensors
+detects that there is some oxygen at the exhaust so the signal from the lambda sensor goes goes to
+the engine control module the engine control module still using the information coming from the sensors
+and the feedback from the lambda sensors decides to inject a little bit less a little bit more fuel
+respect to the previous cycle so basically the regulation of the of the of the air fuel mixture
+is something that uh you can see since the the regulation is very fast the uh the dynamic of this
+sensor is very very is very very fast if you could look at the lambda uh at the value of the of
+the lambda coming from the lambda sensor you will see it chatter between zero and one because basically
+the uh the the the air fuel ratio is always chattering around 14.7 but since the regulation is very very fast
+it's uh and the end is very very fine uh this is not important because on average we will always be
+somewhere around 14.7 in terms of air fuel ratio
+everything clear questions
+it was clear okay great let's go ahead now let's talk a little bit about the difference between uh
+just an introduction because uh in the following in the following we are going to talk about diesel engines
+in a diesel engine respect to uh here in this animation you have a diesel engine on the left
+and the gasoline engine on the right the first difference between the diesel and the gasoline engine
+is that the intake is free there is no throttle body so the airflow depends on depends roughly
+in a naturally aspirated engine i mean when there is nothing that compresses the intake air it depends
+roughly only on the engine speed uh okay the first consequence of having a uh of not having a throttle valve
+is that the diesel engine always operates with excess air so it means that in a diesel engine the the
+mixer is always lean respect to a gasoline engine where we always want we want a stoichiometric crash all the time
+another difference is the uh is how the combustion takes place the combustion in a diesel engine
+occurs in most since the compassion is not triggered by a spark plug like a like in a spark ignition engine
+in a diesel engine the uh the the combustion occurs by compression i mean the piston compresses the air fuel
+mixture so much so much that at some points itself ignites and the combustion occurs
+and since the combustion up uh occurs in a totally different way in a diesel engine respect to a
+gasoline engine the combustion lasts for longer less you know in a gasoline engine you can uh uh yes i know
+i mentioned that the that the combustion uh depends on the uh that the combustion takes a finite time
+because of the finite speed of the uh the flame front but ideally you can see that in a in a gasoline
+engine the combustion is uh the combustion is very very quick compared to diesel engine in a diesel engine
+the combustion takes a good part of the expansion stroke in order to be completed
+this is another difference another difference is that in a diesel engine there is no spark plug because
+the combustion starts spontaneously for the high pressures and temperatures reached in the engine so
+it means that the piston presses compresses the uh the gases the combustible gases the air fuel mixture a lot
+more respect to a spark ignition engine the typical endocomba the the typical uh the typical maximum
+pressure of a diesel engine are above 100 bars compared to the 50 60 70 bars that can be attained in a
+in a spark ignition engine in order to attain the desired pressures the compression pressures are higher
+in a diesel engine respect to spark ignition one for a spark ignition uh a benchmark number that you
+could keep in mind for the compression ratio is somewhere around 10 9 while for the diesel engine
+the compression ratio is normally between 15 and 20. another difference between these two engines is
+two is the uh is the fuel that we are using in a since in a diesel engine we are using diesel fuel
+that uh unlike gasoline is not volatile it's not volatile at all so uh while in a in a gasoline engine we
+could just uh inject uh we could just use a very cheap injector in the intake manifold that that when we
+injected the fuel it was immediately dissolved inside the inside the the airstream in a diesel engine we
+couldn't do that because the fuel is not volatile uh so we need an injector normally
+directly mounted inside the combustion chamber so the injection occurs immediately it occurs directly
+in the combustion chamber and not in the intake port like it normally occurs with spark ignition engines
+engines although there are uh direct injection engines uh that use gasoline as well uh in a diesel engine
+uh the uh the diesel fuel as i said is not volatile so it needs to be injected at very high pressures
+in order to be atomized while in a uh in a gasoline engine since the the fuel was very volatile we just
+injected it and it was immediately dissolved in the intake s3 okay so let's go ahead
+the main characteristics of a diesel engine in a diesel engine since the uh the fuel is injected with
+a spray of um not very volatile fuel i have this mist of droplets that is dissolved in the
+dissolved inside the uh inside the combustion chamber inside the intake air but since it's not volatile
+as i said we have a mist so we have all these tiny droplets of fuel dispersed inside the combustion
+chamber so the air fuel mixture is disomogeneous by its nature since i have liquid droplets inside uh inside
+the air inside the air um inside the the intake air
+so i may have areas no not i may have i have areas where the where the afr is zero like in the fuel
+droplets because i have no air i have just fuel so the air fuel so the uh see so the air fuel ratio is
+locally zero and the areas where i have just there and the and so the fr is infinity although the global
+the overall air flow air flow ratio is a lot higher than the stoichiometric value
+another important thing is when does combat when does the injection occurs the injection occurs when the
+pressure and temperature are already high enough in order to uh to uh for the combustion to take place
+but it takes some time uh to for the combustion to start so it means what do i mean i mean that i
+have the piston that compresses the uh that compresses the the air just the air because the fuel is injected at
+at some point by the injector the air is so compressed that the pressure and temperature
+conditions are are already good for make the combustion start but after that i've injected the fuel
+i have to wait some time before the combustion starts and this is physiological it is this is due to
+how the combustion occurs and it depends on the fuel and it depends on temperature a lot on the temperature
+at the time of injection a lot this time this finite time that i have to wait before the combustion
+starts is called the ignition delay we'll see later in detail its influence
+if you think about it this time as i said depends on the fuel ideally i would want this time to be the
+shortest possible because if this time would be something like two seconds i could have an engine
+moving at an extremely slow speed because i have to wait a very long ignition delay when the combustion
+starts because if i had the faster engine i think if the uh think about when the uh what would happen if
+the ignition delay was too high if it was a if at limit um i think uh an extremization would be think
+that ignition delay would be higher would be longer than the whole duration of a cycle
+so ideally i would want the ignition delay to be the shortest possible one of the metrics one of the
+indexes that made that measure the quality of diesel fuels is the city number city number that is uh
+for commercial diesel fuels between 50 and 60. uh one of the things that the city number measures is
+the ignition delay so uh the highest the uh the higher the the city number the the low the um the
+shortest will be the uh the ignition delay so city number high good low bed low city in a high city number
+means a short ignition delay and that's it another difference is in the how the combustion uh how the
+what the combustion mechanism is while the uh the the combustion in the spark ignition engine
+uh is was pre-mixed it's normally denoted as pre-mixed technically meaning that the uh that the the air fuel
+mixture is obvious there is uh when it gets inside the combustion chamber is already suitable to have
+combustion in a uh and i have a three and i need to trigger uh and i just have to trigger the combustion
+with a spark plug the combustion in a diesel engine is diffusive we'll see later what it means
+okay another thing is that we already mentioned that the intake is free there is no throttle body
+inside the intake manifold of a of a diesel engine so it means that i'm not that i cannot use the airflow
+i i'm not going to use the airflow to modulate the torque and then the power like i did in a spark
+ignition engine by modulating the airflow i won't i won't use it to control the to control the power
+but you but you can imagine that the quantity of of of air that i'm that i'm sucking inside the
+combustion chamber is always the same so another huge difference with a spark ignition engine is that in
+diesel engines i can control the torque and then the power by directly controlling the amount of fuel
+that i inject so more fuel uh more fuel i inject more torque i produce more power i produce so no need
+to control the the the intake airflow another important thing is the efficiency of a diesel engine
+as probably many of you many of you will will already know diesel engines have normally a higher
+efficiency respect to respect to uh respect to the spark ignition respect to gasoline engines this
+is due to two factors the absence of the absence of the throttle is uh uh is uh uh
+it implies a loss it's inherently a loss already because uh basically i'm using something that
+chokes the flow so it's a it's a it's a pressure loss so it's something that implies it's something
+that inherently uh causes a loss and i need that loss in order to control the power in a spark ignition
+engine while i don't need it in a diesel engine this factor uh along with the with the air compression
+ratios allow higher efficiencies in a diesel engine compared to spark ignition engine
+so let's spend the word on the combustion on a diesel engine i try to be uh to be the the simplest
+as possible in this uh in explaining this thing because otherwise it can be uh because it's a it's a
+lot more complicated in reality but i'll try to to to keep up to keep the focus just on important things
+as i said we have this uh this spray of fuel that is injected inside the combustion chamber
+now let's make a zoom in this part here inside this mist of air and fuel droplets
+as i said we have the other part where the uh lambda is uh uh lambda is just uh uh
+uh it's mentioned in the figure so uh you need the definition of lambda lambda is the ratio between
+the current f fuel ratio and the stoichiometric fuel ratio so lambda is ideally one when the combustion
+is stoichiometric and it's higher than one when the combustion is uh when the combustion is uh when the
+the combustion is lean, and is lower than one when the air-free mixture is rich.
+So in the fuel droplet, lambda is zero, and the other part in the air that is not in the
+rest of the air inside the combustion chamber is infinity.
+So let's make a zoom around the fuel droplet.
+We have the liquid kernel of the drop that is where we have lambda equals zero.
+Keep in mind that the temperatures and pressures inside the combustion chambers are very high.
+So since the temperature is very high, I mentioned that this fuel is not volatile, but at that
+temperature, several hundred degrees, that the diesel fuel is volatile, so it evaporates a little bit.
+So around the liquid droplet, we have the fuel vapors.
+We have lambda that is between zero and one.
+And the concentration of the fuel gets lower and lower as we get far radially from the fuel drop.
+So we have zero, 0.1, 0.2, 0.3, etc., until I get to an area where lambda equals 1.
+So it means that in this area here, the mixture conditions are stoichiometric.
+In this area, we have the reaction zone.
+The reaction zone, you can see it as a flame front that doesn't move and we have it repeated
+an infinite number of times because I have a reaction zone around each droplet inside this mist.
+What happens in the reaction zone zone? I said that it is like the flame front that we had in a spark ignition engine.
+In this reaction zone, that is the area where the actual combustion occurs, we have the combustion
+that is fed from one side, from the inner part of this sphere here, by the fuel vapors coming from
+the evaporation of the fuel drop. And the fuel is fed from this part here, ideally, coming from the fuel vapors.
+While the air necessary to have the combustion comes from the outer part, where we have air and no fuel.
+So basically, we have air coming from the outside and fuel coming from the inside,
+and the burnt gases that are scavenged that go away in the combustion chamber.
+What happens? As the combustion progresses, we have the temperatures that get higher and higher
+inside the combustion chamber, and the fuel drop that keeps on evaporating. So it gets smaller and smaller.
+On the other hand, we have the burnt gases that are produced, and so the oxygen concentration
+around this droplet goes down. It decreases the oxygen concentration. At some point, if the oxygen
+concentration outside the reaction zone gets too low, the combustion may stop. This may happen in case,
+for example, if I have imagined that the air around the droplet is not moving. So I have a lot of burnt
+gases that are being scavenged, and at some point, I only have a lot of burnt gases around the drop,
+they are only the fuel drop. So it means that I have
+imagine that this happens when I have poor jet mixing or low turbulence inside the combustion chamber,
+because if I had high turbulence or very good jet mixing, I would have the air recirculating around
+the droplet, and so I wouldn't get in the conditions where the burnt gases basically surround the fuel
+drop and the combustion, the oxygen concentration gets too low. So imagine that I have so many burnt gases that
+the oxygen concentration goes below the acceptable conditions to have combustion,
+so that the combustion stops before the combustion of the drop is completed. So I will have a small
+kernel of liquid fuel surrounded by burnt gases at a very high temperature, in an environment at a very high
+temperature and pressure. What will happen will be the so-called carbonization reaction. That is something
+that happens to hydrocarbons when they undergo very high temperature conditions in lack of oxygen.
+It's called the carbonization reaction. Literally, what kind of molecules are fuels normally? It's
+molecules that are made of carbon, hydrogen, and oxygen, ideally, or even carbon and hydrogen only,
+like gasoline and diesel fuel. What happens in the carbonization reaction, to make it short,
+is that I have these compounds made of carbon and hydrogen that cannot be burned because there's
+not enough oxygen in order to complete their oxidization. So what happens is that since the
+temperature is very high, the chemical bonds between the carbon and hydrogen are broken because of the
+high temperature, the hydrogen just goes away because it's a gas, and the solid kernel of carbon remains,
+that is a grain of soot. So what happens, that grain of soot multiplied by some million becomes a cloud of
+smoke at the exhaust of your diesel engine. So this is a very simple, a very simple explanation of how
+soot is produced inside the diesel engine.
+So it comes, it comes spontaneous to imagine that in order to have less fuel production,
+I need, I may want this fuel drop to be the smallest possible, because if it's smaller,
+I can burn it completely, because the oxygen concentration gets too low and stop the combustion.
+So the smaller the fuel droplets are, the easier it gets to vaporize them completely,
+and so have a low soot formation at the exhaust. Questions?
+No, it's all clear. Okay.
+Okay, great. So let's go ahead so that we can have a 10 minutes stop in a, in a, in a short while. So
+um, what I wanted to mention here is that, is the ignition delay that I mentioned before. That is the
+time that I have to wait, although I have the good conditions of temperature and pressure inside the
+combustion chamber, it's the time that I have to wait after that I've injected the fuel in order to,
+to have the combustion to start. As I mentioned, the ignition delay is extremely sensitive with
+temperature. As you can see in this chart here, just 200, uh, just 200 degrees, 200 degrees in, uh,
+in, uh, of change in temperature may lay, may, may, may lead to, uh, the comedy, the ignition delay to become
+a hundred times higher, because this is a logarithmic scale. It's not a linear scale.
+So this case here, 1100 degrees, the ignition delay is 100 microseconds. This case here, 900 K of
+temperature, the ignition delay is 10,000 microseconds. So it gets, uh, a hundred times higher with a change
+of only 20, uh, 200 degrees. So it's very, very, very sensitive on temperature. Uh, so, especially in
+case of cold start, in diesel engine, I'm going to find the glow plugs that are used in cold start.
+Glow plugs are basically resistances. They are installed in the, in the, uh, they are installed with
+the tip in the, in the combustion chamber. So that, uh, uh, when I have to start the engine in, uh, in,
+uh, in, um, in very cold conditions, the, this tip gets very, very hot for a, just for a one,
+for just for a couple of seconds after I turn the key before, uh, before triggering the, before
+starting the, the starter motor. And it creates a hot spot that comes very useful because locally,
+around the tip of the glow plug, since the temperature will get, uh, will get high immediately,
+the, uh, the ignition delay around the, uh, the, the tip of the glow plug, uh, the ignition delay
+will be reduced because the temperature will be higher. So that's why I need glow plugs in a diesel
+engine in, uh, when I have to cold start the engine. Another thing that is worth mentioning is
+the influence of, uh, uh, whereas in the spark ignition engines, uh, I needed the spark advance
+because the combustion took a little bit of time to get to, uh, to, uh, to raise the pressure, uh,
+to a good level in order to have, uh, to have torque at the crankshaft. And I, luckily in a, in a diesel
+engine, I won't have a spark advance because I don't have a spark plug, but I will have injection advance.
+So I need the, since I have to wait for the, for the ignition delay this time, because I don't have
+a flame front, like I had in a spark ignition engine, but I have to wait still for the, uh,
+for the ignition delay. I'm going to need an injection advance. All the considerations we made
+for the spark advance in a gasoline engines apply exactly to the injection advance in a diesel engine.
+So it should be, it should be long enough. Um, the advance should be long enough in order to have,
+uh, to have the good synchronization between the pressure peak and the, uh, and the crankshaft
+position and so the piston position, but not do I in order to keep the mechanical and thermal stresses low.
+So the same, the exact same consideration apply as the spark advance, uh, for the spark ignition engines.
+Now, just a word on the pollutants.
+When do I produce the suit suit? The two main poll, uh, uh, uh, just an introduction. The two main
+pollutants for a diesel engine are suit and NOx. NOx are the, uh, nitrogen oxides.
+The suit is produced when locally I have locally or globally, I have too little oxygen because we,
+uh, we've seen that the suit is produced when the combustion stop, uh, when the combustion stops due
+to, uh, due to lack of oxygen. This may be because of pure, uh, air fuel mixing. So either low turbulence
+or, uh, injectors that are not able to, uh, are not able to vaporize, uh, to vaporize the fuel properly.
+Another factor that may cause a suit production is, uh, uh, the temperature too low. So, uh,
+the injection advance is too, uh, it may happen that the, uh, the injection advance is too low.
+And, uh, in some cases, but it's, uh, it's conditions where the, where the engine is not
+operating properly. In some cases, the suit can be produced also when the temperature is too high,
+but I don't want to go into detail of that. On the other hand, uh, nitrogen oxide production.
+As I said, the atmospheric air is made of 79, uh, I probably didn't mention that, uh, the air that
+we breathe. The atmospheric air is made, uh, of, uh, some 79% of nitrogen and just 21% of oxygen.
+Nitrogen and oxygen in the atmospheric air are in their molecular form. So it's, uh,
+uh, it's a molecule made of two atoms of oxygen and the molecule of nitrogen made of two, uh, two atoms
+of nitrogen, O2 and then two, respectively. The molecular nitrogen is usually considered
+an inert gas. So it means that is not, uh, that this doesn't take part in the combustion process,
+but this is true only at low temperatures.
+While it can be considered, uh, uh, it can be considered, uh, um, an inert gas for a spark ignition
+engine because the temperatures that we, that are reached in the combustion chamber as are not that
+high. Although some, uh, nitrogen oxides are also produced in a, in a, in a gasoline engine,
+in a diesel engine, uh, in a diesel engine, we produce, we may potentially produce a lot
+of nitrogen oxides because the temperatures are basically higher.
+Since the temperature of higher are higher, the nitrogen passes from the molecular form
+to the atomic form. This is due not only to the higher temperature, but also to the longer combustion
+times. So we're going to have the decomposition of nitrogen and oxygen from their molecular form
+to their atomic form, N and O. Uh, another thing. In a diesel engine, we're going to have plenty
+of excess oxygen that can oxidize the atomic nitrogen that conversely to, uh, to, uh, in opposite to its
+molecular form and to atomic nitrogen is extremely reactive. So it's not inert at all. It's very, very,
+very reactive. So in these cases, by the, uh, by the, uh, coexistence of all these conditions,
+what happens is that nitrogen oxidizes in a diesel engine. It can oxidize, it, it can oxidize a lot
+more than what would normally happen in a spark ignition engine. So we can have, uh, nitrous oxides,
+and no N2 and also N3 actually, uh, as pollutants in a diesel engine. And this is the worst pollutant
+that we could have, uh, because it's the pollutant that is taking to the death of diesel engine, uh,
+due to the, uh, strict restriction regulation along years. The, the, the limit and factor,
+the limiting factor is the, uh, is the limitation of, uh, nitrous oxides.
+Okay. So we have seen what the, uh, what the two main, uh, what the two main pollutants are,
+soot and nitrous oxides. Uh, just a few observations. The soot is basically produced,
+is basically unburned fuel. So it means that the engine is operating in low efficiency conditions.
+One of the things that may produce, uh, that may produce soot is, uh, low in chamber temperature.
+On the other hand, nitrous oxides are produced due to the higher temperature
+in the combustion chamber in a diesel engine. So, uh, high temperature and excess oxygen. So we have
+nitrous oxides that are produced by a temperature. Soot is produced by also by low temperature and low
+efficiency. But if you know some of thermodynamics, you may remember that in an engine, in, uh, any
+machine, in any, uh, in, uh, in, uh, in any, any kind of engine, uh, doesn't matter if it's an internal
+combustion engine or a turbine and so on, the efficiency is higher when the maximum temperature of the
+thermodynamic cycle is higher. So what does this mean? It means that, uh, nitrous oxides are produced
+because the efficiency of a diesel engine is very high. While on the other hand, soot is produced
+when the efficiency is low. Soot production is a, uh, is a consequence of, uh, is a consequence of low efficiency.
+Okay. Questions?
+No, it's clear. Okay. Okay. Great. Let's go ahead. Just, let's spend the word about the common rail injection.
+That is the, um, the, uh, the, uh, the, the most common, uh, the most common injection system used by
+I, um, I, the, I, they're saying a hundred percent of, uh, diesel engine manufacturers.
+Okay. This is, uh, uh, uh, very basic schematic of the system. So we have a fuel tank. The fuel tank,
+uh, uh, uh, gets the fuel, uh, um, basically is connected, uh, is connected to a, to a gear pump,
+to a low pressure of fuel pump that, so that the fuel is sent to a high pressure pump. The high
+pressure pump is normally connected, uh, is normally, uh, powered by the, uh, by the crankshaft of the
+engine. So that is, is directly connected to the, to the crankshaft. The, uh, the high pressure,
+the highly pressurized, um, the highly pressurized, uh, fuel is sent to the fuel rail. This fuel rail,
+you can see it, uh, you can see it as an hydraulic accumulator where we have, uh, uh, um, where we
+have a plenum. We have, uh, uh, uh, we have a, uh, proportionally higher volume of fuel always
+available at high pressure coming from the, from the high pressure pump. The comedy, the rail,
+the pressure of the rail is regulated by this pressure regulator. That is, uh, whose pressure
+is controlled by the, uh, by the engine control unit. But the most important thing is that,
+uh, this is an hydraulic accumulator. So it means that is a pressure buffer for, uh, for the fuel.
+So that, uh, all the injectors, one injector per cylinder,
+as always, uh, uh, fuel at very high pressure at its disposal to be injected.
+These injectors are normally piezoelectric. So, uh, they can, uh, they can be opened and closed
+very fast, controlled by the engine control unit. They have a response time that is very, that is
+very low. So low that, uh, uh, in a few milliseconds of duration of the, uh, of the useful, of the phase
+that we can use for injection, we can have an injection pattern like this. So think that in one,
+two milliseconds, we can have an injection path like this. We can have five, we can have the five
+injection inside an injection phase, just one or two milliseconds.
+Uh, this multiple in jail of this multiple injection is one, each one of these has a role.
+We will see it in the following. Okay. So the pilot injection that is, uh, that takes place, uh,
+uh, quite a, uh, quite a bit before the, before the top dead center, uh, has the role of, uh, heating
+up a little bit the temperature, taking the temperature a little bit up in the, the combustion
+chamber before the main injection. And it normally occurs a lot before the top dead center.
+The, uh, the scope of this injection is to increase the temperature inside the, inside the combustion
+chamber enough, uh, in order to reduce the ignition delay. Then we have the pre-injection. The pre-injection
+reduces oxygen availability at the time of the main injection. Since, uh, it reduces the oxygen
+availability, it reduces NOx production. But as we said in the previous, in the previous slide,
+when we talked about the pollutants, what happens when we have, uh, less, less, less oxygen available.
+Uh, that we produce more soot. We produce more soot, but we produce, uh, we produce more soot,
+but we produce less nitrogen oxides. Then we have the main injection. That is the, uh, the main amount of
+fuel that is injected in order to produce the torque and then the power. After the main injection, we have
+an after injection. A little bit after the, um, that is, uh, normally, normally it's made, uh, just a
+little bit before the top dead center, a little bit later, uh, than the top dead center. The scope of the
+after injection is to promote the oxidation of the excess soot that we produce, that we have produced
+because of the pre-injection. And also to sustain the combustion process longer after the main combustion.
+So basically it has to, uh, the, uh, the goal of the after injection is, uh, is twofold. So try to burn
+the excess soot that we have produced because of the pre-injection and sustain the combustion, uh, after
+the main injection. Then a lot later than the top dead center, we have the post-injection. The post-injection
+is not, uh, uh, it's not made all the time. It's not made all the time during engine operation.
+But, uh, the only purpose of this injection, since it doesn't participate in any way in the production
+of your, of torque that we can, uh, that we can harvest at the grand shaft because it, uh, it's, uh,
+it's made, uh, too late to respect to the top dead center. Uh, the only, the only scope of this
+injection is to, uh, is to increase the exhaust temperature. Why do we need to increase the exhaust
+temperature? Because, uh, the, uh, high exhaust temperature is necessary in order to carry out
+the, uh, DPF regeneration, the regeneration of the, uh, of the diesel particulate filter. So the post-injection
+takes place only when we need to regenerate the, uh, the, um, the, uh, the diesel particulate filter,
+the diesel component that we will see, uh, that we will see in a, in a while. It's an after-treatment
+system, basically. Okay, we finished the first part. Then I have, uh, another, uh, uh, another deck of
+slides to show, but... Okay, so let's jump this first slide. Uh, now let's try to give an answer
+to this question. How to increase the power of an internal combustion engine?
+The two possible solutions are, uh, either to increase the engine displacement using larger
+cylinders or use, uh, more cylinders of the same size or, um, another thing that I could do, uh, is
+try to increase the maximum engine speed since, uh, as you may already know, the, the engine power
+is given by the product of the, uh, of the output torque times the, uh, the angular velocity.
+So if I increase the engine speed, increase the angular velocity, and so I can, then I can increase
+the power. Increasing the engine displacement means that I can, uh, that I can use, uh, that I can, uh,
+uh, uh, that I can have more air at the intake. I can increase the airflow so I can, uh, so I can burn
+more fuel and basically again obtain more power. The third way and the one we are more interested in
+is, um, is to increase the maximum torque by increasing in-cylinder maximum pressure.
+Increasing in-cylinder maximum pressure, what does this mean? This means that, uh, um, that I can, um,
+if I increase the, uh, the in-cylinder pressure, I can, uh, um, I, uh, by doing this, I increase
+the density of, uh, the intake air and, uh, so, uh, the, uh, the mass of the air that I'm sucking inside
+the combustion chamber is, um, is, uh, is higher and, um, and so I can use more fuel, I can burn more fuel.
+Um, so the thing is more air, more fuel, more power.
+The main way to, um, to, uh, to do this is using, is turbocharging.
+That is, using a turbocharger that is the, the device that you can see here. The goal is to have
+more air, so more oxygen, and so more fuel that can be used in order to obtain more power.
+The, uh, the practical way, uh, to obtain this is using a compressor that increases the pressure
+in intake manifold. The compressor is mechanically, uh, connected on the same axis to a turbine.
+So, uh, the device that you see here, here on the right with the blue arrows, it's the compressor.
+That is, uh, how does a compressor work, basically. There is this component here. This is the, uh,
+uh, this is the rotor of the, uh, of the compressor that, uh, spins very fast in a way like, uh,
+I don't know if any of you has ever taken a, a hair dryer apart. Inside there is, uh, there is a rotor
+that is moved by a motor that, uh, not, not in here. Here, here, there's no motor. Here, there, here,
+there is, uh, the, um, the rotor is moved in a way that we will see. Uh, this rotor spins very fast,
+and so the air is, uh, uh, is pushed outwards on, uh, on this, uh, on the stator here and, um, and, uh,
+and is given and is, uh, is, uh, is, uh, is, uh, is conveyed, uh, is rooted to the, uh, to the inlet manifold.
+So, uh, how do we, how do we move the rotor of the compressor? Uh, we don't have a motor, as I said,
+but we have a turbine connected in the same axis. We have on the same axis the rotor of the compressor
+and the rotor of the turbine. The turbine, without going into too much detail, it's a, it's a thermal
+machine that allows to, uh, to use the energy from the, uh, from the exhaust gases, that is basically
+waste energy. We expand them into this turbine and we can get mechanical work on this axis.
+This, uh, the, uh, the rotational motion at, uh, at the turbine, since they're connected on the same
+axis, this mechanical power obtained at the turbine level can be used in the compressor in order to
+compress the intake air. So, the good thing is that, since we are using the energy from the exhaust
+gases, uh, I already mentioned that it's waste energy, so it comes almost for free. And, um, the
+assembly that you see here in the figure is called a turbocharger because it's, uh, it's, uh, it's
+basically two machines, compressor and turbine connected on the same, uh, connected on the same axis
+and, uh, basically they form a, uh, uh, just one component. What are the pros and cons of turbocharging?
+Uh, let's say that the main objective of adopting turbocharging in an indirect injection engine
+is to, uh, is to increase the torque and thus increase the power so that we can obtain, so that
+we can obtain a higher power. You hear me? Okay. We were on slide three.
+Indrit, do you have a question? No, it's just, we were on slide three. We're
+further away, but we were just on slide three.
+I cannot hear you.
+You were in slide three. Now it's okay. You were just in slide three when, uh, explaining.
+Oh, okay. Okay. Sorry. How did this happen?
+Um, that's strange.
+A bit. So try to restart the presentation.
+Yeah, that's, uh, that's all I can do, basically.
+Okay. I'm gonna share my entire screen so that, uh, there is no...
+We are sure that there's not going to be any problem anymore. So the thing that I was talking about...
+Let's start from, let's start over from, uh, from slide four.
+So, as I said, uh, can you see, can you see the presentation now?
+Yes.
+Yes.
+Yes.
+Yes.
+Yes.
+Yes.
+Okay, great. Okay, great. So we have the compressor on the right and the turbine on the left.
+The compressor rotor, the rotor rotates, takes the mechanical energy from the turbine here that uses
+the waste energy from the exhaust gases. The, uh, the turbine rotor and the compressor rotor are
+connected on the same axis. So they rotate all together. So we get, uh, we, uh, harvest mechanical
+energy here at the turbine level. This mechanical power is used in the compressor in order to compress
+the intake gases that are, that are conveyed to the, uh, to the inlet manifold. So that's how it
+works, basically. Uh, do you have any questions? No.
+Okay. Okay. Let's go ahead. Now, the pros and cons of turbocharging. As I was about to, uh,
+as I was about to say in a spark ignition engine, the main objective is to increase a higher power
+with an engine of the same displacement. So I can obtain a higher power with an engine of a small
+displacement because of the, uh, the, the air that I make, the air that I'm, uh, that I'm giving at the
+intake has a higher density than the, than the ambient air. So, um, another advantage, uh, just keep this
+in mind, although I had to cut the, uh, the part that talked about this in detail from the, uh, from the
+previous, uh, from the, uh, from the, uh, the deck of slides that I used this morning. The presence of
+the compressor, uh, that pushes the air into the engine, uh, reduces the overall pumping losses. What
+does this mean? Uh, as I, the, the piston by going, uh, but when it goes downwards to suck in the intake
+air, basically, uh, has to, uh, has to, uh, has to, has to spend some mechanical energy to, um, to, uh, to,
+uh, to, to suck in the intake air. And, uh, the energy that has to spend, uh, um, is due to the, uh,
+is due to the presence of the, of the puppet valve and the, and the throttle body that they choke the
+flow, the air flow, uh, into the, into the intake line, to the, uh, from the, from the throttle body
+to the, uh, to the combustion chamber. So the, uh, the presence of the compressor, since it, uh,
+compresses the air, it mitigates this effect in some way, because the air is already compressed.
+So the, uh, we are mitigating the pressure drop across the, uh, across, uh, not, not the throttle body,
+because the throttle body is supposed to be wide open, because increase in power,
+it's an increase in maximum power, but the, the pressure drop induced by the, by the puppet valve.
+So, um, the presence of the compressor, that, uh, compress, that, uh, boot that pushes in the air
+inside the combustion chamber, and the piston doesn't have to spend any, we don't have to spend any
+mechanical energy at the piston level in order to suck in the air, as we, uh, should do if, uh,
+we didn't have a compressor. Just, uh, keep in mind that in, uh, especially in, in very high load
+conditions, the, uh, uh, the, uh, the presence of the compressor, uh, increases, uh, may increase
+a little bit the efficiency. In a diesel engine, on the other end, the, uh, the peak power and the
+efficiency are always increased, because the, uh, because I'm using the, um, the, the diesel engine
+is not, uh, doesn't have to, uh, doesn't have to operate in a stoichiometric, uh, stoichiometric
+mixture conditions. So, uh, since, uh, a diesel engine is made to always operate with excess air,
+uh, we are using, uh, we are using, uh, in the turbine, uh, an energy that would be otherwise, uh,
+wasted. So, uh, the, uh, the peak power and the overall efficiency in a diesel engine,
+by using the turbocharger, are always increased. Conversely to a spark ignition engine.
+Just, uh,
+Okay.
+Okay.
+So...
+So let's go ahead.
+Another pro, or another, uh, positive point of, um, uh, of, um, okay, I already mentioned this,
+actually, in a spark ignition engine, in some cases, especially when the, uh, when the turbocharger
+has been carefully, has been carefully chosen in order to maximize the efficiency in certain areas,
+we can obtain, uh, we can obtain an increase in the, in the overall efficiency of the, of the engine,
+of the turbocharged engine, respect to the natural aspirated one. Okay. The, um, let's, uh, uh,
+let's talk about the outcomes of having, uh, of having a turbocharged engine.
+The first of, uh, uh, uh, the, the cons is the, is the increased overall system complexity,
+because we're adding a component to this component, it will be, we knew, uh, is going to need the
+lubrication. Uh, this component, uh, is going to, uh, uh, will imply the presence of, uh, uh, of, uh,
+of, uh, some other components that we will see in the, in the, in the following.
+Uh, another aspect that is a con, but not very, uh, but, uh, it also has a positive side,
+is that the turbocharger introduces a series of degrees of freedom. That is, uh, a number
+of actuators that need to be good to, that need to be controlled in order to guarantee the best
+efficiency and integrity. Uh, I already mentioned that the, that the system, uh, that the system
+complex complexity increases. Uh, so the, uh, the main component that is worth mentioning,
+although it's not always present, is that, uh, the air compressed, uh, in, uh, by the compressor
+needs to be cooled before being fed to the, uh, to the engine. Why is this?
+Uh, guys, uh, I'm, uh, I have to, I have to take a call. Just, uh, give me a second.
+Okay. Okay.
+DG. Oui. Si. Si.
+Sì.
+Eh, sì, un po', sì, all'inizio?
+Mmm. Sì, penso un, penso tra le 10 e le 15 ore al primo kl hammer.
+Um, hm, sì.
+Sì, sì, no, ma è, ci sta come stima. Un paio di giorni, sì.
+Un paio di giorni, sempre a blocchi di, sempre a blocchi di una a due ore però, eh?
+Uh-hm.
+okay okay see okay okay guys i'm back sorry for the interruption
+okay
+where were we okay the intercooler the air that is compressed in the compressor has to be has to
+be cooled down before giving before being given as input to the to the engine because since
+the air is a gas so when it is compressed it heats up its temperature goes up so it needs to be cooled
+before being given as input to the engine because otherwise the uh the um the otherwise the system
+efficiency the uh the system the system efficiency decreases because basically for those of you are
+familiar with thermodynamics the the uh the lowest temperature or the lower temperature of the
+thermodynamic cycle goes up thus decreasing efficiency another potential disadvantage
+although this is uh very mitigated by by adapting some other some other systems in addition with the
+turbocharger is that the turbine and compressor assembly inertia may introduce a delay in the
+system known as turbo lag that is uh imagine that the uh that the uh that the shaft the turbocharger
+shaft rotates at several thousands of rpm by uh several thousands of rpm i mean that it rotates at
+uh a minimum of 50 000 rpm to a maximum of 400 000 rpm so it rotates quite fast and uh the the inertia of this
+component that rotates very fast introduces uh introduces an inertia introduced a delay inside the system into the air dynamics
+into the air in the exhaust dynamics this delay is known as turbo lag
+so this is the uh this is a very basic schematic of uh of um of the inlet and the exhaust line of our turbocharger engine
+so we have air at the inlet we have the master flow the master flow sensor we have the um uh the uh the
+temperature sensor that you that i already mentioned in the uh from this morning from the previous deck
+then we have the compressor inlet the air is compressed by the compressor it is cooled down by the intercooler
+the intercooler is is like another radiator that is located uh it could be located uh either on uh under the
+bumper or uh above the bumper or uh above the wheel it depends it could be located uh it could be located
+everywhere but uh it's just uh an a neat exchanger uh totally similar to the uh totally similar to the uh to
+the to the one that is used to uh to keep the to keep the um the the coolant uh the coolant cool
+then we have this component dgr let's not go into the detail with this one we're going to uh to talk
+about this in a while then there is the uh the dmap the manifold absolute pressure sensor intake valve
+then we have the exhaust line so exhaust valve we have again dgr we have the exhaust pressure uh the
+exhaust pressure sensor and then we have the turbine so we have the our hot gases from the exhaust that
+go into the turbine that allow us to get some uh to to get the uh to get some mechanical energy that we
+can use to move the compressor connected on the same axis with the turbine and then there is the
+tube outlet to the exhaust here on the turbine you see this evrt actuator that is the uh that is basically
+the um something that is called with another name uh it is called with another name in the following
+with this presentation it's basically this is the vgt the variable geometry turbine that we will that
+we'll talk about uh in a second so when i mentioned that there were some additional degrees of freedoms
+some additional degrees of freedom that are introduced by the uh by the presence of the
+turbocharger i was referring to the waste gate and variable geometry turbine
+the waste gate valve is a valve that bypasses a fraction of the exhaust gases that are sent to the
+turbine in order to uh without letting them pass into the turbine so basically this valve um takes a
+fraction of the of the of the exhaust gases and bypass them to the exhaust line without letting them
+pass through the turbine so basically we uh this valve prevents a part of the residual energy of the
+waste gases to be extracted and so basically the at the end of the at the end of the day we are reducing
+the mechanical power that we get at the turbine level by opening the uh the waste gate valve
+the waste gate valve opening is controlled by the uh by the cm and why why should we uh why should we
+decide to uh to to not to not to use some of the waste energy from the exhaust gases and let it bypass it
+right to the exhaust line this is done in order to limit the turbine speed to limit either the turbine
+speed or the boost pressure by boost pressure i mean the i mean the pressure induced by the presence
+of the compressor so on the intake line the boost pressure is the uh is the pressure increase that
+i obtain respect to ambient uh to the ambient pressure uh due to the presence of the of the compressor
+so the uh the engine control module denoted the ccm may decide if the turbine is spinning too fast or
+if the compressor is pumping too much air into the engine respect to the to the um to the operating
+condition to the current operating condition of the engine the engine control module decides to
+establishes to open this waste gate valve to a certain extent it opens it a little bit in order to
+bypass a fraction of the exhaust gases to the exhaust line so we reduce the mechanical power extracted
+the turbine level and so the mechanical power used by by the compressor and transferred to the intake
+gases so basically we compress we compress the intake air less
+so in order to limit the uh in order to obtain this information to uh to uh to make this decision
+to uh to uh to implement this policy the engine control module uses information from the ebp that is
+the exhaust pressure sensor this guy down here
+and the manifold absolute pressure this one these two are used this one on the exhaust line and this one
+on the intake line are used to establish whether i have to open the wastegate valve in order to uh because
+the uh because the intake care is at an excessive press pressure or because the exhaust pressure is
+too high if the exhaust pressure is why it means then more of a loading the turbine so basically the
+the wastegate valve is something that is used in order to uh in order to um to uh to in answer to to
+prevent mechanical damage to the turbocharger another component that does uh that does for sure pretty
+much pretty much a similar job to the wastegate valve but also something else is the variable geometry turbine
+let's not go into too much detail the variable what the variable geometry turbine does is modifying the
+the flow conditions at the turbine level by adjusting the inclination of this bay of these blades here
+so it increases or reduces the area available for the exhaust gases to pass through and to pass through
+and be conveyed to the uh to the to the turbine rotor so when the exhaust flow is high these blades open
+and they close when the um when the uh when the exhaust flow is smaller so that basically uh whatever
+what happens when uh uh when a fluid is forced to pass uh uh through a to a smaller opening it increases its
+speed if these blades would be more inclined if the fuel if the exhaust flow was lower basically the fluid
+won't be accelerated by these blades so i wouldn't extract any mechanical power i would extract little
+mechanical power from the turbine because of the low efficiency while if the flow increases if i keep
+this small inclination so the small opening of the veins of the turbine what would happen that the flow would
+be too much accelerated so i would i would have too much mechanical power extracted from the turbine and this
+may lead to over speed this may lead to speed in the first place in uh um in uh a second thing
+that uh that should that uh that the presence of the vgt avoids is the sonic clock i don't i don't remember
+the name of the block was only go in english just let me check
+the sonic block basically if this opening is too if this opening is too small and the exhaust flow uh
+the exhaust flow is too high what happens is that in the in the highest portion of this of this opening
+here between two blades the uh the speed of sound is reached by the exhaust gases and when the speed of
+sound is reached if we don't have a particular if we don't have a modification in the shape of the uh
+of the opening uh basically the fluid is not able to accelerate so when we reach the uh the the speed of
+sound the the the uh the the exhaust flow is locked so uh we need to have a larger opening otherwise we
+cannot uh we cannot uh we cannot increase the excess the exhaust flow anymore
+okay this is uh um as we said in uh in practice the variable geometry turbine can modify the flow
+conditions and uh uh through the example that i uh that i uh that i that i made you may have understood
+that another thing that the the vgt does is improving the efficiency of the of the turbine
+improving the the efficiency of the turbine brings another advantage
+the main thing is that is like having a turbine with different with n different geometries
+so it's like i'm not limited i'm not limited by the size of the turbine i i enhance by by using a vgt i
+enhance the range of uh operating conditions the efficiency that i can have and an advantage of the offer
+by this is that uh is that the the the maximum efficiency range of the turbine is is wider and this in some way
+in some way mitigates also the problem of the turbo lag because the turbo lag is due to the fact that
+imagine that i have a huge turbine a turbine with the large vein like this were like like in this
+convert but fixed like can they go into this configuration that i have that i have here with
+the vgt that is fully open what would happen that at partial loads when i have uh when i have a low
+exhaust flow um as i mentioned i would have the the fluid that would be accelerated the veins of the
+of the stator between the plates so i wouldn't i wouldn't have any uh i wouldn't have any any
+mechanical power that is extracted at the turbine level just little or no power would be would be
+extracted so this leads to uh to a non-optimal operation of the engine by having this by having
+this system that allows me to move the blades i can switch seamlessly between this configuration and
+this configuration that enhances a lot the uh the exhaust the exhaust flow the generation of power at
+the turbine level and thus the operation of the compressor on the other side and this is this
+implies the reduction of the turbo lag because it's like having n different turbines that can
+change their configuration so the turbo lag is is is very mitigated by the adoption of the of a
+variable geometry turbine another component is this guy here that i uh that i didn't that i just mentioned
+but i didn't explain the scope of this component that is the exhaust gas recirculation bulb
+as the name says the exhaust gas recirculation bulb recirculates the fraction of the exhaust gases
+from the exhaust line towards the intake line
+uh the exhaust gases are uh are inert they don't contain uh they don't contain any any fuel
+and they don't they contain uh less oxygen than ambient air if you think about diesel engine they
+contain the exhaust gas they contain the exhaust gases still contain some oxygen but a lot less than
+the than the ambient air so that we can we can consider them as inert as inert gases the introduction
+the introduction of uh inert gas inert gases at the intake uh implies that we have uh we have a mass of gas of the um we have the same mass of gas that this time is sucked in by the sorry
+sucked in into the combustion chamber that is made of exhaust gases and air so the mass is approximately the same as if we didn't have the exhaust valve but some of these gases are not taking part into the combustion process so it's like uh it's like uh it's like the
+approximately the same as if we didn't have the exhaust valve but some of these cases are not
+taking part into the combustion process so it's like it's like having a thermal inertia inside
+the combustion chamber because i have to eat up i still have to eat up the same mess of fluid
+but some of this doesn't take part into the combustion so since i've had this thermal inertia
+this lowers the in chamber temperature so this reduces the nitrous oxides production
+but since i'm lowering in chamber temperature as you if you remember what we mentioned before
+if we reduce the chamber temperature we also reduce efficiency
+so uh you may say uh why are we uh it's it's madness to introduce this component no it's not
+actually it's not really a madness because this reduces the uh the uh the nitrous oxide
+production that is really the thing and the the main goal of having this component on a turbocharger
+engine another reason why the nitrous oxide production is reduced by adapting any gr valve
+is that there is less oxygen available uh to be uh to to oxidize the um to oxidize the nitrogen
+in some cases with accurate design with accurate design of the system in it is possible to increase
+the engine efficiency a little bit by adopting the agr but it's the the increase in the efficiency is
+negligible and basically what we can try to do with an accurate calibration is to uh is to try to
+mitigate the downside of having an egr so uh so the egr doesn't really increase efficiency but we can do
+uh we can do something in order to uh to to reduce its negative influence
+okay one good thing about the egr is that the uh the exhaust gases that are recirculated and that are
+given as uh again that are given back to the intake of the engine already contain some suit
+this suit if is recirculated inside the uh inside the combustion chamber and involved in another combustion
+process uh two good thing may happen two good things may happen the first thing is that this
+suit is burned so the overall suit production may be reduced but another good thing that could happen
+is that if we have a small if in the in the initial exhaust egr charge we have small particles of
+suit uh if the if we uh when we recirculate this exhaust the exhaust the the suit particles may get larger
+because they could uh they could act as uh condensation grains for uh for other suit so basically we may
+obtain larger suit uh larger suit grains larger suit grains are good because they are more easily
+trapped by the diesel particle field particulate filter so this is a good thing the bad thing is that
+we are recirculating exhaust gases inside the valve with very narrow operative areas so uh since we are
+recirculating something that contains suit this this suit may be may create deposits inside this valve
+and this valve maybe uh maybe uh could get clogged uh in in the later life of the engine that is uh
+that is uh that is uh that is something that uh that some of you that have a diesel car with a
+with a with a high number of kilometers may have may have may have observed already
+so uh oh another thing that i didn't that i forgot to mention is that the the exhaust gases
+before give before being uh given back at the intake of the engine need to be uh need to be cooled down
+with this component that is an egr cooler is uh it's just a small heat exchanger that is used in order
+to lower the uh the exhaust gases temperature from uh 300 200 something degrees to uh to 50 60 70 degrees
+and so not heat up the um the uh the intake temperature too much and thus decrease efficiency
+okay now let's uh let's talk a little bit about gdi gdi stands for gasoline direct injection
+i mentioned a couple of time already that we may have gasoline engines with direct injection
+the ones we talked about this morning where uh we're all undirect uh undirect gasoline uh indirect spark
+ignition engines while i want to uh to talk a little bit about the uh about gasoline engines with
+direct injection that is gdi
+uh these engines this kind of engines is our engines that have uh that are still gasoline engines but
+has something in common with diesel engines
+mainly due to the fact that uh in these engines the injector the the fuel is directly injected into
+the combustion chamber without being injected in the at the intake port like in the cases that
+that we've seen so far okay the main thing is that since we have an injector we have a spray like we did for
+uh for the for us as we've seen for the for the diesel engine the the charge is uh could be disomogeneous
+uh could be you could be we could use a disomogeneous charge at low loads of at low engine loads so when
+the engine is rotating is rotating at a low speed and we are asking for a low torque to our engine we may
+operate this engine in stratified the charge mode what does stratified the charge mean it means that we have
+our spray that injects the fuel as the spray is the spray diffuses inside the combustion chamber
+the objective is to have a stoichiometric to a slightly rich mixture around the spark plug in order that
+the combustion starts immediately as the combine as the as the spark as the spark is ignited
+and lean mixture in the outer parts of the combustion chamber lean mixture means very lean combi very lean
+uh mixer at the uh at the at the outskirts of the combustion chamber
+why is this this this as i already mentioned may lead to an increase of the overall efficiency because of
+the fact that we're using lean mixture in at least in some part of the engine but these engines are
+designed in order to operate like this um and this kind of combustion this stratified the charge uh this
+stratified charge injection is adapted only when the engine is operating at uh low or medium loads at the best
+not for high loads another advantage of directing that is the main advantage actually of direct of that
+direct combat direct combat direct injection gasoline engines is that higher compression ratios can be
+achieved why can we achieve higher compression ratios because what is being compressed by the piston
+is not air fuel mixture but it's just air the um the combined the fuel is injected only at a certain point so there is no
+risk of um there is no risk of knocking until we don't inject the until we don't inject the the the fuel
+throttle another advantage is that the throttle can be uh since these engines are made to operate with the uh
+not with uh not in uh strictly stoichiometric conditions but these engines are are designed to uh to uh to be a
+little bit um to operate a bit with uh with a linear mixture uh the the throttle is still present but
+can be kept uh more open i mean the ball the um the policy the the opening uh policy of the of the throttle
+is not strictly related to the to the wider pressure i mean at least the uh what happens is that the
+throttle can be can be kept let's say can be kept a little bit more open than an indirect injection engine
+because the engine is designed to operate with more air than a rather irrespective to an indirect injection
+engine okay all these happens uh like this point one and the point three happen for uh low to medium
+loads at high loads the ecm normally switches to homogeneous charge mode so if you think about
+it when the engine is rotating very fast and we are requiring a lot of power to the engine
+a lot of turbulence a lot of fluid dynamic mixing is supposed to to occur here so basically the engine
+operates the ecm switches to the stratified charge mode to the uh to the uh to the stoichiometric uh to
+the stoichiometric operation mode so it operates like uh uh like an indirect injection engine with the
+advantage of having uh of having an air compression ratio higher compression ratio due to the fact that
+that the uh that the fuel is injected later uh after that the air is being compressed into the into the combustion chamber
+uh the bad thing is that the uh is that during the transience especially when especially when
+operating is stratified the charge mode we have to make an accurate control of the combustion
+uh this is particular this is advantage only this is advantageous uh especially in case of an hybrid
+powertrain because in an hybrid powertrain we have a there is a there is a almost a decoupling between the
+uh the power uh the power uh from the from the thermal unit and the power required by the driver through
+the accelerator pedal so basically the all these advantages are are more felt with an hybrid powertrain
+another disadvantage is always is of course the increased system complexity another disadvantage is
+that the the fuel injectors are very complicated are far more complicated than the ones that we can
+find in an indirect injection engine because they're more similar to uh they're more similar to the
+injectors that we may find in a diesel engine rather than the ones that we find in an indirect injection
+gasoline engine uh another disadvantage regards regards the the pollutants uh the first one is that
+since there is less time for extra for air fuel mixing because the uh there's just a very short lapse of
+time between uh between when the the fuel is injected and when the combustion is started by the spark plug
+there is a very little time for a fuel mixing so uh there is some suit formation uh differently from
+what happened with the uh with the with indirect injection gasoline engines and since the the combustion
+is linear compared to an indirect gasoline gasoline engine the uh the the nox the nitrous oxide emissions are
+higher okay another system that is found in uh in many in many engines especially uh especially
+gasoline is vvl and vvt variable valve lift and variable valve timing variable valve lift
+as the name says means that it's a system that um all these systems are um are uh are always
+implemented mechanically in a different way by by uh by each manufacturer each manufacturer has its own
+see as its own system like bmw bmw as valvetronic uh for uh valvetronic that is a mixed vvl vvt system onda
+uh that is uh that is basically uh that is basically uh that is basically a vvt system but now its later
+implementations are mixed vvl vvt uh stellantis has the uh has the uh multi-air system every manufacturer has
+its own implementation its own solution but the uh the most important thing is understanding what is what
+are the implications of this system that is a system that allows me to as a function of the operating
+conditions of the engine to have a different lift of the valves and the different timing by timing i mean
+the uh the time at which the valve the valves uh primarily the intake valves and secondarily exhaust
+valves although the effect by having a system like that on the exhaust valves uh are are very are
+negligible so the most important thing is having this on the on the intake valves uh by timing i means
+the i mean the uh the opening and closing times of the valves that are normally established by the shape
+of the uh of the cams the cams on the camshaft
+so um
+the main advantage is that the variable valve timing allows to uh allows to optimize the opening and
+closing times so that we can that we can exploit some uh uh some dynamic phenomena in the uh in the
+in the manifolds in order to obtain more power and increase the engine efficiency
+or expand the engine uh the engine torque along all the operating range so we have an engine that
+breathes better along uh in a you know in a wider operating conditions range
+uh so uh blah blah blah another important uh another important aspect this uh related to the uh to
+having a vvl system that is a variable valve lift system is that i may think if i have a system that
+allows me to change the maximum opening of the of the of the intake valve i may think too
+eliminate the throttle body so i could use this system in order to uh i could use this system
+i could use the fact that i can control the opening of the intake valve i could use this system to
+eliminate the throttle body and just use this system to modulate the airflow
+so i may have a reduction of the pumping losses by using this system
+guys questions
+no okay
+okay great let's go ahead uh my favorite system of uh uh my favorite vbt vbl system is the fca multi-air
+because uh um differently from from the ones adopted by other manufacturers
+uh this is uh this system is very simple and this system is extremely effective
+and gives a huge uh a huge margin of controllability on the uh on the on the on the opening and closing on
+the valve opening and closing uh timings and um and the end policy
+so this system just without going into much detail because it's a mess to explain it i i advise you
+to uh to watch this video on youtube where there is an animation that explains it very well because
+it's far easier to uh to see it working rather than explaining how it works but basically the main thing
+with this system is that the camshaft doesn't move the valves anymore uh the camshaft is just used to uh
+to move uh uh to move uh um an oil pump that pressurize that press pressurizes some oil
+and basically the uh the opening and closing of the valves is regulated by opening and closing uh electrical
+valves that uh that uh that that allow to to exploit the pressure of the brain of the oil pressurized by
+the camshaft in order to open and to open and close the valves so this system is really simple and is
+really really effective and i uh warmly have warmly advice to uh to give a look at the at the um at the
+youtube video in the link so let's try to talk a little bit about the exhaust suffer treatment
+systems the most important one that you may have already heard of is the catalytic converter
+the catalytic converter or three-way catalyst is uh is a system used in um in uh in the spark
+ignition engines in order to reduce the uh the three main pollutants so uh nitrogen oxides carbon monoxide
+and uh unburned tidal carbons this is mainly used in spark ignition engines but it's also used in it's
+also used in diesel engines but as you will see uh this is more important for spark ignition engines but
+although we have it in diesel engines as well for diesel engines this system is named the doc diesel
+oxidizer catalyst operates a temperature above 200 200 degrees in spark ignition engines the operating
+temperature is a little bit higher and this disregards the first part of this or the three-way catalyst
+the first part of the three-way catalyst is the oxidizer part the part that is devoted to the oxidation
+of the partially oxidized compounds hydrocarbons and carbon monoxide
+of course this component to operate since it's an oxidizer catalyst requires the presence of oxygen at the
+exhaust so this system operates at very good efficiency when the uh when the mixture when the air fuel
+mixture of the engine is stoichiometric or slightly but very slightly lean so when there is a very little
+excess oxygen not too much otherwise we'll get in this other area where the hydrocarbons cannot be oxidized
+properly because there is too much oxygen so it's like we have some kind of misfire at the catalyst level
+after the combustion so we need to be we need to be in uh right so best the best efficiency is obtained
+in more or less stoichiometric conditions so this is another important another important reason
+uh so so that we have to operate the engine at stoichiometric conditions the second part of the of the catalyst is
+not an oxidizer but is a real a reductant catalyst once again it operates uh it operates it has a very good
+deficiency in uh in stoichiometric conditions more or less here but its best efficiency since since it's a
+reductant catalyst uh the best efficient is the best efficiency is obtained when the conditions are slightly
+where the mixture conditions are slightly rich because this is a regular reductant catalyst so its activity
+is uh is negatively affected by the presence of uh by the presence of oxygen at the exhaust so in order to
+obtain the maximum uh the maximum efficiency for both uh we shall operate the engine at stoichiometric
+conditions that is pretty much around here so that we have the maximum conversion efficiency for uh for
+both catalysts at the same time the oxide the oxidizer and the reductant one one thing that is worth
+mentioning is that in order to uh this component is an um is a subject to homologation so there is a
+there is a there are regulations that uh in order to uh keep the uh the pollutant emissions law this
+component has to be continuously monitored in order to uh in order to monitor its degradation and uh its
+correct operation shall be guaranteed so uh in order to monitor the catalyst operation we have the catalyst
+let's uh just uh just i'll just use it as a as a reference figure the catalyst is something made like
+this it's a metal container with a honeycomb structure inside where with the where there is a uh uh uh
+where there is a catalyst uh dispersed on the surface it's made of two parts for the first part
+that is oxidizer and the first the second part is a reductant but the structure is pretty much like
+the one that you see here in the figure so we have the exhaust gases that get in from this side and get
+out on the other side in order to monitor the efficiency of this component we need two lambda
+zones one at the beginning one at the one before this component that is the same one that we used to
+that we used to uh to um to to to measure the presence of oxygen at the exhaust so used for uh for
+for fuel injection control but but we have but we need another lambda zone at the output of this component
+in order to uh in order to monitor its operation when these two lambda zones um give the
+same value for the oxygen concentration it means that the catalyst is um that the catalyst is degraded
+and so it needs to be uh to be substituted because the catalyst obviously uh operates in good me it
+i can observe i can understand that the the catalyst is operating correctly when uh when i see different
+values different signals coming from the lambda zones because it means that the catalyst has done something
+so now let's talk about the the dpf gpf system dpf stands for diesel particle filter
+this system is uh this system is uh is is an after treatment system is an exhaust after treatment system
+that is designed to reduce the the the the amount of soot that is released into the atmospheric air
+so this system is basically constituted by a by a metal container
+with uh with uh with a with the only comb structure inside like the one that you see here uh made of a
+metal or a ceramic material that mechanically captures the soot particles this matrix this uh ceramic or metal matrix
+is uh is um is um uh it has a uh a catalyst on on its surface a catalyst a substance that a compound that uh acts as a catalyst for the oxidation for the combustion of the soot that uh uh that uh that uh this captured inside
+this uh into this uh into this uh into this uh this only comb structure so how does it work basically it's very simple
+imagine that this only comb structure is made of a series of uh of a very narrow uh parallel channels
+where uh um where are soot deposits so um carbon deposits build up
+and uh uh at some point when uh the engine control model detects that enough soot that enough soot has
+been trapped by this system the uh the engine control model detects that there's a high pressure difference
+between the the input the inlet and the outlet of this component due to the fact that the uh the the
+channels forming the forming the forming the the uh the only comb structure inside are clogged by the by the
+carbon deposits it activates a so-called dpf regeneration strategy
+in order to regenerate this filter this dpf strategy entails that the uh the temperature of the exhaust
+gases have to be very high uh in uh during operation especially when in low load conditions where the
+exhaust temperature is low there is a lot of soot that is captured inside this component but by natural
+by normal engine operation the uh the exhaust temperature is not high enough in order to in order
+to trigger this regeneration the regeneration is basically uh uh what is it what is it basically
+it's just uh that the party the the carbon deposits that are uh that form inside these uh inside the
+the small channels of this uh of this uh of this component they are literally burned um this uh burning
+this combustion reaction is enhanced by the presence of a catalyst on the surface of these uh of this
+sonic home structure uh so as i already mentioned the uh this uh the regeneration strategy is the
+the regeneration strategy is necessary because in normal operation in normal operating conditions
+especially in case of low load low speed like driving in traffic for example the exhaust temperature is
+not high enough to uh to uh to make this uh this trap the suit burn so the ecm activates the dpf uh the dpf
+regeneration strategy do you remember that i mentioned in uh in the last slide of the previous deck that
+there was a post injection in diesel in diesel engines that were used only for dpf regeneration strategy
+only to regenerate the dpf yes okay so that the ecm uh decides to make the uh that that post injection
+that post injection has the only purpose of raising the um the exhaust gas temperature
+and this is part of the uh of the dpf regeneration strategy another thing that is done during the uh
+during the dpf regeneration strategy is uh adapting a low egr uh low egr openings so it means that uh that
+the egr valve is uh is closed is not opened in order to recirculate the uh in order to recirculate the
+the exhaust gases why do we do this this is done to have the maximum possible quantity of oxygen at the
+exhaust so that the um the uh the suit that is deposited that is trapped into this component can be
+fully burned uh quickly and completely so dpf regeneration strategy fuel post injection in order to
+depending on current load conditions in order to see to increase exhaust temperature and dedicated low
+egr strategy to increase the oxygen availability the gpf is the uh is pretty much the same thing
+but this system has the acronym means gasoline particle filter you may say why do we need the
+particle filter in a gasoline engine and the answer is this component is used in direct injection in
+gdi engines so direct injection gasoline engines that we've mentioned already produce a little bit of
+soot also the indirect engine the indirect the indirect injection gasoline engines make a little bit of
+soot but uh but this is uh it's it's it's an extremely small quantity it's totally negligible compared to uh
+to amount the amount of the amount of soot that is produced in a gdi engine but once again the amount
+of soot that is produced in a gdi engine is a little is a lot less than the amount of soot that is produced
+by a diesel engine the only difference the dpf and the gpf system are almost identical the only relevant
+difference is that the gpf requires uh requires no dedicated uh not dedicated regeneration strategy
+why is that this is uh this is because the in a gasoline engine the exhaust temperature is uh on
+average a lot higher than the uh than the exhaust temperature that we could observe in a diesel engine
+so normally in gasoline engines there is no dedicated gpf regeneration strategy because uh regeneration
+occurs automatically during a normal engine operation uh the only the only thing that uh the only thing
+that the only active policy that can be actuated by the uh by the by the engine control module is uh to uh
+make some kind of different policy some different uh uh actuation of for example analogously for the uh
+for the diesel engine something that can be done at the level of the egr valve when it is installed
+in the uh when it is installed in gasoline engines because it is we we may have an egr valve also on
+gasoline engines not also not only in uh especially if if they're directly injected not only in diesel engines
+or for example another thing that the ecm could actively do to regenerate the gpf could be the
+the management of the vbl vbt system or act a little bit on the spark advance and so on but the the main
+thing is that there is no post injection in a in a gasoline system used for regenerating the gpf
+gpf let's say that at least in a gasoline engine the adoption of this kind of component doesn't entail
+an additional consumption of fuel uh like like it happens in uh in diesel engines because in diesel
+engines in order to regenerate the particle filter it is necessary to spend an additional quantity of
+fuel that is used just to heat up the the exhaust gases while this does that well this doesn't happen
+in uh in gasoline engines in indirect direct injection gasoline engines there uh there may be another
+observation regarding the uh regarding the engine wear and uh and uh engine lubricant life because uh
+one another another consequence of uh adopting a post injection is that uh uh is that the the engine
+lubricant degradates faster and loses its lubricant properties when uh when um when uh when uh when
+dpf regeneration starts to be uh when the when the diesel engine with the dpf is used for most of the time
+in traffic when a lot of suit builds up into this system so regeneration has to be active regeneration
+policies to be triggered very often in order to uh in order to uh in order to to regenerate the filter
+the adoption of post injection um shortens the engine lubricant life and this may lead to uh additional
+engine wear but this is just uh an additional information not really important for for for you maybe
+okay i think that this is the uh this last few slide the last few slides the uh one of the newest
+after treatment systems uh used on diesel engines is the scr selective catalytic reduction system
+the main purpose of this system is to reduce the uh is to reduce the the nitrous oxides uh at the exhaust
+level so once we produced by uh by engine operation nitrous oxides we have this system in order to reduce
+them and avoid releasing them in the atmosphere how does this system work this system uses an aqueous
+solution of urea named adiblu that is injected uh that is injected a pill a dedicated a dedicated reactor
+that is the system that is the system that you see here so this is the exhaust line or diesel engine we
+have the diesel oxidant catalyst we have the dpf the diesel particle filter then we have let's forget
+this for a moment we have this additional system that is the selective catalyst scr and then we have this
+additional component scr appeal this system there is this urea dosing system that injects this adiblu that
+is a that is a solution that is a mixture of water and urea how does this system work the urea decomposes
+by effect of heat into ammonia ammonia is the actual reactant that is used in the scr
+water ammonia is a problem that is flammable toxic and volatile so it's not something that that that
+can be carried around easily that's why urea is used instead of pure ammonia because ammonia can be uh is
+a ammonia can be uh can be carried around but the problem is that is that ammonia is extremely volatile and
+is toxic so it's it's easier and safer to uh to have ammonia in the form of uh of a mixture of water and
+urea but ammonia is the actual reactant that is used in this kind of catalyst
+so the reactor the structure of the reactor is exactly the same as the dpf and the three-way catalyst
+so there's a onycom structure with many parallel channels where there is on the surface of these
+of the onycom structure there is a catalyst
+so this catalyst in the case of scr is made is a is a vanadium based is a vanadium based catalyst
+so what happens the ammonia the presence of the ammonia reduces the nitrous oxides into nitrogen and
+oxygen again there is a down there is a there are some aspects that have to be taken into consideration
+the first thing is that the concentration of nitrous oxides that is the pollutant that
+we want to eliminate from our exhaust gases has a very low concentration into the exhaust gases
+so uh the time the dwelling time of the of exhaust gases and ammonia into uh into the catalyst
+shall be quite long because the uh because the the thing that we want to uh that we want to react
+and that we want to reduce the nitrous oxides is at a very low concentration
+so uh in order to uh in order to try to uh to to reduce uh the more we can the nitrous oxides
+we shall inject more ammonia more ammonia than necessary more urea than necessary but if we inject
+more urea than necessary what does it happen it happens that we are going to have more ammonia than
+the quantity that we need in order to reduce the nitrous oxides and having ammonia at the exhaust is
+even worse than having the nitrous oxides for the reasons that we mentioned before
+in order to do this this catalyst this component the ecr is split in two we have the ecr first that is
+an active component and then we have a second part that is called the scr asc asc asc stands for
+ammonia slip catalyst what is the purpose of this second part the purpose of the second part is to
+uh absorb like uh like a sponge it it is used as a buffer for ammonia this this catalyst here is
+almost it's very similar to the one to the ecr but this part doesn't have a urea dosing system so
+that this part here acts as a uh as an ammonia buffer so the because it's able to it is able to
+absorb the access ammonia from the first stage and to release it like for example imagine a transit
+where the engine is producing more nitrous oxides than expected this catalyst is able to use the uh
+uh the the excess ammonia from the uh from the previous operation and uh uh and act as a buffer
+basically so that we have uh so that we have no ammonia at the exhaust ammonia at the exhaust is the
+is the uh is the main thing that has to be avoided when having this kind of system
+uh so okay questions
+hello no it's all no question yes no no okay okay guys so this is just a schematic this is uh like
+the the first the first scr systems back in 2018 2019 were had a structure similar similar to this they
+were quite simple so they was just the the metal vessel with a urea dosing system and a few sensors and
+so on but i just want to show you how in like in 2021 the system has become complex the ecr system
+just there is a there is a few slides but i just want to uh want to take a minute just to show you
+how the ecr system has become complicated the long years so actually this is just not the uh this just
+not just not the cr system it's just it's all the it's all the exhaust line but uh here you can see that
+the system is quite has become quite complicated there is uh two urea two urea injectors there is a
+uh uh there is a lot of sensors of oxygen sensors and ox sensors all over the place uh the system is uh uh
+the system is uh uh the system is uh is uh is uh is temperature is temperature regulated uh so well yeah
+so well yeah respect to this one the actual the actual current implementation of the system looks
+uh looks uh uh more like this where there is as you can see a lot of components and so it entails a lot
+a lot of control and a lot of software and functions that need to be implemented and then validated
+respect to the uh to the previous implementations and all this system have to be has to be integrated
+into the uh has to be integrated with the powertrain uh with the powertrain functionalities
+so it's uh yeah it was just to show you that that it could be quite uh quite challenging and
+and uh that this system may increase the system complication uh more than a bit

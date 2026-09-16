@@ -1,0 +1,1532 @@
+1
+00:00:00,720 --> 00:00:05,840
+okay okay we're ready i will start the presentation
+
+2
+00:00:15,680 --> 00:00:16,720
+tell me you can see me
+
+3
+00:00:19,760 --> 00:00:23,040
+yes so i can see okay here we are
+
+4
+00:00:23,040 --> 00:00:34,880
+okay uh as i said we are talking i think that you really know if we talk about the spice
+
+5
+00:00:34,880 --> 00:00:43,280
+what we are talking about isn't it uh i'm sorry to interrupt you uh can we record this video
+
+6
+00:00:44,400 --> 00:00:51,920
+yeah yeah can you record it and also if you do it and then you can send it to me which should be a
+
+7
+00:00:51,920 --> 00:00:58,880
+good thing because i had to but i'm not actually i can do this with for some problems so if you
+
+8
+00:00:58,880 --> 00:01:05,600
+record it and send it to me uh it will be a very good thing sorry to interrupt ciao gabriele thanks
+
+9
+00:01:05,600 --> 00:01:12,560
+for the lesson i just connected for the sole purpose of recording so i am recording the
+
+10
+00:01:13,840 --> 00:01:21,040
+the lesson and i will okay okay so i won't be active in the lesson just here for record okay
+
+11
+00:01:21,040 --> 00:01:27,040
+thanks yeah good thing because i have problems with my microphone so i am using uh i think to
+
+12
+00:01:27,600 --> 00:01:34,720
+to present and i think to uh talk because i wish to do this it would be a very good thing thank you
+
+13
+00:01:35,520 --> 00:01:44,640
+okay thanks okay so we start uh we are talking about uh a spice and
+
+14
+00:01:44,640 --> 00:01:52,560
+uh how you can uh read on the on the here the proposal of the spice is to improve and value the
+
+15
+00:01:52,560 --> 00:02:00,400
+performance of the development process and ecosystem of industry industries uh it is a specific variant of
+
+16
+00:02:00,400 --> 00:02:08,880
+international standard diesel and actually it allows the best way to have a good process to uh fulfill our
+
+17
+00:02:08,880 --> 00:02:15,600
+project to do our things and uh i think that you already know uh something about the bicycle
+
+18
+00:02:17,520 --> 00:02:25,920
+that is a cycle that is used in a spice to uh develop a good software i think that you should
+
+19
+00:02:25,920 --> 00:02:34,320
+already know the the thesis about uh develop and testing today we'll talk about the requirement part
+
+20
+00:02:34,320 --> 00:02:42,240
+that is uh in the up and the left part of the cycle uh you can see here that we have uh more parts of
+
+21
+00:02:42,240 --> 00:02:50,560
+this uh requirement uh um requirement part and uh here we can you can read that we have
+
+22
+00:02:50,560 --> 00:02:56,320
+the requirement elicitation uh the system requirement analysis and software requirement because if we're
+
+23
+00:02:56,320 --> 00:03:06,560
+talking about uh the development of software we have a level for uh system requirement uh analysis that
+
+24
+00:03:06,560 --> 00:03:12,560
+will tell you uh what do we what do our system have to do what can the kind of things have we have to
+
+25
+00:03:12,560 --> 00:03:19,600
+develop and how the the part of software requirement analysis that will tell us which software with
+
+26
+00:03:19,600 --> 00:03:26,480
+which implementation will do the things that uh we need to uh fulfill our system requirements
+
+27
+00:03:29,520 --> 00:03:36,000
+uh we start with some definition and some properties that uh our requirements uh need
+
+28
+00:03:36,640 --> 00:03:44,560
+need to be a good thing actually just to give you a better introduction uh the rest of our work will be
+
+29
+00:03:44,560 --> 00:03:51,680
+some documents uh that will be stored in our cases in some server and in these documents it will be all
+
+30
+00:03:51,680 --> 00:03:59,440
+the description of our work but we have to find a proper way to do this thing a first definition that
+
+31
+00:03:59,440 --> 00:04:05,520
+we can have is the difference between the functional requirement that is uh what the system shall do
+
+32
+00:04:06,320 --> 00:04:12,400
+and not the functional requirement that is uh what the system shall be the difference is that in the
+
+33
+00:04:12,400 --> 00:04:20,800
+second one is a moral description of the system uh while a functional requirement is a description of
+
+34
+00:04:21,360 --> 00:04:27,840
+our implementation and all the things that we do have to work so a definition for example of an
+
+35
+00:04:27,840 --> 00:04:30,560
+inputs outputs and the procedure of our software
+
+36
+00:04:33,520 --> 00:04:39,680
+a good writing requirement should have some characteristics the first one is that should be
+
+37
+00:04:39,680 --> 00:04:46,800
+clear and ambiguous so there should be only one way to interpret the requirement let's see some
+
+38
+00:04:46,800 --> 00:04:52,800
+examples if we frame right and the system shall not accept the password longer than 15 characters
+
+39
+00:04:52,800 --> 00:05:00,720
+actually we don't have a good description because we don't know actually if uh something different
+
+40
+00:05:00,720 --> 00:05:09,040
+from this is possible if uh a password of 16 cards arrives to us what the system shall do and we actually
+
+41
+00:05:09,040 --> 00:05:16,240
+don't know so it's important to to write something like if the user is the password longer than 15 characters
+
+42
+00:05:16,240 --> 00:05:22,800
+then the system shall display an error message and shall ask the user to correct it so we describe the all the
+
+43
+00:05:22,800 --> 00:05:31,440
+things that system do does and we don't have some misinterpretation of of our functionalities
+
+44
+00:05:34,240 --> 00:05:39,840
+every requirement that we write should be stable the requirement can be refined by means of inspection
+
+45
+00:05:39,840 --> 00:05:47,120
+analysis demonstration of tests for example if you write a system must refresh the data very quickly we don't have
+
+46
+00:05:47,120 --> 00:05:55,760
+uh a way to test this thing because uh uh this is not the description that can be uh it can have an
+
+47
+00:05:55,760 --> 00:06:02,400
+representation for everyone the same so a good requirement should be the system has refresh the data each
+
+48
+00:06:02,400 --> 00:06:10,240
+0 5 milliseconds we can actually test these things because for example if the data refresh more than this time
+
+49
+00:06:10,240 --> 00:06:14,080
+we can tell that the task the test the test is failed
+
+50
+00:06:17,360 --> 00:06:21,920
+uh the requirements should be feasible the requirements should be double with existing constraints
+
+51
+00:06:22,800 --> 00:06:29,360
+um for example the replacement control system shall be styled with this no disruption of the production
+
+52
+00:06:29,360 --> 00:06:34,720
+but the good requirement should be the replacement control c but uh control system shall be started
+
+53
+00:06:34,720 --> 00:06:40,000
+causing no more than two days of production destruction just because usually on the
+
+54
+00:06:40,000 --> 00:06:45,520
+software on the software on the hardware we have some uh constraints and we should respect it for
+
+55
+00:06:45,520 --> 00:06:53,040
+example we cannot demand a system that can avoid the physical constraints or it should be do things
+
+56
+00:06:53,680 --> 00:06:58,160
+faster than our technology allow us to do our things
+
+57
+00:07:01,680 --> 00:07:05,760
+there are a lot of other properties that will speed up on these things it should be consistent
+
+58
+00:07:05,760 --> 00:07:12,480
+uh because we should uh we probably have a full document with a lot of things and a requirement of
+
+59
+00:07:12,480 --> 00:07:18,960
+functionality should not interfere with other requirements so uh the book should be a consistent uh
+
+60
+00:07:18,960 --> 00:07:28,080
+consistency about all the things we have it should be atomic because uh for example uh since we have
+
+61
+00:07:28,080 --> 00:07:35,680
+uh it's it depends on the testable property because uh uh at each requirement we should
+
+62
+00:07:35,760 --> 00:07:42,080
+uh assign a test and if you wait if you write the things like um in case of our temperature over current
+
+63
+00:07:42,080 --> 00:07:50,160
+over over state over both the system shall board the change but actually um here we have a true
+
+64
+00:07:50,160 --> 00:07:58,000
+requirement because we should have three tests assigned to this property because for example uh we respect
+
+65
+00:07:58,000 --> 00:08:04,240
+the part of our temperature probably our current is not implemented and the over voltage doesn't work
+
+66
+00:08:04,240 --> 00:08:16,240
+and if we don't have a uh right like in the like above uh we should not plan um test for everything that we have
+
+67
+00:08:16,240 --> 00:08:25,200
+and should not um find which things works which not with which parts have errors and when we have to change
+
+68
+00:08:25,200 --> 00:08:37,360
+uh our work and last things it should be traceable um since i i said you before that uh we have more level requirements
+
+69
+00:08:37,360 --> 00:08:45,280
+system parts or per part and also the test we should have a traceability between all the parts of our documents
+
+70
+00:08:45,280 --> 00:08:52,240
+so if you have a software required script and implementation we should know uh where this implementation comes from
+
+71
+00:08:52,240 --> 00:08:58,000
+for which functionality we have to do these things and we will see how these things is done
+
+72
+00:08:58,640 --> 00:09:01,840
+in some software that i will show you later
+
+73
+00:09:05,760 --> 00:09:09,280
+we switch to the other slides
+
+74
+00:09:11,520 --> 00:09:15,520
+this one
+
+75
+00:09:22,240 --> 00:09:51,680
+i said you before that there are some software that we use to implement the requirements uh in the slide
+
+76
+00:09:51,680 --> 00:09:59,680
+before the word there are some slides about uh about a software named doors but i will show you
+
+77
+00:09:59,680 --> 00:10:03,840
+something more about another software this is called polaro because i gave the license here
+
+78
+00:10:04,400 --> 00:10:10,160
+and the slides show you some things about the software but later in the end of the lesson we have a
+
+79
+00:10:12,240 --> 00:10:19,440
+quick introduction to this software how to use it and uh other section and all the things are done
+
+80
+00:10:20,080 --> 00:10:26,800
+so we start with the slides from some bit introduction and then we will see on the software uh some example
+
+81
+00:10:30,880 --> 00:10:38,880
+actually um uh the requirement documents appears like like this and it's a document with a lot of
+
+82
+00:10:38,880 --> 00:10:45,440
+objects you can see that we have uh usually uh this is a screen about polarion and here we have a
+
+83
+00:10:45,440 --> 00:10:51,440
+description description description of our things and uh in the right part in the left part we have a
+
+84
+00:10:51,440 --> 00:10:59,920
+code and unique code that is associated with a single requirement um actually if we do some change
+
+85
+00:10:59,920 --> 00:11:06,560
+change and uh we've or we delete this requirement this code will still be assigned to this one because we
+
+86
+00:11:06,560 --> 00:11:14,640
+have to have just a bit in the time about our documents here in the left we have an icon an icon that
+
+87
+00:11:14,640 --> 00:11:20,400
+actually uh see us what kind of requirement is this because we have an icon for software we will have
+
+88
+00:11:20,400 --> 00:11:29,520
+uh an icon icon for system an icon for uh for text and more in the right part we have uh some properties
+
+89
+00:11:29,520 --> 00:11:36,640
+we can usually cast on these things that because because uh our item our requirement is not just a
+
+90
+00:11:36,640 --> 00:11:43,120
+description but is anything with a lot of properties that say us a lot of things about how to develop
+
+91
+00:11:43,120 --> 00:12:00,240
+so for example um these properties can be the severity let's say at last um if the this requirement
+
+92
+00:12:00,240 --> 00:12:05,680
+is a must have a should evidence to have or something that is deprecated they will not have to implement
+
+93
+00:12:05,680 --> 00:12:15,280
+it is very useful for developers because it's good to set some priority because in the when we drop we
+
+94
+00:12:15,280 --> 00:12:21,280
+probably start with must have things and then when everything is finishing test and we can
+
+95
+00:12:22,480 --> 00:12:26,240
+we can go to should dev and later to the other the others
+
+96
+00:12:28,960 --> 00:12:34,720
+there is here a status that tells us uh the status of the requirement not the status of the
+
+97
+00:12:34,720 --> 00:12:40,960
+implementation because when we write probably we start usually we start from a drop status
+
+98
+00:12:42,240 --> 00:12:48,400
+uh when we write the things when you have the finished to write we uh switch back to uh i
+
+99
+00:12:48,400 --> 00:12:55,840
+review the average status and then in a probably verified rejected uh and also this uh machine can
+
+100
+00:12:55,840 --> 00:13:02,160
+change you know how many people work on the things online level of people that can review approve and test
+
+101
+00:13:02,160 --> 00:13:09,360
+things but the important part is when we are here we can make some modification later we cannot if we
+
+102
+00:13:09,360 --> 00:13:15,120
+want to modify our require when you have to come back this is start to the status so i will we will
+
+103
+00:13:15,120 --> 00:13:20,080
+see you later in polaro that we if if we are not in draft the document the the requirement is blocked
+
+104
+00:13:23,680 --> 00:13:31,280
+um here uh we can see also other properties like dd that we can see also in the document
+
+105
+00:13:31,280 --> 00:13:37,520
+but also uh the traceability part because here i've written uh which should the requirements are
+
+106
+00:13:37,520 --> 00:13:47,520
+connected to this one um as parent is referred to uh uh to the leader of the chapter for example and
+
+107
+00:13:47,520 --> 00:13:52,720
+it's related to his pro here is a relation with another item in another document
+
+108
+00:13:52,720 --> 00:14:05,040
+so uh with these links we can fulfill accessibility between them with between documents but we will
+
+109
+00:14:05,040 --> 00:14:14,080
+see an example later uh here we showed for example that here it was a requirement about uh can message
+
+110
+00:14:14,080 --> 00:14:22,400
+that says that that information used in the system is uh carried by this message and in that link we can
+
+111
+00:14:22,400 --> 00:14:27,920
+connect with the description of the message with other properties that we can find in the dbc
+
+112
+00:14:33,920 --> 00:14:40,160
+uh also this is another view that we will uh you will see uh later in the software that
+
+113
+00:14:40,880 --> 00:14:47,680
+it is a representation with all the levels uh just to have a better interpretation of how many links that
+
+114
+00:14:47,680 --> 00:14:59,680
+could we have and here uh have some on uh some of charts that we can have because uh as you said
+
+115
+00:14:59,680 --> 00:15:07,520
+before we are using a proper software to do these things uh actually we could also use some uh an excel
+
+116
+00:15:07,520 --> 00:15:14,080
+not word because we have a lot of properties but an excel should be good and also we will see that we can
+
+117
+00:15:14,080 --> 00:15:20,400
+uh every reporting from polarion to excel but the good things to have a software that is done just
+
+118
+00:15:20,400 --> 00:15:29,680
+for this is because it can give us some uh for some reports that can be used to have a global view of
+
+119
+00:15:29,680 --> 00:15:37,040
+our project for example here we have a coverage report that tell us that a part of our requirement got
+
+120
+00:15:37,040 --> 00:15:43,520
+the coverage and that part doesn't so later we can print a report discovering which part which
+
+121
+00:15:43,520 --> 00:15:51,360
+requirement doesn't have a coverage and uh complete our our documents but also uh some graphic about
+
+122
+00:15:51,360 --> 00:15:58,640
+the develop to treat to have trees about uh how things are done what things are done what which not
+
+123
+00:16:00,880 --> 00:16:03,760
+and so we can have a better view of our project
+
+124
+00:16:06,000 --> 00:16:13,200
+here another report uh i i took up before about coverage report uh here we can see that for
+
+125
+00:16:13,200 --> 00:16:17,680
+example a system requirement have a software requirement have a software requirement assigned
+
+126
+00:16:18,560 --> 00:16:27,360
+but the order doesn't so we can know uh that we are still to write some software requirement and
+
+127
+00:16:27,360 --> 00:16:29,440
+where and about which functionalities
+
+128
+00:16:32,480 --> 00:16:38,080
+this is another view of the same report but in a table way
+
+129
+00:16:38,080 --> 00:16:46,560
+and before we uh continue with this part i will tell you if you have some questions
+
+130
+00:16:47,840 --> 00:16:52,400
+if everything is clear of if you have some questions about these things
+
+131
+00:17:00,000 --> 00:17:00,320
+okay
+
+132
+00:17:00,320 --> 00:17:11,280
+um just a little things um why these things is important because uh uh if we work in uh automotive
+
+133
+00:17:11,280 --> 00:17:18,000
+uh environment but also in other uh environment and it is uh secretica for example for uh um
+
+134
+00:17:19,440 --> 00:17:29,120
+for uh for train for uh for planes we should have um a develop that follow a lot of rules because we cannot
+
+135
+00:17:29,120 --> 00:17:36,640
+um release a software that have problems if we sell a car with the software that have bugs we should
+
+136
+00:17:36,640 --> 00:17:43,360
+uh uh have we should have some problem that could cause people to die cars to stop working
+
+137
+00:17:43,920 --> 00:17:51,920
+and so in different uh difference from us other kindle software for example um from uh um
+
+138
+00:17:51,920 --> 00:17:59,040
+um cell phone software from some app that could be work could be crash and uh sometimes a new version
+
+139
+00:17:59,040 --> 00:18:05,200
+of software released the software car should not be updated should be should uh be uh should uh should
+
+140
+00:18:05,200 --> 00:18:12,640
+work from the day one and should not the problem because uh uh the risk that of these things that is
+
+141
+00:18:12,640 --> 00:18:20,640
+sometimes very high so uh that's for this that we have to uh have developed that starts from requirement
+
+142
+00:18:20,640 --> 00:18:28,160
+then the develop the testing and all the parts that can show us that everything is done and everything is done correctly
+
+143
+00:18:29,760 --> 00:18:36,080
+here we have um a test report that also is made by polarion
+
+144
+00:18:37,280 --> 00:18:45,920
+because every um um after that we have written everything that our software needs after develop
+
+145
+00:18:45,920 --> 00:18:52,640
+we should start with the testing part so we should write the test associated to our implementation
+
+146
+00:18:52,640 --> 00:19:01,920
+and then run some test run that tell us uh for example here we have test run which three tests
+
+147
+00:19:01,920 --> 00:19:08,960
+we can execute this and then we can report that uh which some tests are passed some tests are waiting
+
+148
+00:19:08,960 --> 00:19:17,120
+uh and we have other two status so failed and blocked that's because probably uh some tests depends on the
+
+149
+00:19:17,120 --> 00:19:26,560
+result on other one probably have to start the car uh to do 10 meters and then to do to try to to stop the
+
+150
+00:19:26,560 --> 00:19:35,760
+car if the second part is not fulfilled you cannot test the third part so uh we can have the block test
+
+151
+00:19:35,760 --> 00:19:43,520
+because the test has been not be done because the previous one failed so we we can we could not try
+
+152
+00:19:43,520 --> 00:19:49,920
+this thing and so when we try our things we have these three status which tell us which things gone good
+
+153
+00:19:49,920 --> 00:20:01,840
+and which one bad how we write our test here we should usually have a step instead i start up here for
+
+154
+00:20:01,840 --> 00:20:09,680
+example and the expected result and uh here we can select if test is passive either blocking and i write
+
+155
+00:20:09,680 --> 00:20:16,480
+if it failed the block actually the we can write the actual result for which happen and not for the
+
+156
+00:20:16,480 --> 00:20:20,960
+developer to find the bugs errors and the correction that has to be done
+
+157
+00:20:24,640 --> 00:20:31,040
+also the test should be have just a bit with software so we spare software we have just a bit with
+
+158
+00:20:31,040 --> 00:20:38,080
+uh with the with the test and the test uh should be connected with the bug founded if the test is not
+
+159
+00:20:38,080 --> 00:20:45,200
+be done and here in plan we also can store the bug uh the change and everything that uh should
+
+160
+00:20:45,200 --> 00:20:50,400
+give us a good responsibility of all of all our work in the time
+
+161
+00:20:50,400 --> 00:21:05,280
+okay before to proceed with this part we will have a little a better view of this thing on the software
+
+162
+00:21:13,680 --> 00:21:14,320
+any question
+
+163
+00:21:14,320 --> 00:21:29,200
+okay excuse me i have a question yeah that part that you were explaining about the hierarchy of the
+
+164
+00:21:30,480 --> 00:21:33,600
+requirement can you explain a little bit more about it
+
+165
+00:21:36,560 --> 00:21:39,280
+i can hear you very well if you can repeat
+
+166
+00:21:39,280 --> 00:21:46,960
+uh you were explaining a little bit about the hierarchy of the requirements
+
+167
+00:21:49,280 --> 00:21:54,080
+i don't know it was too much uh before so
+
+168
+00:21:55,760 --> 00:22:03,520
+okay hello we will give you some example right this paper so you understand
+
+169
+00:22:03,520 --> 00:22:16,960
+how we better how these things works okay thank you
+
+170
+00:22:20,000 --> 00:22:31,520
+let's find some project we can play with
+
+171
+00:22:31,520 --> 00:22:45,840
+okay this is a browser um a software that can can make us to navigate by browser so actually i'm
+
+172
+00:22:45,840 --> 00:22:55,360
+working in chrome and i can connect to this software uh inserting the the ep of the server that should be an
+
+173
+00:22:55,360 --> 00:23:03,920
+internal ep actually is set here enables uh i'm working uh already on the server so we just i just have localhost
+
+174
+00:23:03,920 --> 00:23:08,720
+but otherwise you should input to the ep and the program service then when you log in with
+
+175
+00:23:09,520 --> 00:23:18,400
+uh your user and password you arrive here here we have the name of project and you can navigate with older project
+
+176
+00:23:18,400 --> 00:23:27,440
+this is the home in home we find the description on uh on uh every part of our project
+
+177
+00:23:28,560 --> 00:23:34,080
+that you can find here in this part let's see something hello here we start with
+
+178
+00:23:36,720 --> 00:23:37,440
+let's be slow
+
+179
+00:23:37,440 --> 00:23:52,400
+with the requirements section here we have um description like input and output because uh we
+
+180
+00:23:52,400 --> 00:24:02,000
+start with the project scope where it is bright and everything about the project uh in um in a not
+
+181
+00:24:02,000 --> 00:24:10,000
+specific way so we have also the evolution plan uh responsibilities a lot of information about
+
+182
+00:24:10,000 --> 00:24:17,040
+our project and uh starting from this document we have enough to put about a system required
+
+183
+00:24:17,040 --> 00:24:18,320
+specification document
+
+184
+00:24:22,400 --> 00:24:23,760
+here the second level
+
+185
+00:24:26,720 --> 00:24:28,320
+let's see for example
+
+186
+00:24:28,320 --> 00:24:34,480
+we'll we'll just make a little change to
+
+187
+00:24:37,440 --> 00:24:51,440
+have you so you can see the things better
+
+188
+00:24:51,440 --> 00:25:00,560
+uh
+
+189
+00:25:04,720 --> 00:25:11,280
+here we are in this document it is about document about the system required specification we have
+
+190
+00:25:11,280 --> 00:25:19,040
+all these items of you uh you can see the the id here a title and here a description
+
+191
+00:25:19,040 --> 00:25:26,720
+um it is actually a test project it's not a really project that we use but it's just used for
+
+192
+00:25:26,720 --> 00:25:34,160
+uh academy for for testing for uh allow people to try some functionalities of the software
+
+193
+00:25:34,960 --> 00:25:41,520
+but actually here we can see uh some system requirement for example that should be an easy
+
+194
+00:25:41,520 --> 00:25:44,560
+to operate with excessive training things like this
+
+195
+00:25:45,200 --> 00:25:52,240
+and um here on the right we have some properties that are displayed on the document and here in the
+
+196
+00:25:52,240 --> 00:26:00,480
+the right panel we can modify these properties and we have the severity the status since for example the
+
+197
+00:26:00,480 --> 00:26:07,040
+status is reviewed if you try to write something it's actually not in change but if we
+
+198
+00:26:07,040 --> 00:26:10,800
+uh perform an action rework and we save the document
+
+199
+00:26:15,520 --> 00:26:24,160
+with a little weight the status of our item change and now we are able to write something
+
+200
+00:26:25,360 --> 00:26:29,200
+in the requirement and make some modification when we are done we save
+
+201
+00:26:29,200 --> 00:26:39,920
+a bit slow today it's a bit slow today and we perform an actual review so we block this description
+
+202
+00:26:39,920 --> 00:26:50,160
+of the data um in this part usually you have some uh description of the system so description of
+
+203
+00:26:50,160 --> 00:26:57,200
+functionalities and not a proper description of the implementation that you have in the next part here
+
+204
+00:26:58,000 --> 00:26:58,960
+in the design part
+
+205
+00:27:02,960 --> 00:27:08,080
+we have input to the previous document and as output to the software software requirements
+
+206
+00:27:08,080 --> 00:27:16,160
+specification document with a description of the implementation here we can find some uml
+
+207
+00:27:17,040 --> 00:27:21,920
+we can find some input description we can find a lot of things here here are some
+
+208
+00:27:21,920 --> 00:27:30,960
+examples but it depends a lot of uh which project we are we are describing uh you can find some uh text
+
+209
+00:27:30,960 --> 00:27:38,800
+description but also some pseudo code usually some uh part of code so a lot of things uh some figures
+
+210
+00:27:40,160 --> 00:27:48,560
+and if we navigate it we can find that for example software requirement item is connected to a system required
+
+211
+00:27:48,560 --> 00:27:58,880
+document uh system requirement item but also it it is verified by some from some tests that we can find in the next session
+
+212
+00:28:00,960 --> 00:28:01,840
+if we go back
+
+213
+00:28:01,840 --> 00:28:14,400
+the same part we also have here the software test case specification if we open this document we'll find
+
+214
+00:28:14,400 --> 00:28:22,000
+all the tests that are associated to our software items with some steps some step description and some expected
+
+215
+00:28:22,000 --> 00:28:29,360
+record record results when someone want to test these things it should create a text section
+
+216
+00:28:29,360 --> 00:28:37,760
+test session add this item to access it to the test section session and uh try it and report the result
+
+217
+00:28:38,960 --> 00:28:44,880
+here we have a different uh way to read it because uh uh the test part is always made by
+
+218
+00:28:45,520 --> 00:28:53,840
+a table with the steps and other things we can actually uh customize this part but we always save the table for the
+
+219
+00:28:53,840 --> 00:28:56,400
+three or four part of our more part of our test
+
+220
+00:29:01,840 --> 00:29:07,520
+and just to give you some more information
+
+221
+00:29:07,520 --> 00:29:18,720
+we go back to the software requirement specification part and we give a better look to the single item
+
+222
+00:29:19,760 --> 00:29:24,640
+here uh i said before that here we have some properties that are already shown the document
+
+223
+00:29:24,640 --> 00:29:30,240
+here we are some probably that you can we can change the properties but if you open the item
+
+224
+00:29:30,240 --> 00:29:41,040
+we have a full look about the single item with all the properties um uh that it have priority
+
+225
+00:29:41,040 --> 00:29:48,880
+initial estimate i spent a lot of things and also some custom properties that we that we can add to
+
+226
+00:29:48,880 --> 00:29:53,680
+the item uh but to add some custom properties we should navigate in the
+
+227
+00:29:53,680 --> 00:30:00,880
+um in the administration part i will not show you uh actually it's today because uh it is a things that
+
+228
+00:30:00,880 --> 00:30:08,080
+uh is by the only usually but uh by people that administrate the project and the usual the work that
+
+229
+00:30:08,080 --> 00:30:16,880
+uh user uh does is to fulfill the information not to customize but if someone uh uh needs this part
+
+230
+00:30:16,880 --> 00:30:24,960
+we can uh make another quick lesson introduction to customize project uh but let's see some of the
+
+231
+00:30:24,960 --> 00:30:29,760
+most important things here on uh upright we have the history
+
+232
+00:30:32,960 --> 00:30:39,840
+that uh show us actually this is not uh realistic because we no action on these things but uh usually
+
+233
+00:30:39,840 --> 00:30:46,000
+here we have all the version of the item because uh uh we could change the uh our description for
+
+234
+00:30:46,000 --> 00:30:54,720
+example 10 times and here we could find probably if we just to see another one
+
+235
+00:30:59,040 --> 00:31:07,840
+okay here we have uh some two uh version of this item that tell us that this has been modified two
+
+236
+00:31:07,840 --> 00:31:15,840
+years ago or three years ago so here we can see the action of the modification and with these things we can
+
+237
+00:31:15,840 --> 00:31:25,360
+see the history of an item or the history of the document because usually uh we could uh we probably
+
+238
+00:31:25,360 --> 00:31:32,320
+we could want to know how these things things change in the times and and we want to retrospective
+
+239
+00:31:32,320 --> 00:31:39,040
+some implementation to know for example uh in that uh one years before what was the description of
+
+240
+00:31:39,040 --> 00:31:42,720
+these things because actually description exchange and implementation with it
+
+241
+00:31:43,600 --> 00:31:50,320
+so to have a repository actually it uh polarion implements a repository that can allow us to see
+
+242
+00:31:50,960 --> 00:31:54,800
+the history of item documents and also the history of the older project
+
+243
+00:31:57,040 --> 00:32:06,400
+for all the project we have a section section here above that is baseline section actually we have no
+
+244
+00:32:06,400 --> 00:32:13,600
+baseline saved but uh the difference between history and baseline is that here we can create a baseline
+
+245
+00:32:13,600 --> 00:32:21,120
+for today for example today we have release we can delete a baseline tool for the release and we have
+
+246
+00:32:23,360 --> 00:32:31,680
+we can navigate all the project in that day for the for the status in the day that we create the baseline so
+
+247
+00:32:31,680 --> 00:32:39,840
+um it's not about the single item but this is old items so we can navigate we can change documents and
+
+248
+00:32:39,840 --> 00:32:46,320
+see all the things that was done in uh probably for one hour one year before or the day of a specific release
+
+249
+00:32:46,320 --> 00:32:59,200
+here instead we have in the first part here we have a lot of section for the parts of our develop
+
+250
+00:32:59,200 --> 00:33:07,200
+uh i just to do the you the required the same part but uh we have also the risk part the development part
+
+251
+00:33:07,200 --> 00:33:13,600
+of trace develop and the maintenance that we will not see because actually is um all the same scheme
+
+252
+00:33:14,240 --> 00:33:18,240
+and uh it's not so important to see all of them
+
+253
+00:33:20,240 --> 00:33:26,720
+actually we have some other documents for the sky in this part that is still connected to the previous one
+
+254
+00:33:27,600 --> 00:33:32,320
+but let's go to see other things about the software
+
+255
+00:33:32,960 --> 00:33:39,440
+um here we have some section with documents and item but if if we want to explore this um
+
+256
+00:33:40,320 --> 00:33:46,640
+not the section but for example all the system requirements that can be stored in more documents
+
+257
+00:33:46,640 --> 00:33:54,160
+here we have a section with all work item that we can open and we can see all the objects that are
+
+258
+00:33:54,160 --> 00:34:01,440
+storing documents so we have not a document view but the table view of all things that we have we can
+
+259
+00:34:01,440 --> 00:34:10,080
+filter here for type for example or we can create here filters about i don't know some properties for
+
+260
+00:34:10,080 --> 00:34:18,160
+example all the item that is should have and we can load the table about all the item for example that
+
+261
+00:34:18,720 --> 00:34:23,200
+has been created from someone or that have a association with some things
+
+262
+00:34:23,200 --> 00:34:30,880
+and it is good because also we can export these things with an excel file
+
+263
+00:34:33,840 --> 00:34:40,400
+we can select which properties we want to export usually there is always the id the title
+
+264
+00:34:40,400 --> 00:34:47,920
+and also the description but you can see that the first three are blocked for example the quart
+
+265
+00:34:47,920 --> 00:34:52,800
+the fourth one no id is always blocked because we can't not change it because it's assigned by the
+
+266
+00:34:52,800 --> 00:35:00,400
+software but for example we can we can uh want to unblock the description because we want to export
+
+267
+00:35:00,400 --> 00:35:07,600
+this excel to someone that don't have this of the access to polarion but we want that you can add some
+
+268
+00:35:07,600 --> 00:35:16,000
+more text description to some to some item and then when when we do these things i will just show you
+
+269
+00:35:21,200 --> 00:35:27,440
+when we export this and we modify the excel we actually can re-import the excel and import all the
+
+270
+00:35:27,440 --> 00:35:36,320
+modification this is why polarity is not also software when where you want to work but it's uh first a
+
+271
+00:35:36,320 --> 00:35:43,520
+storageable document and not all people that work here should be have the access to all the information
+
+272
+00:35:43,520 --> 00:35:53,680
+all the items all the things but probably we just want to export a file to someone that probably could
+
+273
+00:35:53,680 --> 00:36:01,840
+be also in some other society some other part of the world we share this thing with him here we see
+
+274
+00:36:01,840 --> 00:36:08,480
+that since we have the the title block and he cannot change anything but it can change the description part
+
+275
+00:36:10,960 --> 00:36:20,160
+add some things save this file and send it back to us and we can run the import part and we can
+
+276
+00:36:20,160 --> 00:36:23,520
+update our storage of our documents and our items
+
+277
+00:36:23,520 --> 00:36:31,520
+instead here we have a document section with all the documents for divided for
+
+278
+00:36:33,200 --> 00:36:41,040
+for part design development etc and we can see all the documents but also the report associated to
+
+279
+00:36:41,040 --> 00:36:49,280
+documents i showed you some of this report before in the slides and here where you can find it
+
+280
+00:36:49,280 --> 00:36:59,600
+also we have a dashboard farm that we can customize where there is all the graphs that we can need to
+
+281
+00:36:59,600 --> 00:37:06,400
+understand the status of our project so how many issues we have how many of them in process how many
+
+282
+00:37:06,400 --> 00:37:13,440
+change requests uh and all other things that we need but we can create more charts about things that we want
+
+283
+00:37:13,440 --> 00:37:19,280
+to have a quick view to administrate properly the our our project
+
+284
+00:37:23,600 --> 00:37:25,360
+okay some questions
+
+285
+00:37:32,640 --> 00:37:41,760
+okay so we'll take a quick break of 10 minutes and we will do the other slides that
+
+286
+00:37:41,760 --> 00:37:48,480
+uh we have to explain to finish the lesson so see you back in 10 minutes
+
+287
+00:37:51,040 --> 00:38:03,200
+see you
+
+288
+00:38:11,760 --> 00:38:21,040
+so
+
+289
+00:38:21,040 --> 00:38:23,040
+you
+
+290
+00:38:23,040 --> 00:38:25,040
+you
+
+291
+00:38:25,040 --> 00:38:27,040
+you
+
+292
+00:38:27,040 --> 00:38:29,040
+you
+
+293
+00:38:29,040 --> 00:38:31,040
+you
+
+294
+00:38:31,040 --> 00:38:33,040
+you
+
+295
+00:38:33,040 --> 00:38:50,320
+you
+
+296
+00:38:50,320 --> 00:38:52,320
+you
+
+297
+00:38:52,320 --> 00:38:54,320
+you
+
+298
+00:38:54,320 --> 00:38:56,320
+you
+
+299
+00:38:56,320 --> 00:39:17,600
+you
+
+300
+00:39:17,600 --> 00:39:19,600
+you
+
+301
+00:39:19,600 --> 00:39:21,600
+you
+
+302
+00:39:21,600 --> 00:39:42,880
+you
+
+303
+00:39:42,880 --> 00:39:44,880
+you
+
+304
+00:39:44,880 --> 00:39:46,880
+you
+
+305
+00:39:46,880 --> 00:39:56,160
+you
+
+306
+00:39:56,160 --> 00:40:10,160
+you
+
+307
+00:40:10,160 --> 00:40:12,160
+you
+
+308
+00:40:12,160 --> 00:40:14,160
+you
+
+309
+00:40:14,160 --> 00:40:16,160
+you
+
+310
+00:40:16,160 --> 00:40:41,440
+you
+
+311
+00:40:41,440 --> 00:40:43,440
+you
+
+312
+00:40:43,440 --> 00:40:45,440
+you
+
+313
+00:40:45,440 --> 00:41:12,720
+you
+
+314
+00:41:12,720 --> 00:41:14,720
+you
+
+315
+00:41:14,720 --> 00:41:15,780
+you
+
+316
+00:41:15,780 --> 00:41:20,720
+you
+
+317
+00:41:20,720 --> 00:41:41,840
+you
+
+318
+00:41:44,720 --> 00:42:14,700
+Thank you.
+
+319
+00:42:14,720 --> 00:42:44,700
+Thank you.
+
+320
+00:42:44,720 --> 00:43:14,700
+Thank you.
+
+321
+00:43:14,720 --> 00:43:44,700
+Thank you.
+
+322
+00:43:44,720 --> 00:44:14,700
+Thank you.
+
+323
+00:44:14,720 --> 00:44:44,700
+Thank you.
+
+324
+00:44:44,720 --> 00:45:14,700
+Thank you.
+
+325
+00:45:14,720 --> 00:45:44,700
+Thank you.
+
+326
+00:45:44,720 --> 00:46:14,700
+Thank you.
+
+327
+00:46:14,720 --> 00:46:44,700
+Thank you.
+
+328
+00:46:44,720 --> 00:47:14,700
+Thank you.
+
+329
+00:47:14,720 --> 00:47:44,700
+Thank you.
+
+330
+00:47:44,720 --> 00:48:14,700
+Thank you.
+
+331
+00:48:14,720 --> 00:48:44,700
+Thank you.
+
+332
+00:48:44,720 --> 00:49:14,700
+Thank you.
+
+333
+00:49:14,720 --> 00:49:44,700
+Thank you.
+
+334
+00:49:44,720 --> 00:50:14,700
+Thank you.
+
+335
+00:50:14,720 --> 00:50:44,700
+Thank you.
+
+336
+00:50:44,720 --> 00:51:14,700
+Thank you.
+
+337
+00:51:14,720 --> 00:51:44,700
+Thank you.
+
+338
+00:51:44,720 --> 00:52:14,700
+Thank you.
+
+339
+00:52:14,720 --> 00:52:44,700
+Thank you.
+
+340
+00:52:44,700 --> 00:53:14,680
+Thank you.
+
+341
+00:53:14,700 --> 00:53:44,700
+
+
+342
+00:53:44,700 --> 00:54:14,680
+Thank you.
+
+343
+00:54:14,700 --> 00:54:44,680
+Thank you.
+
+344
+00:54:44,680 --> 00:55:14,660
+Thank you.
+
+345
+00:55:14,660 --> 00:55:44,660
+Thank you.
+
+346
+00:55:44,660 --> 00:56:14,640
+Thank you.
+
+347
+00:56:14,660 --> 00:56:44,640
+Thank you.
+
+348
+00:56:44,660 --> 00:57:14,660
+Thank you.
+
+349
+00:57:14,660 --> 00:57:44,660
+
+
+350
+00:57:44,660 --> 00:58:14,660
+
+
+351
+00:58:14,660 --> 00:58:44,640
+Thank you.
+
+352
+00:58:44,660 --> 00:59:14,640
+Thank you.
+
+353
+00:59:14,660 --> 00:59:44,640
+Thank you.
+
+354
+00:59:44,660 --> 01:00:14,660
+Thank you.
+
+355
+01:00:14,660 --> 01:00:44,660
+Thank you.
+
+356
+01:00:44,660 --> 01:01:14,660
+Thank you.
+
+357
+01:01:14,660 --> 01:01:44,640
+Thank you.
+
+358
+01:01:44,660 --> 01:02:14,660
+Thank you.
+
+359
+01:02:14,660 --> 01:02:44,660
+Thank you.
+
+360
+01:02:44,660 --> 01:03:14,660
+Thank you.
+
+361
+01:03:14,660 --> 01:03:44,640
+Thank you.
+
+362
+01:03:44,660 --> 01:04:14,660
+Thank you.
+
+363
+01:04:14,660 --> 01:04:44,640
+Thank you.
+
+364
+01:04:44,660 --> 01:05:14,640
+Thank you.
+
+365
+01:05:14,660 --> 01:05:44,640
+Thank you.
+
+366
+01:05:44,660 --> 01:06:14,660
+Thank you.
+
+367
+01:06:14,660 --> 01:06:44,660
+Thank you.
+
+368
+01:06:44,660 --> 01:07:14,660
+Thank you.
+
+369
+01:07:14,660 --> 01:07:44,660
+Thank you.
+
+370
+01:07:44,660 --> 01:08:14,660
+Thank you.
+
+371
+01:08:14,660 --> 01:08:44,660
+Thank you.
+
+372
+01:08:44,660 --> 01:08:45,660
+Thank you.
+
+373
+01:09:14,660 --> 01:09:44,660
+Thank you.
+
+374
+01:09:44,660 --> 01:10:14,660
+Thank you.
+
+375
+01:10:14,660 --> 01:10:44,660
+Thank you.
+
+376
+01:10:44,660 --> 01:11:14,660
+Thank you.
+
+377
+01:11:14,660 --> 01:11:44,660
+Thank you.
+
+378
+01:11:44,660 --> 01:12:14,660
+Thank you.
+
+379
+01:12:14,660 --> 01:12:15,660
+Thank you.
+
+380
+01:12:44,660 --> 01:12:46,660
+Thank you.
+
+381
+01:13:14,660 --> 01:13:44,640
+Thank you.
+
+382
+01:13:44,660 --> 01:13:46,660
+Thank you.
+
+383
+01:14:14,660 --> 01:14:16,660
+Thank you.
+

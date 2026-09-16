@@ -1,0 +1,250 @@
+start	end	text
+0	7440	Hello everyone this is the third and final module of the diagnosis lesson. As you've seen
+8080	13520	the lesson has been divided in three modules. Module one that was about an introduction about
+13520	20320	all diagnosis and already in the first module the ISO 1429 alias UDS has been mentioned.
+21200	28000	The module two that was more focused about the status rights and how to get to the specific
+28640	37040	status and how to get back from that status still using the concepts behind this norm. Finally
+37040	44240	this last and shorter module will have a look at the norm itself so as you see here this is the
+44240	51040	ISO that has been always mentioned the ISO 14229 and here you find also the meaning of the acronym
+51040	60240	Unified Diagnostic Service UDS. Since it is mentioned so many times in the lessons and also in your
+60800	69760	daily working activities I would like to show and scroll down with you the norm to show what we
+69760	77280	really care about this norm and how to use it. So as every norm there is a summary of contents
+77280	86080	there are a lot of reference or references terms and definitions symbols so a lot of
+86080	91600	introductory pages and chapters where you know everything that is will be used during the norm
+91600	98240	is explained. But what we really care about is okay it would be interesting to read the first part
+98240	104800	you know we're talking about like 30-35 pages so it would be interesting to read also the first pages
+104800	115600	as well but once you are aware and you have basic knowledge about the UDS you will use this norm just
+115600	120640	looking at the services that you might need for your activities. As you see here
+120640	129520	there is a huge list of services all the services that are expected for this norm. So you see here the
+129520	139440	service 10 service 11 which we probably mentioned the service 27 here 22 and stuff like this. As you see the
+140480	148080	list of services is quite long and here you find also the service 14 that was mentioned in module 2 as well
+148080	155920	as the service 19 which is the main one that is mentioned and used almost in all the modules about the
+155920	163760	diagnosis that we have done before until now. Service 19 is the biggest one with the largest amount of
+163760	170960	sub-services probably for the activities we are interested in so the description of the norm will start from
+170960	179520	the easiest of the services that you will probably find yourself using which is the service 22. So just
+179520	188160	looking at the summary of the contents we just have to find the service 22 with data by identifier service 22
+188160	197360	that is page 97. So here we basically go to the page and we see how a specific service is
+197360	208960	set. This kind of structure is repeated for every service. So we are going to see the service 22 but then
+208960	217360	this kind of structure is repeated for every service. As mentioned many times in the past as well
+217360	223840	you don't have to remember everything by hearth. I mean no one will ask you to remember the whole norm
+223840	232720	or the whole norm in every service in every subservice no one will ask you for that. What you have
+232720	238320	what you have to remember what you have to to have basically is the norm itself so once you start an
+238320	243600	activity if you have to perform some activities about the diagnosis what you will need is basically
+244160	250240	diagnostic requirements for that project and if for that project the UDS is used then all you need to
+250240	256080	have to have is the UDS itself. So once you have to do an activity I don't know reading an information
+256080	263440	reading the error memo raising the error memory whatever you know that you can look in the ISO 14229
+263440	269600	alias UDS and then look for the you know the service that you might need how to write it what you should
+269600	277200	expect and things like this. So even if there are 300 pages do not get scared because what is really
+277200	286160	useful and helpful here is to have the norm read it through and knowing that you can look for
+287680	292400	information that you need just reading the norm every time you need it. We will start from service
+292400	297920	22 because it is very easy and then we will move to the service 19 which is the main one that we have
+297920	305280	always mentioned in use in the previous lessons. As always there is the service description and this is
+305280	310640	very helpful because if you already know the service to be used and you just don't remember how to write
+310640	317280	it in a frame okay then you can jump this this part this section but if you don't know what is the
+317280	322880	service that you might need then the service description of all the services might be helpful for you because
+322880	328560	it can explain what can you do with this service and eventually reading through them you can find something
+328560	334880	that can be that can suit the suit the activities that you might do so you can find the service that
+334880	341680	you might need reading the service description. In this case we already know what this service is used for
+341680	348640	but in case you have doubts you can simply read the service description to have a first introduction of
+348640	357440	the service in itself. I suggest you to do this kind of like to read at least the service description for the
+357440	362720	main services that have been mentioned in the diagnostic lessons that you might have received.
+364880	371280	After the description there's always the request message definition so in the norm you will find the
+371280	379680	long list of a long a huge number of tables okay so it's important to understand how to read them. In this
+379680	386720	case you will always have a chapter of request message as you remember all the diagnostic services are sent to
+386720	393360	the electronic control units using diagnostic scan frames okay so what you see here this is actually
+393360	400000	the hexadecimal values that you should write inside the scan frame to send diagnostic request. In this table
+400000	406160	in fact you see that on the left side there is data byte so the amount of bytes that are needed for this
+406160	413200	request and here what is the parameter name and there is the hexadecimal values. Then reading the norm you can
+413200	420880	understand also what is this CVT or this mnemonic section but for all we need now what is important
+420880	428720	is just to focus on the first column of the data byte eventually the parameter name and hexadecimal. So from
+428720	437840	here we see that to write to use the request this service the service 22 we have to write the request message in this way
+438400	444400	so we have a first byte where we have the read data by identifier request service id which is the id of
+444400	451120	the service the id of the service is 22 we already mentioned it so it means that if i want to request this
+451120	461280	kind of a service the message should start with 22 okay then it's said that the the second section of the data
+461280	469680	byte is byte 2 and byte 3 and byte 2 and byte 3 there is the data identifier so actually the code of the RDI
+469680	476640	okay this is always defined in two bytes so it means that if you want to read a specific information
+476640	485600	you will write 22 and the two bytes of the RDI okay as you see the table doesn't stop here because one of
+485600	490560	the feature of you know one of the possibilities that you have with this service is to request
+492160	499760	more than one RDI per times this is not always possible but it might be possible so this is why
+499760	507360	the table doesn't stop here and it means that you can send 22 then the two bytes for the first RDI
+507360	512320	other two bytes for the second one until you know all the RDIs that you want to all
+512320	525520	uh request for okay we can use the basic example of requesting just one uh uh RDI so what we will have
+525520	537760	is 22 and there two bytes at 10 0 8 for example okay where this will be the RDI and this is the service okay
+537760	550560	so this is the request then let's move on uh i choose this service because this service does not consider
+550560	557280	sub function but uh i'm reading the chapter 19 you will see that the chapter sorry the chapter related
+557280	563360	to service 19 you will see that this chapter will be much much longer because the service in itself
+563360	574080	expects a lot of sub functions we have mentioned the 1902 the 1904 the 1906 and the slides you will find
+574080	582080	many others much more of that but in this specific service there are no sub function so it's very it's
+582080	589600	easier for the explanation uh but uh going through the service 19 you will see that this chapter will be
+589600	594800	actually much more longer than this one where it's simply written this service does not use a sub function
+594800	603680	parameter so here it's explained what is the data identifier and what this parameter identifies the
+603680	609760	service data record being requested by the client and here there are also other references inside norm to
+610480	614720	understand what is this data identifier and how and why it's built like that
+614720	623840	so there is not just the table explaining uh uh how to write the request but also what is the positive
+623840	632080	response message definition that i should expect once i sent these i sent this uh request okay this service
+632080	642720	so again i wrote and before 22 10 0 8 then here the norm says okay this is the answer okay and here it's
+642720	649440	described the answer so the answer will be 62 because as you know as you might already know or
+650080	655440	someone has mentioned already in other videos the positive response to a specific service is going to
+655440	663440	be plus 40 in hexadecimal values so if we requested service 22 then the positive response will always start
+663440	672000	with plus 40 on the service so if you requested the service 22 then the positive response will be 22
+672000	678480	plus 40 in hexadecimal which is going to be 62 and here everything is described here i mean positive
+678480	686080	response message that message definition quite likely quite likely inside the first chapter descriptive
+686080	691920	chapters of the norm you will also also find a description of this plus 40 when there is a positive
+691920	698240	response and stuff like that uh in these tables this concept is given for granted but we are already
+698240	704400	mentioning that once we have a positive response it's going to be a plus 40. anyway so we have a plus 40
+704400	711360	then here it's data identifier so we will have 10 0 8 because this is that identifier and then we will
+711360	721520	have the data record so the actual information so if we are considering that this byte uh this byte i don't know here
+721520	733920	the content of the byte definition so that the rdi is on two bytes okay so 10 0 8 okay but then the content
+734480	745120	that it gives access to it gives access to might be i don't know 10 bytes okay so here we will have 62 as a positive
+745120	755360	response 10 0 8 which is the id data identifier and then we will have 10 bytes giving us the content of
+755360	761680	this rdi just remember back guys that rdi basically is an information that is stored inside the electronic
+761680	768400	control unit memory so what i'm doing basically here requesting the service 22 is just requesting to the
+768400	776880	electronic control unit uh this information to give and publish this information on the ken network
+776880	786400	using this specific syntax coming from vds uh then if the rdi it's uh it's just i don't know it has two bytes
+786400	792160	of information then we will just have this one one and two if it's on three bytes we have always this
+792160	797840	or if it's on four bytes we have this one as well and stuff like this okay this should be quite clear
+797840	803120	and this is explained inside the norm so in the norm is said okay the positive response message
+803120	809280	definition is going to be like this so i have one as 62 the positive response the identification codes
+809280	817040	of the data identifier and the content once again the table doesn't stop here because as i explained you
+817040	826400	before you have the chance to request more than one rdi times this is not always possible it's up also to
+826400	833280	the client that how the client decides to uh implement this part this section maybe they don't want to
+833280	839680	implement exactly the uds but maybe they have some division in the software so not always is possible
+839680	846880	to request more than one rdi times but the norm says that it's possible to read a few of them all
+846880	853600	together okay this is why the table doesn't stop but the idea is always the same so you have 62 the two bytes of
+853600	859840	the identifier and the content once the content is finished you will have once again data identifier
+859840	867600	and the content okay this should be clear here there is a definition of what is the data identifier
+867600	873120	and the data record but once again data identifier this is basically the identification number the data
+873120	883120	record is the content we access through that identifier once again guys here we are just uh this service is very
+883120	890640	easy so through the service 22 we are requesting to read some information that are stored inside the uh
+891760	898160	memory of the electronic content this information is stored with the specific identification number which we
+898640	905840	um consider to be 1008 we request can you give me the information that are uh stored with the
+905840	913040	identification number 1008 the echo will reply okay 62 1008 blah blah blah blah this is the content okay
+913040	922560	this should be quite easy then uh let's move to the next section of the norm which is the supported
+922560	928800	negative responses so every time we in this example we have given for granted that the positive that the
+928800	934240	response is positive and we explain that once we have the positive response is always plus 40 on the
+934240	944560	service that has been requested but for some reasons the echo can also reply saying i cannot give you this
+944560	952400	information so we request 22 i'll use purple so we always request the service in this way because you
+952400	960240	know we have seen it from but we have two options or deposit the response is positive and it follows the rules that
+960240	968880	we were explaining before or we have the second options where the answer is negative so the echo cannot reply
+969520	976960	to cannot you know reply positively to the services that we requested so in this case the structure will be like
+976960	988560	this one the first byte is always going to be 7f so the answer is going to be 7f 7f is used every time
+988560	994000	the echo wants to tell us the echo wants to tell us okay this is a negative response negative response to
+994000	999680	what second byte is going to be the service for which the response is negative and the service that we
+999680	1007120	were requesting is the service 22 this is the second byte the third byte is going to be the the reason
+1007120	1012880	so the the echo always when there is a negative response the echo will always reply on these three bytes
+1012880	1020640	where the first one is the 7f always which tells okay every time you read 7f as first byte this is a
+1020640	1028320	negative response so negative response means i cannot reply okay i cannot reply to what the service 22 and
+1028320	1036880	then the echo always tells you why so in this case the third byte is the reason of why that the echo cannot reply
+1036880	1045520	uh in the norm there should be a table with all the possible negative responses that the uds expects
+1045520	1053040	but not all the negative responses are expected for every service so for every service that you read there
+1053040	1059360	is also a section of supported negative responses and there is a subtable containing only the
+1059360	1069760	a supported negative responses for that service so it means that if i use the service 22 the i have two
+1069760	1076320	options or the echo replies positive positively and that's that follows all the words that we have explained
+1076320	1086000	before but the other option is that the answer is negative and we will have 7f 22 and one of these negative
+1086000	1093520	responses so we will have these are the ones supported for the service 22 so we will have the service the
+1093520	1102400	reason 13 incorrect message length or invalid format means that we have requested an rdi not on two bytes but
+1102400	1111200	you know to buy it point something so we didn't write 22 10 0 8 but we brought 22 10 0 8 1 for example
+1111200	1116800	and this is wrong because the rdi are based on two bytes okay so this is the reason why we have the
+1116800	1127040	correct uh incorrect message length another negative response could be 22 so 7f 22 22 conditions not
+1127040	1134000	correct it means that you are requesting a diagnostic request when there are not all the proper conditions
+1134000	1141440	and expected conditions to request this service 31 request out of range so you requested an rdi that
+1141440	1150000	doesn't exist for example or security access denied 33 so you are requesting a diagnostic service that cannot
+1150000	1158320	be requested with this security access level the security access there is also a diagnostic service for
+1158320	1165040	the security access which is the 27 so you can have a look at it read it to understand what is this security
+1165040	1171280	access once again the structure that we are seeing here for the service 22 is all is the same for the
+1171280	1180800	service 27 the service 19 the service 14 and stuff like this okay so it's okay and it's enough to go
+1180800	1187440	through the structure of one service because all the others follow the same structure
+1190160	1197760	and then the the norm also gives us some examples so there are some preconditions that are explained
+1197760	1205120	here these are these are all the preconditions of this example and then there is an example probably there
+1205120	1212240	are also also more than one example so this example one is read single data identifier so we just are
+1212240	1218800	reading one rdi this guy's in this case is the bin vehicle so the vehicle identification number bin number
+1220080	1227360	so we will we will actually write inside the diagnostic tool or simply in a diagnostic frame in canalizer
+1227360	1234400	these three bytes 22 because this is the proper diagnostic service and then we will have the two bytes of the
+1234400	1243120	the identification number which is the f19 in this case okay so the echo will reply again uh the positive
+1243120	1252560	response 62 then the two bytes with the data identifier and the content of that ed of that rdi in this case
+1252560	1262320	the content of that rdi is based on uh 20 minus 3 17 bytes so the answer will be on 20 bytes because the first is
+1262320	1269520	the positive response then we will have the two bytes of the rdi and finally the content of the rdi
+1271600	1278480	uh here there is another example where you read not just one rdi but two rdi's so as you can see
+1278480	1286480	this reflects exactly what was written in the generic uh variables let's say in the table before you just
+1286480	1292880	write the service 22 and then two bytes for the first rdi two bytes for the second rdi and the answer
+1292880	1300720	in this case will be 72 because it's positive response the first the two bytes of the first rdi
+1301280	1310240	the content the two bytes of the second rdi and the content and it ends so here it starts another
+1310240	1316800	service another service another service that will follow the same structure so out of curiosity because
+1316800	1326400	we have always used that service we are going to scroll down also the service 19 service 19
+1326400	1344480	uh service 19 so we see there is a productive part where it's written uh for which are the reasons
+1344480	1350720	why we should use this service which is the purpose of this service and we see here also the descriptive
+1350720	1358800	part is descriptive part descriptive part is much longer because there is a huge set of sub services
+1358800	1367040	that are used for service 19. this is very helpful so i really uh invite you to read these chapters
+1367040	1373440	especially for the main services that services that you might use for your activities so there is always
+1373440	1380640	the descriptive part as you see it's very very long uh you know there are even different
+1380720	1387040	chapters to understand which are the service which is the services which are the purposes of the
+1387040	1394000	sub services and stuff like this okay so this is very very long but this is these are all the concepts
+1394000	1400160	as ideas that we gave you in the past videos so just reading through these sections you should find
+1400160	1406560	every all the things that we have already mentioned in the past in other videos so once this full
+1406560	1411680	introductive part has been defined probably there is also the definition of the status byte that you
+1411680	1418240	have in other videos so you see how long is this then you will have the usual table that we already found
+1420320	1427760	in the other services so there is the request message definition here you see there is first byte is the
+1427760	1435360	service 19 the second byte is the sub function which was not present in the uh in the table before
+1435360	1442880	because no sub services were expected for service 22 but for the service 19 there is a huge bunch of
+1442880	1450480	sub services expected and then there is the third byte of the status mask this is the famous 19 0208 that
+1450480	1459200	we have always mentioned in past videos okay but as you see there are 02 is just part of subs it is just one
+1459200	1467120	of the all the sub services that are expected for this service so we have 0 1 0 2 0 half 11 12 12 13
+1467120	1476960	0 3 0 4 0 5 0 6 10 you know there are there is a long long list of sub services each sub service is
+1476960	1483520	used for a specific purpose most of the activities that we do can be managed just with the the subservice
+1483520	1491200	0 2 sub services 0 4 and the subservice is 0 6 but there are a bunch of other subservices that might be
+1491200	1496800	helpful for other specific corner cases of your activity and you don't have to remember all of
+1496800	1503040	them all you have to do is just knowing that i have the norm i can use the norm and read the chapter when
+1503040	1509040	i need it to understand if there is a specific service or subservice that i can use to you know perform
+1509040	1515200	a specific validation activity or verification activity that i'm supposed to do in my work
+1518000	1525040	so here is the definition of all the sub function expected here you see the subservice 0 2 which is
+1525040	1532720	the one that we always use is called report dtc by status mask so we say service 19 subservice 0 2
+1532720	1544480	report the list of dtc by status mask which status mask at least 0 8 so at least the status all the dtc's
+1544480	1552000	that has got at least the bit 3 to 1 this is the reason why we set 0 8 but this is the reason why we
+1552000	1562640	can use whatever other status mask i'm not forced to use the 0 8 as the third byte of the request 19 0 2 0 8
+1563280	1568800	i can use something different i don't know i'm interested in the list of the dtc's that have
+1568800	1580400	third byte 40 so 19 0 2 40 or 19 0 2 f f 19 0 2 0 0 f and you can use it as you prefer according to the
+1580400	1586080	activity that you want to do most of the time if we use 0 8 because we are interested in all the dtc's
+1586080	1591680	that are at least saved in the error memory but this doesn't mean that you cannot use a different status mask
+1592400	1598560	so this is the survey the list of all the subservices expected or that you that can be implemented for
+1598560	1605680	service 19 just remember in the service 22 this section was empty because there are no subservices
+1605680	1611760	expected for that service in this one you know you see there are also two or three pages so description
+1611760	1616320	of the subservices okay so you start to understand why this is so important
+1616320	1627040	so here there is the long definition of the status by the examples so i really invite you to read all of that
+1627040	1633040	and once again as we have seen for the service 22 here there is a positive response message definition so what i should expect
+1633040	1639040	what i should expect once i have a positive response once again if the service is the 19
+1639040	1647200	then if there is the positive response it's going to be 19 plus 40 59 okay then 59 0 2 for example
+1647920	1655120	the dtc status availability mask which i invite you to study and so this is the third byte that you
+1655120	1661920	should study from the north and then the three bytes of the dtc because you know the dtc
+1661920	1668480	uh is based on three bytes plus four byte real status of the dtc which we which is what we are looking for
+1671280	1677440	and here there are all the examples of positive response with all the subservices so this chapter
+1677440	1682720	is very long because we have a lot a lot of subservices it means we have a lot of tables for
+1682720	1691360	every kind of example uh of course even here there is the supported negative responses code
+1691360	1698000	in this case we have just three cases like some function not supported uh the incorrect message
+1698000	1703600	length that we have always also seen on the service 22 and also the request out of range
+1704400	1710880	and finally there is also the message for examples with what can be yeah here you see there is also the
+1710880	1718400	description of what the what are the eight bit of the status byte and that's you know you have two
+1718400	1725040	specific videos explaining that so this is just a refresh for you and then there are you know there
+1725040	1730960	are examples where you know a specific uh subservice is used in this case is the one
+1731520	1738640	the results i might say an example with zero two you know you see here in this case uh they're not
+1738640	1746720	requesting the 1902 08 but they're interested in the more restrictive case where not just the bit 3 is
+1746720	1757520	2 1 but in this case they want bit 7 1 and the bit uh 2 to 1 okay and you know here for it follows a
+1758960	1769200	huge list of examples with all the subservices so just to uh sum it up this norm is not something that
+1769200	1775680	you read so you take this norm you read 300 pages and then you expect to be expert in ugs no
+1776640	1781840	this norm is very important to understand the structure of the norm probably start from service
+1781840	1789520	22 because that's the easy one and once it's clear the structure of every service every time
+1789520	1797360	you perform diagnostic activities use this norm uh looking for or the specific service if you don't
+1797360	1803360	remember the syntax because we have seen there are tables explaining you how to write the request which
+1803360	1809360	is the positive response to be expected which is the negative exponent response to be expected and also
+1809360	1818320	which is the which are the negative reasons for the negative uh response expected so you just read the
+1818320	1826240	norm if you don't remember the syntax or if you have to do something diagnostic diagnostic related but you don't
+1826240	1833840	know which can be the service to be used you can simply or read the service description of all the
+1833840	1841200	of all the services or simply just looking for keywords for example dtc for example flash of
+1841200	1850160	uh echo for example arrays and stuff like this probably the research the control find feature of the laptop
+1850160	1858320	uh applied on the norm will uh bring you to the service description chapter which is the first
+1858320	1864320	section of every uh service and then once you read the service description that will help you to
+1864320	1869600	understand if that can be a service that can help you for your validation activities or for your
+1869600	1875200	verification activities or diagnosis and again you don't have to remember everything about the
+1875200	1881760	service you just have to know how to read the UDS norm how to use it so that will help you for the
+1881760	1887200	further activities that you do once again if there are doubts or problems you can contact me
+1887200	1896240	uh i am pasquale.perrota and the email address is pasquale.perrota head sign kinethon.it or simply
+1896240	1905360	refer to the generic mailing list automotive.training head sign kinethon.it for further uh support and further questions

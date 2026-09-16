@@ -1,0 +1,330 @@
+Hi all, I'm Massimiliano Schettino and today we will talk about CAPL.
+CAPL is an acronym and it stands for CAN ACCESS programming language.
+The CAPL is a C-like programming language and it is a very powerful instrument we have when we want to execute test cases
+or when we want to simulate or emulate electronic control units while we are using vector tools like CANALYZER or CANO.
+The first thing you should know about CAPL is that it is a procedural language. It is controlled by events.
+We will have several program blocks or so-called event procedures that will be executed when a certain event will occur.
+The type of events we are talking about are key press event, occurrence of messages, CAN, LIN or Ethernet or some action that occurs cyclically such as the timers.
+Here you can see a CANO configuration window and in order to write a CAPL code we have to access the CAPL browser and we can do that directly from the session tool or by double-clicking a program nodding configuration.
+This is what you can see when you open a vector CAPL browser.
+On the left side you can find the F3 with all the defined variables while on the right side you can find a list of events and system and you can drag and drop the events from the list inside the code.
+In simple tab you can find also network messages and signal and again you can drag and drop them directly into the code.
+As you can see in central window you can write your code.
+If you open a blank script it contains just an int block and a variable one.
+The first one will allow you to add libraries to the code while the second one is useful to define and initialize your variables.
+And after the variables block you can continue writing your code.
+One of the first important features of the CAPL is that once you have configured canalizer or CANO and you have linked a CAN database the CAPL browser will recognize the messages and signals names directly from the database.
+And so you can choose the message you are interested in directly while you are typing its name.
+Each CAPL code consists of three distinct parts.
+The first one the global variable declaration is the part where you declare and initialize the variable you will see when you use in the rest of the code.
+The second one event procedures is the main part of the code where you write the actions to be performed when an event occurs.
+The third one is the user defined function where you can define and create your own custom functions.
+Let's talk about the first one the variables.
+In CAPL we can find the same data types of C language.
+It has the integer variables floating point numbers or the declaration of arrays.
+But we can find also different variables such as CAN message and TIMERS.
+All the variables except for the timer can or cannot be initialized in the declaration.
+If a variable is not manually initialized, it will be automatically initialized by the compiler, usually to the zero value.
+Today we will not focus on integer variables and long point numbers, but we will focus our attention on the other one, CAN messages and TIMERS.
+There are two types of TIMERS, the ones based in seconds that are called simply TIMERS and ones based in milliseconds called MS TIMERS.
+They have to be initialized.
+We have no other choice, otherwise we cannot use a timer inside the code.
+Obviously their scope is to generate time events.
+We will define them in variables, as you can see in the example, by writing TIMER or MS TIMER and writing the name T or T1.
+Then, inside our code, we will initialize the timer giving them a value with the proper function called SETTIMER.
+In the example, we initialize the second timer T to 10 seconds and the milliseconds timer T1 to 100 milliseconds.
+When we initialize a timer, the timer starts.
+For what concerns the other variables, the messages, we can declare them thanks to their message identifier, if we have no database, or also to their message name if the database has been linked to the configuration.
+As you can see in the example, we can use the identifier in hexadecimal or in decimal, we can use the name inside the database, or we can decide to define it later.
+But in each case, we define also a name, M1, 2, 3, or 4, that we will use inside the code.
+After we have defined a message, we can have access to different information of it.
+As you can see here, if you write the name you gave to the message, in this case M1, and dot, you can have access to the message identifier, to the data linked code.
+To the direction of the transmission, to the remote transmission request, or to the time points and units.
+Now that we have finished with the overview on the variables, we can continue with the main part of the CAPL code.
+We have always to remember that it is an event procedure code.
+And so we will talk about the event procedures.
+The main event procedure you can use in CAPL are on message, for the receipt of the akin message, on key, if we want to do something when we press a key on our laptop keyboard.
+On pre-start, for the initialization of the measurement.
+On start, when the measurement starts.
+On stop of measurement, if we have to do something when the measurement ends.
+On error active, passive, or pass off, that reacts for specific diagnostic condition.
+On timer, if a timer elapses.
+On error frame, if an error frame occurs.
+On error frame occurs.
+And on environment variable.
+That is useful only for canon.
+Cause, a canalizer does not give the possibility to use the environment variables.
+And you will use this block each time the value of the environment variable will change.
+Now we will see them one by one.
+And let's start with the messages.
+On message will allow us to write a block that will be executed each time a certain message will be received on a certain can.
+We can react to a message thanks to ID.
+Decimal or extra decimal.
+To the name.
+We can find the database.
+Or we can define it thanks to the chip.
+That is a specific path.
+Composed by the name of the can.
+In which the message travel.
+And then the ID.
+But we can also react to several messages.
+With the star we react to all messages in all the buses.
+With the name of the can dot star we react to all messages of a single network.
+And then thanks to a range of IDs.
+We can react to all messages with identifier between the extremes we define.
+In this case one hundred and two hundred.
+Here it is shown an example.
+Of what we call with the name of gateway.
+In the first part we define a message.
+In can one bus.
+34 is the ID.
+And send message one.
+Is the name we give to the message.
+In second part.
+We say that.
+Each time.
+The can one dot thirty one message.
+Is received.
+What we do.
+Is declare.
+Another message.
+This time.
+In the can two.
+Bus.
+And with name.
+Send message two.
+But the ID.
+Will be always the same.
+34.
+The.
+Keyword is.
+We will see this.
+Later.
+In this lesson.
+But for now.
+You have just to know.
+That.
+With this declaration.
+We put.
+Send message two.
+Equal.
+To the message.
+Can one dot thirty four.
+We modify something.
+Inside.
+Send message two.
+In this case.
+The byte four.
+And we put it.
+Equal to zero.
+And we put it.
+Equal to zero.
+We modify something.
+Inside.
+Send message two.
+In this case.
+The byte four.
+And we put it.
+Equal to zero.
+And then.
+We send.
+Inside.
+Inside.
+The bus.
+In this case.
+Is.
+Can two.
+The send message.
+Two.
+The scope.
+Of.
+This.
+Very.
+Simple.
+But.
+Useful.
+Example.
+Is that.
+We have the possibility.
+To.
+Receive.
+One message.
+Or.
+Multiple message.
+From.
+Them.
+And.
+Them.
+In.
+Another game.
+Let's.
+Continue with the.
+Keyboard.
+Events.
+We can.
+React.
+To.
+The precperce of key a.
+To space bar.
+To.
+If one.
+then to the combination of control f12 to the page up button to the home button
+or to any kind of keypress
+this kind of reaction could be very helpful when you want an output when the user decide that you
+want it and as usual now we will see an example we define an integral variable counter and we put it
+initially equal to zero each time we will press the key a we will write on the right window of canoe
+or canalizer a certain text in this case a total of a percentage d or where percentage g will be
+replaced by the value of counter in that moment and then messages and the id of the messages counted
+on the right we will see that each time the message with a certain id is received in a certain can
+counter is increased and the message is sent and each time other kind any other kind of message
+but also the one with the id we can find here we will send it inside the can
+from these lines we can easily understand that this cpl code is done for a
+a canalizer tool because for the canalizer tool we have always
+to write output this when we react to a message otherwise the the message will be not sent to the ecu under test
+while in in canon it will be not necessary
+let's focus again our attention on the timers and now we know how to declare and initialize the timer but
+then we have to do something when they expire and the event we will use in this case will be on timer
+timer timers are very useful when we want to develop cyclic action or to do something after a delay as we saw
+in previous slides the function set timers need two parameters one the first one is the name of the timer
+and second one is its length um it could be both a timer in second or an ms timer in milliseconds
+and in these two cases it will vary also the maximum length in the first case in fact
+uh we can count up to one thousand seven hundred ninety nine seconds in the second time in seven case i'm
+sorry we can count up to 65535 milliseconds if we want to use a timer cyclically we have two options
+functions the first one will be to set a normal timer wait that it elapses and then set it again
+the second one is using a proper function of the cpl language that is set timer cyclic that each time
+will elapse it will reset it again
+and here you can see the difference between the two type of timers in both codes we define a message
+and the timer when we press a we set a timer but on the left we do it once so once the timer will be elapsed
+no other block will be triggered while on the right part we set a cyclic timer and so if we continue reading
+the code when the timer elapses the message will be sent multiple times
+until we don't stop the timer or the measurement stops on the left instead we will send the message in output just once
+if you think that the most part of the ken messages are periodical so they are cyclic
+the set timer cyclic can be very useful
+let's then talk about the reaction to the system events we are talking about pre-start start and stop
+measurement it is what happen when we press the start and the stop measurement button on canalizer or canon
+we can use this kind of blocks just once in our code we have always to remember that the cpl is a
+procedural language and so the first block that will be executed is the pre-start and no other block
+can be executed in parallel when we press the go button in canalizer or canoe
+we can then thanks to the pre-start block initialize variable read data from files
+or write something in the right window since the measurement is not started yet we cannot send
+can messages into the bus or set timer after the press start then we can do whatever is written in
+on start block and then here we can set timer or send messages into the bus but also initialize
+environment variable if we are using canal at this time the measurement starts when you press the stop
+button then a on-stop measurement event is executed at this point not only the measurement finish but we
+can also print statistics in right window or output messages into the bus or write a log file
+continuing we have the error events obviously this is not the scope of this lesson to talk about these
+different kind of errors or states but i just want to underline that this kind of event are very useful
+useful if we want to monitor the error states of an issue and if we want to terminate the measurement if
+necessary or if we want to execute a reset if the bus of state is reached we can also
+also access the error counter that lead the issue to reach these states thanks to the keyword error count in tx or in rx
+and in the last part of the slide you have a little example
+on what you can do with this kind of event and thanks to the error counter
+now that the event overview is finished i just want to do a quick recap on the most used expression
+that you can find in cpl but obviously you can find in all chip based language and so the instruction blocks
+the if condition blocks the if f block the switch case default blocks loops as for while and while
+the continue and break instruction the continue and break instruction and the return instruction
+and the syntax is the same of the c language
+for what concern the keyword is that we have found several times in the previous examples
+as you have probably already understood it refers to the element
+of the event block in which it is contained here are two examples one for a canned message
+and so the first this on the left will refer to the message with id 10 100 i'm sorry and on the right
+instead it is referring to an environment variable called variable one and this will refer to the value of this variable
+now that the first part of this lesson is ended i want to propose you a summarizing example in which
+we want to simulate the behavior of an issue called the body control module
+as you can see the first part includes exploit and second part we define some variables two messages
+one integer one this infotainment steering with control management
+uh we put it equal to zero and so it is not enabled it means that probably
+if it is equal to one it will be enabled
+each time we receive the bcm underscore comment we read the value of one of its messages one of its signal i'm sorry
+and if it is if the the signal named operational mode status is equal to four five six seven eight
+and so if we add ignition on and press start and start and cranking or ignition on and you know we will
+enable the management otherwise you know other cases we will not enable it
+why we need to enable or disable the infotainment steering wheel contrast management
+because when we press a button uh into the the panel
+the panel view of a canoe or canalizer the code will check the value of this
+this variable and if it the management is enabled it will put a signal value inside the message
+svc i'm talking about command underscore 11 c does equal to a variable an environment variable value
+otherwise it will do nothing in case in which management is enabled it will also output the message so the message
+will be sent on can and at each environment variable command 11 12
+and then 13 14 it is assigned a certain button as you can see a down button and right button
+uh okay button and up button
+it is something that can be done uh thanks to the panel editor in can or canalizer
+and you will see it better also in a calm lesson
+and the idea is that normally the the button value is so the environment variable value is equal to zero
+and each time it changes and it became equal to one if we consider the the first instruction for example
+then if the management is enabled this is the only case in which something will happen
+the command underscore 11 status will be equal to one and the message will be sent
+otherwise nothing will happen
+as i was saying before first most specific part is ended but now i will speak also about the
+correlation and the differences between two tools very powerful
+as easy block and cpl are
+during test activity both on vehicle and hardware in the loop it will happen very often that you have
+to change signals video we are talking about
+signals of messages sent by real issues in some cases you cannot just put the hardware in the loop or the vehicle
+in the condition for which the real issue send that signal that you need for several reasons
+dangerous condition for the drivers possible damages to vehicle components
+difficult vehicle condition or tests particularly long
+or in condition
+not so easy irreplicatable other application cases are loss of communication between real issues
+or impossibility fault it is message counter or cyclical randomness check servers
+in this case something that could really help us are the easy blocks and the cpl code
+you should already know that on can there could be several kind of frames
+on event cyclic on event or just the cyclic ones and according to the signal type
+we can choose the type of gateway that we should use
+if you need to work just with on event messages on it we can use with no issues the interactive generator block
+and thanks to it you can manually modify the signals and messages parameters
+in using the eg block you put the node in parallel with the canvas and so you have not to interrupt
+the bus and this hold the t connection
+again it is not the purpose of this lesson to explain how the eg block works but what you need to know
+is that this tool is very powerful because it allows you with no kind of knowledge of c or other language
+to modify as you prefer each message or signal inside a dbc and so the signals value
+value if the message has to be sent or not cycle time and so on and so on
+but the main characteristic of dg is the possibility to configure and interactively send messages during
+a running measurement online it means that you have not to prepare nothing before you start the measurement
+but you can change everything during the measurement run
+this slide summarize what i've just said
+the cpl instead is used to generate and send cyclic and cyclic uneven messages
+in this case you need to physically interrupt the canvas you have to put the cpl and so the concase
+between the two issue and in this case also adding the terminal resistance 120 ohm for each canvas
+this wire scheme is called s connection this is an example of gateway if you remember it is something
+similar to one of the first example we have seen in this lesson and it is useful to pass each message that is
+received in one can to the other can and vice versa without we modify nothing it is used only if you want to listen
+what the issues are saying it could be useful for diagnostic needed for example let's read one block and then the others
+obviously obviously will be the same for each message sent on ken2 we define a message
+variable for ken1 and if the direction of the message on ken2 is not received so it is transmitted
+then we will not do nothing we will exit from this block otherwise if the direction is received
+we will send the message called msg in ken1 and we will exit
+instead if we want to modify something inside the message for example a signal value what we can do
+is to choose a key in this case will be one or zero in order to modify a variable we define in the variables block
+the x variable and if we press one the variable will be equal to one zero the variable will be equal to zero
+so
+if x is equal to one and the id is equal to a certain value because obviously we want just to modify the
+signal of one single message we will define the message that we will send in the other can we will modify the
+signal that we want
+in this case we will calculate also the crcr of the message and we will send in output the message as it is
+in all the other cases so for the other messages and in case we have not pressed the key one
+we will do the gateway as it was in the previous slide
+so which are the common uses of the cpl the first one we have already seen for the specific cyclic on
+cyclic uneven messages if we want to set a loss of communication between real issues you can imagine
+that it is very simple the only thing that you have to do is avoid that the signals and messages you
+receive on a can will be sent in output on the other can
+to set impossible data transmission reception always thanks to modification we have already seen
+to change multiple signals on the same time as have you seen in the ag block since it is something that
+we have to do manually and during the measurement we can do just one by one and at the end to change signals
+belonging to different campuses thanks to double gateway at the end the ag can do just a single gateway
+and i would conclude with the last summarizing slide on the advantages and disadvantages of cpl and the easy block
+for the cpl we have the possibility to change a signal independently from the type of frame it belongs
+since it is a code language it is very flexible and adaptable it gives us the possibility to change
+signal in two different can in same time as we have already said
+and it gives a wide range of programming the only limit is our capability to program it obviously
+it has a lot of advantages it has a lot of advantages it will have also some disadvantages it need to write
+a c plus plus script so if someone is not too good to use the c plus plus languages will have some
+difficulties but not so many i would say you need to physically interrupt canvas
+c plus it is not like the eg block and above a breakout box is needed for this purpose on the other side the eg block
+is very very easy and fast to configure and to use it does not interrupt the can since it requires just
+a t connection the disadvantages the main disadvantage is that it gives the possibility to change only message
+an event since once you press to send on the eg block the message will be sent just once and there is nothing
+that you can do to see who cyclically send it
+i will say that that's all thanks for your attention i hope that my explanation was clear the slides were clear
+and i will say goodbye
+you

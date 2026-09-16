@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:10,000
+Here we can find a list of automotive examples.
+
+2
+00:00:10,000 --> 00:00:18,000
+Phase synchronous induction motor used in the automotive field has an efficiency of about 90%.
+
+3
+00:00:18,000 --> 00:00:25,000
+Its main strengths are robustness, simplicity and longevity.
+
+4
+00:00:25,000 --> 00:00:32,000
+For these reasons, this type of motor is almost mainly used in industrial processes.
+
+5
+00:00:32,000 --> 00:00:48,000
+In addition, the overload characteristics allow it to be the most suitable type of on-demand motor, allowing it to be used as a front motor in AVD electric cars.
+
+6
+00:00:48,000 --> 00:01:00,000
+Three examples follow, namely Audi e-tron, Mercedes EQC 400 D-Matic, Tesla Model S and R.
+
+7
+00:01:00,000 --> 00:01:04,000
+For the performance, we have a particularly high torque.
+
+8
+00:01:04,000 --> 00:01:16,000
+With regard to the battery, the characteristics of the capacity and recharging times in alternating and direct current are high-glided.
+
+9
+00:01:16,000 --> 00:01:17,000
+Thank you.
+
+10
+00:01:46,000 --> 00:02:08,000
+The permanent magnet motor is made from rather rare art materials and China is the country that controls the market the most.
+
+11
+00:02:08,000 --> 00:02:15,000
+Many car manufacturers tend to reduce the use of these materials for their construction.
+
+12
+00:02:15,000 --> 00:02:28,000
+Nevertheless, the permanent magnet synchronous motor allows you to achieve the highest efficiency, reaching up to 94% or 95%.
+
+13
+00:02:28,000 --> 00:02:37,000
+Two examples follow, the Porsche Taycan Plus Sport Turismo and the Audi e-tron GT 4.
+
+14
+00:02:37,000 --> 00:02:45,000
+The characteristics of torque and charging times in alternating and direct current are highlighted.
+
+15
+00:02:45,000 --> 00:02:51,000
+In particular, the charging curve is also shown for the Audi.
+
+16
+00:02:51,000 --> 00:03:01,000
+It can be observed that a greater power absorption is generally obtained when the state of charge is lower.
+
+17
+00:03:01,000 --> 00:03:22,000
+The permanent magnet synchronous motor offers the best efficiency of all, but the rare-earth materials needed to be used to be used to be used to be used to be used to be used to be used to be used to be used to be used.
+
+18
+00:03:22,000 --> 00:03:34,000
+The permanent magnet synchronous motor offers the best efficiency of all, but the rare-earth materials needed to build them have an implication.
+
+19
+00:03:34,000 --> 00:03:46,000
+To address these problems, some manufacturers, notably BMW, Renault Group and Smart currently use an hybrid motor design.
+
+20
+00:03:46,000 --> 00:03:51,000
+They use synchronous motors that do not require rare-earth materials.
+
+21
+00:03:51,000 --> 00:03:57,000
+This type of motor is characterized by high efficiency and power density values.
+
+22
+00:03:57,000 --> 00:04:16,000
+The example of the Renault-Megan E-Tech and the BMW i-X3 are given, for which once again the charging times in alternating and direct current and the torque are highlighted.
+
+23
+00:04:27,000 --> 00:04:44,000
+In this slide, we can find a final comparison between the different types of electric motors.
+
+24
+00:04:44,000 --> 00:05:11,000
+In this slide, we can find a table with a list of cars for the max speed, the fastest from 0 to 100, the one with longest range and the higher battery capacity.
+
+25
+00:05:11,000 --> 00:05:12,000
+Thank you very much.
+
+26
+00:05:12,000 --> 00:05:13,000
+Thank you very much.
+
+27
+00:05:41,000 --> 00:05:51,000
+Thank you.
+
+28
+00:05:51,000 --> 00:05:55,000
+Thank you.
+

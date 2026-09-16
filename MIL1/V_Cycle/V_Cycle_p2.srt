@@ -1,0 +1,9528 @@
+1
+00:00:00,000 --> 00:00:08,960
+Hello everyone, I am Pasquale Perrotta, and this is the second module of V-Cycle Explanation.
+
+2
+00:00:09,640 --> 00:00:16,780
+As all the lessons that I'm recording, the lesson will start just showing you the references, okay?
+
+3
+00:00:17,180 --> 00:00:24,700
+So, here we have my reference, okay, name and surname, plus the, sorry, name and last name,
+
+4
+00:00:24,700 --> 00:00:33,040
+and the email address, which is pasquale.perrotta, head sign kineton.it.
+
+5
+00:00:33,820 --> 00:00:40,200
+I like to start in this way, because whenever you have, in case you have doubts after this explanation,
+
+6
+00:00:40,420 --> 00:00:48,740
+or even after the explanation of the first module of the V-Cycle, and you have some curiosities, doubts, problems, whatever,
+
+7
+00:00:48,740 --> 00:00:59,520
+you know, you can write an email to that, yeah, the email shown over there, or simply you can send me a message in chat.
+
+8
+00:01:01,260 --> 00:01:14,760
+The aim of today's video recording is to go deeper into details about V-Cycle Explanation that you have already watched and received with the other video,
+
+9
+00:01:14,760 --> 00:01:24,460
+V-Cycle Part 1. Why is this needed? This is needed because, because of, basically, one reason.
+
+10
+00:01:25,240 --> 00:01:34,500
+In the, in the past video recording, what you have seen, basically, it's a simplified version of the V-Cycle,
+
+11
+00:01:34,640 --> 00:01:38,020
+which looks like something like this, okay, which looks like this.
+
+12
+00:01:38,020 --> 00:01:51,240
+I will not explain the V-Cycle again, using this scheme, because you have already had this explanation in the other video.
+
+13
+00:01:51,420 --> 00:01:59,260
+So, I will be very fast on this slide, and then we will go through the reason why I'm recording this,
+
+14
+00:01:59,500 --> 00:02:03,240
+let's say, deeper explanation about the V-Cycle.
+
+15
+00:02:03,240 --> 00:02:11,020
+So, you have already seen this, so, as you know, the first and most important thing is the software requirements, okay?
+
+16
+00:02:11,160 --> 00:02:13,360
+Everything starts from requirements.
+
+17
+00:02:13,680 --> 00:02:19,620
+So, please, you will listen me or other people saying this many times.
+
+18
+00:02:19,720 --> 00:02:25,220
+The requirements are the starting point for all the activities that we are going to do, okay?
+
+19
+00:02:25,220 --> 00:02:31,480
+So, whatever you're doing, if you're working on the diagnosis, if you're working on network,
+
+20
+00:02:31,780 --> 00:02:35,700
+if you're working in the car, the child, wherever you are working,
+
+21
+00:02:36,340 --> 00:02:40,760
+the first input of the activities is always the requirements.
+
+22
+00:02:41,940 --> 00:02:42,660
+Why so?
+
+23
+00:02:43,400 --> 00:02:51,700
+Requirements are extremely important because we need a set of instructions that then have to be implemented in the software.
+
+24
+00:02:51,700 --> 00:02:54,920
+So, here we have software requirements.
+
+25
+00:02:55,100 --> 00:02:56,820
+Basically, these are documents, okay?
+
+26
+00:02:56,900 --> 00:03:03,080
+Like Word documents, PDF documents, you know, textual documents, okay?
+
+27
+00:03:03,960 --> 00:03:10,640
+These documents will, once they're prepared, let's say, they are shared to the software development team
+
+28
+00:03:10,640 --> 00:03:13,380
+that will create an architecture of the software.
+
+29
+00:03:13,980 --> 00:03:22,380
+We'll start to deeper these software architectures, starting to, let's say, think about big blocks
+
+30
+00:03:22,380 --> 00:03:28,140
+that should, let's say, be part of the software itself.
+
+31
+00:03:28,400 --> 00:03:34,560
+So, they will divide software in domains, but, yeah, we will not go into details now about that.
+
+32
+00:03:34,560 --> 00:03:40,600
+And finally, the software developer team will write the actual code, okay?
+
+33
+00:03:41,640 --> 00:03:47,500
+This will not be the aim of this lesson and probably of this learning phase.
+
+34
+00:03:47,720 --> 00:03:55,240
+If you're following a validation program, we will not go through the phases of software architecture,
+
+35
+00:03:55,500 --> 00:03:57,760
+software configuration, and software construction.
+
+36
+00:03:59,240 --> 00:04:01,080
+But why this is important?
+
+37
+00:04:01,180 --> 00:04:06,300
+This is important because the software developers will consider as an input software requirements.
+
+38
+00:04:06,300 --> 00:04:12,600
+And then, once the software is ready, this software is delivered to the testing team
+
+39
+00:04:12,600 --> 00:04:18,240
+that will start at the unit test phase, the integration test phase, and the functional test phase.
+
+40
+00:04:18,240 --> 00:04:24,680
+There will be other lessons, probably the lessons related to the software verification,
+
+41
+00:04:24,680 --> 00:04:31,480
+where we will enter every single block that we see here on the right side,
+
+42
+00:04:31,560 --> 00:04:34,100
+the unit test, the integration test, and functional test.
+
+43
+00:04:34,100 --> 00:04:43,540
+We will add some more details, but for the sake of this lesson, we will not enter these blocks.
+
+44
+00:04:43,540 --> 00:04:54,460
+I want to just remind what the V-cycle looks like and add, in addition, that apart from the purple V that we see here,
+
+45
+00:04:54,460 --> 00:04:56,440
+there are also gray blocks.
+
+46
+00:04:56,640 --> 00:05:00,580
+These are functional test design, integration test design, and unit test design.
+
+47
+00:05:00,580 --> 00:05:06,280
+So, basically, once we have the requirements, once we have software architecture or software design,
+
+48
+00:05:06,700 --> 00:05:12,860
+we can start to develop some test cases, so we can prepare the tests that we have to do,
+
+49
+00:05:12,980 --> 00:05:16,780
+starting to write them, and once we actually have the software,
+
+50
+00:05:17,260 --> 00:05:23,500
+or the integrated hardware in the system, for example, system hardware in the loop,
+
+51
+00:05:23,560 --> 00:05:25,820
+where we have more than one electronic control unit,
+
+52
+00:05:25,820 --> 00:05:30,220
+or simply we have a car where we can perform a functional test,
+
+53
+00:05:30,820 --> 00:05:33,180
+we can start to prepare all the tests,
+
+54
+00:05:33,180 --> 00:05:37,320
+and once we have the bench to open the cars, we can actually perform the tests.
+
+55
+00:05:37,720 --> 00:05:37,840
+Okay.
+
+56
+00:05:38,740 --> 00:05:45,900
+So, this is a fast explanation about the V-cycle,
+
+57
+00:05:46,080 --> 00:05:51,140
+and probably in the first module, something like this was already explained,
+
+58
+00:05:51,400 --> 00:05:54,920
+and this V-cycle repeats itself in many phases of the project.
+
+59
+00:05:54,920 --> 00:06:02,220
+So, about the design, about the requirements, about the software development,
+
+60
+00:06:02,360 --> 00:06:03,120
+and stuff like this.
+
+61
+00:06:03,180 --> 00:06:03,320
+Okay.
+
+62
+00:06:03,400 --> 00:06:05,960
+So, this V-cycle will repeat itself many times.
+
+63
+00:06:07,840 --> 00:06:12,960
+We finally get to the point of this second module.
+
+64
+00:06:13,080 --> 00:06:16,040
+The point of this second module is to say,
+
+65
+00:06:16,560 --> 00:06:18,660
+okay, this is wonderful.
+
+66
+00:06:18,900 --> 00:06:21,720
+I mean, this is very clear, easy to understand.
+
+67
+00:06:22,200 --> 00:06:23,200
+This is the process.
+
+68
+00:06:23,640 --> 00:06:24,040
+Great.
+
+69
+00:06:25,620 --> 00:06:26,140
+Question.
+
+70
+00:06:26,580 --> 00:06:31,000
+How do we use this V-cycle in a real case scenario?
+
+71
+00:06:31,220 --> 00:06:32,740
+Actually, I go to work.
+
+72
+00:06:33,100 --> 00:06:35,200
+I sit on my chair in front of the computer.
+
+73
+00:06:35,820 --> 00:06:36,260
+How?
+
+74
+00:06:36,460 --> 00:06:38,920
+The V-cycle is going to affect my activities.
+
+75
+00:06:39,660 --> 00:06:44,980
+So, the aim of this second module is to bring everything that you have seen
+
+76
+00:06:44,980 --> 00:06:51,060
+in the previous presentation that is, let's say, general,
+
+77
+00:06:51,060 --> 00:06:55,520
+and try to place this V-cycle on a real project.
+
+78
+00:06:55,520 --> 00:07:04,120
+This is a project I was working on, and of course, I will not mention it for copyrights reasons,
+
+79
+00:07:04,120 --> 00:07:10,180
+but this is actually a real case scenario I was working on,
+
+80
+00:07:10,180 --> 00:07:17,680
+and we will see how all that we have said about the V-cycle actually applies also on a real case scenario.
+
+81
+00:07:17,680 --> 00:07:23,080
+So, let's move to this other slide.
+
+82
+00:07:23,080 --> 00:07:30,900
+You will not get this presentation yet because this is part of a bigger presentation
+
+83
+00:07:30,900 --> 00:07:36,300
+that will arrive later in the validation learning and training program.
+
+84
+00:07:36,300 --> 00:07:45,780
+But you can, you know, have a look at the video and then, let's say, use it to study.
+
+85
+00:07:46,600 --> 00:07:48,260
+Let's just see something.
+
+86
+00:07:48,260 --> 00:07:59,420
+Okay, there is a little spoiler here, but then, yeah, let's see what it is.
+
+87
+00:08:00,360 --> 00:08:01,960
+So, what is that?
+
+88
+00:08:03,240 --> 00:08:09,860
+I imagine that that's what you ask yourself once you have seen the first video,
+
+89
+00:08:10,140 --> 00:08:14,680
+and then you received the exercise after the first video.
+
+90
+00:08:14,680 --> 00:08:20,220
+In front of this slide, probably everyone would have asked himself or herself,
+
+91
+00:08:20,680 --> 00:08:23,880
+okay, what am I supposed to do with this drawing?
+
+92
+00:08:24,120 --> 00:08:25,460
+What are all these dots?
+
+93
+00:08:25,640 --> 00:08:26,920
+What are this stuff?
+
+94
+00:08:27,760 --> 00:08:31,940
+This is an intended shock, let's say, that we provide you
+
+95
+00:08:31,940 --> 00:08:39,000
+because we want first to test how you react from the, let's say, didactical point of view
+
+96
+00:08:39,000 --> 00:08:45,900
+that is the first module of this, of this, yeah, VooCycle topic
+
+97
+00:08:45,900 --> 00:08:50,560
+and see what you're able to understand about something like this
+
+98
+00:08:50,560 --> 00:08:55,620
+and how you would place the VooCycle here on a real case scenario.
+
+99
+00:08:56,560 --> 00:09:00,580
+Of course, you are going to watch this video right after you have tried
+
+100
+00:09:00,580 --> 00:09:05,860
+at least once or twice or three times to resolve the exercise, okay?
+
+101
+00:09:06,760 --> 00:09:12,180
+Not everything is answerable from the exercise without this explanation,
+
+102
+00:09:12,640 --> 00:09:13,920
+but part of it, it is.
+
+103
+00:09:14,100 --> 00:09:18,280
+So, before you move on, please make sure that you have already shared
+
+104
+00:09:18,280 --> 00:09:22,600
+one of your solutions of the exercise before this one will,
+
+105
+00:09:22,760 --> 00:09:25,760
+this explanation will probably reply to all the questions
+
+106
+00:09:25,760 --> 00:09:29,720
+that are asked for the VooCycle exercise.
+
+107
+00:09:30,800 --> 00:09:31,740
+So, let's see.
+
+108
+00:09:32,340 --> 00:09:35,520
+As you can imagine, this is a, yeah, of course,
+
+109
+00:09:35,600 --> 00:09:37,920
+looking at the top part of the presentation,
+
+110
+00:09:38,240 --> 00:09:40,040
+here we see a timeline, okay?
+
+111
+00:09:41,340 --> 00:09:45,640
+What we really care about starts in 2020 and 2022.
+
+112
+00:09:46,480 --> 00:09:51,780
+So, the lifespan of this project is 2020 to 2022.
+
+113
+00:09:52,520 --> 00:09:54,320
+Let's start from the left part.
+
+114
+00:09:54,320 --> 00:09:59,780
+So, the left part is the, let's say, first moments of a project, okay?
+
+115
+00:10:00,160 --> 00:10:05,840
+And while we move on the right side of this slide,
+
+116
+00:10:05,960 --> 00:10:07,860
+we are advancing in time.
+
+117
+00:10:08,540 --> 00:10:12,540
+That means that the project is advancing as well,
+
+118
+00:10:12,580 --> 00:10:14,300
+or at least it's supposed to advance.
+
+119
+00:10:14,400 --> 00:10:17,720
+So, the maturity of the project is advancing.
+
+120
+00:10:17,720 --> 00:10:22,240
+So, as you see here, in the top left part of the slide,
+
+121
+00:10:22,340 --> 00:10:23,440
+there is the program approval.
+
+122
+00:10:24,300 --> 00:10:27,200
+Program approval is something that really happens
+
+123
+00:10:27,200 --> 00:10:30,180
+at a very high level of the project, okay?
+
+124
+00:10:31,060 --> 00:10:31,660
+Oh, yeah.
+
+125
+00:10:31,760 --> 00:10:34,700
+Well, probably we can use the, once again,
+
+126
+00:10:34,860 --> 00:10:39,180
+the most used software in the engineering world,
+
+127
+00:10:39,180 --> 00:10:40,600
+which is paint.
+
+128
+00:10:41,600 --> 00:10:43,860
+So, let's use it so we can draw,
+
+129
+00:10:44,060 --> 00:10:48,660
+we can draw something in here, okay?
+
+130
+00:10:48,980 --> 00:10:50,880
+Okay, let's keep 100% for now.
+
+131
+00:10:51,920 --> 00:10:52,880
+Okay, great.
+
+132
+00:10:52,880 --> 00:10:56,680
+So, here we have the program approval, okay?
+
+133
+00:10:56,760 --> 00:10:57,800
+I'll mark it in red.
+
+134
+00:10:58,160 --> 00:11:01,740
+Here, guys, this is a very high level,
+
+135
+00:11:02,060 --> 00:11:03,500
+high management decision.
+
+136
+00:11:03,680 --> 00:11:05,140
+So, it's the management deciding,
+
+137
+00:11:05,300 --> 00:11:08,660
+okay, we are going to create,
+
+138
+00:11:08,800 --> 00:11:12,040
+to work on this project, okay?
+
+139
+00:11:12,040 --> 00:11:19,520
+I don't know, let's call it ST project, okay?
+
+140
+00:11:20,160 --> 00:11:22,980
+So, our card is the ST project, okay?
+
+141
+00:11:23,260 --> 00:11:29,680
+This is the project plan for the ST project, okay?
+
+142
+00:11:29,900 --> 00:11:31,560
+This is a fictional card.
+
+143
+00:11:32,860 --> 00:11:36,360
+Then, let's analyze some of these lines.
+
+144
+00:11:36,360 --> 00:11:41,020
+I would see, we will work on the spec freeze,
+
+145
+00:11:41,740 --> 00:11:43,780
+PCR fleet, eco,
+
+146
+00:11:44,320 --> 00:11:47,960
+and then this line starting from here onward,
+
+147
+00:11:48,520 --> 00:11:51,460
+this line onward, and stuff like this.
+
+148
+00:11:52,440 --> 00:11:54,300
+Let's start from the spec freeze.
+
+149
+00:11:54,700 --> 00:11:57,080
+The spec freeze is the moment
+
+150
+00:11:57,080 --> 00:12:04,460
+when a set of requirements are freeze, okay?
+
+151
+00:12:04,460 --> 00:12:09,220
+Frozen freeze, you pick the right way
+
+152
+00:12:09,220 --> 00:12:10,520
+to pronounce it or to say.
+
+153
+00:12:11,220 --> 00:12:12,460
+This means that, okay,
+
+154
+00:12:13,540 --> 00:12:17,000
+at this date, the 22nd of May,
+
+155
+00:12:17,480 --> 00:12:18,240
+we will have,
+
+156
+00:12:18,780 --> 00:12:22,420
+I'm just, you know, inventing numbers.
+
+157
+00:12:22,600 --> 00:12:24,320
+I don't remember the actual numbers,
+
+158
+00:12:25,220 --> 00:12:26,200
+but we will have,
+
+159
+00:12:26,620 --> 00:12:30,340
+let's put it, let's make it smaller.
+
+160
+00:12:30,340 --> 00:12:38,660
+We'll have like 25% of the requirements
+
+161
+00:12:38,660 --> 00:12:41,080
+will be ready,
+
+162
+00:12:41,520 --> 00:12:42,360
+and most of all,
+
+163
+00:12:42,560 --> 00:12:45,420
+they will be official, okay?
+
+164
+00:12:45,800 --> 00:12:49,860
+So, this means that 25% of the requirements are ready.
+
+165
+00:12:51,760 --> 00:12:53,260
+As you can see here,
+
+166
+00:12:53,260 --> 00:12:57,080
+there is a delta time
+
+167
+00:12:57,080 --> 00:13:01,100
+that passes from here to here, okay?
+
+168
+00:13:01,920 --> 00:13:04,340
+This time, this delta time, let's see,
+
+169
+00:13:04,740 --> 00:13:07,400
+is the time where once we know
+
+170
+00:13:07,400 --> 00:13:09,080
+that this program is going to happen,
+
+171
+00:13:09,440 --> 00:13:12,480
+then there will be a team
+
+172
+00:13:12,480 --> 00:13:15,520
+working on writing the requirements.
+
+173
+00:13:15,520 --> 00:13:18,600
+So, here, we will have
+
+174
+00:13:18,600 --> 00:13:22,580
+what is the up-left part of the V cycle,
+
+175
+00:13:22,960 --> 00:13:23,900
+the software requirement.
+
+176
+00:13:24,080 --> 00:13:25,560
+Do you remember the previous slide
+
+177
+00:13:25,560 --> 00:13:28,620
+where we had this first block
+
+178
+00:13:28,620 --> 00:13:33,040
+up-left side of the V cycle?
+
+179
+00:13:33,420 --> 00:13:34,120
+Here it is.
+
+180
+00:13:34,520 --> 00:13:36,180
+So, here, there will be a team
+
+181
+00:13:36,180 --> 00:13:38,060
+writing software requirement.
+
+182
+00:13:38,880 --> 00:13:40,620
+Of course, they will need some time
+
+183
+00:13:40,620 --> 00:13:41,780
+to write these requirements,
+
+184
+00:13:42,220 --> 00:13:44,340
+so they start writing the requirements,
+
+185
+00:13:44,340 --> 00:13:47,720
+and they will need one month,
+
+186
+00:13:47,820 --> 00:13:48,620
+two months, three months.
+
+187
+00:13:48,680 --> 00:13:49,920
+It depends on how much,
+
+188
+00:13:50,500 --> 00:13:52,200
+how many requirements we want to share
+
+189
+00:13:52,200 --> 00:13:55,420
+for this date, the 22 of May.
+
+190
+00:13:55,740 --> 00:13:57,480
+But then we will arrive that
+
+191
+00:13:57,480 --> 00:14:01,420
+the 22 of May,
+
+192
+00:14:01,840 --> 00:14:03,700
+the 0A release will be ready.
+
+193
+00:14:03,920 --> 00:14:05,960
+This means that 25% of the requirement
+
+194
+00:14:05,960 --> 00:14:06,980
+will be shared.
+
+195
+00:14:09,760 --> 00:14:11,480
+This is a timeline, okay?
+
+196
+00:14:11,480 --> 00:14:13,700
+Remember always to look both
+
+197
+00:14:13,700 --> 00:14:16,600
+to the timeline on the top part of the slide
+
+198
+00:14:16,600 --> 00:14:19,780
+and the timeline that we are working on here, okay?
+
+199
+00:14:20,320 --> 00:14:22,980
+As soon as we go on the right part of the slide,
+
+200
+00:14:23,120 --> 00:14:24,420
+we are advancing in time.
+
+201
+00:14:25,180 --> 00:14:27,660
+You see, there are also other releases
+
+202
+00:14:27,660 --> 00:14:28,980
+that we will have the 1A,
+
+203
+00:14:29,120 --> 00:14:30,180
+we will have the 2A,
+
+204
+00:14:30,920 --> 00:14:31,720
+but in general,
+
+205
+00:14:32,120 --> 00:14:35,360
+as your general understanding,
+
+206
+00:14:35,360 --> 00:14:38,080
+we will not have just three releases,
+
+207
+00:14:38,260 --> 00:14:39,800
+0A, 1A, and 2A.
+
+208
+00:14:40,240 --> 00:14:41,300
+In my experience,
+
+209
+00:14:41,400 --> 00:14:44,260
+I've seen 0A, 0B,
+
+210
+00:14:44,960 --> 00:14:48,660
+the 0C, 1A, and 2A.
+
+211
+00:14:48,800 --> 00:14:51,240
+These are five milestones,
+
+212
+00:14:51,420 --> 00:14:52,460
+let's say, for the requirements.
+
+213
+00:14:52,840 --> 00:14:54,980
+And you can understand that from 0A,
+
+214
+00:14:55,140 --> 00:14:56,640
+we will have the 25%,
+
+215
+00:14:56,640 --> 00:15:00,080
+I don't know, 0B, 50%,
+
+216
+00:15:00,080 --> 00:15:01,640
+0C, 75%,
+
+217
+00:15:01,640 --> 00:15:03,680
+1A, 100% of the requirements.
+
+218
+00:15:04,120 --> 00:15:07,400
+And then we will have another
+
+219
+00:15:07,400 --> 00:15:10,540
+and last release of the requirements
+
+220
+00:15:10,540 --> 00:15:13,880
+where we simply modify what was not working before
+
+221
+00:15:13,880 --> 00:15:16,100
+if we realize that there was something wrong
+
+222
+00:15:16,100 --> 00:15:16,800
+on the requirements.
+
+223
+00:15:16,800 --> 00:15:21,180
+So we will have a last release of the requirement,
+
+224
+00:15:21,360 --> 00:15:22,060
+that is the 2A.
+
+225
+00:15:22,060 --> 00:15:24,420
+As you see here,
+
+226
+00:15:24,500 --> 00:15:27,860
+there are no other phases after this 2A.
+
+227
+00:15:27,980 --> 00:15:30,320
+So this means that all the requirements
+
+228
+00:15:30,320 --> 00:15:34,060
+must be ready and finished
+
+229
+00:15:34,060 --> 00:15:36,380
+within the 2A.
+
+230
+00:15:36,560 --> 00:15:37,600
+After the 2A,
+
+231
+00:15:37,920 --> 00:15:40,860
+there will be no new requirements.
+
+232
+00:15:40,860 --> 00:15:45,740
+Of course, this is an ideal perspective,
+
+233
+00:15:45,880 --> 00:15:46,280
+let's say.
+
+234
+00:15:46,380 --> 00:15:48,660
+This is an ideal situation.
+
+235
+00:15:48,660 --> 00:15:54,020
+Quite likely in the likelihood of a project,
+
+236
+00:15:54,180 --> 00:15:55,560
+in the reality of the project,
+
+237
+00:15:56,000 --> 00:15:58,640
+it happens that we will have other requirements
+
+238
+00:15:58,640 --> 00:16:00,620
+in late phases of the project.
+
+239
+00:16:00,760 --> 00:16:02,320
+But this is an emergency case.
+
+240
+00:16:02,740 --> 00:16:04,420
+Most of the requirements should be closed
+
+241
+00:16:04,420 --> 00:16:06,480
+or at least 100% of the requirements
+
+242
+00:16:06,480 --> 00:16:09,260
+should be closed up and running,
+
+243
+00:16:09,500 --> 00:16:10,000
+let's say,
+
+244
+00:16:10,400 --> 00:16:12,160
+not modifiable,
+
+245
+00:16:12,920 --> 00:16:14,320
+from the 2A on.
+
+246
+00:16:14,320 --> 00:16:17,820
+The 2A is the last time
+
+247
+00:16:17,820 --> 00:16:20,560
+we can upload update requirements.
+
+248
+00:16:20,760 --> 00:16:20,840
+Okay.
+
+249
+00:16:21,680 --> 00:16:23,020
+But let's move back
+
+250
+00:16:23,020 --> 00:16:24,380
+to what we were saying before.
+
+251
+00:16:24,800 --> 00:16:27,740
+So when the requirements are released here,
+
+252
+00:16:28,140 --> 00:16:29,420
+let's say here we have
+
+253
+00:16:29,420 --> 00:16:30,820
+the software requirement release.
+
+254
+00:16:30,920 --> 00:16:31,040
+Okay.
+
+255
+00:16:31,080 --> 00:16:33,120
+Where the 25% of the requirements are written.
+
+256
+00:16:33,780 --> 00:16:35,460
+As you remember from the presentation
+
+257
+00:16:35,460 --> 00:16:36,500
+I was showing before,
+
+258
+00:16:36,600 --> 00:16:39,520
+so let's move back for one second.
+
+259
+00:16:40,300 --> 00:16:41,760
+Here you see the software requirements
+
+260
+00:16:41,760 --> 00:16:42,800
+is the first step.
+
+261
+00:16:42,800 --> 00:16:44,800
+Then there will be other steps.
+
+262
+00:16:44,940 --> 00:16:46,780
+These steps will be part of
+
+263
+00:16:46,780 --> 00:16:49,760
+the software development team.
+
+264
+00:16:49,880 --> 00:16:51,820
+So we will not see anything
+
+265
+00:16:51,820 --> 00:16:52,900
+that happens between
+
+266
+00:16:52,900 --> 00:16:55,180
+the release of the requirements
+
+267
+00:16:55,180 --> 00:16:57,740
+and the release of the first software.
+
+268
+00:16:58,120 --> 00:17:00,480
+The release of the first software,
+
+269
+00:17:00,600 --> 00:17:01,340
+in this case,
+
+270
+00:17:01,540 --> 00:17:04,400
+considering just ECHO1 timeline,
+
+271
+00:17:04,880 --> 00:17:06,420
+is this B100.
+
+272
+00:17:06,420 --> 00:17:08,640
+So as you see,
+
+273
+00:17:08,760 --> 00:17:10,400
+the B100 is released,
+
+274
+00:17:10,640 --> 00:17:15,120
+was released on 16th of September 2020,
+
+275
+00:17:15,640 --> 00:17:16,700
+while the requirements
+
+276
+00:17:16,700 --> 00:17:21,160
+were released 22th of May 2020.
+
+277
+00:17:21,800 --> 00:17:24,460
+So there were like four months
+
+278
+00:17:24,460 --> 00:17:25,720
+between the two releases.
+
+279
+00:17:26,560 --> 00:17:28,120
+What happened in these two months?
+
+280
+00:17:28,240 --> 00:17:29,080
+In these two months,
+
+281
+00:17:29,180 --> 00:17:30,320
+it happened that
+
+282
+00:17:30,320 --> 00:17:32,860
+the requirements were shared
+
+283
+00:17:32,860 --> 00:17:34,040
+with the software developers.
+
+284
+00:17:34,520 --> 00:17:35,620
+The software developers
+
+285
+00:17:35,620 --> 00:17:37,160
+discussed the requirements
+
+286
+00:17:37,160 --> 00:17:45,260
+with the specification engineer,
+
+287
+00:17:45,380 --> 00:17:46,420
+so the engineer
+
+288
+00:17:46,420 --> 00:17:47,460
+that wrote the requirement.
+
+289
+00:17:47,620 --> 00:17:48,440
+So there is a discussion
+
+290
+00:17:48,440 --> 00:17:50,760
+between the requirement engineer
+
+291
+00:17:50,760 --> 00:17:53,580
+and the software developers.
+
+292
+00:17:54,120 --> 00:17:55,980
+And once they agree on everything,
+
+293
+00:17:56,860 --> 00:17:58,580
+then the requirements are,
+
+294
+00:17:58,720 --> 00:17:59,780
+let's say, finalized.
+
+295
+00:17:59,780 --> 00:18:00,660
+So these requirements
+
+296
+00:18:00,660 --> 00:18:02,480
+are agreed between the parties.
+
+297
+00:18:02,960 --> 00:18:04,640
+And then the software developer team
+
+298
+00:18:04,640 --> 00:18:06,360
+starts to work on the requirement
+
+299
+00:18:06,360 --> 00:18:08,340
+and to actually implement them
+
+300
+00:18:08,340 --> 00:18:08,900
+in the software.
+
+301
+00:18:09,420 --> 00:18:09,820
+How?
+
+302
+00:18:10,100 --> 00:18:12,280
+First, creating a software architecture,
+
+303
+00:18:12,560 --> 00:18:13,660
+then a software design,
+
+304
+00:18:13,760 --> 00:18:16,480
+and finally constructing the software.
+
+305
+00:18:22,160 --> 00:18:24,660
+So the requirements are shared
+
+306
+00:18:24,660 --> 00:18:27,160
+and agreed between
+
+307
+00:18:27,160 --> 00:18:28,680
+the requirement engineer
+
+308
+00:18:28,680 --> 00:18:30,240
+and the software development team.
+
+309
+00:18:31,220 --> 00:18:31,800
+And finally,
+
+310
+00:18:31,920 --> 00:18:33,220
+the software development team
+
+311
+00:18:33,220 --> 00:18:34,360
+starts to work on them.
+
+312
+00:18:34,840 --> 00:18:35,900
+They create an architecture,
+
+313
+00:18:36,080 --> 00:18:37,100
+they design the software,
+
+314
+00:18:37,280 --> 00:18:38,400
+and they write the software.
+
+315
+00:18:39,260 --> 00:18:41,040
+Then they release the software.
+
+316
+00:18:41,360 --> 00:18:43,480
+So here we are simply
+
+317
+00:18:43,480 --> 00:18:45,520
+descending the left part
+
+318
+00:18:45,520 --> 00:18:46,560
+of the cycle, okay?
+
+319
+00:18:47,020 --> 00:18:51,280
+So this was the software requirement,
+
+320
+00:18:51,920 --> 00:18:52,160
+okay?
+
+321
+00:18:52,460 --> 00:18:54,580
+And here we start to go down the V
+
+322
+00:18:54,580 --> 00:18:57,160
+until we have the release
+
+323
+00:18:57,160 --> 00:18:58,240
+of the first software.
+
+324
+00:18:59,200 --> 00:19:00,800
+So they build the software
+
+325
+00:19:00,800 --> 00:19:02,140
+and then they give us,
+
+326
+00:19:02,380 --> 00:19:04,920
+so let's go down here for a while.
+
+327
+00:19:05,400 --> 00:19:08,220
+And then we start to raise the V,
+
+328
+00:19:08,620 --> 00:19:08,980
+okay?
+
+329
+00:19:09,720 --> 00:19:13,580
+Where we find the first part
+
+330
+00:19:13,580 --> 00:19:15,360
+that really matters
+
+331
+00:19:15,360 --> 00:19:17,460
+to us that are following
+
+332
+00:19:17,460 --> 00:19:18,660
+the validation program.
+
+333
+00:19:19,440 --> 00:19:20,040
+So remember,
+
+334
+00:19:20,300 --> 00:19:21,940
+this is the software requirement block.
+
+335
+00:19:22,080 --> 00:19:23,920
+Then we have the software architecture block.
+
+336
+00:19:23,920 --> 00:19:26,040
+We have the software design block.
+
+337
+00:19:26,260 --> 00:19:28,220
+Here we have the software construction.
+
+338
+00:19:29,140 --> 00:19:30,880
+And then we will have the,
+
+339
+00:19:31,960 --> 00:19:32,400
+let's see,
+
+340
+00:19:32,480 --> 00:19:34,060
+here at the phase of unit testing.
+
+341
+00:19:34,540 --> 00:19:36,060
+So here we will receive
+
+342
+00:19:36,060 --> 00:19:38,100
+the first software.
+
+343
+00:19:39,560 --> 00:19:41,700
+Where we upload this software,
+
+344
+00:19:42,040 --> 00:19:44,720
+so we have a bunch of lines of code,
+
+345
+00:19:45,140 --> 00:19:45,440
+okay?
+
+346
+00:19:46,080 --> 00:19:48,120
+But then we have to test this software.
+
+347
+00:19:48,120 --> 00:19:50,120
+So to test this software,
+
+348
+00:19:50,260 --> 00:19:53,220
+we will need a benchtop.
+
+349
+00:19:53,680 --> 00:19:55,780
+You will see different stuff
+
+350
+00:19:55,780 --> 00:19:57,020
+about these benchtops,
+
+351
+00:19:57,140 --> 00:19:58,600
+different kind of benchtops,
+
+352
+00:19:58,700 --> 00:19:59,220
+the car,
+
+353
+00:19:59,720 --> 00:20:00,640
+and stuff like this.
+
+354
+00:20:00,720 --> 00:20:01,720
+So hardware in the loop,
+
+355
+00:20:01,820 --> 00:20:02,700
+software in the loop,
+
+356
+00:20:02,920 --> 00:20:04,740
+whatever, okay?
+
+357
+00:20:04,780 --> 00:20:06,460
+There will be many strategies
+
+358
+00:20:06,460 --> 00:20:07,820
+to perform these tests.
+
+359
+00:20:07,980 --> 00:20:10,180
+But for the sake of this explanation,
+
+360
+00:20:10,880 --> 00:20:13,760
+we consider as an hypothesis
+
+361
+00:20:13,760 --> 00:20:16,040
+that before we received the software,
+
+362
+00:20:16,040 --> 00:20:17,820
+there was a team working
+
+363
+00:20:17,820 --> 00:20:19,760
+in preparing the benchtop for us,
+
+364
+00:20:19,820 --> 00:20:20,020
+okay?
+
+365
+00:20:20,460 --> 00:20:21,380
+This will be clearer
+
+366
+00:20:21,380 --> 00:20:24,100
+once you move forward
+
+367
+00:20:24,100 --> 00:20:25,960
+to the training program.
+
+368
+00:20:26,500 --> 00:20:27,360
+But for now,
+
+369
+00:20:27,460 --> 00:20:28,280
+let's consider that
+
+370
+00:20:28,280 --> 00:20:30,000
+we already have a benchtop
+
+371
+00:20:30,000 --> 00:20:31,280
+that is ready to be tested.
+
+372
+00:20:31,420 --> 00:20:32,540
+So we have a benchtop.
+
+373
+00:20:33,060 --> 00:20:35,800
+We have the electronic control unit one.
+
+374
+00:20:36,440 --> 00:20:37,900
+And when we receive the software
+
+375
+00:20:37,900 --> 00:20:40,160
+related to the electronic control unit one,
+
+376
+00:20:40,160 --> 00:20:44,140
+then we flash or upload the software
+
+377
+00:20:44,140 --> 00:20:46,460
+on the electronic control unit
+
+378
+00:20:46,460 --> 00:20:48,220
+and we start the test.
+
+379
+00:20:49,680 --> 00:20:50,320
+Question.
+
+380
+00:20:51,040 --> 00:20:52,660
+What kind of test do we start?
+
+381
+00:20:53,520 --> 00:20:56,820
+Guys, please remember always
+
+382
+00:20:56,820 --> 00:20:59,020
+that the starting point
+
+383
+00:20:59,020 --> 00:21:00,700
+and the full purpose
+
+384
+00:21:00,700 --> 00:21:01,680
+of the verification,
+
+385
+00:21:02,160 --> 00:21:02,920
+of the validation,
+
+386
+00:21:03,340 --> 00:21:04,160
+and in general,
+
+387
+00:21:04,720 --> 00:21:05,940
+the testing activities
+
+388
+00:21:05,940 --> 00:21:07,740
+is to make sure
+
+389
+00:21:07,740 --> 00:21:08,920
+that the software
+
+390
+00:21:08,920 --> 00:21:10,960
+and so the system
+
+391
+00:21:10,960 --> 00:21:12,440
+behaves
+
+392
+00:21:12,440 --> 00:21:14,420
+as the requirements
+
+393
+00:21:14,420 --> 00:21:15,700
+described,
+
+394
+00:21:16,240 --> 00:21:16,520
+okay?
+
+395
+00:21:17,160 --> 00:21:18,180
+This is the reason
+
+396
+00:21:18,180 --> 00:21:19,140
+why the requirements
+
+397
+00:21:19,140 --> 00:21:20,300
+are always
+
+398
+00:21:20,300 --> 00:21:22,600
+the most important phase,
+
+399
+00:21:22,940 --> 00:21:23,280
+okay?
+
+400
+00:21:24,060 --> 00:21:25,900
+They are extremely important
+
+401
+00:21:25,900 --> 00:21:27,620
+because they are the input document
+
+402
+00:21:27,620 --> 00:21:28,360
+for everything.
+
+403
+00:21:29,000 --> 00:21:30,480
+Whenever we have to test,
+
+404
+00:21:30,620 --> 00:21:31,660
+what we test
+
+405
+00:21:31,660 --> 00:21:32,840
+is that the software
+
+406
+00:21:32,840 --> 00:21:34,300
+behaves according
+
+407
+00:21:34,300 --> 00:21:35,440
+to the requirements,
+
+408
+00:21:35,880 --> 00:21:36,080
+okay?
+
+409
+00:21:37,300 --> 00:21:39,100
+Requirements must enter
+
+410
+00:21:39,100 --> 00:21:40,000
+in your head.
+
+411
+00:21:40,100 --> 00:21:40,440
+I don't know
+
+412
+00:21:40,440 --> 00:21:41,480
+if you want to
+
+413
+00:21:41,480 --> 00:21:43,280
+tattoo
+
+414
+00:21:43,280 --> 00:21:44,920
+these requirements
+
+415
+00:21:44,920 --> 00:21:45,760
+on your heart.
+
+416
+00:21:46,080 --> 00:21:47,160
+You want to write
+
+417
+00:21:47,160 --> 00:21:48,620
+requirements everywhere
+
+418
+00:21:48,620 --> 00:21:50,720
+on your copybook,
+
+419
+00:21:50,840 --> 00:21:51,180
+wherever,
+
+420
+00:21:51,340 --> 00:21:53,140
+put as a screen saver
+
+421
+00:21:53,140 --> 00:21:54,220
+on your computer.
+
+422
+00:21:54,860 --> 00:21:56,320
+What is extremely important
+
+423
+00:21:56,320 --> 00:21:57,240
+is that you remember
+
+424
+00:21:57,240 --> 00:21:58,660
+that the input
+
+425
+00:21:58,660 --> 00:22:00,020
+of all,
+
+426
+00:22:00,540 --> 00:22:00,980
+all,
+
+427
+00:22:01,500 --> 00:22:02,800
+all the activities
+
+428
+00:22:02,800 --> 00:22:04,200
+that you will see here
+
+429
+00:22:04,200 --> 00:22:05,020
+in this company
+
+430
+00:22:05,020 --> 00:22:06,740
+starts from
+
+431
+00:22:06,740 --> 00:22:07,960
+the requirements,
+
+432
+00:22:08,400 --> 00:22:08,640
+okay?
+
+433
+00:22:09,460 --> 00:22:09,780
+So,
+
+434
+00:22:10,680 --> 00:22:12,240
+this is actually,
+
+435
+00:22:12,680 --> 00:22:13,660
+again,
+
+436
+00:22:13,920 --> 00:22:14,560
+an experience
+
+437
+00:22:14,560 --> 00:22:15,520
+that I had.
+
+438
+00:22:15,940 --> 00:22:16,100
+So,
+
+439
+00:22:16,240 --> 00:22:17,420
+I was working
+
+440
+00:22:17,420 --> 00:22:18,220
+on this project
+
+441
+00:22:18,220 --> 00:22:19,040
+when I received
+
+442
+00:22:19,040 --> 00:22:20,640
+B100 software.
+
+443
+00:22:21,160 --> 00:22:22,400
+There was another team
+
+444
+00:22:22,400 --> 00:22:23,840
+working on a benchtop.
+
+445
+00:22:24,120 --> 00:22:25,660
+This team provided me
+
+446
+00:22:25,660 --> 00:22:26,320
+the benchtop.
+
+447
+00:22:26,700 --> 00:22:27,940
+I had the electronic
+
+448
+00:22:27,940 --> 00:22:29,060
+control unit one.
+
+449
+00:22:29,420 --> 00:22:30,800
+I flashed the software
+
+450
+00:22:30,800 --> 00:22:31,840
+and I had
+
+451
+00:22:31,840 --> 00:22:32,580
+to make sure
+
+452
+00:22:32,580 --> 00:22:33,320
+that the software
+
+453
+00:22:33,320 --> 00:22:34,280
+behaved according
+
+454
+00:22:34,280 --> 00:22:35,860
+to the 25%
+
+455
+00:22:35,860 --> 00:22:36,660
+of the requirements
+
+456
+00:22:36,660 --> 00:22:37,420
+that were shared
+
+457
+00:22:37,420 --> 00:22:38,480
+on the zero errorings,
+
+458
+00:22:38,760 --> 00:22:39,020
+okay?
+
+459
+00:22:39,520 --> 00:22:39,820
+So,
+
+460
+00:22:39,900 --> 00:22:40,380
+we have
+
+461
+00:22:40,380 --> 00:22:42,560
+a bunch of requirements
+
+462
+00:22:42,560 --> 00:22:43,660
+and we make sure
+
+463
+00:22:43,660 --> 00:22:44,660
+that these requirements
+
+464
+00:22:44,660 --> 00:22:46,980
+are properly implemented
+
+465
+00:22:46,980 --> 00:22:47,640
+in the software,
+
+466
+00:22:47,900 --> 00:22:48,200
+okay?
+
+467
+00:22:49,480 --> 00:22:51,280
+As you see here,
+
+468
+00:22:51,340 --> 00:22:52,360
+there is a similarities
+
+469
+00:22:52,360 --> 00:22:53,120
+in colors,
+
+470
+00:22:53,280 --> 00:22:53,580
+okay?
+
+471
+00:22:53,580 --> 00:22:53,920
+So,
+
+472
+00:22:54,180 --> 00:22:55,280
+this light blue
+
+473
+00:22:55,280 --> 00:22:56,560
+is the same light blue
+
+474
+00:22:56,560 --> 00:22:57,260
+that we have
+
+475
+00:22:57,260 --> 00:22:58,740
+on all these points,
+
+476
+00:22:58,820 --> 00:22:59,100
+okay?
+
+477
+00:22:59,860 --> 00:23:01,100
+I'm just focusing
+
+478
+00:23:01,100 --> 00:23:02,180
+on the development
+
+479
+00:23:02,180 --> 00:23:03,140
+of ECO1,
+
+480
+00:23:03,340 --> 00:23:04,360
+but as you've already
+
+481
+00:23:04,360 --> 00:23:05,600
+seen in the introduction
+
+482
+00:23:05,600 --> 00:23:06,680
+videos about
+
+483
+00:23:06,680 --> 00:23:08,180
+the e-architecture
+
+484
+00:23:08,180 --> 00:23:09,500
+or generally
+
+485
+00:23:09,500 --> 00:23:10,440
+of all the electronic
+
+486
+00:23:10,440 --> 00:23:11,180
+control units
+
+487
+00:23:11,180 --> 00:23:11,720
+that you have
+
+488
+00:23:11,720 --> 00:23:12,160
+on a car,
+
+489
+00:23:12,640 --> 00:23:13,900
+you may realize
+
+490
+00:23:13,900 --> 00:23:14,900
+that there are
+
+491
+00:23:14,900 --> 00:23:15,780
+like 30,
+
+492
+00:23:16,200 --> 00:23:16,680
+40,
+
+493
+00:23:17,180 --> 00:23:18,700
+50 electronic
+
+494
+00:23:18,700 --> 00:23:19,660
+control units
+
+495
+00:23:19,660 --> 00:23:20,960
+inside the car.
+
+496
+00:23:20,960 --> 00:23:21,400
+So,
+
+497
+00:23:22,040 --> 00:23:23,320
+what we say
+
+498
+00:23:23,320 --> 00:23:24,300
+for one electronic
+
+499
+00:23:24,300 --> 00:23:25,120
+control unit
+
+500
+00:23:25,120 --> 00:23:26,500
+may apply also
+
+501
+00:23:26,500 --> 00:23:27,500
+for other 30,
+
+502
+00:23:27,660 --> 00:23:27,920
+40,
+
+503
+00:23:27,940 --> 00:23:29,060
+or 50 electronic
+
+504
+00:23:29,060 --> 00:23:29,900
+control units.
+
+505
+00:23:31,440 --> 00:23:32,940
+We have requirements
+
+506
+00:23:32,940 --> 00:23:33,760
+that are related
+
+507
+00:23:33,760 --> 00:23:34,660
+to the bull car,
+
+508
+00:23:34,920 --> 00:23:36,400
+so it means
+
+509
+00:23:36,400 --> 00:23:37,320
+that these requirements
+
+510
+00:23:37,320 --> 00:23:39,060
+to be properly
+
+511
+00:23:39,060 --> 00:23:39,640
+implemented
+
+512
+00:23:39,640 --> 00:23:41,440
+need the collaboration
+
+513
+00:23:41,440 --> 00:23:43,200
+of many electronic
+
+514
+00:23:43,200 --> 00:23:43,980
+control units
+
+515
+00:23:43,980 --> 00:23:45,500
+or some requirements
+
+516
+00:23:45,500 --> 00:23:46,300
+that are specific
+
+517
+00:23:46,300 --> 00:23:47,420
+for one electronic
+
+518
+00:23:47,420 --> 00:23:48,160
+control unit.
+
+519
+00:23:48,620 --> 00:23:49,200
+But anyway,
+
+520
+00:23:49,380 --> 00:23:49,720
+we will
+
+521
+00:23:49,720 --> 00:23:51,980
+deep this
+
+522
+00:23:51,980 --> 00:23:53,520
+topic
+
+523
+00:23:53,520 --> 00:23:54,140
+in further
+
+524
+00:23:54,140 --> 00:23:54,800
+lessons.
+
+525
+00:23:55,740 --> 00:23:56,300
+So,
+
+526
+00:23:56,380 --> 00:23:56,880
+we arrived
+
+527
+00:23:56,880 --> 00:23:57,720
+at the unit test
+
+528
+00:23:57,720 --> 00:23:58,040
+phase.
+
+529
+00:23:58,160 --> 00:23:58,300
+Okay,
+
+530
+00:23:58,340 --> 00:23:58,920
+do you remember
+
+531
+00:23:58,920 --> 00:23:59,620
+we are here?
+
+532
+00:23:59,860 --> 00:24:00,800
+Why unit test?
+
+533
+00:24:02,260 --> 00:24:02,820
+Especially
+
+534
+00:24:02,820 --> 00:24:05,060
+for the first
+
+535
+00:24:05,060 --> 00:24:06,100
+part of the project,
+
+536
+00:24:06,660 --> 00:24:08,000
+you do not
+
+537
+00:24:08,000 --> 00:24:08,560
+have
+
+538
+00:24:08,560 --> 00:24:10,560
+a
+
+539
+00:24:10,560 --> 00:24:12,400
+system
+
+540
+00:24:12,400 --> 00:24:13,260
+that looks
+
+541
+00:24:13,260 --> 00:24:14,000
+like the final
+
+542
+00:24:14,000 --> 00:24:14,500
+product.
+
+543
+00:24:14,960 --> 00:24:15,180
+So,
+
+544
+00:24:15,220 --> 00:24:15,480
+basically,
+
+545
+00:24:15,660 --> 00:24:16,280
+we do not
+
+546
+00:24:16,280 --> 00:24:17,060
+have a car.
+
+547
+00:24:17,060 --> 00:24:17,960
+we do not
+
+548
+00:24:17,960 --> 00:24:19,120
+have a very
+
+549
+00:24:19,120 --> 00:24:19,780
+advanced
+
+550
+00:24:19,780 --> 00:24:21,440
+hardware in the
+
+551
+00:24:21,440 --> 00:24:21,800
+loop that
+
+552
+00:24:21,800 --> 00:24:22,640
+simulate the car
+
+553
+00:24:22,640 --> 00:24:23,360
+because we are
+
+554
+00:24:23,360 --> 00:24:23,980
+at the beginning
+
+555
+00:24:23,980 --> 00:24:24,680
+of the project.
+
+556
+00:24:25,240 --> 00:24:25,340
+So,
+
+557
+00:24:25,420 --> 00:24:25,740
+at the beginning
+
+558
+00:24:25,740 --> 00:24:26,500
+of the project,
+
+559
+00:24:26,620 --> 00:24:26,820
+here,
+
+560
+00:24:26,900 --> 00:24:28,040
+we just focus
+
+561
+00:24:28,040 --> 00:24:28,820
+on one
+
+562
+00:24:28,820 --> 00:24:29,540
+electronic
+
+563
+00:24:29,540 --> 00:24:30,420
+control unit.
+
+564
+00:24:30,760 --> 00:24:31,400
+This is why
+
+565
+00:24:31,400 --> 00:24:32,360
+here we mentioned
+
+566
+00:24:32,360 --> 00:24:33,600
+the unit test,
+
+567
+00:24:33,860 --> 00:24:35,160
+which is focusing
+
+568
+00:24:35,160 --> 00:24:35,820
+on testing
+
+569
+00:24:35,820 --> 00:24:36,760
+just our
+
+570
+00:24:36,760 --> 00:24:37,640
+component.
+
+571
+00:24:37,900 --> 00:24:38,040
+So,
+
+572
+00:24:38,140 --> 00:24:38,420
+here,
+
+573
+00:24:38,500 --> 00:24:39,220
+most of the time,
+
+574
+00:24:39,320 --> 00:24:39,720
+we have
+
+575
+00:24:39,720 --> 00:24:41,340
+a simplified
+
+576
+00:24:41,340 --> 00:24:42,180
+hardware in the
+
+577
+00:24:42,180 --> 00:24:42,760
+loop where there
+
+578
+00:24:42,760 --> 00:24:43,800
+is an ideal
+
+579
+00:24:43,800 --> 00:24:44,680
+and simplified
+
+580
+00:24:44,680 --> 00:24:45,840
+model of a car,
+
+581
+00:24:45,840 --> 00:24:47,220
+the only
+
+582
+00:24:47,220 --> 00:24:48,540
+available hardware
+
+583
+00:24:48,540 --> 00:24:49,460
+is our
+
+584
+00:24:49,460 --> 00:24:50,440
+electronic control
+
+585
+00:24:50,440 --> 00:24:51,140
+unit and we
+
+586
+00:24:51,140 --> 00:24:51,840
+work only
+
+587
+00:24:51,840 --> 00:24:52,660
+with the
+
+588
+00:24:52,660 --> 00:24:53,500
+electronic control
+
+589
+00:24:53,500 --> 00:24:54,200
+unit 1,
+
+590
+00:24:54,460 --> 00:24:55,180
+testing the
+
+591
+00:24:55,180 --> 00:24:55,940
+software B100.
+
+592
+00:24:57,120 --> 00:24:58,180
+You see here
+
+593
+00:24:58,180 --> 00:24:58,800
+there are many
+
+594
+00:24:58,800 --> 00:24:59,520
+other software,
+
+595
+00:24:59,680 --> 00:25:00,700
+B110,
+
+596
+00:25:01,040 --> 00:25:02,000
+B120,
+
+597
+00:25:02,360 --> 00:25:02,960
+and stuff like
+
+598
+00:25:02,960 --> 00:25:03,240
+this.
+
+599
+00:25:03,980 --> 00:25:04,940
+This can be
+
+600
+00:25:04,940 --> 00:25:05,980
+both because
+
+601
+00:25:05,980 --> 00:25:06,940
+the 0A
+
+602
+00:25:06,940 --> 00:25:07,580
+requirements
+
+603
+00:25:07,580 --> 00:25:08,560
+couldn't be
+
+604
+00:25:08,560 --> 00:25:09,200
+implemented
+
+605
+00:25:09,200 --> 00:25:10,560
+fully in
+
+606
+00:25:10,560 --> 00:25:11,500
+B100 and
+
+607
+00:25:11,500 --> 00:25:12,020
+maybe they
+
+608
+00:25:12,020 --> 00:25:12,760
+splitted part
+
+609
+00:25:12,760 --> 00:25:13,480
+in B100,
+
+610
+00:25:13,720 --> 00:25:14,740
+part in B110
+
+611
+00:25:14,740 --> 00:25:15,580
+and other
+
+612
+00:25:15,580 --> 00:25:16,940
+part of B120,
+
+613
+00:25:17,480 --> 00:25:18,420
+but also because
+
+614
+00:25:18,420 --> 00:25:19,200
+once we start
+
+615
+00:25:19,200 --> 00:25:19,660
+testing,
+
+616
+00:25:20,920 --> 00:25:22,660
+we can have
+
+617
+00:25:22,660 --> 00:25:23,560
+problems and
+
+618
+00:25:23,560 --> 00:25:24,440
+we will see
+
+619
+00:25:24,440 --> 00:25:25,180
+what happens
+
+620
+00:25:25,180 --> 00:25:25,860
+in that case.
+
+621
+00:25:27,120 --> 00:25:28,240
+Let's focus on
+
+622
+00:25:28,240 --> 00:25:29,160
+something very
+
+623
+00:25:29,160 --> 00:25:29,960
+important that
+
+624
+00:25:29,960 --> 00:25:30,840
+is up here.
+
+625
+00:25:31,020 --> 00:25:31,140
+So,
+
+626
+00:25:31,220 --> 00:25:32,020
+I slightly
+
+627
+00:25:32,020 --> 00:25:33,140
+delete this
+
+628
+00:25:33,140 --> 00:25:35,520
+part because
+
+629
+00:25:35,520 --> 00:25:37,200
+I want to
+
+630
+00:25:37,200 --> 00:25:38,040
+focus on
+
+631
+00:25:38,040 --> 00:25:40,080
+this timeline,
+
+632
+00:25:40,460 --> 00:25:41,040
+this one.
+
+633
+00:25:41,040 --> 00:25:42,480
+this is the
+
+634
+00:25:42,480 --> 00:25:43,460
+timeline of
+
+635
+00:25:43,460 --> 00:25:44,400
+the vehicles.
+
+636
+00:25:45,860 --> 00:25:46,460
+Let's
+
+637
+00:25:46,460 --> 00:25:47,200
+explain this
+
+638
+00:25:47,200 --> 00:25:47,560
+better.
+
+639
+00:25:48,600 --> 00:25:49,000
+Where you
+
+640
+00:25:49,000 --> 00:25:49,500
+see here
+
+641
+00:25:49,500 --> 00:25:50,260
+Mule 1,
+
+642
+00:25:50,500 --> 00:25:51,580
+Mule 1 is
+
+643
+00:25:51,580 --> 00:25:52,320
+the first
+
+644
+00:25:52,320 --> 00:25:53,800
+prototype ever
+
+645
+00:25:53,800 --> 00:25:54,540
+of that
+
+646
+00:25:54,540 --> 00:25:55,200
+project.
+
+647
+00:25:55,960 --> 00:25:56,600
+This is a
+
+648
+00:25:56,600 --> 00:25:57,320
+car that is
+
+649
+00:25:57,320 --> 00:25:58,460
+built by hand
+
+650
+00:25:58,460 --> 00:25:58,900
+basically.
+
+651
+00:25:59,260 --> 00:25:59,400
+Okay?
+
+652
+00:25:59,980 --> 00:26:00,220
+So,
+
+653
+00:26:00,460 --> 00:26:02,460
+parts of
+
+654
+00:26:02,460 --> 00:26:03,140
+other cars
+
+655
+00:26:03,140 --> 00:26:03,720
+are taken,
+
+656
+00:26:04,240 --> 00:26:04,580
+they're put,
+
+657
+00:26:04,820 --> 00:26:05,500
+they're all
+
+658
+00:26:05,500 --> 00:26:05,960
+together,
+
+659
+00:26:06,080 --> 00:26:06,420
+they're put
+
+660
+00:26:06,420 --> 00:26:06,840
+together,
+
+661
+00:26:06,840 --> 00:26:07,260
+and we
+
+662
+00:26:07,260 --> 00:26:07,660
+create
+
+663
+00:26:07,660 --> 00:26:08,220
+first
+
+664
+00:26:08,220 --> 00:26:08,900
+prototype.
+
+665
+00:26:10,760 --> 00:26:11,660
+Is this
+
+666
+00:26:11,660 --> 00:26:12,220
+just a
+
+667
+00:26:12,220 --> 00:26:12,620
+random
+
+668
+00:26:12,620 --> 00:26:13,300
+prototype?
+
+669
+00:26:13,720 --> 00:26:14,000
+No.
+
+670
+00:26:14,500 --> 00:26:14,880
+Probably
+
+671
+00:26:14,880 --> 00:26:15,800
+10% of
+
+672
+00:26:15,800 --> 00:26:16,300
+this car
+
+673
+00:26:16,300 --> 00:26:17,560
+will be
+
+674
+00:26:17,560 --> 00:26:20,760
+what we
+
+675
+00:26:20,760 --> 00:26:21,860
+will find
+
+676
+00:26:21,860 --> 00:26:22,140
+in the
+
+677
+00:26:22,140 --> 00:26:22,860
+final product,
+
+678
+00:26:23,120 --> 00:26:23,600
+while the
+
+679
+00:26:23,600 --> 00:26:24,600
+90% of
+
+680
+00:26:24,600 --> 00:26:24,940
+the car
+
+681
+00:26:24,940 --> 00:26:25,460
+is something
+
+682
+00:26:25,460 --> 00:26:25,920
+different.
+
+683
+00:26:26,540 --> 00:26:26,720
+So,
+
+684
+00:26:26,760 --> 00:26:27,160
+the purpose
+
+685
+00:26:27,160 --> 00:26:27,740
+here is
+
+686
+00:26:27,740 --> 00:26:28,180
+just to
+
+687
+00:26:28,180 --> 00:26:29,040
+test the
+
+688
+00:26:29,040 --> 00:26:30,040
+10% of
+
+689
+00:26:30,040 --> 00:26:30,400
+the car
+
+690
+00:26:30,400 --> 00:26:32,960
+that will
+
+691
+00:26:32,960 --> 00:26:33,500
+be actually
+
+692
+00:26:33,500 --> 00:26:34,220
+part of
+
+693
+00:26:34,220 --> 00:26:34,700
+the final
+
+694
+00:26:34,700 --> 00:26:35,220
+product.
+
+695
+00:26:35,220 --> 00:26:37,100
+Why I'm
+
+696
+00:26:37,100 --> 00:26:37,720
+focusing on
+
+697
+00:26:37,720 --> 00:26:37,940
+this?
+
+698
+00:26:38,020 --> 00:26:38,540
+I'm focusing
+
+699
+00:26:38,540 --> 00:26:38,940
+on this
+
+700
+00:26:38,940 --> 00:26:39,720
+because this
+
+701
+00:26:39,720 --> 00:26:40,320
+means that
+
+702
+00:26:40,320 --> 00:26:41,900
+before this
+
+703
+00:26:41,900 --> 00:26:42,960
+16th of
+
+704
+00:26:42,960 --> 00:26:43,480
+November,
+
+705
+00:26:44,200 --> 00:26:44,720
+before,
+
+706
+00:26:44,900 --> 00:26:45,200
+there are
+
+707
+00:26:45,200 --> 00:26:45,720
+no cars.
+
+708
+00:26:46,320 --> 00:26:46,460
+Okay?
+
+709
+00:26:46,900 --> 00:26:47,280
+So,
+
+710
+00:26:47,400 --> 00:26:47,680
+we are
+
+711
+00:26:47,680 --> 00:26:48,320
+working on
+
+712
+00:26:48,320 --> 00:26:48,820
+a project
+
+713
+00:26:48,820 --> 00:26:49,660
+to create
+
+714
+00:26:49,660 --> 00:26:50,080
+a car,
+
+715
+00:26:50,400 --> 00:26:50,980
+to work
+
+716
+00:26:50,980 --> 00:26:51,400
+on this
+
+717
+00:26:51,400 --> 00:26:51,880
+car that
+
+718
+00:26:51,880 --> 00:26:52,340
+we call
+
+719
+00:26:52,340 --> 00:26:52,720
+ST
+
+720
+00:26:52,720 --> 00:26:53,160
+project,
+
+721
+00:26:53,860 --> 00:26:54,740
+but before
+
+722
+00:26:54,740 --> 00:26:55,620
+16th of
+
+723
+00:26:55,620 --> 00:26:56,120
+November,
+
+724
+00:26:56,740 --> 00:26:57,360
+if everything
+
+725
+00:26:57,360 --> 00:26:58,040
+goes according
+
+726
+00:26:58,040 --> 00:26:58,340
+to the
+
+727
+00:26:58,340 --> 00:26:58,540
+plan,
+
+728
+00:26:58,840 --> 00:26:59,320
+we have
+
+729
+00:26:59,320 --> 00:27:00,480
+no car.
+
+730
+00:27:01,320 --> 00:27:01,620
+So,
+
+731
+00:27:01,720 --> 00:27:02,600
+this explains
+
+732
+00:27:02,600 --> 00:27:03,620
+you why
+
+733
+00:27:03,620 --> 00:27:04,480
+we focus
+
+734
+00:27:04,480 --> 00:27:05,200
+first on
+
+735
+00:27:05,200 --> 00:27:05,920
+unit test
+
+736
+00:27:05,920 --> 00:27:06,300
+because at
+
+737
+00:27:06,300 --> 00:27:06,720
+the beginning
+
+738
+00:27:06,720 --> 00:27:07,560
+it's extremely
+
+739
+00:27:07,560 --> 00:27:08,860
+important first
+
+740
+00:27:08,860 --> 00:27:09,500
+to test that
+
+741
+00:27:09,500 --> 00:27:10,080
+the single
+
+742
+00:27:10,080 --> 00:27:10,820
+unit works
+
+743
+00:27:10,820 --> 00:27:11,260
+properly.
+
+744
+00:27:12,000 --> 00:27:12,300
+Then,
+
+745
+00:27:12,420 --> 00:27:12,880
+once we
+
+746
+00:27:12,880 --> 00:27:13,300
+move in
+
+747
+00:27:13,300 --> 00:27:13,820
+the timeline,
+
+748
+00:27:14,160 --> 00:27:14,440
+we will
+
+749
+00:27:14,440 --> 00:27:15,320
+have other
+
+750
+00:27:15,320 --> 00:27:15,880
+electronic
+
+751
+00:27:15,880 --> 00:27:16,780
+control unit,
+
+752
+00:27:17,640 --> 00:27:18,160
+let's say
+
+753
+00:27:18,160 --> 00:27:18,620
+in a way
+
+754
+00:27:18,620 --> 00:27:19,280
+debugged,
+
+755
+00:27:19,360 --> 00:27:19,980
+or at least
+
+756
+00:27:19,980 --> 00:27:21,000
+other components
+
+757
+00:27:21,000 --> 00:27:21,620
+that start
+
+758
+00:27:21,620 --> 00:27:22,340
+to be more
+
+759
+00:27:22,340 --> 00:27:22,820
+mature,
+
+760
+00:27:23,280 --> 00:27:23,820
+and we can
+
+761
+00:27:23,820 --> 00:27:24,220
+move to
+
+762
+00:27:24,220 --> 00:27:24,600
+the next
+
+763
+00:27:24,600 --> 00:27:25,200
+phase of
+
+764
+00:27:25,200 --> 00:27:25,960
+the system
+
+765
+00:27:25,960 --> 00:27:27,840
+testing,
+
+766
+00:27:28,060 --> 00:27:28,180
+okay?
+
+767
+00:27:28,220 --> 00:27:28,860
+The integration
+
+768
+00:27:28,860 --> 00:27:29,420
+testing,
+
+769
+00:27:29,560 --> 00:27:29,780
+sorry.
+
+770
+00:27:30,160 --> 00:27:30,400
+So,
+
+771
+00:27:30,400 --> 00:27:31,100
+we don't
+
+772
+00:27:31,100 --> 00:27:31,800
+have just
+
+773
+00:27:31,800 --> 00:27:32,620
+the test
+
+774
+00:27:32,620 --> 00:27:33,240
+of one
+
+775
+00:27:33,240 --> 00:27:34,720
+component,
+
+776
+00:27:34,720 --> 00:27:35,120
+but then
+
+777
+00:27:35,120 --> 00:27:35,520
+we start
+
+778
+00:27:35,520 --> 00:27:35,900
+to put
+
+779
+00:27:35,900 --> 00:27:36,380
+together
+
+780
+00:27:36,380 --> 00:27:37,180
+more
+
+781
+00:27:37,180 --> 00:27:37,720
+electronic
+
+782
+00:27:37,720 --> 00:27:38,140
+control
+
+783
+00:27:38,140 --> 00:27:38,600
+units.
+
+784
+00:27:39,640 --> 00:27:40,400
+This is
+
+785
+00:27:40,400 --> 00:27:41,100
+needed because,
+
+786
+00:27:41,300 --> 00:27:41,700
+as I was
+
+787
+00:27:41,700 --> 00:27:42,080
+mentioning
+
+788
+00:27:42,080 --> 00:27:42,560
+before,
+
+789
+00:27:43,020 --> 00:27:43,780
+the requirements
+
+790
+00:27:43,780 --> 00:27:44,780
+are the
+
+791
+00:27:44,780 --> 00:27:45,740
+feature that
+
+792
+00:27:45,740 --> 00:27:46,300
+we have on
+
+793
+00:27:46,300 --> 00:27:46,720
+cars,
+
+794
+00:27:46,860 --> 00:27:47,440
+most of
+
+795
+00:27:47,440 --> 00:27:48,360
+them imply
+
+796
+00:27:48,360 --> 00:27:49,040
+the collaboration
+
+797
+00:27:49,040 --> 00:27:49,660
+of more
+
+798
+00:27:49,660 --> 00:27:50,120
+than one
+
+799
+00:27:50,120 --> 00:27:50,600
+electronic
+
+800
+00:27:50,600 --> 00:27:51,300
+control unit.
+
+801
+00:27:51,720 --> 00:27:52,320
+I always
+
+802
+00:27:52,320 --> 00:27:52,620
+do the
+
+803
+00:27:52,620 --> 00:27:53,160
+example of
+
+804
+00:27:53,160 --> 00:27:53,500
+the cruise
+
+805
+00:27:53,500 --> 00:27:53,880
+control,
+
+806
+00:27:54,000 --> 00:27:54,360
+or for
+
+807
+00:27:54,360 --> 00:27:54,720
+example,
+
+808
+00:27:54,820 --> 00:27:55,440
+the adaptive
+
+809
+00:27:55,440 --> 00:27:56,260
+cruise control.
+
+810
+00:27:56,400 --> 00:27:56,860
+The adaptive
+
+811
+00:27:56,860 --> 00:27:57,920
+cruise control
+
+812
+00:27:57,920 --> 00:27:58,540
+is a feature
+
+813
+00:27:58,540 --> 00:27:59,780
+that allows
+
+814
+00:27:59,780 --> 00:28:00,360
+you to
+
+815
+00:28:00,360 --> 00:28:01,080
+follow a
+
+816
+00:28:01,080 --> 00:28:01,660
+car without
+
+817
+00:28:01,660 --> 00:28:02,480
+just braking
+
+818
+00:28:02,480 --> 00:28:03,280
+or accelerating.
+
+819
+00:28:03,440 --> 00:28:03,720
+The car
+
+820
+00:28:03,720 --> 00:28:04,040
+will do
+
+821
+00:28:04,040 --> 00:28:04,620
+everything by
+
+822
+00:28:04,620 --> 00:28:05,020
+itself.
+
+823
+00:28:05,660 --> 00:28:06,020
+In order
+
+824
+00:28:06,020 --> 00:28:06,400
+to do
+
+825
+00:28:06,400 --> 00:28:06,660
+that,
+
+826
+00:28:06,760 --> 00:28:07,080
+the car
+
+827
+00:28:07,080 --> 00:28:07,480
+needs to
+
+828
+00:28:07,480 --> 00:28:08,160
+read information
+
+829
+00:28:08,160 --> 00:28:08,640
+from the
+
+830
+00:28:08,640 --> 00:28:09,000
+radar,
+
+831
+00:28:09,440 --> 00:28:09,780
+from the
+
+832
+00:28:09,780 --> 00:28:10,140
+camera,
+
+833
+00:28:10,560 --> 00:28:10,920
+and then
+
+834
+00:28:10,920 --> 00:28:11,400
+accelerate
+
+835
+00:28:11,400 --> 00:28:12,200
+by itself,
+
+836
+00:28:12,520 --> 00:28:13,380
+brake by
+
+837
+00:28:13,380 --> 00:28:13,800
+itself.
+
+838
+00:28:14,200 --> 00:28:14,360
+So,
+
+839
+00:28:14,540 --> 00:28:14,960
+all these
+
+840
+00:28:14,960 --> 00:28:16,740
+devices are
+
+841
+00:28:16,740 --> 00:28:17,500
+not controlled
+
+842
+00:28:17,500 --> 00:28:18,700
+just by one
+
+843
+00:28:18,700 --> 00:28:19,220
+electronic
+
+844
+00:28:19,220 --> 00:28:19,960
+control unit,
+
+845
+00:28:20,320 --> 00:28:20,680
+but there
+
+846
+00:28:20,680 --> 00:28:21,400
+are more
+
+847
+00:28:21,400 --> 00:28:22,000
+than one,
+
+848
+00:28:22,120 --> 00:28:22,460
+there are
+
+849
+00:28:22,460 --> 00:28:22,680
+two,
+
+850
+00:28:22,840 --> 00:28:23,040
+three,
+
+851
+00:28:23,200 --> 00:28:23,400
+four,
+
+852
+00:28:23,680 --> 00:28:24,400
+five electronic
+
+853
+00:28:24,400 --> 00:28:25,200
+control units
+
+854
+00:28:25,200 --> 00:28:26,460
+working to
+
+855
+00:28:26,460 --> 00:28:27,560
+make the
+
+856
+00:28:27,560 --> 00:28:28,580
+adaptive cruise
+
+857
+00:28:28,580 --> 00:28:29,320
+control working
+
+858
+00:28:29,320 --> 00:28:29,880
+properly in
+
+859
+00:28:29,880 --> 00:28:30,200
+the car.
+
+860
+00:28:31,120 --> 00:28:31,440
+So,
+
+861
+00:28:32,080 --> 00:28:32,640
+it's okay
+
+862
+00:28:32,640 --> 00:28:33,420
+that I have
+
+863
+00:28:33,420 --> 00:28:34,220
+the single
+
+864
+00:28:34,220 --> 00:28:35,300
+electronic control
+
+865
+00:28:35,300 --> 00:28:36,060
+unit working
+
+866
+00:28:36,060 --> 00:28:36,580
+properly,
+
+867
+00:28:36,880 --> 00:28:37,360
+but then,
+
+868
+00:28:37,460 --> 00:28:38,780
+in order to
+
+869
+00:28:38,780 --> 00:28:39,480
+make this
+
+870
+00:28:39,480 --> 00:28:40,560
+feature working
+
+871
+00:28:40,560 --> 00:28:41,480
+properly also
+
+872
+00:28:41,480 --> 00:28:42,380
+on a car,
+
+873
+00:28:42,520 --> 00:28:43,180
+so that actually
+
+874
+00:28:43,180 --> 00:28:44,080
+a driver can
+
+875
+00:28:44,080 --> 00:28:44,880
+use an adaptive
+
+876
+00:28:44,880 --> 00:28:45,680
+cruise control,
+
+877
+00:28:46,080 --> 00:28:46,800
+it's extremely
+
+878
+00:28:46,800 --> 00:28:47,720
+important that
+
+879
+00:28:47,720 --> 00:28:48,400
+not just the
+
+880
+00:28:48,400 --> 00:28:49,100
+unit works,
+
+881
+00:28:49,380 --> 00:28:50,060
+but that also
+
+882
+00:28:50,060 --> 00:28:50,820
+the different
+
+883
+00:28:50,820 --> 00:28:52,900
+units participating
+
+884
+00:28:52,900 --> 00:28:53,340
+with this
+
+885
+00:28:53,340 --> 00:28:54,580
+feature talk
+
+886
+00:28:54,580 --> 00:28:55,600
+properly to
+
+887
+00:28:55,600 --> 00:28:56,220
+each other
+
+888
+00:28:56,220 --> 00:28:57,500
+and make
+
+889
+00:28:57,500 --> 00:28:58,060
+sure that the
+
+890
+00:28:58,060 --> 00:28:58,800
+adaptive cruise
+
+891
+00:28:58,800 --> 00:28:59,420
+control will
+
+892
+00:28:59,420 --> 00:29:00,120
+work properly
+
+893
+00:29:00,120 --> 00:29:00,760
+on a car.
+
+894
+00:29:01,500 --> 00:29:01,660
+So,
+
+895
+00:29:01,800 --> 00:29:02,580
+before we
+
+896
+00:29:02,580 --> 00:29:03,500
+arrive to
+
+897
+00:29:03,500 --> 00:29:04,220
+the testing
+
+898
+00:29:04,220 --> 00:29:05,120
+phase in
+
+899
+00:29:05,120 --> 00:29:05,880
+the car,
+
+900
+00:29:06,500 --> 00:29:07,240
+we perform
+
+901
+00:29:07,240 --> 00:29:08,180
+first unit
+
+902
+00:29:08,180 --> 00:29:08,580
+test,
+
+903
+00:29:08,920 --> 00:29:10,000
+then integration
+
+904
+00:29:10,000 --> 00:29:10,480
+test,
+
+905
+00:29:10,620 --> 00:29:11,120
+so we start
+
+906
+00:29:11,120 --> 00:29:11,880
+to put together
+
+907
+00:29:11,880 --> 00:29:12,460
+the electronic
+
+908
+00:29:12,460 --> 00:29:13,280
+control units
+
+909
+00:29:13,280 --> 00:29:13,960
+and see what
+
+910
+00:29:13,960 --> 00:29:14,540
+happens when
+
+911
+00:29:14,540 --> 00:29:15,060
+they talk to
+
+912
+00:29:15,060 --> 00:29:15,520
+each other
+
+913
+00:29:15,520 --> 00:29:16,220
+and if they
+
+914
+00:29:16,220 --> 00:29:16,920
+talk properly
+
+915
+00:29:16,920 --> 00:29:17,300
+to each
+
+916
+00:29:17,300 --> 00:29:17,540
+other,
+
+917
+00:29:18,260 --> 00:29:18,880
+and finally,
+
+918
+00:29:19,020 --> 00:29:19,700
+we arrive to
+
+919
+00:29:19,700 --> 00:29:20,060
+the last
+
+920
+00:29:20,060 --> 00:29:20,480
+phase,
+
+921
+00:29:20,620 --> 00:29:20,740
+okay,
+
+922
+00:29:20,840 --> 00:29:21,320
+now this
+
+923
+00:29:21,320 --> 00:29:22,540
+V is a bit
+
+924
+00:29:22,540 --> 00:29:22,900
+weird,
+
+925
+00:29:23,020 --> 00:29:23,540
+let's say
+
+926
+00:29:23,540 --> 00:29:24,040
+it's something
+
+927
+00:29:24,040 --> 00:29:24,640
+like this,
+
+928
+00:29:25,900 --> 00:29:26,440
+we arrive to
+
+929
+00:29:26,440 --> 00:29:26,800
+the last
+
+930
+00:29:26,800 --> 00:29:27,640
+phase here,
+
+931
+00:29:28,060 --> 00:29:28,560
+that is
+
+932
+00:29:28,560 --> 00:29:29,000
+the new
+
+933
+00:29:29,000 --> 00:29:29,340
+one,
+
+934
+00:29:29,460 --> 00:29:30,080
+so here
+
+935
+00:29:30,080 --> 00:29:30,820
+finally we
+
+936
+00:29:30,820 --> 00:29:31,560
+have the
+
+937
+00:29:31,560 --> 00:29:32,460
+first car,
+
+938
+00:29:33,000 --> 00:29:33,600
+on a car
+
+939
+00:29:33,600 --> 00:29:34,360
+we do not
+
+940
+00:29:34,360 --> 00:29:35,240
+focus only
+
+941
+00:29:35,240 --> 00:29:35,720
+on the
+
+942
+00:29:35,720 --> 00:29:36,840
+single unit,
+
+943
+00:29:37,160 --> 00:29:37,500
+but we
+
+944
+00:29:37,500 --> 00:29:38,720
+focus on the
+
+945
+00:29:38,720 --> 00:29:39,760
+whole system
+
+946
+00:29:39,760 --> 00:29:40,400
+performing
+
+947
+00:29:40,400 --> 00:29:41,000
+functional
+
+948
+00:29:41,000 --> 00:29:41,500
+tests,
+
+949
+00:29:41,500 --> 00:29:43,020
+so now
+
+950
+00:29:43,020 --> 00:29:43,940
+we see that
+
+951
+00:29:43,940 --> 00:29:44,460
+there is a
+
+952
+00:29:44,460 --> 00:29:44,900
+connection
+
+953
+00:29:44,900 --> 00:29:45,640
+between this
+
+954
+00:29:45,640 --> 00:29:46,220
+V cycle
+
+955
+00:29:46,220 --> 00:29:46,860
+that is
+
+956
+00:29:46,860 --> 00:29:47,420
+on a slide
+
+957
+00:29:47,420 --> 00:29:48,080
+and a
+
+958
+00:29:48,080 --> 00:29:48,580
+V cycle
+
+959
+00:29:48,580 --> 00:29:49,780
+seen on
+
+960
+00:29:49,780 --> 00:29:50,100
+a real
+
+961
+00:29:50,100 --> 00:29:50,620
+project,
+
+962
+00:29:50,880 --> 00:29:51,120
+okay,
+
+963
+00:29:52,520 --> 00:29:53,300
+so let's
+
+964
+00:29:53,300 --> 00:29:53,800
+see if I
+
+965
+00:29:53,800 --> 00:29:54,220
+can
+
+966
+00:29:54,220 --> 00:29:56,640
+clean a
+
+967
+00:29:56,640 --> 00:29:57,220
+bit the
+
+968
+00:29:57,220 --> 00:29:57,720
+mess that
+
+969
+00:29:57,720 --> 00:29:58,300
+I created
+
+970
+00:29:58,300 --> 00:29:58,980
+over here,
+
+971
+00:30:01,560 --> 00:30:03,040
+maybe it's
+
+972
+00:30:03,040 --> 00:30:03,600
+better just
+
+973
+00:30:03,600 --> 00:30:04,080
+to move
+
+974
+00:30:04,080 --> 00:30:05,020
+here directly,
+
+975
+00:30:05,020 --> 00:30:06,960
+so we're
+
+976
+00:30:06,960 --> 00:30:07,780
+at this
+
+977
+00:30:07,780 --> 00:30:08,160
+point,
+
+978
+00:30:08,720 --> 00:30:10,220
+here you
+
+979
+00:30:10,220 --> 00:30:11,020
+see we
+
+980
+00:30:11,020 --> 00:30:12,040
+have the
+
+981
+00:30:12,040 --> 00:30:13,160
+first V
+
+982
+00:30:13,160 --> 00:30:13,720
+cycle
+
+983
+00:30:13,720 --> 00:30:15,840
+drawn on
+
+984
+00:30:15,840 --> 00:30:18,440
+a real
+
+985
+00:30:18,440 --> 00:30:20,160
+project
+
+986
+00:30:20,160 --> 00:30:22,240
+plan
+
+987
+00:30:22,240 --> 00:30:22,840
+card,
+
+988
+00:30:22,840 --> 00:30:24,220
+so I
+
+989
+00:30:24,220 --> 00:30:24,400
+have a
+
+990
+00:30:24,400 --> 00:30:24,740
+look at
+
+991
+00:30:24,740 --> 00:30:24,960
+this
+
+992
+00:30:24,960 --> 00:30:25,260
+slide
+
+993
+00:30:25,260 --> 00:30:26,120
+for a
+
+994
+00:30:26,120 --> 00:30:26,420
+while,
+
+995
+00:30:26,420 --> 00:30:52,300
+okay,
+
+996
+00:30:52,440 --> 00:30:52,940
+this is the
+
+997
+00:30:52,940 --> 00:30:53,580
+final slide,
+
+998
+00:30:53,720 --> 00:30:55,860
+so you
+
+999
+00:30:55,860 --> 00:30:56,340
+see that
+
+1000
+00:30:56,340 --> 00:30:57,120
+V cycle
+
+1001
+00:30:57,120 --> 00:30:57,760
+repeats
+
+1002
+00:30:57,760 --> 00:30:58,540
+itself
+
+1003
+00:30:58,540 --> 00:30:59,320
+many,
+
+1004
+00:30:59,320 --> 00:31:00,060
+many,
+
+1005
+00:31:00,060 --> 00:31:01,340
+many times,
+
+1006
+00:31:01,480 --> 00:31:01,660
+okay,
+
+1007
+00:31:01,840 --> 00:31:02,560
+this is just
+
+1008
+00:31:02,560 --> 00:31:03,140
+a qualitative
+
+1009
+00:31:03,140 --> 00:31:03,980
+expression,
+
+1010
+00:31:04,280 --> 00:31:04,440
+okay,
+
+1011
+00:31:04,900 --> 00:31:05,640
+this doesn't
+
+1012
+00:31:05,640 --> 00:31:06,000
+mean that
+
+1013
+00:31:06,000 --> 00:31:06,440
+we have
+
+1014
+00:31:06,440 --> 00:31:06,660
+I don't
+
+1015
+00:31:06,660 --> 00:31:06,760
+know,
+
+1016
+00:31:06,820 --> 00:31:07,040
+1,
+
+1017
+00:31:07,120 --> 00:31:07,260
+2,
+
+1018
+00:31:07,400 --> 00:31:07,700
+3,
+
+1019
+00:31:07,700 --> 00:31:08,180
+4,
+
+1020
+00:31:08,280 --> 00:31:08,500
+5,
+
+1021
+00:31:08,580 --> 00:31:08,760
+6,
+
+1022
+00:31:08,760 --> 00:31:09,460
+I drawn
+
+1023
+00:31:09,460 --> 00:31:09,820
+just
+
+1024
+00:31:09,820 --> 00:31:10,640
+6 V
+
+1025
+00:31:10,640 --> 00:31:11,040
+cycles,
+
+1026
+00:31:11,160 --> 00:31:11,480
+but V
+
+1027
+00:31:11,480 --> 00:31:11,720
+cycle
+
+1028
+00:31:11,720 --> 00:31:12,220
+repeats
+
+1029
+00:31:12,220 --> 00:31:13,660
+itself
+
+1030
+00:31:13,660 --> 00:31:14,760
+over and
+
+1031
+00:31:14,760 --> 00:31:15,120
+over
+
+1032
+00:31:15,120 --> 00:31:15,600
+again,
+
+1033
+00:31:16,360 --> 00:31:16,800
+why,
+
+1034
+00:31:17,040 --> 00:31:17,740
+because I
+
+1035
+00:31:17,740 --> 00:31:18,120
+received
+
+1036
+00:31:18,120 --> 00:31:18,580
+the B100,
+
+1037
+00:31:18,820 --> 00:31:19,180
+then I
+
+1038
+00:31:19,180 --> 00:31:19,440
+start
+
+1039
+00:31:19,440 --> 00:31:19,860
+testing,
+
+1040
+00:31:20,040 --> 00:31:20,280
+let's
+
+1041
+00:31:20,280 --> 00:31:20,600
+say I
+
+1042
+00:31:20,600 --> 00:31:20,920
+start
+
+1043
+00:31:20,920 --> 00:31:21,320
+testing
+
+1044
+00:31:21,320 --> 00:31:21,740
+something
+
+1045
+00:31:21,740 --> 00:31:21,980
+in
+
+1046
+00:31:21,980 --> 00:31:22,540
+Mule 1,
+
+1047
+00:31:23,540 --> 00:31:24,220
+which is
+
+1048
+00:31:24,220 --> 00:31:26,380
+the first
+
+1049
+00:31:26,380 --> 00:31:27,200
+prototype or
+
+1050
+00:31:27,200 --> 00:31:28,120
+even while
+
+1051
+00:31:28,120 --> 00:31:29,440
+testing in
+
+1052
+00:31:29,440 --> 00:31:30,340
+my electronic
+
+1053
+00:31:30,340 --> 00:31:31,200
+control unit,
+
+1054
+00:31:31,280 --> 00:31:32,040
+in the unit
+
+1055
+00:31:32,040 --> 00:31:32,420
+test,
+
+1056
+00:31:32,740 --> 00:31:33,420
+I realized
+
+1057
+00:31:33,420 --> 00:31:33,780
+there is
+
+1058
+00:31:33,780 --> 00:31:34,480
+something wrong,
+
+1059
+00:31:34,780 --> 00:31:35,300
+there might be
+
+1060
+00:31:35,300 --> 00:31:36,040
+something wrong
+
+1061
+00:31:36,040 --> 00:31:36,860
+on the requirements,
+
+1062
+00:31:37,120 --> 00:31:38,340
+there could be
+
+1063
+00:31:38,340 --> 00:31:39,120
+something wrong
+
+1064
+00:31:39,120 --> 00:31:40,160
+on the
+
+1065
+00:31:40,160 --> 00:31:41,080
+software side,
+
+1066
+00:31:41,280 --> 00:31:41,880
+and stuff like
+
+1067
+00:31:41,880 --> 00:31:42,140
+this,
+
+1068
+00:31:42,680 --> 00:31:43,220
+but if
+
+1069
+00:31:43,220 --> 00:31:43,800
+something is
+
+1070
+00:31:43,800 --> 00:31:44,520
+not working,
+
+1071
+00:31:45,060 --> 00:31:45,700
+which means
+
+1072
+00:31:45,700 --> 00:31:46,440
+if the
+
+1073
+00:31:46,440 --> 00:31:47,220
+software and
+
+1074
+00:31:47,220 --> 00:31:47,740
+the system
+
+1075
+00:31:47,740 --> 00:31:48,340
+are not
+
+1076
+00:31:48,340 --> 00:31:49,520
+behaving as
+
+1077
+00:31:49,520 --> 00:31:50,440
+the requirement
+
+1078
+00:31:50,440 --> 00:31:51,220
+expects,
+
+1079
+00:31:52,120 --> 00:31:53,340
+then I
+
+1080
+00:31:53,340 --> 00:31:55,180
+raise an
+
+1081
+00:31:55,180 --> 00:31:55,540
+issue,
+
+1082
+00:31:55,820 --> 00:31:56,140
+saying,
+
+1083
+00:31:56,300 --> 00:31:56,400
+okay,
+
+1084
+00:31:56,440 --> 00:31:56,780
+there is an
+
+1085
+00:31:56,780 --> 00:31:57,200
+issue with
+
+1086
+00:31:57,200 --> 00:31:57,660
+the system,
+
+1087
+00:31:58,320 --> 00:31:58,900
+the issue
+
+1088
+00:31:58,900 --> 00:31:59,720
+is analyzed
+
+1089
+00:31:59,720 --> 00:32:00,240
+by,
+
+1090
+00:32:01,180 --> 00:32:01,960
+first of
+
+1091
+00:32:01,960 --> 00:32:02,240
+all,
+
+1092
+00:32:02,340 --> 00:32:02,860
+by us,
+
+1093
+00:32:03,260 --> 00:32:03,560
+so we
+
+1094
+00:32:03,560 --> 00:32:04,160
+perform a
+
+1095
+00:32:04,160 --> 00:32:05,140
+first analysis,
+
+1096
+00:32:06,000 --> 00:32:06,360
+and then,
+
+1097
+00:32:07,000 --> 00:32:08,220
+or someone
+
+1098
+00:32:08,220 --> 00:32:09,000
+will help us,
+
+1099
+00:32:09,120 --> 00:32:09,520
+and then if
+
+1100
+00:32:09,520 --> 00:32:10,160
+it's a
+
+1101
+00:32:10,160 --> 00:32:10,860
+software
+
+1102
+00:32:10,860 --> 00:32:11,480
+requirement,
+
+1103
+00:32:12,220 --> 00:32:13,540
+then the
+
+1104
+00:32:13,540 --> 00:32:15,480
+software must
+
+1105
+00:32:15,480 --> 00:32:16,920
+be modified,
+
+1106
+00:32:17,460 --> 00:32:18,140
+so again,
+
+1107
+00:32:18,300 --> 00:32:18,980
+could be an
+
+1108
+00:32:18,980 --> 00:32:19,460
+architectural
+
+1109
+00:32:19,460 --> 00:32:20,160
+problem,
+
+1110
+00:32:20,360 --> 00:32:20,920
+a design
+
+1111
+00:32:20,920 --> 00:32:21,440
+problem,
+
+1112
+00:32:21,440 --> 00:32:22,100
+or simply
+
+1113
+00:32:22,100 --> 00:32:22,940
+a one-line
+
+1114
+00:32:22,940 --> 00:32:24,060
+code problem,
+
+1115
+00:32:24,960 --> 00:32:26,100
+the software
+
+1116
+00:32:26,100 --> 00:32:26,640
+is modified,
+
+1117
+00:32:26,960 --> 00:32:27,500
+and then a
+
+1118
+00:32:27,500 --> 00:32:27,960
+new version
+
+1119
+00:32:27,960 --> 00:32:28,540
+of the software
+
+1120
+00:32:28,540 --> 00:32:29,240
+is released,
+
+1121
+00:32:29,380 --> 00:32:29,820
+so we will
+
+1122
+00:32:29,820 --> 00:32:30,620
+have another,
+
+1123
+00:32:31,000 --> 00:32:31,400
+let's say,
+
+1124
+00:32:31,480 --> 00:32:32,100
+V cycle,
+
+1125
+00:32:32,960 --> 00:32:33,860
+but this time,
+
+1126
+00:32:34,020 --> 00:32:34,740
+this line of
+
+1127
+00:32:34,740 --> 00:32:35,400
+the unit test
+
+1128
+00:32:35,400 --> 00:32:36,280
+will not pass
+
+1129
+00:32:36,280 --> 00:32:36,780
+through the
+
+1130
+00:32:36,780 --> 00:32:37,540
+B100,
+
+1131
+00:32:37,900 --> 00:32:38,520
+but will pass
+
+1132
+00:32:38,520 --> 00:32:39,760
+for B110.
+
+1133
+00:32:39,760 --> 00:32:41,580
+so every
+
+1134
+00:32:41,580 --> 00:32:42,160
+time you
+
+1135
+00:32:42,160 --> 00:32:42,440
+have a
+
+1136
+00:32:42,440 --> 00:32:43,180
+software release,
+
+1137
+00:32:43,280 --> 00:32:43,580
+there will
+
+1138
+00:32:43,580 --> 00:32:43,980
+be a
+
+1139
+00:32:43,980 --> 00:32:44,500
+V cycle,
+
+1140
+00:32:44,880 --> 00:32:45,140
+okay,
+
+1141
+00:32:46,300 --> 00:32:47,860
+or again,
+
+1142
+00:32:48,000 --> 00:32:48,600
+in case the
+
+1143
+00:32:48,600 --> 00:32:49,120
+problem were
+
+1144
+00:32:49,120 --> 00:32:49,840
+the requirements,
+
+1145
+00:32:50,040 --> 00:32:50,360
+because there
+
+1146
+00:32:50,360 --> 00:32:51,260
+was something
+
+1147
+00:32:51,260 --> 00:32:51,960
+not clear,
+
+1148
+00:32:52,140 --> 00:32:52,920
+or a requirement
+
+1149
+00:32:52,920 --> 00:32:53,440
+was not
+
+1150
+00:32:53,440 --> 00:32:54,220
+properly written,
+
+1151
+00:32:54,700 --> 00:32:55,200
+then the
+
+1152
+00:32:55,200 --> 00:32:55,600
+V cycle
+
+1153
+00:32:55,600 --> 00:32:56,660
+repeats itself,
+
+1154
+00:32:57,240 --> 00:32:58,020
+and requirements
+
+1155
+00:32:58,020 --> 00:32:58,940
+are modified,
+
+1156
+00:32:59,640 --> 00:33:00,620
+eventually there
+
+1157
+00:33:00,620 --> 00:33:01,520
+is a 0B
+
+1158
+00:33:01,520 --> 00:33:01,900
+release,
+
+1159
+00:33:01,980 --> 00:33:02,460
+as we were
+
+1160
+00:33:02,460 --> 00:33:03,360
+mentioning before,
+
+1161
+00:33:03,700 --> 00:33:04,300
+so an updated
+
+1162
+00:33:04,300 --> 00:33:05,000
+version of the
+
+1163
+00:33:05,000 --> 00:33:05,520
+requirements,
+
+1164
+00:33:05,520 --> 00:33:08,680
+a new
+
+1165
+00:33:08,680 --> 00:33:09,280
+software is
+
+1166
+00:33:09,280 --> 00:33:09,640
+developed,
+
+1167
+00:33:09,960 --> 00:33:10,460
+and then a
+
+1168
+00:33:10,460 --> 00:33:10,900
+new software
+
+1169
+00:33:10,900 --> 00:33:11,580
+is released,
+
+1170
+00:33:11,820 --> 00:33:13,140
+and we keep
+
+1171
+00:33:13,140 --> 00:33:14,140
+testing the
+
+1172
+00:33:14,140 --> 00:33:14,760
+requirements,
+
+1173
+00:33:14,920 --> 00:33:15,060
+okay,
+
+1174
+00:33:15,100 --> 00:33:15,660
+so we start
+
+1175
+00:33:15,660 --> 00:33:16,700
+testing activities,
+
+1176
+00:33:17,280 --> 00:33:18,780
+still trying
+
+1177
+00:33:18,780 --> 00:33:20,120
+to make sure
+
+1178
+00:33:20,120 --> 00:33:20,540
+that the
+
+1179
+00:33:20,540 --> 00:33:20,880
+software,
+
+1180
+00:33:21,060 --> 00:33:21,540
+and then the
+
+1181
+00:33:21,540 --> 00:33:21,900
+system,
+
+1182
+00:33:22,500 --> 00:33:23,400
+behaves according
+
+1183
+00:33:23,400 --> 00:33:23,880
+to the
+
+1184
+00:33:23,880 --> 00:33:24,320
+requirements,
+
+1185
+00:33:24,700 --> 00:33:24,920
+okay,
+
+1186
+00:33:25,300 --> 00:33:26,740
+okay,
+
+1187
+00:33:26,900 --> 00:33:27,900
+so the
+
+1188
+00:33:27,900 --> 00:33:28,400
+V cycle
+
+1189
+00:33:28,400 --> 00:33:29,420
+repeats itself
+
+1190
+00:33:29,420 --> 00:33:30,000
+many,
+
+1191
+00:33:30,200 --> 00:33:30,540
+many,
+
+1192
+00:33:30,540 --> 00:33:31,540
+many times,
+
+1193
+00:33:31,660 --> 00:33:31,820
+okay,
+
+1194
+00:33:31,820 --> 00:33:32,440
+so just keep
+
+1195
+00:33:32,440 --> 00:33:33,080
+in mind that
+
+1196
+00:33:33,080 --> 00:33:33,660
+this is a
+
+1197
+00:33:33,660 --> 00:33:34,300
+process that
+
+1198
+00:33:34,300 --> 00:33:34,680
+you will
+
+1199
+00:33:34,680 --> 00:33:35,740
+always work
+
+1200
+00:33:35,740 --> 00:33:36,060
+with,
+
+1201
+00:33:36,180 --> 00:33:36,400
+okay,
+
+1202
+00:33:36,700 --> 00:33:37,840
+let's go
+
+1203
+00:33:37,840 --> 00:33:38,480
+back to
+
+1204
+00:33:38,480 --> 00:33:42,080
+this picture,
+
+1205
+00:33:42,320 --> 00:33:42,880
+so we were
+
+1206
+00:33:42,880 --> 00:33:44,100
+focusing here
+
+1207
+00:33:44,100 --> 00:33:45,660
+on this
+
+1208
+00:33:45,660 --> 00:33:46,260
+timeline,
+
+1209
+00:33:46,700 --> 00:33:47,560
+we have just
+
+1210
+00:33:47,560 --> 00:33:48,340
+mentioned the
+
+1211
+00:33:48,340 --> 00:33:48,980
+new one,
+
+1212
+00:33:49,360 --> 00:33:50,720
+this is just
+
+1213
+00:33:50,720 --> 00:33:51,620
+an invented
+
+1214
+00:33:51,620 --> 00:33:52,140
+number,
+
+1215
+00:33:52,340 --> 00:33:52,440
+okay,
+
+1216
+00:33:52,440 --> 00:33:53,040
+this is not
+
+1217
+00:33:53,040 --> 00:33:54,640
+actually true,
+
+1218
+00:33:54,860 --> 00:33:55,620
+but let's
+
+1219
+00:33:55,620 --> 00:33:56,320
+see that on
+
+1220
+00:33:56,320 --> 00:33:57,020
+the new one,
+
+1221
+00:33:57,900 --> 00:33:59,000
+10% of the
+
+1222
+00:33:59,000 --> 00:34:00,140
+car is
+
+1223
+00:34:00,140 --> 00:34:00,500
+the,
+
+1224
+00:34:00,780 --> 00:34:01,980
+what we will
+
+1225
+00:34:01,980 --> 00:34:03,060
+actually find,
+
+1226
+00:34:03,520 --> 00:34:03,880
+and the
+
+1227
+00:34:03,880 --> 00:34:04,720
+final project,
+
+1228
+00:34:04,840 --> 00:34:05,180
+so the
+
+1229
+00:34:05,180 --> 00:34:05,660
+car that
+
+1230
+00:34:05,660 --> 00:34:06,080
+is actually
+
+1231
+00:34:06,080 --> 00:34:07,360
+sold to
+
+1232
+00:34:07,360 --> 00:34:09,940
+people,
+
+1233
+00:34:10,320 --> 00:34:11,240
+while 90%
+
+1234
+00:34:11,240 --> 00:34:11,760
+is something
+
+1235
+00:34:11,760 --> 00:34:12,140
+else.
+
+1236
+00:34:12,760 --> 00:34:13,640
+As we move
+
+1237
+00:34:13,640 --> 00:34:14,160
+on on the
+
+1238
+00:34:14,160 --> 00:34:14,540
+timeline,
+
+1239
+00:34:14,960 --> 00:34:16,460
+so moving
+
+1240
+00:34:16,460 --> 00:34:16,940
+on on the
+
+1241
+00:34:16,940 --> 00:34:17,280
+timeline,
+
+1242
+00:34:17,500 --> 00:34:18,200
+it means that
+
+1243
+00:34:18,200 --> 00:34:19,340
+the software
+
+1244
+00:34:19,340 --> 00:34:19,760
+is,
+
+1245
+00:34:20,040 --> 00:34:20,660
+every time
+
+1246
+00:34:20,660 --> 00:34:21,040
+there is a
+
+1247
+00:34:21,040 --> 00:34:21,700
+software release,
+
+1248
+00:34:21,820 --> 00:34:22,220
+the software
+
+1249
+00:34:22,220 --> 00:34:22,780
+is better,
+
+1250
+00:34:22,900 --> 00:34:23,260
+the software
+
+1251
+00:34:23,260 --> 00:34:23,680
+is more
+
+1252
+00:34:23,680 --> 00:34:24,200
+complete,
+
+1253
+00:34:24,720 --> 00:34:25,740
+we are testing
+
+1254
+00:34:25,740 --> 00:34:26,180
+that the
+
+1255
+00:34:26,180 --> 00:34:27,560
+software complies
+
+1256
+00:34:27,560 --> 00:34:27,900
+with the
+
+1257
+00:34:27,900 --> 00:34:28,420
+requirements,
+
+1258
+00:34:28,680 --> 00:34:29,260
+there is also
+
+1259
+00:34:29,260 --> 00:34:29,900
+another release
+
+1260
+00:34:29,900 --> 00:34:30,160
+of the
+
+1261
+00:34:30,160 --> 00:34:30,660
+requirements,
+
+1262
+00:34:31,240 --> 00:34:32,280
+so it means
+
+1263
+00:34:32,280 --> 00:34:32,940
+that having
+
+1264
+00:34:32,940 --> 00:34:33,680
+a new set
+
+1265
+00:34:33,680 --> 00:34:34,300
+of requirements,
+
+1266
+00:34:34,480 --> 00:34:34,920
+we will have
+
+1267
+00:34:34,920 --> 00:34:35,440
+a software
+
+1268
+00:34:35,440 --> 00:34:36,060
+which will
+
+1269
+00:34:36,060 --> 00:34:36,960
+contain more
+
+1270
+00:34:36,960 --> 00:34:37,760
+requirements and
+
+1271
+00:34:37,760 --> 00:34:38,480
+stuff like this,
+
+1272
+00:34:38,560 --> 00:34:38,720
+okay,
+
+1273
+00:34:39,480 --> 00:34:40,680
+so we
+
+1274
+00:34:40,680 --> 00:34:42,080
+are getting,
+
+1275
+00:34:42,180 --> 00:34:42,720
+as soon as we
+
+1276
+00:34:42,720 --> 00:34:43,200
+move on the
+
+1277
+00:34:43,200 --> 00:34:43,760
+right side,
+
+1278
+00:34:43,860 --> 00:34:44,740
+a better software
+
+1279
+00:34:44,740 --> 00:34:45,340
+or a more
+
+1280
+00:34:45,340 --> 00:34:46,200
+complete software,
+
+1281
+00:34:46,740 --> 00:34:48,020
+then we will
+
+1282
+00:34:48,020 --> 00:34:48,640
+arrive to the
+
+1283
+00:34:48,640 --> 00:34:49,140
+face of the
+
+1284
+00:34:49,140 --> 00:34:49,560
+Mule 2,
+
+1285
+00:34:49,720 --> 00:34:50,320
+the Mule 2,
+
+1286
+00:34:50,480 --> 00:34:51,140
+and once again,
+
+1287
+00:34:51,280 --> 00:34:51,880
+here guys,
+
+1288
+00:34:51,980 --> 00:34:52,920
+I'm inventing
+
+1289
+00:34:52,920 --> 00:34:53,580
+these numbers,
+
+1290
+00:34:53,800 --> 00:34:53,940
+okay,
+
+1291
+00:34:53,980 --> 00:34:54,800
+so I'm not sure
+
+1292
+00:34:54,800 --> 00:34:55,640
+it's like this,
+
+1293
+00:34:55,840 --> 00:34:56,820
+something around
+
+1294
+00:34:56,820 --> 00:34:57,140
+this,
+
+1295
+00:34:57,300 --> 00:34:57,700
+but yeah,
+
+1296
+00:34:58,400 --> 00:34:59,620
+Mule 2 is still
+
+1297
+00:34:59,620 --> 00:35:00,160
+a prototype,
+
+1298
+00:35:00,160 --> 00:35:00,900
+but in this
+
+1299
+00:35:00,900 --> 00:35:01,580
+case we will
+
+1300
+00:35:01,580 --> 00:35:02,720
+have that 50%
+
+1301
+00:35:02,720 --> 00:35:03,320
+of the car
+
+1302
+00:35:03,320 --> 00:35:04,060
+is actually
+
+1303
+00:35:04,060 --> 00:35:05,120
+the car
+
+1304
+00:35:05,120 --> 00:35:05,680
+that we will
+
+1305
+00:35:05,680 --> 00:35:07,860
+find on the
+
+1306
+00:35:07,860 --> 00:35:08,200
+market,
+
+1307
+00:35:08,420 --> 00:35:08,840
+while the
+
+1308
+00:35:08,840 --> 00:35:09,700
+other 50%
+
+1309
+00:35:09,700 --> 00:35:10,220
+is something
+
+1310
+00:35:10,220 --> 00:35:10,600
+else,
+
+1311
+00:35:11,720 --> 00:35:12,500
+please keep
+
+1312
+00:35:12,500 --> 00:35:12,840
+in mind
+
+1313
+00:35:12,840 --> 00:35:13,240
+that the
+
+1314
+00:35:13,240 --> 00:35:13,840
+Mule 1
+
+1315
+00:35:13,840 --> 00:35:14,340
+is the
+
+1316
+00:35:14,340 --> 00:35:15,880
+first actual
+
+1317
+00:35:15,880 --> 00:35:16,760
+car for
+
+1318
+00:35:16,760 --> 00:35:17,620
+that project,
+
+1319
+00:35:18,200 --> 00:35:19,280
+so it means
+
+1320
+00:35:19,280 --> 00:35:19,600
+that you
+
+1321
+00:35:19,600 --> 00:35:20,660
+have one
+
+1322
+00:35:20,660 --> 00:35:21,160
+car,
+
+1323
+00:35:21,520 --> 00:35:21,760
+okay,
+
+1324
+00:35:23,160 --> 00:35:25,240
+then Mule 2,
+
+1325
+00:35:25,700 --> 00:35:26,840
+since it is
+
+1326
+00:35:26,840 --> 00:35:27,820
+similar to
+
+1327
+00:35:27,820 --> 00:35:28,380
+the final
+
+1328
+00:35:28,380 --> 00:35:28,820
+product,
+
+1329
+00:35:29,000 --> 00:35:29,420
+it makes
+
+1330
+00:35:29,420 --> 00:35:29,860
+sense to
+
+1331
+00:35:29,860 --> 00:35:30,380
+have more
+
+1332
+00:35:30,380 --> 00:35:31,000
+than one
+
+1333
+00:35:31,000 --> 00:35:31,420
+Mule,
+
+1334
+00:35:31,860 --> 00:35:32,460
+one than
+
+1335
+00:35:32,460 --> 00:35:33,000
+more car,
+
+1336
+00:35:33,120 --> 00:35:33,540
+so that we
+
+1337
+00:35:33,540 --> 00:35:34,080
+can start
+
+1338
+00:35:34,080 --> 00:35:34,700
+performing
+
+1339
+00:35:34,700 --> 00:35:35,520
+some tests,
+
+1340
+00:35:35,840 --> 00:35:36,000
+okay,
+
+1341
+00:35:36,780 --> 00:35:37,360
+keep in mind
+
+1342
+00:35:37,360 --> 00:35:37,800
+that it's
+
+1343
+00:35:37,800 --> 00:35:38,580
+very helpful
+
+1344
+00:35:38,580 --> 00:35:39,460
+and easy
+
+1345
+00:35:39,460 --> 00:35:40,040
+to work
+
+1346
+00:35:40,040 --> 00:35:40,340
+on an
+
+1347
+00:35:40,340 --> 00:35:40,800
+HIL,
+
+1348
+00:35:41,060 --> 00:35:41,280
+because,
+
+1349
+00:35:41,420 --> 00:35:41,660
+so an
+
+1350
+00:35:41,660 --> 00:35:42,080
+hardware in
+
+1351
+00:35:42,080 --> 00:35:42,320
+the loop,
+
+1352
+00:35:42,380 --> 00:35:44,100
+because we
+
+1353
+00:35:44,100 --> 00:35:44,580
+have just
+
+1354
+00:35:44,580 --> 00:35:45,440
+one real
+
+1355
+00:35:45,440 --> 00:35:45,820
+hardware,
+
+1356
+00:35:46,020 --> 00:35:46,360
+which is the
+
+1357
+00:35:46,360 --> 00:35:46,760
+electronic
+
+1358
+00:35:46,760 --> 00:35:47,640
+control unit
+
+1359
+00:35:47,640 --> 00:35:48,380
+that we
+
+1360
+00:35:48,380 --> 00:35:48,920
+are testing,
+
+1361
+00:35:49,440 --> 00:35:50,100
+but then
+
+1362
+00:35:50,100 --> 00:35:52,640
+everything
+
+1363
+00:35:52,640 --> 00:35:53,020
+that is
+
+1364
+00:35:53,020 --> 00:35:53,620
+around the
+
+1365
+00:35:53,620 --> 00:35:54,000
+electronic
+
+1366
+00:35:54,000 --> 00:35:54,640
+control unit
+
+1367
+00:35:54,640 --> 00:35:55,140
+is just
+
+1368
+00:35:55,140 --> 00:35:55,600
+a model,
+
+1369
+00:35:55,760 --> 00:35:56,340
+is ideal,
+
+1370
+00:35:56,600 --> 00:35:57,020
+so there
+
+1371
+00:35:57,020 --> 00:35:57,460
+are some
+
+1372
+00:35:57,460 --> 00:35:57,980
+situations
+
+1373
+00:35:57,980 --> 00:35:58,400
+that we
+
+1374
+00:35:58,400 --> 00:35:59,280
+cannot test
+
+1375
+00:35:59,280 --> 00:36:00,320
+or some
+
+1376
+00:36:00,320 --> 00:36:00,780
+problems
+
+1377
+00:36:00,780 --> 00:36:01,180
+that we
+
+1378
+00:36:01,180 --> 00:36:01,740
+could not
+
+1379
+00:36:01,740 --> 00:36:03,340
+realize and
+
+1380
+00:36:03,340 --> 00:36:03,940
+understand
+
+1381
+00:36:03,940 --> 00:36:05,040
+testing it
+
+1382
+00:36:05,040 --> 00:36:05,480
+from the
+
+1383
+00:36:05,480 --> 00:36:05,920
+hardware in
+
+1384
+00:36:05,920 --> 00:36:06,160
+the loop,
+
+1385
+00:36:06,240 --> 00:36:06,900
+but then
+
+1386
+00:36:06,900 --> 00:36:08,120
+that will
+
+1387
+00:36:08,120 --> 00:36:08,800
+be clear
+
+1388
+00:36:08,800 --> 00:36:09,460
+if we
+
+1389
+00:36:09,460 --> 00:36:09,860
+test it
+
+1390
+00:36:09,860 --> 00:36:10,100
+in the
+
+1391
+00:36:10,100 --> 00:36:10,340
+car,
+
+1392
+00:36:10,560 --> 00:36:10,840
+okay,
+
+1393
+00:36:11,080 --> 00:36:12,380
+so guys,
+
+1394
+00:36:12,380 --> 00:36:12,800
+in the
+
+1395
+00:36:12,800 --> 00:36:13,220
+past,
+
+1396
+00:36:13,500 --> 00:36:13,900
+all the
+
+1397
+00:36:13,900 --> 00:36:14,500
+tests were
+
+1398
+00:36:14,500 --> 00:36:15,020
+done on
+
+1399
+00:36:15,020 --> 00:36:16,260
+prototypes,
+
+1400
+00:36:16,660 --> 00:36:16,900
+okay,
+
+1401
+00:36:17,240 --> 00:36:17,920
+in the past
+
+1402
+00:36:17,920 --> 00:36:18,200
+when the
+
+1403
+00:36:18,200 --> 00:36:18,500
+car were
+
+1404
+00:36:18,500 --> 00:36:19,020
+mechanical
+
+1405
+00:36:19,020 --> 00:36:19,640
+and all
+
+1406
+00:36:19,640 --> 00:36:20,040
+of this
+
+1407
+00:36:20,040 --> 00:36:20,460
+software
+
+1408
+00:36:20,460 --> 00:36:21,040
+stuff was
+
+1409
+00:36:21,040 --> 00:36:21,360
+not
+
+1410
+00:36:21,360 --> 00:36:22,600
+reality,
+
+1411
+00:36:23,040 --> 00:36:23,380
+everything
+
+1412
+00:36:23,380 --> 00:36:24,020
+was done
+
+1413
+00:36:24,020 --> 00:36:24,780
+using these
+
+1414
+00:36:24,780 --> 00:36:25,300
+prototypes,
+
+1415
+00:36:25,300 --> 00:36:26,300
+prototypes,
+
+1416
+00:36:26,300 --> 00:36:26,500
+but prototypes
+
+1417
+00:36:26,500 --> 00:36:28,840
+are very
+
+1418
+00:36:28,840 --> 00:36:30,000
+expensive to
+
+1419
+00:36:30,000 --> 00:36:30,420
+be done,
+
+1420
+00:36:30,860 --> 00:36:31,200
+it's very
+
+1421
+00:36:31,200 --> 00:36:33,080
+slow
+
+1422
+00:36:33,080 --> 00:36:33,760
+activities,
+
+1423
+00:36:33,760 --> 00:36:34,440
+if you
+
+1424
+00:36:34,440 --> 00:36:35,260
+break a
+
+1425
+00:36:35,260 --> 00:36:35,700
+prototype,
+
+1426
+00:36:35,840 --> 00:36:36,120
+then to
+
+1427
+00:36:36,120 --> 00:36:36,620
+have another
+
+1428
+00:36:36,620 --> 00:36:36,900
+one,
+
+1429
+00:36:36,960 --> 00:36:37,420
+it takes
+
+1430
+00:36:37,420 --> 00:36:37,980
+weeks,
+
+1431
+00:36:38,400 --> 00:36:39,080
+so it's
+
+1432
+00:36:39,080 --> 00:36:39,660
+very slow
+
+1433
+00:36:39,660 --> 00:36:40,020
+and very
+
+1434
+00:36:40,020 --> 00:36:40,520
+expensive,
+
+1435
+00:36:40,520 --> 00:36:41,000
+so in
+
+1436
+00:36:41,000 --> 00:36:41,460
+order to
+
+1437
+00:36:41,460 --> 00:36:42,120
+save money,
+
+1438
+00:36:42,600 --> 00:36:42,900
+we are
+
+1439
+00:36:42,900 --> 00:36:43,420
+trying to
+
+1440
+00:36:43,420 --> 00:36:43,900
+push
+
+1441
+00:36:43,900 --> 00:36:44,560
+everything,
+
+1442
+00:36:44,840 --> 00:36:45,320
+to do
+
+1443
+00:36:45,320 --> 00:36:45,940
+everything that
+
+1444
+00:36:45,940 --> 00:36:46,480
+is possible
+
+1445
+00:36:46,480 --> 00:36:46,880
+on a
+
+1446
+00:36:46,880 --> 00:36:47,360
+hardware in
+
+1447
+00:36:47,360 --> 00:36:47,600
+the loop,
+
+1448
+00:36:47,720 --> 00:36:48,040
+which is,
+
+1449
+00:36:48,240 --> 00:36:48,520
+let's say,
+
+1450
+00:36:48,560 --> 00:36:48,940
+easy to
+
+1451
+00:36:48,940 --> 00:36:49,640
+configure it,
+
+1452
+00:36:50,100 --> 00:36:50,820
+easy to
+
+1453
+00:36:50,820 --> 00:36:51,400
+replace,
+
+1454
+00:36:51,620 --> 00:36:52,760
+easy to
+
+1455
+00:36:52,760 --> 00:36:55,340
+improve and
+
+1456
+00:36:55,340 --> 00:36:55,920
+stuff like
+
+1457
+00:36:55,920 --> 00:36:56,200
+this,
+
+1458
+00:36:56,560 --> 00:36:57,100
+or not
+
+1459
+00:36:57,100 --> 00:36:57,580
+easy in
+
+1460
+00:36:57,580 --> 00:36:57,920
+itself,
+
+1461
+00:36:58,020 --> 00:36:58,680
+but easier
+
+1462
+00:36:58,680 --> 00:36:59,380
+than having
+
+1463
+00:36:59,380 --> 00:36:59,840
+a car,
+
+1464
+00:37:00,160 --> 00:37:00,380
+okay,
+
+1465
+00:37:00,620 --> 00:37:01,420
+and for
+
+1466
+00:37:01,420 --> 00:37:01,800
+sure,
+
+1467
+00:37:02,280 --> 00:37:03,360
+less expensive
+
+1468
+00:37:03,360 --> 00:37:03,980
+and much
+
+1469
+00:37:03,980 --> 00:37:04,400
+faster.
+
+1470
+00:37:06,040 --> 00:37:06,560
+Again,
+
+1471
+00:37:06,680 --> 00:37:07,120
+once we
+
+1472
+00:37:07,120 --> 00:37:07,560
+move on,
+
+1473
+00:37:07,700 --> 00:37:08,160
+we have
+
+1474
+00:37:08,160 --> 00:37:08,600
+another
+
+1475
+00:37:08,600 --> 00:37:09,140
+development
+
+1476
+00:37:09,140 --> 00:37:09,580
+of the
+
+1477
+00:37:09,580 --> 00:37:09,820
+car,
+
+1478
+00:37:09,960 --> 00:37:10,500
+we arrive
+
+1479
+00:37:10,500 --> 00:37:10,800
+at the
+
+1480
+00:37:10,800 --> 00:37:11,080
+BP,
+
+1481
+00:37:11,300 --> 00:37:11,760
+which is,
+
+1482
+00:37:11,920 --> 00:37:12,260
+which are
+
+1483
+00:37:12,260 --> 00:37:12,660
+the vehicle
+
+1484
+00:37:12,660 --> 00:37:13,240
+production,
+
+1485
+00:37:13,780 --> 00:37:14,140
+here,
+
+1486
+00:37:14,460 --> 00:37:15,020
+once again,
+
+1487
+00:37:15,360 --> 00:37:15,600
+let's say,
+
+1488
+00:37:15,660 --> 00:37:16,080
+we have
+
+1489
+00:37:16,080 --> 00:37:17,340
+that 80%
+
+1490
+00:37:17,340 --> 00:37:18,540
+of the
+
+1491
+00:37:18,540 --> 00:37:19,200
+car is
+
+1492
+00:37:19,200 --> 00:37:19,740
+what we
+
+1493
+00:37:19,740 --> 00:37:20,520
+will actually
+
+1494
+00:37:20,520 --> 00:37:21,340
+find on
+
+1495
+00:37:21,340 --> 00:37:21,860
+the market,
+
+1496
+00:37:21,860 --> 00:37:23,980
+and 20%
+
+1497
+00:37:23,980 --> 00:37:24,700
+is still
+
+1498
+00:37:24,700 --> 00:37:25,460
+something else,
+
+1499
+00:37:25,600 --> 00:37:25,740
+okay,
+
+1500
+00:37:25,820 --> 00:37:26,320
+so there are
+
+1501
+00:37:26,320 --> 00:37:26,820
+still some
+
+1502
+00:37:26,820 --> 00:37:27,280
+parts that
+
+1503
+00:37:27,280 --> 00:37:27,700
+will be
+
+1504
+00:37:27,700 --> 00:37:28,320
+not really
+
+1505
+00:37:28,320 --> 00:37:29,660
+part of
+
+1506
+00:37:29,660 --> 00:37:30,000
+the final
+
+1507
+00:37:30,000 --> 00:37:30,560
+project.
+
+1508
+00:37:31,340 --> 00:37:31,700
+Vehicle
+
+1509
+00:37:31,700 --> 00:37:32,280
+production
+
+1510
+00:37:32,280 --> 00:37:32,680
+phase,
+
+1511
+00:37:32,760 --> 00:37:33,240
+maybe even
+
+1512
+00:37:33,240 --> 00:37:34,160
+85%,
+
+1513
+00:37:34,160 --> 00:37:34,520
+okay,
+
+1514
+00:37:34,580 --> 00:37:34,860
+so it
+
+1515
+00:37:34,860 --> 00:37:35,240
+means that
+
+1516
+00:37:35,240 --> 00:37:35,700
+this car
+
+1517
+00:37:35,700 --> 00:37:36,340
+is actually
+
+1518
+00:37:36,340 --> 00:37:36,980
+very close
+
+1519
+00:37:36,980 --> 00:37:37,300
+to the
+
+1520
+00:37:37,300 --> 00:37:37,860
+final one.
+
+1521
+00:37:38,840 --> 00:37:39,340
+Once we
+
+1522
+00:37:39,340 --> 00:37:39,640
+have a
+
+1523
+00:37:39,640 --> 00:37:40,040
+car that
+
+1524
+00:37:40,040 --> 00:37:40,600
+is so
+
+1525
+00:37:40,600 --> 00:37:41,260
+close to
+
+1526
+00:37:41,260 --> 00:37:41,840
+the final
+
+1527
+00:37:41,840 --> 00:37:42,240
+one,
+
+1528
+00:37:42,360 --> 00:37:42,800
+this means
+
+1529
+00:37:42,800 --> 00:37:43,600
+that performing
+
+1530
+00:37:43,600 --> 00:37:44,460
+tests on
+
+1531
+00:37:44,460 --> 00:37:44,960
+this car
+
+1532
+00:37:44,960 --> 00:37:45,360
+will be
+
+1533
+00:37:45,360 --> 00:37:45,800
+extremely
+
+1534
+00:37:45,800 --> 00:37:46,280
+helpful,
+
+1535
+00:37:46,280 --> 00:37:46,840
+because it
+
+1536
+00:37:46,840 --> 00:37:47,360
+will help
+
+1537
+00:37:47,360 --> 00:37:48,400
+us to
+
+1538
+00:37:48,400 --> 00:37:49,160
+understand
+
+1539
+00:37:49,160 --> 00:37:50,200
+if everything
+
+1540
+00:37:50,200 --> 00:37:50,920
+is working,
+
+1541
+00:37:50,920 --> 00:37:51,600
+not just
+
+1542
+00:37:51,600 --> 00:37:51,980
+in a
+
+1543
+00:37:51,980 --> 00:37:52,500
+laboratory
+
+1544
+00:37:52,500 --> 00:37:53,460
+or using
+
+1545
+00:37:53,460 --> 00:37:54,100
+a simulator,
+
+1546
+00:37:54,520 --> 00:37:55,280
+but also
+
+1547
+00:37:55,280 --> 00:37:56,440
+using actually
+
+1548
+00:37:56,440 --> 00:37:56,900
+the car
+
+1549
+00:37:56,900 --> 00:37:57,300
+in the
+
+1550
+00:37:57,300 --> 00:37:57,660
+street.
+
+1551
+00:37:59,120 --> 00:38:00,160
+PS is the
+
+1552
+00:38:00,160 --> 00:38:01,000
+pre-series
+
+1553
+00:38:01,000 --> 00:38:02,660
+car, so
+
+1554
+00:38:02,660 --> 00:38:03,280
+here, let's
+
+1555
+00:38:03,280 --> 00:38:03,800
+say that
+
+1556
+00:38:03,800 --> 00:38:05,840
+95%
+
+1557
+00:38:05,840 --> 00:38:06,360
+of the
+
+1558
+00:38:06,360 --> 00:38:06,900
+car or
+
+1559
+00:38:06,900 --> 00:38:07,280
+even
+
+1560
+00:38:07,280 --> 00:38:09,040
+98%
+
+1561
+00:38:09,040 --> 00:38:09,480
+of the
+
+1562
+00:38:09,480 --> 00:38:10,420
+car is
+
+1563
+00:38:10,420 --> 00:38:13,500
+the car
+
+1564
+00:38:13,500 --> 00:38:13,800
+that we
+
+1565
+00:38:13,800 --> 00:38:14,280
+will have
+
+1566
+00:38:14,280 --> 00:38:14,780
+at the
+
+1567
+00:38:14,780 --> 00:38:15,020
+end.
+
+1568
+00:38:15,020 --> 00:38:16,280
+PRA
+
+1569
+00:38:16,280 --> 00:38:18,920
+is, let's
+
+1570
+00:38:18,920 --> 00:38:19,360
+say, here
+
+1571
+00:38:19,360 --> 00:38:19,880
+we have
+
+1572
+00:38:19,880 --> 00:38:20,720
+that actual
+
+1573
+00:38:20,720 --> 00:38:21,540
+cars are
+
+1574
+00:38:21,540 --> 00:38:22,960
+already
+
+1575
+00:38:22,960 --> 00:38:23,980
+delivered to
+
+1576
+00:38:23,980 --> 00:38:24,500
+the management
+
+1577
+00:38:24,500 --> 00:38:24,920
+of the
+
+1578
+00:38:24,920 --> 00:38:25,580
+client, just
+
+1579
+00:38:25,580 --> 00:38:28,860
+to see
+
+1580
+00:38:28,860 --> 00:38:30,220
+how a
+
+1581
+00:38:30,220 --> 00:38:31,620
+car is
+
+1582
+00:38:31,620 --> 00:38:35,840
+actually
+
+1583
+00:38:35,840 --> 00:38:36,520
+performing
+
+1584
+00:38:36,520 --> 00:38:37,460
+used by
+
+1585
+00:38:37,460 --> 00:38:38,620
+a normal
+
+1586
+00:38:38,620 --> 00:38:39,560
+driver, so
+
+1587
+00:38:39,560 --> 00:38:40,680
+a driver that
+
+1588
+00:38:40,680 --> 00:38:41,020
+is not
+
+1589
+00:38:41,020 --> 00:38:42,040
+technician, but
+
+1590
+00:38:42,040 --> 00:38:42,500
+a normal
+
+1591
+00:38:42,500 --> 00:38:43,380
+person having
+
+1592
+00:38:43,380 --> 00:38:44,640
+the car, and
+
+1593
+00:38:44,640 --> 00:38:45,260
+finally, if
+
+1594
+00:38:45,260 --> 00:38:45,880
+everything is
+
+1595
+00:38:45,880 --> 00:38:47,120
+going well, then
+
+1596
+00:38:47,120 --> 00:38:47,780
+we will
+
+1597
+00:38:47,780 --> 00:38:48,860
+arrive to
+
+1598
+00:38:48,860 --> 00:38:50,000
+this phase, which
+
+1599
+00:38:50,000 --> 00:38:50,680
+is the most
+
+1600
+00:38:50,680 --> 00:38:52,500
+important phase, the
+
+1601
+00:38:52,500 --> 00:38:53,260
+one that we
+
+1602
+00:38:53,260 --> 00:38:54,500
+always look at,
+
+1603
+00:38:54,940 --> 00:38:55,920
+which is, in
+
+1604
+00:38:55,920 --> 00:38:56,600
+this case, called
+
+1605
+00:38:56,600 --> 00:38:57,640
+job one.
+
+1606
+00:38:58,060 --> 00:38:59,220
+Job one is
+
+1607
+00:38:59,220 --> 00:39:00,120
+the day when
+
+1608
+00:39:00,120 --> 00:39:00,620
+the production
+
+1609
+00:39:00,620 --> 00:39:01,440
+starts, the
+
+1610
+00:39:01,440 --> 00:39:02,160
+production, in
+
+1611
+00:39:02,160 --> 00:39:02,800
+series, of
+
+1612
+00:39:02,800 --> 00:39:03,200
+the car
+
+1613
+00:39:03,200 --> 00:39:03,820
+starts.
+
+1614
+00:39:03,820 --> 00:39:05,060
+this is a
+
+1615
+00:39:05,060 --> 00:39:05,500
+name that
+
+1616
+00:39:05,500 --> 00:39:06,240
+is used by
+
+1617
+00:39:06,240 --> 00:39:06,700
+a specific
+
+1618
+00:39:06,700 --> 00:39:07,840
+client, there
+
+1619
+00:39:07,840 --> 00:39:08,320
+are other
+
+1620
+00:39:08,320 --> 00:39:09,160
+clients that
+
+1621
+00:39:09,160 --> 00:39:09,960
+call it in a
+
+1622
+00:39:09,960 --> 00:39:10,840
+different way, for
+
+1623
+00:39:10,840 --> 00:39:13,800
+example, simply
+
+1624
+00:39:13,800 --> 00:39:15,340
+SOP, start
+
+1625
+00:39:15,340 --> 00:39:17,700
+of production, or
+
+1626
+00:39:17,700 --> 00:39:19,540
+simply production, or
+
+1627
+00:39:19,540 --> 00:39:20,600
+deliver, final
+
+1628
+00:39:20,600 --> 00:39:21,500
+delivery, whatever,
+
+1629
+00:39:21,720 --> 00:39:22,500
+there are all
+
+1630
+00:39:22,500 --> 00:39:23,320
+kind of names for
+
+1631
+00:39:23,320 --> 00:39:24,400
+this phase, but
+
+1632
+00:39:24,400 --> 00:39:25,180
+what is extremely
+
+1633
+00:39:25,180 --> 00:39:26,020
+important for you
+
+1634
+00:39:26,020 --> 00:39:26,580
+is that you
+
+1635
+00:39:26,580 --> 00:39:27,340
+have always
+
+1636
+00:39:27,340 --> 00:39:28,260
+in mind, where
+
+1637
+00:39:28,260 --> 00:39:28,940
+is this job
+
+1638
+00:39:28,940 --> 00:39:29,520
+one, when
+
+1639
+00:39:29,520 --> 00:39:30,240
+is this job
+
+1640
+00:39:30,240 --> 00:39:31,080
+one, and
+
+1641
+00:39:31,080 --> 00:39:32,240
+when are the
+
+1642
+00:39:32,240 --> 00:39:33,100
+main milestone
+
+1643
+00:39:33,100 --> 00:39:33,540
+of the
+
+1644
+00:39:33,540 --> 00:39:34,380
+project, so
+
+1645
+00:39:34,380 --> 00:39:34,780
+that you
+
+1646
+00:39:34,780 --> 00:39:39,380
+know when
+
+1647
+00:39:39,380 --> 00:39:40,280
+the project is
+
+1648
+00:39:40,280 --> 00:39:40,680
+going to
+
+1649
+00:39:40,680 --> 00:39:41,180
+finish, and
+
+1650
+00:39:41,180 --> 00:39:41,580
+when the
+
+1651
+00:39:41,580 --> 00:39:41,880
+car is
+
+1652
+00:39:41,880 --> 00:39:42,540
+actually sold.
+
+1653
+00:39:42,880 --> 00:39:43,240
+So it
+
+1654
+00:39:43,240 --> 00:39:43,580
+means that
+
+1655
+00:39:43,580 --> 00:39:43,940
+from the
+
+1656
+00:39:43,940 --> 00:39:44,580
+job one
+
+1657
+00:39:44,580 --> 00:39:46,120
+on worth, the
+
+1658
+00:39:46,120 --> 00:39:46,800
+car started
+
+1659
+00:39:46,800 --> 00:39:47,460
+to be produced
+
+1660
+00:39:47,460 --> 00:39:48,080
+and sold
+
+1661
+00:39:48,080 --> 00:39:48,500
+on the
+
+1662
+00:39:48,500 --> 00:39:48,900
+market.
+
+1663
+00:39:56,460 --> 00:39:57,020
+The
+
+1664
+00:39:57,020 --> 00:39:57,580
+suggestion
+
+1665
+00:39:57,580 --> 00:39:58,660
+here, so
+
+1666
+00:39:58,660 --> 00:39:59,560
+is always to
+
+1667
+00:39:59,560 --> 00:39:59,940
+have in
+
+1668
+00:39:59,940 --> 00:40:00,800
+mind big
+
+1669
+00:40:00,800 --> 00:40:01,540
+picture of
+
+1670
+00:40:01,540 --> 00:40:02,140
+the project,
+
+1671
+00:40:02,260 --> 00:40:03,240
+okay, when
+
+1672
+00:40:03,240 --> 00:40:03,620
+you will
+
+1673
+00:40:03,620 --> 00:40:04,520
+start working,
+
+1674
+00:40:04,620 --> 00:40:05,020
+okay, now
+
+1675
+00:40:05,020 --> 00:40:05,700
+it's very
+
+1676
+00:40:05,700 --> 00:40:06,820
+soon, because
+
+1677
+00:40:06,820 --> 00:40:07,180
+you have
+
+1678
+00:40:07,180 --> 00:40:08,160
+just, you
+
+1679
+00:40:08,160 --> 00:40:08,800
+know, probably
+
+1680
+00:40:08,800 --> 00:40:09,320
+the second
+
+1681
+00:40:09,320 --> 00:40:10,300
+day of the
+
+1682
+00:40:10,300 --> 00:40:11,500
+company, when
+
+1683
+00:40:11,500 --> 00:40:11,760
+you are
+
+1684
+00:40:11,760 --> 00:40:12,340
+watching this
+
+1685
+00:40:12,340 --> 00:40:14,980
+video, you
+
+1686
+00:40:14,980 --> 00:40:16,300
+will know, you
+
+1687
+00:40:16,300 --> 00:40:17,600
+will have no
+
+1688
+00:40:17,600 --> 00:40:19,560
+idea of what
+
+1689
+00:40:19,560 --> 00:40:20,060
+you are going
+
+1690
+00:40:20,060 --> 00:40:20,880
+to do in
+
+1691
+00:40:20,880 --> 00:40:21,940
+the activities,
+
+1692
+00:40:22,100 --> 00:40:23,440
+but this is a
+
+1693
+00:40:23,440 --> 00:40:25,020
+suggestion that
+
+1694
+00:40:25,020 --> 00:40:25,960
+I give at
+
+1695
+00:40:25,960 --> 00:40:27,540
+every stage of
+
+1696
+00:40:27,540 --> 00:40:28,540
+the career, one
+
+1697
+00:40:28,540 --> 00:40:29,280
+person, when it
+
+1698
+00:40:29,280 --> 00:40:30,240
+starts, or even
+
+1699
+00:40:30,240 --> 00:40:31,820
+when they're
+
+1700
+00:40:31,820 --> 00:40:32,820
+an expert or
+
+1701
+00:40:32,820 --> 00:40:33,900
+senior profiling
+
+1702
+00:40:33,900 --> 00:40:34,520
+the company,
+
+1703
+00:40:35,140 --> 00:40:36,560
+have always a
+
+1704
+00:40:36,560 --> 00:40:37,940
+big picture of
+
+1705
+00:40:37,940 --> 00:40:38,580
+what is going
+
+1706
+00:40:38,580 --> 00:40:39,280
+on here,
+
+1707
+00:40:39,460 --> 00:40:39,640
+okay.
+
+1708
+00:40:40,440 --> 00:40:41,340
+A work could
+
+1709
+00:40:41,340 --> 00:40:42,100
+become very
+
+1710
+00:40:42,100 --> 00:40:43,140
+abstract, I
+
+1711
+00:40:43,140 --> 00:40:44,080
+mean, during
+
+1712
+00:40:44,080 --> 00:40:45,240
+this validation
+
+1713
+00:40:45,240 --> 00:40:46,120
+training, you
+
+1714
+00:40:46,120 --> 00:40:48,080
+will see a
+
+1715
+00:40:48,080 --> 00:40:49,360
+huge focus on
+
+1716
+00:40:49,360 --> 00:40:50,400
+variables, on
+
+1717
+00:40:50,400 --> 00:40:51,360
+the bit, this
+
+1718
+00:40:51,360 --> 00:40:52,260
+bit goes to
+
+1719
+00:40:52,260 --> 00:40:53,240
+one, this bit
+
+1720
+00:40:53,240 --> 00:40:54,240
+goes to zero,
+
+1721
+00:40:54,240 --> 00:40:55,040
+the variable
+
+1722
+00:40:55,040 --> 00:40:55,700
+goes to
+
+1723
+00:40:55,700 --> 00:40:57,260
+three, this
+
+1724
+00:40:57,260 --> 00:40:58,420
+will go to
+
+1725
+00:40:58,420 --> 00:40:59,540
+50 and
+
+1726
+00:40:59,540 --> 00:41:00,040
+stuff like
+
+1727
+00:41:00,040 --> 00:41:00,680
+so, things
+
+1728
+00:41:00,680 --> 00:41:01,220
+that looks
+
+1729
+00:41:01,220 --> 00:41:03,360
+like abstract
+
+1730
+00:41:03,360 --> 00:41:04,240
+with no
+
+1731
+00:41:04,240 --> 00:41:05,200
+physical meaning,
+
+1732
+00:41:05,380 --> 00:41:05,940
+but this is
+
+1733
+00:41:05,940 --> 00:41:06,600
+actually the
+
+1734
+00:41:06,600 --> 00:41:07,480
+contrary, because
+
+1735
+00:41:07,480 --> 00:41:08,200
+everything you're
+
+1736
+00:41:08,200 --> 00:41:08,760
+going to do
+
+1737
+00:41:08,760 --> 00:41:10,160
+is going to
+
+1738
+00:41:10,160 --> 00:41:10,980
+affect the
+
+1739
+00:41:10,980 --> 00:41:11,960
+volt vehicle, so
+
+1740
+00:41:11,960 --> 00:41:12,600
+always ask
+
+1741
+00:41:12,600 --> 00:41:13,440
+yourself, okay,
+
+1742
+00:41:13,760 --> 00:41:14,260
+what is going
+
+1743
+00:41:14,260 --> 00:41:15,580
+to happen if I
+
+1744
+00:41:15,580 --> 00:41:16,980
+do something on
+
+1745
+00:41:16,980 --> 00:41:17,580
+the software,
+
+1746
+00:41:18,000 --> 00:41:18,460
+what is going
+
+1747
+00:41:18,460 --> 00:41:19,240
+to happen on
+
+1748
+00:41:19,240 --> 00:41:19,940
+the high level
+
+1749
+00:41:19,940 --> 00:41:20,600
+point of view,
+
+1750
+00:41:20,660 --> 00:41:21,840
+because it
+
+1751
+00:41:21,840 --> 00:41:22,780
+will have a
+
+1752
+00:41:22,780 --> 00:41:24,860
+general effect
+
+1753
+00:41:24,860 --> 00:41:26,000
+on a car, and
+
+1754
+00:41:26,000 --> 00:41:27,180
+so will affect
+
+1755
+00:41:27,180 --> 00:41:27,800
+also this
+
+1756
+00:41:27,800 --> 00:41:28,620
+plan, okay.
+
+1757
+00:41:29,620 --> 00:41:30,440
+So, always
+
+1758
+00:41:30,440 --> 00:41:31,080
+looking at the
+
+1759
+00:41:31,080 --> 00:41:31,740
+plan, as you
+
+1760
+00:41:31,740 --> 00:41:32,420
+see here,
+
+1761
+00:41:32,540 --> 00:41:33,300
+here, there
+
+1762
+00:41:33,300 --> 00:41:33,840
+are these
+
+1763
+00:41:33,840 --> 00:41:36,080
+signs, okay,
+
+1764
+00:41:36,460 --> 00:41:37,280
+this is the
+
+1765
+00:41:37,280 --> 00:41:38,120
+symbol of
+
+1766
+00:41:38,120 --> 00:41:38,880
+ice, this is
+
+1767
+00:41:38,880 --> 00:41:39,520
+the symbol of
+
+1768
+00:41:39,520 --> 00:41:40,440
+sun, and
+
+1769
+00:41:40,440 --> 00:41:41,300
+here you have
+
+1770
+00:41:41,300 --> 00:41:41,860
+them again.
+
+1771
+00:41:42,560 --> 00:41:43,400
+These are
+
+1772
+00:41:43,400 --> 00:41:44,340
+symbols of
+
+1773
+00:41:44,340 --> 00:41:44,840
+the winter
+
+1774
+00:41:44,840 --> 00:41:45,760
+tests that are
+
+1775
+00:41:45,760 --> 00:41:46,920
+done on the
+
+1776
+00:41:46,920 --> 00:41:47,760
+snow, and
+
+1777
+00:41:47,760 --> 00:41:48,240
+these are the
+
+1778
+00:41:48,240 --> 00:41:48,880
+summer tests
+
+1779
+00:41:48,880 --> 00:41:49,720
+usually done in
+
+1780
+00:41:49,720 --> 00:41:50,600
+the desert or
+
+1781
+00:41:50,600 --> 00:41:52,360
+extremely hot
+
+1782
+00:41:52,360 --> 00:41:53,180
+countries.
+
+1783
+00:41:54,000 --> 00:41:55,220
+So, having in
+
+1784
+00:41:55,220 --> 00:41:56,240
+mind that this
+
+1785
+00:41:56,240 --> 00:41:56,820
+is going to
+
+1786
+00:41:56,820 --> 00:41:57,700
+happen, so
+
+1787
+00:41:57,700 --> 00:42:01,260
+in this
+
+1788
+00:42:01,260 --> 00:42:02,360
+moment, in
+
+1789
+00:42:02,360 --> 00:42:03,500
+this period of
+
+1790
+00:42:03,500 --> 00:42:04,560
+the year, there
+
+1791
+00:42:04,560 --> 00:42:05,500
+will be winter
+
+1792
+00:42:05,500 --> 00:42:07,160
+tests, I will
+
+1793
+00:42:07,160 --> 00:42:08,420
+make sure that
+
+1794
+00:42:08,420 --> 00:42:10,060
+even though, even
+
+1795
+00:42:10,060 --> 00:42:10,920
+if the software
+
+1796
+00:42:10,920 --> 00:42:12,380
+is not, you
+
+1797
+00:42:12,380 --> 00:42:13,240
+know, we are
+
+1798
+00:42:13,240 --> 00:42:14,680
+still working on
+
+1799
+00:42:14,680 --> 00:42:16,900
+B200 series,
+
+1800
+00:42:17,180 --> 00:42:17,840
+okay, so we are
+
+1801
+00:42:17,840 --> 00:42:18,760
+implementing the
+
+1802
+00:42:18,760 --> 00:42:19,800
+1A requirements,
+
+1803
+00:42:20,300 --> 00:42:21,220
+so we will have
+
+1804
+00:42:21,220 --> 00:42:21,840
+also another
+
+1805
+00:42:21,840 --> 00:42:22,280
+release of
+
+1806
+00:42:22,280 --> 00:42:22,880
+requirements,
+
+1807
+00:42:23,260 --> 00:42:24,000
+there will be a
+
+1808
+00:42:24,000 --> 00:42:24,540
+lot of other
+
+1809
+00:42:24,540 --> 00:42:25,480
+software in the
+
+1810
+00:42:25,480 --> 00:42:26,940
+future, so we
+
+1811
+00:42:26,940 --> 00:42:27,700
+know that the
+
+1812
+00:42:27,700 --> 00:42:28,560
+software is not
+
+1813
+00:42:28,560 --> 00:42:29,660
+still the best
+
+1814
+00:42:29,660 --> 00:42:30,300
+and the perfect
+
+1815
+00:42:30,300 --> 00:42:31,740
+one, but I
+
+1816
+00:42:31,740 --> 00:42:33,460
+will, I know
+
+1817
+00:42:33,460 --> 00:42:34,680
+that these two
+
+1818
+00:42:34,680 --> 00:42:35,940
+weeks, there
+
+1819
+00:42:35,940 --> 00:42:37,220
+will be people
+
+1820
+00:42:37,220 --> 00:42:38,660
+working in a
+
+1821
+00:42:38,660 --> 00:42:39,580
+car on the
+
+1822
+00:42:39,580 --> 00:42:40,940
+snow, so I
+
+1823
+00:42:40,940 --> 00:42:41,640
+will have to
+
+1824
+00:42:41,640 --> 00:42:42,360
+give the
+
+1825
+00:42:42,360 --> 00:42:43,760
+highest priority
+
+1826
+00:42:43,760 --> 00:42:44,440
+to all the
+
+1827
+00:42:44,440 --> 00:42:45,160
+activities that
+
+1828
+00:42:45,160 --> 00:42:46,160
+are related to
+
+1829
+00:42:46,160 --> 00:42:47,460
+the management
+
+1830
+00:42:47,460 --> 00:42:48,200
+of, I don't
+
+1831
+00:42:48,200 --> 00:42:48,640
+know, the
+
+1832
+00:42:48,640 --> 00:42:49,500
+ether of the
+
+1833
+00:42:49,500 --> 00:42:50,160
+battery packs.
+
+1834
+00:42:50,160 --> 00:42:50,640
+the battery
+
+1835
+00:42:50,640 --> 00:42:52,860
+pack will
+
+1836
+00:42:52,860 --> 00:42:53,940
+work in
+
+1837
+00:42:53,940 --> 00:42:55,580
+a specific
+
+1838
+00:42:55,580 --> 00:42:56,620
+temperature range
+
+1839
+00:42:56,620 --> 00:42:57,620
+and they need
+
+1840
+00:42:57,620 --> 00:42:58,520
+to have the
+
+1841
+00:42:58,520 --> 00:42:59,180
+batteries always
+
+1842
+00:42:59,180 --> 00:43:00,080
+working at that
+
+1843
+00:43:00,080 --> 00:43:01,040
+temperature range,
+
+1844
+00:43:01,320 --> 00:43:02,140
+so if the
+
+1845
+00:43:02,140 --> 00:43:03,140
+ether is not
+
+1846
+00:43:03,140 --> 00:43:04,720
+working, either
+
+1847
+00:43:04,720 --> 00:43:05,800
+the battery pack
+
+1848
+00:43:05,800 --> 00:43:06,760
+will stop working
+
+1849
+00:43:06,760 --> 00:43:08,140
+so the electric
+
+1850
+00:43:08,140 --> 00:43:09,220
+vehicle will be,
+
+1851
+00:43:09,320 --> 00:43:10,880
+will stuck, or
+
+1852
+00:43:10,880 --> 00:43:11,440
+even the
+
+1853
+00:43:11,440 --> 00:43:12,620
+air conditioner, I
+
+1854
+00:43:12,620 --> 00:43:13,500
+mean, let's
+
+1855
+00:43:13,500 --> 00:43:14,300
+consider people
+
+1856
+00:43:14,300 --> 00:43:15,380
+working at minus
+
+1857
+00:43:15,380 --> 00:43:15,980
+10 degrees,
+
+1858
+00:43:16,100 --> 00:43:16,600
+probably they
+
+1859
+00:43:16,600 --> 00:43:17,140
+will get
+
+1860
+00:43:17,140 --> 00:43:18,580
+frozen if
+
+1861
+00:43:18,580 --> 00:43:19,160
+they don't
+
+1862
+00:43:19,160 --> 00:43:19,460
+have the
+
+1863
+00:43:19,460 --> 00:43:20,140
+air conditioner
+
+1864
+00:43:20,140 --> 00:43:20,580
+or the
+
+1865
+00:43:20,580 --> 00:43:21,200
+ether working
+
+1866
+00:43:21,200 --> 00:43:22,940
+properly, so
+
+1867
+00:43:22,940 --> 00:43:23,480
+this is
+
+1868
+00:43:23,480 --> 00:43:25,040
+probably the
+
+1869
+00:43:25,040 --> 00:43:26,040
+contents to
+
+1870
+00:43:26,040 --> 00:43:26,920
+verify, to
+
+1871
+00:43:26,920 --> 00:43:29,340
+test, will
+
+1872
+00:43:29,340 --> 00:43:31,240
+be a lot,
+
+1873
+00:43:31,500 --> 00:43:32,200
+so among
+
+1874
+00:43:32,200 --> 00:43:33,380
+all the tests
+
+1875
+00:43:33,380 --> 00:43:33,980
+that you have
+
+1876
+00:43:33,980 --> 00:43:36,340
+to do, having
+
+1877
+00:43:36,340 --> 00:43:37,200
+a big picture
+
+1878
+00:43:37,200 --> 00:43:37,900
+of the project
+
+1879
+00:43:37,900 --> 00:43:38,660
+will help you
+
+1880
+00:43:38,660 --> 00:43:39,280
+to give the
+
+1881
+00:43:39,280 --> 00:43:40,060
+right priority
+
+1882
+00:43:40,060 --> 00:43:40,660
+of the stuff,
+
+1883
+00:43:40,660 --> 00:43:42,600
+and here we
+
+1884
+00:43:42,600 --> 00:43:43,060
+are always
+
+1885
+00:43:43,060 --> 00:43:43,740
+talking about
+
+1886
+00:43:43,740 --> 00:43:44,480
+the VOOCYCLE,
+
+1887
+00:43:44,920 --> 00:43:46,060
+you know, we
+
+1888
+00:43:46,060 --> 00:43:47,060
+have not changed
+
+1889
+00:43:47,060 --> 00:43:47,880
+the topic, because
+
+1890
+00:43:47,880 --> 00:43:48,840
+again, the VOOCYCLE
+
+1891
+00:43:48,840 --> 00:43:49,800
+is something like
+
+1892
+00:43:49,800 --> 00:43:51,320
+this, then we
+
+1893
+00:43:51,320 --> 00:43:51,900
+will have another
+
+1894
+00:43:51,900 --> 00:43:52,840
+requirements here,
+
+1895
+00:43:52,960 --> 00:43:53,400
+so we will
+
+1896
+00:43:53,400 --> 00:43:54,220
+have something like
+
+1897
+00:43:54,220 --> 00:43:55,540
+this, and
+
+1898
+00:43:55,540 --> 00:43:56,440
+arriving to the
+
+1899
+00:43:56,440 --> 00:43:57,480
+move 2, and
+
+1900
+00:43:57,480 --> 00:43:59,680
+so on, okay, so
+
+1901
+00:43:59,680 --> 00:44:01,100
+what I'm trying
+
+1902
+00:44:01,100 --> 00:44:02,200
+to say here is
+
+1903
+00:44:02,200 --> 00:44:03,320
+that this is an
+
+1904
+00:44:03,320 --> 00:44:04,280
+actual plan where
+
+1905
+00:44:04,280 --> 00:44:05,300
+you can actually
+
+1906
+00:44:05,300 --> 00:44:06,800
+apply the
+
+1907
+00:44:06,800 --> 00:44:07,600
+concepts that
+
+1908
+00:44:07,600 --> 00:44:08,780
+you got from
+
+1909
+00:44:08,780 --> 00:44:10,000
+the VOOCYCLE
+
+1910
+00:44:10,000 --> 00:44:10,640
+lesson, okay,
+
+1911
+00:44:10,660 --> 00:44:13,300
+these are the
+
+1912
+00:44:13,300 --> 00:44:14,180
+winter tests, these
+
+1913
+00:44:14,180 --> 00:44:15,860
+are the summer
+
+1914
+00:44:15,860 --> 00:44:16,580
+tests, and then
+
+1915
+00:44:16,580 --> 00:44:17,140
+we will repeat
+
+1916
+00:44:17,140 --> 00:44:18,120
+them once the
+
+1917
+00:44:18,120 --> 00:44:20,480
+everything is
+
+1918
+00:44:20,480 --> 00:44:22,060
+clearer, not
+
+1919
+00:44:22,060 --> 00:44:22,620
+everything is
+
+1920
+00:44:22,620 --> 00:44:23,400
+clearer, but the
+
+1921
+00:44:23,400 --> 00:44:24,320
+software is more
+
+1922
+00:44:24,320 --> 00:44:25,620
+mature, we have
+
+1923
+00:44:25,620 --> 00:44:26,340
+the VOOCYCLE
+
+1924
+00:44:26,340 --> 00:44:27,520
+cars, so it's
+
+1925
+00:44:27,520 --> 00:44:28,040
+much more
+
+1926
+00:44:28,040 --> 00:44:28,780
+meaningful to
+
+1927
+00:44:28,780 --> 00:44:29,880
+perform tests on
+
+1928
+00:44:29,880 --> 00:44:30,460
+these kind of
+
+1929
+00:44:30,460 --> 00:44:31,200
+cars and
+
+1930
+00:44:31,200 --> 00:44:32,320
+softwares, because
+
+1931
+00:44:32,320 --> 00:44:33,260
+the project is
+
+1932
+00:44:33,260 --> 00:44:33,880
+almost at the
+
+1933
+00:44:33,880 --> 00:44:34,420
+end, so it
+
+1934
+00:44:34,420 --> 00:44:34,840
+means that
+
+1935
+00:44:34,840 --> 00:44:36,160
+everything is,
+
+1936
+00:44:36,620 --> 00:44:37,140
+let's say,
+
+1937
+00:44:37,320 --> 00:44:38,780
+almost already
+
+1938
+00:44:38,780 --> 00:44:40,040
+working properly,
+
+1939
+00:44:40,200 --> 00:44:40,420
+okay,
+
+1940
+00:44:40,660 --> 00:44:59,920
+keep looking at
+
+1941
+00:44:59,920 --> 00:45:01,760
+the slide, there
+
+1942
+00:45:01,760 --> 00:45:02,360
+are so many
+
+1943
+00:45:02,360 --> 00:45:03,260
+things that we
+
+1944
+00:45:03,260 --> 00:45:04,820
+could mention,
+
+1945
+00:45:04,820 --> 00:45:07,560
+one of the, so
+
+1946
+00:45:07,560 --> 00:45:08,880
+we have, let's
+
+1947
+00:45:08,880 --> 00:45:11,540
+say, described
+
+1948
+00:45:11,540 --> 00:45:12,500
+this timeline
+
+1949
+00:45:12,500 --> 00:45:14,640
+about cars,
+
+1950
+00:45:16,040 --> 00:45:17,820
+this timeline
+
+1951
+00:45:17,820 --> 00:45:18,600
+related to the
+
+1952
+00:45:18,600 --> 00:45:19,500
+VOOCYCLE that
+
+1953
+00:45:19,500 --> 00:45:19,960
+are called
+
+1954
+00:45:19,960 --> 00:45:20,680
+Quality
+
+1955
+00:45:20,680 --> 00:45:21,700
+Gate, I will
+
+1956
+00:45:21,700 --> 00:45:22,640
+not really go
+
+1957
+00:45:22,640 --> 00:45:23,420
+into details
+
+1958
+00:45:23,420 --> 00:45:24,500
+about it, because
+
+1959
+00:45:24,500 --> 00:45:25,180
+this is, let's
+
+1960
+00:45:25,180 --> 00:45:25,460
+say, an
+
+1961
+00:45:25,460 --> 00:45:26,460
+advanced content,
+
+1962
+00:45:26,460 --> 00:45:27,300
+so we are going
+
+1963
+00:45:27,300 --> 00:45:28,220
+to review this
+
+1964
+00:45:28,220 --> 00:45:29,160
+slide further in
+
+1965
+00:45:29,160 --> 00:45:30,380
+the future, what
+
+1966
+00:45:30,380 --> 00:45:31,000
+is important
+
+1967
+00:45:31,000 --> 00:45:31,900
+here is to
+
+1968
+00:45:31,900 --> 00:45:32,660
+describe the
+
+1969
+00:45:32,660 --> 00:45:33,700
+PCR fleet
+
+1970
+00:45:33,700 --> 00:45:35,100
+thing, okay,
+
+1971
+00:45:35,160 --> 00:45:35,640
+this is the
+
+1972
+00:45:35,640 --> 00:45:36,260
+PCR fleet
+
+1973
+00:45:36,260 --> 00:45:38,380
+timeline, so the
+
+1974
+00:45:38,380 --> 00:45:39,080
+VOOCYCLE that
+
+1975
+00:45:39,080 --> 00:45:39,680
+we mentioned
+
+1976
+00:45:39,680 --> 00:45:40,400
+before, it
+
+1977
+00:45:40,400 --> 00:45:41,080
+applies, as I
+
+1978
+00:45:41,080 --> 00:45:41,700
+was saying, not
+
+1979
+00:45:41,700 --> 00:45:42,640
+just on one
+
+1980
+00:45:42,640 --> 00:45:43,480
+electronic control
+
+1981
+00:45:43,480 --> 00:45:44,260
+unit, but this
+
+1982
+00:45:44,260 --> 00:45:45,300
+process applies to
+
+1983
+00:45:45,300 --> 00:45:46,120
+all the electronic
+
+1984
+00:45:46,120 --> 00:45:48,020
+control units, so
+
+1985
+00:45:48,020 --> 00:45:49,860
+there will be, I
+
+1986
+00:45:49,860 --> 00:45:50,480
+don't know, we
+
+1987
+00:45:50,480 --> 00:45:51,240
+have 50
+
+1988
+00:45:51,240 --> 00:45:52,180
+electronic control
+
+1989
+00:45:52,180 --> 00:45:52,940
+units, we will
+
+1990
+00:45:52,940 --> 00:45:54,560
+have 50 VOOCYCLE
+
+1991
+00:45:54,560 --> 00:45:55,580
+in parallel going
+
+1992
+00:45:55,580 --> 00:45:57,380
+on, but of
+
+1993
+00:45:57,380 --> 00:45:58,100
+course, the car
+
+1994
+00:45:58,100 --> 00:45:58,540
+that we are
+
+1995
+00:45:58,540 --> 00:45:59,300
+working on is
+
+1996
+00:45:59,300 --> 00:46:00,320
+just one, okay,
+
+1997
+00:46:00,400 --> 00:46:01,680
+so the system, we
+
+1998
+00:46:01,680 --> 00:46:02,400
+are actually
+
+1999
+00:46:02,400 --> 00:46:04,060
+debugging and
+
+2000
+00:46:04,060 --> 00:46:04,880
+the system on
+
+2001
+00:46:04,880 --> 00:46:05,360
+which we are
+
+2002
+00:46:05,360 --> 00:46:06,120
+improving the
+
+2003
+00:46:06,120 --> 00:46:06,760
+quality, because
+
+2004
+00:46:06,760 --> 00:46:07,620
+let's move back
+
+2005
+00:46:07,620 --> 00:46:08,700
+here, if you
+
+2006
+00:46:08,700 --> 00:46:09,580
+see the VOOCYCLE,
+
+2007
+00:46:10,040 --> 00:46:11,180
+the left part is
+
+2008
+00:46:11,180 --> 00:46:11,640
+the software
+
+2009
+00:46:11,640 --> 00:46:12,520
+development part,
+
+2010
+00:46:12,900 --> 00:46:13,900
+but then the
+
+2011
+00:46:13,900 --> 00:46:14,940
+right part is the
+
+2012
+00:46:14,940 --> 00:46:15,940
+quality assurance,
+
+2013
+00:46:16,200 --> 00:46:17,060
+and as you see, as
+
+2014
+00:46:17,060 --> 00:46:17,920
+we move on the
+
+2015
+00:46:17,920 --> 00:46:18,940
+right side, we
+
+2016
+00:46:18,940 --> 00:46:19,720
+move from unit
+
+2017
+00:46:19,720 --> 00:46:20,260
+test to the
+
+2018
+00:46:20,260 --> 00:46:20,940
+functional test,
+
+2019
+00:46:21,260 --> 00:46:21,980
+we are basically
+
+2020
+00:46:21,980 --> 00:46:24,060
+improving the
+
+2021
+00:46:24,060 --> 00:46:25,620
+quality of the
+
+2022
+00:46:25,620 --> 00:46:27,140
+system, okay, so
+
+2023
+00:46:27,140 --> 00:46:27,820
+even though we
+
+2024
+00:46:27,820 --> 00:46:29,620
+have 50 small
+
+2025
+00:46:29,620 --> 00:46:32,340
+systems, and 50
+
+2026
+00:46:32,340 --> 00:46:32,860
+teams, for
+
+2027
+00:46:32,860 --> 00:46:33,820
+example, working
+
+2028
+00:46:33,820 --> 00:46:34,900
+on these different
+
+2029
+00:46:34,900 --> 00:46:35,860
+electronic control
+
+2030
+00:46:35,860 --> 00:46:37,220
+units, then there
+
+2031
+00:46:37,220 --> 00:46:38,100
+must be some
+
+2032
+00:46:38,100 --> 00:46:39,080
+common points
+
+2033
+00:46:39,080 --> 00:46:40,360
+where all these
+
+2034
+00:46:40,360 --> 00:46:41,220
+electronic control
+
+2035
+00:46:41,220 --> 00:46:42,020
+units, all this
+
+2036
+00:46:42,020 --> 00:46:43,080
+work come together
+
+2037
+00:46:43,080 --> 00:46:44,220
+and put on the
+
+2038
+00:46:44,220 --> 00:46:45,080
+car, everything
+
+2039
+00:46:45,080 --> 00:46:46,800
+works, this is
+
+2040
+00:46:46,800 --> 00:46:47,940
+actually what a
+
+2041
+00:46:47,940 --> 00:46:50,140
+PCR is, PCR
+
+2042
+00:46:50,140 --> 00:46:51,380
+is basically a
+
+2043
+00:46:51,380 --> 00:46:52,760
+release of a
+
+2044
+00:46:52,760 --> 00:46:53,580
+group of
+
+2045
+00:46:53,580 --> 00:46:55,060
+software that
+
+2046
+00:46:55,060 --> 00:46:55,880
+put all
+
+2047
+00:46:55,880 --> 00:46:57,420
+together on a
+
+2048
+00:46:57,420 --> 00:46:58,440
+car will be
+
+2049
+00:46:58,440 --> 00:46:59,380
+able to
+
+2050
+00:46:59,380 --> 00:47:00,080
+properly
+
+2051
+00:47:00,080 --> 00:47:00,520
+implement
+
+2052
+00:47:00,520 --> 00:47:01,660
+everything that
+
+2053
+00:47:01,660 --> 00:47:02,540
+is listed, in
+
+2054
+00:47:02,540 --> 00:47:03,160
+this case, in
+
+2055
+00:47:03,160 --> 00:47:03,960
+0A
+
+2056
+00:47:03,960 --> 00:47:06,540
+requirements, so
+
+2057
+00:47:06,540 --> 00:47:06,940
+specification,
+
+2058
+00:47:07,660 --> 00:47:08,020
+release.
+
+2059
+00:47:08,340 --> 00:47:09,200
+Once again, you
+
+2060
+00:47:09,200 --> 00:47:09,940
+see the
+
+2061
+00:47:09,940 --> 00:47:10,940
+color that are
+
+2062
+00:47:10,940 --> 00:47:11,800
+similar, okay?
+
+2063
+00:47:12,660 --> 00:47:13,740
+So this means that
+
+2064
+00:47:13,740 --> 00:47:14,860
+1A will implement
+
+2065
+00:47:14,860 --> 00:47:15,640
+everything that is
+
+2066
+00:47:15,640 --> 00:47:16,500
+being described in
+
+2067
+00:47:16,500 --> 00:47:18,820
+0A, the 2A
+
+2068
+00:47:18,820 --> 00:47:19,920
+PCR release will
+
+2069
+00:47:19,920 --> 00:47:20,820
+implement everything
+
+2070
+00:47:20,820 --> 00:47:21,580
+that has been
+
+2071
+00:47:21,580 --> 00:47:23,220
+defined in 1A, and
+
+2072
+00:47:23,220 --> 00:47:23,880
+stuff like this.
+
+2073
+00:47:23,880 --> 00:47:24,940
+of course, we
+
+2074
+00:47:24,940 --> 00:47:26,440
+have only 2A as
+
+2075
+00:47:26,440 --> 00:47:29,200
+a final release of
+
+2076
+00:47:29,200 --> 00:47:30,480
+the requirements, but
+
+2077
+00:47:30,480 --> 00:47:31,300
+we will have more
+
+2078
+00:47:31,300 --> 00:47:33,900
+than one, so more
+
+2079
+00:47:33,900 --> 00:47:35,100
+than the 2A
+
+2080
+00:47:35,100 --> 00:47:36,140
+release, we have
+
+2081
+00:47:36,140 --> 00:47:37,740
+the 3A, 4A, 5A, 6A,
+
+2082
+00:47:37,800 --> 00:47:38,520
+and stuff like this.
+
+2083
+00:47:38,560 --> 00:47:39,740
+We will go deeper
+
+2084
+00:47:39,740 --> 00:47:40,820
+into details about
+
+2085
+00:47:40,820 --> 00:47:41,900
+this slide once we
+
+2086
+00:47:41,900 --> 00:47:42,620
+will get to the
+
+2087
+00:47:42,620 --> 00:47:43,680
+right topic, but
+
+2088
+00:47:43,680 --> 00:47:44,340
+what you have to
+
+2089
+00:47:44,340 --> 00:47:45,580
+know is that once
+
+2090
+00:47:45,580 --> 00:47:46,520
+we put everything on
+
+2091
+00:47:46,520 --> 00:47:47,840
+a car, car is a
+
+2092
+00:47:47,840 --> 00:47:49,620
+very complex system
+
+2093
+00:47:49,620 --> 00:47:50,500
+where there are a
+
+2094
+00:47:50,500 --> 00:47:51,300
+lot, lot of
+
+2095
+00:47:51,300 --> 00:47:52,760
+systems talking to
+
+2096
+00:47:52,760 --> 00:47:53,260
+each other,
+
+2097
+00:47:53,400 --> 00:47:54,560
+collaborating, and
+
+2098
+00:47:54,560 --> 00:47:55,420
+working to make
+
+2099
+00:47:55,420 --> 00:47:56,240
+sure that one
+
+2100
+00:47:56,240 --> 00:47:57,020
+feature works
+
+2101
+00:47:57,020 --> 00:47:57,480
+properly.
+
+2102
+00:47:57,980 --> 00:47:58,680
+Once again, we
+
+2103
+00:47:58,680 --> 00:47:59,080
+can do the
+
+2104
+00:47:59,080 --> 00:47:59,820
+example of the
+
+2105
+00:47:59,820 --> 00:48:00,520
+adaptive cruise
+
+2106
+00:48:00,520 --> 00:48:00,900
+control.
+
+2107
+00:48:01,020 --> 00:48:01,720
+The adaptive cruise
+
+2108
+00:48:01,720 --> 00:48:02,720
+control works
+
+2109
+00:48:02,720 --> 00:48:03,980
+using the work
+
+2110
+00:48:03,980 --> 00:48:05,780
+of many teams
+
+2111
+00:48:05,780 --> 00:48:07,220
+that have worked
+
+2112
+00:48:07,220 --> 00:48:07,920
+on the
+
+2113
+00:48:07,920 --> 00:48:08,880
+powertrain
+
+2114
+00:48:08,880 --> 00:48:09,760
+electronic control
+
+2115
+00:48:09,760 --> 00:48:10,560
+unit, battery
+
+2116
+00:48:10,560 --> 00:48:11,220
+pack control
+
+2117
+00:48:11,220 --> 00:48:12,460
+unit, ADAS
+
+2118
+00:48:12,460 --> 00:48:13,480
+electronic control
+
+2119
+00:48:13,480 --> 00:48:14,400
+unit, all this
+
+2120
+00:48:14,400 --> 00:48:14,680
+stuff.
+
+2121
+00:48:15,160 --> 00:48:16,180
+So when the
+
+2122
+00:48:16,180 --> 00:48:17,840
+1A release of
+
+2123
+00:48:17,840 --> 00:48:19,540
+PCR happens, it
+
+2124
+00:48:19,540 --> 00:48:20,320
+means that all
+
+2125
+00:48:20,320 --> 00:48:21,000
+the suppliers
+
+2126
+00:48:21,000 --> 00:48:22,020
+have to provide
+
+2127
+00:48:22,020 --> 00:48:23,860
+a software that
+
+2128
+00:48:23,860 --> 00:48:25,560
+once put in a
+
+2129
+00:48:25,560 --> 00:48:27,000
+car, is able to
+
+2130
+00:48:27,000 --> 00:48:28,540
+make on a car
+
+2131
+00:48:28,540 --> 00:48:29,500
+this feature
+
+2132
+00:48:29,500 --> 00:48:30,140
+working.
+
+2133
+00:48:30,740 --> 00:48:31,640
+So it means that
+
+2134
+00:48:31,640 --> 00:48:32,360
+the brake has to
+
+2135
+00:48:32,360 --> 00:48:33,280
+properly talk to
+
+2136
+00:48:33,280 --> 00:48:33,860
+the powertrain
+
+2137
+00:48:33,860 --> 00:48:35,920
+electronic control
+
+2138
+00:48:35,920 --> 00:48:36,320
+unit.
+
+2139
+00:48:36,860 --> 00:48:38,400
+They both have to
+
+2140
+00:48:38,400 --> 00:48:39,060
+talk to the
+
+2141
+00:48:39,060 --> 00:48:39,740
+battery pack.
+
+2142
+00:48:39,840 --> 00:48:40,540
+Everything has to
+
+2143
+00:48:40,540 --> 00:48:41,160
+talk with the
+
+2144
+00:48:41,160 --> 00:48:43,360
+ADAS.
+
+2145
+00:48:43,440 --> 00:48:44,260
+ADAS has to
+
+2146
+00:48:44,260 --> 00:48:45,040
+send all the
+
+2147
+00:48:45,040 --> 00:48:46,080
+information in the
+
+2148
+00:48:46,080 --> 00:48:47,120
+right time to the
+
+2149
+00:48:47,120 --> 00:48:47,720
+other electronic
+
+2150
+00:48:47,720 --> 00:48:48,420
+control unit.
+
+2151
+00:48:48,420 --> 00:48:50,040
+So all these
+
+2152
+00:48:50,040 --> 00:48:51,120
+echoes must work
+
+2153
+00:48:51,120 --> 00:48:52,040
+properly together
+
+2154
+00:48:52,040 --> 00:48:53,020
+and all these
+
+2155
+00:48:53,020 --> 00:48:54,000
+echoes must have
+
+2156
+00:48:54,000 --> 00:48:55,540
+specific software
+
+2157
+00:48:55,540 --> 00:48:56,500
+to make this
+
+2158
+00:48:56,500 --> 00:48:57,440
+feature working
+
+2159
+00:48:57,440 --> 00:48:58,180
+properly on a
+
+2160
+00:48:58,180 --> 00:48:58,380
+car.
+
+2161
+00:48:58,740 --> 00:48:58,960
+Okay.
+
+2162
+00:48:59,160 --> 00:49:00,060
+And this happens
+
+2163
+00:49:00,060 --> 00:49:00,640
+every time.
+
+2164
+00:49:00,800 --> 00:49:01,640
+This is 1A, 2A,
+
+2165
+00:49:01,720 --> 00:49:02,880
+3A, 4A, 5A,
+
+2166
+00:49:02,960 --> 00:49:03,320
+6A.
+
+2167
+00:49:03,420 --> 00:49:04,500
+So as we move
+
+2168
+00:49:04,500 --> 00:49:05,360
+on the right
+
+2169
+00:49:05,360 --> 00:49:05,840
+side of the
+
+2170
+00:49:05,840 --> 00:49:06,620
+project, we are
+
+2171
+00:49:06,620 --> 00:49:07,260
+advancing.
+
+2172
+00:49:07,560 --> 00:49:08,360
+We are advancing
+
+2173
+00:49:08,360 --> 00:49:09,380
+on the timeline.
+
+2174
+00:49:10,220 --> 00:49:10,640
+And this means
+
+2175
+00:49:10,640 --> 00:49:11,140
+that everything
+
+2176
+00:49:11,140 --> 00:49:12,420
+will be...
+
+2177
+00:49:12,420 --> 00:49:14,140
+So in 1A,
+
+2178
+00:49:14,140 --> 00:49:15,640
+part of the car
+
+2179
+00:49:15,640 --> 00:49:16,340
+will work,
+
+2180
+00:49:16,600 --> 00:49:18,340
+2A, we have
+
+2181
+00:49:18,340 --> 00:49:19,020
+more contents
+
+2182
+00:49:19,020 --> 00:49:19,520
+working,
+
+2183
+00:49:19,700 --> 00:49:21,780
+3A, the car
+
+2184
+00:49:21,780 --> 00:49:22,520
+works quite
+
+2185
+00:49:22,520 --> 00:49:23,760
+well, 4A, we
+
+2186
+00:49:23,760 --> 00:49:24,360
+have almost
+
+2187
+00:49:24,360 --> 00:49:25,880
+everything we
+
+2188
+00:49:25,880 --> 00:49:26,560
+have just to
+
+2189
+00:49:26,560 --> 00:49:27,600
+tune parameters,
+
+2190
+00:49:28,180 --> 00:49:29,520
+5A is just
+
+2191
+00:49:29,520 --> 00:49:30,440
+looking forward
+
+2192
+00:49:30,440 --> 00:49:31,020
+to the production,
+
+2193
+00:49:31,220 --> 00:49:31,960
+6A is the
+
+2194
+00:49:31,960 --> 00:49:32,600
+final release
+
+2195
+00:49:32,600 --> 00:49:33,220
+where everything
+
+2196
+00:49:33,220 --> 00:49:33,880
+has to work
+
+2197
+00:49:33,880 --> 00:49:35,480
+properly.
+
+2198
+00:49:35,480 --> 00:49:40,300
+final words
+
+2199
+00:49:40,300 --> 00:49:41,420
+about this
+
+2200
+00:49:41,420 --> 00:49:41,900
+slide.
+
+2201
+00:49:42,500 --> 00:49:42,980
+Well, we
+
+2202
+00:49:42,980 --> 00:49:43,800
+can...
+
+2203
+00:49:43,800 --> 00:49:44,200
+We could
+
+2204
+00:49:44,200 --> 00:49:46,120
+keep describing
+
+2205
+00:49:46,120 --> 00:49:46,920
+what are
+
+2206
+00:49:46,920 --> 00:49:48,540
+these, you
+
+2207
+00:49:48,540 --> 00:49:50,740
+know, rectangles
+
+2208
+00:49:50,740 --> 00:49:51,280
+here, the
+
+2209
+00:49:51,280 --> 00:49:52,300
+purple one, the
+
+2210
+00:49:52,300 --> 00:49:53,500
+green one, blue
+
+2211
+00:49:53,500 --> 00:49:54,380
+one, the
+
+2212
+00:49:54,380 --> 00:49:55,120
+orange one.
+
+2213
+00:49:55,560 --> 00:49:55,800
+Okay.
+
+2214
+00:49:55,900 --> 00:49:57,320
+So there are a
+
+2215
+00:49:57,320 --> 00:49:57,840
+lot of things
+
+2216
+00:49:57,840 --> 00:49:58,420
+that we could
+
+2217
+00:49:58,420 --> 00:49:59,300
+mention, but
+
+2218
+00:49:59,300 --> 00:50:02,220
+the general and
+
+2219
+00:50:02,220 --> 00:50:03,420
+final suggestion
+
+2220
+00:50:03,420 --> 00:50:04,100
+that I would
+
+2221
+00:50:04,100 --> 00:50:05,200
+give you, and I
+
+2222
+00:50:05,200 --> 00:50:06,440
+already gave you
+
+2223
+00:50:06,440 --> 00:50:07,600
+before, so it's
+
+2224
+00:50:07,600 --> 00:50:08,400
+just repetition.
+
+2225
+00:50:09,260 --> 00:50:10,120
+Every time you
+
+2226
+00:50:10,120 --> 00:50:10,740
+perform an
+
+2227
+00:50:10,740 --> 00:50:11,840
+activity, please
+
+2228
+00:50:11,840 --> 00:50:13,400
+have in mind the
+
+2229
+00:50:13,400 --> 00:50:14,920
+general idea of
+
+2230
+00:50:14,920 --> 00:50:15,680
+the project, the
+
+2231
+00:50:15,680 --> 00:50:17,100
+general timing of
+
+2232
+00:50:17,100 --> 00:50:17,760
+the project.
+
+2233
+00:50:18,420 --> 00:50:19,280
+These documents,
+
+2234
+00:50:20,000 --> 00:50:22,780
+if you work on
+
+2235
+00:50:22,780 --> 00:50:25,320
+this, on a
+
+2236
+00:50:25,320 --> 00:50:26,060
+specific client,
+
+2237
+00:50:26,240 --> 00:50:27,640
+you will actually
+
+2238
+00:50:27,640 --> 00:50:28,820
+find this kind of
+
+2239
+00:50:28,820 --> 00:50:29,780
+layout, because it's
+
+2240
+00:50:29,780 --> 00:50:30,840
+still used, okay,
+
+2241
+00:50:30,900 --> 00:50:31,780
+for projects of
+
+2242
+00:50:31,780 --> 00:50:33,120
+2023, 2024,
+
+2243
+00:50:33,260 --> 00:50:33,560
+2025.
+
+2244
+00:50:33,780 --> 00:50:34,820
+So you will
+
+2245
+00:50:34,820 --> 00:50:36,640
+see still this
+
+2246
+00:50:36,640 --> 00:50:37,020
+kind of
+
+2247
+00:50:37,020 --> 00:50:37,380
+layout.
+
+2248
+00:50:38,160 --> 00:50:39,480
+But even other
+
+2249
+00:50:39,480 --> 00:50:40,520
+clients, other
+
+2250
+00:50:40,520 --> 00:50:41,220
+care makers,
+
+2251
+00:50:41,460 --> 00:50:43,060
+whoever, there is
+
+2252
+00:50:43,060 --> 00:50:45,140
+always, always a
+
+2253
+00:50:45,140 --> 00:50:46,320
+general plan of
+
+2254
+00:50:46,320 --> 00:50:47,120
+the project we are
+
+2255
+00:50:47,120 --> 00:50:47,800
+working on.
+
+2256
+00:50:48,240 --> 00:50:48,940
+So the
+
+2257
+00:50:48,940 --> 00:50:50,320
+suggestion here is
+
+2258
+00:50:50,320 --> 00:50:51,520
+do not just
+
+2259
+00:50:51,520 --> 00:50:52,880
+focus on your
+
+2260
+00:50:52,880 --> 00:50:54,520
+specific activity,
+
+2261
+00:50:54,940 --> 00:50:56,160
+just looking at
+
+2262
+00:50:56,160 --> 00:50:57,960
+your screen and
+
+2263
+00:50:57,960 --> 00:50:59,160
+thinking only on
+
+2264
+00:50:59,160 --> 00:51:00,060
+your test to be
+
+2265
+00:51:00,060 --> 00:51:01,320
+executed, but
+
+2266
+00:51:01,320 --> 00:51:02,380
+always ask to
+
+2267
+00:51:02,380 --> 00:51:03,200
+you're responsible.
+
+2268
+00:51:03,940 --> 00:51:05,260
+Can I have a
+
+2269
+00:51:05,260 --> 00:51:06,300
+general overview of
+
+2270
+00:51:06,300 --> 00:51:07,400
+the timing of the
+
+2271
+00:51:07,400 --> 00:51:08,400
+project I'm working
+
+2272
+00:51:08,400 --> 00:51:08,660
+on?
+
+2273
+00:51:08,980 --> 00:51:10,120
+I know that these
+
+2274
+00:51:10,120 --> 00:51:11,820
+things looks like
+
+2275
+00:51:11,820 --> 00:51:13,720
+obvious for you
+
+2276
+00:51:13,720 --> 00:51:14,860
+right now, but I'm
+
+2277
+00:51:14,860 --> 00:51:15,660
+sure, and I've seen
+
+2278
+00:51:15,660 --> 00:51:17,120
+so many people going
+
+2279
+00:51:17,120 --> 00:51:17,960
+through this program
+
+2280
+00:51:17,960 --> 00:51:18,660
+and then start
+
+2281
+00:51:18,660 --> 00:51:19,120
+working.
+
+2282
+00:51:19,120 --> 00:51:20,200
+Then once you start
+
+2283
+00:51:20,200 --> 00:51:21,380
+working, you are so
+
+2284
+00:51:21,380 --> 00:51:22,940
+overwhelmed by
+
+2285
+00:51:22,940 --> 00:51:26,800
+technical thing that
+
+2286
+00:51:26,800 --> 00:51:27,640
+you have to learn,
+
+2287
+00:51:27,800 --> 00:51:29,160
+the deadline to meet
+
+2288
+00:51:29,160 --> 00:51:30,140
+and stuff like this
+
+2289
+00:51:30,140 --> 00:51:30,920
+that you will
+
+2290
+00:51:30,920 --> 00:51:32,320
+completely forget to
+
+2291
+00:51:32,320 --> 00:51:33,000
+have a general
+
+2292
+00:51:33,000 --> 00:51:34,120
+perspective of the
+
+2293
+00:51:34,120 --> 00:51:34,500
+project.
+
+2294
+00:51:34,980 --> 00:51:36,060
+But just take your
+
+2295
+00:51:36,060 --> 00:51:37,180
+time and remember
+
+2296
+00:51:37,180 --> 00:51:38,180
+having a general
+
+2297
+00:51:38,180 --> 00:51:39,320
+perspective of the
+
+2298
+00:51:39,320 --> 00:51:40,640
+project will help
+
+2299
+00:51:40,640 --> 00:51:45,060
+you very much to
+
+2300
+00:51:45,060 --> 00:51:47,020
+focus on what is a
+
+2301
+00:51:47,020 --> 00:51:48,260
+real priority in that
+
+2302
+00:51:48,260 --> 00:51:49,260
+period and what is
+
+2303
+00:51:49,260 --> 00:51:50,300
+not, why an
+
+2304
+00:51:50,300 --> 00:51:51,640
+activity has to be
+
+2305
+00:51:51,640 --> 00:51:52,540
+done in one week
+
+2306
+00:51:52,540 --> 00:51:53,340
+and why another
+
+2307
+00:51:53,340 --> 00:51:54,220
+activity has to be
+
+2308
+00:51:54,220 --> 00:51:55,220
+done in three weeks
+
+2309
+00:51:55,220 --> 00:51:56,180
+and stuff like this.
+
+2310
+00:51:56,180 --> 00:51:58,540
+okay, so just to
+
+2311
+00:51:58,540 --> 00:51:59,900
+close with the
+
+2312
+00:51:59,900 --> 00:52:00,860
+proper slide and
+
+2313
+00:52:00,860 --> 00:52:02,500
+not just the screen
+
+2314
+00:52:02,500 --> 00:52:03,420
+that I was doing,
+
+2315
+00:52:03,960 --> 00:52:04,960
+it's very, very
+
+2316
+00:52:04,960 --> 00:52:07,380
+important that we
+
+2317
+00:52:07,380 --> 00:52:09,160
+do not just think
+
+2318
+00:52:09,160 --> 00:52:10,400
+of the cycle as
+
+2319
+00:52:10,400 --> 00:52:14,680
+this draw on a
+
+2320
+00:52:14,680 --> 00:52:15,660
+slide that is,
+
+2321
+00:52:15,820 --> 00:52:16,560
+okay, very easy to
+
+2322
+00:52:16,560 --> 00:52:17,260
+understand, but
+
+2323
+00:52:17,260 --> 00:52:19,080
+extremely far from
+
+2324
+00:52:19,080 --> 00:52:21,400
+the daily life
+
+2325
+00:52:21,400 --> 00:52:22,000
+activities.
+
+2326
+00:52:23,080 --> 00:52:24,740
+This is not true
+
+2327
+00:52:24,740 --> 00:52:25,760
+true at all because
+
+2328
+00:52:25,760 --> 00:52:27,560
+the VOOCYCLE will
+
+2329
+00:52:27,560 --> 00:52:30,020
+also apply on
+
+2330
+00:52:30,020 --> 00:52:32,460
+real case project
+
+2331
+00:52:32,460 --> 00:52:34,880
+card, project plan
+
+2332
+00:52:34,880 --> 00:52:36,260
+here, and you can
+
+2333
+00:52:36,260 --> 00:52:37,340
+see this VOOCYCLE
+
+2334
+00:52:37,340 --> 00:52:38,880
+repeating itself over
+
+2335
+00:52:38,880 --> 00:52:39,740
+and over again
+
+2336
+00:52:39,740 --> 00:52:41,500
+until the project
+
+2337
+00:52:41,500 --> 00:52:43,520
+gets to the final
+
+2338
+00:52:43,520 --> 00:52:44,780
+part, which is the
+
+2339
+00:52:44,780 --> 00:52:45,260
+production.
+
+2340
+00:52:46,120 --> 00:52:46,940
+Please remember
+
+2341
+00:52:46,940 --> 00:52:48,660
+that, okay, that we
+
+2342
+00:52:48,660 --> 00:52:49,640
+are debugging the
+
+2343
+00:52:49,640 --> 00:52:50,620
+software, so we are
+
+2344
+00:52:50,620 --> 00:52:51,620
+making sure that the
+
+2345
+00:52:51,620 --> 00:52:52,480
+software works
+
+2346
+00:52:52,480 --> 00:52:54,560
+properly, but the
+
+2347
+00:52:54,560 --> 00:52:56,480
+final goal is to
+
+2348
+00:52:56,480 --> 00:52:58,760
+sell cars that
+
+2349
+00:52:58,760 --> 00:53:00,540
+behave properly.
+
+2350
+00:53:01,320 --> 00:53:02,420
+Consider always
+
+2351
+00:53:02,420 --> 00:53:03,740
+yourself in a car
+
+2352
+00:53:03,740 --> 00:53:04,780
+and think, okay,
+
+2353
+00:53:04,980 --> 00:53:06,780
+would I like this
+
+2354
+00:53:06,780 --> 00:53:07,500
+behavior of the
+
+2355
+00:53:07,500 --> 00:53:07,720
+car?
+
+2356
+00:53:08,060 --> 00:53:09,000
+Would I like that
+
+2357
+00:53:09,000 --> 00:53:10,120
+while I'm driving on
+
+2358
+00:53:10,120 --> 00:53:11,420
+a highway, something
+
+2359
+00:53:11,420 --> 00:53:12,600
+goes wrong and the
+
+2360
+00:53:12,600 --> 00:53:13,520
+car doesn't realize
+
+2361
+00:53:13,520 --> 00:53:13,960
+anything?
+
+2362
+00:53:14,480 --> 00:53:15,560
+Would I like that I
+
+2363
+00:53:15,560 --> 00:53:16,680
+have to spend like
+
+2364
+00:53:16,680 --> 00:53:20,640
+5,000 hero just to
+
+2365
+00:53:20,640 --> 00:53:21,460
+understand a small
+
+2366
+00:53:21,460 --> 00:53:22,380
+problem that could
+
+2367
+00:53:22,380 --> 00:53:23,380
+have been very clear
+
+2368
+00:53:23,380 --> 00:53:24,480
+if I had done the
+
+2369
+00:53:24,480 --> 00:53:25,840
+proper testing phase?
+
+2370
+00:53:26,260 --> 00:53:27,460
+So ask always these
+
+2371
+00:53:27,460 --> 00:53:28,760
+questions, put yourself
+
+2372
+00:53:28,760 --> 00:53:32,940
+in the car and have
+
+2373
+00:53:32,940 --> 00:53:34,580
+always a big
+
+2374
+00:53:34,580 --> 00:53:38,280
+perspective view on
+
+2375
+00:53:38,280 --> 00:53:39,360
+the activities that
+
+2376
+00:53:39,360 --> 00:53:40,160
+you are doing.
+
+2377
+00:53:40,320 --> 00:53:41,640
+VOOCYCLE is just,
+
+2378
+00:53:41,640 --> 00:53:43,820
+it's not just a V
+
+2379
+00:53:43,820 --> 00:53:45,200
+drawn on a paper,
+
+2380
+00:53:45,700 --> 00:53:47,060
+it's a process that
+
+2381
+00:53:47,060 --> 00:53:49,160
+we actually follow on
+
+2382
+00:53:49,160 --> 00:53:50,260
+a daily basis.
+

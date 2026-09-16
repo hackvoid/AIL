@@ -1,0 +1,1752 @@
+1
+00:00:00,000 --> 00:00:02,640
+because we need to know which is our world
+
+2
+00:00:02,640 --> 00:00:06,020
+and which product we need to work.
+
+3
+00:00:06,960 --> 00:00:07,220
+Okay?
+
+4
+00:00:08,460 --> 00:00:10,440
+In this case, I won't let...
+
+5
+00:00:10,440 --> 00:00:11,980
+I'm very old now, 100%.
+
+6
+00:00:11,980 --> 00:00:13,240
+The other guy is here.
+
+7
+00:00:14,740 --> 00:00:15,280
+Do you hear me?
+
+8
+00:00:15,660 --> 00:00:16,220
+Yeah, yeah, yeah.
+
+9
+00:00:16,280 --> 00:00:19,160
+Now there are three, all of them, so we can start.
+
+10
+00:00:19,920 --> 00:00:20,600
+Okay, perfect.
+
+11
+00:00:22,320 --> 00:00:26,560
+If you hear me better, I talk without microphone.
+
+12
+00:00:26,560 --> 00:00:30,720
+For this lesson, I want to give you a technical lesson
+
+13
+00:00:30,720 --> 00:00:34,360
+about the automotive world, the today's automotive world
+
+14
+00:00:34,360 --> 00:00:37,380
+in the hybrid vehicles and electrical vehicles.
+
+15
+00:00:37,940 --> 00:00:40,160
+Only a good concept.
+
+16
+00:00:40,980 --> 00:00:44,500
+In this lesson, I like so much, and in all of my lessons,
+
+17
+00:00:44,640 --> 00:00:46,940
+I like so much to have questions, doubts,
+
+18
+00:00:47,400 --> 00:00:49,500
+and change of opinion with all of you.
+
+19
+00:00:49,680 --> 00:00:51,820
+And for this, I've become open-ended
+
+20
+00:00:51,820 --> 00:00:54,180
+because I won't see people in charge.
+
+21
+00:00:54,180 --> 00:00:57,600
+I know that in this lesson, we let this lesson
+
+22
+00:00:57,600 --> 00:00:59,480
+for the next academies.
+
+23
+00:00:59,740 --> 00:01:05,460
+But please, don't hesitate to answer questions and markets.
+
+24
+00:01:05,920 --> 00:01:08,860
+Slides are the only support in this lesson.
+
+25
+00:01:09,640 --> 00:01:12,380
+But we talk about automotive world
+
+26
+00:01:12,380 --> 00:01:14,320
+and we talk about technologies
+
+27
+00:01:14,320 --> 00:01:18,340
+because slides are at all times available on the internet.
+
+28
+00:01:18,920 --> 00:01:22,200
+Lesson is needed for understanding well
+
+29
+00:01:22,200 --> 00:01:24,060
+and our basic concepts.
+
+30
+00:01:24,740 --> 00:01:27,620
+About this, the first thing that I want to talk about
+
+31
+00:01:27,620 --> 00:01:29,380
+in this lesson, and we can start.
+
+32
+00:01:29,920 --> 00:01:32,880
+Pasquale, if you want to react, we'll start now.
+
+33
+00:01:35,360 --> 00:01:36,620
+Okay, okay, thanks.
+
+34
+00:01:37,760 --> 00:01:38,080
+Okay.
+
+35
+00:01:38,300 --> 00:01:42,280
+About this lesson, we'll do a panoramic
+
+36
+00:01:42,280 --> 00:01:44,540
+of automotive world starting
+
+37
+00:01:44,540 --> 00:01:47,040
+to talk about hybrid vehicles.
+
+38
+00:01:47,660 --> 00:01:48,200
+Pay attention.
+
+39
+00:01:48,540 --> 00:01:49,960
+For me, hybrid vehicles,
+
+40
+00:01:50,200 --> 00:01:52,740
+I know that exist hybrid vehicles
+
+41
+00:01:52,740 --> 00:01:54,620
+with two types of fuel,
+
+42
+00:01:54,620 --> 00:01:56,040
+but in this lesson,
+
+43
+00:01:56,500 --> 00:01:58,460
+we talk only,
+
+44
+00:01:58,620 --> 00:02:00,800
+only about hybrid vehicles
+
+45
+00:02:00,800 --> 00:02:04,100
+when one of the two old motor engines
+
+46
+00:02:04,100 --> 00:02:05,760
+is an electrical engine,
+
+47
+00:02:06,060 --> 00:02:07,900
+a motor, an electrical motor.
+
+48
+00:02:08,240 --> 00:02:11,000
+In this lesson, we talk only about technologies
+
+49
+00:02:11,000 --> 00:02:14,540
+that are tied with a combination
+
+50
+00:02:14,540 --> 00:02:16,740
+with a fuel combustion
+
+51
+00:02:16,740 --> 00:02:18,660
+plus an electric combustion,
+
+52
+00:02:19,140 --> 00:02:20,880
+or we talk about strategies
+
+53
+00:02:20,880 --> 00:02:22,280
+that are totally electric.
+
+54
+00:02:23,140 --> 00:02:24,660
+First thing that I want to request
+
+55
+00:02:24,660 --> 00:02:25,500
+to all of you,
+
+56
+00:02:26,120 --> 00:02:29,300
+why we need to develop this type of car?
+
+57
+00:02:31,080 --> 00:02:35,020
+Why we need to improve our effort
+
+58
+00:02:35,020 --> 00:02:36,560
+in automotive world,
+
+59
+00:02:36,560 --> 00:02:38,300
+which is the bigger dimension?
+
+60
+00:02:38,300 --> 00:02:40,100
+We need to reduce the emission.
+
+61
+00:02:40,300 --> 00:02:40,740
+The emission.
+
+62
+00:02:40,940 --> 00:02:41,640
+The solution.
+
+63
+00:02:42,900 --> 00:02:43,620
+Perfect.
+
+64
+00:02:43,880 --> 00:02:46,120
+Well, because just think
+
+65
+00:02:46,120 --> 00:02:48,460
+that we are not the moving totally,
+
+66
+00:02:49,000 --> 00:02:50,560
+we are not the impact.
+
+67
+00:02:51,120 --> 00:02:51,820
+To reduce.
+
+68
+00:02:52,180 --> 00:02:53,100
+To reduce the impact.
+
+69
+00:02:53,100 --> 00:02:53,200
+Well.
+
+70
+00:02:54,100 --> 00:02:54,780
+Well.
+
+71
+00:02:55,340 --> 00:02:55,600
+Well.
+
+72
+00:02:56,160 --> 00:02:57,480
+In the air.
+
+73
+00:02:58,160 --> 00:02:58,760
+In cities.
+
+74
+00:02:59,360 --> 00:02:59,820
+In cities.
+
+75
+00:03:00,040 --> 00:03:02,480
+Our big effort today
+
+76
+00:03:02,480 --> 00:03:10,160
+in automotive world is to reduce the emission in the places where the high concentration
+
+77
+00:03:10,160 --> 00:03:16,560
+of people is higher. For this, the strategies that we are following in automotive world today
+
+78
+00:03:16,560 --> 00:03:24,640
+are hybrid vehicles with electrical motors plus totally electric vehicles. Today there is also
+
+79
+00:03:24,640 --> 00:03:31,520
+another good technology that is starting, that is the hydrogen. We talked a little bit in this
+
+80
+00:03:31,520 --> 00:03:42,640
+lesson also with hydrogen. About this, we start about a follow-up of all types of hybrid vehicles.
+
+81
+00:03:42,640 --> 00:03:53,440
+Now, sharing my screen, I see also the slides forever a follow-up and in these slides we talk
+
+82
+00:03:53,440 --> 00:04:01,360
+about different types of strategies. First thing that I won't talk with you,
+
+83
+00:04:02,240 --> 00:04:11,440
+doesn't exist only one type of a hybrid vehicles. Hybrid vehicles are followed in a different way.
+
+84
+00:04:11,440 --> 00:04:18,800
+In this slide, it's more clear that exists conventional engine, it's gasoline or diesel,
+
+85
+00:04:18,800 --> 00:04:27,760
+bigger emission, most well zero electrical power. After this, it's developed an hybrid,
+
+86
+00:04:27,760 --> 00:04:34,800
+and for hybrid we have different technologies that we check after. But we need to imagine that the
+
+87
+00:04:34,800 --> 00:04:42,480
+fish hybrid is an hybrid that uses cinematic energy for the charge of their batteries. For this, we call
+
+88
+00:04:42,480 --> 00:04:52,400
+hybrid, which is hybrid, which is the effort of these, we deduct the mission. But the complexity of the driver is a little bit higher.
+
+89
+00:04:53,600 --> 00:05:03,200
+Second step, plug-in. Why I cannot charge from external point of view the battery? I put the plug-in. Plug-in is only the charging.
+
+90
+00:05:03,920 --> 00:05:11,280
+With this, I have a battery that is bigger than the previous battery, which is the trade-off.
+
+91
+00:05:12,800 --> 00:05:15,920
+Complexity increases, cost increases,
+
+92
+00:05:15,920 --> 00:05:28,640
+and also the emission goes down, but also there is another new problem. Battery, that is increasing.
+
+93
+00:05:28,640 --> 00:05:36,720
+Increasing. About this strategy, in parallel, when we have developed electric vehicles, in parallel,
+
+94
+00:05:36,720 --> 00:05:43,280
+started also the developing of electrical cars, total electrical cars, which is the trade-off for
+
+95
+00:05:43,280 --> 00:05:50,480
+the electric. Electrical cars, of course, have not an engine, a conventional engine. This means good enough
+
+96
+00:05:50,480 --> 00:05:57,760
+for the emission, which is the trade-off. Today, we have two bigger problems with the electrical cars,
+
+97
+00:05:57,760 --> 00:06:06,400
+battery that has more weight, and for this, the cost is higher, and after, the second problem,
+
+98
+00:06:06,400 --> 00:06:14,400
+less range. If we solve these two problems, today we are not talking about other types of technologies,
+
+99
+00:06:14,400 --> 00:06:21,840
+because there is one technology with one technology. Today, the beautiful thing, the really beautiful
+
+100
+00:06:21,840 --> 00:06:30,720
+thing in automotive world is that we are not the global solution. This means that our job is needed,
+
+101
+00:06:30,720 --> 00:06:37,920
+more needed, because there are a lot of technologies that are developing, a lot of interaction, a lot of
+
+102
+00:06:37,920 --> 00:06:45,200
+things that are changing. This means a lot of work for us, and a lot of work also to think the definitive
+
+103
+00:06:45,200 --> 00:06:54,960
+solution. For this, we have a lot of technologies, because we are not the global solution. If you remember,
+
+104
+00:06:54,960 --> 00:07:03,840
+in the previous years, we know that all diesel vehicles are done in only one way, with our common sale
+
+105
+00:07:03,840 --> 00:07:10,320
+and injection. Today, we have not the solution of common sale. We are thinking which is the global
+
+106
+00:07:10,320 --> 00:07:16,800
+solution for automotive world, and we are checking in our technologies, growing the technology factory,
+
+107
+00:07:17,440 --> 00:07:25,840
+and also check that we need to be, and it's a must, it's not nice to have, it's a must, that we need to be
+
+108
+00:07:25,840 --> 00:07:35,920
+green. It's not possible that the automotive world is not green today, because this kills ourselves. This is the aim of
+
+109
+00:07:35,920 --> 00:07:45,200
+automotive world, and this aim needs to be reached as soon as possible. Talking about all strategies, we start,
+
+110
+00:07:45,200 --> 00:07:57,280
+no, I won't start before, with a global point of view of all types of hybrids. This type of hybrid, and here in the picture,
+
+111
+00:07:57,280 --> 00:08:07,360
+there is a 500 hybrid, is the micro hybrid. Micro hybrid, it's a technology that is quite cheaper. Why?
+
+112
+00:08:08,000 --> 00:08:14,800
+Because it's only, do you know which is a smart alternator? The alternator of the car, the first
+
+113
+00:08:14,800 --> 00:08:21,920
+starting of the motor. You need to imagine that the micro hybrid cars are the only cars that have a smart
+
+114
+00:08:21,920 --> 00:08:30,560
+alternator more bigger than the normal one, and there is a battery of 12 volt, only 12 volt, to achieve
+
+115
+00:08:31,200 --> 00:08:38,800
+the first input, because remember all times that the more critical points in the car are when you are
+
+116
+00:08:38,800 --> 00:08:47,200
+starting the motor, because you are not possibly to reach the stoichiometric ratio, and when you have a
+
+117
+00:08:47,200 --> 00:08:55,200
+gear change, a gear shift. These are the two most important points for emission, because are the points
+
+118
+00:08:55,200 --> 00:09:01,760
+that you have a bigger emission possible. Micro hybrid has figured, okay, I have the car in this moment,
+
+119
+00:09:01,760 --> 00:09:08,880
+and then the shifting moment. I put an alternator that is bigger, and they put another battery,
+
+120
+00:09:08,880 --> 00:09:20,720
+another 12 volt battery, that is needed only in the spaces. This car is not, is not able to drive in
+
+121
+00:09:20,720 --> 00:09:27,120
+electric. Totally not capable. It's not possible that a micro hybrid car that goes in electric.
+
+122
+00:09:27,840 --> 00:09:36,080
+It's only 12, because when you start, you don't start with the 400 and after you put the engine on,
+
+123
+00:09:36,080 --> 00:09:45,600
+but you start, you arrive to 1000 rpm. After the 1000 rpm, you put on the engine, the combustion engine.
+
+124
+00:09:45,600 --> 00:09:52,400
+In this way, you have not the problem of not stoichiometric behavior. Okay? And in this way,
+
+125
+00:09:52,400 --> 00:10:01,200
+you have a little bit of reduction of emission. In this phase, and in the changing, because in the
+
+126
+00:10:01,200 --> 00:10:08,720
+changing, you need to imagine that the fpm of the mart engine has a cost field, because it goes down,
+
+127
+00:10:08,720 --> 00:10:15,840
+and after it goes up. If I remain in this phase with the ranging constant, this means that I'm not this,
+
+128
+00:10:15,840 --> 00:10:24,320
+and the motor doesn't have a spike in the, in the calculation of combustion. This way, it's constant,
+
+129
+00:10:24,320 --> 00:10:35,040
+and I less, I don't put, I put less emission. Yeah? After this technology, sorry, there are questions?
+
+130
+00:10:35,040 --> 00:10:41,920
+Yeah, just one question for this micro hybrid. Uh, here it said, like, the alternator is connected to
+
+131
+00:10:41,920 --> 00:10:51,040
+another battery. So the power of alternator is the same, just 12 volts? Like, uh, uh, it said that the
+
+132
+00:10:51,040 --> 00:10:57,920
+electrical motor is connected on a belt slip, but the alternator is the same, yeah? We have one
+
+133
+00:10:57,920 --> 00:11:05,760
+alternator. About this new type of alternator. This means that you remove the classical alternator
+
+134
+00:11:05,760 --> 00:11:11,600
+of your car. Okay. You put a bigger one alternator that is able to reach also high gas speed.
+
+135
+00:11:12,800 --> 00:11:19,360
+Okay. Bigger alternator in which sense? It's more voltage, like 24 or still 12? No, no, no. It
+
+136
+00:11:19,360 --> 00:11:28,480
+remains 12, but it's more, uh, effort and more power to speed up the, uh, uh, the engine. This means
+
+137
+00:11:28,480 --> 00:11:36,560
+that you remain of 12 volts, but it's more robust and you can use this not only for a little time in
+
+138
+00:11:36,560 --> 00:11:45,600
+the starting as the actual alternator, but you can use for a greater time because here's a battery that
+
+139
+00:11:45,600 --> 00:11:52,800
+it's used only for alternator. It's not similar to your battery that it's used also for lighting for
+
+140
+00:11:52,800 --> 00:12:01,440
+the other types. This battery is the totally dedicated only to alternators. Okay. I understand.
+
+141
+00:12:01,440 --> 00:12:09,120
+Thank you. You have a two battery in the car when you have an hybrid car. After this, we talked not
+
+142
+00:12:09,120 --> 00:12:20,560
+about bad vehicles, but we talked, give me one second, about a technology that is called mild hybrid
+
+143
+00:12:20,560 --> 00:12:29,600
+electrical vehicles. Mild hybrid electrical vehicles are vehicles that has an electrical motor,
+
+144
+00:12:29,600 --> 00:12:36,320
+direct electrical motor, in one of the points where the electrical motor can be put, after we explain
+
+145
+00:12:36,320 --> 00:12:43,760
+better, which are the points. But you need to imagine that these cars are mild hybrid, because
+
+146
+00:12:43,760 --> 00:12:57,760
+ARN has a new battery that is a 48 volt battery. And in this type of vehicles, this electrical motor usually
+
+147
+00:12:57,760 --> 00:13:06,160
+is put in or directly in the gear shift. In this way, it helps a lot the gear shift, not only
+
+148
+00:13:06,160 --> 00:13:21,440
+for a little time, only for a little time, to go totally electric. We are talking about one, two, three
+
+149
+00:13:21,440 --> 00:13:32,160
+kilometers maximum, not more. And we're talking for a speed that is usually less speed, 10, 20,
+
+150
+00:13:32,160 --> 00:13:42,160
+15, 15, max, 30 maximum kilometers per hour. Why this? Because the real scope of this car is to help during.
+
+151
+00:13:43,040 --> 00:13:50,160
+How I can help? I can help with an electrical motor that actually is a stronger electrical motor.
+
+152
+00:13:50,160 --> 00:13:56,960
+And this electrical motor, and this electrical motor gives a real support, not only with the smart
+
+153
+00:13:56,960 --> 00:14:05,680
+alternator that we have spoken, but also plus a motor that is internally, the gear shift, for example,
+
+154
+00:14:05,680 --> 00:14:14,160
+that helps in the shifting totally. This means that when I shift, the engine remains to a certain speed,
+
+155
+00:14:14,800 --> 00:14:23,440
+but I can change a lot of gears without any problems. I can change the structure. One of these cards is,
+
+156
+00:14:23,440 --> 00:14:33,040
+in the picture, there is only Q3 mild hybrid, but actually this type of solution is followed by all
+
+157
+00:14:33,040 --> 00:14:41,360
+per makers. For Stellantis side. For Stellantis side, for example, there is Zergid that is not only plug-in,
+
+158
+00:14:41,360 --> 00:14:47,680
+but also mild hybrid. And you can find this solution in market, in the car market,
+
+159
+00:14:48,880 --> 00:15:00,320
+for more companies. This technology has an effort of production that has 48 volt battery,
+
+160
+00:15:00,320 --> 00:15:09,920
+plus, plus, plus an electrical motor, totally. In this way, you need to think that my
+
+161
+00:15:09,920 --> 00:15:19,600
+die grid is more expensive than metal. Of course. It's, of course, more expensive.
+
+162
+00:15:19,600 --> 00:15:29,920
+Now, I want to talk with you about the technology. Think about this technology as the grandmother of all
+
+163
+00:15:31,200 --> 00:15:38,080
+hybrid vehicles today. I want to report all times this date, because it's most important for me this date.
+
+164
+00:15:38,080 --> 00:15:50,400
+In 1997, the first commercial car hybrid was in the market. In 1997, when the automotive world is
+
+165
+00:15:50,400 --> 00:16:00,000
+developing the diesel vehicles in the same years. The first car developed in the hybrid world is by
+
+166
+00:16:00,000 --> 00:16:14,240
+Toyota and is the Toyota Prius, the classical car of the driver. The taxi, sorry.
+
+167
+00:16:15,920 --> 00:16:24,400
+This car has a full hybrid vehicle. This means that there's a bigger battery,
+
+168
+00:16:24,400 --> 00:16:31,520
+battery, more or less, which is how we have the bandwidth of the battery. We need to think that
+
+169
+00:16:31,520 --> 00:16:40,400
+this car is charged by street, by cinematic energy that you follow from the street, and you
+
+170
+00:16:40,400 --> 00:16:47,520
+accumulate internally. This means that it's a similar effect of dynamo. I don't know if you know which
+
+171
+00:16:47,520 --> 00:16:57,760
+is dynamo. It's a sort of energy that you follow from cinematic energy. This means that you are braking.
+
+172
+00:16:57,760 --> 00:17:05,920
+You don't need to brake. You need only to follow the slope, and the car breaks with the electrical
+
+173
+00:17:05,920 --> 00:17:13,680
+motor that goes in opposite way. Because, you know, the electrical motor can work when you put energy,
+
+174
+00:17:13,680 --> 00:17:24,320
+but it can work also if you put an electrical motor and start to rotate. If you start to rotate,
+
+175
+00:17:24,320 --> 00:17:32,560
+you accumulate energy and the opposite. In this way, this is the developing, which is the control. You
+
+176
+00:17:32,560 --> 00:17:41,520
+cannot charge this car from external point of view. This means that you are limited. And which is the
+
+177
+00:17:41,520 --> 00:17:51,280
+other control? You need to think about two important topics when you show which battery you want.
+
+178
+00:17:52,080 --> 00:18:01,440
+First, how many energy I can put in my car during a normal driving cycle in a city. Second, if I put a
+
+179
+00:18:01,440 --> 00:18:09,440
+battery bigger, my weight is bigger. But if the weight is bigger, my battery needs to be stronger.
+
+180
+00:18:10,400 --> 00:18:19,040
+because I finish my energy before. Because more weight I need to drive, more the confirmation
+
+181
+00:18:19,040 --> 00:18:30,080
+I have. The trade-off is this. Usually, the full electric, full hybrid electrical vehicle has a battery package
+
+182
+00:18:30,080 --> 00:18:45,040
+that it's more or less six gigawatt. This type of car can go totally in electric for the 70-20
+
+183
+00:18:45,040 --> 00:18:56,880
+kilometers. Depends from the type of car. But they can reach also all speed that we want. Usually,
+
+184
+00:18:56,880 --> 00:19:02,960
+Toyota has a stronger limitation when he has developed the fixed time of this car. But it's an electronic
+
+185
+00:19:02,960 --> 00:19:10,800
+limitation. Toyota has shown that today the full electric cars can reach only 50 kilometers hour
+
+186
+00:19:11,440 --> 00:19:17,600
+only for the trade-off of the battery. Because if you reach 50 kilometers hours, remember that you
+
+187
+00:19:17,600 --> 00:19:26,880
+discharge the battery less than when you reach a bigger speed. Remember a lot of times that electrical
+
+188
+00:19:26,880 --> 00:19:34,400
+vehicles, usually electrical vehicles, have no problems when the engine vehicles have problems.
+
+189
+00:19:34,400 --> 00:19:44,320
+This means that in the city, it's the good enough environment for the hybrid electric. But highways,
+
+190
+00:19:44,320 --> 00:19:52,000
+it's the nightmare of this car. Because in the highways, you are not possible to charge the battery,
+
+191
+00:19:52,880 --> 00:20:01,280
+usually. Because you don't brake, you don't have strange behaviors, and you have only a weight that is
+
+192
+00:20:01,280 --> 00:20:08,240
+increasing. Because the more rain you have, the more increase your weight, your perception of weight.
+
+193
+00:20:08,240 --> 00:20:17,760
+This means that an electrical vehicle can go better in cities, worse than in highways. For this,
+
+194
+00:20:17,760 --> 00:20:22,720
+it's better to develop electric and driving cars that are good enough in cities.
+
+195
+00:20:24,480 --> 00:20:29,280
+Okay? After this, ah, other most important information,
+
+196
+00:20:30,160 --> 00:20:38,400
+full hybrid vehicles actually are vehicles that are moving from the market. Why?
+
+197
+00:20:39,280 --> 00:20:47,360
+Because this is the substitution. Plugging vehicles. Today, which is the big difference between
+
+198
+00:20:47,360 --> 00:20:56,880
+a full electric vehicle and a plug-in. Only that the plug-in, we can charge, we put it in a wall.
+
+199
+00:20:56,880 --> 00:21:00,320
+Sorry? You can charge it from a wall.
+
+200
+00:21:01,200 --> 00:21:08,960
+Yeah, of course. You have all the functionality of a full hybrid vehicle. Remember all times,
+
+201
+00:21:08,960 --> 00:21:16,560
+and I want all times to remember also to you, that sometimes the car seller,
+
+202
+00:21:17,760 --> 00:21:27,040
+gives for the cell a full hybrid, gives that the full hybrid can be charged by the street.
+
+203
+00:21:27,040 --> 00:21:33,840
+The plug-in can be charged only from the charger. It's not true. The plug-in vehicle can be charged with
+
+204
+00:21:33,840 --> 00:21:42,480
+the street, plus the charger. It's an upgrade, for these are more expensive than full hybrid vehicles.
+
+205
+00:21:42,480 --> 00:21:53,040
+Okay? In this example, I want to report the two fixed Stellantis vehicles that are plug-in hybrid,
+
+206
+00:21:53,040 --> 00:22:00,560
+that are Jeep Compass and Jeep Renegade. In this case, are 4XC vehicles. After we go in detail,
+
+207
+00:22:00,560 --> 00:22:08,560
+but I won't start with the panoramic of all type of vehicles. Another technology that today is
+
+208
+00:22:08,560 --> 00:22:18,160
+developing a lot on hybrid world is the Re-Heave vehicles. Re-Heave is range extended
+
+209
+00:22:18,160 --> 00:22:24,480
+electrical vehicles. It's another type of hybrid, but it's a quite particular type of hybrid, because
+
+210
+00:22:24,480 --> 00:22:30,720
+in the previous phases, we have talked about an hybrid that has two motors that collaborate for
+
+211
+00:22:30,720 --> 00:22:40,560
+driving. In the Re-Heave vehicle, the engine, the internal combustion engine, is only, only for
+
+212
+00:22:40,560 --> 00:22:51,840
+charged battery. It's not a driving scope. Which is the advantage of this? You can use the acting-stone
+
+213
+00:22:53,440 --> 00:23:02,800
+cycle that is more efficient, less power, and you can use a motor in its optimal range.
+
+214
+00:23:02,800 --> 00:23:13,200
+This technology is a total electric car with less battery that is charged with the ICE motor. The first
+
+215
+00:23:13,200 --> 00:23:24,640
+example of this car is a BMW E8. It is a supercar that it's a good enough type of Re-Heave. Actually,
+
+216
+00:23:24,640 --> 00:23:32,640
+another technology that we are developing for the Re-Heave vehicle is the hydrogen. Hydrogen cars,
+
+217
+00:23:33,360 --> 00:23:43,520
+are only electrical cars, where the ICE is changed with a full cell combustion.
+
+218
+00:23:44,160 --> 00:23:52,480
+Full cell is only a part where you put air, you put water, with a reaction, you have an energy.
+
+219
+00:23:53,600 --> 00:23:59,520
+This means that when we talk about hydrogen, only in a case that is Mazda case,
+
+220
+00:23:59,520 --> 00:24:08,960
+in the onloaded cases, we are talking about a Re-Heave vehicle, where the ICE is substituted with a full cell.
+
+221
+00:24:11,120 --> 00:24:14,000
+And for this, the main zero emission.
+
+222
+00:24:14,000 --> 00:24:21,360
+I like a lot of the Re-Heave vehicles because I think that it's the future, but it's my personal opinion.
+
+223
+00:24:22,560 --> 00:24:26,720
+After this, we talk about BEV.
+
+224
+00:24:26,720 --> 00:24:35,440
+BEV is battery-electrical vehicles, not total electric vehicles. In this case,
+
+225
+00:24:36,400 --> 00:24:42,560
+for the technology point of view, the BEV, battery-electrical vehicles,
+
+226
+00:24:42,560 --> 00:24:51,280
+vehicles are simpler and easier than the hybrid vehicles because you have not a lot of interruption.
+
+227
+00:24:51,280 --> 00:24:54,720
+You have an electrical motor, a battery, and stop.
+
+228
+00:24:55,680 --> 00:25:02,960
+Why are they so much expensive? Because the battery has the bigger cost in an electrical vehicle.
+
+229
+00:25:02,960 --> 00:25:08,080
+This means that electrical vehicles today have the trade-off of the battery.
+
+230
+00:25:08,720 --> 00:25:15,280
+If we are able to develop a technology where the battery is not lithium, is not more dangerous, has
+
+231
+00:25:16,240 --> 00:25:23,760
+few advantages that today, maybe today we are not talking about hybrid, in my point of view.
+
+232
+00:25:24,800 --> 00:25:30,160
+But today we talk about hybrid because the battery is a bigger limitation.
+
+233
+00:25:30,720 --> 00:25:39,120
+We cannot find only this solution of battery-electrical vehicles and we cannot find a solution where
+
+234
+00:25:39,680 --> 00:25:47,840
+all cars are electric. Also because just think that today the market is following
+
+235
+00:25:47,840 --> 00:25:54,640
+electrical vehicles also for bigger cars. I'm seeing, for example, for Audi. Audi has
+
+236
+00:25:54,640 --> 00:26:05,280
+developed the e-tron sportback that is a car really bigger and has a car with 120 kilowatt battery.
+
+237
+00:26:05,280 --> 00:26:13,840
+But just think that 120 kilowatt battery for charging a battery of 120 without wallet, because wallet
+
+238
+00:26:13,840 --> 00:26:22,480
+costs a lot for us, you need to lost one and a half day to your home to the car charging.
+
+239
+00:26:22,480 --> 00:26:29,040
+It cannot be possible today to have this type of car for the long range.
+
+240
+00:26:29,760 --> 00:26:38,480
+You can think a solution similar to the Lantz with 500D, in my opinion, my personal opinion,
+
+241
+00:26:38,480 --> 00:26:45,760
+is a car that is really a good car for electric vehicles because it's a city car, good enough,
+
+242
+00:26:45,760 --> 00:26:53,680
+beautiful, beautiful also to see, and it's completely allocated in the world where the electrical
+
+243
+00:26:53,680 --> 00:27:04,160
+cars need to borne. City. You use the 500D only in the city. It's a good behavior, this. Anyway,
+
+244
+00:27:04,880 --> 00:27:11,920
+we are not a car market today. We are a consultant and we are engineering people. We need to think
+
+245
+00:27:12,720 --> 00:27:20,000
+with ourselves, but we need to adapt ourselves to the market. These are my opinion. After this,
+
+246
+00:27:20,000 --> 00:27:29,920
+we start now to talk about this beautiful slide. In this slide, now we go in detail because this slide
+
+247
+00:27:29,920 --> 00:27:38,400
+can be applied with all technologies that we have talked about. You see that here there is a schematic of
+
+248
+00:27:38,400 --> 00:27:46,880
+a car and there are some positions that are called the P plus another. The mental of times that P is
+
+249
+00:27:46,880 --> 00:27:57,200
+position of electrical motor that they expect to. Okay? It's not a plug. It's position of electrical motor.
+
+250
+00:27:57,200 --> 00:28:06,800
+Starting from this, we detail step by step all positions that are in this slide.
+
+251
+00:28:06,800 --> 00:28:16,080
+First position, P0. The position P0 is on the best slip, but not internally of the motor. When we talk
+
+252
+00:28:16,080 --> 00:28:23,360
+with a car that has only, all these motors are not all in the same vehicles, but there are positions,
+
+253
+00:28:23,360 --> 00:28:33,120
+and we show which position we want to use. If we have only P0 and ICE engine, the normal engine,
+
+254
+00:28:33,120 --> 00:28:44,800
+we're talking about a micro hybrid. If we have P1 motor, P1 can be in two different points of the motor.
+
+255
+00:28:45,360 --> 00:28:53,600
+Forward, forward, and it's called the P1F, levels that it's called the P1L that you can see in the slide
+
+256
+00:28:53,600 --> 00:29:03,520
+before. Remember that P1F is on the best slip, but differently to the position P0, it's globally integrated
+
+257
+00:29:03,520 --> 00:29:17,360
+in the in the in the engine. It's near, it's not in a best slip, but in the best slip. The P1L is in the position
+
+258
+00:29:17,360 --> 00:29:27,680
+at the end of the motor before the transmission. After this, these are the position P1F and P1L. The number of
+
+259
+00:29:27,680 --> 00:29:37,760
+times that if we all need to develop a car, usually all the P1F or the P1L for all types of hybrid,
+
+260
+00:29:39,120 --> 00:29:47,360
+not micro but the other hybrid, are the all times followed by one of these two models, or P1F or P1L.
+
+261
+00:29:48,000 --> 00:29:52,960
+It's all times present because P1L, for example, helps a lot during the
+
+262
+00:29:52,960 --> 00:30:03,200
+the strategy of starting to change the shift. And for this, it's a model most important. Also because
+
+263
+00:30:03,200 --> 00:30:10,400
+with the P1L for all the P1L, you are able to follow and to charge the vehicle better because you are
+
+264
+00:30:10,400 --> 00:30:18,240
+strictly near the engine combustion. After this position, we go in the transmission. In transmission,
+
+265
+00:30:18,240 --> 00:30:27,440
+before the transmission, we can have a P2 motor. Remember, P2 motor is a motor that is up at the
+
+266
+00:30:27,440 --> 00:30:35,760
+transmission. It's not internally the gear shift. Okay, this means that if we want, this is the first
+
+267
+00:30:35,760 --> 00:30:46,480
+motor that can drive autonomously the car. Why? You see that there is a black block here. This is
+
+268
+00:30:48,240 --> 00:31:05,600
+a friction. I don't remember the name. A clutch, sorry. There is a clutch that opens the connection
+
+269
+00:31:05,600 --> 00:31:14,880
+between the engine and the wheels. And then you can drive only with the P2. This means that the P2 motor
+
+270
+00:31:14,880 --> 00:31:24,880
+can be used for the full hybrid plug-in hybrid because you are able to go directly, totally in electric.
+
+271
+00:31:24,880 --> 00:31:36,000
+Why? Because you decouple with the clutch the engine. The engine remains with the stoppad and you can work with the P2.
+
+272
+00:31:36,000 --> 00:31:45,040
+other position. Another position, most important, is that it's called the PS in slide.
+
+273
+00:31:46,080 --> 00:31:56,320
+PS is the center. It's internally to the gear shift. In reality, this position is also called the P2.5.
+
+274
+00:31:56,320 --> 00:32:06,400
+P2.5. Why 2.5? Because it's internally to the gear shift. If I see position before the gear 2,
+
+275
+00:32:07,040 --> 00:32:18,320
+after the gear shift 3, means that internally is P2.5. P2.5 is a motor that is not capable with P2.
+
+276
+00:32:18,320 --> 00:32:31,440
+So, P2.5 is an electrical motor that is used with mild hybrid vehicles. Why? Because it's not totally able to go in electric for more time.
+
+277
+00:32:31,440 --> 00:32:39,120
+Why? Because it has not a clutch that decouple the combustion engine with our transmission.
+
+278
+00:32:39,120 --> 00:32:49,840
+This means that when we go with P2.5 in total electric, we need to move also the combustion engine.
+
+279
+00:32:49,840 --> 00:32:59,840
+We don't inject gasoline, but we need to move the motor. And for this, we have a big effort with an electrical motor.
+
+280
+00:32:59,840 --> 00:33:08,560
+This means that it's not going to go in electric. It's going to use his power to help the gear.
+
+281
+00:33:09,840 --> 00:33:19,760
+Usually, a combination more common for the mild hybrid vehicles is P1F plus P2.5.
+
+282
+00:33:21,360 --> 00:33:29,680
+This is a combination of mild hybrid vehicles. Usually, a full hybrid or a plug-in
+
+283
+00:33:29,680 --> 00:33:39,520
+hybrid vehicles. Usually, a P1F plus P2. Usually. Another type of combination, this is the combination
+
+284
+00:33:39,520 --> 00:33:49,600
+that Toyota has chosen, is to use the P3 motor. After we talk about the performance of the vehicles.
+
+285
+00:33:49,600 --> 00:33:58,240
+P3 motor is at the end of the transmission. It's an electrical motor that can run totally in electric.
+
+286
+00:33:58,240 --> 00:34:10,240
+It's a strong electric motor. But his principal scope is to have bigger efficiency, low performance.
+
+287
+00:34:10,240 --> 00:34:21,200
+Usually, Toyota P3 is a car that is developed with P1F, P3. And it is a car that is able to reach
+
+288
+00:34:21,200 --> 00:34:34,320
+an emission of gasoline consumption of 25-26 km per meter. That is good enough. It's really good.
+
+289
+00:34:34,320 --> 00:34:42,880
+But the performance are not bigger than the previous version. Why? Because the P3 put in this position
+
+290
+00:34:42,880 --> 00:34:51,120
+lost a lot of weight during the transportation of the energy. This means that it's a good enough
+
+291
+00:34:51,120 --> 00:35:02,480
+for efficiency, lower performance. P2 has not really good enough efficiency, but has really beautiful performance.
+
+292
+00:35:02,480 --> 00:35:11,360
+It's a good enough performance. Another position that we want to talk about here is the P4 position.
+
+293
+00:35:12,000 --> 00:35:23,040
+P4 position is if you have the ICE motor in forward wheels, you have the P4 in rear wheels, otherwise the matching.
+
+294
+00:35:23,040 --> 00:35:46,720
+all pistol will be combustion engine. This means that this car, in a strange way is at 4 wheels because the engine
+
+295
+00:35:46,720 --> 00:35:56,480
+engine motor upper that has four world wheels before the year you have a four xc four xc usually
+
+296
+00:35:56,480 --> 00:36:04,480
+this is the strategy used to still antes for the uh compass and energy for the
+
+297
+00:36:04,480 --> 00:36:16,720
+uh jeep compass and jeep it's used for the xc okay about this this position before that is really
+
+298
+00:36:16,720 --> 00:36:24,480
+higher efficiency higher performance card lower efficiency because um it's all times a trade-off
+
+299
+00:36:26,480 --> 00:36:33,120
+these are the global position here in these slides they mean to talk only with the position p5
+
+300
+00:36:33,840 --> 00:36:44,400
+when the um the car is totally electric the p5 is the five position is for the highest motor
+
+301
+00:36:44,400 --> 00:36:51,040
+and when we talk about p5 position we're talking about the vehicle in this slide it's not present
+
+302
+00:36:52,240 --> 00:36:58,560
+okay this is a first follow-up are there any doubts about this follow-up
+
+303
+00:36:58,560 --> 00:37:10,960
+okay you need you need to remember that you can develop a card for the high performance
+
+304
+00:37:10,960 --> 00:37:19,360
+or the higher efficiency usually we need to think that the hybrid cars are not cars that are given
+
+305
+00:37:19,360 --> 00:37:29,200
+for the the the gasoline the consummation of gasoline but are born for the remove the consummation of
+
+306
+00:37:29,200 --> 00:37:38,240
+gasoline in cities but with the higher performance the only card that deducted totally the gasoline
+
+307
+00:37:38,240 --> 00:37:45,520
+consumption consumption is when you have the motor in p3 position because p3 position has more
+
+308
+00:37:45,520 --> 00:37:55,680
+efficiency low performance p2 mp4 motors that are used at the fourth plugin hybrid has higher performance
+
+309
+00:37:56,240 --> 00:38:07,760
+but not good enough efficiency after we see also why but this is the overview of the position of the
+
+310
+00:38:07,760 --> 00:38:14,720
+motors is most important because we work on with this when we work with an hybrid vehicle the first most
+
+311
+00:38:14,720 --> 00:38:21,600
+important thing that we need to know which type of configuration is p1 p4 p1 p2 p1 p3
+
+312
+00:38:21,600 --> 00:38:31,120
+depends because this helps a lot our work okay i have one question okay if you think for the battery
+
+313
+00:38:33,120 --> 00:38:43,920
+it's like p1 just p1 depends for this an example a stronger example that it's not deported in slides
+
+314
+00:38:44,560 --> 00:38:55,120
+exists an electric a total electric that is called the ewd that is a fully electric car where there is a
+
+315
+00:38:55,120 --> 00:39:03,200
+full electrical motor one for wheel oh i have this question uh if you have one per wheel but how do they
+
+316
+00:39:03,200 --> 00:39:10,400
+transmit like for example uh in the car it's the right method for the engineers because you need
+
+317
+00:39:10,400 --> 00:39:17,360
+the two uh decouple and they have matching with the software yeah but if you take a normal car
+
+318
+00:39:17,360 --> 00:39:24,400
+actually what uh car does like they have a strong power in the back bridge no problem no no no no no
+
+319
+00:39:25,600 --> 00:39:33,920
+and they uh for example in italy are more common have the forward wheels okay it's more common you are
+
+320
+00:39:33,920 --> 00:39:41,760
+talking about american style the american style is more than that in the real wheels american style and
+
+321
+00:39:41,760 --> 00:39:51,840
+one time bmw currently in italy there is julia that is stronger in the real wheels but it's a chosen
+
+322
+00:39:51,840 --> 00:40:00,880
+because you have a trade-off for real wheels and uh forward wheels usually when we look about an
+
+323
+00:40:00,880 --> 00:40:09,200
+hybrid technology is nice to have the four wheels okay nice to have and uh usually the strategy that
+
+324
+00:40:09,200 --> 00:40:16,240
+we use also when we have a p1 p2 that it's only for world usually the p1 p2 is used to forecast that
+
+325
+00:40:16,240 --> 00:40:24,400
+after there is the differential for the four wheels because it's stronger you have a good technology
+
+326
+00:40:24,400 --> 00:40:37,920
+why don't use this technology better for support okay so uh yeah i just need some clarification uh when
+
+327
+00:40:37,920 --> 00:40:44,320
+you keep the eyes like how it transmits if you have four motors to the four wheels like how it goes
+
+328
+00:40:44,880 --> 00:40:51,600
+you don't have the dice okay when you have four motors from which are electrical motors okay you need
+
+329
+00:40:51,600 --> 00:40:59,440
+to combine how power you want for a single motor with the software okay with the software you do this
+
+330
+00:40:59,440 --> 00:41:07,120
+for this iwd is a technology that is beautiful from technical point of view but it's really difficult to
+
+331
+00:41:07,120 --> 00:41:15,840
+implement usually electrical vehicles takes two or three for example there are electrical vehicles that
+
+332
+00:41:15,840 --> 00:41:28,000
+has two before the one p2 as combination and in this way you drive the car 500d for example has only one
+
+333
+00:41:28,000 --> 00:41:38,560
+electrical motors in the one p2 so uh there are cars that has three there are cars that has two depends
+
+334
+00:41:38,560 --> 00:41:46,240
+from the chosen that you have and which is your scope ah usually remember a lot of times that uh all
+
+335
+00:41:46,240 --> 00:41:52,560
+electrical vehicles and this is also for the hybrid vehicles uh for the decoupling you have a
+
+336
+00:41:52,560 --> 00:42:04,080
+uh total different way to work because electrical vehicles has the maximum torque and for this you
+
+337
+00:42:04,080 --> 00:42:15,520
+have a higher acceleration but lower the maximum speed usually you have this type of period i get
+
+338
+00:42:15,520 --> 00:42:28,080
+acceleration and lower speed okay we can continue and we can continue now after this i won't talk
+
+339
+00:42:28,800 --> 00:42:38,640
+about the strategy that we use here in this i won't explain and i won't talk with you about p1 before
+
+340
+00:42:38,640 --> 00:42:50,560
+and all types of views here in this slide is represented p1f c p1f has only a representation that it's on the
+
+341
+00:42:50,560 --> 00:42:57,840
+back slip you need to remember that p1f it's internal of the model in this slide only for
+
+342
+00:42:57,840 --> 00:43:06,480
+the um student's um student's point of view it's represented externally okay okay but usually it's
+
+343
+00:43:06,480 --> 00:43:18,480
+here it's easier okay i'm sorry yeah this is how prius works toyota prius sorry toyota prius this
+
+344
+00:43:18,480 --> 00:43:27,520
+no no this is um this is a p1 before the toyota prius is a p1 p3 okay okay i won't explain the p1
+
+345
+00:43:27,520 --> 00:43:37,520
+before the p1 p2 because of some um starting point of view are the two bigger examples that we need to
+
+346
+00:43:37,520 --> 00:43:47,040
+follow and they're more complex than p1 p3 okay in this slide side i presented them this is the engine
+
+347
+00:43:47,680 --> 00:43:55,680
+transmission batteries the dual inverter that convert our continuous power with the power that we need
+
+348
+00:43:55,680 --> 00:44:04,880
+them and this is a translation and the p4 motor about this we start we need to drive this type of
+
+349
+00:44:04,880 --> 00:44:12,800
+driving i want to drive this car in total electric ah we're doing this way if i want to drive this car
+
+350
+00:44:12,800 --> 00:44:21,680
+in total electric which are the steps that they need to do this step open clutch if i open the clutch
+
+351
+00:44:21,680 --> 00:44:29,040
+i remove totally the combustion engine and the combustion engine and p1f of some of my driving
+
+352
+00:44:29,760 --> 00:44:37,760
+i have no connection and they drive only with the p4 in this case my car is a zero will drive
+
+353
+00:44:37,760 --> 00:44:49,440
+in fact this is the possibility ending off with the transmission network the co-led totally and i work
+
+354
+00:44:49,440 --> 00:44:59,760
+into full electric this type of driving it's called eb after this i won't talk about serious
+
+355
+00:44:59,760 --> 00:45:12,560
+serious serious serious this means when i'm my car i need to reach the city and i want that my battery
+
+356
+00:45:12,560 --> 00:45:25,920
+doesn't lost uh charge and they can use my card after in the city okay this is a strange way to drive this
+
+357
+00:45:25,920 --> 00:45:32,960
+car because we lost a lot of gaslight in this configuration but it's needed for charge the
+
+358
+00:45:32,960 --> 00:45:45,760
+battery which is our idea we remain the clutch operated we put on our combustion engine we use the p1f
+
+359
+00:45:45,760 --> 00:45:55,760
+for charge the battery we use the p4 for move the car this means that our car has the combustion engine
+
+360
+00:45:55,760 --> 00:46:04,560
+on but the combustion engine doesn't give us the power we have the clutch in neutral but we have
+
+361
+00:46:04,560 --> 00:46:12,960
+the car that is more than electric why serious because if we drag and drop the flux of the energy
+
+362
+00:46:12,960 --> 00:46:21,600
+we start from engine combustion we go in the battery we go outside the battery and we put the energy on
+
+363
+00:46:21,600 --> 00:46:33,680
+before it's a serious because the flux from the battery enter and exit clear in this case we are we're
+
+364
+00:46:33,680 --> 00:46:42,320
+sure that we are losing a lot of energy because it's not the correct way to work if you think it's similar
+
+365
+00:46:42,320 --> 00:46:51,280
+to our zib vehicle as technology range extended but differently to the vehicle this type of card is
+
+366
+00:46:51,280 --> 00:46:59,520
+not born to be zib this means that the combustion engine is all times which is the shows that we do in
+
+367
+00:46:59,520 --> 00:47:08,720
+hybrid vehicles so few less power in the combustion engine this means that usually we have cars that
+
+368
+00:47:09,360 --> 00:47:20,640
+has a weight of two tons with that model that it's a combustion engine of 1.3 1.5 maximum for this in this
+
+369
+00:47:20,640 --> 00:47:31,280
+configuration we are saving the battery but we are losing a lot of gasoline it's used only when you need to
+
+370
+00:47:31,280 --> 00:47:39,360
+go in a city you are sure that you need electrical car and for this you charge the battery because you cannot
+
+371
+00:47:39,360 --> 00:47:51,760
+go to plug okay you have not time to plug it's a shoes now we talk about parallel for p1 p4 parallel means
+
+372
+00:47:51,760 --> 00:47:58,640
+that we are in the transmission we close all and we have the thermal engine that works with the
+
+373
+00:47:59,200 --> 00:48:06,400
+forward wells before that works with the rear wells in this case the flux of the energy is a parallel
+
+374
+00:48:06,400 --> 00:48:14,480
+because the energy of the battery is done to p1f in this direction and to p4 in this reaction there are
+
+375
+00:48:14,480 --> 00:48:20,560
+two flux that exit to the battery for charge and there are two flux that will charge the battery
+
+376
+00:48:21,920 --> 00:48:29,440
+this means that is a parallel or parallel because if i represent the battery here the flux of energy
+
+377
+00:48:29,440 --> 00:48:36,960
+does in this way and goes in this way and goes in this way for the charger to posit in serious we do this
+
+378
+00:48:39,920 --> 00:48:46,640
+okay in this case this is the parallel for p1 p4 technology
+
+379
+00:48:48,480 --> 00:48:55,280
+when i talk about parallel for the p1 p4 i'm talking about normal driving of the car
+
+380
+00:48:56,080 --> 00:49:03,920
+because this is the normal i use the two motor and in this way i've also the must the most efficient
+
+381
+00:49:03,920 --> 00:49:12,640
+performance i've also this is a performance card in this way why because you have the two all motors
+
+382
+00:49:12,640 --> 00:49:19,120
+on the car that are working and also tracking in the same place and you can charge when you can
+
+383
+00:49:19,120 --> 00:49:25,280
+charge this means when you have energy that you need to operate from the street when you break etc
+
+384
+00:49:26,800 --> 00:49:38,080
+after this we talk about t1p2 and we see how change series and parallel if you remember i given you
+
+385
+00:49:38,080 --> 00:49:49,920
+what you want to see ah here sometimes you can find in graphic the um sigla called bsg that is p1f
+
+386
+00:49:50,560 --> 00:50:02,800
+why bsg built slip generator it's the same thing that we call this p1f in this case our configuration is
+
+387
+00:50:02,800 --> 00:50:15,200
+the p1f p2 and the battery it's here now first thinking absolute we check when this card goes in
+
+388
+00:50:15,200 --> 00:50:24,960
+parallel and which is our effect and when this card goes in uh cds to check that i think it could be
+
+389
+00:50:24,960 --> 00:50:36,000
+in the urban area it should go to uh series for any uh out of the city it should go in parallel
+
+390
+00:50:36,000 --> 00:50:43,200
+now we check now we check we check what you which is the strategy because we have talked about
+
+391
+00:50:43,200 --> 00:50:48,800
+cd stem parallel for the p1 before now we talked about the cd stem parallel for a p1 p2
+
+392
+00:50:48,800 --> 00:50:57,920
+and a quite different concept because this is the battery we have given the feedback that p1
+
+393
+00:50:57,920 --> 00:51:04,960
+series is when the energy starts from the battery and goes to the card and after they turn back to
+
+394
+00:51:04,960 --> 00:51:16,240
+the battery if we see here if i start from the battery i go here i use the bsg the bsg goes to the
+
+395
+00:51:16,240 --> 00:51:24,400
+motor the motor the motor the motor is coupled the clutch is closed goes to electrical motor electrical
+
+396
+00:51:24,400 --> 00:51:35,440
+motor gives energy to the card the energy that is in plus goes to the battery in this case think this
+
+397
+00:51:35,440 --> 00:51:51,280
+concept serious is when i use ice plus p2 is the the opposite of before before when i use cds i use
+
+398
+00:51:51,280 --> 00:51:59,600
+only p4 in this case if i talk about cds i'm talking about an energy that starts from the battery goes in
+
+399
+00:51:59,600 --> 00:52:10,640
+p1f goes in an ice the ice is close at the clutch in this way use the p2 and after gives energy to the
+
+400
+00:52:10,640 --> 00:52:22,080
+wheels in this case p1 p2 cds means when you use all two motors parallel is when you use electrical motor
+
+401
+00:52:22,080 --> 00:52:30,720
+here and bsg here and bsg here this means that you have the clutch open head but if you have the clutch
+
+402
+00:52:30,720 --> 00:52:42,160
+open head you are using your engine motor the ice for a generator for generate battery for this this
+
+403
+00:52:42,160 --> 00:52:49,440
+means that when you talk about parallel for a p1 p2 you are talking about a technology that is
+
+404
+00:52:49,440 --> 00:53:00,240
+so i'm using only p2 for the drive the car the concept for p1 p2 is totally different to the concept
+
+405
+00:53:00,240 --> 00:53:11,520
+of p1 before clear dubs uh generally uh what is the application of these i mean uh i'm talking about
+
+406
+00:53:11,520 --> 00:53:23,200
+this the old car no no normal car we're talking for all for normal cars all the technology that i've
+
+407
+00:53:23,200 --> 00:53:31,280
+spoken in these lights are the normal cars after also formula one for example has strategy that are
+
+408
+00:53:31,280 --> 00:53:41,360
+similar p1 before etc okay but these are normal cars okay now what is this uh repeat the p1 p2 parallel
+
+409
+00:53:42,400 --> 00:53:48,400
+the one picture parallel when you are in parallel when from the battery you have two flux that goes
+
+410
+00:53:48,400 --> 00:53:56,480
+one to bsg and one from uh electrical motor the p1 or p2 okay in this case you need to open the k0
+
+411
+00:53:57,360 --> 00:54:05,760
+if you open the k0 you cannot use engine ice if you don't use dice this means that the dice or is
+
+412
+00:54:05,760 --> 00:54:14,800
+a generator or is stopped this means that your car is using only p2 for drive it's the opposite way of the
+
+413
+00:54:14,800 --> 00:54:26,400
+uh before here there is another detail at the slide to this network topology it's an argument that i think
+
+414
+00:54:26,400 --> 00:54:32,400
+that we can put okay that's all from my side
+
+415
+00:54:32,400 --> 00:54:45,600
+is there any questions dubs uh from our side no thank you very much it was understood okay a lot of
+
+416
+00:54:45,600 --> 00:54:54,480
+questions guys i won't be clear you can contact me without any problems uh this lesson is a theoretical
+
+417
+00:54:54,480 --> 00:55:04,160
+lesson only forgive ah okay we work on this this is our world today this is the automotive world i
+
+418
+00:55:04,160 --> 00:55:13,040
+want also that you start to see videos information on internet because these technologies and these
+
+419
+00:55:13,040 --> 00:55:24,720
+slides are right growth in 2021 today for me there are a lot of information plus why because the world
+
+420
+00:55:24,720 --> 00:55:32,800
+is changing in this direction we are changing we are growing in this direction okay is it okay yes
+
+421
+00:55:32,800 --> 00:55:43,360
+for the uh i hope that we have also next lessons with me i don't know but if we have uh next lessons my
+
+422
+00:55:43,360 --> 00:55:48,720
+type of uh i think and uh you can stop the neck if you want
+
+423
+00:55:52,560 --> 00:56:01,040
+okay okay i will stop it okay thank you uh for all types of lessons that i do i like a lot uh interact
+
+424
+00:56:01,040 --> 00:56:01,760
+because
+
+425
+00:56:01,760 --> 00:56:05,680
+because
+
+426
+00:56:13,680 --> 00:56:13,760
+because
+
+427
+00:56:13,760 --> 00:56:13,840
+you
+
+428
+00:56:13,840 --> 00:56:15,840
+because
+
+429
+00:56:15,840 --> 00:56:16,020
+you
+
+430
+00:56:16,020 --> 00:56:16,100
+you
+
+431
+00:56:16,100 --> 00:56:22,040
+you
+
+432
+00:56:22,040 --> 00:56:22,220
+you
+
+433
+00:56:22,220 --> 00:56:24,140
+you
+
+434
+00:56:24,140 --> 00:56:26,200
+you
+
+435
+00:56:26,200 --> 00:56:26,280
+you
+
+436
+00:56:26,280 --> 00:56:26,600
+you
+
+437
+00:56:26,600 --> 00:56:27,020
+you
+
+438
+00:56:27,020 --> 00:56:28,220
+you
+

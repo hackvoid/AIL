@@ -1,0 +1,86 @@
+In this session we will see how the electric motors are used in the automotive field.
+We will see particular configuration and examples of car.
+Just a reminder to the classification of hybrid vehicle, we can have
+Milled hybrid electric vehicle, also known as MHEV.
+The vehicle is driven by a combustion engine powered by a compact electric motor.
+It can have the electric motor in different positions.
+Full hybrid electric vehicle, also known as FHEV.
+It has both combustion and electric engines.
+At low speed and short distances, a fully electric propulsion is possible.
+The engine hybrid electric vehicle, also known as PHEV.
+It reaches higher speeds and longer distances, unlike full hybrid.
+They can only be charged from external points and can have a larger battery pack than the FHEV.
+Because the size is not limited to the stored kinetic energy.
+On the right of this slide, you can see all the position of the engines in an hybrid vehicle's architecture.
+Hybrid vehicles uses an internal combustion engine and at least one electric motor.
+In hybrid electric vehicles, we can find many abbreviations as P0, P1, P2, P3, P4 and P5.
+Each abbreviation depends on the position of the electric motor in the hybrid powertrain.
+In some way, the number identifies the distance between the electric motor and the wheels, which decreases from P0 to P5.
+In the P0 configuration, the electric motor can be mounted in place of the alternator and then connected to the engine with a belt.
+These are belt driven starter generators, which also act as a starter motor and generator.
+In the P1 configuration, the electric motor is inserted on the motor shaft.
+It runs at the same speed as the crankshaft and requires some more modifications.
+In this slide, we can see an example of P0 configuration in Audi system.
+This car is the Audi A8 48 voltage M HEP.
+We can see a DC DC converter to pass from 12 to 48 voltages.
+We can see a 12 voltage battery and the 48 volt battery.
+The battery is needed for the integrated BSG, a motor in P0 configuration right here.
+And this is the internal combustion engine.
+In P2 configuration, the electric motor is placed between the engine and the transmission, directly on the shaft or through a gearbox.
+The engine insertion system implies a clutch that disconnects the internal combustion engine.
+So it is possible to drive in full electric by the opening of the clutch.
+We can have two configurations to put the P2 motor.
+We can have the integrated electric motor configuration or the side electric motor configuration.
+In this slide, we can see an example of P2 configuration in Porsche Panamera system.
+We can see the internal combustion engine, the electric motor in P2 configuration, the ZF transmission and the battery pack in the posterior part of the car.
+Here we can see the P2.5 configuration.
+This configuration is possible only with dual clutch transmission.
+The electric motor is placed inside the transmission on one of the two concentric transmission shafts.
+So that one shaft is completely driven by the internal combustion engine while the other one is driven also by electric machine.
+Electric creeping or drive is possible by moving just even gear shafts, but also combined combustion and electric power mode is possible.
+In P3 configuration, this configuration moves the engine downstream of the gearbox.
+In this way, losses are minimized since the electric motor only drives the final part of transmission.
+In the P4 configuration, the electric motor acts exclusively on the axis not connected to the internal combustion engine.
+In this way, it's possible to have an all-wheel drive without mechanical connection with the thermal engine.
+Even the pure electric mode is easily obtainable by disconnecting the main transmission.
+In this slide, we can see an example of P4 configuration in Toyota Prius system.
+We can find the internal combustion engine, the battery pack, one induction electric motor and the inverter.
+In this slide, we can find the P5 configuration.
+For hybrid and full electric vehicle, there is the Cronimus P5, which indicates the motors in the wheels, a solution that eliminates the distance.
+This configuration, unlike P0, P1, P2, P3 and P4, has a still limited application in production cars.
+P2 to P4 configuration, as I said, have the electric motors placed after the clutch, connected to the driveline side, and that can improve overall electrical performances.
+Another electric motor, a P1, can be added to the engine side, enlarging hybrid strategies in terms of load shift, torque assist, regeneration, etc.
+On the other hand, complexity and costs increase exponentially due to the addiction of another motor that should work together all the other components.
+This configuration essentially combines both benefits and disadvantages of P1, P2 and P4.
+Battery electric vehicle, also known as BEV.
+The power train of an electric vehicle powered by battery is the simplest one among all vehicles.
+It must include an onboard battery charger, OBC, and there are several solutions for its configuration.
+Here we can see a fuel cell electric vehicle, also known as FCEV.
+The electrical power train is the same as for the BEV.
+The difference comes from the energy source that in this case is the fuel cell.
+We can see in the picture the system used by Toyota Mirai.
+In this slide you can find the pros and cons of the P0 configuration.
+In this slide you can find a list of pros and cons of P1 configuration.
+In this slide you can find a list of pros and cons of the P2 configuration and P5 configuration.
+In this slide we can find the pros and cons of induction motor.
+The advantages of induction motor we have railability.
+Induction motors are robust and railable with low maintenance requirements, making them a good choice for applications that require long life.
+We have low cost because induction motors are widely available and relatively inexpensive compared to other types of electric motors.
+Like efficiency at low to medium speeds.
+The disadvantages we have efficiency because induction motors are less efficient than PMSM motors due to the need for separate excitation sources and the losses associated with them.
+We have torque speed curves present, an induction high speed region which begins at the motor critical speed beyond which if the motor is operated at maximum current the motor will stall.
+Tesla made a significant change to its electric motor strategy with the introduction of the Model 3, switching from an AC induction motor to a permanent magnet motor.
+Here we can find the pros and cons about PMSM motor.
+In pros we can find the high power to weight ratio which makes them a good choice for applications where weight is a concern.
+BLDC is better than PMSM.
+We have high efficiency because PM motors have high efficiency because of their design which use permanent magnet to produce a magnetic field and eliminate the need for a separate excitation source.
+In this PMSM is better than BLDC.
+Responsiveness because PM motors are highly responsive allowing precise control of speed and torque making them well suited for applications that require precise control.
+In the cons we have high costs due to permanent magnet and the need for complex control electronics.
+This makes them less accessible for some applications.
+We can find a list of pros and cons of SWOXSetrack-reluctance model.
+All of these slices of theCK sensitize
+In the next four slides you can find a list of advantages and disadvantages of different
+types of hybrid vehicles.
+For more information visit www.fema.org
+For more information visit www.fema.org

@@ -1,0 +1,2436 @@
+1
+00:00:00,000 --> 00:00:14,000
+Ok, let's start from the beginning, so when the ACUs were wired to all the sensors and
+
+2
+00:00:14,000 --> 00:00:20,000
+actuators and motors in the vehicle in order to provide functions.
+
+3
+00:00:20,000 --> 00:00:32,000
+Each sensor and actuator were connected and wired to an ACU will have more weight and
+
+4
+00:00:32,000 --> 00:00:39,000
+costs for the vehicle, so there was the necessity to wire together also the ACUs to minimize
+
+5
+00:00:39,000 --> 00:00:45,000
+the number of wires needed in a vehicle.
+
+6
+00:00:45,000 --> 00:00:53,000
+So, the ACUs started to send and receive data via network.
+
+7
+00:00:53,000 --> 00:01:00,000
+The need for a robust and stable communication protocol raises because in modern vehicles
+
+8
+00:01:00,000 --> 00:01:08,000
+there is the need to connect a large number of ACUs to each other and there is the necessity
+
+9
+00:01:08,000 --> 00:01:14,000
+to connect also ACUs that are safety relevant for the driver.
+
+10
+00:01:14,000 --> 00:01:19,000
+So, no information loss should happen during this communication.
+
+11
+00:01:19,000 --> 00:01:28,000
+For example, the braking ACUs could not detect wheels that are spinning, that are slipping
+
+12
+00:01:28,000 --> 00:01:35,000
+and signal it to the ACUs that can, to the engine control units that can temporarily reduce
+
+13
+00:01:35,000 --> 00:01:36,000
+the torque output.
+
+14
+00:01:36,000 --> 00:01:43,000
+This is relevant information for the safety of the drivers, so we must be sure that this
+
+15
+00:01:43,000 --> 00:01:49,000
+information shared via network is not corrupted in any way.
+
+16
+00:01:49,000 --> 00:01:56,000
+So, just one point, I am recording this lesson.
+
+17
+00:01:56,000 --> 00:01:58,000
+Are there any problems for you?
+
+18
+00:01:58,000 --> 00:02:02,000
+I didn't tell you at the beginning, sorry.
+
+19
+00:02:02,000 --> 00:02:03,000
+No problem.
+
+20
+00:02:03,000 --> 00:02:04,000
+Okay.
+
+21
+00:02:04,000 --> 00:02:09,000
+So, we are recording.
+
+22
+00:02:09,000 --> 00:02:10,000
+Okay.
+
+23
+00:02:10,000 --> 00:02:19,000
+So, networks and network protocols allow the ECU to share information quickly with the reduced
+
+24
+00:02:19,000 --> 00:02:23,000
+risk of undetected errors.
+
+25
+00:02:23,000 --> 00:02:33,000
+Of course, this communication network must be robust in terms also of EMC immunity, electromagnetic
+
+26
+00:02:33,000 --> 00:02:34,000
+disturbed immunity.
+
+27
+00:02:34,000 --> 00:02:43,000
+For example, the ignition system used for the combustion engines can create a lot of interference,
+
+28
+00:02:43,000 --> 00:02:54,000
+and so we need to design special vehicle technologies, and the use of a digital communication bus means
+
+29
+00:02:54,000 --> 00:03:01,000
+that this interference can be detected and corrected automatically.
+
+30
+00:03:01,000 --> 00:03:12,000
+The network used between ECU and the vehicle EE systems are based on serial digital communication.
+
+31
+00:03:12,000 --> 00:03:21,000
+So, to meet all those needs, CAN network was developed, and it is the most used one in the automotive field.
+
+32
+00:03:21,000 --> 00:03:34,000
+We will also see that the LIM network, the second type of network we will face today, is, let me say, a more economic alternative to the CAN.
+
+33
+00:03:34,000 --> 00:03:35,000
+Okay.
+
+34
+00:03:35,000 --> 00:03:39,000
+Let's go deep into the CAN network.
+
+35
+00:03:39,000 --> 00:03:48,000
+CAN, C-A-N, is an autonomous, used for controller area network, also known as CAN bus.
+
+36
+00:03:48,000 --> 00:03:53,000
+It is a serial standard bus, mainly used in the automotive field.
+
+37
+00:03:53,000 --> 00:04:07,000
+The CAN communication protocol is a multicast type, used to connect different electronic ECU, electronic control unit, that from now we will call ACU, in the vehicle.
+
+38
+00:04:07,000 --> 00:04:20,000
+The CAN has been especially designed to operate without any problems, even in an electromagnetically disturbed environment, as the vehicle can be used to the interconnection of a lot of ACU sensors,
+
+39
+00:04:20,000 --> 00:04:26,000
+actuators, antennas, because it uses a balanced differential potential line.
+
+40
+00:04:26,000 --> 00:04:36,000
+So, uh, and EMC noise immunity can be also, um, increased by using a twisted layer of cables.
+
+41
+00:04:36,000 --> 00:04:37,000
+I don't think so.
+
+42
+00:04:37,000 --> 00:04:38,000
+I don't think so.
+
+43
+00:04:38,000 --> 00:04:39,000
+I don't think so.
+
+44
+00:04:39,000 --> 00:04:40,000
+I don't think so.
+
+45
+00:04:40,000 --> 00:04:41,000
+Sorry.
+
+46
+00:04:41,000 --> 00:04:42,000
+Can you hear me?
+
+47
+00:04:42,000 --> 00:04:47,000
+Am I going too fast?
+
+48
+00:04:47,000 --> 00:04:49,000
+There are audio problems.
+
+49
+00:04:49,000 --> 00:04:50,000
+No, it's okay.
+
+50
+00:04:50,000 --> 00:04:51,000
+It's okay?
+
+51
+00:04:51,000 --> 00:04:59,000
+Yes, but I think sometimes there is an internal connection problem.
+
+52
+00:04:59,000 --> 00:05:00,000
+Oh.
+
+53
+00:05:00,000 --> 00:05:06,000
+With my internet connection, let me check.
+
+54
+00:05:06,000 --> 00:05:07,000
+Okay.
+
+55
+00:05:07,000 --> 00:05:22,000
+Please interrupt me in any moment if I'm going too fast or if something is missing or something is not clear, okay?
+
+56
+00:05:22,000 --> 00:05:23,000
+Okay.
+
+57
+00:05:23,000 --> 00:05:41,000
+So, um, the, the, um, the operating voltage level of the CAN bus, okay, let's check the, the first slide, no, the, the main features of the CAN protocol.
+
+58
+00:05:41,000 --> 00:05:42,000
+Okay.
+
+59
+00:05:42,000 --> 00:05:49,000
+The first one we need to consider is the multicast communication, multi-master access to the bus.
+
+60
+00:05:49,000 --> 00:05:53,000
+That means that on the CAN network there are, there is no master and slave protocol.
+
+61
+00:05:53,000 --> 00:06:01,000
+All the ACU can communicate, uh, whatever they want on the network and all the ACU can read information shared on the bus.
+
+62
+00:06:01,000 --> 00:06:08,000
+And all the ACU are able to communicate in the same, uh, at the same time, in the same moment, okay?
+
+63
+00:06:08,000 --> 00:06:15,000
+And the second main feature we need to, uh, consider of the CAN network is the error detection, uh, strategy.
+
+64
+00:06:15,000 --> 00:06:22,000
+Uh, we will see in the next slide that the CAN has a robust, uh, error management strategy.
+
+65
+00:06:22,000 --> 00:06:36,000
+Uh, and it means that the, the protocol is able to identify if an ACU has a communication problem and, uh, is able to exclude from the bus the ACU that has the communication problem
+
+66
+00:06:36,000 --> 00:06:41,000
+in order to not affect the status of all the CAN bus.
+
+67
+00:06:41,000 --> 00:06:46,000
+Okay.
+
+68
+00:06:46,000 --> 00:06:56,000
+The interface between the CAN network, uh, the, and the ACU, the, the, the, the, the, the bus and the ACU connected on the bus,
+
+69
+00:06:56,000 --> 00:07:05,000
+uh, is typically, uh, a, a special type of amplifier called the transceiver, that, uh, that means transmitter and receiver.
+
+70
+00:07:05,000 --> 00:07:09,000
+The CAN network is composed by, sorry, two wires, okay?
+
+71
+00:07:09,000 --> 00:07:19,000
+As we say at the beginning, we have a two wire with differential voltage, uh, on the bus, and all the ACU are connected in parallel on this bus.
+
+72
+00:07:19,000 --> 00:07:24,000
+So, we have the ACU connected via transceiver to the bus.
+
+73
+00:07:24,000 --> 00:07:33,000
+The transceiver, the CAN transceiver, uh, converts the electrical representation of a bit in the one used by the controller.
+
+74
+00:07:33,000 --> 00:07:36,000
+So, to the one defined for the bus.
+
+75
+00:07:36,000 --> 00:07:44,000
+We will see it in detail, the physical, uh, layer of the CAN in detail in the next slide.
+
+76
+00:07:44,000 --> 00:07:57,000
+It also, the, the transceiver must also provide a, a, a, a sufficient output current to drive the bus electrical state when the ACU wants to transmit on the network.
+
+77
+00:07:57,000 --> 00:08:07,000
+So, the ACU that wants to transmit on the CAN network will force the voltage level on the bus, uh, and, uh, with the, via transceiver.
+
+78
+00:08:07,000 --> 00:08:24,000
+And, in receiver mode, as a receiver, the transceiver provides the recessive signal level, and it, it, it is also used to protect the chip, the, the internal chip of the ACU, uh, against excessive voltage on the bus line.
+
+79
+00:08:24,000 --> 00:08:36,000
+Okay, and this is also able to, um, identify electrical level on the lines, uh, such as breakage or short circuit and so on.
+
+80
+00:08:36,000 --> 00:08:49,000
+Let's see now how the data, uh, transfer process works when we say we have a multi-master bus where all the ACU can, can write and read information.
+
+81
+00:08:49,000 --> 00:08:52,000
+Okay, we have the two-wire bus.
+
+82
+00:08:52,000 --> 00:08:57,000
+We will call from now the CANH and CANL.
+
+83
+00:08:57,000 --> 00:09:03,000
+H is the, the line to high potential, L is low, so CANH and CANL.
+
+84
+00:09:03,000 --> 00:09:06,000
+And we have all the ACU connected in parallel.
+
+85
+00:09:06,000 --> 00:09:08,000
+In this example, we only have three ACU.
+
+86
+00:09:08,000 --> 00:09:09,000
+Okay?
+
+87
+00:09:09,000 --> 00:09:12,000
+Let's see how the transfer data works.
+
+88
+00:09:12,000 --> 00:09:21,000
+The CANNode1, uh, the ACU can also be called node, or nodes of the network.
+
+89
+00:09:21,000 --> 00:09:24,000
+The ACU number one provide data.
+
+90
+00:09:24,000 --> 00:09:26,000
+What does it mean provide data?
+
+91
+00:09:26,000 --> 00:09:30,000
+Maybe the ACU number one has, uh, let me do a practical example.
+
+92
+00:09:30,000 --> 00:09:31,000
+Okay?
+
+93
+00:09:31,000 --> 00:09:38,000
+The ACU number one is connected with an, uh, uh, as an external temperature sensor connected.
+
+94
+00:09:38,000 --> 00:09:39,000
+Okay?
+
+95
+00:09:39,000 --> 00:09:46,000
+So, the ACU number one is able to read the data of the external temperature from this sensor.
+
+96
+00:09:46,000 --> 00:09:49,000
+But all the other ACU are not able to, to read this data.
+
+97
+00:09:49,000 --> 00:09:58,000
+So, ACU number one will share it on the CAN network in order, uh, so that all the other ACU can read this data.
+
+98
+00:09:58,000 --> 00:10:06,000
+Because the external temperature data, for example, is, uh, useful also for the other ACU functionality.
+
+99
+00:10:06,000 --> 00:10:16,000
+Um, for example, the climate control unit, in order to perform automatic climate functionalities, needs to know the external temperature.
+
+100
+00:10:16,000 --> 00:10:21,000
+But maybe the climate control unit has no external temperature sensor connected.
+
+101
+00:10:21,000 --> 00:10:29,000
+So, you have to image that an ACU, uh, is connected to sensors, actuators, and also with a network.
+
+102
+00:10:29,000 --> 00:10:34,000
+So, the ACU number one has some data that we want to share on the bus.
+
+103
+00:10:34,000 --> 00:10:39,000
+Because those data can be useful also for the other ACU's functionalities.
+
+104
+00:10:39,000 --> 00:10:45,000
+So, the ACU number one provides data, and then we send this data on the bus.
+
+105
+00:10:45,000 --> 00:10:48,000
+The ACU number two receives the data.
+
+106
+00:10:48,000 --> 00:10:51,000
+So, reads those data on the bus.
+
+107
+00:10:51,000 --> 00:10:53,000
+We'll check the data.
+
+108
+00:10:53,000 --> 00:10:56,000
+We will see later, uh, in detail this check.
+
+109
+00:10:56,000 --> 00:11:01,000
+But, uh, mainly the check is, that the ACU number two will perform is,
+
+110
+00:11:01,000 --> 00:11:05,000
+is this data useful for my functionalities?
+
+111
+00:11:05,000 --> 00:11:08,000
+If yes, then we'll accept the data.
+
+112
+00:11:08,000 --> 00:11:12,000
+If not, as ACU number three, we'll ignore the data.
+
+113
+00:11:12,000 --> 00:11:17,000
+So, this is the meaning of multi-master, of broadcast communication.
+
+114
+00:11:17,000 --> 00:11:23,000
+All the ACU will share some data on the campus, and the other ACU, if those data are useful,
+
+115
+00:11:23,000 --> 00:11:29,000
+we'll read it, and, uh, we'll consider those data, or we'll ignore the data.
+
+116
+00:11:29,000 --> 00:11:32,000
+We'll ignore the message that the first ACU is sending.
+
+117
+00:11:32,000 --> 00:11:33,000
+Okay?
+
+118
+00:11:33,000 --> 00:11:45,000
+Oh, here you can find, um, a recap of the main, the most used, uh, bit rate, so speed of the network,
+
+119
+00:11:45,000 --> 00:11:49,000
+uh, related to the bus length.
+
+120
+00:11:49,000 --> 00:11:58,000
+Of course, we have a relationship between the transmission speed, so the propagation delay of the signal, uh, and the bus length.
+
+121
+00:11:58,000 --> 00:12:03,000
+So, in this table, you can see the mainly used bus length with the corresponded bit time.
+
+122
+00:12:03,000 --> 00:12:04,000
+Okay?
+
+123
+00:12:04,000 --> 00:12:12,000
+The most common used one are 250 kilobits per second, and 500 kilobits per second.
+
+124
+00:12:12,000 --> 00:12:13,000
+Okay?
+
+125
+00:12:13,000 --> 00:12:16,000
+But that's only, uh, an example.
+
+126
+00:12:16,000 --> 00:12:23,000
+Okay, let's see the, how, uh, physically is composed, is, is, uh, is made the cam network.
+
+127
+00:12:23,000 --> 00:12:30,000
+Let's, for now, let's just ignore the low speed network, the second picture, you can see in this slide.
+
+128
+00:12:30,000 --> 00:12:35,000
+Also, because the low speed cam network are no longer used in the automotive field.
+
+129
+00:12:35,000 --> 00:12:39,000
+So, we will have a focus on the high speed network.
+
+130
+00:12:39,000 --> 00:12:44,000
+As you can see, we have a two-wire bus, all the ACU connected in parallel.
+
+131
+00:12:44,000 --> 00:12:49,000
+Here, in this schematic, you can see TX and RX.
+
+132
+00:12:49,000 --> 00:12:55,000
+Those two amplifiers compose the transceiver that we, as we said before.
+
+133
+00:12:55,000 --> 00:13:04,000
+So, the interface between the physical network and the ACU is this transceiver in transmitter and receiver mode
+
+134
+00:13:04,000 --> 00:13:12,000
+that can convert the electrical signals on the bus into a logical signal used by the ACU.
+
+135
+00:13:12,000 --> 00:13:17,000
+Because we need to know that we have a physical transmission on the network.
+
+136
+00:13:17,000 --> 00:13:23,000
+If we connect an oscilloscope on the, okay, network, we will only see voltage drops.
+
+137
+00:13:23,000 --> 00:13:24,000
+Okay?
+
+138
+00:13:24,000 --> 00:13:32,000
+We will see the differential voltage of these two wires that change, uh, based on the message on the ACU that are transmitting.
+
+139
+00:13:32,000 --> 00:13:39,000
+But the ACU, the controller, doesn't use electrical signals to communicate.
+
+140
+00:13:39,000 --> 00:13:44,000
+The ACU will use logical representation of these electrical signals.
+
+141
+00:13:44,000 --> 00:13:46,000
+So, this is the main feature of the transceiver.
+
+142
+00:13:46,000 --> 00:13:50,000
+The transceiver will translate the electrical signals into logical one.
+
+143
+00:13:50,000 --> 00:13:53,000
+Later, we will see the details also on this.
+
+144
+00:13:53,000 --> 00:13:57,000
+So, we have the two wires, the ACU connected in parallel.
+
+145
+00:13:57,000 --> 00:14:06,000
+And then we have also two termination resistors of 120 ohms at both the ends of the network.
+
+146
+00:14:06,000 --> 00:14:12,000
+Oh, I'm moving the mouse around the scale.
+
+147
+00:14:12,000 --> 00:14:13,000
+Okay.
+
+148
+00:14:13,000 --> 00:14:17,000
+Here you can see 120 ohms termination resistors.
+
+149
+00:14:17,000 --> 00:14:18,000
+Okay?
+
+150
+00:14:18,000 --> 00:14:31,000
+If we check the resistance of the can at the end of the line or in any points of the can line, we will read the parallel of those two resistors.
+
+151
+00:14:31,000 --> 00:14:33,000
+So, 60 ohms.
+
+152
+00:14:33,000 --> 00:14:34,000
+What does it mean?
+
+153
+00:14:34,000 --> 00:14:48,000
+If I read the resistance on any point of the can line, I will read 60 ohms if the can network is correctly terminated, is correctly closed.
+
+154
+00:14:48,000 --> 00:14:56,000
+If I will read 120 ohms, means that one of the two resistors is missing and the can is open.
+
+155
+00:14:56,000 --> 00:14:59,000
+We will say the can is open.
+
+156
+00:14:59,000 --> 00:15:07,000
+The function of those two resistors is to avoid signals reflection on the bus line.
+
+157
+00:15:07,000 --> 00:15:20,000
+Because, as we said before, the can line can be a very long communication bus that can interconnect also ACU that are on the opposite side of the vehicle.
+
+158
+00:15:20,000 --> 00:15:31,000
+So, we need to avoid signal reflections on this line and this is why we terminate, we close the can network on two 120 ohms resistors.
+
+159
+00:15:31,000 --> 00:15:39,000
+Of course, the 120 ohms value is a value that is described in the standard.
+
+160
+00:15:39,000 --> 00:15:44,000
+The can protocol, of course, is compliant to this standard.
+
+161
+00:15:44,000 --> 00:15:45,000
+Okay?
+
+162
+00:15:45,000 --> 00:15:59,000
+So, electrically we have the ACU connected in parallel on the two line can bus and two ACU and two resistors of 120 ohms at both the ends of the can network.
+
+163
+00:15:59,000 --> 00:16:10,000
+Okay, this is what I was saying before regarding the logical and physical encoding of the can signals.
+
+164
+00:16:10,000 --> 00:16:23,000
+Of course, as we said, the ACU will read and will communicate with the logical states.
+
+165
+00:16:23,000 --> 00:16:29,000
+So, zero and one logical states are identified for the ACU communication.
+
+166
+00:16:29,000 --> 00:16:39,000
+In the can protocol, we will say that the zero is the dominant and the one bit is the recessive state.
+
+167
+00:16:39,000 --> 00:16:40,000
+Okay?
+
+168
+00:16:40,000 --> 00:16:47,000
+Here you can see we have the differential voltage between can H and can low.
+
+169
+00:16:47,000 --> 00:16:54,000
+We say that the can network works with the differential voltage, so the difference between can H and can L.
+
+170
+00:16:54,000 --> 00:16:58,000
+So, one thing that I didn't say before.
+
+171
+00:16:58,000 --> 00:17:11,000
+Of course, why is the can network that is robust in terms of electromagnetically disturbed environment, EMC noise?
+
+172
+00:17:11,000 --> 00:17:14,000
+Why as in EMC noise immunity?
+
+173
+00:17:14,000 --> 00:17:16,000
+Because it uses a differential voltage.
+
+174
+00:17:16,000 --> 00:17:29,000
+So, if we have a disturbance on the lines, on the two lines, of course, this disturbance will be removed, will be cancelled by the difference of the voltage between can H and can L.
+
+175
+00:17:29,000 --> 00:17:43,000
+Okay, so, we can have the bus voltage set to recessive if the differential voltage is inside those thresholds or dominant if it is in those thresholds.
+
+176
+00:17:43,000 --> 00:17:45,000
+Here you can see the voltage values.
+
+177
+00:17:45,000 --> 00:17:57,000
+What is important is that when an ACU forces on the bus a low voltage, we will have a representation of a logical one.
+
+178
+00:17:57,000 --> 00:18:05,000
+If we have a high voltage difference, then we will have the dominant, the zero logical state.
+
+179
+00:18:05,000 --> 00:18:10,000
+This is how physically the communication works.
+
+180
+00:18:10,000 --> 00:18:24,000
+The ACU will force a certain voltage level on the bus, a certain differential voltage level on the bus, and the transceiver will translate it into a sequence of logical zero and one.
+
+181
+00:18:24,000 --> 00:18:32,000
+So, logical zero is the dominant state, we will call it dominant, and one is the recessive state.
+
+182
+00:18:32,000 --> 00:18:36,000
+This is how physically works the can communication.
+
+183
+00:18:36,000 --> 00:18:45,000
+But today we will have a focus, not on the can physical layer, let me say, but on the can protocol, on the communication.
+
+184
+00:18:45,000 --> 00:18:49,000
+And so, what does an ACU share on the network?
+
+185
+00:18:49,000 --> 00:18:55,000
+An ACU will communicate and share on the network some data packets that we will call messages.
+
+186
+00:18:55,000 --> 00:18:56,000
+Okay?
+
+187
+00:18:56,000 --> 00:18:59,000
+So, the ACU sends messages on the network.
+
+188
+00:18:59,000 --> 00:19:05,000
+We have four different types of frames, of course, according to the content.
+
+189
+00:19:05,000 --> 00:19:15,000
+The one on which we will have a focus today are the data frames, that are the frames that contain the data.
+
+190
+00:19:15,000 --> 00:19:16,000
+Okay?
+
+191
+00:19:16,000 --> 00:19:24,000
+So, the data that we say that the ACU wants to share on the network will be contained in the data frame.
+
+192
+00:19:28,000 --> 00:19:32,000
+Then we can have remote frame, error frame, and overload frames.
+
+193
+00:19:32,000 --> 00:19:36,000
+Remote frames, not mostly used in the automotive field.
+
+194
+00:19:36,000 --> 00:19:43,000
+The error frame, we will have a focus later on the error management and so on the error frames, are error messages.
+
+195
+00:19:43,000 --> 00:19:49,000
+Are special frames transmitted only when there is a communication fault on the bus.
+
+196
+00:19:49,000 --> 00:20:02,000
+Then we have overload frames that are frames used to require an additional time delay in the transmission when the bus is overloaded.
+
+197
+00:20:02,000 --> 00:20:09,000
+As we said before, the CAN network is a multi-master and broadcast bus, digital bus.
+
+198
+00:20:09,000 --> 00:20:14,000
+So, all the ACU can communicate at the same time.
+
+199
+00:20:14,000 --> 00:20:21,000
+But, of course, we have some constraints, some design constraints on the CAN network.
+
+200
+00:20:21,000 --> 00:20:35,000
+On the CAN network, the protocol says that the CAN network must be designed in order to operate with a maximum bus load of 13-14%.
+
+201
+00:20:35,000 --> 00:20:41,000
+So, how the ACU are able to communicate all together, all in the same time.
+
+202
+00:20:41,000 --> 00:20:54,000
+Because we design the CAN network in order to have not the 100% of the bus load full, but we will have only a part of the bus load.
+
+203
+00:20:54,000 --> 00:21:05,000
+The overload frames are used when we have a bus overload, and so the transmission is not guaranteed.
+
+204
+00:21:05,000 --> 00:21:06,000
+Ok.
+
+205
+00:21:06,000 --> 00:21:17,000
+Let's see the data frames that are the most used and the most important ones, and are the ones that you will, of course, see during your life.
+
+206
+00:21:17,000 --> 00:21:24,000
+This is the data frame structure. We have a start and an end of frames.
+
+207
+00:21:24,000 --> 00:21:36,000
+That are only some delimiters, let me say, of the messages, and are identifiers for the other issues in order to understand where a message starts and when it ends.
+
+208
+00:21:36,000 --> 00:21:45,000
+Those are mainly some standard patterns of bits that identify the start and the end of the message.
+
+209
+00:21:45,000 --> 00:21:54,000
+Then we have the message identifier, the control field, the data field, the CRC field, and the acknowledge field, the hack field.
+
+210
+00:21:54,000 --> 00:21:59,000
+Let's see it in detail.
+
+211
+00:21:59,000 --> 00:22:11,000
+The data frame identifier, the first field, contains the message identifier that can be, for the protocol, 11 or 29 bits.
+
+212
+00:22:11,000 --> 00:22:16,000
+We have two types of identifier formats, the standard one and the extended one.
+
+213
+00:22:16,000 --> 00:22:21,000
+Why to choose one or the other? No particular reason.
+
+214
+00:22:21,000 --> 00:22:26,000
+It is a user option, let me say, to choose the standard or the extended one.
+
+215
+00:22:26,000 --> 00:22:36,000
+Of course, if we use the standard format of identifier, we have to know that on the same can network we cannot have two messages with the same identifier.
+
+216
+00:22:36,000 --> 00:22:40,000
+The identifier, let me say, is the name of the message.
+
+217
+00:22:40,000 --> 00:22:49,000
+The field that is used from the other ACU in order to understand if this message is useful or not.
+
+218
+00:22:49,000 --> 00:22:54,000
+If the ACU that is receiving this message must read this message or not.
+
+219
+00:22:54,000 --> 00:22:55,000
+Ok?
+
+220
+00:22:55,000 --> 00:23:08,000
+So, 11 bits standard identifier means that we have two raised to 11 possibilities, possible messages, different messages identifiers on the network.
+
+221
+00:23:08,000 --> 00:23:16,000
+29 bits identifier means we have two raised to 29 possible identifiers to choose on the network.
+
+222
+00:23:16,000 --> 00:23:20,000
+So, this is the only criteria.
+
+223
+00:23:20,000 --> 00:23:23,000
+So, in the first field we will have the message identifier.
+
+224
+00:23:23,000 --> 00:23:27,000
+The field that identifies the name of the message.
+
+225
+00:23:27,000 --> 00:23:32,000
+We will understand it deeply later when we will see the network specification.
+
+226
+00:23:32,000 --> 00:23:41,000
+Then we have the data field that can be from 1 to 8 bytes long.
+
+227
+00:23:41,000 --> 00:23:44,000
+So, up to 64 bits.
+
+228
+00:23:44,000 --> 00:23:49,000
+The data field is the field that contains the information.
+
+229
+00:23:49,000 --> 00:23:50,000
+Ok?
+
+230
+00:23:50,000 --> 00:23:53,000
+So, in this field the ACU will share the information.
+
+231
+00:23:53,000 --> 00:23:56,000
+The external temperature, the vehicle speed and so on.
+
+232
+00:23:56,000 --> 00:24:07,000
+Then we have the control, the CRC and the ACK knowledge field that are three fields used for the data consistency control.
+
+233
+00:24:07,000 --> 00:24:17,000
+So, at the beginning of the lesson we said that the CAN network is designed to be, to have a strong error management strategy, error detection strategy.
+
+234
+00:24:17,000 --> 00:24:29,000
+And in order to guarantee that the data messages, that as we said before, can be also, can contain also information, safety relevant for the driver.
+
+235
+00:24:29,000 --> 00:24:32,000
+Those data are not corrupted in any way.
+
+236
+00:24:32,000 --> 00:24:40,000
+During the transmission the data must not be lost or corrupted in some way.
+
+237
+00:24:40,000 --> 00:24:47,000
+So, those three fields are used in order to control the consistency of the data field.
+
+238
+00:24:47,000 --> 00:24:48,000
+Let's check.
+
+239
+00:24:48,000 --> 00:24:50,000
+The first one, the control field.
+
+240
+00:24:50,000 --> 00:24:51,000
+There is a slide.
+
+241
+00:24:51,000 --> 00:24:52,000
+Ok.
+
+242
+00:24:52,000 --> 00:24:59,000
+In the control field we will find the, let's just ignore the reserved bit.
+
+243
+00:24:59,000 --> 00:25:03,000
+We will have 4 bits of data length code.
+
+244
+00:25:03,000 --> 00:25:08,000
+So, in this field is declared the length of the data field.
+
+245
+00:25:08,000 --> 00:25:09,000
+Ok?
+
+246
+00:25:09,000 --> 00:25:17,000
+So, if the data field will contain 8 bytes of information, in the control field we will have the information 8.
+
+247
+00:25:17,000 --> 00:25:18,000
+Ok?
+
+248
+00:25:18,000 --> 00:25:26,000
+So, it's a field used to control if the data length code is, the DLC is correct or not.
+
+249
+00:25:26,000 --> 00:25:31,000
+Because, let me do a practical example in order to better understand.
+
+250
+00:25:31,000 --> 00:25:49,000
+Now, if an ACU receives a message and in the control field is declared that this message has 8 bytes length, but I am receiving, I am an ACU that is receiving this message and I check the data field and I see only 6 bytes, for example.
+
+251
+00:25:49,000 --> 00:25:56,000
+So, it means that somewhere we lost 2 bytes of data.
+
+252
+00:25:56,000 --> 00:25:57,000
+The message is corrupted.
+
+253
+00:25:57,000 --> 00:25:58,000
+It is not ok.
+
+254
+00:25:58,000 --> 00:25:59,000
+Ok.
+
+255
+00:25:59,000 --> 00:26:04,000
+So, this is a first check that the ACU that receives a message performs.
+
+256
+00:26:04,000 --> 00:26:07,000
+So, control field, data length code.
+
+257
+00:26:07,000 --> 00:26:14,000
+Then we have the CRC field.
+
+258
+00:26:14,000 --> 00:26:15,000
+Let me check.
+
+259
+00:26:15,000 --> 00:26:16,000
+I think there is a slide.
+
+260
+00:26:16,000 --> 00:26:17,000
+Yes.
+
+261
+00:26:17,000 --> 00:26:19,000
+In this field, there is a number.
+
+262
+00:26:19,000 --> 00:26:26,000
+This number is the division of a known polynomial that we will call the generator.
+
+263
+00:26:26,000 --> 00:26:29,000
+The calculation of the 8 byte CRC is a standard calculation.
+
+264
+00:26:29,000 --> 00:26:30,000
+Ok?
+
+265
+00:26:30,000 --> 00:26:44,000
+So, we have this generator polynomial that is a standard one and we will create another polynomial starting from the data field.
+
+266
+00:26:44,000 --> 00:26:53,000
+The reminder of the division between the polynomial generated from the data field that you have to image as a sequence of 0 and 1.
+
+267
+00:26:53,000 --> 00:26:55,000
+So, this is the data field.
+
+268
+00:26:55,000 --> 00:26:58,000
+From this sequence, we will create a polynomial.
+
+269
+00:26:58,000 --> 00:27:03,000
+We will divide it for the generator and we will have a certain polynomial divisional result.
+
+270
+00:27:03,000 --> 00:27:04,000
+Ok?
+
+271
+00:27:04,000 --> 00:27:05,000
+A certain number.
+
+272
+00:27:05,000 --> 00:27:09,000
+The reminder of the division will be an integral number.
+
+273
+00:27:09,000 --> 00:27:20,000
+This calculation is performed both from the ACU that is sending the message and from the ACU that is receiving the message.
+
+274
+00:27:20,000 --> 00:27:21,000
+Ok?
+
+275
+00:27:21,000 --> 00:27:32,000
+So, if this calculation is the same for the ACU that is sending the message and for the ACU that is receiving the message, then the CRC check is ok.
+
+276
+00:27:32,000 --> 00:27:55,000
+If this reminder is different from the ACU that is sending and the ACU that is receiving the message, it means that the generator is the same for both, but it means that the data field that has arrived to the ACU that is receiving the message is different from the one that the ACU has sent.
+
+277
+00:27:55,000 --> 00:27:59,000
+So, somewhere the data has been corrupted.
+
+278
+00:27:59,000 --> 00:28:04,000
+So, CRC check is another level of check of the data consistency.
+
+279
+00:28:04,000 --> 00:28:05,000
+Ok?
+
+280
+00:28:05,000 --> 00:28:17,000
+So, polynomial division between the polynomial generated from the data field and a known and standard polynomial that we call generator.
+
+281
+00:28:17,000 --> 00:28:18,000
+Ok?
+
+282
+00:28:18,000 --> 00:28:27,000
+The result of this division must be the same between the ACU that is sending the data and the ACU that is receiving the data.
+
+283
+00:28:27,000 --> 00:28:30,000
+So, we have two levels of control until now.
+
+284
+00:28:30,000 --> 00:28:33,000
+The first one on the length of the data field.
+
+285
+00:28:33,000 --> 00:28:38,000
+The second one on the consistency of the data field.
+
+286
+00:28:38,000 --> 00:28:39,000
+Ok?
+
+287
+00:28:39,000 --> 00:28:41,000
+Then we have the ACK knowledge field.
+
+288
+00:28:41,000 --> 00:28:48,000
+The ACK knowledge field is always set to, is a field that is always set to recessive.
+
+289
+00:28:48,000 --> 00:28:55,000
+Ok, I think here is described as ACK field.
+
+290
+00:28:55,000 --> 00:28:56,000
+Ok.
+
+291
+00:28:56,000 --> 00:29:06,000
+The ACK field will be set to recessive from the ACU that is sending the message.
+
+292
+00:29:06,000 --> 00:29:16,000
+And will be set to dominant state from the ACU that is receiving the messages when the message has been received.
+
+293
+00:29:16,000 --> 00:29:18,000
+Let me explain it better.
+
+294
+00:29:18,000 --> 00:29:19,000
+Ok.
+
+295
+00:29:19,000 --> 00:29:22,000
+We have the ACU that is, that sends a message on the network.
+
+296
+00:29:22,000 --> 00:29:26,000
+This message can be read from one or more ACU.
+
+297
+00:29:26,000 --> 00:29:33,000
+When the ACU sends the message on the network, the ACK knowledge field is set to recessive state.
+
+298
+00:29:33,000 --> 00:29:34,000
+So, to one.
+
+299
+00:29:34,000 --> 00:29:45,000
+If at least one ACU receives this message, then we will, let me say, the flag will set this field to dominant.
+
+300
+00:29:45,000 --> 00:29:46,000
+So, to zero.
+
+301
+00:29:46,000 --> 00:29:56,000
+And in order to let to the ACU that has been sending this message on the network, let me know that the message has been correctly received.
+
+302
+00:29:56,000 --> 00:30:02,000
+So, the ACU that is sending the message knows that the message has been arrived.
+
+303
+00:30:02,000 --> 00:30:04,000
+In some way has arrived on the network.
+
+304
+00:30:04,000 --> 00:30:05,000
+Ok?
+
+305
+00:30:05,000 --> 00:30:17,000
+From the ACK knowledge field, we will check, we will start the part of error confinement mechanism of the scan protocol.
+
+306
+00:30:17,000 --> 00:30:30,000
+Because, we say that the control field and the CRC field are used to control the consistency and the length of the data message, of the data field of the message.
+
+307
+00:30:30,000 --> 00:30:40,000
+The ACK knowledge field is used from the ACU that is sending the message in order to understand if she is correctly sending messages on the network.
+
+308
+00:30:40,000 --> 00:30:41,000
+Every ACU has two counters.
+
+309
+00:30:41,000 --> 00:30:47,000
+Every ACK has two counters, two internal counters.
+
+310
+00:30:47,000 --> 00:30:51,000
+The transmit error counter and the receive error counter.
+
+311
+00:30:51,000 --> 00:30:58,000
+Those counters are incremented and decremented checking the ACK knowledge field.
+
+312
+00:30:58,000 --> 00:31:11,000
+If an ACU that is transmitting a message, the first time that the ACU transmits the message, the ACK knowledge field is not flagged by any other ACU on the network.
+
+313
+00:31:11,000 --> 00:31:21,000
+The transmit error counter will increase of 8 because one transmission of the message has not gone good.
+
+314
+00:31:21,000 --> 00:31:28,000
+The ACU are not receiving what the ACU thinks that is transmitting on the network.
+
+315
+00:31:28,000 --> 00:31:40,000
+If another message is sent and some ACU correctly flags the ACK knowledge field, then this transmitter or counter decrease of 1.
+
+316
+00:31:40,000 --> 00:31:49,000
+So, plus 8 for each message where the ACK knowledge field has not been set to dominant from another ACU,
+
+317
+00:31:49,000 --> 00:31:56,000
+decreases of 1 for each time that the ACU is correctly sending messages on the network.
+
+318
+00:31:56,000 --> 00:32:03,000
+So, the ACK knowledge field has been set to dominant from at least one ACU that will receive this message.
+
+319
+00:32:03,000 --> 00:32:12,000
+With these rules, plus 8 minus 1 and so on, we define a threshold.
+
+320
+00:32:12,000 --> 00:32:24,000
+If the transmitter or counter raises above 255 thresholds, we will say that the ACU is in bus of state.
+
+321
+00:32:24,000 --> 00:32:25,000
+What does it mean?
+
+322
+00:32:25,000 --> 00:32:26,000
+What does it mean?
+
+323
+00:32:26,000 --> 00:32:39,000
+If the counter raises 255, it means that at least 32 times, because 32, yes, per 8 is 255.
+
+324
+00:32:39,000 --> 00:32:51,000
+For 32 consecutive times, the ACU tries to send a message on the network, but no other ACU has been flagged the ACK knowledge field.
+
+325
+00:32:51,000 --> 00:32:58,000
+So, the ACU thinks that it is correctly transmitting on the network, but no other ACU is receiving this message.
+
+326
+00:32:58,000 --> 00:33:09,000
+So, there is a problem internal to the ACU or on the transceiver of this ACU that is not permitting to the ACU to share the message on the network.
+
+327
+00:33:09,000 --> 00:33:14,000
+The message is not, let me say, exiting from the transceiver of the ACU.
+
+328
+00:33:14,000 --> 00:33:16,000
+No ACU is receiving this message.
+
+329
+00:33:16,000 --> 00:33:30,000
+So, when we raise this threshold, so, plus 8, plus 8, plus 8, after 32 consecutive times that the ACU is trying to send a message on the network with no result on the acknowledged field,
+
+330
+00:33:30,000 --> 00:33:34,000
+the ACU that is transmitting will go in bus of state.
+
+331
+00:33:34,000 --> 00:33:51,000
+So, the ACU will exit from the bus, will no longer try to transmit on the bus, will reset, let me say, herself, will restart herself, and then we will try to transmit again.
+
+332
+00:33:51,000 --> 00:34:04,000
+But, at the first transmission, after the bus of state, the bus of time, that is one second medium for the ACU, so, one second of silence in bus of state,
+
+333
+00:34:04,000 --> 00:34:16,000
+then I will try again to send message, if at the first attempt the acknowledge field is still to recessive state and no ACU is receiving this message,
+
+334
+00:34:16,000 --> 00:34:25,000
+will remain in bus of state until the transmitter on counter will go below this threshold.
+
+335
+00:34:25,000 --> 00:34:26,000
+Okay?
+
+336
+00:34:26,000 --> 00:34:38,000
+So, the acknowledge field is used from the ACU that is transmitting in order to understand if the message that she thinks that is transmitting is really arrived on the bus.
+
+337
+00:34:38,000 --> 00:34:40,000
+Someone has really received this message.
+
+338
+00:34:40,000 --> 00:34:41,000
+Okay?
+
+339
+00:34:41,000 --> 00:34:48,000
+So, quick recap on the data message structure.
+
+340
+00:34:48,000 --> 00:35:00,000
+As we said before, start and end of frame, some kind of delimiters to make it clear where a message start and a message ends.
+
+341
+00:35:00,000 --> 00:35:20,000
+Message identifier, 11 or 29 bits format, that identifies the name of the message, let me say, and is used from the ACU that receives the messages in order to know if this specific message with this specific identifier is useful or not.
+
+342
+00:35:20,000 --> 00:35:29,000
+If this message, the ACU that receives this message has to read this message or can ignore it.
+
+343
+00:35:29,000 --> 00:35:33,000
+And this is the check that we saw at the beginning.
+
+344
+00:35:33,000 --> 00:35:34,000
+Okay?
+
+345
+00:35:34,000 --> 00:35:37,000
+So, the ACU sends a message with a certain identifier.
+
+346
+00:35:37,000 --> 00:35:40,000
+The ACU number one will check the message identifier.
+
+347
+00:35:40,000 --> 00:35:45,000
+If this message is useful for its functionalities, we'll accept this data.
+
+348
+00:35:45,000 --> 00:35:47,000
+Then we'll ignore this data.
+
+349
+00:35:47,000 --> 00:35:56,000
+And we'll also check the consistency of the data looking at the control and CRC field.
+
+350
+00:35:56,000 --> 00:36:09,000
+So, control field, as we said before, declares the data length code, the DLC of the message, the length of the data field.
+
+351
+00:36:09,000 --> 00:36:12,000
+That can be from 1 to 8 bytes long.
+
+352
+00:36:12,000 --> 00:36:14,000
+So, 64 bits.
+
+353
+00:36:14,000 --> 00:36:27,000
+The CRC field is used from the ACU that is receiving the message in order to, and also from the ACU that is sending messages, in order to check the consistency of the data field.
+
+354
+00:36:27,000 --> 00:36:39,000
+Because it is only the reminder of division between a known polynomial, a standard polynomial, and the polynomial generated by the data from the data field.
+
+355
+00:36:39,000 --> 00:36:52,000
+This reminder, if is the same reminder calculated from the ACU that is receiving this message, and from the one that is transmitting this message, then the data field is okay.
+
+356
+00:36:52,000 --> 00:37:04,000
+If this result is different between the calculation of the ACU that is sending and the ACU that is receiving this message, then we have a problem on the data field.
+
+357
+00:37:04,000 --> 00:37:07,000
+Somewhere the data field has been corrupted.
+
+358
+00:37:07,000 --> 00:37:19,000
+And then we have the acknowledge field, that is the field used from the ACU that is transmitting this message, in order to understand if the message has been correctly sent on the network.
+
+359
+00:37:19,000 --> 00:37:23,000
+Okay?
+
+360
+00:37:23,000 --> 00:37:29,000
+Of course, I am going fast, but if I am going too fast, please interrupt me.
+
+361
+00:37:29,000 --> 00:37:41,000
+But we can also have a dedicated, let me say, question and answer analysis, after you have been reading also the slides that you find in the classroom materials.
+
+362
+00:37:41,000 --> 00:37:51,000
+So, after this lesson, we can also have a dedicated half an hour of question and answer if you want in the next days.
+
+363
+00:37:51,000 --> 00:38:03,000
+Okay? So, feel free to contact me also after this lesson, in order to better understand something where maybe I run too fast or I skip during the lesson. Okay?
+
+364
+00:38:03,000 --> 00:38:23,000
+I wanted to check now the network specification. So, the document, the specification that defines how many messages are present on a certain CAN network, which ACU has to read which messages and so on.
+
+365
+00:38:23,000 --> 00:38:34,000
+This is the CAN network database, the CAN specification, also known as DBC file. Okay? Database CAN.
+
+366
+00:38:34,000 --> 00:38:49,000
+We can open, that's why I need to change my computer, we need to open it with a vector tool, that is CANDB Editor Plus, you will have it on your Kineton PC, I think.
+
+367
+00:38:49,000 --> 00:39:00,000
+So, what is the network specification? It's the document that contains all, the list of all the ACU present on this specific CAN network.
+
+368
+00:39:00,000 --> 00:39:12,000
+And for all the ACU, the ACU are called with some acronyms. So, for example, BCM is the body control module.
+
+369
+00:39:12,000 --> 00:39:23,000
+The DASM is the driver assistance system module, and so on. You need to have practice on this.
+
+370
+00:39:23,000 --> 00:39:39,000
+If we select an ACU, for example, the BTM, the NAB, the NAB, that is Nodo Airbag, you can see the transmitted message.
+
+371
+00:39:39,000 --> 00:39:55,000
+So, this ACU will transmit on this CAN network, one, two, three, four, five, six messages with this identification field, with this DLC.
+
+372
+00:39:55,000 --> 00:40:08,000
+So, for example, the message that has the identification, two, five, seven, is called Airbag 1, and is a message that has the data length code of 8 bytes.
+
+373
+00:40:08,000 --> 00:40:20,000
+Something that I didn't say to you before is the transmitting method. So, we have mainly three methods of transmission on CAN.
+
+374
+00:40:20,000 --> 00:40:31,000
+We can have cyclic messages, periodic on-event messages, or periodic on-event messages.
+
+375
+00:40:31,000 --> 00:40:43,000
+The first, the most used ones are the cyclic messages, what we will see here as CX transmitter method cyclic.
+
+376
+00:40:43,000 --> 00:40:58,000
+It means that this message is sent from the Airbag ACU each 100 milliseconds, okay, with a periodicity of 100 milliseconds in a cyclic way, okay?
+
+377
+00:40:58,000 --> 00:41:08,000
+We can also have messages that, in the database, you will find that no-message-send type method that are on-event messages.
+
+378
+00:41:08,000 --> 00:41:28,000
+On-event means that this specific message, the message that is called CSG data code response nub, will not be always present on the network, will only be, the ACU will send it only if a specific event is happening.
+
+379
+00:41:28,000 --> 00:41:36,000
+For example, this specific message is sent each time there is a key-off to key-on transition.
+
+380
+00:41:36,000 --> 00:41:50,000
+So, when the key passes from off to on, when we power on the vehicle, we will see this message only for three samples after the key-off to key-on transition.
+
+381
+00:41:50,000 --> 00:42:00,000
+In a normal state, in a normal state, when we are in key-on from, I don't know, ten minutes, this message will not be, will no longer be present on the network, okay?
+
+382
+00:42:00,000 --> 00:42:12,000
+So, on-event messages are messages that are sent only for a certain number of times, only when a specific event is happening in the vehicle.
+
+383
+00:42:12,000 --> 00:42:24,000
+We mean, when I say events, I mean a specific vehicle condition, for example, the key that passes from off to on.
+
+384
+00:42:24,000 --> 00:42:36,000
+Instead of a cyclic message that is always present on the network, we always with the same periodicity that is defined here in the field cycle time of the DBC.
+
+385
+00:42:36,000 --> 00:42:45,000
+Here, the cycle time is expressed in milliseconds, okay? So, here we have 100 milliseconds, 1 second, and so on.
+
+386
+00:42:45,000 --> 00:42:54,000
+And you can see no message sent type, so the event message, on-event message, has a cycle time of 0 milliseconds.
+
+387
+00:42:54,000 --> 00:43:02,000
+Then we have a third transmission method, that is COC, or cyclic on change.
+
+388
+00:43:02,000 --> 00:43:18,000
+So, we have a message that normally is cyclic 1, so as a defined periodicity, but if a certain event happens on the vehicle, in the vehicle condition, that this message will double its periodicity, okay?
+
+389
+00:43:18,000 --> 00:43:36,000
+So, the classical example for the airbag control unit, for example, can be a message that is sent with a periodicity of 1 second, so each transmission after 1 second, if we have a crash of the vehicle, okay?
+
+390
+00:43:36,000 --> 00:43:55,000
+An accident, so the airbag control unit will double this periodicity, because the time network needs those information, let me say, with a strictly periodicity, needs to update this information with a faster periodicity.
+
+391
+00:43:55,000 --> 00:44:12,000
+That's why we can have cyclic on change messages, messages that are normally sent with a certain cycle time, but due to a vehicle event, can double, can increase, in general, their periodicity.
+
+392
+00:44:12,000 --> 00:44:22,000
+Okay, so those are the messages sent from this specific ACO, with the identification and the data length field.
+
+393
+00:44:22,000 --> 00:44:44,000
+If we open a message, sorry, if we click with the right button and edit message, yes, here you will see the detail of these messages, the data contained in these messages.
+
+394
+00:44:44,000 --> 00:44:58,000
+As I told you at the beginning of the lesson, the data field, you need to image that the ACO has a data field that is only, let me say, a sequence of 0, of logical 0 and 1, okay?
+
+395
+00:44:58,000 --> 00:45:12,000
+Those sequences are, let me say, translated from this specification, from the database file into a user-friendly signal, let me say.
+
+396
+00:45:12,000 --> 00:45:34,000
+We have 8 bytes distributed like this, and translated into signals, airbag warning alarm, crash output status, the sequence of logical 0 and 1 sent by the ACO is translated into logical signals, let me say.
+
+397
+00:45:34,000 --> 00:45:43,000
+Also the message name, also the message name, airbag 1, is only the translation of this specific identification.
+
+398
+00:45:43,000 --> 00:45:54,000
+So, if you check to a CAN network, we will see the tools used to read the CAN network in the next lesson.
+
+399
+00:45:54,000 --> 00:46:09,000
+If you read a CAN network without a database, without any specification, you will only see a sequence of 0 and 1, or maybe in hexadecimal, a sequence of hexadecimal row values.
+
+400
+00:46:09,000 --> 00:46:19,000
+When you will upload the database file on the CAN you are reading, you will see signals, translated signals, okay?
+
+401
+00:46:19,000 --> 00:46:23,000
+So, something like this, okay?
+
+402
+00:46:23,000 --> 00:46:32,000
+Here you have the detail of the message that contains these signals and so on, okay?
+
+403
+00:46:32,000 --> 00:46:52,000
+So, here you can find the list of the ACO, for each ACO the list of the transmitted messages, but also the list of the Rx messages, the received messages, okay?
+
+404
+00:46:52,000 --> 00:47:01,000
+So, this specific ACO that I selected reads, receives on the network only those messages, okay?
+
+405
+00:47:01,000 --> 00:47:12,000
+This is what I meant when I say all the ACO send data, but not all the ACO will read all the data shared on the network.
+
+406
+00:47:12,000 --> 00:47:27,000
+This specific ACO, for example, reads only those messages, or inside those messages there are the informations that are used for its functionality from this ACO.
+
+407
+00:47:27,000 --> 00:47:34,000
+And this is valid for all the ACO, for example, we have the HVB ACO, the high voltage battery.
+
+408
+00:47:34,000 --> 00:47:40,000
+This is a database of an hybrid project.
+
+409
+00:47:40,000 --> 00:47:43,000
+We have transmitted messages.
+
+410
+00:47:43,000 --> 00:47:47,000
+Those messages are transmitted on this CAN network from the HVB.
+
+411
+00:47:47,000 --> 00:47:54,000
+And then we have also the received messages of the messages that the HVB wants to read.
+
+412
+00:47:54,000 --> 00:48:01,000
+You can also have an overview of all the messages sent on the network in this section, messages.
+
+413
+00:48:01,000 --> 00:48:02,000
+I click here.
+
+414
+00:48:02,000 --> 00:48:10,000
+Those are all the possible messages present on this network, on this specific CAN network.
+
+415
+00:48:10,000 --> 00:48:21,000
+I say in this specific CAN network because, of course, in a vehicle we have lots of CAN network, okay?
+
+416
+00:48:21,000 --> 00:48:29,000
+This is a C1 CAN network, we will see later what that means, but on this specific CAN network we have only, only,
+
+417
+00:48:29,000 --> 00:48:34,000
+we have those messages sent from the ACO present on this network.
+
+418
+00:48:34,000 --> 00:48:42,000
+This is the proper identification, type of messenger CAN, data length code, transmitting method, cycle time,
+
+419
+00:48:42,000 --> 00:48:47,000
+the ACO that is transmitting this specific message, and so on.
+
+420
+00:48:47,000 --> 00:48:54,000
+For each ACO present in the vehicle, we will have a dedicated database file, okay?
+
+421
+00:48:54,000 --> 00:48:59,000
+So this is the database related to a certain CAN network.
+
+422
+00:48:59,000 --> 00:49:08,000
+So this is the first C1 CAN network present in the vehicle, okay?
+
+423
+00:49:08,000 --> 00:49:16,000
+And we can also check the signals present, all the signals present on the same CAN network.
+
+424
+00:49:16,000 --> 00:49:20,000
+Different type of visualization but same content, okay?
+
+425
+00:49:20,000 --> 00:49:26,000
+I mainly use, for example, the visualization of the single ACO.
+
+426
+00:49:26,000 --> 00:49:34,000
+I'm interested to know what does this ACO send, and I go in this section, or I can do like this.
+
+427
+00:49:34,000 --> 00:49:41,000
+So different visualization, you will have a practical lesson on the use of this specification.
+
+428
+00:49:41,000 --> 00:49:47,000
+What you need to know today is that a specification for each CAN network present in the vehicle, like this,
+
+429
+00:49:47,000 --> 00:49:56,000
+it is the DBC file, the database CAN file, that we open with CANDB plus editor.
+
+430
+00:49:56,000 --> 00:50:03,000
+And into this specification, all the ACO present on the network are contained with the related messages.
+
+431
+00:50:03,000 --> 00:50:12,000
+So, in this specification, we have all the possible messages that we will see on this specific CAN network, okay?
+
+432
+00:50:12,000 --> 00:50:20,000
+Okay, I need to open again the slides.
+
+433
+00:50:20,000 --> 00:50:24,000
+Okay, guys, I need five minutes, then I will be back.
+
+434
+00:50:24,000 --> 00:50:34,000
+We will close the CAN network and we will start with the link, but I need five minutes, okay?
+
+435
+00:50:34,000 --> 00:50:35,000
+You in five minutes?
+
+436
+00:50:35,000 --> 00:50:36,000
+Okay.
+
+437
+00:50:36,000 --> 00:50:37,000
+See you.
+
+438
+00:50:37,000 --> 00:50:38,000
+See you guys!
+
+439
+00:50:38,000 --> 00:50:44,000
+Let's get there!
+
+440
+00:50:44,000 --> 00:50:45,000
+Hi.
+
+441
+00:50:45,000 --> 00:50:46,000
+Hi.
+
+442
+00:50:46,000 --> 00:50:47,000
+Hi.
+
+443
+00:50:47,000 --> 00:50:48,000
+No video.
+
+444
+00:50:48,000 --> 00:50:49,000
+What do you do hi?
+
+445
+00:50:49,000 --> 00:50:50,060
+Is u in a moment?
+
+446
+00:50:50,060 --> 00:50:51,060
+I have времены.
+
+447
+00:50:51,060 --> 00:50:52,060
+great, yeah.
+
+448
+00:50:53,060 --> 00:50:57,560
+I sveask con chat about it, no I don't know if envie of live.
+
+449
+00:50:57,640 --> 00:51:02,780
+If you'll play a message with no help I can't hear you sing about it…
+
+450
+00:51:02,780 --> 00:51:09,780
+I'm going to go to the bathroom.
+
+451
+00:51:09,780 --> 00:51:15,780
+I'm going to go to the bathroom.
+
+452
+00:51:15,780 --> 00:51:18,780
+No, I prefer to go to the bathroom.
+
+453
+00:51:18,780 --> 00:51:20,780
+Just in time.
+
+454
+00:51:20,780 --> 00:51:22,780
+No, five minutes.
+
+455
+00:51:22,780 --> 00:51:42,780
+No, I'm going to go to the bathroom.
+
+456
+00:51:42,780 --> 00:51:43,780
+I'm going to go to the bathroom.
+
+457
+00:51:43,780 --> 00:52:13,760
+Thank you.
+
+458
+00:52:13,780 --> 00:52:43,760
+Thank you.
+
+459
+00:52:43,780 --> 00:53:13,760
+Thank you.
+
+460
+00:53:13,780 --> 00:53:43,760
+Thank you.
+
+461
+00:53:43,780 --> 00:54:13,760
+Thank you.
+
+462
+00:54:13,780 --> 00:54:43,760
+Thank you.
+
+463
+00:54:43,780 --> 00:55:13,760
+Thank you.
+
+464
+00:55:13,780 --> 00:55:43,760
+Thank you.
+
+465
+00:55:43,780 --> 00:56:13,760
+Thank you.
+
+466
+00:56:13,780 --> 00:56:43,760
+Thank you.
+
+467
+00:56:43,780 --> 00:57:13,760
+Thank you.
+
+468
+00:57:13,780 --> 00:57:43,760
+Thank you.
+
+469
+00:57:43,780 --> 00:58:13,760
+Thank you.
+
+470
+00:58:13,780 --> 00:58:43,760
+Thank you.
+
+471
+00:58:43,780 --> 00:59:13,760
+Thank you.
+
+472
+00:59:13,780 --> 00:59:43,760
+Thank you.
+
+473
+00:59:43,760 --> 01:00:13,740
+Thank you.
+
+474
+01:00:13,760 --> 01:00:43,740
+Thank you.
+
+475
+01:00:43,760 --> 01:01:13,740
+Thank you.
+
+476
+01:01:13,740 --> 01:01:43,720
+Thank you.
+
+477
+01:01:43,720 --> 01:02:13,700
+Thank you.
+
+478
+01:02:13,700 --> 01:02:43,680
+Thank you.
+
+479
+01:02:43,680 --> 01:03:13,660
+Thank you.
+
+480
+01:03:13,660 --> 01:03:43,640
+Thank you.
+
+481
+01:03:43,640 --> 01:04:13,640
+
+
+482
+01:04:13,640 --> 01:04:43,620
+Thank you.
+
+483
+01:04:43,620 --> 01:05:13,600
+Thank you.
+
+484
+01:05:13,600 --> 01:05:43,600
+
+
+485
+01:05:43,600 --> 01:06:13,580
+Thank you.
+
+486
+01:06:13,580 --> 01:06:43,560
+Thank you.
+
+487
+01:06:43,560 --> 01:07:13,540
+Thank you.
+
+488
+01:07:13,540 --> 01:07:43,520
+Thank you.
+
+489
+01:07:43,520 --> 01:08:13,500
+Thank you.
+
+490
+01:08:13,500 --> 01:08:15,500
+Thank you.
+
+491
+01:08:43,500 --> 01:09:13,480
+Thank you.
+
+492
+01:09:13,480 --> 01:09:43,460
+Thank you.
+
+493
+01:09:43,460 --> 01:10:13,440
+Thank you.
+
+494
+01:10:13,440 --> 01:10:43,420
+Thank you.
+
+495
+01:10:43,420 --> 01:11:13,420
+
+
+496
+01:11:13,420 --> 01:11:43,400
+Thank you.
+
+497
+01:11:43,420 --> 01:12:13,400
+Thank you.
+
+498
+01:12:13,400 --> 01:12:43,380
+Okay.
+
+499
+01:12:43,380 --> 01:13:13,360
+Thank you.
+
+500
+01:13:13,380 --> 01:13:43,360
+Thank you.
+
+501
+01:13:43,380 --> 01:14:13,360
+Thank you.
+
+502
+01:14:13,360 --> 01:14:43,360
+Thank you.
+
+503
+01:14:43,360 --> 01:15:13,340
+Okay.
+
+504
+01:15:13,340 --> 01:15:43,340
+Thank you.
+
+505
+01:15:43,340 --> 01:15:45,340
+Thank you.
+
+506
+01:16:13,340 --> 01:16:15,340
+Thank you.
+
+507
+01:16:43,340 --> 01:16:45,340
+Thank you.
+
+508
+01:17:13,340 --> 01:17:43,320
+Thank you.
+
+509
+01:17:43,340 --> 01:18:13,320
+Thank you.
+
+510
+01:18:13,320 --> 01:18:43,300
+Thank you.
+
+511
+01:18:43,320 --> 01:19:13,300
+Thank you.
+
+512
+01:19:13,320 --> 01:19:43,300
+Thank you.
+
+513
+01:19:43,320 --> 01:20:13,300
+Thank you.
+
+514
+01:20:13,300 --> 01:20:14,300
+Thank you.
+
+515
+01:20:43,300 --> 01:21:13,280
+Thank you.
+
+516
+01:21:13,280 --> 01:21:43,260
+Thank you.
+
+517
+01:21:43,280 --> 01:22:13,260
+Thank you.
+
+518
+01:22:13,260 --> 01:22:15,260
+Thank you.
+
+519
+01:22:43,260 --> 01:23:13,260
+Thank you.
+
+520
+01:23:13,260 --> 01:23:43,260
+Thank you.
+
+521
+01:23:43,260 --> 01:24:13,260
+Thank you.
+
+522
+01:24:13,260 --> 01:24:43,260
+Thank you.
+
+523
+01:24:43,260 --> 01:25:13,260
+
+
+524
+01:25:13,260 --> 01:25:15,260
+Thank you.
+
+525
+01:25:43,260 --> 01:25:44,260
+Thank you.
+
+526
+01:26:13,260 --> 01:26:14,260
+Thank you.
+
+527
+01:26:43,260 --> 01:26:45,260
+Thank you.
+
+528
+01:27:13,260 --> 01:27:14,260
+Thank you.
+
+529
+01:27:43,260 --> 01:27:45,260
+Thank you.
+
+530
+01:28:13,260 --> 01:28:15,260
+Thank you.
+
+531
+01:28:43,260 --> 01:28:45,260
+Thank you.
+
+532
+01:29:13,260 --> 01:29:14,260
+Thank you.
+
+533
+01:29:43,260 --> 01:29:44,260
+Thank you.
+
+534
+01:30:13,260 --> 01:30:15,260
+Thank you.
+
+535
+01:30:43,260 --> 01:30:45,260
+Thank you.
+
+536
+01:31:13,260 --> 01:31:14,260
+Thank you.
+
+537
+01:31:14,260 --> 01:31:15,260
+Thank you.
+
+538
+01:31:15,260 --> 01:31:17,260
+Thank you.
+
+539
+01:31:45,260 --> 01:31:47,260
+Thank you.
+
+540
+01:32:15,260 --> 01:32:16,260
+Thank you.
+
+541
+01:32:16,260 --> 01:32:17,260
+Thank you.
+
+542
+01:32:17,260 --> 01:32:18,260
+Thank you.
+
+543
+01:32:18,260 --> 01:32:19,260
+Thank you.
+
+544
+01:32:47,260 --> 01:32:48,260
+Thank you.
+
+545
+01:32:48,260 --> 01:32:49,260
+Okay.
+
+546
+01:32:49,260 --> 01:32:50,260
+Okay.
+
+547
+01:32:50,260 --> 01:32:52,260
+Okay.
+
+548
+01:32:52,260 --> 01:32:53,260
+Thank you.
+
+549
+01:32:53,260 --> 01:32:54,260
+Thank you.
+
+550
+01:32:54,260 --> 01:32:55,260
+Thank you.
+
+551
+01:32:55,260 --> 01:32:56,260
+Thank you.
+
+552
+01:32:56,260 --> 01:32:57,260
+Thank you.
+
+553
+01:32:57,260 --> 01:32:58,260
+Thank you.
+
+554
+01:32:58,260 --> 01:33:00,260
+Thank you.
+
+555
+01:33:00,260 --> 01:33:01,260
+Thank you.
+
+556
+01:33:01,260 --> 01:33:02,260
+Thank you.
+
+557
+01:33:02,260 --> 01:33:03,260
+Thank you.
+
+558
+01:33:03,260 --> 01:33:05,260
+Thank you.
+
+559
+01:33:05,260 --> 01:33:06,260
+Thank you.
+
+560
+01:33:06,260 --> 01:33:07,260
+Thank you.
+
+561
+01:33:07,260 --> 01:33:08,260
+Thank you.
+
+562
+01:33:08,260 --> 01:33:09,260
+Thank you.
+
+563
+01:33:09,260 --> 01:33:10,260
+Thank you.
+
+564
+01:33:10,260 --> 01:33:11,260
+atto.
+
+565
+01:33:11,260 --> 01:33:12,260
+etwas
+
+566
+01:33:39,260 --> 01:33:47,860
+exactly how can like i'm working on the cfts and dts dvp i have so what thing i can see
+
+567
+01:33:47,860 --> 01:33:55,140
+in the cfts and i can directly assume okay this test or this activity should happen with the lin
+
+568
+01:33:55,140 --> 01:34:04,160
+or can so just example for the climate schedule or the door latch i know this issue will work
+
+569
+01:34:04,160 --> 01:34:11,800
+with the lin not with the can so is there the list of the those applications or it's different for
+
+570
+01:34:11,800 --> 01:34:18,820
+every vehicle yeah correct it's different from every for every car maker the example i i showed
+
+571
+01:34:18,820 --> 01:34:27,020
+to you were fca and ferrari examples yeah but exactly yeah that was the slantos italian car
+
+572
+01:34:27,020 --> 01:34:33,880
+makers has a lean on the door lean on the rain sensor and so on but it depends on the car
+
+573
+01:34:33,880 --> 01:34:40,300
+maker project it depends on the design of the vehicle and so on so you will have i think when
+
+574
+01:34:40,300 --> 01:34:48,020
+you work on a vehicle you will have an architecture document where it explains how many lin how many
+
+575
+01:34:48,020 --> 01:34:56,200
+can network we will have and so on of course okay so just one more thing now for example
+
+576
+01:34:56,200 --> 01:35:09,900
+um let's say the maserati maserati or fca anything if they have yeah yeah so let's say the vdcm ecu
+
+577
+01:35:09,900 --> 01:35:18,180
+in maserati it's handled by the canalizer in can by can so is that possible the another car maker let's
+
+578
+01:35:18,180 --> 01:35:27,600
+say mercedes they can use vdcm or that kind of ecu with the lin is that possible the vcm the body control
+
+579
+01:35:27,600 --> 01:35:38,600
+module yeah the body control module of course is a master of a lot of lin yes in all the architecture
+
+580
+01:35:38,600 --> 01:35:47,140
+of maserati of fca and so on but it can of course it's not a lin slave it's a master of lots of
+
+581
+01:35:47,140 --> 01:35:55,280
+okay yes of course and it works okay okay on the vcm is the gateway control unit so it shares and
+
+582
+01:35:55,280 --> 01:36:03,920
+passes information to different key network and different key networks so you will oh my god i said everything
+
+583
+01:36:08,600 --> 01:36:10,280
+okay okay.
+
+584
+01:36:10,280 --> 01:36:12,420
+i'm TYR built back in 50HF right now so that means earlier we can build the vcm. site but for
+
+585
+01:36:12,420 --> 01:36:14,000
+these euros will bring that together yeah if you want to someone in your side erd by it about
+
+586
+01:36:14,000 --> 01:36:18,080
+um right now but sometimes listens to all of those Ared and reimius where I really
+
+587
+01:36:18,080 --> 01:36:20,440
+yeah that's at the Vale is in my like yeah yeah so uh yeahbuild places every day in america
+
+588
+01:36:20,440 --> 01:36:25,540
+yeah so uh yeah so um yeah so that Qué me a community works in the end, yeah but and me
+
+589
+01:36:25,540 --> 01:36:27,080
+yeah so I can't really protect that loving four of these things if they try and build a
+
+590
+01:36:27,080 --> 01:36:29,820
+yeah it fre pumping it up it be okay that's there since them they are not
+
+591
+01:36:29,820 --> 01:36:32,020
+Александ회 but they can't be interesting in there when they ask that you can answer
+
+592
+01:36:32,020 --> 01:36:33,380
+it just don't even really want to know sigake me
+
+593
+01:36:33,380 --> 01:36:33,700
+ofically a d interview because there you can say maybe there's there'sancften
+
+594
+01:36:33,700 --> 01:36:35,700
+.
+
+595
+01:37:03,700 --> 01:37:05,700
+.
+
+596
+01:37:33,700 --> 01:37:35,700
+.
+
+597
+01:38:03,700 --> 01:38:05,700
+.
+
+598
+01:38:05,700 --> 01:38:07,700
+.
+
+599
+01:38:07,700 --> 01:38:09,700
+.
+
+600
+01:38:09,700 --> 01:38:11,700
+.
+
+601
+01:38:11,700 --> 01:38:13,700
+.
+
+602
+01:38:13,700 --> 01:38:15,700
+.
+
+603
+01:38:15,700 --> 01:38:17,700
+.
+
+604
+01:38:17,700 --> 01:38:19,700
+.
+
+605
+01:38:19,700 --> 01:38:21,700
+.
+
+606
+01:38:21,700 --> 01:38:23,700
+.
+
+607
+01:38:23,700 --> 01:38:25,700
+.
+
+608
+01:38:25,700 --> 01:38:27,700
+.
+
+609
+01:38:27,700 --> 01:38:29,700
+.
+

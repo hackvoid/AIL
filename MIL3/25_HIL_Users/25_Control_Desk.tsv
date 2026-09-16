@@ -1,0 +1,573 @@
+start	end	text
+0	24200	Welcome everybody to this training. In the first part of this training there will be an introduction on the heel system and why it's important to use an heel, why it's necessary to use an heel and in the second part there will be a training on control desk, how to use control desk.
+24200	45700	The first question is why is heel important, so why it's needed to have a heel simulation. The answer to this question is because the heel simulation allows you to link together computer simulation and vehicle testing.
+45700	59700	So the heel gives you the possibility to have a real-time application while using real components like for example sensor and actuators.
+59700	72700	The application that runs on the heel is composed basically of physics-based or mathematical models.
+72700	91700	So starting from the mathematical models we create a Simulink model. Simulink model is then translated into code. The code is run on the application.
+91700	104700	We can imagine in the real world to have another in the loop like in the first picture. In the first picture there is the controller and the process.
+104700	128700	The controller, the role of the controller is to control the inputs to the process, then read the output from the process, then calculate an error and on the base of this error adjust the inputs to give to the process.
+128700	141700	In the simulation we can recreate the real world to have the hardware as controller and then the simulation instead of the real process.
+141700	153700	So the simulation recreates the behavior of the process while the hardware is responsible for the controller.
+153700	164700	Now let's see together what are the advantages of using a heel.
+164700	181700	Of course the heel reduce the cost of testing. Let's imagine that if we want to test on a mule the costs are higher than testing on a heel system.
+181700	187700	Another important aspect of the heel is the reproducibility. What does it mean?
+187700	204700	It means that it is possible to reproduce, for example, a bug. If we found a bug, having the heel gives the possibility to reproduce the same error many times.
+204700	214700	Because we are able to recreate the conditions to let the bug appear.
+214700	228700	Another main aspect of the heel usage is the safety. Some tests are not safe to be done on a real vehicle.
+228700	238700	Let's imagine a short battery on the accelerator pedal. It has a high level of danger.
+238700	256700	So in this case we perform the same maneuver on a hill. So in this case we lower the possibility, we reduce the possibility to have dangerous condition for the driver to zero.
+256700	281700	On the other hand, there can be some critical aspects. One critical aspect is to develop an accurate model of the real plant. In other words, we have to model the real plant as close as possible to the reality.
+281700	310700	Meaning that it is possible to recreate the same conditions as in the real vehicle. The more the model is accurate, so the more the model is close to the real plant, the better will be the test we are able to perform and the better are the results that we're going to have.
+310700	329700	Let's analyze now a hill architecture. In yellow you will find what are the simulated parts in a hill architecture. While in green there will be the real hardware present in a hill architecture.
+329700	347700	The real components more often are sensors and actuators. It is possible to simulate sensors and actuators and it is also possible to have real sensors and actuators.
+347700	358700	Then usually there is one or multiple issues under test. So the real issue is connected to the hill, to the simulator.
+358700	386700	Other issues are most often simulated because there is a percentage of hill architecture that don't have all the issues real. For your information, there are some architectures that have all the real issues.
+386700	405700	Like for example, like for example, lab car. Then there is the physical system. So the model that recreates the plant that runs on the simulator.
+405700	431700	Following the arrows, you can see the exchange of information. For example, the physical system gives inputs to the sensors. The sensors gives output to the issue under test that analyze the inputs and creates some outputs in two other issues.
+431700	459700	And they also receive information from other issues. But the main important thing about hill architecture is the issue that provides output to the actuators. Then the actuators gives a feedback to the physical system. So this is how we close the loop in a hill architecture.
+461700	480700	This is a typical system. This is a typical system architecture in which we have the PC, on which we have some tools. In this case, there is an example of tool from this space, control desk, and also, for example, configuration desk.
+480700	487700	The connection between the PC, configuration desk. The connection between the PC and the Skalexio is made usually through an Ethernet.
+487700	494700	Then there is the connection between the ECU, the ECU, the ECU, the ECU under test, for example, one or multiple.
+494700	517700	This connection, for example, this connection, for example, is made of I.O. channels. The I.O. can have multiple shapes, for example, can be an analog, I.O., digital I.O., resistive, PBM, engine simulation, and so on.
+517700	527700	So, the Skalexio exchanges information with real ECU, so sends, for example, inputs to the real ECU.
+527700	538700	The ECU elaborates using the software flashed on the ECU. The information coming from the Skalexio creates some output that is sent back to the Skalexio.
+538700	556700	The PC is responsible for the part of configuration of the Skalexio, but this is not the main topic of this lesson, and also for control desk.
+556700	561700	Control desk just gives you an interface to the model.
+561700	570700	So, using control desk on our PC, we can have an interface with the model running on the Skalexio.
+570700	581700	So, we are going to be able to see inputs and outputs of the model running on the Skalexio.
+581700	598700	It's important to specify that, with respect to the simulation, in this system architecture, so using Skalexio, we have a real-time application running on the target.
+598700	604700	In fact, the real-time application is running on Skalexio.
+604700	606700	Let's analyze these pictures together.
+606700	618700	There is the Skalexio in the middle, which has IO hardware, fault injection units, loads for unit under test, processing hardware, and battery simulation.
+618700	620700	So, the power supply unit.
+620700	629700	The Skalexio exchanges information with the device under test, so the ECU, for example, and to the simulation model.
+629700	634700	The simulation model is the model loaded inside the Skalexio.
+634700	649700	Then, we have the possibility to interface with Skalexio using, as already said, control desk, but also other platforms, like automation desk for test automation,
+649700	657700	model desk for model parameterization, motion desk, and also third-party software.
+657700	673700	Before moving to the second part of this training, so how to use control desk, let's reassume what are the features of a Skalexio system.
+673700	680700	The first important thing is the run of the real-time application.
+680700	696700	So, the hill, with respect to the sealed mill, which are software in the loop and model in the loop, gives the possibility to have real-time application running.
+696700	705700	The Skalexio, through the boards, can generate sensor signals to the ECU.
+705700	715700	So, generates the outputs of the Skalexio that are inputs to the ECU.
+715700	728700	At the same time, it can reach command signals from actuators and also read inputs of the ECU.
+728700	731700	Inputs from the ECU, sorry.
+731700	734700	It provides battery voltage to the ECU.
+734700	742700	So, each ECU needs to have battery voltage, so the power supply to work.
+742700	753700	The Skalexio provides to the ECUs the battery voltage to work.
+753700	760700	And then, another important thing is that the Skalexio is able to simulate faults.
+760700	764700	FIU stands for Fault Injection Unit.
+764700	778700	So, using the Skalexio, it's possible to simulate faults and then analyze the behavior of the ECU when those faults are simulated.
+778700	785700	Now, let's move on to Control Desk.
+785700	794700	Control Desk is a tool from this space that gives you the possibility to directly interface with the model.
+794700	805700	So, as you already said, the model is present and is running on the real-time application on the Skalexio.
+805700	812700	Control Desk is the interface from the user to the model.
+812700	832700	So, using Control Desk, it's possible, for example, to change inputs, analyze the outputs, having access to the bus for CAN connection, link connection, ethernet connections, and so on.
+832700	839700	Using Control Desk is possible to access calibration, measuring, and diagnostics of the ECU.
+839700	849700	So, when the ECU is connected to the real-time application, using Control Desk is possible to perform some tests.
+849700	852700	So, let's imagine there is a new software release.
+852700	855700	The software is flashed on the ECU.
+855700	857700	We want to test the software.
+857700	865700	We connect the ECU to the HILD simulator and then we are able, using Control Desk, to perform maneuvers.
+865700	883700	And see how the new software behaves, so how the software behaves after these maneuvers are performed.
+883700	886700	Now, let's move on to Control Desk.
+886700	893700	So, in this case, I'm going to show you an application, a real-time application.
+893700	906700	So, we're going to see how to use Control Desk, what is possible to do, what is possible to see and to analyze using Control Desk.
+906700	918700	So, this is the window that you have as soon as you open Control Desk.
+918700	926700	For each application, this window may change, it will change, basically.
+926700	937700	But, it's important to have clear in mind that even if the layout is different, what is possible to achieve is the same.
+937700	941700	So, the functionalities of Control Desk are the same.
+941700	947700	First step is to go online.
+947700	954700	Go online means that we're going to start the online calibration for Control Desk.
+954700	957700	So, we run the application.
+957700	964700	The application, after going online, is running on the simulator.
+964700	970700	So, we're going to see the real-time behavior of the model.
+970700	987700	As you can see here, as soon as I went online, this variable started to change, because they are representing the real behavior of these components, in this case, the TVA.
+987700	994700	Second thing to do is to give battery to the ECU.
+994700	1006700	As already said, the Skalexio system has the possibility to give power supply to the ECU.
+1006700	1013700	In this case, I'm going to click here and have the main supply active.
+1013700	1021700	In this case, this is 24 volts, but usually you will find 12, 14 volts.
+1021700	1022700	It's the same.
+1022700	1023700	It's the same.
+1023700	1028700	In my application, the level of battery is 24.
+1028700	1036700	Then, I'm going to show you how to flash using JTAG.
+1036700	1043700	JTAG memtool is a program to flash the ECU.
+1043700	1047700	Flashing the ECU is possible using Inca and so on.
+1047700	1050700	In my application, I flash using JTAG.
+1050700	1061700	It's important that I show you these because it's possible to understand that there are many ways to flash an ECU.
+1061700	1066700	In this case, I go on key on.
+1066700	1070700	I click here to start flashing.
+1070700	1077700	I select my ECU type and then I'm able to flash.
+1077700	1085700	For example, in this case, I take the hex file and I'm able to flash.
+1085700	1092700	So, I select the hex file, I go here and I'm going to flash.
+1092700	1103700	In the meanwhile, I can show you some other outputs like, for example, CAN A status and CAN C status.
+1103700	1106700	In my application, there are only two CANs.
+1106700	1112700	Using these LEDs is possible to understand the status of the CAN.
+1112700	1116700	If the LED is green, for example, the CAN is working.
+1116700	1119700	Otherwise, if it's red, the CAN is not working.
+1119700	1128700	There are other information that we can see using this main layout.
+1128700	1137700	Like, for example, the main current, some temperatures, some pressures and so on.
+1137700	1143700	Now, the flash is finished.
+1143700	1154700	I can, for example, go on key on and then perform the crank and go in engine running.
+1154700	1159700	In this case, I can see the RPMs varying in time.
+1159700	1165700	The velocity in this case is zero because we are not accelerating.
+1165700	1168700	As you can see, here we have the accelerator pedal.
+1168700	1175700	And in this case, the pedal is to zero percentage of pressure.
+1175700	1179700	I can move, for example, go on first gear.
+1179700	1191700	You can see here and then accelerate.
+1191700	1195700	You will see the velocity changing.
+1195700	1198700	You can change gear.
+1198700	1203700	And the velocity is now changing.
+1203700	1210700	The RPMs are changing and everything is working.
+1210700	1220700	Now, another question can be, what if we want to see, to analyze a variable that is not present, for example, in this layout.
+1220700	1223700	We can create a new layout here.
+1223700	1226700	We can insert a new layout.
+1226700	1229700	We will have a blank page.
+1229700	1243700	Then, moving inside, in this case, let me restore the view.
+1243700	1246700	This is another important tip.
+1246700	1252700	It's possible to have something missing on the panels.
+1252700	1257700	You can, every time, reset view set.
+1257700	1268700	And, as you can see, it appeared, here, a new window that before was not present.
+1268700	1273700	So, for example, let's suppose that by mistake I closed this window.
+1273700	1275700	This window is not present anymore.
+1275700	1280700	I can reset here and the window will appear again.
+1283700	1291700	Now, just for example, let's go and search for another variable.
+1291700	1296700	Like, for example, here, an engine variable.
+1296700	1299700	I can take a variable.
+1299700	1308700	I can drag and drop it into the layer.
+1308700	1315700	Control Desk gives you the possibility to choose how you want to visualize the variable.
+1315700	1319700	For example, time plotter, display, and so on.
+1319700	1321700	I can add a display.
+1321700	1328700	So, for example, this is the boost pressure in this case.
+1328700	1335700	And, I can also add a time plotter to see how this variable changes in time.
+1335700	1337700	So, I will minimize this window.
+1337700	1342700	And, this is the time plotter for the pressure.
+1342700	1351700	Now, I go to the home.
+1351700	1354700	I start the measuring.
+1354700	1360700	And, I will see the behavior of the pressure in time.
+1360700	1367700	So, in this case, there is, here, the time changing.
+1367700	1370700	This is the pressure changing.
+1370700	1375700	And, as soon as I stop the measurement, the variable stops.
+1375700	1397700	So, in this case, it's possible to perform analysis on variables using time plotter, using displays, and so on.
+1397700	1402700	Control Desk gives you an interface also with networks.
+1402700	1406700	In this case, there is this panel called bus navigator.
+1406700	1415700	Analyzing the structure of the bus navigator, it's possible to see that, in this case, for example, we have two can.
+1415700	1419700	This is the first controller, and this is the second controller.
+1419700	1422700	So, we have two can.
+1422700	1424700	Of course, we have two controllers.
+1424700	1429700	So, we have two transceivers present on the real Skalexio system.
+1429700	1436700	This is, this gives you information about the real hardware present on the Skalexio.
+1436700	1442700	Adding some boards, it's possible to have numerous time.
+1442700	1451700	Sorry, adding some boards, it's possible also to have multiple cans, multiple links, and so on.
+1451700	1458700	Each board adds some transceivers to have can communications.
+1458700	1469700	In this case, if I expand here the can, I can see all the messages, and if I go here, I can see the signals.
+1469700	1472700	It's possible to have some filters.
+1472700	1486700	In this case, I can add the transmitted and the received messages, only the transmitted messages, and only the received messages.
+1486700	1491700	As you can see, it changes also the shape of this block.
+1491700	1497700	So, the received messages have this arrow on the left.
+1497700	1504700	Otherwise, the transmitted messages has the black arrow on the left.
+1504700	1522700	Now, I will filter for both transmitted and received messages, and I will add, for example, in my layout, the, what is called, generate ticks layout.
+1522700	1531700	So, when I add this, I will add this layout here.
+1531700	1537700	In this layout, I can see that we have some information about the message.
+1537700	1541700	For example, I have information about the ID of the message.
+1541700	1551700	If the message is cyclic enabled, the cycle time that can be changed.
+1551700	1555700	So, I can change, for example, the cycle time here.
+1555700	1559700	I have a button to kick out the message.
+1559700	1564700	So, if I press this button, the message will be send.
+1564700	1568700	And I have here information about the Rx times.
+1568700	1578700	So, here on the left, we have the global time, and here we have the delta time between two messages.
+1578700	1585700	As we can see, it varies, but it's close to 0.5.
+1585700	1594700	That is actually the cycle time it's present here.
+1594700	1600700	If I change the cycle time here, also the delta time here changes.
+1600700	1605700	So, I'm changing the cycle time in real time.
+1605700	1609700	I put back the cycle time to 0.5.
+1609700	1614700	And here, we have this panel to change the raw bytes.
+1614700	1621700	So, if you know how the message is structured, we can select here the raw bytes.
+1621700	1626700	We can change byte per byte.
+1626700	1637700	And then, if we press kick out, this message with the byte that I choose will be sent.
+1637700	1641700	Let's restore the condition.
+1641700	1648700	And in this bottom part, information about the signals are present.
+1648700	1652700	In this case, in this message, there is only one signal.
+1652700	1655700	This is the signal name.
+1655700	1662700	We can select the source, so if we want the source to be the input, so the model, or a
+1662700	1663700	constant value.
+1663700	1668700	Constant value that I can choose here.
+1668700	1675700	As you can see, if I put constant value, the signal value is equal to the constant that
+1675700	1676700	I'm choosing.
+1676700	1685700	Otherwise, if I put it back to input, the value will go back to the input coming from the
+1685700	1686700	model.
+1686700	1702700	Now, let's add a message that is transmitted, sorry, that is received.
+1702700	1707700	So, I go here, I generate the layout.
+1707700	1713700	And I will see here that this is a transmitted message.
+1713700	1719700	In this case, transmitted from the ECU and received to the simulator.
+1719700	1722700	So, in this case, the informations are different.
+1722700	1729700	So, since this is a received message, we cannot change some values.
+1729700	1736700	So, this is only for visualizing the values.
+1736700	1745700	In this case, this is the message, called A and B. This is the cycle time, 1 second.
+1745700	1749700	Here, information about the status of the message.
+1749700	1756700	This is the data that the message is carrying.
+1756700	1757700	And here are the signals.
+1757700	1762700	In this case, we have five different signals.
+1762700	1764700	Here are the values.
+1764700	1767700	And here the units of measure.
+1767700	1776700	In this case, we know that analyzing this message, we have the signal called ambient air
+1776700	1777700	temperature.
+1777700	1790700	So, we know that the simulated ambient air temperature is 28.5 degrees Celsius.
+1790700	1797700	Then, we can also add multiple messages.
+1797700	1798700	So, let's see.
+1798700	1802700	Let's use a filter for transmitted messages.
+1802700	1808700	I will select these five and I will generate a layout.
+1808700	1815700	In this case, it generates a layout for each message.
+1815700	1821700	So, as you can see, here on the top, I can switch between layouts.
+1821700	1837700	Switching between layouts, I am changing the layout displaying the messages.
+1837700	1840700	To delete a layout, it's possible to click here.
+1840700	1844700	It will ask if you want to change the layout or not.
+1844700	1853700	And it's also possible to create a layout for each single message.
+1853700	1858700	So, in this case, we select more than a message.
+1858700	1863700	We drag and drop the message here.
+1863700	1873700	I will click here and it will create a single bus navigator array with all the messages here.
+1873700	1880700	In the bottom part, I can switch between messages here.
+1880700	1885700	So, this is a compact view of multiple messages.
+1885700	1892700	And for each message, I will have each signal.
+1892700	1898700	So, here I can show you how it changes and so on.
+1898700	1901700	So, this is just a compact view.
+1901700	1904700	So, we created a layout.
+1904700	1908700	In this layout, we have different messages.
+1908700	1923700	Control Desk gives you the possibility to monitor the messages exchanged on a network.
+1923700	1929700	For example, if I close this menu, I can see here I have the controller.
+1929700	1934700	So, I can add an unfiltered monitor on this controller.
+1934700	1939700	So, I will see the exchange of messages of that transceiver.
+1939700	1942700	So, let's add a monitor.
+1942700	1945700	I can have here, I can select the name.
+1945700	1946700	I can change the name.
+1946700	1952700	I can select the ring buffer.
+1952700	1959700	I can select the milliseconds in which it will update.
+1959700	1963700	If I click OK, I will have this window.
+1963700	1972700	Then, I can start the monitoring and I will see all the messages exchanged on the can.
+1972700	1977700	In this case, I can, for example, here change the view.
+1977700	1983700	I can have a static view or I can have a continuous view.
+1983700	1987700	I can select tail scrolling or head scrolling.
+1987700	1992700	I can clear the monitoring.
+1992700	2004700	And here, I can select the kind, the type of the network.
+2004700	2007700	I can pause the acquisition here.
+2007700	2010700	I can stop the acquisition here.
+2010700	2015700	And, as already said, I can clear the monitor here.
+2019700	2022700	It's possible to see also the signals.
+2022700	2028700	So, for example, if I start the monitoring and I freeze it for simplicity,
+2028700	2031700	I can see here the name of the message.
+2031700	2039700	If I open this menu, I will see all the signals in this message.
+2039700	2048700	For each signal, I have information about the, if it is an Rx message or a Tx message.
+2048700	2054700	I have information about the DLC, the information about the time,
+2054700	2059700	and information about the data that that signal is carrying.
+2061700	2070700	I can do this for multiple messages.
+2070700	2078700	And also, here I can see the direction of the message.
+2078700	2083700	So, in this case, we have all Rx messages.
+2083700	2090700	But, it's possible to see the transmitted messages as well.
+2090700	2102700	Now, let's suppose we have the necessity to record some variables from control desk.
+2102700	2107700	So, first of all, I will take the variable.
+2107700	2113700	For example, here I will put, let's see, multiple values together.
+2113700	2126700	So, for example, here I will drag and drop them on the layout.
+2126700	2129700	I will select a variable array.
+2129700	2138700	So, this is an array, where I can see all the variables that I've added.
+2138700	2144700	Then, I will go here, in measurement configuration, on recorders.
+2144700	2147700	I will create a new recorder.
+2147700	2150700	This is my new recorder.
+2150700	2155700	As you can see, here, there are no variables.
+2155700	2163700	But, if I select, if I block this window, I select the variables.
+2163700	2168700	For example, I want to record only the first three.
+2168700	2173700	I can drag and drop them here in the recorder.
+2173700	2186700	In this case, when I do start measuring, these variables will be recorded and saved.
+2186700	2189700	I can select the recorder.
+2189700	2200700	I can go on properties and I can select, for example, the name, if it's active, and all
+2200700	2206700	the options, all the properties of my recorder.
+2206700	2208700	I can add a prefix.
+2208700	2213700	I can select the file type, the recording file type.
+2213700	2218700	For example, an EDF or an MDF.
+2218700	2219700	This is the preview.
+2219700	2223700	So, the preview of the name.
+2223700	2225700	I can add the experiment.
+2225700	2233700	And, I can also decide if I want to automatically export the file.
+2233700	2235700	I can select the folder.
+2235700	2240700	For example, on the desktop.
+2240700	2243700	I can select the file type.
+2243700	2254700	In this case, it automatically adds two more file types in CSV and MAT file.
+2255700	2262700	And, for example, let's select a CSV file.
+2262700	2266700	And, I can use a start condition here.
+2266700	2269700	I can select the trigger rule and so on.
+2269700	2271700	So, let's make an example.
+2271700	2276700	If I go here, I go on start measuring.
+2276700	2277700	I go on here.
+2277700	2278700	Let's see if it's running.
+2278700	2279700	It is active.
+2279700	2281700	Let's do stop measuring.
+2281700	2283700	In this case, nothing happens.
+2283700	2284700	Because I only started the measuring.
+2284700	2285700	But, I didn't click start recording.
+2285700	2286700	So, I go start measuring again.
+2286700	2287700	I go here.
+2287700	2288700	On start immediate recording.
+2288700	2289700	So, let's see if it's running.
+2289700	2290700	Let's see if it's running.
+2290700	2291700	Let's see if it's running.
+2291700	2292700	It is active.
+2292700	2293700	Let's do stop measuring.
+2293700	2294700	Let's do stop measuring.
+2294700	2296700	In this case, nothing happens.
+2296700	2297700	Because I only started the measuring.
+2297700	2298700	But, I didn't click start recording.
+2298700	2299700	So, I go start measuring again.
+2299700	2300700	I go here.
+2300700	2301700	On start immediate recording.
+2301700	2304700	I can see that the recorder becomes red.
+2304700	2306700	Here, I have information about the recording.
+2306700	2310700	So, the name of the recorder.
+2310700	2311700	The time that it's going on.
+2311700	2312700	And then, as soon as I click stop recording.
+2312700	2313700	I stop the measurement.
+2313700	2314700	I go on the desktop.
+2314700	2315700	And we'll see if it's running.
+2315700	2316700	I go here.
+2316700	2317700	I go here.
+2317700	2318700	On start immediate recording.
+2318700	2323700	I can see that the recorder becomes red.
+2323700	2324700	Here, I have information about the recording.
+2324700	2327700	So, the name of the recorder.
+2327700	2329700	The time that it's going on.
+2329700	2330700	And then, as soon as I click stop recording.
+2330700	2332700	It's still measuring.
+2332700	2334700	I stop the measurement.
+2334700	2339700	I go on the desktop.
+2339700	2345740	and I will see my file. I can open the file using Excel for example
+2345740	2350600	and I will see information about my recording.
+2353640	2360900	So in this case this is a CSV so this is not the best way to read a CSV file
+2360900	2365020	but here I have all the information that I have recorded.
+2365020	2379020	Another feature of control desk is the possibility to simulate electrical error.
+2379020	2395000	To do that we are going to insert an EES port that stands for electrical error simulation port.
+2395000	2401000	I can insert a new EES port.
+2401000	2404000	We go next.
+2404000	2410000	Before adding it I have to select the port configuration file.
+2410000	2417000	So I go here I select the button and this is the EES port config file for my application.
+2417000	2422000	Then I can move on and click finish.
+2422000	2429000	It will generate an electrical error simulation port where I have the error set here.
+2429000	2436000	I have the path of the path on which I can move on and the EES port config file for my application.
+2436000	2438000	Then I can move on and click finish.
+2438000	2450000	It will generate an electrical error simulation port where I have the error set here.
+2450000	2464000	I have the path of the path on which I can generate the electrical error.
+2464000	2471000	So let's go here for example and add these.
+2471000	2476000	Let's add a signal.
+2476000	2479000	For example this one.
+2479000	2486000	I will drag and drop it here.
+2486000	2492000	Then I have to configure the type of error.
+2492000	2501000	Selecting this box and going on properties I can see what is the error category.
+2501000	2509000	In this case I can choose between interrupt, pin to pin, short to ground, short to battery and short to potential.
+2509000	2515000	In this case let's suppose I want to perform a test on short to ground.
+2515000	2517000	This is the error type.
+2517000	2522000	In this case it is a simple short to ground.
+2522000	2530000	Then after selecting short to ground we can see that here.
+2530000	2539000	Here there is this symbol of the ground and the signal connected directly to ground.
+2539000	2546000	If I select the signal it gives me information about the type of error.
+2546000	2553000	So I can select if I want to perform this electrical error with load or without load.
+2553000	2555000	I can select without load.
+2555000	2559000	This is the signal name, the path of the signal name.
+2559000	2563000	And then here I have the allowed error category.
+2563000	2569000	So all the possible error that I can simulate.
+2569000	2574000	In this case we are performing a short to ground without load.
+2574000	2577000	But I can select any of these.
+2577000	2586000	If I go here and I do download, I do activate and then trigger.
+2586000	2589000	In this case I trigger the error.
+2589000	2598000	So if I go to analyze this high side of the LNG tank relay one for example.
+2598000	2610000	I can see that it will be present an electrical error that connects it to the ground.
+2610000	2611000	To remove the error.
+2611000	2615000	To remove the error I do deactivate.
+2615000	2617000	I will unload the error.
+2617000	2620000	I will close this panel.
+2620000	2625000	And I will disconnect the EES port.
+2625000	2630000	Here I can add multiple signals.
+2630000	2636000	For example in this case let's add all these signals.
+2636000	2643000	And I can perform simultaneously different type of error.
+2643000	2650000	Going back to the main layout.
+2650000	2653000	I can do.
+2653000	2656000	I can shift to the neutral gear.
+2656000	2659000	I can go on key off.
+2659000	2664000	So I will turn off the engine.
+2664000	2665000	And then for example.
+2665000	2671000	Here I can simulate a bus off on can A.
+2671000	2677000	So I will in this case simulating a bus off on can A.
+2677000	2680000	I can do it also on can C.
+2680000	2684000	I can reset the can A.
+2684000	2686000	So I will remove the bus off.
+2686000	2688000	I will remove the bus off from here.
+2688000	2690000	I can reset the can.
+2690000	2692000	I can reset the can.
+2692000	2695000	And I can also perform a model reset.
+2695000	2698000	With this button.
+2698000	2702000	I can reset everything from the model.
+2702000	2705000	I have also the possibility to.
+2705000	2708000	In this case select the RPMs.
+2708000	2711000	And I can fix them.
+2711000	2713000	So let's try.
+2713000	2715000	I go on key on.
+2715000	2720000	I can fix this value of RPM to 2000.
+2720000	2723000	As soon as I click this button.
+2723000	2724000	The RPMs.
+2724000	2725000	Will go to.
+2725000	2726000	2000.
+2726000	2727000	And.
+2727000	2728000	The engine running.
+2728000	2729000	Now let's remove.
+2729000	2730000	From here.
+2730000	2731000	And let's analyze.
+2731000	2732000	This other layout.
+2732000	2733000	This layout.
+2733000	2734000	I present.
+2734000	2735000	All the temperatures.
+2735000	2736000	Pressures.
+2736000	2737000	Switches.
+2737000	2738000	And lambda.
+2738000	2739000	Also valves.
+2739000	2740000	Position and sensors.
+2740000	2741000	That it's possible to use.
+2741000	2742000	During the test.
+2742000	2743000	In this case.
+2743000	2744000	If I want to modify.
+2744000	2745000	For example.
+2745000	2746000	The manifold pressure.
+2746000	2747000	I can.
+2747000	2748000	Put here.
+2748000	2749000	Value.
+2749000	2750000	And.
+2750000	2751000	As soon as.
+2751000	2752000	I click this button.
+2752000	2753000	It will override.
+2753000	2754000	The value.
+2754000	2755000	Coming from the model.
+2755000	2756000	So in this case.
+2756000	2757000	I'm.
+2757000	2758000	Forcing.
+2758000	2759000	The manifold pressure.
+2759000	2760000	To be.
+2760000	2761000	A thousand.
+2761000	2762000	Pascal.
+2762000	2763000	I will.
+2763000	2764000	Remove.
+2764000	2765000	The switch.
+2765000	2766000	And I pull.
+2766000	2767000	It back.
+2767000	2768000	To zero.
+2768000	2769000	Of course.
+2769000	2770000	It's possible.
+2770000	2771000	To create.
+2771000	2772000	Different.
+2772000	2773000	Layouts.
+2773000	2774000	Based on.
+2774000	2775000	What we need.
+2775000	2776000	And.
+2776000	2777000	Let's.
+2777000	2778000	Insert.
+2778000	2779000	A new.
+2779000	2780000	Layout.
+2780000	2781000	And.
+2781000	2782000	Let's.
+2782000	2783000	Insert.
+2783000	2784000	A new.
+2784000	2785000	Layout.
+2785000	2786000	And.
+2786000	2787000	Let's.
+2787000	2788000	Insert.
+2788000	2789000	A new.
+2789000	2790000	Layout.
+2790000	2791000	And.
+2791000	2792000	Let's.
+2792000	2793000	Insert.
+2793000	2794000	A new.
+2794000	2795000	Layout.
+2795000	2796000	And.
+2796000	2797000	Add.
+2797000	2798000	For.
+2798000	2799000	Example.
+2799000	2800000	A couple.
+2800000	2801000	Of.
+2801000	2802000	Variables.
+2802000	2803000	In.
+2803000	2804000	This.
+2804000	2805000	Case.
+2805000	2806000	Let's.
+2806000	2807000	See.
+2807000	2808000	If.
+2808000	2809000	I can.
+2809000	2810000	Let's.
+2810000	2811000	See.
+2811000	2812000	Let's.
+2812000	2813000	Add.
+2813000	2814000	Those.
+2814000	2815000	Two.
+2815000	2816000	Variables.
+2816000	2817000	And.
+2817000	2818000	Add.
+2818000	2819000	Let's.
+2819000	2820000	Add.
+2820000	2821000	Those.
+2821000	2822000	Two.
+2822000	2823000	Variables.
+2823000	2824000	And.
+2824000	2825000	Add.
+2825000	2826000	switch.
+2826000	2828000	Just.
+2828000	2830000	têm.
+2830000	2831000	Pass.
+2831000	2832000	We.
+2832000	2833000	These.
+2833000	2834000	Two.
+2834000	2835000	Variables.
+2835000	2836000	Two.
+2836000	2837000	Variables.
+2837000	2838000	As.
+2838000	2839000	Numeric.
+2839000	2840000	In.
+2840000	2841000	This case.
+2841000	2842000	I.
+2842000	2843000	Thank.
+2843000	2844000	I.
+2844000	2845000	Let's.
+2845000	2846000	find.
+2846000	2847000	Variable.
+2847000	2848000	That.
+2848000	2849000	Is.
+2849000	2850000	An.
+2850000	2863400	For example, the temperature sensor of the rail, I can add it as a numeric input, I can
+2863400	2886000	also add the rail pressure, also the engineeristic value, and I am able to change those values
+2886000	2890800	because they are inputs.
+2890800	2901920	It's also possible to connect multiple inputs to a single box.
+2901920	2922640	So let's add two variables, in this case I'll lead this one to this box, in this way.
+2922640	2933760	So I go on variables, I select the variable that I want to add, in this case this one.
+2933760	2939140	Drag, drop it on the box.
+2939140	2949540	Then it will override the values.
+2949540	2968100	If I can select this one, and I select also this one.
+2968100	2979220	If I select the variable here, I put it here as numeric input, I right click on this variable,
+2979220	2990340	and I drag and drop it on main variable, I can select if I want to copy the variable here,
+2990340	3000100	if I want to move here, and I can connect to a new instrument, and also I can connect as additional
+3000100	3001460	right variables.
+3001460	3016580	If I select the variable, if I select the variable, if I select the variable, I go on properties,
+3016580	3026580	I will see here that I have one additional right variable, there is one connection.
+3026580	3042420	Then, let's suppose I want to create a new, numeric input, like for example, in this way.
+3042420	3051620	I can see that this is the name, block and variable, if I select it, go on here.
+3051620	3061460	I can change the colors, the border style, and so on.
+3061460	3075380	I can change the height, the width, and so on of the text, change the color, and also I can change
+3075380	3078580	the text box color, if I need to.
+3078580	3091460	Now, let's suppose I want to add this variable here, I will drag and drop it right here,
+3097940	3101460	I will drag and drop it here,
+3101460	3113300	then I will copy this variable here, sorry, I will move this variable here.
+3113300	3131380	I will add it from the variable browser, so let's reduce this window, let's put this here,
+3131380	3143380	here, I select the variable, I drag and drop it on the new, numeric input, and it will have the value of the variable.
+3144260	3160900	If I select, here, also this value, with the right click, I drag and drop it here, I will connect as an additional, right,
+3160900	3172900	So now, when I change this value here, it changes both the engineering value, and both the physical value.
+3172900	3188900	So, in this case, as you can see, as you can see, with one numeric input, I can change two variables, it's not true, the control, so in this case, if I change those,
+3188900	3210900	you will not see a change here, as you can see, as you can see, you will see the change only for the physical value, if I change the engineering value, it will remain the same.
+3210900	3238900	Going back to the slides, you can see that you can create, in the working area, many inputs, for example, in this case, we can create a panel for signal generator, in which we can change the frequency,
+3238900	3249900	frequency, the amplitude, the frequency, the amplitude, and the offset, and in this case, in the right part, we're going to see the variables changing in time using the time plotter.
+3249900	3276900	So, the inputs that we can select are many, I will quickly show you, what are the inputs, so going back to control desk, those are all the instrument that you can select, for outputs, for example, bar display, for input,
+3276900	3287900	a knob, a knob, numeric input, a slider, and so on, so those are all the inputs and outputs that you can select.
+3287900	3304900	Lastly, it's important also to note that there are present some help guides from this space, I will show you how to access them, if you go on file, there is the help here,
+3304900	3328900	and from here you can access to the space help, using the space help, PDF files, so, for example, I go on PDF files, I will see all the PDFs present on my PC, for example, I can go on control desk,
+3328900	3351900	bus navigator, bus navigator, bus navigator, I will open it, and I have the help of control desk, made directly from this space, on which I can see all the features, all the possibility that control desk offers.
+3351900	3366900	Here I can go, for example, here I can go, for example, in the introduction, to the bus navigator, and I can study it, even if I don't know how to perform some tests, some maneuvers, and so on.
+3366900	3380300	So, the help of this space is really important, and this space provides the help for every tool, for example, automation desk, control desk, and so on.

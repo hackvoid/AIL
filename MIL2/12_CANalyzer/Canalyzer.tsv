@@ -1,0 +1,1467 @@
+start	end	text
+0	12000	Ciao, I'm Clippo and today we are going to see how the canaliser can be used in order to perform several actions.
+12000	23000	For example, this tool can allow us to go through an analysis and also a stimulation of a bus communication system.
+23000	40000	As you know, the bus communication systems are widely used in the automotive sector because they are basically mandatory means that are used to communicate between electronic control units.
+40000	53000	There are several types of bus communication systems. The main ones, for example, are CAM protocol communication, the Lean one, FlexRay and several others.
+53000	64000	I suggest you, if you did not do that before, to go through the CAM protocol lesson because it will be very useful for you.
+64000	71000	And it contains a lot of mandatory information in order to better understand this canaliser lesson.
+71000	84000	So, first of all, the screen that you are just looking at is the main page of the already prepared canaliser configuration.
+84000	97000	As we were telling before, canaliser can be used in order to check, for example, if there is a communication between several TCUs in a bus communication system.
+97000	116000	And also, in case of a positive response or a communication ongoing, it will allow you to perform also an analysis and a study of the kind of communication and any issue of the communication itself.
+116000	128000	On the other hand, canaliser will allow you to collect data, so perform and acquire data from the communication itself.
+128000	135000	In order to get started, let's open a new configuration.
+135000	139000	We will have the opportunity to start from the basics.
+139000	142000	So, let's go here, new.
+142000	144000	Let's open up the default one.
+144000	148000	Click on create configuration.
+148000	155000	And the window that you will see open would be something like that.
+155000	158000	We are in the phrase layer.
+158000	161000	You will understand later what it is.
+161000	164000	So, let's move to the configuration layer.
+164000	174000	And here you've got one of the most important window of canaliser tool, which is the measurement setup window.
+174000	185000	As you can see, there are several blocks here with different names and that can be used in order to perform several things.
+185000	191000	First of all, there is this block here where you see offline and online.
+191000	200000	This is the data source where you can find basically if you want to work online or offline.
+200000	212000	Online means basically that you are currently using a cam case and canaliser connected to a specific, for example, cam communication bus.
+212000	220000	And you are looking at the cam communication in real life.
+220000	227000	So, the communication is ongoing while we are looking at it and we are analyzing it.
+227000	231000	On the other side, what we can do is work in offline mode.
+231000	241000	So, if you double click here, as you can see, these two blocks here just turn gray and we enable this folder here.
+241000	248000	Now we are in offline mode, which means that we can, for example, but we will see this later.
+248000	254000	We can start from a already acquired log.
+254000	265000	So, already collected the information from a cam communication, which happened in the past and from where we acquired the data.
+265000	267000	And we can review that offline.
+267000	276000	So basically just using our PC, we do not need to be physically, for example, connected to cam communication system, the cam bus.
+276000	286000	So these are the two main modes of operation that we can go through and we can use to canaliser.
+286000	291000	There are here several other blocks that can be used.
+291000	295000	Statistics ones, trace, data, graphics, logging.
+295000	300000	We will dive deeper into those in the next minutes.
+300000	302000	So, don't worry for now.
+302000	308000	But apart from the operational mode that we can use canaliser for.
+308000	311000	There are also analysis windows.
+311000	317000	For example, in online mode, we can insert an interactive generator blocks.
+317000	323000	To set the cam communication itself.
+323000	328000	A program node to use, for example, cable programs.
+328000	338000	So basically codes that are written by ourselves and that can be used in order to perform several stimulations of the cam communication.
+338000	344000	We can insert filters of different kinds.
+344000	345000	Channel filters.
+345000	349000	So filtering by specific cam communication channels.
+349000	354000	Or we can add event and variables filters.
+354000	363000	To have a closer look at specific things that we want to look at.
+363000	375000	And in online mode, as you can see, we can, for example, here enable the logging block.
+375000	379000	And this is the way we can use in order to collect data.
+379000	385000	And that can be done and reviewed in offline mode.
+385000	395000	So, let's move to the first things, the most important ones, in order to configure our canaliser setup.
+395000	400000	First of all, we need to understand here, on top, the hardware layer.
+400000	405000	We need to set up the hardware configuration that we are currently using.
+405000	414000	For this lesson, we will use a lot that was acquired in the program that I'm working with.
+414000	423000	And basically here, on channel usage, the log was performed acquiring only one cam bus communication.
+423000	428000	So here on cam, we need to select one.
+428000	434000	I did not acquire any link communication in the log that we will use.
+434000	436000	So we select here zero.
+436000	438000	And select OK.
+438000	451000	As you can see, in this right window here, the system is telling us that all channel specific options are OK.
+451000	453000	So we can move on.
+453000	456000	In particular, we have here top left channel mapping.
+456000	470000	So here what we can do, we can basically link on the application channel column here, the virtual can channel.
+470000	474000	And that canaliser will use for its operations.
+474000	478000	With the hardware column link.
+478000	490000	Which is basically the real channel of the can case that is physically connected to the computer, to the PC that we are using in order to run canaliser.
+490000	501000	For example, right now, this window, among all the choices, you see that under transceiver column, we've got only virtual can channels.
+501000	507000	And that's because right now I do not have any can case connected to my PC.
+507000	523000	So canaliser allows us to perform any kind of operations that we want, but it's telling us that we do not have any real and physical can case connected to the PC.
+523000	530000	And so we can just use virtual channels, but that is enough for our demonstration of canaliser usage.
+530000	542000	So let's click OK and let's use the virtual can channel 1 to the virtual can bus 1.
+542000	551000	Now we've got to configure the kind of can bus communication that we want to review in offline mode.
+551000	557000	I acquired a log from the program, as I was telling before, that I will work on.
+557000	575000	And specifically, this is a program with a network topology equal to Atlantis side can have the communication, which is basically flexible data rate and protocol.
+575000	579000	Which means that, for example, here, as you can see, can 1.
+579000	585000	This is the same virtual can channel that we just configured on channel mapping.
+585000	595000	But as you can see here, cam controller mode, we cannot use cam with a baud rate up to 500 kg baud.
+595000	601000	But we need to select this window ISOCAMFD flexible data rate.
+601000	617000	And as you can see, the data rate field just appears because, as you can understand from the cam protocol lesson, cam flexible data rate communication differs from the standard cam communication.
+617000	621000	So let's now go ahead and choose six分 box,fal file method that we coffee discussed.
+621000	623000	So let's select how to load our weights achieve this calculation, how to load our weights in camp and unmute it and get we are having them aside to pouring spikes.
+623000	632000	We must give you we 5출 the probability of swine output into it.
+632000	633000	Back to this values at 9 Ginger pole parameter.
+633000	635000	This is the second value procedure.
+635000	638000	And the way we just substitute what we prepared to do, we make it a while going to increase ourploy Polar,
+638000	639000	so it's actually highly strategic data set-up時間.
+639000	641000	So I really ON questions, I'll continue to ensure that we wanted this one.
+641000	651880	soon as we set up correctly the data rate okay and what we can do now is for
+651880	662360	example adding here in offline mode the source that we want to use for our
+662360	671240	activities in particular as I told you before we will use an already acquired log so we click here
+671240	681000	add offline source my source is here a blf file so binary logging file
+684120	691640	and as you can see now that we add this offline source the one that we just selected it appears
+691640	697080	also here in the measurement setup window just above the folder where we double click
+699240	705400	if you guys have got a log for example in a different file which can be
+707080	715960	i don't know a national file in order to perform this offline analysis of the data you need to
+715960	724840	convert it to a blf so what you need to do is very useful on this side as well you can go here on
+724840	734920	tools login file conversion click here and as you can see there are two fields source file destination
+734920	742600	file on source file you need to select the file that you want to convert into a blf file so you can see
+742600	754600	file select it and then automatically here analyzer tells you the destination of the file the name of the
+754600	762120	file and the format which is dot blf you can change the name you can change the destination wherever you want
+763080	776440	for example here try at the end of the name save save and you just need to wait for the analyzer conversion
+776440	785720	of the file as you can see here there is a percentage and as soon as it goes up to 100 you have your file
+785720	795320	converted to a blf one let's just wait for it to finish but we have already uploaded here a blf file so we are good to go
+800360	801640	okay let's close here
+803800	812280	before moving to the analysis windows the trace one data graphics and so on let's see another very
+812280	821640	very useful feature that analyzer provides to us which is on tools top left can db plus plus editor
+825320	827240	open it as you can see
+829640	840440	this window here on this bottom allows you to open or even create a new dbc file database scan file
+840440	853800	that let's add example this dbc file that will be needed for us to review the log that we want to use for this demonstration
+856840	867880	and here as you can see there is the old dbc file that we just uploaded vector can db plus plus editor allows
+867880	879160	you not only to create dbc files but also to add new messages new network nodes and you can signals
+879880	889000	into the already existing and this is the case dbc file for example we can click on here network nodes new
+889000	902920	and we can add this window here the name of our node that we are just creating so try node we need to
+903560	908600	give it the hexadecimal address let's use one two three
+908600	919400	and now we can create and now we can for example proceed creating a new message among the list of all
+919400	929320	already existing can messages so let's click on the right button of the mouse messages new message let's call it
+929320	946040	try message id id 2.4 dlc data land code 8 it's fine and we can click ok so i'm on the list of messages here
+946040	950360	where we can reduce and expand if we search for
+950360	960840	try message here it is we'll find it here so we can click click with the right button and message
+961480	968120	transmitter as you can see we create a new message but we did not set up yet which is the vcu
+969080	977320	and this can buzz that is transmitting this message so you can for example click on here transmitter layer
+977320	989320	add add and you can select the ecu in the this dbc because it's transmitting the new message that we created
+989960	994280	so we select the try node that we just created
+999000	1006760	and we click ok the same goes for a signal if we want to create a can signal inside
+1007320	1014040	messages messages that we just created right button new and the process is
+1015080	1025160	pretty much the same one for that we go through and went through for the node creation and account message creation
+1025160	1042200	we can select here for example by order value type sign sign load double unit or scaling factor offset minimum maximum
+1044760	1050280	and what we need to do for example in such a scenario we need to
+1050280	1059400	link to link this signal to the can message that contains the signal itself so on the signal we go on messages
+1060120	1063720	add we need to select from all the can messages
+1063720	1069320	this message that we just created try this so okay
+1072280	1073080	and here it goes
+1073080	1087400	can db plus plus editor is very useful in order to not only create but also to modify existing dbc database
+1088120	1099320	we can as you just saw we can find transmission and reception relationships we can adjust can signals
+1099320	1105880	position inside the can message and so on let's go back to the
+1108520	1112680	main canalizer window measurement setup window
+1115080	1124440	as a canalizer user you will be able to analyze the bus communication depending from
+1124440	1134280	the kind of communication so if it is a can if it is based on can protocol link protocol flex ray and so on
+1135240	1136360	but there are a lot of
+1137640	1139960	windows that will support you in your
+1140520	1142680	analysis and in your
+1143720	1144040	work
+1144920	1145720	which are
+1146600	1151240	the ones that we just mentioned before so let's go through them one by one
+1151240	1159480	just to complete our basic setup configuration so we
+1160920	1162680	configure the hardware side
+1164360	1173240	we configure the offline source that we want to use for our demonstration a very important thing to do
+1173240	1178840	right now is adding here on analysis stimulation
+1180520	1184520	clicking on database management there can dbc that
+1185640	1186600	we need to link
+1187800	1195800	to the virtual can channel that we are using in order to review the log that we acquire and that we are
+1195800	1208280	reviewing right now that's because otherwise we will not be able to recognize the can messages that are inside the log that we are reviewing
+1209480	1209880	because
+1211240	1217320	canalizer in order to correctly recognize the can messages needs a sort of let me say
+1217880	1224280	and communication translator which is the can dbc according to a specific can message id
+1225160	1225960	for example
+1227080	1236440	canalizer will be able to recognize the message itself and so for example recognize which are the can signals inside the can message
+1237400	1241800	which are those positions inside the can message so
+1241800	1249400	analyzer will be able to convert the can signals values and so on but analyzer needs a source in order to
+1249640	1259800	mapping a translator in order to perform all these actions and that is the dbc so on can channel one which is the one that we are
+1260760	1262760	configured
+1262920	1265880	we click with the right button add database and
+1265880	1273560	and then we select the dbc that we firstly used in order to acquire the logo we are reviewing
+1277240	1281400	and as you can see we just added for the channel one this dbc
+1282040	1287400	here canalizer tells you the file name and the path where the file was extracted from
+1287400	1295640	so first window that we are going to look at is trace window
+1296920	1303400	as you can see on the trace layer bottom left there is already an already open trace window but
+1303960	1310280	we can close it for example and we can insert it again and analyze the stimulation
+1311240	1316200	clicking here on trace view trace and here it is
+1318600	1320600	if we want to run the
+1321320	1324280	simulation so review the already acquired data
+1325240	1332200	on this file here we can go on trace and click on the top left button here start
+1332200	1339960	as you can see there is a time reference here that is running a channel
+1341640	1352360	here cam5 id this is the example id of this cam frame this is the data field
+1352360	1365240	of this cam frame the one the method the one with id 119 but as you can see under name there isn't anything
+1366600	1375560	and that's because we are using here on channel mapping the virtual cam channel one
+1376520	1386680	while as you can see when this log was acquired it used channel cam5 so first of all
+1387560	1393080	if it happens to you to be in this same scenario we need to go back here in the
+1393080	1399960	measurement setup window right click here on the folder where we uploaded
+1399960	1406280	the log that we want to review offline mode configuration
+1409240	1415960	on the channel mapping layer here click add new set bus type
+1417640	1425160	we are reviewing our can communication bus data so can source channel so basically what we need to do
+1425160	1437400	one remember from the trace here just we need to re-address all the messages that were acquired on cam5
+1439000	1448120	we need to re-map them to this nation channel one because this is the one that we are currently
+1448120	1455240	used in order for the data so we just created a new channel mapping set called channel mapping set one
+1456120	1463800	but we need we can also rename it but it doesn't matter this channel mapping setup will take all those
+1463800	1473880	messages from cam5 source channel and we will remap them to the cam channel one let's click okay
+1473880	1482600	right button again offline file list this is the file currently uploaded channel mapping here known
+1483320	1490200	but we need to use the one that we just created we select it close it back to source
+1493320	1496280	and we're on the log as you can see now
+1496280	1505000	the channel the channel that is being recognized for all those can messages that were transmitted at
+1505000	1515880	these time stamps here through all the log are now seen coming from can one and as you can see here
+1516440	1525880	we are recognizing also the can message name because right now we are using correctly both the can
+1526680	1542680	channel and also the can database so as you can see here the trace window allows you to basically look at
+1544360	1552520	the transmission and reception of all the cam messages inside for example this offline log but that can be
+1552520	1562840	be done as well on the other hand in online mode while for example performing an operation called sniffing which is
+1562840	1571320	basically a passive listening of the campaign communication in real time and
+1573240	1578920	you can perform several actions here for example on the trace window you can
+1578920	1587240	have a detailed view of the communication so i'm selecting one message here you can see
+1588280	1590760	which is the time stamp that was
+1592920	1595400	acquired the direction ex
+1597560	1601400	the name of the cam messages with this nid
+1601400	1611480	the channel that it went through dlc.9 code the data field in extra decimal values byte per byte
+1612120	1620760	and also the list of all the cam signals inside the cam message and the values that they've got at that time
+1622040	1628200	that the message was sent you can have a similar signal value description here
+1629160	1635480	for example just clicking expanding the cam message here on the left plus and here it is
+1637640	1644120	basically those can signal values are the same ones that are present here on the data field
+1644120	1650680	here in the decimal values which is this report here but the canalizer is converting
+1650680	1660120	these data field according to the dbc that we associate to the scan channel so basically canalizer is taking
+1660120	1668600	these data field in decimal values and using the dbc is recognizing the can signal position inside this
+1668600	1677240	cam message and converting them according to the dbc factor offset and minimum and maximum
+1678120	1689240	indications that are recording there you can perform other thing you can for example add some markers here
+1689240	1696520	clicking with the red button on this gray column new markers so for example if you want to associate to this
+1696520	1704920	specific specific time instant and who can message transmission or reception a specific level name
+1704920	1719480	or no level marker try you can also add a comment and have a background color program color program color
+1720120	1724360	you click ok and you have the marker here so just scrolling with the mouse
+1726040	1728920	and pointing at it you will see even marker dry
+1730680	1732360	mark the name and a comment
+1733560	1734920	and you can remove it just
+1734920	1742680	that you can remove it on the other hand if on the top left here you've got the detail view you can
+1742680	1751560	add also statistics view which is a little bit different from the detail view because for example
+1752120	1761320	statistic view we are pointing to a specific message and this those columns here are telling us
+1761960	1771800	for example all the can signals inside that can message but also minimum maximum average value
+1774040	1776440	we can also perform
+1779160	1780440	several other things
+1781160	1783000	for example we can have a difference view
+1784440	1785160	selecting
+1785160	1790120	different signals for example engine have to choose
+1791960	1796360	here at this time stamp but it was also sent
+1797960	1801560	previously or after this time reference
+1802520	1808440	and so we can for example select it from trace window and have a
+1809080	1812680	conversion between the signal values for example
+1812680	1816840	respect to two different time instant and so on
+1818920	1827320	there are other windows very useful for example the graphic window here that you can find when you open
+1827320	1832760	a new configuration on the analysis layer here at the bottom of the main window
+1832760	1844520	but as for the trace window you can go here top left a nice simulation and add a new graphic window just clicking on it
+1844520	1849320	and this is very very useful because it can
+1850280	1858840	can give you a visual reference for example i can signal evolution to in this case a radio parallel
+1859640	1868520	so you can click on this blank column blank section here right button add signals
+1868520	1872600	here we've got basically the whole dbc
+1873240	1877880	that we can create this is the dbc name
+1880520	1882520	so among all the can signals
+1883480	1885960	you can choose whatever you want
+1887000	1889800	but for example we can filter for can messages
+1890360	1896520	so if we know that a specific signal that we are interested in is inside the can message
+1896520	1904200	yes bcm fd9 you can search for the cam message and then we can signal inside of it
+1904840	1908840	or we can also filter by the means so
+1910200	1914920	the bus node that transmits that specific cam framework and signal
+1915960	1918120	let's for example add the vehicle
+1918120	1933240	let's check it and drag it here on the left just click on apply it will appear here okay
+1935320	1941000	and as you can see here we've got its name but we do not have any value yet
+1941000	1949320	and we've got just a whole blank window so what you need to do is run again canalizer top left
+1951000	1956600	and you will see that now it's running to the log and you've got something moving here
+1957960	1964600	so on the y-axis you see the calcium that we have the vehicle speed vso signal
+1965400	1972040	the measuring unit the km per hour while on the x-axis you've got the time
+1974280	1982360	if you want to adjust for example the whole graph according to the whole long time period acquired
+1982360	1988280	you can click here fit x and here you are
+1988280	1996920	you've got the evolution of the vehicle speed can signal to the whole candle as you can see it was
+1996920	2003400	equal to zero for a very long time and then start increasing decreasing and so on so what you can do
+2003400	2011960	is for example adjusting not only the x-axis but also the y-axis in order to have a better understanding
+2011960	2021560	of the value that for example this can signal had during the log but if you want to have further
+2021560	2031320	detail on specific values that you can signal had you can click on here so you can activate the measurement
+2031320	2039320	cursor as you can see the top left a column just here the y one here so if you smooth
+2039320	2050120	the measurement marker that we just added you will see near the cursor that you've got a value
+2050120	2056440	represent of the value of the signal but also the time instant
+2056440	2064760	and so let's move for example here when the vehicle speeds start increasing and you see the reflection
+2065480	2072840	on the top left of the value but also on the marker measurement here axis that we added
+2073800	2079960	if you want to perform a comparison between different time distance you can click here
+2079960	2090200	so you will just activate the difference cursor you can see another column here here and another
+2090920	2099560	measurement marker appeared here the red one so you can move for example marker the difference marker
+2099560	2106840	and as you can see for this marker here you just have not only the value of the signal for that time
+2106840	2116280	reference but also the t1 which is a time distance of course and the dt so the difference
+2117720	2124280	time period between the two measurement markers and if you want to have
+2126360	2133000	the same delta measurement but not for the time references between the two markers but for the
+2133000	2140680	y values so the values of that you can see now between the two different time instances you can refer
+2140680	2151080	to the p y here column so between marker blue marker and red one for example the vehicle speed difference
+2151080	2160840	is equal to 80 kilometers per hour which means that if the blue marker the value of the vehicle speed was
+2160840	2167400	equal to 36 basically meters per hour you've got some to add to it
+2168600	2179240	80 kilometers for a total of 115 and 16 km per hour in order to add the red value the red marker value of the
+2179240	2206920	can signal what you can do here is adding also a lot of several can signals because you can do that not only with this one can signal but basically all of the can signals inside of the dbc that we're using so for example always clicking here with the red button add can signal we can
+2206920	2212200	and i don't know how for example the engine speed
+2215640	2221080	can signal and need to run again
+2222840	2224360	analyzer in order to have
+2227320	2231080	an uploading of an upload of this can signal evolution
+2231080	2235080	and as you can see we just have a
+2237080	2239880	a sort of yellow let me say
+2241720	2245960	value here that goes up and down this is the edge speed the one that we just
+2247000	2247400	added
+2248760	2252760	and the same things can be done with markers
+2253720	2258440	but what you need to do in order to switch from
+2260680	2265880	from a can signal analysis to the other one is selecting the one that you want to
+2266360	2274440	refer to because if we select here the engine speed can signal the markers will tell the value of that can signal
+2274440	2277320	not the vehicle speed for example anymore
+2278760	2280760	so if we want to separate them
+2282120	2284920	we can do that here so
+2286120	2287080	we click on here
+2288200	2290520	show signals in separate diagram
+2291240	2292280	as you can see now
+2293080	2296360	two can signals are splitted in two different
+2297000	2298520	windows with the same
+2298520	2307320	x reference or the same time distance we can again adjust the x axis and
+2308120	2312840	adjust the all and fit all the signals y axis
+2315800	2316040	so
+2317640	2322920	these are some of the most important features on the graphic
+2323880	2326840	window you can zoom in
+2328200	2330600	example with specific term references and
+2331400	2334920	adjust y axis you can
+2336920	2338840	let's go back to the whole log here
+2338840	2339960	you can click on here
+2340600	2343720	which is drag zoom mode so instead of clicking
+2344920	2346680	zooming in or zooming out
+2347720	2349480	by one click at a time
+2349480	2352040	you can click the drag and zoom function
+2352040	2358840	and basically selecting the part of the graphs where you are interested in
+2361080	2364440	and you can move signals up down
+2365000	2368520	but there are a lot of feature here you can undo whatever you just did
+2369400	2370040	and so on
+2371320	2372840	it's very very useful
+2373720	2376200	from a visual point of view
+2376200	2386200	but let's now go back to the main measurement setup window and let's go through for example the
+2387400	2391960	data here window let's double click here
+2394360	2401160	right button add signals let's do that with the same signal that we just used
+2401160	2402680	vehicle speed
+2404280	2404840	and so
+2404840	2405240	sig
+2406760	2407240	fly
+2407240	2408120	and
+2408120	2410600	engine speed
+2413480	2415080	okay they appear here
+2416920	2419960	and what happens for example you see several
+2419960	2423480	columns name value unit row value bar
+2424440	2425000	which is a
+2426040	2426440	sort of
+2427400	2429640	progression bar which shows you
+2430280	2430680	visual
+2431560	2434840	from visual point of view the evolution of the can signal menu
+2435320	2435960	if you run
+2440360	2445080	an evolution of the can signals this is very useful when it is used
+2446040	2446680	for example
+2447800	2452360	while performing online activities so you are connected to a real bus
+2453560	2455560	a real cam bus for example
+2456520	2462520	where there is an ongoing communication between issues and you can have a visual reference for
+2462520	2465720	specific scan signals the one that you are interested in
+2467000	2468920	about the evolution and so on
+2469880	2470120	so
+2470120	2470760	um
+2471560	2472840	basically data window
+2474200	2476280	display as you just see
+2477160	2477880	as you just saw
+2478440	2479720	the values of
+2479720	2483560	can signals or system variables diagnostic parameters
+2484120	2486440	whatever you want in different types of
+2487160	2488040	representation
+2488920	2489480	and
+2489480	2490600	they give you
+2491400	2492280	sort of
+2492280	2494600	graphical overview of those things
+2494600	2496280	there are
+2497880	2501320	other windows for example the can statistics one
+2502760	2505000	as you can see they are all available here
+2505480	2506520	if you want to open them
+2508280	2509400	can statistics
+2510600	2513000	here you've got different informations
+2514840	2517800	for example regarding the bus activity
+2519320	2520120	which can be
+2520920	2521800	can lean
+2521800	2522520	flex ray
+2522520	2523320	whatever they are
+2523320	2525240	during measurement
+2525240	2528520	while operating in online mode or after a measurement
+2529800	2534200	among those information there are as you can see the bus load percentage
+2535960	2538520	the minimum sending in distance in
+2539560	2540360	millisecond
+2542280	2544760	or i don't know frame per bus
+2545640	2546680	cheap state
+2546680	2548120	transceiver errors
+2548120	2550040	standard data
+2550040	2550600	standard data
+2550600	2551160	counters
+2551160	2551800	counters
+2551800	2552920	and so on
+2552920	2554520	so if we run again
+2554520	2556680	you will see for example the bus load
+2556680	2557000	here
+2557880	2560120	evolving or the standard data
+2561160	2561880	calculation
+2564200	2565720	and you will also have
+2566360	2566920	not only
+2568760	2571240	an indication of the current and last
+2572200	2575080	values of those information but also
+2575080	2577480	minimum minimum maximum and average value
+2580440	2580680	so
+2581560	2583000	let's move to
+2584120	2587320	another very powerful feature that
+2588360	2589160	analyzer
+2589800	2591720	offers you which is
+2592440	2594280	the diagnostic feature site
+2594280	2596200	you can find it here
+2596200	2596760	you can find it here
+2597880	2598440	tools
+2604200	2606120	on my bed
+2606120	2608120	you see diagnostics here
+2608120	2608440	sorry
+2609000	2610200	here on the top left
+2610200	2611800	so
+2612920	2614440	what we can do here
+2614440	2615480	basically is
+2616040	2617880	analyzing and studying
+2617880	2620120	also the diagnostic communication
+2620760	2624120	according to the several diagnostic protocols
+2624120	2626600	that can be used in the automotive sector
+2626600	2627320	for example
+2628280	2630760	the unified diagnostic services
+2630760	2631720	standard one
+2631720	2633560	or the keyword protocol
+2633560	2637800	so the starting file
+2638600	2640280	that needs to be used
+2640280	2641080	for example
+2642280	2645080	in order to perform this kind of analysis
+2645080	2646600	is the
+2648120	2648920	cdd
+2648920	2651240	diagnostic
+2652200	2652440	and
+2654520	2655640	that can be done
+2656200	2656440	here
+2657080	2659400	adding diagnostic description
+2659960	2662120	you can use basic descriptions
+2662120	2663400	already available in
+2663400	2664440	canadizer
+2664440	2664840	as i
+2666360	2667240	told you
+2667240	2668520	there is already available
+2668520	2670680	the uds or keyword protocol one
+2671320	2671560	but
+2672760	2673480	let's use
+2674840	2675720	these here
+2676680	2678760	let's search for a specific file
+2678760	2679480	since i
+2680520	2682920	i've got the cdb for my
+2683960	2684680	for my program
+2684680	2686120	so
+2688200	2688920	search for it
+2697000	2699080	we select the dot cdd file
+2699080	2700760	canal data diagnostic file
+2703320	2707000	and let's wait for it to be uploaded in canalizer
+2707000	2713800	so as you can see
+2714360	2717320	we just uploaded this file
+2717320	2718360	this is the path
+2719080	2721960	the specific interface that
+2722840	2723560	we've used
+2723560	2725480	and then we've described
+2725480	2727880	for our kind of diagnostic communication
+2728440	2728840	click ok
+2729640	2730760	and then we click on
+2731480	2733000	diagnostic parameters
+2737400	2738760	what we can do here is
+2739960	2740440	adding
+2741880	2742760	a lot of things
+2745160	2745800	for example
+2746280	2746920	that would be
+2747960	2748280	used
+2749480	2750120	mostly
+2750680	2752520	not be used in offline mode
+2753240	2753480	but
+2754360	2756840	it can be used in online mode
+2756840	2758440	in order to interact
+2758440	2759240	for example
+2759800	2760360	with the
+2762600	2764200	ECU under testing
+2764200	2764680	for example
+2764680	2765480	because
+2765480	2766360	as you can see
+2766360	2767720	if we are in offline mode
+2767720	2768600	we cannot
+2768600	2770280	use the diagnostic console
+2770280	2771960	the cold memory here
+2771960	2773880	window and the session control
+2773880	2774520	neither the
+2774520	2776520	OBE2 one
+2776520	2777800	but as soon as
+2777800	2780200	we switch to the online
+2780200	2781080	configuration
+2781080	2782600	even if we are not running
+2783480	2784200	analyzer
+2784200	2786680	and we are not even connected to
+2786680	2787960	a real cam bus
+2789560	2790440	let's just stay
+2791400	2792680	in this configuration setup
+2792680	2794440	just to show you
+2795080	2796040	those windows here
+2796040	2797320	diagnostic console
+2799000	2799240	that
+2800280	2800840	show us
+2800840	2801880	for example
+2801880	2802440	basically
+2803000	2804120	all the information
+2804120	2805480	that are contained
+2805480	2807080	in the cdb file
+2807880	2808520	for example
+2808520	2809480	you've got
+2809480	2810680	here the possibility
+2810680	2811640	to change
+2811640	2813640	the session control
+2813640	2813880	that
+2814520	2816040	the ECU under test
+2816040	2816680	is using
+2816680	2818680	in particular
+2820680	2821640	double clicking here
+2821640	2821960	you can
+2821960	2823800	activate the
+2823800	2825400	programming session
+2825400	2826520	but as you can see
+2827640	2829240	RKS can only be sent
+2829240	2830520	during a running measurement
+2831320	2831880	and now
+2831880	2833160	canalyzer is not running
+2834440	2835720	but even if we start
+2835720	2836680	the measurement here
+2838760	2840280	canalyzer will tell us
+2840280	2842200	that we're missing the licenses
+2842200	2843640	but also there is no
+2843640	2845320	real hardware connected
+2845320	2847160	so it's not useful
+2847160	2848120	to run
+2848120	2849400	services right now
+2849400	2849960	as we
+2850680	2852360	cannot work in an online mode
+2852360	2852520	but
+2853480	2854360	as you can see
+2854360	2855720	we can change
+2855720	2856680	not only the
+2856680	2858120	session control
+2858120	2859080	we can perform
+2859080	2860520	an ECU reset
+2860520	2861400	double clicking
+2861400	2861880	always
+2862600	2863560	we can
+2865320	2866040	for example
+2867000	2867640	here on
+2869240	2870360	engineering parameters
+2870360	2870760	we can
+2871560	2872280	read
+2872280	2873080	or write
+2873080	2873640	write
+2873640	2874840	all the RDIs
+2874840	2876200	and DIDs
+2876200	2877400	that are included
+2877400	2877800	in the
+2878600	2879240	CDD
+2879800	2880440	we can
+2881080	2881640	use the
+2882600	2883640	IO control
+2884360	2885000	commands
+2885000	2885640	in order to
+2886680	2887240	control
+2887800	2888360	manually
+2889000	2889800	actuators
+2891160	2892120	we can run
+2892680	2893560	teams
+2893560	2894200	and so on
+2895880	2896280	we can
+2896280	2896840	for example
+2896840	2897400	look at the
+2897400	2898280	fault memory
+2898280	2898600	here
+2898600	2901480	according to
+2902680	2903640	who we
+2903640	2904280	want to
+2904280	2905560	specifically do
+2905560	2906280	you see here
+2906280	2907320	the commands
+2907320	2908120	the value
+2908120	2909400	that we send
+2909400	2909960	if we want
+2909960	2910440	to run
+2910440	2911080	a specific
+2911080	2911560	command
+2913480	2914520	what we want
+2914520	2914760	to
+2916040	2916760	specific
+2917800	2918200	action
+2918200	2918920	that we
+2918920	2919880	want to perform
+2920840	2921080	but
+2921800	2922600	let me say
+2922600	2923160	for the
+2923160	2924120	full memory
+2924120	2924760	analysis
+2924760	2925480	this
+2925480	2926120	analyzer
+2926120	2926760	provides
+2926760	2927080	you
+2927080	2927640	already
+2927640	2928120	a
+2928120	2928520	value
+2928520	2928760	to
+2928760	2929160	window
+2929160	2929800	the
+2929800	2930120	right
+2931960	2932360	one
+2932360	2932680	right
+2932680	2932840	to
+2932840	2933480	diagnostic
+2933480	2933880	console
+2933880	2934280	for
+2934280	2935160	memory
+2935160	2935400	you
+2935400	2935800	select
+2935800	2936440	the
+2936440	2937000	CDD
+2938040	2938520	that we
+2938520	2939080	uploaded
+2939080	2939640	and here
+2940520	2941080	you can
+2941960	2942520	basically
+2943480	2944600	have a review
+2944600	2945560	of all the
+2945560	2946920	DTCs that
+2946920	2947080	are
+2949560	2950440	present in the
+2950440	2951240	error memory
+2951240	2952440	for this
+2952440	2953080	specific
+2953080	2954600	ECU under
+2954600	2955160	testing
+2955160	2955560	right now
+2955560	2956280	we cannot
+2956280	2956760	perform
+2956760	2957240	anything
+2957240	2958360	yes we
+2958360	2958760	are not
+2958760	2959400	connected to
+2959400	2959720	a real
+2959720	2960440	ECU under
+2960440	2960680	the loop
+2960680	2960920	but
+2962360	2963240	this is
+2963240	2963960	something that
+2963960	2965160	Catalyzer allows
+2965160	2965960	you to do
+2965960	2966760	and which is
+2966760	2967640	very useful
+2968360	2969000	in case
+2969720	2970280	in the case
+2970280	2970920	of where
+2970920	2971160	you
+2972360	2973000	do not have
+2973000	2974040	the possibility
+2974040	2974440	to use
+2974440	2975000	for example
+2975000	2975960	already
+2975960	2977160	available tools
+2977160	2977640	like
+2977640	2978680	the analyzer
+2978680	2979000	for
+2979000	2980280	media programs
+2980280	2980600	or
+2981400	2982040	CDA
+2982040	2982440	for
+2982440	2982840	enough
+2982840	2983480	programs
+2986040	2986840	on
+2986840	2987560	the other
+2987560	2987880	hand
+2987880	2988920	there is
+2988920	2989560	another
+2989560	2989880	window
+2989880	2990280	that can
+2990280	2990600	be used
+2990600	2990760	the
+2990760	2991240	session
+2991240	2991800	control
+2991800	2992280	as we
+2992280	2993400	saw
+2993400	2993560	in the
+2993560	2994280	diagnostic
+2994280	2994840	console
+2994840	2995240	window
+2996200	2996680	you can
+2996680	2997160	change
+2997160	2997640	session
+2997640	2998120	control
+2998920	2999240	using
+2999240	2999480	a
+2999480	3000120	dedicated
+3000120	3000520	window
+3000520	3000840	here
+3001400	3001880	basically
+3001880	3002360	perform
+3002360	3002840	the same
+3002840	3003240	thing
+3003240	3003800	or you
+3003800	3004200	can
+3004200	3004840	unlock
+3004840	3005560	secure
+3005560	3006040	gateway
+3006600	3007080	and
+3007080	3008120	modify
+3008120	3008920	unlock
+3008920	3009400	security
+3009400	3010520	accesses
+3010520	3011400	RPC
+3011400	3011960	reset
+3013240	3014280	and
+3014280	3014760	and so
+3014760	3015000	on
+3015000	3015240	so
+3016520	3017080	the
+3017080	3018120	diagnostic
+3018120	3018680	side
+3018680	3018920	of
+3018920	3020120	Catalyzer
+3020120	3020760	can be
+3020760	3021560	very useful
+3021560	3021960	as well
+3023160	3023800	along with
+3023800	3024360	all the other
+3024360	3024680	windows
+3024680	3025240	that we
+3025240	3025960	have seen
+3026680	3027240	since
+3027240	3028680	we are
+3028680	3029480	now configured
+3029480	3030200	in online
+3030200	3030520	mode
+3031160	3031560	as I
+3031560	3032120	was
+3032120	3032760	showing you
+3032760	3033240	before
+3035080	3035640	we can
+3035640	3035880	use
+3035880	3036520	canalizer
+3036520	3037080	also to
+3037080	3037640	perform
+3038760	3039160	unlock
+3039160	3040040	so basically
+3040040	3040680	we can
+3040680	3041400	collect
+3041400	3041800	data
+3042440	3042840	starting
+3042840	3043240	from
+3043240	3043320	a
+3043320	3044360	communication
+3046200	3047160	and
+3047160	3047560	we can
+3047560	3048040	do that
+3048040	3048520	enabling
+3048520	3048760	here
+3048760	3049000	so
+3049000	3049640	in online
+3049640	3050040	mode
+3050040	3050680	enabling
+3050680	3051000	here
+3052360	3052600	this
+3052600	3053000	block
+3054600	3055160	login
+3056680	3057240	we double
+3057240	3057720	click on
+3057720	3058680	this folder
+3058680	3059240	we select
+3059240	3060120	the destination
+3060120	3060600	folder
+3060600	3060920	and
+3060920	3061800	the
+3061800	3062200	name
+3062200	3062600	of the
+3062600	3063000	file
+3063000	3063240	that
+3064920	3065320	we want
+3065320	3065960	to generate
+3066680	3067240	and here
+3067240	3067800	the file
+3067800	3068200	format
+3068200	3068920	will have
+3068920	3069400	binary
+3071000	3071640	log file
+3072840	3073240	so
+3073240	3073640	as soon
+3073640	3074120	as you
+3074120	3074680	for example
+3074680	3075240	know
+3075240	3075640	name
+3076440	3076840	sorry
+3077560	3077880	log
+3079000	3080040	and
+3080040	3080520	we do not
+3080520	3080840	need to
+3080840	3081160	change the
+3081160	3081880	destination
+3081880	3082280	folder
+3082280	3082840	since
+3082840	3083480	we will not
+3083480	3083960	perform a
+3083960	3084520	real log
+3085400	3085720	you see
+3085720	3085960	here
+3085960	3086440	the name
+3086440	3087080	of the
+3087080	3087400	file
+3088520	3089640	and
+3089640	3091160	you can
+3091160	3091560	set up
+3091560	3091640	set up
+3091640	3091960	here
+3091960	3092680	a trigger
+3094520	3095480	single trigger
+3095480	3097560	that can be
+3097560	3098600	started manually
+3098600	3099800	stopped manually
+3099800	3100040	or
+3101160	3101720	can be
+3103640	3104280	triggered by
+3104280	3105080	the cable
+3105080	3105560	so the
+3105560	3106280	program node
+3106280	3107320	itself
+3107320	3107800	the code
+3107800	3108120	that we
+3108120	3108600	define
+3109880	3110360	and then
+3112200	3113080	you can
+3113080	3113400	just
+3115080	3115720	perform the
+3115720	3116120	log but
+3116120	3117160	right now
+3117160	3117720	we cannot
+3117720	3118120	do that
+3118120	3119560	anyway
+3121560	3122440	along with
+3122440	3122920	all the
+3122920	3123720	analysis
+3124920	3125960	windows that
+3125960	3126440	we have
+3126440	3127080	just seen
+3128680	3129320	as we were
+3129320	3129880	mentioning
+3129880	3130840	before
+3130840	3131560	canalizer
+3131560	3132280	allows you
+3132280	3132920	also to
+3132920	3133800	stimulate
+3133800	3135080	and interact
+3135080	3136360	with the
+3136360	3136680	live
+3136680	3137560	communication
+3137560	3138680	in the
+3138680	3139240	example
+3139240	3139880	cambus
+3139880	3140040	or
+3140040	3140600	limbus
+3140600	3141720	or whatever
+3141720	3142360	communication
+3142360	3143000	bus it is
+3143560	3144680	that
+3144680	3146680	you are
+3146680	3147240	interacting
+3147240	3147720	with
+3147720	3148280	using the
+3148280	3148920	analyzer
+3148920	3149400	online
+3149400	3149720	mooc
+3149720	3150440	configuration
+3151640	3152520	for example
+3153640	3154680	a few of
+3154680	3155960	the
+3155960	3156760	means that
+3156760	3157640	you can use
+3157640	3158280	in order to
+3158280	3158920	interact
+3159960	3160280	with
+3160280	3161400	a
+3161400	3161800	real
+3161800	3162840	communication
+3162840	3164280	whatever
+3164280	3164760	it is
+3164760	3165320	is
+3165320	3166280	the
+3166280	3166840	click here
+3166840	3167160	with the
+3167160	3167400	right
+3167400	3167720	bottom
+3168600	3168920	can
+3168920	3169960	practice
+3169960	3172280	generator
+3172280	3172600	let's
+3172600	3173240	double click
+3173240	3174520	here
+3174520	3175080	you've got
+3175080	3175640	this whole
+3175640	3175960	new
+3175960	3176360	blank
+3176360	3177960	window
+3177960	3178280	right
+3178280	3179800	bottom
+3179800	3180200	add
+3180200	3180600	frame
+3180600	3180920	from the
+3180920	3181880	database
+3181880	3183560	once again
+3183560	3184360	we are starting
+3184360	3184840	from the
+3184840	3185640	dbc
+3185640	3186200	file that
+3186200	3186840	we upload
+3186840	3187160	in the
+3187160	3189160	analyzer
+3189160	3189720	we can
+3189720	3190840	add
+3190840	3192280	specific
+3192840	3194280	cammessage
+3194280	3195000	selected
+3195000	3196440	client
+3196440	3197000	you can see
+3197000	3198280	it just appeared
+3198280	3199400	background
+3199400	3200440	but we can also
+3200440	3201160	add
+3201160	3202360	a whole list
+3202360	3203160	of
+3203160	3203880	cammessages
+3203880	3208040	cammessages
+3208040	3210040	here
+3211880	3212120	this
+3212120	3212760	column here
+3212760	3213320	we've got the
+3213320	3213800	name
+3213800	3214920	cammessage
+3214920	3216200	all the
+3216200	3216600	list
+3219160	3219960	we
+3219960	3220520	added
+3220520	3221480	the
+3221480	3222440	trigger
+3222440	3223000	that we want
+3223000	3223640	to use
+3223640	3224280	in order
+3224280	3225560	to
+3225560	3225960	send
+3225960	3229800	that we
+3229800	3230360	want to send
+3230360	3231000	that specific
+3231000	3231400	message
+3231400	3231880	for example
+3232520	3233080	we can
+3233080	3233640	manually
+3233640	3234200	send it
+3237080	3237800	once again
+3237800	3238600	i'm not running
+3238600	3239080	online
+3239080	3239400	mode
+3239400	3239560	but
+3240840	3241480	we can
+3241480	3242600	manually send it
+3242600	3243480	clicking on here
+3243480	3244280	or we can
+3245240	3246120	for example
+3246120	3246840	send it
+3246840	3247560	periodically
+3247560	3248600	so without having
+3248600	3249160	to do that
+3249160	3249720	manually
+3249720	3251080	and the cycle
+3251080	3251480	time
+3251480	3252920	reported here
+3252920	3253560	is the one
+3254600	3255560	that was
+3255560	3256520	extracted from
+3256520	3257320	the dbc
+3257320	3257960	file when
+3257960	3259000	we selected
+3259000	3259640	an important
+3259640	3259960	year
+3259960	3260280	this
+3260280	3260760	cammessage
+3260760	3261560	or it
+3261560	3262280	can be also
+3262280	3262600	done
+3262600	3264760	manually
+3264760	3272360	and we can
+3272360	3273560	also
+3273560	3274760	link
+3274760	3275960	the
+3275960	3276600	transmission
+3276600	3276760	of
+3276760	3277240	disc and
+3277240	3278120	message
+3278120	3278840	according to a
+3278840	3279640	system variable
+3279640	3280200	that can be
+3280200	3280680	defined
+3280680	3281080	in the
+3281080	3281400	program
+3281400	3284680	node
+3284680	3286440	on the
+3286440	3288520	other side
+3288520	3288920	node
+3288920	3289720	with defining
+3289720	3290760	which messages
+3290760	3291320	we want to
+3291320	3292920	send
+3292920	3293720	ones that are
+3293720	3294120	already
+3294120	3294680	present in the
+3294680	3295160	dbc
+3295160	3295800	or as we
+3295800	3296280	have seen
+3296280	3297240	before
+3297240	3297800	messages
+3297800	3299240	that we
+3299240	3299880	added
+3299880	3300280	in on
+3300280	3300600	radio
+3300600	3300920	exists
+3300920	3302600	in dbc
+3302600	3303160	um
+3303160	3303960	we can
+3303960	3304840	find
+3304840	3305320	how to
+3305320	3306120	send them
+3306120	3306680	we can
+3306680	3307640	change
+3307640	3309400	the values
+3309400	3309880	of the
+3309880	3310920	can signals
+3310920	3311720	inside of
+3311720	3312520	these
+3312520	3313160	of those
+3313160	3313560	kind of
+3313560	3314120	messages
+3314120	3314760	for example
+3314760	3315400	inside
+3315400	3317720	the cmfd2
+3317720	3319000	we can
+3319000	3320120	decide
+3320120	3320760	for example
+3320760	3321640	here
+3321640	3322120	maybe
+3322120	3322760	is that
+3322760	3323960	opens
+3323960	3324520	the bottom
+3324520	3325080	left
+3325080	3325640	the bottom
+3325640	3325880	side
+3325880	3326200	of the
+3326200	3327000	window
+3327000	3327800	the values
+3327800	3328280	of
+3328280	3328840	i don't know
+3328840	3329160	if you're
+3329160	3329880	records
+3329880	3331240	right now
+3331240	3333080	physical value
+3333080	3334760	by dbc
+3334760	3335720	by default value
+3335720	3336280	is equal to
+3336280	3336680	normal
+3336680	3339800	if you will
+3339800	3340840	and running
+3340840	3342360	the analyzer in online mode
+3342360	3344760	we could
+3344760	3346120	basically change
+3346120	3346760	that these
+3346760	3347320	can signal
+3347320	3347880	inside of
+3347880	3348200	these
+3348200	3348440	can
+3348440	3349800	message
+3349800	3350920	otherwise
+3350920	3351400	and we can
+3351400	3351720	do that
+3351720	3352280	basically for
+3352280	3352680	all the
+3352680	3353000	can
+3353000	3353480	signal
+3353480	3355000	inside of
+3355000	3355400	all the
+3355400	3356040	can messages
+3356040	3357080	that we
+3357080	3357320	that we
+3357320	3359960	add here
+3361720	3362440	and this
+3362440	3363480	is uh
+3363480	3364360	let me say
+3364360	3365000	a method
+3365000	3365640	that can
+3365640	3366360	be used
+3366360	3367080	when we want
+3367080	3368040	for example
+3368040	3369560	to send
+3369560	3370120	messages
+3370120	3371080	that are not
+3371080	3372920	sent in the
+3372920	3373320	real
+3373320	3373880	can bus
+3373880	3374360	that we are
+3374360	3376920	working on
+3376920	3377560	but
+3377560	3378280	when we want
+3378280	3380280	to
+3380280	3381800	some messages
+3381800	3383160	that we are
+3383160	3384200	creating
+3384200	3384680	let me say
+3384680	3385080	x
+3385080	3385720	novel
+3385720	3386680	because if
+3386680	3387160	we want to
+3387160	3387880	modify a
+3387880	3388360	message
+3388360	3388920	or a
+3388920	3389320	signal
+3389320	3389720	which is
+3389720	3390200	already
+3390200	3391000	sent
+3391000	3391640	that can
+3391640	3391960	bus
+3391960	3393560	by a
+3393560	3395320	real
+3395320	3395960	electronic
+3395960	3397240	control unit
+3397240	3398040	we cannot
+3398040	3400520	use the
+3400520	3401160	this
+3401160	3401560	block
+3401560	3402680	here
+3402680	3403240	we can
+3403240	3403720	interactive
+3403720	3404360	generator
+3404360	3404680	block
+3404680	3405560	because we
+3405560	3406200	would just
+3407000	3407880	overlap the
+3407880	3408440	message that
+3408440	3408840	we are
+3408840	3409640	sending to
+3409640	3410040	the one
+3410040	3410520	that is
+3410520	3411080	sent by
+3411080	3411480	the real
+3411480	3413880	issue
+3413880	3414360	if we
+3414360	3416040	want to
+3416040	3417480	instead
+3417480	3418600	perform
+3418600	3419400	sort of
+3419400	3419960	gateway
+3419960	3420520	and i
+3420520	3421080	suggest
+3421080	3421480	to go
+3421480	3421880	to the
+3421880	3422520	dedicated
+3422520	3423560	lesson
+3423560	3423880	in the
+3423880	3424600	academy
+3424600	3425160	for this
+3425160	3425640	part here
+3425640	3427320	regarding
+3427320	3428360	how the
+3428360	3428840	interactive
+3428840	3429240	generator
+3429240	3429560	block
+3429560	3429960	or the
+3429960	3430520	kpop
+3430520	3430920	program
+3430920	3431480	nodes can
+3431480	3432360	be used
+3432360	3433080	and when
+3433080	3433560	they should
+3433560	3434120	be used
+3434120	3434920	for testing
+3436200	3436600	we can
+3436600	3437160	use the
+3437160	3437560	program
+3437560	3438360	node here
+3438360	3439080	so always
+3439080	3440120	right bottom
+3440120	3440920	program node
+3441640	3442360	double click
+3443160	3444360	and right now
+3444360	3445320	it asks us
+3445320	3446760	to select
+3446760	3447720	an already
+3450440	3451000	available
+3451000	3451720	capable
+3451720	3452200	program
+3452920	3453800	for example
+3453800	3454280	i've already
+3454280	3454920	got one
+3457000	3457640	the gateway
+3457640	3458200	so i just
+3458200	3458920	uploaded this
+3458920	3459240	file
+3460680	3460920	and
+3462840	3463720	just wait a few
+3463720	3464120	seconds
+3464120	3464440	that
+3464440	3465880	file is
+3467480	3468520	being uploaded
+3468520	3469080	opened by
+3469080	3470040	canalizer
+3470040	3470920	you will be able
+3470920	3471640	to modify
+3471640	3472120	for example
+3472120	3472760	the manual
+3472760	3473160	code
+3474440	3475160	according to
+3475160	3477000	the action
+3477000	3477320	that you
+3477320	3477640	want to
+3477640	3477880	do
+3477880	3478520	for example
+3478520	3479160	this was
+3479160	3479960	a code
+3479960	3480440	people
+3480440	3481400	code
+3481400	3481880	written
+3481880	3482120	in order
+3482120	3482840	to perform
+3482840	3483960	a gateway
+3483960	3484440	amongst
+3487240	3487640	one
+3487640	3488280	ECU
+3488280	3489320	under testing
+3489320	3489960	and all
+3489960	3491880	the other
+3491880	3493240	ECUs
+3493240	3493560	in the
+3493560	3495560	cat bus
+3495560	3496360	but i suggest
+3496360	3496840	you to go
+3496840	3497240	through the
+3497240	3497720	dedicated
+3497720	3498280	lesson
+3498280	3498920	for this
+3498920	3499480	specific
+3499480	3500600	window
+3500600	3501240	regarding the
+3501240	3501560	data
+3501560	3502520	visualization
+3503240	3503800	another
+3504920	3506360	very useful
+3506360	3507000	thing that
+3507000	3508200	can be used
+3508200	3508520	is
+3509800	3510360	the panel
+3510360	3510760	feature
+3512120	3512520	that you
+3512520	3513240	can find
+3513240	3513720	here in
+3513720	3514120	tools
+3515400	3516440	panel designer
+3518200	3518840	so basically
+3518840	3519480	the panels
+3519480	3520440	are just
+3520440	3520920	graphical
+3520920	3521400	elements
+3522680	3523160	that you
+3523160	3523800	can use
+3523800	3524120	in order
+3524120	3525080	to modify
+3525080	3525800	or to
+3525800	3526520	visualize
+3526520	3527800	can
+3527800	3528200	single
+3528200	3528760	values
+3528760	3529080	or
+3529080	3529880	system
+3529880	3530360	variable
+3530360	3530840	values
+3531560	3532120	and
+3532120	3532600	they can
+3532600	3533640	be
+3533640	3534360	very easily
+3534360	3535000	created
+3535000	3535640	this one is
+3535640	3536920	a new
+3536920	3537320	panel
+3537320	3537720	they just
+3537720	3538280	created
+3538280	3539560	decided
+3540840	3541640	for example
+3542920	3543320	that's
+3544360	3545160	this list
+3545160	3545560	here
+3545560	3546280	to the right
+3546280	3547080	let's drag
+3547080	3547640	and drop
+3547640	3548680	drop
+3548680	3549240	i don't
+3549240	3549560	know
+3549560	3549880	let's
+3549880	3550120	see
+3550120	3552520	a bar
+3552520	3553560	or
+3553560	3554040	meter
+3557160	3558120	progress bar
+3559000	3559240	and
+3561240	3561880	what we want
+3561880	3562440	for example
+3562440	3562920	to see
+3562920	3563320	here
+3564840	3565400	is the
+3565400	3566600	visual representation
+3566600	3567080	i don't know
+3568040	3569160	vehicle speed
+3569160	3570040	we just did
+3570040	3570680	for the graph
+3571400	3572440	we click here
+3572440	3573560	and drag it
+3573560	3573800	here
+3573800	3575720	in order
+3575720	3577320	to link
+3577320	3577880	that cash
+3577880	3578520	signal to
+3578520	3579720	the two
+3579720	3580120	panels
+3580120	3580440	that we
+3580440	3580680	just
+3580680	3582040	created
+3582040	3582360	when you
+3582360	3582840	select a
+3582840	3583240	panel
+3583240	3584200	you can
+3584200	3585000	right
+3585000	3585560	click
+3585560	3586200	and go
+3586200	3586920	on
+3586920	3587240	show
+3587240	3588280	properties
+3588280	3588680	in order
+3588680	3589000	to for
+3589000	3589400	example
+3589400	3589880	define
+3589880	3590600	the minimum
+3590600	3591480	and maximum
+3591480	3592680	value
+3592680	3593240	of that
+3593240	3594600	panel
+3594600	3596280	you can
+3596280	3597320	choose
+3597320	3597560	one
+3597560	3598120	display
+3598120	3598600	on the
+3598600	3599000	value
+3599000	3599400	where you
+3599400	3601160	want
+3601160	3602280	to be
+3602280	3602920	to be seen
+3603800	3605560	and
+3607320	3608200	let's do that
+3608200	3610120	also for
+3610120	3611000	this other panel
+3611000	3611560	the meter
+3611560	3611880	here
+3611880	3612360	so let's
+3612360	3612680	change
+3612680	3613640	for example
+3613640	3616200	the angles
+3616200	3616760	it's very
+3616760	3617160	useful
+3617160	3618280	from
+3618280	3619160	a visual
+3619160	3619800	when you say
+3619800	3621160	final view
+3621160	3621800	value range
+3621800	3622120	for the
+3622120	3622680	vehicle speed
+3622680	3623480	level
+3623480	3623880	to the
+3623880	3624360	maximum
+3624360	3626360	150
+3626360	3626840	right now
+3626840	3628120	if you click
+3628120	3628680	the meter
+3628680	3629640	you will see
+3629640	3630280	that it is
+3630280	3630680	linked to
+3630680	3631240	the can
+3631240	3632120	signal
+3632120	3632520	vehicle
+3632520	3632840	speed
+3632840	3633880	vso
+3633880	3634680	sig
+3634680	3635720	link
+3635720	3636280	not link
+3636280	3637080	but
+3637080	3637720	and signal
+3637720	3638520	vehicle speed
+3638520	3639320	included in the
+3639320	3639800	break of
+3639800	3640520	mutual
+3640520	3641160	method
+3641160	3641800	and the
+3641800	3642200	same
+3642200	3642680	for the
+3642680	3643160	progress
+3643160	3644280	bar
+3644280	3644920	so you
+3644920	3645240	save
+3645240	3647480	it
+3647480	3649480	browse
+3649480	3650040	browse
+3650040	3665160	and here it is
+3665160	3665800	if you run
+3665800	3669160	analyzer in off the mode as you were doing
+3669160	3673480	or if you run
+3673480	3677240	run analyzer in off the mode as you were doing
+3680600	3681160	my bad
+3684600	3685480	let me add it again
+3685480	3701160	this is a
+3701160	3701640	x
+3701640	3702440	node
+3702440	3708600	part of it we just create again let's open one and create together this one
+3708600	3720040	one
+3720040	3724760	right here
+3727080	3729480	so if you run analyzer
+3729480	3741320	you will see that it was changing according to the
+3743560	3745320	vehicle speed value
+3745320	3750520	if you want to have a comparison for example you can add here
+3750520	3759400	the graph window so you can compare when you will see for example here
+3759400	3760520	vehicle speed evolving
+3762600	3763720	when you see the panel
+3763720	3766360	values evolving
+3769000	3772440	so it's just another way of representing
+3773080	3773640	let me say
+3774760	3777240	can signal or system variables value
+3779720	3783640	the only last feature that
+3784760	3785480	you could
+3786760	3788600	let's say dive deeper into it
+3789160	3789560	would be
+3790120	3792040	the program node and
+3792040	3793240	can interactive
+3793240	3794360	generator block
+3794360	3794520	but
+3795320	3797080	as i was mentioning you before
+3798120	3799720	there is a dedicated lesson
+3800280	3800520	for
+3801720	3802520	that topic
+3802520	3804760	so i would suggest you to go
+3804760	3805000	through
+3806040	3806520	that one
+3807320	3807560	and
+3808680	3809240	that's it
+3809240	3810040	that is just
+3810680	3812440	what we just had together was a
+3813480	3814200	high level
+3815320	3815880	lesson
+3816360	3817160	we say
+3817160	3819560	very basic regarding analyzer usage
+3819560	3819800	so
+3819800	3825160	i will be available for any verification
+3825720	3826040	needed
+3826600	3829400	i will be available to answer to any
+3830200	3831560	all of your questions
+3832680	3833000	and
+3834360	3834600	i
+3835720	3836120	just
+3838280	3838920	nothing else
+3839560	3840920	i will be available for
+3841560	3842360	for anything so
+3843080	3843800	enjoy your day
+3844520	3845000	have a
+3845000	3846360	have a good day
+3846360	3868920	see you

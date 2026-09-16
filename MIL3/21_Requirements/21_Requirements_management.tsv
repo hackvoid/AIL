@@ -1,0 +1,384 @@
+start	end	text
+720	5840	okay okay we're ready i will start the presentation
+15680	16720	tell me you can see me
+19760	23040	yes so i can see okay here we are
+23040	34880	okay uh as i said we are talking i think that you really know if we talk about the spice
+34880	43280	what we are talking about isn't it uh i'm sorry to interrupt you uh can we record this video
+44400	51920	yeah yeah can you record it and also if you do it and then you can send it to me which should be a
+51920	58880	good thing because i had to but i'm not actually i can do this with for some problems so if you
+58880	65600	record it and send it to me uh it will be a very good thing sorry to interrupt ciao gabriele thanks
+65600	72560	for the lesson i just connected for the sole purpose of recording so i am recording the
+73840	81040	the lesson and i will okay okay so i won't be active in the lesson just here for record okay
+81040	87040	thanks yeah good thing because i have problems with my microphone so i am using uh i think to
+87600	94720	to present and i think to uh talk because i wish to do this it would be a very good thing thank you
+95520	104640	okay thanks okay so we start uh we are talking about uh a spice and
+104640	112560	uh how you can uh read on the on the here the proposal of the spice is to improve and value the
+112560	120400	performance of the development process and ecosystem of industry industries uh it is a specific variant of
+120400	128880	international standard diesel and actually it allows the best way to have a good process to uh fulfill our
+128880	135600	project to do our things and uh i think that you already know uh something about the bicycle
+137520	145920	that is a cycle that is used in a spice to uh develop a good software i think that you should
+145920	154320	already know the the thesis about uh develop and testing today we'll talk about the requirement part
+154320	162240	that is uh in the up and the left part of the cycle uh you can see here that we have uh more parts of
+162240	170560	this uh requirement uh um requirement part and uh here we can you can read that we have
+170560	176320	the requirement elicitation uh the system requirement analysis and software requirement because if we're
+176320	186560	talking about uh the development of software we have a level for uh system requirement uh analysis that
+186560	192560	will tell you uh what do we what do our system have to do what can the kind of things have we have to
+192560	199600	develop and how the the part of software requirement analysis that will tell us which software with
+199600	206480	which implementation will do the things that uh we need to uh fulfill our system requirements
+209520	216000	uh we start with some definition and some properties that uh our requirements uh need
+216640	224560	need to be a good thing actually just to give you a better introduction uh the rest of our work will be
+224560	231680	some documents uh that will be stored in our cases in some server and in these documents it will be all
+231680	239440	the description of our work but we have to find a proper way to do this thing a first definition that
+239440	245520	we can have is the difference between the functional requirement that is uh what the system shall do
+246320	252400	and not the functional requirement that is uh what the system shall be the difference is that in the
+252400	260800	second one is a moral description of the system uh while a functional requirement is a description of
+261360	267840	our implementation and all the things that we do have to work so a definition for example of an
+267840	270560	inputs outputs and the procedure of our software
+273520	279680	a good writing requirement should have some characteristics the first one is that should be
+279680	286800	clear and ambiguous so there should be only one way to interpret the requirement let's see some
+286800	292800	examples if we frame right and the system shall not accept the password longer than 15 characters
+292800	300720	actually we don't have a good description because we don't know actually if uh something different
+300720	309040	from this is possible if uh a password of 16 cards arrives to us what the system shall do and we actually
+309040	316240	don't know so it's important to to write something like if the user is the password longer than 15 characters
+316240	322800	then the system shall display an error message and shall ask the user to correct it so we describe the all the
+322800	331440	things that system do does and we don't have some misinterpretation of of our functionalities
+334240	339840	every requirement that we write should be stable the requirement can be refined by means of inspection
+339840	347120	analysis demonstration of tests for example if you write a system must refresh the data very quickly we don't have
+347120	355760	uh a way to test this thing because uh uh this is not the description that can be uh it can have an
+355760	362400	representation for everyone the same so a good requirement should be the system has refresh the data each
+362400	370240	0 5 milliseconds we can actually test these things because for example if the data refresh more than this time
+370240	374080	we can tell that the task the test the test is failed
+377360	381920	uh the requirements should be feasible the requirements should be double with existing constraints
+382800	389360	um for example the replacement control system shall be styled with this no disruption of the production
+389360	394720	but the good requirement should be the replacement control c but uh control system shall be started
+394720	400000	causing no more than two days of production destruction just because usually on the
+400000	405520	software on the software on the hardware we have some uh constraints and we should respect it for
+405520	413040	example we cannot demand a system that can avoid the physical constraints or it should be do things
+413680	418160	faster than our technology allow us to do our things
+421680	425760	there are a lot of other properties that will speed up on these things it should be consistent
+425760	432480	uh because we should uh we probably have a full document with a lot of things and a requirement of
+432480	438960	functionality should not interfere with other requirements so uh the book should be a consistent uh
+438960	448080	consistency about all the things we have it should be atomic because uh for example uh since we have
+448080	455680	uh it's it depends on the testable property because uh uh at each requirement we should
+455760	462080	uh assign a test and if you wait if you write the things like um in case of our temperature over current
+462080	470160	over over state over both the system shall board the change but actually um here we have a true
+470160	478000	requirement because we should have three tests assigned to this property because for example uh we respect
+478000	484240	the part of our temperature probably our current is not implemented and the over voltage doesn't work
+484240	496240	and if we don't have a uh right like in the like above uh we should not plan um test for everything that we have
+496240	505200	and should not um find which things works which not with which parts have errors and when we have to change
+505200	517360	uh our work and last things it should be traceable um since i i said you before that uh we have more level requirements
+517360	525280	system parts or per part and also the test we should have a traceability between all the parts of our documents
+525280	532240	so if you have a software required script and implementation we should know uh where this implementation comes from
+532240	538000	for which functionality we have to do these things and we will see how these things is done
+538640	541840	in some software that i will show you later
+545760	549280	we switch to the other slides
+551520	555520	this one
+562240	591680	i said you before that there are some software that we use to implement the requirements uh in the slide
+591680	599680	before the word there are some slides about uh about a software named doors but i will show you
+599680	603840	something more about another software this is called polaro because i gave the license here
+604400	610160	and the slides show you some things about the software but later in the end of the lesson we have a
+612240	619440	quick introduction to this software how to use it and uh other section and all the things are done
+620080	626800	so we start with the slides from some bit introduction and then we will see on the software uh some example
+630880	638880	actually um uh the requirement documents appears like like this and it's a document with a lot of
+638880	645440	objects you can see that we have uh usually uh this is a screen about polarion and here we have a
+645440	651440	description description description of our things and uh in the right part in the left part we have a
+651440	659920	code and unique code that is associated with a single requirement um actually if we do some change
+659920	666560	change and uh we've or we delete this requirement this code will still be assigned to this one because we
+666560	674640	have to have just a bit in the time about our documents here in the left we have an icon an icon that
+674640	680400	actually uh see us what kind of requirement is this because we have an icon for software we will have
+680400	689520	uh an icon icon for system an icon for uh for text and more in the right part we have uh some properties
+689520	696640	we can usually cast on these things that because because uh our item our requirement is not just a
+696640	703120	description but is anything with a lot of properties that say us a lot of things about how to develop
+703120	720240	so for example um these properties can be the severity let's say at last um if the this requirement
+720240	725680	is a must have a should evidence to have or something that is deprecated they will not have to implement
+725680	735280	it is very useful for developers because it's good to set some priority because in the when we drop we
+735280	741280	probably start with must have things and then when everything is finishing test and we can
+742480	746240	we can go to should dev and later to the other the others
+748960	754720	there is here a status that tells us uh the status of the requirement not the status of the
+754720	760960	implementation because when we write probably we start usually we start from a drop status
+762240	768400	uh when we write the things when you have the finished to write we uh switch back to uh i
+768400	775840	review the average status and then in a probably verified rejected uh and also this uh machine can
+775840	782160	change you know how many people work on the things online level of people that can review approve and test
+782160	789360	things but the important part is when we are here we can make some modification later we cannot if we
+789360	795120	want to modify our require when you have to come back this is start to the status so i will we will
+795120	800080	see you later in polaro that we if if we are not in draft the document the the requirement is blocked
+803680	811280	um here uh we can see also other properties like dd that we can see also in the document
+811280	817520	but also uh the traceability part because here i've written uh which should the requirements are
+817520	827520	connected to this one um as parent is referred to uh uh to the leader of the chapter for example and
+827520	832720	it's related to his pro here is a relation with another item in another document
+832720	845040	so uh with these links we can fulfill accessibility between them with between documents but we will
+845040	854080	see an example later uh here we showed for example that here it was a requirement about uh can message
+854080	862400	that says that that information used in the system is uh carried by this message and in that link we can
+862400	867920	connect with the description of the message with other properties that we can find in the dbc
+873920	880160	uh also this is another view that we will uh you will see uh later in the software that
+880880	887680	it is a representation with all the levels uh just to have a better interpretation of how many links that
+887680	899680	could we have and here uh have some on uh some of charts that we can have because uh as you said
+899680	907520	before we are using a proper software to do these things uh actually we could also use some uh an excel
+907520	914080	not word because we have a lot of properties but an excel should be good and also we will see that we can
+914080	920400	uh every reporting from polarion to excel but the good things to have a software that is done just
+920400	929680	for this is because it can give us some uh for some reports that can be used to have a global view of
+929680	937040	our project for example here we have a coverage report that tell us that a part of our requirement got
+937040	943520	the coverage and that part doesn't so later we can print a report discovering which part which
+943520	951360	requirement doesn't have a coverage and uh complete our our documents but also uh some graphic about
+951360	958640	the develop to treat to have trees about uh how things are done what things are done what which not
+960880	963760	and so we can have a better view of our project
+966000	973200	here another report uh i i took up before about coverage report uh here we can see that for
+973200	977680	example a system requirement have a software requirement have a software requirement assigned
+978560	987360	but the order doesn't so we can know uh that we are still to write some software requirement and
+987360	989440	where and about which functionalities
+992480	998080	this is another view of the same report but in a table way
+998080	1006560	and before we uh continue with this part i will tell you if you have some questions
+1007840	1012400	if everything is clear of if you have some questions about these things
+1020000	1020320	okay
+1020320	1031280	um just a little things um why these things is important because uh uh if we work in uh automotive
+1031280	1038000	uh environment but also in other uh environment and it is uh secretica for example for uh um
+1039440	1049120	for uh for train for uh for planes we should have um a develop that follow a lot of rules because we cannot
+1049120	1056640	um release a software that have problems if we sell a car with the software that have bugs we should
+1056640	1063360	uh uh have we should have some problem that could cause people to die cars to stop working
+1063920	1071920	and so in different uh difference from us other kindle software for example um from uh um
+1071920	1079040	um cell phone software from some app that could be work could be crash and uh sometimes a new version
+1079040	1085200	of software released the software car should not be updated should be should uh be uh should uh should
+1085200	1092640	work from the day one and should not the problem because uh uh the risk that of these things that is
+1092640	1100640	sometimes very high so uh that's for this that we have to uh have developed that starts from requirement
+1100640	1108160	then the develop the testing and all the parts that can show us that everything is done and everything is done correctly
+1109760	1116080	here we have um a test report that also is made by polarion
+1117280	1125920	because every um um after that we have written everything that our software needs after develop
+1125920	1132640	we should start with the testing part so we should write the test associated to our implementation
+1132640	1141920	and then run some test run that tell us uh for example here we have test run which three tests
+1141920	1148960	we can execute this and then we can report that uh which some tests are passed some tests are waiting
+1148960	1157120	uh and we have other two status so failed and blocked that's because probably uh some tests depends on the
+1157120	1166560	result on other one probably have to start the car uh to do 10 meters and then to do to try to to stop the
+1166560	1175760	car if the second part is not fulfilled you cannot test the third part so uh we can have the block test
+1175760	1183520	because the test has been not be done because the previous one failed so we we can we could not try
+1183520	1189920	this thing and so when we try our things we have these three status which tell us which things gone good
+1189920	1201840	and which one bad how we write our test here we should usually have a step instead i start up here for
+1201840	1209680	example and the expected result and uh here we can select if test is passive either blocking and i write
+1209680	1216480	if it failed the block actually the we can write the actual result for which happen and not for the
+1216480	1220960	developer to find the bugs errors and the correction that has to be done
+1224640	1231040	also the test should be have just a bit with software so we spare software we have just a bit with
+1231040	1238080	uh with the with the test and the test uh should be connected with the bug founded if the test is not
+1238080	1245200	be done and here in plan we also can store the bug uh the change and everything that uh should
+1245200	1250400	give us a good responsibility of all of all our work in the time
+1250400	1265280	okay before to proceed with this part we will have a little a better view of this thing on the software
+1273680	1274320	any question
+1274320	1289200	okay excuse me i have a question yeah that part that you were explaining about the hierarchy of the
+1290480	1293600	requirement can you explain a little bit more about it
+1296560	1299280	i can hear you very well if you can repeat
+1299280	1306960	uh you were explaining a little bit about the hierarchy of the requirements
+1309280	1314080	i don't know it was too much uh before so
+1315760	1323520	okay hello we will give you some example right this paper so you understand
+1323520	1336960	how we better how these things works okay thank you
+1340000	1351520	let's find some project we can play with
+1351520	1365840	okay this is a browser um a software that can can make us to navigate by browser so actually i'm
+1365840	1375360	working in chrome and i can connect to this software uh inserting the the ep of the server that should be an
+1375360	1383920	internal ep actually is set here enables uh i'm working uh already on the server so we just i just have localhost
+1383920	1388720	but otherwise you should input to the ep and the program service then when you log in with
+1389520	1398400	uh your user and password you arrive here here we have the name of project and you can navigate with older project
+1398400	1407440	this is the home in home we find the description on uh on uh every part of our project
+1408560	1414080	that you can find here in this part let's see something hello here we start with
+1416720	1417440	let's be slow
+1417440	1432400	with the requirements section here we have um description like input and output because uh we
+1432400	1442000	start with the project scope where it is bright and everything about the project uh in um in a not
+1442000	1450000	specific way so we have also the evolution plan uh responsibilities a lot of information about
+1450000	1457040	our project and uh starting from this document we have enough to put about a system required
+1457040	1458320	specification document
+1462400	1463760	here the second level
+1466720	1468320	let's see for example
+1468320	1474480	we'll we'll just make a little change to
+1477440	1491440	have you so you can see the things better
+1491440	1500560	uh
+1504720	1511280	here we are in this document it is about document about the system required specification we have
+1511280	1519040	all these items of you uh you can see the the id here a title and here a description
+1519040	1526720	um it is actually a test project it's not a really project that we use but it's just used for
+1526720	1534160	uh academy for for testing for uh allow people to try some functionalities of the software
+1534960	1541520	but actually here we can see uh some system requirement for example that should be an easy
+1541520	1544560	to operate with excessive training things like this
+1545200	1552240	and um here on the right we have some properties that are displayed on the document and here in the
+1552240	1560480	the right panel we can modify these properties and we have the severity the status since for example the
+1560480	1567040	status is reviewed if you try to write something it's actually not in change but if we
+1567040	1570800	uh perform an action rework and we save the document
+1575520	1584160	with a little weight the status of our item change and now we are able to write something
+1585360	1589200	in the requirement and make some modification when we are done we save
+1589200	1599920	a bit slow today it's a bit slow today and we perform an actual review so we block this description
+1599920	1610160	of the data um in this part usually you have some uh description of the system so description of
+1610160	1617200	functionalities and not a proper description of the implementation that you have in the next part here
+1618000	1618960	in the design part
+1622960	1628080	we have input to the previous document and as output to the software software requirements
+1628080	1636160	specification document with a description of the implementation here we can find some uml
+1637040	1641920	we can find some input description we can find a lot of things here here are some
+1641920	1650960	examples but it depends a lot of uh which project we are we are describing uh you can find some uh text
+1650960	1658800	description but also some pseudo code usually some uh part of code so a lot of things uh some figures
+1660160	1668560	and if we navigate it we can find that for example software requirement item is connected to a system required
+1668560	1678880	document uh system requirement item but also it it is verified by some from some tests that we can find in the next session
+1680960	1681840	if we go back
+1681840	1694400	the same part we also have here the software test case specification if we open this document we'll find
+1694400	1702000	all the tests that are associated to our software items with some steps some step description and some expected
+1702000	1709360	record record results when someone want to test these things it should create a text section
+1709360	1717760	test session add this item to access it to the test section session and uh try it and report the result
+1718960	1724880	here we have a different uh way to read it because uh uh the test part is always made by
+1725520	1733840	a table with the steps and other things we can actually uh customize this part but we always save the table for the
+1733840	1736400	three or four part of our more part of our test
+1741840	1747520	and just to give you some more information
+1747520	1758720	we go back to the software requirement specification part and we give a better look to the single item
+1759760	1764640	here uh i said before that here we have some properties that are already shown the document
+1764640	1770240	here we are some probably that you can we can change the properties but if you open the item
+1770240	1781040	we have a full look about the single item with all the properties um uh that it have priority
+1781040	1788880	initial estimate i spent a lot of things and also some custom properties that we that we can add to
+1788880	1793680	the item uh but to add some custom properties we should navigate in the
+1793680	1800880	um in the administration part i will not show you uh actually it's today because uh it is a things that
+1800880	1808080	uh is by the only usually but uh by people that administrate the project and the usual the work that
+1808080	1816880	uh user uh does is to fulfill the information not to customize but if someone uh uh needs this part
+1816880	1824960	we can uh make another quick lesson introduction to customize project uh but let's see some of the
+1824960	1829760	most important things here on uh upright we have the history
+1832960	1839840	that uh show us actually this is not uh realistic because we no action on these things but uh usually
+1839840	1846000	here we have all the version of the item because uh uh we could change the uh our description for
+1846000	1854720	example 10 times and here we could find probably if we just to see another one
+1859040	1867840	okay here we have uh some two uh version of this item that tell us that this has been modified two
+1867840	1875840	years ago or three years ago so here we can see the action of the modification and with these things we can
+1875840	1885360	see the history of an item or the history of the document because usually uh we could uh we probably
+1885360	1892320	we could want to know how these things things change in the times and and we want to retrospective
+1892320	1899040	some implementation to know for example uh in that uh one years before what was the description of
+1899040	1902720	these things because actually description exchange and implementation with it
+1903600	1910320	so to have a repository actually it uh polarion implements a repository that can allow us to see
+1910960	1914800	the history of item documents and also the history of the older project
+1917040	1926400	for all the project we have a section section here above that is baseline section actually we have no
+1926400	1933600	baseline saved but uh the difference between history and baseline is that here we can create a baseline
+1933600	1941120	for today for example today we have release we can delete a baseline tool for the release and we have
+1943360	1951680	we can navigate all the project in that day for the for the status in the day that we create the baseline so
+1951680	1959840	um it's not about the single item but this is old items so we can navigate we can change documents and
+1959840	1966320	see all the things that was done in uh probably for one hour one year before or the day of a specific release
+1966320	1979200	here instead we have in the first part here we have a lot of section for the parts of our develop
+1979200	1987200	uh i just to do the you the required the same part but uh we have also the risk part the development part
+1987200	1993600	of trace develop and the maintenance that we will not see because actually is um all the same scheme
+1994240	1998240	and uh it's not so important to see all of them
+2000240	2006720	actually we have some other documents for the sky in this part that is still connected to the previous one
+2007600	2012320	but let's go to see other things about the software
+2012960	2019440	um here we have some section with documents and item but if if we want to explore this um
+2020320	2026640	not the section but for example all the system requirements that can be stored in more documents
+2026640	2034160	here we have a section with all work item that we can open and we can see all the objects that are
+2034160	2041440	storing documents so we have not a document view but the table view of all things that we have we can
+2041440	2050080	filter here for type for example or we can create here filters about i don't know some properties for
+2050080	2058160	example all the item that is should have and we can load the table about all the item for example that
+2058720	2063200	has been created from someone or that have a association with some things
+2063200	2070880	and it is good because also we can export these things with an excel file
+2073840	2080400	we can select which properties we want to export usually there is always the id the title
+2080400	2087920	and also the description but you can see that the first three are blocked for example the quart
+2087920	2092800	the fourth one no id is always blocked because we can't not change it because it's assigned by the
+2092800	2100400	software but for example we can we can uh want to unblock the description because we want to export
+2100400	2107600	this excel to someone that don't have this of the access to polarion but we want that you can add some
+2107600	2116000	more text description to some to some item and then when when we do these things i will just show you
+2121200	2127440	when we export this and we modify the excel we actually can re-import the excel and import all the
+2127440	2136320	modification this is why polarity is not also software when where you want to work but it's uh first a
+2136320	2143520	storageable document and not all people that work here should be have the access to all the information
+2143520	2153680	all the items all the things but probably we just want to export a file to someone that probably could
+2153680	2161840	be also in some other society some other part of the world we share this thing with him here we see
+2161840	2168480	that since we have the the title block and he cannot change anything but it can change the description part
+2170960	2180160	add some things save this file and send it back to us and we can run the import part and we can
+2180160	2183520	update our storage of our documents and our items
+2183520	2191520	instead here we have a document section with all the documents for divided for
+2193200	2201040	for part design development etc and we can see all the documents but also the report associated to
+2201040	2209280	documents i showed you some of this report before in the slides and here where you can find it
+2209280	2219600	also we have a dashboard farm that we can customize where there is all the graphs that we can need to
+2219600	2226400	understand the status of our project so how many issues we have how many of them in process how many
+2226400	2233440	change requests uh and all other things that we need but we can create more charts about things that we want
+2233440	2239280	to have a quick view to administrate properly the our our project
+2243600	2245360	okay some questions
+2252640	2261760	okay so we'll take a quick break of 10 minutes and we will do the other slides that
+2261760	2268480	uh we have to explain to finish the lesson so see you back in 10 minutes
+2271040	2283200	see you
+2291760	2301040	so
+2301040	2303040	you
+2303040	2305040	you
+2305040	2307040	you
+2307040	2309040	you
+2309040	2311040	you
+2311040	2313040	you
+2313040	2330320	you
+2330320	2332320	you
+2332320	2334320	you
+2334320	2336320	you
+2336320	2357600	you
+2357600	2359600	you
+2359600	2361600	you
+2361600	2382880	you
+2382880	2384880	you
+2384880	2386880	you
+2386880	2396160	you
+2396160	2410160	you
+2410160	2412160	you
+2412160	2414160	you
+2414160	2416160	you
+2416160	2441440	you
+2441440	2443440	you
+2443440	2445440	you
+2445440	2472720	you
+2472720	2474720	you
+2474720	2475780	you
+2475780	2480720	you
+2480720	2501840	you
+2504720	2534700	Thank you.
+2534720	2564700	Thank you.
+2564720	2594700	Thank you.
+2594720	2624700	Thank you.
+2624720	2654700	Thank you.
+2654720	2684700	Thank you.
+2684720	2714700	Thank you.
+2714720	2744700	Thank you.
+2744720	2774700	Thank you.
+2774720	2804700	Thank you.
+2804720	2834700	Thank you.
+2834720	2864700	Thank you.
+2864720	2894700	Thank you.
+2894720	2924700	Thank you.
+2924720	2954700	Thank you.
+2954720	2984700	Thank you.
+2984720	3014700	Thank you.
+3014720	3044700	Thank you.
+3044720	3074700	Thank you.
+3074720	3104700	Thank you.
+3104720	3134700	Thank you.
+3134720	3164700	Thank you.
+3164700	3194680	Thank you.
+3194700	3224700	
+3224700	3254680	Thank you.
+3254700	3284680	Thank you.
+3284680	3314660	Thank you.
+3314660	3344660	Thank you.
+3344660	3374640	Thank you.
+3374660	3404640	Thank you.
+3404660	3434660	Thank you.
+3434660	3464660	
+3464660	3494660	
+3494660	3524640	Thank you.
+3524660	3554640	Thank you.
+3554660	3584640	Thank you.
+3584660	3614660	Thank you.
+3614660	3644660	Thank you.
+3644660	3674660	Thank you.
+3674660	3704640	Thank you.
+3704660	3734660	Thank you.
+3734660	3764660	Thank you.
+3764660	3794660	Thank you.
+3794660	3824640	Thank you.
+3824660	3854660	Thank you.
+3854660	3884640	Thank you.
+3884660	3914640	Thank you.
+3914660	3944640	Thank you.
+3944660	3974660	Thank you.
+3974660	4004660	Thank you.
+4004660	4034660	Thank you.
+4034660	4064660	Thank you.
+4064660	4094660	Thank you.
+4094660	4124660	Thank you.
+4124660	4125660	Thank you.
+4154660	4184660	Thank you.
+4184660	4214660	Thank you.
+4214660	4244660	Thank you.
+4244660	4274660	Thank you.
+4274660	4304660	Thank you.
+4304660	4334660	Thank you.
+4334660	4335660	Thank you.
+4364660	4366660	Thank you.
+4394660	4424640	Thank you.
+4424660	4426660	Thank you.
+4454660	4456660	Thank you.

@@ -1,0 +1,8021 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+Hello everyone, I'm Pasquale Perrotta and this is the Module 2 of Diagnosis topic.
+
+00:06.000 --> 00:16.000
+There will be three modules, the first one already available for the Diagnosis introduction,
+
+00:16.000 --> 00:22.000
+the second one which is related to default management, and the third one which will be
+
+00:22.000 --> 00:28.000
+a walkthrough of the UDS to understand how to read it, how to use it, and things like this.
+
+00:28.000 --> 00:34.000
+But in the Module 2, we will work exactly for default management.
+
+00:34.000 --> 00:40.000
+In particular, we will understand what is the status of the DTC,
+
+00:40.000 --> 00:45.000
+analyzing the behavior of each of these eight bits.
+
+00:45.000 --> 00:52.000
+The introduction that I gave for the Diagnosis is very general to make you aware
+
+00:52.000 --> 00:57.000
+what is the Diagnosis, why do we use the UDS, why it is important to use it,
+
+00:57.000 --> 01:01.000
+and things like this. But that was pretty an introductory lesson,
+
+01:01.000 --> 01:08.000
+and not being very practical, being quite, let's say, far from the practical use of the UDS.
+
+01:08.000 --> 01:16.000
+So the intention of these two further modules is to make you closer to the concrete activities
+
+01:16.000 --> 01:21.000
+that you are going to do once you work for a client.
+
+01:21.000 --> 01:27.000
+And these will be very, very, very helpful for whatever activities you are going to do,
+
+01:27.000 --> 01:32.000
+which is going to be validation, verification, hardware-in-the-loop configuration, everything.
+
+01:32.000 --> 01:36.000
+So this will come in handy every time.
+
+01:36.000 --> 01:41.000
+Of course, in the slides and also in the norms that you will get, there are definitions.
+
+01:41.000 --> 01:46.000
+So everything that I'm going to say is reported already in the norms.
+
+01:46.000 --> 01:54.000
+So this lesson is a way to make things easier or to raise in you doubts about you understood.
+
+01:54.000 --> 02:02.000
+But anyway, everything is already reported and present in the slides and the norms
+
+02:02.000 --> 02:04.000
+for other presentations and things like this.
+
+02:04.000 --> 02:08.000
+So you have the references in case of problems.
+
+02:08.000 --> 02:13.000
+I please refer to your references.
+
+02:13.000 --> 02:18.000
+So here there is a definition and most of all some names.
+
+02:18.000 --> 02:30.000
+But I would like to use, as always, a tool that for me is very helpful, which is paint.
+
+02:30.000 --> 02:33.000
+I already prepared a couple of things that could be helpful.
+
+02:33.000 --> 02:40.000
+But here I would just like to mention two additional things.
+
+02:40.000 --> 02:47.000
+So as we said probably in the previous module, or if not, I'm going to tell you now.
+
+02:47.000 --> 02:55.000
+Every time we refer to a diagnostic trouble code, the DTC, we need three bytes to refer to it.
+
+02:55.000 --> 03:01.000
+So the identification number for the specific diagnostic trouble code is based on three bytes.
+
+03:01.000 --> 03:04.000
+Okay, so we will have something like this.
+
+03:04.000 --> 03:10.000
+I write it here, you know, in a small character and dimension.
+
+03:10.000 --> 03:17.000
+So we will have, I don't know, I'm just inventing, you know, a possible diagnostic trouble code
+
+03:17.000 --> 03:22.000
+that could be, I don't know, 01, 22, 92, for example.
+
+03:22.000 --> 03:23.000
+Okay.
+
+03:23.000 --> 03:27.000
+Okay, we can make it even a bit bigger.
+
+03:27.000 --> 03:28.000
+Okay.
+
+03:28.000 --> 03:35.000
+So as you see here, so I already write something, then we will understand what is that.
+
+03:35.000 --> 03:38.000
+So let's put, let's make it be even bigger.
+
+03:38.000 --> 03:39.000
+Okay.
+
+03:39.000 --> 03:47.000
+So as I was saying the identification, so the ID of the diagnostic trouble code is based on
+
+03:47.000 --> 03:51.000
+three bytes and I'm going to show you them.
+
+03:51.000 --> 03:56.000
+So this is the first byte, this is the second byte, and this is the third byte.
+
+03:56.000 --> 03:57.000
+Okay.
+
+03:57.000 --> 04:03.000
+But every time we ask to the electronic control unit the list of errors that the electronic
+
+04:03.000 --> 04:07.000
+control unit has stored inside it, and we will see how to do that.
+
+04:07.000 --> 04:08.000
+Okay.
+
+04:08.000 --> 04:09.000
+Okay.
+
+04:09.000 --> 04:15.000
+So probably this module or in the next module, we see how to do actually concrete way this
+
+04:15.000 --> 04:16.000
+request.
+
+04:16.000 --> 04:22.000
+We will always see and realize that the echo will reply always at least with four bytes.
+
+04:22.000 --> 04:23.000
+Okay.
+
+04:23.000 --> 04:25.000
+If there is an error present in this case.
+
+04:25.000 --> 04:30.000
+So where three bytes are related to the identification number of diagnostic trouble code.
+
+04:30.000 --> 04:34.000
+So let's say this is the first, this is the second, and this is the third.
+
+04:34.000 --> 04:38.000
+But then we will also have the fourth byte.
+
+04:38.000 --> 04:43.000
+This fourth byte is the status of DTC we are referring to.
+
+04:43.000 --> 04:44.000
+Okay.
+
+04:44.000 --> 04:50.000
+So this 8f that you see is, you know, a combination of 8 bit.
+
+04:50.000 --> 04:54.000
+And according to the values of this 8 bit, we will have a specific value.
+
+04:54.000 --> 04:55.000
+8f is an hexadecimal.
+
+04:55.000 --> 05:00.000
+So according to the bit, the value of the bits that we will have here, we will have a
+
+05:00.000 --> 05:03.000
+specific value of this 8f.
+
+05:03.000 --> 05:08.000
+So please remember, we will see how to ask to the electronic control unit the list of
+
+05:08.000 --> 05:10.000
+errors, for example.
+
+05:10.000 --> 05:16.000
+But just keep in mind, for starters, that the diagnostic, every diagnostic trouble code is
+
+05:16.000 --> 05:18.000
+expressed with three bytes.
+
+05:18.000 --> 05:23.000
+And then, and this is a statical, I mean, it's a static means it's just an identification
+
+05:23.000 --> 05:24.000
+number.
+
+05:24.000 --> 05:25.000
+Okay.
+
+05:25.000 --> 05:28.000
+Like, I don't know the ID of a can frame.
+
+05:28.000 --> 05:29.000
+Okay.
+
+05:29.000 --> 05:31.000
+That is an ID and it's a static.
+
+05:31.000 --> 05:33.000
+So this is not, this does not change.
+
+05:33.000 --> 05:38.000
+What actually changed is the fourth byte because the fourth byte is the representation
+
+05:38.000 --> 05:41.000
+of the actual status of the DTC.
+
+05:41.000 --> 05:46.000
+Please guys, as always, do not learn things by earth.
+
+05:46.000 --> 05:54.000
+So status of DTC is not just a name or a, you know, funny combination of words that someone
+
+05:54.000 --> 05:56.000
+in the past decide to use.
+
+05:56.000 --> 06:01.000
+Status of DTC actually means the status of the diagnostic trouble code.
+
+06:01.000 --> 06:04.000
+Always refer to the concrete things.
+
+06:04.000 --> 06:05.000
+Okay.
+
+06:05.000 --> 06:06.000
+Concrete examples.
+
+06:06.000 --> 06:12.000
+Let's always think about we are having a problem with our car and we are driving the
+
+06:12.000 --> 06:13.000
+car on the highway.
+
+06:13.000 --> 06:16.000
+So I already did this example in the past module.
+
+06:16.000 --> 06:17.000
+Okay.
+
+06:17.000 --> 06:25.000
+And what it really, what really matters is to understand what is the problem, make sure
+
+06:25.000 --> 06:30.000
+that the car and so the software behaves properly so that everything is safe.
+
+06:30.000 --> 06:34.000
+We can preserve the safety of the drivers, the system and all the things that we have
+
+06:34.000 --> 06:35.000
+said.
+
+06:35.000 --> 06:36.000
+Okay.
+
+06:36.000 --> 06:44.000
+But once we, you know, everything is safe and, you know, all the safety part is achieved,
+
+06:44.000 --> 06:47.000
+then it's very important for us to understand what is the status of the error.
+
+06:47.000 --> 06:52.000
+This is from the high level point of view, but this is also important during the development
+
+06:52.000 --> 06:53.000
+phase.
+
+06:53.000 --> 06:58.000
+If you're performing some tests that require that the error memory is clean and you have
+
+06:58.000 --> 06:59.000
+no errors stored.
+
+06:59.000 --> 07:04.000
+And then you have an error always present inside, or you have an error generally in your electronic
+
+07:04.000 --> 07:05.000
+control unit.
+
+07:05.000 --> 07:07.000
+The first step is to understand.
+
+07:07.000 --> 07:08.000
+Okay.
+
+07:08.000 --> 07:09.000
+The error of error is it.
+
+07:09.000 --> 07:13.000
+I have three bytes telling me which is the identification number.
+
+07:13.000 --> 07:18.000
+So I can actually refer and understand what is this error.
+
+07:18.000 --> 07:27.000
+And then looking at the fourth byte, I can see, okay, just analyzing the value of this eight
+
+07:27.000 --> 07:31.000
+bit, I can understand if the error is present, if the error is not present.
+
+07:31.000 --> 07:37.000
+If the error was present in the previous monitoring cycle, if it was present two monitoring cycles
+
+07:37.000 --> 07:40.000
+ago, if it's just stored, if there is a lump on.
+
+07:40.000 --> 07:45.000
+So these are all information that we can retrieve just looking at this fourth byte.
+
+07:45.000 --> 07:46.000
+Okay.
+
+07:46.000 --> 07:49.000
+So this is extremely important.
+
+07:49.000 --> 07:55.000
+I've mentioned something that might sound new for you, which is the monitoring cycle,
+
+07:55.000 --> 08:05.000
+but we will go through it while explaining this because we will have basically three definitions
+
+08:05.000 --> 08:07.000
+that we are going to give today.
+
+08:07.000 --> 08:10.000
+So one, let's make it a bit smaller.
+
+08:10.000 --> 08:14.000
+One is the monitoring cycle.
+
+08:14.000 --> 08:20.000
+One is the driving, oops, driving cycle.
+
+08:20.000 --> 08:24.000
+And another one is the warm up cycle.
+
+08:24.000 --> 08:27.000
+So we will have three definitions.
+
+08:27.000 --> 08:28.000
+Okay.
+
+08:28.000 --> 08:36.000
+For starters, let's, of course, these definitions in a way are reported on the norms.
+
+08:36.000 --> 08:37.000
+Okay.
+
+08:37.000 --> 08:41.000
+So, once again, you don't have to remember everything by earth.
+
+08:41.000 --> 08:47.000
+You just have to know, you know, where to look at, in this case, to the norm, or, you
+
+08:47.000 --> 08:52.000
+know, just have the material to study and to read so that you know the definition of this
+
+08:52.000 --> 08:53.000
+kind of stuff.
+
+08:53.000 --> 08:57.000
+Please do not just study by earth.
+
+08:57.000 --> 09:03.000
+Try to understand from the physical point of view what does it mean, all of this stuff.
+
+09:03.000 --> 09:10.000
+So, to start with, we will define the monitoring cycle, a cycle that goes from the K off, sorry,
+
+09:10.000 --> 09:15.000
+from the K on to K off.
+
+09:15.000 --> 09:16.000
+Okay.
+
+09:16.000 --> 09:18.000
+Monitoring cycle.
+
+09:18.000 --> 09:19.000
+Okay.
+
+09:19.000 --> 09:21.000
+Once again, let's analyze the word cycle.
+
+09:21.000 --> 09:22.000
+So it's a cycle.
+
+09:22.000 --> 09:23.000
+Okay.
+
+09:23.000 --> 09:28.000
+We are monitoring a period of something, but monitoring what?
+
+09:28.000 --> 09:29.000
+Okay.
+
+09:29.000 --> 09:30.000
+Once again, here.
+
+09:30.000 --> 09:31.000
+Okay.
+
+09:31.000 --> 09:32.000
+I can even type it here.
+
+09:32.000 --> 09:33.000
+Okay.
+
+09:33.000 --> 09:35.000
+Just to make things even clearer.
+
+09:35.000 --> 09:48.000
+We are talking about a, here, the status of DTC.
+
+09:48.000 --> 09:49.000
+Okay.
+
+09:49.000 --> 09:52.000
+Please always remember what we are talking about.
+
+09:52.000 --> 09:53.000
+Okay.
+
+09:53.000 --> 09:54.000
+Status of DTC.
+
+09:54.000 --> 09:57.000
+So what are we monitoring in this cycle?
+
+09:57.000 --> 09:58.000
+The status of the DTC.
+
+09:58.000 --> 09:59.000
+Okay.
+
+09:59.000 --> 10:00.000
+The two things are interconnected.
+
+10:00.000 --> 10:02.000
+They are connected together.
+
+10:02.000 --> 10:03.000
+Okay.
+
+10:03.000 --> 10:04.000
+So monitoring cycle.
+
+10:04.000 --> 10:08.000
+This is a cycle where we monitor the status of the DTC.
+
+10:08.000 --> 10:15.000
+And then we have the driving cycle.
+
+10:15.000 --> 10:23.000
+The driving cycle is basically a monitoring cycle with an additional condition, which is
+
+10:23.000 --> 10:25.000
+turning the engine on.
+
+10:25.000 --> 10:26.000
+Okay.
+
+10:26.000 --> 10:32.000
+So we will have the conditions that we already told, I already told you before, which is
+
+10:32.000 --> 10:37.000
+monitoring a cycle plus engine on.
+
+10:37.000 --> 10:45.000
+So you can understand that also the warmup cycle is still a cycle, but it contains more
+
+10:45.000 --> 10:47.000
+than one condition or two conditions.
+
+10:47.000 --> 10:50.000
+So it contains the condition of the monitoring cycle.
+
+10:50.000 --> 10:52.000
+So K on to K off.
+
+10:52.000 --> 10:55.000
+It contains the condition of the driving cycle.
+
+10:55.000 --> 11:02.000
+So you have to turn on the engine, but there are also additional conditions.
+
+11:02.000 --> 11:03.000
+Why I'm generic.
+
+11:03.000 --> 11:08.000
+I'm generic because it depends on the kind of car you're working with.
+
+11:08.000 --> 11:14.000
+For example, for the internal combustion engine, there could be specific conditions like to turn
+
+11:14.000 --> 11:24.000
+the engine on and having a specific delta temperature in the refrigerant liquid of the, yeah.
+
+11:24.000 --> 11:25.000
+Sorry.
+
+11:25.000 --> 11:26.000
+Sorry.
+
+11:26.000 --> 11:31.000
+The temperature of the water of the engine.
+
+11:31.000 --> 11:37.000
+There must, there must be a delta temperature of 25, 22 or 22.5 degrees.
+
+11:37.000 --> 11:41.000
+But actually I don't remember exactly, but it's written in the norm.
+
+11:41.000 --> 11:42.000
+So, okay.
+
+11:42.000 --> 11:45.000
+As I said to you before, you don't remember, no problem.
+
+11:45.000 --> 11:46.000
+You just read the norm.
+
+11:46.000 --> 11:48.000
+That's not a problem at all.
+
+11:48.000 --> 11:53.000
+And this is for the internal combustion engine, but there are different conditions for the hybrid,
+
+11:53.000 --> 12:00.000
+the hybrid propulsion systems, and even more different from the electric propulsion systems.
+
+12:00.000 --> 12:03.000
+Like there is a condition on time.
+
+12:03.000 --> 12:06.000
+You have to stay in Kayon for a specific amount of time.
+
+12:06.000 --> 12:13.000
+You have to drive the car with the speed faster than 30 kilometers per hour for a specific amount of time.
+
+12:13.000 --> 12:16.000
+So it's a more restrictive condition.
+
+12:16.000 --> 12:22.000
+So while we move down here in this small scheme, we are just adding conditions.
+
+12:22.000 --> 12:23.000
+Okay.
+
+12:23.000 --> 12:29.000
+So starting from the monitoring cycle, which is the, let's say the easiest one to get, getting
+
+12:29.000 --> 12:35.000
+to the warmup cycle where actually we have a more strict, let's say conditions.
+
+12:35.000 --> 12:38.000
+And there is a specific reason for it.
+
+12:38.000 --> 12:45.000
+So we will understand why do we have these three different scenarios and give you some details
+
+12:45.000 --> 12:50.000
+about it.
+
+12:50.000 --> 12:51.000
+Okay.
+
+12:51.000 --> 12:56.000
+So, okay, it's right.
+
+12:56.000 --> 13:01.000
+Please keep, while you watch this video, it might be helpful to have this scheme in front
+
+13:01.000 --> 13:02.000
+and ahead of you.
+
+13:02.000 --> 13:03.000
+Okay.
+
+13:03.000 --> 13:08.000
+So it's easier to understand names, but they're real, real, very, very simple.
+
+13:08.000 --> 13:14.000
+So let's try to do without the support of the scheme, but would be helpful for you to have it.
+
+13:14.000 --> 13:19.000
+So let's start to read from right-hand side to the left side.
+
+13:19.000 --> 13:20.000
+Okay.
+
+13:20.000 --> 13:22.000
+Bit zero, test field.
+
+13:22.000 --> 13:32.000
+So here we are in the hypothesis that the diagnostic trouble code in question, which is 01-22-92,
+
+13:32.000 --> 13:38.000
+is monitored every, I don't know, 10, every 100 milliseconds.
+
+13:38.000 --> 13:39.000
+Okay.
+
+13:39.000 --> 13:45.000
+So this means that remembering everything that we have said in the past module, which is,
+
+13:45.000 --> 13:54.000
+you know, all the definition of the diagnosis, the fact that the Diego must be able to retrieve signals, compare signals,
+
+13:54.000 --> 13:59.000
+process signals in a specific amount of time with a specific cycle time, stuff like this.
+
+13:59.000 --> 14:11.000
+Here we work in the hypothesis that every 10 milliseconds, sorry, 100 milliseconds, we will have a check on the status of DTC.
+
+14:11.000 --> 14:12.000
+Nice.
+
+14:12.000 --> 14:17.000
+This is very important for many reasons.
+
+14:17.000 --> 14:31.000
+First of all, because according to the kind of electronic control unit you will work with, you will find that most of the DTCs are with a specific cycle time check.
+
+14:31.000 --> 14:40.000
+So it means that every, I don't know, 10 milliseconds, 50 milliseconds, 100 milliseconds, the status of DTC is checked.
+
+14:40.000 --> 14:49.000
+This is mostly true for powertrain electronic control unit because they manage critical components like the accelerator pedal,
+
+14:49.000 --> 14:54.000
+like the water temperature, battery temperature, for example, and stuff like this.
+
+14:54.000 --> 15:08.000
+But if we move to other electronic control units, like, I don't know, I don't know, headlights or the cluster or the LTM radio or whatever,
+
+15:08.000 --> 15:15.000
+most of the time the check on the DTC is not cyclical but is on event.
+
+15:15.000 --> 15:24.000
+So you must do something, for example, pressing a button to control the status of a specific DTC.
+
+15:24.000 --> 15:25.000
+Okay.
+
+15:25.000 --> 15:28.000
+Or to test that everything is okay for that DTC.
+
+15:28.000 --> 15:34.000
+Here, for the sake of this explanation, we will say that the check is cyclical.
+
+15:34.000 --> 15:41.000
+So every 100 milliseconds, there's going to be a check on the status of this DTC.
+
+15:41.000 --> 15:50.000
+So let's consider that this DTC, the 0122.92, is an open load on, I don't know, a specific component.
+
+15:50.000 --> 15:51.000
+Okay.
+
+15:51.000 --> 15:55.000
+So basically, the fault is I have an open load.
+
+15:55.000 --> 15:59.000
+So basically, I don't know, a wire that has been cut.
+
+15:59.000 --> 16:07.000
+And whenever the load is open, so there is a missing pin or basically the wire is cut, then the fault is injected.
+
+16:07.000 --> 16:10.000
+So I have actually an electrical problem.
+
+16:10.000 --> 16:16.000
+So let's consider this example and let's go through these bits.
+
+16:16.000 --> 16:21.000
+Bit 0 is the test fail.
+
+16:21.000 --> 16:23.000
+It's called test fail.
+
+16:23.000 --> 16:39.000
+So it says in a very clear way, also from the definition, that this bit will be 0 if the last test executed was okay.
+
+16:39.000 --> 16:47.000
+This means that I'm in the conditions to perform a check on the status of the DTC.
+
+16:47.000 --> 16:55.000
+This check has been done, and the last time this check has been done, if it's 0, then it means that the test was okay.
+
+16:55.000 --> 16:58.000
+So there were no problems encountered.
+
+16:58.000 --> 17:07.000
+If there was, there is a problem, then, so the test fails, then this bit goes to 1.
+
+17:07.000 --> 17:08.000
+Okay.
+
+17:08.000 --> 17:14.000
+So please remember, this is the result of the last test executed.
+
+17:14.000 --> 17:18.000
+Why I'm stressing out this concept?
+
+17:18.000 --> 17:21.000
+Because there are two main things to be said about it.
+
+17:21.000 --> 17:25.000
+First of all, there must be the conditions to perform a test.
+
+17:25.000 --> 17:33.000
+So I'm saying, I'm putting myself in the easy example of 100 milliseconds cycle time.
+
+17:33.000 --> 17:34.000
+Okay.
+
+17:34.000 --> 17:39.000
+So in this case, I know that every 100 milliseconds, a test is going to happen.
+
+17:39.000 --> 17:44.000
+In the hypothesis that this is the only thing that we need, just the elapsing of time.
+
+17:44.000 --> 17:50.000
+It's not like this, because to perform a test, the electronic control unit must be supplied.
+
+17:50.000 --> 17:55.000
+The software should support the check of the retrieving of these signals.
+
+17:55.000 --> 17:58.000
+The hardware has to be able to perform this kind of test.
+
+17:58.000 --> 18:02.000
+So there are also other preconditions, which now I'm not mentioning.
+
+18:02.000 --> 18:09.000
+For now, let's just consider that the only condition that we need is that we need 100 milliseconds to elapse,
+
+18:09.000 --> 18:16.000
+so that the echo has all the time to perform the checks related to this error.
+
+18:16.000 --> 18:17.000
+Okay.
+
+18:17.000 --> 18:20.000
+In this case, we already have all the preconditions.
+
+18:20.000 --> 18:30.000
+But in the example of, as I was mentioning before, specific, let's say, minor electronic control units that do not have this kind of logic,
+
+18:30.000 --> 18:38.000
+but I have a logic on event, so I have to do something, the test will be executed every time, for example, I push a button.
+
+18:38.000 --> 18:47.000
+Because the only way to check if the circuit behind the button is working or not is by pressing the button, trying to actuate it, basically.
+
+18:47.000 --> 18:56.000
+So in that case, I will not have a test every 100 milliseconds, but I will have a test every time I push the button.
+
+18:56.000 --> 18:57.000
+Okay.
+
+18:57.000 --> 18:58.000
+So this is very different.
+
+18:58.000 --> 19:05.000
+So keep in mind that here we are in the hypothesis of a cycle time on the status of the DTC check.
+
+19:05.000 --> 19:06.000
+Okay.
+
+19:06.000 --> 19:08.000
+Every 100 milliseconds, a check happens, no other word.
+
+19:08.000 --> 19:09.000
+Okay.
+
+19:09.000 --> 19:13.000
+It's not that easy, but for the sake of the explanation, yeah, now it's that easy.
+
+19:13.000 --> 19:14.000
+Okay.
+
+19:14.000 --> 19:25.000
+This means that if we have a, let's say, a check every 100 milliseconds, let's say that here, here,
+
+19:25.000 --> 19:27.000
+the monitoring cycle starts.
+
+19:27.000 --> 19:28.000
+Okay.
+
+19:28.000 --> 19:32.000
+So here we have an event of KON.
+
+19:32.000 --> 19:33.000
+Okay.
+
+19:33.000 --> 19:39.000
+So once we have the KON, we are starting a monitoring cycle.
+
+19:39.000 --> 19:40.000
+Okay.
+
+19:40.000 --> 19:56.000
+This means that, okay, now I'll stretch a bit timeline, but let's consider that here, oops, sorry, here, 100 milliseconds are elapsed.
+
+19:56.000 --> 19:57.000
+Okay.
+
+19:57.000 --> 20:00.000
+So this is, this is 100 milliseconds.
+
+20:00.000 --> 20:01.000
+Okay.
+
+20:01.000 --> 20:02.000
+Okay.
+
+20:02.000 --> 20:07.000
+Let's use the text box 100, oops, 100 milliseconds.
+
+20:07.000 --> 20:08.000
+Okay.
+
+20:08.000 --> 20:09.000
+Great.
+
+20:09.000 --> 20:25.000
+Considering that this is 100 milliseconds, then as I was saying, I will stretch the timeline because
+
+20:25.000 --> 20:34.000
+I need this specific scheme for, to explain the bit six, but anyway, it means that here,
+
+20:34.000 --> 20:39.000
+after 100 milliseconds, I will have the first test executed.
+
+20:39.000 --> 20:47.000
+So if here, after 100 milliseconds, the test fails, then this bit goes to one.
+
+20:47.000 --> 20:50.000
+If the test is okay, the bit stays to zero.
+
+20:50.000 --> 20:56.000
+But I, I said before that this is the, the, the result of the last test executed.
+
+20:56.000 --> 21:01.000
+So it means that after 100 milliseconds, I have an update and it updates to zero to one,
+
+21:01.000 --> 21:07.000
+according to, if you have or not the error, but then there will be one other 100 milliseconds.
+
+21:07.000 --> 21:12.000
+Then another 100 milliseconds, 100, 100, 100, 100, and so on.
+
+21:12.000 --> 21:16.000
+This means that every time, every time, guys, please remember this.
+
+21:16.000 --> 21:24.000
+Every time I have 100 milliseconds elapse, I have an update here, here, here, here, here,
+
+21:24.000 --> 21:26.000
+here, here, here, here, and here.
+
+21:26.000 --> 21:27.000
+Okay.
+
+21:27.000 --> 21:33.000
+So every time I, if the condition is just that the check is done every 100 milliseconds, then
+
+21:33.000 --> 21:37.000
+every 100 milliseconds, I will have an update of this bit.
+
+21:37.000 --> 21:42.000
+So if we consider that here, the error is present, here, this will be one.
+
+21:42.000 --> 21:44.000
+Maybe here, I still have the problem.
+
+21:44.000 --> 21:46.000
+It's one, one, one.
+
+21:46.000 --> 21:48.000
+Then the error disappears.
+
+21:48.000 --> 21:53.000
+So I will have zero, zero, zero, zero, zero, zero, for example.
+
+21:53.000 --> 21:54.000
+Okay.
+
+21:54.000 --> 21:59.000
+So please remember, this is the result of the last test executed.
+
+21:59.000 --> 22:10.000
+So if I execute test every 100 milliseconds, it means that that bit is updated every 100 milliseconds.
+
+22:10.000 --> 22:15.000
+Guys, this is very important because when you will work with the diagnostic tools or simply,
+
+22:15.000 --> 22:20.000
+you will look for the logs in Chem, most of the time, you will see a static value.
+
+22:20.000 --> 22:21.000
+Okay.
+
+22:21.000 --> 22:22.000
+For example, 8f.
+
+22:22.000 --> 22:25.000
+So for you, it will mean that that bit is always to one.
+
+22:25.000 --> 22:30.000
+Then we see why I'm saying that with 8f, the bit zero is one.
+
+22:30.000 --> 22:33.000
+You will see always as it doesn't one.
+
+22:33.000 --> 22:40.000
+But in reality, if you, in the low level, let's say from the hardware point of view,
+
+22:40.000 --> 22:46.000
+and also from the software point of view, that bit is always updated every 100 milliseconds in this case.
+
+22:46.000 --> 22:47.000
+Okay.
+
+22:47.000 --> 22:54.000
+Even if you see that it's a stacked one, it's not stacked one, because that is updated at every test that is executed.
+
+22:54.000 --> 22:58.000
+In this case, the test is executed every 100 milliseconds.
+
+22:58.000 --> 23:02.000
+It means every 100 milliseconds, we will have the update of the bit zero.
+
+23:02.000 --> 23:03.000
+Okay.
+
+23:03.000 --> 23:04.000
+Nice.
+
+23:04.000 --> 23:11.000
+So now let's consider that we have this bit two one, for example.
+
+23:11.000 --> 23:12.000
+Okay.
+
+23:12.000 --> 23:13.000
+Because the test is failing.
+
+23:13.000 --> 23:14.000
+Okay.
+
+23:14.000 --> 23:17.000
+Let's consider the last time we have the test here fails.
+
+23:17.000 --> 23:18.000
+Okay.
+
+23:18.000 --> 23:19.000
+So the test fails here.
+
+23:19.000 --> 23:20.000
+And then this one.
+
+23:20.000 --> 23:21.000
+Great.
+
+23:21.000 --> 23:27.000
+Bit one test failed this monitoring cycle.
+
+23:27.000 --> 23:34.000
+So now we start to use this idea, the idea of the monitoring cycle from K on to K off.
+
+23:34.000 --> 23:42.000
+The bit one, yeah, let's see the logic behind the bit one being zero or one.
+
+23:42.000 --> 23:55.000
+So if at least one test is executed and that test fails in that monitoring cycle, so from a K on to a K off,
+
+23:55.000 --> 23:57.000
+that bit will go to one.
+
+23:57.000 --> 24:04.000
+So if I have at least one test failed in this monitoring cycle, then this bit will go to one.
+
+24:04.000 --> 24:12.000
+If I have no error test failed in this monitoring cycle, then that bit goes to zero.
+
+24:12.000 --> 24:13.000
+Okay.
+
+24:13.000 --> 24:21.000
+So in this case, if we consider here that we have had a K on event, and then where there is this green bar,
+
+24:21.000 --> 24:27.000
+we have a K off event, and then a K on to start a new monitoring cycle.
+
+24:27.000 --> 24:33.000
+Here we have a monitoring cycle, you know, because we have had a K on and we have had a K off.
+
+24:33.000 --> 24:36.000
+So this is a monitoring cycle.
+
+24:36.000 --> 24:44.000
+According to the definition that I gave you, and according to the definition that UDS gives you,
+
+24:44.000 --> 24:50.000
+as we see here, we have plenty of tests failed here.
+
+24:50.000 --> 24:55.000
+So even with one test failed, so let's consider that everything here is okay,
+
+24:55.000 --> 25:06.000
+but we have this first error, this first check failing, then we will have one test executed,
+
+25:06.000 --> 25:12.000
+at least one test executed failed, so this means that we will, the bit one will go to one,
+
+25:12.000 --> 25:18.000
+because we will, we would have one test failed in this monitoring cycle.
+
+25:18.000 --> 25:19.000
+Okay.
+
+25:19.000 --> 25:24.000
+So once you have a test failed, that bit goes to one and stays to one,
+
+25:24.000 --> 25:30.000
+because we already have one test failed in this monitoring cycle, so it stays to one,
+
+25:30.000 --> 25:38.000
+and that bit is not updated anymore until we move to the next monitoring cycle.
+
+25:38.000 --> 25:39.000
+Okay.
+
+25:39.000 --> 25:48.000
+So once I have the error here, it means that the bit one goes to one and stays to one until the end of the monitoring cycle.
+
+25:48.000 --> 25:49.000
+Okay.
+
+25:49.000 --> 25:53.000
+So it's not updated like the bit zero every 100 milliseconds.
+
+25:53.000 --> 25:58.000
+No, once I have at least one test failed in this monitoring cycle,
+
+25:58.000 --> 26:01.000
+then the bit goes to one and stays to one.
+
+26:01.000 --> 26:02.000
+Okay.
+
+26:02.000 --> 26:08.000
+Guys, please remember, it's extremely important to remember,
+
+26:08.000 --> 26:14.000
+that it's not enough just to do K-ON and K-OFF to perform a monitoring cycle.
+
+26:14.000 --> 26:19.000
+The monitoring cycle expects also a test to be executed.
+
+26:19.000 --> 26:20.000
+Okay.
+
+26:20.000 --> 26:26.000
+So if you are in this case, okay, you have a test every 100 milliseconds,
+
+26:26.000 --> 26:32.000
+so you make sure that at least 100 milliseconds elapsed so that you know that the test has been executed,
+
+26:32.000 --> 26:33.000
+and we are okay.
+
+26:33.000 --> 26:37.000
+So we can know if a test is failed or is passed.
+
+26:37.000 --> 26:45.000
+But if I'm in the case of a DTC that requires an action, and I do not perform the action,
+
+26:45.000 --> 26:52.000
+so I do not press a button, for example, it means that in that monitoring cycle, I'm not performing a test.
+
+26:52.000 --> 26:56.000
+So for the purpose of the status of DTC and everything we are going to see,
+
+26:56.000 --> 27:02.000
+that monitoring cycle does not count because we don't know if the test failed or the test passed
+
+27:02.000 --> 27:04.000
+because we didn't perform the test.
+
+27:04.000 --> 27:05.000
+Okay.
+
+27:05.000 --> 27:10.000
+Please be very careful on all the conditions needed to perform the test.
+
+27:10.000 --> 27:17.000
+In this case, we are considering as an hypothesis that the only condition is that the echo takes 100 milliseconds
+
+27:17.000 --> 27:20.000
+to perform these tests, and that's it.
+
+27:20.000 --> 27:26.000
+But there might be further conditions to make the DTC check happening.
+
+27:26.000 --> 27:27.000
+Okay.
+
+27:27.000 --> 27:31.000
+So please always keep in mind.
+
+27:31.000 --> 27:35.000
+Bit 2 should be the pending DTC, if I will remember.
+
+27:35.000 --> 27:37.000
+Yes, pending DTC.
+
+27:37.000 --> 27:45.000
+The pending DTC is the same as the bit 1, but bit 1 considers just one monitoring cycle.
+
+27:45.000 --> 27:48.000
+The bit 2 considers two monitoring cycles.
+
+27:48.000 --> 27:49.000
+Okay.
+
+27:49.000 --> 28:05.000
+So the bit 2 says, goes to 1 if we have at least one test failed in this monitoring cycle or in the previous monitoring cycle.
+
+28:05.000 --> 28:06.000
+Okay.
+
+28:06.000 --> 28:18.000
+So let's say we are here, the bit 2 checks that we have, if we have a test executed and failed here or here.
+
+28:18.000 --> 28:19.000
+Okay.
+
+28:19.000 --> 28:24.000
+So if we have an error in this monitoring cycle or in the previous monitoring cycle, like in this case,
+
+28:24.000 --> 28:27.000
+because as we have seen here, it is the demonstration.
+
+28:27.000 --> 28:31.000
+In the first monitoring cycle, we have plenty of tests failed.
+
+28:31.000 --> 28:33.000
+This bit goes to 1.
+
+28:33.000 --> 28:43.000
+So it's the same thing of the bit 1, but considers not just one monitoring cycle, but considers two monitoring cycles.
+
+28:43.000 --> 28:45.000
+So I hope this is clear.
+
+28:45.000 --> 28:54.000
+Of course, I suggest you to listen to this topic many times if you need to control the norm, everything.
+
+28:54.000 --> 28:55.000
+Okay.
+
+28:55.000 --> 29:07.000
+So now in the example that I'm doing, I'm considering that the final status that we will get is ATEF.
+
+29:07.000 --> 29:11.000
+Then I will explain what is that, but let's move step by step.
+
+29:11.000 --> 29:22.000
+So we have, we have called the test failed, which is the, a bit that gives me the result of the last test executed.
+
+29:22.000 --> 29:30.000
+So in this case, every test is executed every 100 milliseconds.
+
+29:30.000 --> 29:34.000
+It means that that bit is updated every 100 milliseconds.
+
+29:34.000 --> 29:38.000
+Then we have the bit 1, test failed this monitoring cycle.
+
+29:38.000 --> 29:52.000
+It means that if a test is failed, at least one test failed in this monitoring cycle, then this bit goes to 1.
+
+29:52.000 --> 29:55.000
+Bit 2 pending DTC is the same.
+
+29:55.000 --> 30:12.000
+So if we have two, if we have at least one test executed and failed in this monitoring cycle or in the previous monitoring cycle, then this bit goes to 1.
+
+30:12.000 --> 30:13.000
+Okay.
+
+30:13.000 --> 30:15.000
+Now we're ready to move to the bit 3.
+
+30:15.000 --> 30:17.000
+The bit 3 is a stored DTC.
+
+30:17.000 --> 30:29.000
+So this is easy because this bit goes to 1 if the error code, so the diagnostic trouble code, is saved inside the electronic control unit physical memory.
+
+30:29.000 --> 30:30.000
+Okay.
+
+30:30.000 --> 30:36.000
+So if the error is saved inside the electronic control unit memory, then this bit is 1.
+
+30:36.000 --> 30:37.000
+Okay.
+
+30:37.000 --> 30:47.000
+In this case, we are considering that we are having problems and as soon as a test, let's say, as soon as a test fails or, yeah.
+
+30:47.000 --> 30:48.000
+Yeah.
+
+30:48.000 --> 30:49.000
+Yeah.
+
+30:49.000 --> 30:50.000
+Yeah.
+
+30:50.000 --> 30:51.000
+Let's see.
+
+30:51.000 --> 31:01.000
+Every time, if the, at least one error, the one test fails, then the error is stored inside the electronic control unit and the bit 3 will go to 1.
+
+31:01.000 --> 31:02.000
+Okay.
+
+31:02.000 --> 31:07.000
+Now, okay, so let's move on.
+
+31:07.000 --> 31:16.000
+Bit 4 and bit 5, they are not used in most of the applications, specifically for the EMEA market.
+
+31:16.000 --> 31:19.000
+So European, African, and stuff like this.
+
+31:19.000 --> 31:22.000
+So this bit, quite likely you will see them as a stock.
+
+31:22.000 --> 31:23.000
+Okay.
+
+31:23.000 --> 31:33.000
+So they could be both 0, 0, 0, or they could be 1, 1, 1, 0, or 0, 1.
+
+31:33.000 --> 31:34.000
+Okay.
+
+31:34.000 --> 31:35.000
+Whatever.
+
+31:35.000 --> 31:36.000
+Most of the time they are stuck.
+
+31:36.000 --> 31:37.000
+Why?
+
+31:37.000 --> 31:45.000
+Because they refer to a specific maneuver of clearing their memory using the error code.
+
+31:45.000 --> 31:48.000
+Or memory using a specific service feature.
+
+31:48.000 --> 31:52.000
+But this is not used in the EMEA market.
+
+31:52.000 --> 31:57.000
+So most of the time you will see this bit stuck to 0.
+
+31:57.000 --> 32:04.000
+Since this is not a rule, I mean, these are two bits that are expected in the status of the DTC.
+
+32:04.000 --> 32:17.000
+When you start working on a specific activity, in case you were working with diagnosis or whenever you face the diagnosis, make sure to ask what is the behavior of bit 4 and bit 5.
+
+32:17.000 --> 32:21.000
+Ask the question, are these bits used or not?
+
+32:21.000 --> 32:23.000
+If not, which is the value they are stuck to?
+
+32:23.000 --> 32:28.000
+Because in my experience, they have always been 0, 0.
+
+32:28.000 --> 32:36.000
+But I have also seen 1, 1 or 1, 0, 0, 1, all kinds of combinations, really.
+
+32:36.000 --> 32:46.000
+So whenever you start, just ask if these bits are used and if they are not used, then which is the value they are stuck to?
+
+32:46.000 --> 32:55.000
+Of course, in case you need the behavior of bit 4 and bit 5, everything is explained in the norm and also in the slides.
+
+32:55.000 --> 32:57.000
+So you will have support about it.
+
+32:57.000 --> 33:02.000
+But for now, let's consider the easiest example where these bits are not used.
+
+33:02.000 --> 33:05.000
+So we will pretend they are stuck to 0, okay?
+
+33:05.000 --> 33:08.000
+So we consider that they are both 0 here.
+
+33:08.000 --> 33:14.000
+So these other combinations can be erased.
+
+33:14.000 --> 33:24.000
+Bit 6, okay, now we arrive at the situation where I needed this timeline bit stretched.
+
+33:24.000 --> 33:30.000
+So let's consider the example of, you know, let's go back to the bit 0.
+
+33:30.000 --> 33:39.000
+We have said that the bit 0 is updated with the last test executed on this DTC.
+
+33:39.000 --> 33:43.000
+And that to perform a test, we need at least 100 milliseconds.
+
+33:43.000 --> 33:46.000
+So every 100 milliseconds, a test is executed.
+
+33:46.000 --> 33:52.000
+Okay, so we have a clear idea of what happens from here on, okay?
+
+33:52.000 --> 33:55.000
+Because we have here 100 milliseconds.
+
+33:55.000 --> 33:57.000
+We have the result of the first test.
+
+33:57.000 --> 33:59.000
+We know that this has failed.
+
+33:59.000 --> 34:08.000
+And then we put this bit for specifically at this time to 1.
+
+34:08.000 --> 34:09.000
+Okay, great.
+
+34:09.000 --> 34:11.000
+But what happens here?
+
+34:11.000 --> 34:20.000
+We didn't see anything of what happens between the KON to the execution of the first test.
+
+34:20.000 --> 34:26.000
+Here, in this 100 milliseconds, basically the electronic control unit is retrieving the signals,
+
+34:26.000 --> 34:31.000
+is comparing them, is processing them, is trying to understand if the problem is present or not.
+
+34:31.000 --> 34:34.000
+So, how can we understand it?
+
+34:34.000 --> 34:45.000
+So, the only way we have to understand that a test is in execution is using the bit 6.
+
+34:45.000 --> 34:51.000
+Bit 6 is called test not completed this monitoring cycle.
+
+34:51.000 --> 34:55.000
+All right, so once again, the name is quite self-explanatory, okay?
+
+34:55.000 --> 35:01.000
+So, now I will pretend that we are in these 100 milliseconds.
+
+35:01.000 --> 35:08.000
+So, while I'm in these 100 milliseconds, it means that I'm still waiting for the first test to be executed.
+
+35:08.000 --> 35:18.000
+So, I don't have the information about the bit 0 because I don't know the result of the last test executed in this monitoring cycle, okay?
+
+35:18.000 --> 35:24.000
+So, the bit 0 will stay to the value of the last test executed.
+
+35:24.000 --> 35:28.000
+That probably was, you know, before this KON, okay?
+
+35:28.000 --> 35:31.000
+In another monitoring cycle that we do not see here, okay?
+
+35:31.000 --> 35:36.000
+So, if the test was okay, then the bit 0 is 0.
+
+35:36.000 --> 35:39.000
+If the test failed, then it was 1, okay?
+
+35:39.000 --> 35:41.000
+As clear, as simple as that.
+
+35:41.000 --> 35:50.000
+But we don't have the information, for example, on bit 1 because I don't know if an error is present or not in this monitoring cycle
+
+35:50.000 --> 35:54.000
+because in this monitoring cycle, I have no test executed, okay?
+
+35:54.000 --> 36:04.000
+So, in case I request the status of the DTC or simply I'm just reading the KON while I'm performing the KON
+
+36:04.000 --> 36:14.000
+and after I've performed the KON and I'm in these 100 milliseconds, the bit 6 will stay to 1 for this full period.
+
+36:14.000 --> 36:21.000
+Because in this full period, I have not test, not completed this monitoring cycle.
+
+36:21.000 --> 36:24.000
+It means I don't know what is the status.
+
+36:24.000 --> 36:27.000
+I'm still performing a test.
+
+36:27.000 --> 36:30.000
+I'm still performing the first test.
+
+36:30.000 --> 36:36.000
+So, until the first test is executed in this monitoring cycle, this bit will go to 1.
+
+36:36.000 --> 36:43.000
+It means that the bit 6 here, the bit 6 is 1 for these 100 milliseconds.
+
+36:43.000 --> 36:50.000
+As soon as the first test is executed, the bit 6 goes to 0 because one test has been executed.
+
+36:50.000 --> 36:55.000
+Then, if it's okay, then it means that bit 0 will go to 0.
+
+36:55.000 --> 37:00.000
+If it's not okay, the bit 0 will go to 1.
+
+37:00.000 --> 37:03.000
+And according to these values, the bit 1 will evolve as well.
+
+37:03.000 --> 37:04.000
+The bit 2 will evolve as well.
+
+37:04.000 --> 37:06.000
+The bit 3 will evolve as well.
+
+37:06.000 --> 37:07.000
+And stuff like this.
+
+37:07.000 --> 37:12.000
+So, it is very important to understand that in this first moment from the KON
+
+37:12.000 --> 37:18.000
+where we start the monitoring cycle and we don't have at least one test executed,
+
+37:18.000 --> 37:22.000
+the bit 6 will stay to 1 because it will tell the user,
+
+37:22.000 --> 37:26.000
+okay, look, I'm performing the test, but I'm not done yet.
+
+37:26.000 --> 37:28.000
+I'm still performing the first test.
+
+37:28.000 --> 37:33.000
+So, I don't have a clear picture of this monitoring cycle what is happening.
+
+37:33.000 --> 37:37.000
+Right after the 100 milliseconds, in this case, we will have a first test
+
+37:37.000 --> 37:40.000
+and the bit 6 will go to 0.
+
+37:40.000 --> 37:41.000
+Okay.
+
+37:41.000 --> 37:47.000
+So, basically, the bit 6 just will tell us if at least one test has been executed
+
+37:47.000 --> 37:48.000
+in this monitoring cycle.
+
+37:48.000 --> 37:52.000
+And if one test has been executed in this monitoring cycle,
+
+37:52.000 --> 37:57.000
+then the bit 6 is 0 because it means, okay, we already have done one test
+
+37:57.000 --> 37:59.000
+and we are done.
+
+37:59.000 --> 38:04.000
+But if we are in this first 100 milliseconds where we have no tests executed,
+
+38:04.000 --> 38:08.000
+then the bit 6 will stay to 1 until we execute the first test.
+
+38:08.000 --> 38:12.000
+But for what we are saying now, this can be considered as 0.
+
+38:12.000 --> 38:22.000
+bit 7 is the easiest one because the bit 7 goes to 1 in case there is the need of a lamp.
+
+38:22.000 --> 38:23.000
+Okay.
+
+38:23.000 --> 38:24.000
+Okay.
+
+38:24.000 --> 38:33.000
+So, if we need to turn on a warning indicator, a malfunctioning indicator lamp, the meal lamp,
+
+38:33.000 --> 38:38.000
+for example, the bit 7 will go to 1.
+
+38:38.000 --> 38:44.000
+It means the echo is requesting to turn on a lamp.
+
+38:44.000 --> 38:45.000
+Okay.
+
+38:45.000 --> 38:48.000
+Malfunctioning indication lamp.
+
+38:48.000 --> 38:49.000
+Be careful.
+
+38:49.000 --> 39:00.000
+This is a request done, for example, by the powertrain electronic control unit to the electronic control unit that actually manages the lamps.
+
+39:00.000 --> 39:09.000
+For example, if we are having a problem on the accelerator pedal, it's not the powertrain electronic control unit that manages directly the lamp.
+
+39:09.000 --> 39:10.000
+Okay.
+
+39:10.000 --> 39:14.000
+The lamp will be managed by the APC, the cluster.
+
+39:14.000 --> 39:21.000
+So, this 7 bit that goes to 1 is just a request to turn on a lamp.
+
+39:21.000 --> 39:28.000
+And then another echo will receive this information over can and will turn on the lamp.
+
+39:28.000 --> 39:35.000
+So, now we have a full picture of a potential example of a status of DTC.
+
+39:35.000 --> 39:39.000
+But here I see just a string of bits.
+
+39:39.000 --> 39:43.000
+Values of 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1.
+
+39:43.000 --> 39:44.000
+Okay.
+
+39:44.000 --> 39:47.000
+So, how do we get to this 8th half?
+
+39:47.000 --> 39:52.000
+So, this is a very easy operation of translation, basically.
+
+39:52.000 --> 40:04.000
+So, we start from the assumption that you can find everywhere on internet that we have this kind of association between physical values and hexadecimal values.
+
+40:04.000 --> 40:16.000
+So, if we, 1 in a physical value is 1 in hexadecimal, 2 is 2, 3 is 3.
+
+40:16.000 --> 40:19.000
+Well, format is completely messed up here.
+
+40:19.000 --> 40:21.000
+So, yeah.
+
+40:21.000 --> 40:25.000
+Let's make things a bit better.
+
+40:25.000 --> 40:26.000
+Let's take here.
+
+40:26.000 --> 40:52.000
+We're gonna create 4, equal 4, 5, equal 5, 6, equal 6, 7, equal 7, 8, equal 8, 9, equal 9, 10, equal A, 11, equal B, 12, equal C, 13, equal A, 11, equal B, 12, equal C, 13, equal A.
+
+40:52.000 --> 41:04.000
+13 equal D, 14 equal E, 15 equal F.
+
+41:07.000 --> 41:17.280
+So, keeping in mind this table, okay, where we have on the left side the decimal value and on the right side the hexadecimal value,
+
+41:17.280 --> 41:24.280
+we can split these status of DTC in two parts here, okay, in two groups.
+
+41:24.280 --> 41:32.280
+So, there is a very easy conversion formula to achieve what we are seeing.
+
+41:32.280 --> 41:51.280
+So, this is, the formula is this one, two times zero times the value of the bit, okay, x, plus two times one times the value of the bit one.
+
+41:51.280 --> 41:55.280
+Sorry for the very bad writing.
+
+41:55.280 --> 42:16.280
+Plus two times two times the value of the second bit, plus two times three, oops, two times three times the value of the bit three.
+
+42:16.280 --> 42:26.280
+So, what we have here, two times zero is one, one, times the value of bit zero, which is one.
+
+42:26.280 --> 42:42.280
+So, we have one times one, one, plus two times one is two, times the value of the bit one, which is one.
+
+42:42.280 --> 42:55.280
+So, we will have two, plus two times two is four, times the value of the bit two, which is one.
+
+42:55.280 --> 43:07.280
+So, finally, we have four, plus two times three is eight, plus the value of the bit three, which is one, and this is eight.
+
+43:07.280 --> 43:15.280
+Eight plus four is twelve, plus two is fourteen, plus five is fifteen.
+
+43:15.280 --> 43:21.280
+So, finally, everything turns out in being f.
+
+43:21.280 --> 43:26.280
+Do you see here? We have the f, it's right here, okay?
+
+43:26.280 --> 43:28.280
+Same idea for this other sign.
+
+43:28.280 --> 43:34.280
+So, the formula is the same, two times zero, two times one, two times two, two times three.
+
+43:34.280 --> 43:35.280
+Here, we have all zeros.
+
+43:35.280 --> 43:42.280
+So, these factors will just elicitate because they are times zero, so they will get cancelled.
+
+43:42.280 --> 43:52.280
+The only factor that we will have is two times three times the value of the bit, let's say three, yeah, three of the group.
+
+43:52.280 --> 43:57.280
+This is one, two times, two times three is eight, times one is eight.
+
+43:57.280 --> 44:01.280
+So, the final status here will be eight.
+
+44:01.280 --> 44:12.280
+So, the final result, if you put together the two groups, is eight f.
+
+44:12.280 --> 44:22.280
+As you can see, guys, you just need to ask the electronic control unit the status of the DTC inside the memory or the status of the specific DTC.
+
+44:22.280 --> 44:30.280
+And only looking at this fourth bit, this eighth F, I already know a lot of information.
+
+44:30.280 --> 44:34.280
+I know that the last test executed failed because the bit zero is one.
+
+44:34.280 --> 44:37.280
+So, it means that I actually, I'm having problems.
+
+44:37.280 --> 44:43.280
+Because if the last test executed always fails, it means that I actually have the problem.
+
+44:43.280 --> 44:46.280
+This problem is present, so, in this monitoring cycle.
+
+44:46.280 --> 44:51.280
+So, while I'm using the car, while I'm in K-On with my car, I have a problem.
+
+44:51.280 --> 44:53.280
+So, the car must be checked.
+
+44:53.280 --> 44:57.280
+The problem was not present just now in this monitoring cycle.
+
+44:57.280 --> 45:02.280
+But having the bit two to one, it means that this problem was present also in the previous monitoring cycle.
+
+45:02.280 --> 45:05.280
+So, this is not a new problem.
+
+45:05.280 --> 45:10.280
+This is a problem that I already had in the previous monitoring cycle.
+
+45:10.280 --> 45:17.280
+In addition, since the test failed, I always, I also have this problem inside the electronic control unit memory.
+
+45:17.280 --> 45:24.280
+So, yeah, the ED, this DTC is saved in the error memory because I see that the bit three is to one.
+
+45:24.280 --> 45:28.280
+So, we're asking the electronic control unit the status of DTC.
+
+45:28.280 --> 45:36.280
+You know, I know that I must find this ED because it is saved inside the electronic control unit.
+
+45:36.280 --> 45:37.280
+The bit six is to zero.
+
+45:37.280 --> 45:42.280
+So, I know that in this monitoring cycle, at least one test has been done.
+
+45:42.280 --> 45:51.280
+So, it means that at least one, the error, the test was done and failed also because the, you know, because of all the values of the previous bits.
+
+45:51.280 --> 45:54.280
+Bit seven is to one.
+
+45:54.280 --> 46:00.280
+It means that I should, if I enter the car, I should expect also a lump on it.
+
+46:00.280 --> 46:12.280
+So, just looking at this 8F and knowing how to translate the different combination of bits into hexadegimal, I have all this information.
+
+46:12.280 --> 46:13.280
+I should expect a lump.
+
+46:13.280 --> 46:14.280
+I know that I have a problem.
+
+46:14.280 --> 46:15.280
+The problem is stored.
+
+46:15.280 --> 46:19.280
+The problem was present, not just now, but also in the previous monitoring cycle.
+
+46:19.280 --> 46:24.280
+And everything, at least one test has been done in this monitoring cycle because bit six is to zero.
+
+46:24.280 --> 46:34.280
+So, all this stuff, I know just looking at one byte, at least the fourth byte, just looking at it, I have all this information.
+
+46:34.280 --> 46:40.280
+So, you can understand the power of this bit and this status of the DC.
+
+46:40.280 --> 46:53.280
+Because just looking at the byte, I have a lot, a lot, a lot of information just knowing the different combination of this bit.
+
+47:04.280 --> 47:09.280
+So, all this video is to show you all the information going on.
+
+47:09.280 --> 47:13.280
+My first question is maybe perhaps not just staggering into any way or not.
+
+47:13.280 --> 47:14.280
+But yes, I who are!
+
+47:14.280 --> 47:16.280
+And give me your last announcement for the Lethal has participated again.
+
+47:16.280 --> 47:17.280
+So, WOE believed in the report.
+
+47:17.280 --> 47:19.280
+I would come back just by few weeks and begin to make the report with the wong.
+
+47:19.280 --> 47:20.280
+So, I have dubious.
+
+47:20.280 --> 47:21.280
+I think no question is, I would look as if so.
+
+47:21.280 --> 47:22.280
+Maybe we can sleep regularly in the days of this video.
+
+47:22.280 --> 47:28.280
+But then the way that the system will charge the car game, or this is not really normal or something that this looks like the pain will get a copy of itself.
+
+47:28.280 --> 47:29.280
+So, if I am doing that, I would say the first thing of the wake of time at the end of the day.
+
+47:29.280 --> 47:30.280
+Okay, the main app on our nextICK, sort of the ep парom.
+
+47:30.280 --> 47:32.280
+.
+
+48:00.280 --> 48:02.280
+.
+
+48:02.280 --> 48:04.280
+.
+
+48:04.280 --> 48:06.280
+.
+
+48:06.280 --> 48:08.280
+.
+
+48:08.280 --> 48:10.280
+.
+
+48:10.280 --> 48:12.280
+.
+
+48:12.280 --> 48:14.280
+.
+
+48:14.280 --> 48:16.280
+.
+
+48:16.280 --> 48:18.280
+.
+
+48:18.280 --> 48:20.280
+.
+
+48:20.280 --> 48:22.280
+.
+
+48:22.280 --> 48:24.280
+.
+
+48:24.280 --> 48:26.280
+.
+
+48:26.280 --> 48:28.280
+.
+
+48:28.280 --> 48:30.280
+.
+
+48:30.280 --> 48:32.280
+.
+
+48:32.280 --> 48:34.280
+.
+
+48:34.280 --> 48:36.280
+.
+
+48:36.280 --> 48:38.280
+.
+
+48:38.280 --> 48:40.280
+.
+
+48:40.280 --> 48:42.280
+.
+
+48:42.280 --> 48:44.280
+.
+
+48:44.280 --> 48:46.280
+.
+
+48:46.280 --> 48:48.280
+.
+
+48:48.280 --> 48:50.280
+.
+
+48:50.280 --> 48:52.280
+.
+
+48:52.280 --> 48:54.280
+.
+
+48:54.280 --> 48:56.280
+.
+
+48:56.280 --> 48:58.280
+.
+
+48:58.280 --> 49:00.280
+.
+
+49:00.280 --> 49:02.280
+.
+
+49:02.280 --> 49:04.280
+.
+
+49:04.280 --> 49:06.280
+.
+
+49:06.280 --> 49:08.280
+.
+
+49:08.280 --> 49:10.280
+.
+
+49:10.280 --> 49:12.280
+.
+
+49:12.280 --> 49:14.280
+.
+
+49:14.280 --> 49:16.280
+.
+
+49:16.280 --> 49:18.280
+.
+
+49:18.280 --> 49:20.280
+.
+
+49:20.280 --> 49:22.280
+.
+
+49:22.280 --> 49:24.280
+.
+
+49:24.280 --> 49:26.280
+.
+
+49:26.280 --> 49:28.280
+.
+
+49:28.280 --> 49:30.280
+.
+
+49:30.280 --> 49:32.280
+.
+
+49:32.280 --> 49:34.280
+.
+
+49:34.280 --> 49:36.280
+.
+
+49:36.280 --> 49:38.280
+.
+
+49:38.280 --> 49:40.280
+.
+
+49:40.280 --> 49:42.280
+.
+
+49:42.280 --> 49:44.280
+.
+
+49:44.280 --> 49:46.280
+.
+
+49:46.280 --> 49:48.280
+.
+
+49:48.280 --> 49:50.280
+.
+
+49:50.280 --> 49:52.280
+.
+
+49:52.280 --> 49:54.280
+.
+
+49:54.280 --> 49:56.280
+.
+
+49:56.280 --> 49:58.280
+.
+
+49:58.280 --> 50:00.280
+.
+
+50:00.280 --> 50:02.280
+.
+
+50:02.280 --> 50:04.280
+.
+
+50:04.280 --> 50:06.280
+.
+
+50:06.280 --> 50:08.280
+.
+
+50:08.280 --> 50:10.280
+.
+
+50:10.280 --> 50:12.280
+.
+
+50:12.280 --> 50:14.280
+.
+
+50:14.280 --> 50:16.280
+.
+
+50:16.280 --> 50:18.280
+.
+
+50:18.280 --> 50:20.280
+.
+
+50:20.280 --> 50:22.280
+.
+
+50:22.280 --> 50:32.280
+.
+
+50:32.280 --> 50:34.280
+.
+
+50:34.280 --> 50:36.280
+.
+
+50:36.280 --> 50:38.280
+.
+
+50:38.280 --> 50:39.280
+.
+
+50:39.280 --> 50:40.280
+.
+
+50:40.280 --> 50:42.280
+.
+
+50:42.280 --> 51:02.700
+For example, in the example of this explanation, we were referring to a powertrain module, and usually the engine control module, let's say the echo that manages the engine, does not manage directly the lamps.
+
+51:02.700 --> 51:17.920
+So this is just a request to the echo that will actually manage the lamp. So the echo will read the request coming from this electronic control unit, and according to the kind of request that it receives, then the echo will turn on a specific lamp.
+
+51:17.920 --> 51:28.940
+Okay, so this is the situation, and we arrived to explain why this is defined as 8f, as remember we divide this in two parts, this is 8, and this is f.
+
+51:28.940 --> 51:42.520
+Okay, so I can write it here, 8f. Okay, this is everything that we have explained, this is how it finished, the last module, the part one of module two.
+
+51:43.220 --> 51:50.360
+But there are some topics to be discussed yet to close this module two.
+
+51:50.360 --> 52:13.900
+So, okay, for me it's important to understand the actual status of the DTC, so in this case, the status of the DTC is 8f, so if you recollected the information, and all the stuff explained in the module, the first part of module two, then you will realize that now, okay, we have an active fault.
+
+52:13.900 --> 52:20.900
+Okay, we have some kind of problem, okay, we have some kind of problem right now, but this is not on the only thing that matters to me.
+
+52:20.900 --> 52:37.320
+Another very important thing is once I have the status of a DTC that is actually active, then I'm always, I'm also interested in, you know, clearing the error memory.
+
+52:37.320 --> 52:49.080
+So, okay, I have a problem, but then I'm always interested in resolving the problem, you know, because most of the time when you have this kind of problems, then these will reflect on a high level point of view.
+
+52:49.220 --> 53:02.140
+I mean, you are driving your car, you have a problem on the accelerator pedal, so it will mean that, I don't know, as we said in the example, the car will slow down, then it will turn off, then probably you can turn it on,
+
+53:02.140 --> 53:07.660
+but then you can just drive up to, I don't know, 10 kilometers per hour, just move the car out of the street.
+
+53:08.120 --> 53:22.820
+So, if you keep having this problem, then your car will be useless, because you still have a problem on the accelerator pedal, nothing can be done, you know, in that case, if we do not, do not take actions, and, you know, everything will stay like this.
+
+53:22.820 --> 53:33.420
+So, there is actually the voo process of going to the past status, and that's what we are going to explain today.
+
+53:35.640 --> 53:48.500
+Another thing to remember is that, is the hypothesis that we have over here, so I changed color, I don't know, let's take purple, so that we have a check on the status of DTC, everyone under DTC.
+
+53:48.500 --> 54:01.600
+So, of course, I'm interested, as I was saying, to move from, I don't know, we moved from 0-0, for example, status of DTC, and now we are in 8F.
+
+54:02.340 --> 54:06.600
+Of course, I'm interested in moving back from 8F to 0-0.
+
+54:07.100 --> 54:12.960
+Why? In this way, when I have 0-0, again, it means that, first of all, I don't have the problem anymore.
+
+54:12.960 --> 54:29.120
+I won't have reaction recoveries anymore, because, as I said, once you have a DTC, one of the features of a DTC is not only that I have a code inside an electronic control unit that's just a piece of metal with electrical boards and stuff,
+
+54:29.120 --> 54:42.680
+But I actually care, I'm more, I only care, actually, that the car reacts, so that I won't get, the car won't get damaged, and most of all, we don't get hurt, and no one gets, you know, very hurt.
+
+54:43.180 --> 54:51.400
+So, I'm really interested in this stuff, but once I'm safe, I've stopped the car safely, and I'm alive, and, you know, everything is fine,
+
+54:51.400 --> 55:01.660
+Then, I want to come back to normal, and bring my car back to this old functionality, so this is why I want to move, again, from the status 8F to the status 0-0.
+
+55:02.760 --> 55:10.460
+So, this implies, first of all, to remember the behavior and the definition of all these bits that we have over here,
+
+55:10.460 --> 55:21.560
+But also, here, gets into account what we were mentioning in the module 2, part 1, and that we are explaining right now.
+
+55:22.580 --> 55:27.900
+So, the concept of monitoring cycle, or driving cycle, or warm-up cycle.
+
+55:28.420 --> 55:32.800
+So, let's start from the bit 0, this is the easy one.
+
+55:32.800 --> 55:39.200
+So, as we said, the bit 0 is the last, the result of the last test executed.
+
+55:39.920 --> 55:47.540
+So, as we, you know, considering the easy hypothesis that we made, let's draw a timeline.
+
+55:47.980 --> 55:53.840
+Yeah, I still use a purple line, that's trying to make it as straight as possible.
+
+55:54.660 --> 56:01.280
+Okay, this is the best I can do, and the best I can do is kind of nice, actually.
+
+56:01.280 --> 56:15.700
+Okay, then, let's make yourself more, I don't know, whatever lines, these here, here, here, here, here, here, here, and stuff like this.
+
+56:15.800 --> 56:25.260
+Okay, that quality, let's say, was not very, okay, so at least let's give a kind of dignity to these lines.
+
+56:25.260 --> 56:30.260
+Okay, so let's work with this, it's not perfect, but yeah, we can work something out.
+
+56:30.760 --> 56:37.020
+So, let's say we are in this monitoring cycle, and here, in this place, we have the status atif.
+
+56:37.220 --> 56:40.420
+Okay, so everything starts here with atif.
+
+56:40.420 --> 56:48.220
+Then, as you remember from the last part that you watched, and if you don't remember, please watch it back.
+
+56:49.260 --> 56:57.600
+When we say that there is a cyclical check on this DTC, it means that every 100 milliseconds, a test is done of this DTC.
+
+56:57.600 --> 57:01.120
+And if the test passes, then bit 0 goes to 0.
+
+57:01.220 --> 57:05.580
+If the test is failed, because there is a problem, then this bit will stay to 1.
+
+57:05.980 --> 57:13.860
+So, in this case, when we still have atif, it means that a test has been executed, and the test fails.
+
+57:14.500 --> 57:18.260
+But then, there will be, you know, a delta time of 100 milliseconds.
+
+57:18.580 --> 57:21.100
+Okay, let's consider that these are 100 milliseconds.
+
+57:21.100 --> 57:29.180
+For some reason, let's say, for some reason, the fault was, is not present anymore.
+
+57:29.180 --> 57:45.620
+Okay, or we can also consider, let's say, more concrete example that here, you stop the car, so you arrived, you arrived to, you know, the mechanics here, that the status is atif.
+
+57:45.620 --> 57:57.760
+So, you brought the car there with the floor problems, the lamp is on, the car can't accelerate, you just go for 3 hours, 10 kilometers per hour, just move the car out of the way and get to the first mechanics.
+
+57:57.960 --> 57:59.580
+So, this is everything that happened.
+
+57:59.720 --> 58:00.400
+You stop the car.
+
+58:00.400 --> 58:21.240
+Then, of course, you turn on the car, again, and as you know, in the first 100 milliseconds, there are no tests executed, so the bit 1 will go to 0, bit 6 will go to 1, and then we have, once again, a test.
+
+58:21.240 --> 58:26.920
+Okay, so, then, we have other 100 milliseconds.
+
+58:28.280 --> 58:40.580
+When you bring the car here, the mechanics, you know, I don't know, just, he does his check and realizes that the status is atif and you have an actual problem on the accelerator pedal,
+
+58:40.580 --> 58:51.320
+let's consider that in this point, the mechanics just, you know, repair, so read the error memory, realizes that you have a problem on the accelerator pedal,
+
+58:51.540 --> 58:59.960
+and he fixes, he or she fixes the problem on the accelerator pedal, so you won't have the problem on the potential meter anymore, okay?
+
+58:59.960 --> 59:15.940
+So, in the strange example that the mechanic will work, staying in K-On, so it means that you, suddenly, the fault, you know, reason is not present.
+
+59:16.700 --> 59:24.740
+So, if we have here the problem, and then, hypothetically, in this moment, mechanics just solves the problem, okay?
+
+59:24.760 --> 59:27.460
+We will move to the red, so that it is easier.
+
+59:27.460 --> 59:29.780
+So, here, the problem is solved.
+
+59:30.620 --> 59:40.440
+After 100 milliseconds, a new test is executed, and this time, since the mechanic repaired everything, then we don't have the problem anymore.
+
+59:41.420 --> 59:43.700
+But what is the change here?
+
+59:43.780 --> 59:47.840
+Considering that we are still in this monitoring cycle, okay?
+
+59:47.860 --> 59:50.780
+We are talking about the left side here, okay?
+
+59:50.800 --> 59:56.800
+We are still in this monitoring cycle, okay?
+
+59:56.800 --> 01:00:03.680
+So, yeah, this is not the best, you know, writing ever, but, yeah, that should be effective anyway.
+
+01:00:04.000 --> 01:00:07.260
+So, on the left, we are still in this monitoring cycle.
+
+01:00:08.500 --> 01:00:12.340
+After 100 milliseconds, this is 100 milliseconds, the error is not present anymore.
+
+01:00:12.340 --> 01:00:18.360
+So, here, the only change that we have is that the last test executed passed.
+
+01:00:18.800 --> 01:00:22.040
+So, the change is actually here, okay?
+
+01:00:22.500 --> 01:00:24.480
+So, let's give some numbers here.
+
+01:00:24.560 --> 01:00:26.040
+We use the Roman numbers.
+
+01:00:26.040 --> 01:00:39.120
+This is the first, this is the second, this is the third, this is the fourth, fifth, sixth, and whatever.
+
+01:00:39.280 --> 01:00:44.700
+If we need something, then we will use the other part of the sheet.
+
+01:00:45.260 --> 01:00:47.220
+But, anyway, we are here in the first one.
+
+01:00:47.220 --> 01:00:52.500
+So, the only change that I can see here is on the bit zero.
+
+01:00:52.680 --> 01:00:56.720
+So, the bit zero changed in the first monitoring cycle, this one.
+
+01:00:57.260 --> 01:00:59.120
+So, what will be the actual status?
+
+01:00:59.300 --> 01:01:05.480
+We will have zero here, and then one, one, one, zero, zero, zero, one.
+
+01:01:05.540 --> 01:01:06.580
+So, it's everything the same.
+
+01:01:07.200 --> 01:01:12.520
+Since it's everything the same, here, we only have eight E, okay?
+
+01:01:13.120 --> 01:01:13.720
+Why?
+
+01:01:13.860 --> 01:01:17.160
+Because this will be one, one, one, and zero.
+
+01:01:17.620 --> 01:01:22.560
+So, two times three times one is eight, plus four, plus two.
+
+01:01:23.000 --> 01:01:28.880
+This is going to be 14, 14 easy, and then we have eight E, okay?
+
+01:01:29.660 --> 01:01:35.460
+Of course, if you don't remember anything of this, if you don't really know what I'm talking about,
+
+01:01:35.460 --> 01:01:40.880
+just please watch again, module two, and eventually also module one.
+
+01:01:40.880 --> 01:01:43.780
+If it's not clear at all, okay?
+
+01:01:43.920 --> 01:01:49.740
+But, just focus on the first part of module two, and this, what I'm talking about, will be very, very clear.
+
+01:01:50.560 --> 01:01:55.780
+So, actually, here, the status at the first one, the recycle, is going to be eight E, okay?
+
+01:01:56.420 --> 01:02:01.340
+Okay, I can even type it here, maybe, see if you're eight E.
+
+01:02:03.100 --> 01:02:05.220
+Okay, then what happens?
+
+01:02:05.220 --> 01:02:11.860
+The status will be always eight E here, because we, I don't know, now, 10, 100, 100, 100.
+
+01:02:12.180 --> 01:02:14.080
+So, let's see, we have other tests.
+
+01:02:14.640 --> 01:02:19.320
+The status will be always eight E here, because the last test executed now is passing.
+
+01:02:19.520 --> 01:02:21.580
+So, the bit zero stays to zero.
+
+01:02:21.580 --> 01:02:32.460
+But, since we are still in this monitoring cycle, the bit one stays to one, because we have had at least one failure, which was this one, in this monitoring cycle.
+
+01:02:32.720 --> 01:02:38.860
+This means that bit one stays to one, bit two stays to one, bit three stays to one, and stuff like this, okay?
+
+01:02:39.120 --> 01:02:40.200
+Then, great, perfect.
+
+01:02:40.200 --> 01:02:46.960
+Then, we turn off the car, and turn on the car again.
+
+01:02:47.840 --> 01:02:51.840
+So, let's consider that we moved in the second monitoring cycle.
+
+01:02:52.760 --> 01:02:59.980
+Of course, there will be the usual 100 milliseconds, where we don't know if the error is present or not.
+
+01:03:00.140 --> 01:03:08.880
+So, the bit six will go to one, because, you know, we are about to wait, and bit one will go to zero,
+
+01:03:08.880 --> 01:03:11.340
+because we don't know if an error is present or not.
+
+01:03:12.360 --> 01:03:19.140
+So, in the meanwhile, here, we will have CC as a status, okay?
+
+01:03:19.620 --> 01:03:25.160
+Because, the bit six will go to one, bit two, sorry, bit one will go to zero.
+
+01:03:25.520 --> 01:03:34.240
+So, we will have 1100, 1100, that is CC, because it's 12, 12 CC, okay?
+
+01:03:34.240 --> 01:03:39.700
+Again, if you don't know what I'm talking about, just watch again the first part of module two,
+
+01:03:39.780 --> 01:03:41.120
+and everything should be clear.
+
+01:03:41.540 --> 01:03:49.540
+If not, just send me an email, or to automotive training, automotive.training, at sign, kinecon.it.
+
+01:03:50.680 --> 01:03:57.180
+Anyway, so, this is, before we have the first test, so, in this first 100 milliseconds,
+
+01:03:57.180 --> 01:04:01.340
+we will have the status is CC, but then we will have the first test.
+
+01:04:01.520 --> 01:04:08.540
+Since we don't have the error anymore, since we don't have the error anymore,
+
+01:04:09.040 --> 01:04:18.180
+then we will have that bit zero stays to zero, because the last test executed, this one, passed.
+
+01:04:19.220 --> 01:04:20.980
+So, bit zero stays to zero.
+
+01:04:20.980 --> 01:04:25.640
+But, in this monitoring cycle, we don't have any fault.
+
+01:04:25.980 --> 01:04:30.500
+So, it means that, in this case, also the bit one goes to zero,
+
+01:04:30.640 --> 01:04:35.060
+and this change happens in the second monitoring cycle, okay?
+
+01:04:35.500 --> 01:04:41.420
+So, considering that we still have other checks that pass, you know, always in green,
+
+01:04:42.240 --> 01:04:48.700
+the status of this second monitoring cycle will be 8C, okay?
+
+01:04:48.700 --> 01:04:54.060
+Because we have zero, zero, one, one, zero, zero, zero, zero, one, okay?
+
+01:04:56.280 --> 01:04:59.420
+We will have a separate discussion about bit seven,
+
+01:04:59.880 --> 01:05:03.380
+and the norm and the slides will really help you about this,
+
+01:05:03.440 --> 01:05:09.800
+because there are different, let's say, management of the lamp,
+
+01:05:09.940 --> 01:05:14.700
+according to what kind of lamp management that DTC requires.
+
+01:05:14.700 --> 01:05:19.060
+So, these, the slides will really help you clarify this.
+
+01:05:20.040 --> 01:05:22.280
+But, anyway, so, we have this situation.
+
+01:05:23.140 --> 01:05:24.760
+The bit two will stick to one,
+
+01:05:24.980 --> 01:05:28.640
+because in the previous monitoring cycle, we still had a fault.
+
+01:05:28.920 --> 01:05:31.180
+You see, here, this 8F is still present.
+
+01:05:31.180 --> 01:05:36.960
+So, since the bit two says that the bit two goes to one
+
+01:05:36.960 --> 01:05:40.520
+if an error is present in this monitoring cycle
+
+01:05:40.520 --> 01:05:42.680
+or in the previous monitoring cycle,
+
+01:05:42.820 --> 01:05:45.780
+considering that in both of them, we have had at least one test.
+
+01:05:46.200 --> 01:05:49.360
+We have had at least one test in this monitoring cycle
+
+01:05:49.360 --> 01:05:50.800
+and also in the previous one,
+
+01:05:51.160 --> 01:05:53.960
+and in the previous one, one of the tests failed,
+
+01:05:53.960 --> 01:05:56.660
+so, the bit two stays to one, okay?
+
+01:05:56.900 --> 01:06:02.240
+So, the status that we have in the second monitoring cycle is HC, okay?
+
+01:06:04.020 --> 01:06:04.540
+Great.
+
+01:06:04.980 --> 01:06:06.520
+But, here, what happens here?
+
+01:06:06.600 --> 01:06:11.580
+We have a monitoring cycle with no fault, okay?
+
+01:06:13.040 --> 01:06:13.560
+Great.
+
+01:06:15.040 --> 01:06:15.840
+Let's move on.
+
+01:06:16.080 --> 01:06:19.060
+We will have a separate discussion also about the bit three, okay?
+
+01:06:19.060 --> 01:06:21.360
+So, for now, let's focus on the first ones.
+
+01:06:23.380 --> 01:06:24.780
+We don't need this anymore.
+
+01:06:24.900 --> 01:06:26.900
+It was just an example, okay?
+
+01:06:27.340 --> 01:06:28.400
+And this we don't need.
+
+01:06:28.660 --> 01:06:29.340
+Okay, nice.
+
+01:06:33.300 --> 01:06:36.040
+Third monitoring cycle, usual stop.
+
+01:06:36.040 --> 01:06:41.300
+So, here, once again, we have 100 milliseconds,
+
+01:06:41.560 --> 01:06:45.420
+where we don't know if there is an error or not in this monitoring cycle.
+
+01:06:45.420 --> 01:06:50.140
+So, the status will be, once again, CC, okay?
+
+01:06:51.580 --> 01:06:54.560
+It will be CC, but then what happens?
+
+01:06:54.840 --> 01:06:59.480
+When we have the test here in this part,
+
+01:07:00.180 --> 01:07:03.260
+then, here, we will have the second monitoring cycle
+
+01:07:03.260 --> 01:07:05.620
+where no fault has been recorded
+
+01:07:05.620 --> 01:07:09.440
+because we have had at least one test executed,
+
+01:07:09.700 --> 01:07:12.080
+and this test executed passed
+
+01:07:12.080 --> 01:07:16.060
+because we don't have the fault reason anymore.
+
+01:07:16.860 --> 01:07:17.840
+So, in this case,
+
+01:07:18.040 --> 01:07:23.200
+we will have that the bit two goes to zero as well
+
+01:07:23.200 --> 01:07:25.780
+because we have this monitoring cycle
+
+01:07:25.780 --> 01:07:30.020
+or the previous monitoring cycle
+
+01:07:30.020 --> 01:07:31.640
+with no errors.
+
+01:07:32.620 --> 01:07:36.100
+It means that the bit two can go to zero as well,
+
+01:07:36.100 --> 01:07:41.620
+and this change happens in the third monitoring cycle, okay?
+
+01:07:42.480 --> 01:07:44.400
+So, what we have here,
+
+01:07:44.580 --> 01:07:45.820
+here, we have the situation
+
+01:07:45.820 --> 01:07:52.620
+where the new status is going to be 8, 8, okay?
+
+01:07:53.840 --> 01:07:55.080
+It's going to be 8, 8
+
+01:07:55.080 --> 01:07:59.520
+because we have 0, 0, 0, 1, 0, 0, 0, 1, okay?
+
+01:08:00.300 --> 01:08:00.780
+Great.
+
+01:08:01.580 --> 01:08:03.380
+The situation stays the same.
+
+01:08:03.500 --> 01:08:08.900
+Here, we have 8, 8, 8, 8, 8, 8, 8, 8, 8,
+
+01:08:08.900 --> 01:08:11.380
+and we get here that we are still 8, 8.
+
+01:08:12.500 --> 01:08:15.180
+Once again, we have a fourth monitoring cycle
+
+01:08:15.180 --> 01:08:18.560
+where we don't know if the test is present or not.
+
+01:08:18.700 --> 01:08:23.860
+So, we will have a status of C8
+
+01:08:23.860 --> 01:08:26.900
+because the bit six goes to one
+
+01:08:26.900 --> 01:08:29.260
+and everything is 1, 0, 0, 0.
+
+01:08:29.800 --> 01:08:32.620
+And then, once we have this test that passes,
+
+01:08:32.740 --> 01:08:33.500
+because once again,
+
+01:08:33.640 --> 01:08:38.520
+here, we don't have the fault reason anymore,
+
+01:08:39.600 --> 01:08:40.620
+this will become...
+
+01:08:43.100 --> 01:08:47.300
+And, okay, here, it depends on the fault management,
+
+01:08:48.200 --> 01:08:49.780
+lump fault management, okay?
+
+01:08:50.100 --> 01:08:52.340
+But now, we can consider that
+
+01:08:52.340 --> 01:08:56.340
+since we have three monitoring cycles
+
+01:08:56.340 --> 01:08:58.560
+without an error present,
+
+01:08:59.020 --> 01:09:01.100
+then also the lump will turn off.
+
+01:09:01.400 --> 01:09:02.800
+You will see that there is a
+
+01:09:02.800 --> 01:09:04.100
+mill-on-1 management,
+
+01:09:04.760 --> 01:09:07.100
+mill-on-2 management,
+
+01:09:07.340 --> 01:09:08.940
+mill-on-3 management,
+
+01:09:09.300 --> 01:09:10.700
+mill-off management.
+
+01:09:11.040 --> 01:09:15.120
+So, we have different kinds of management for lumps.
+
+01:09:15.620 --> 01:09:16.480
+Mill-off, of course,
+
+01:09:16.540 --> 01:09:18.120
+it means there is no need for a lump.
+
+01:09:18.720 --> 01:09:19.900
+Mill-on-1, it means that
+
+01:09:19.900 --> 01:09:22.080
+the lump will turn on immediately,
+
+01:09:22.080 --> 01:09:25.140
+and turn on immediately.
+
+01:09:25.440 --> 01:09:26.060
+Mill-on-2,
+
+01:09:26.700 --> 01:09:29.080
+it means that the lump will turn on
+
+01:09:29.080 --> 01:09:30.720
+after two cycles with the error.
+
+01:09:30.820 --> 01:09:31.540
+And mill-on-3,
+
+01:09:31.660 --> 01:09:33.400
+it means that the lump will turn on
+
+01:09:33.400 --> 01:09:35.500
+after three cycles when we have the fault.
+
+01:09:35.960 --> 01:09:38.080
+But then, for the...
+
+01:09:38.080 --> 01:09:38.920
+There should be...
+
+01:09:38.920 --> 01:09:40.120
+There is a different management
+
+01:09:40.120 --> 01:09:41.940
+to turning off the lump.
+
+01:09:42.520 --> 01:09:43.860
+And the turning off of lamps
+
+01:09:43.860 --> 01:09:47.880
+usually happens after three monitoring cycles
+
+01:09:47.880 --> 01:09:49.640
+without a fault.
+
+01:09:49.640 --> 01:09:50.160
+Of course,
+
+01:09:50.720 --> 01:09:52.940
+there could be some derogation to the norm.
+
+01:09:53.060 --> 01:09:53.980
+So, that's why I'm saying
+
+01:09:53.980 --> 01:09:55.800
+it can happen like this.
+
+01:09:56.520 --> 01:09:58.400
+But for this kind of behavior,
+
+01:09:58.560 --> 01:09:59.460
+refer to the norms.
+
+01:09:59.600 --> 01:10:00.120
+And, of course,
+
+01:10:00.200 --> 01:10:01.940
+refer to requirements of the project
+
+01:10:01.940 --> 01:10:02.840
+you're working on.
+
+01:10:02.980 --> 01:10:04.700
+Because there might be some derogation
+
+01:10:04.700 --> 01:10:05.280
+to the norm,
+
+01:10:05.800 --> 01:10:06.060
+UDS,
+
+01:10:06.060 --> 01:10:07.560
+or simply,
+
+01:10:07.980 --> 01:10:08.620
+you know,
+
+01:10:08.820 --> 01:10:09.860
+just read the norm
+
+01:10:09.860 --> 01:10:10.720
+and find out
+
+01:10:10.720 --> 01:10:12.140
+which is the exact behavior.
+
+01:10:13.320 --> 01:10:14.220
+But here,
+
+01:10:14.380 --> 01:10:15.200
+we consider that
+
+01:10:15.200 --> 01:10:16.520
+after three cycles
+
+01:10:16.520 --> 01:10:18.260
+without an error present,
+
+01:10:18.420 --> 01:10:20.120
+then the lump will turn off.
+
+01:10:20.360 --> 01:10:21.760
+So, the final status here
+
+01:10:21.760 --> 01:10:23.580
+will be 0, 8.
+
+01:10:24.020 --> 01:10:24.340
+Okay.
+
+01:10:25.620 --> 01:10:26.220
+Okay.
+
+01:10:26.400 --> 01:10:26.780
+Nice.
+
+01:10:26.780 --> 01:10:30.320
+So, we have clarified everything
+
+01:10:30.320 --> 01:10:33.380
+that led us to arrive
+
+01:10:33.380 --> 01:10:34.560
+to this status.
+
+01:10:34.900 --> 01:10:35.620
+0, 8.
+
+01:10:36.140 --> 01:10:38.080
+0, 8 means that we all...
+
+01:10:38.080 --> 01:10:39.360
+So, this is the change
+
+01:10:39.360 --> 01:10:41.000
+that happens here
+
+01:10:41.000 --> 01:10:43.440
+in the fourth monitoring cycle.
+
+01:10:45.020 --> 01:10:46.400
+So, we are arriving
+
+01:10:46.400 --> 01:10:48.700
+to the final status of 0, 8.
+
+01:10:49.080 --> 01:10:50.940
+How can I manage these three?
+
+01:10:51.160 --> 01:10:52.100
+This is, let's say,
+
+01:10:52.100 --> 01:10:52.820
+the tricky one.
+
+01:10:52.820 --> 01:10:55.420
+First of all,
+
+01:10:55.580 --> 01:10:56.800
+here we have to do
+
+01:10:56.800 --> 01:10:57.760
+a distinction
+
+01:10:57.760 --> 01:10:59.660
+between two kinds of...
+
+01:10:59.660 --> 01:10:59.760
+Okay.
+
+01:10:59.860 --> 01:11:00.380
+Now, probably,
+
+01:11:00.500 --> 01:11:01.580
+I will need more space.
+
+01:11:01.700 --> 01:11:01.860
+Okay.
+
+01:11:01.900 --> 01:11:03.520
+So, I hope this is still clear.
+
+01:11:04.260 --> 01:11:05.900
+So, here we have
+
+01:11:05.900 --> 01:11:07.360
+to make a distinction
+
+01:11:07.360 --> 01:11:08.780
+between two kinds...
+
+01:11:08.780 --> 01:11:09.640
+Let's make it bigger.
+
+01:11:11.220 --> 01:11:12.920
+Two big kinds
+
+01:11:12.920 --> 01:11:14.340
+of electronic control units.
+
+01:11:14.640 --> 01:11:15.000
+Okay.
+
+01:11:15.500 --> 01:11:15.980
+So,
+
+01:11:17.280 --> 01:11:18.960
+I will write that here.
+
+01:11:18.960 --> 01:11:25.540
+Let's start from
+
+01:11:25.540 --> 01:11:27.980
+the non-power-train
+
+01:11:27.980 --> 01:11:31.620
+power-train echo
+
+01:11:31.620 --> 01:11:34.160
+and then we have
+
+01:11:34.160 --> 01:11:38.500
+the power-train echo.
+
+01:11:40.380 --> 01:11:40.620
+So,
+
+01:11:40.940 --> 01:11:42.380
+why should I distinguish
+
+01:11:42.380 --> 01:11:43.220
+between the two?
+
+01:11:44.080 --> 01:11:44.460
+So,
+
+01:11:45.460 --> 01:11:47.420
+for non-power-train
+
+01:11:47.420 --> 01:11:48.940
+electronic control unit,
+
+01:11:48.940 --> 01:11:51.060
+the management
+
+01:11:51.060 --> 01:11:52.860
+of the Bith3
+
+01:11:52.860 --> 01:11:53.780
+is just,
+
+01:11:54.460 --> 01:11:54.700
+you know,
+
+01:11:54.900 --> 01:11:56.360
+it's enough
+
+01:11:56.360 --> 01:11:57.200
+for the management
+
+01:11:57.200 --> 01:11:58.080
+of Bith3
+
+01:11:58.080 --> 01:11:59.260
+to remember
+
+01:11:59.260 --> 01:12:00.820
+this definition.
+
+01:12:01.060 --> 01:12:01.180
+Okay.
+
+01:12:01.340 --> 01:12:02.240
+Definition of the
+
+01:12:02.240 --> 01:12:03.100
+monitoring cycle.
+
+01:12:04.280 --> 01:12:04.520
+So,
+
+01:12:04.620 --> 01:12:05.380
+as you remember,
+
+01:12:05.640 --> 01:12:06.940
+and you can read this
+
+01:12:06.940 --> 01:12:07.780
+from the slides
+
+01:12:07.780 --> 01:12:08.800
+or from the norm,
+
+01:12:09.220 --> 01:12:11.700
+once an error code
+
+01:12:11.700 --> 01:12:12.200
+is saved
+
+01:12:12.200 --> 01:12:13.040
+inside the electronic
+
+01:12:13.040 --> 01:12:13.780
+control unit,
+
+01:12:14.300 --> 01:12:14.960
+we have
+
+01:12:14.960 --> 01:12:16.000
+that the error code
+
+01:12:16.000 --> 01:12:16.620
+is stored
+
+01:12:16.620 --> 01:12:17.160
+inside the
+
+01:12:17.160 --> 01:12:18.420
+EEPROM
+
+01:12:18.420 --> 01:12:19.140
+of the EECU
+
+01:12:19.140 --> 01:12:20.980
+for 40,
+
+01:12:21.480 --> 01:12:22.280
+for now we say,
+
+01:12:22.400 --> 01:12:23.000
+cycles.
+
+01:12:23.480 --> 01:12:23.620
+Okay.
+
+01:12:24.240 --> 01:12:24.500
+So,
+
+01:12:24.640 --> 01:12:25.840
+for the non-power-train
+
+01:12:25.840 --> 01:12:27.200
+electronic control unit,
+
+01:12:27.480 --> 01:12:28.540
+it might be
+
+01:12:28.540 --> 01:12:31.580
+40 monitoring cycles.
+
+01:12:32.160 --> 01:12:32.360
+Okay.
+
+01:12:32.700 --> 01:12:33.540
+This is a
+
+01:12:33.540 --> 01:12:34.180
+calibratable
+
+01:12:34.180 --> 01:12:35.920
+value,
+
+01:12:36.260 --> 01:12:37.120
+so the norm
+
+01:12:37.120 --> 01:12:37.960
+suggests
+
+01:12:37.960 --> 01:12:38.840
+it to be
+
+01:12:38.840 --> 01:12:39.440
+40,
+
+01:12:39.560 --> 01:12:40.300
+but it's not
+
+01:12:40.300 --> 01:12:40.860
+mandatory.
+
+01:12:40.860 --> 01:12:41.840
+you can
+
+01:12:41.840 --> 01:12:43.020
+set it
+
+01:12:43.020 --> 01:12:43.260
+as
+
+01:12:43.260 --> 01:12:44.240
+60,
+
+01:12:44.480 --> 01:12:44.760
+you can
+
+01:12:44.760 --> 01:12:45.180
+set it
+
+01:12:45.180 --> 01:12:45.380
+as
+
+01:12:45.380 --> 01:12:45.920
+20,
+
+01:12:45.920 --> 01:12:46.520
+you can
+
+01:12:46.520 --> 01:12:46.980
+set it
+
+01:12:46.980 --> 01:12:47.380
+as
+
+01:12:47.380 --> 01:12:49.060
+800,
+
+01:12:49.380 --> 01:12:49.580
+you know,
+
+01:12:49.920 --> 01:12:50.220
+it's a
+
+01:12:50.220 --> 01:12:51.240
+calibratable value,
+
+01:12:51.380 --> 01:12:51.660
+but
+
+01:12:51.660 --> 01:12:52.680
+it's a
+
+01:12:52.680 --> 01:12:54.240
+common use
+
+01:12:54.240 --> 01:12:54.620
+of this
+
+01:12:54.620 --> 01:12:56.040
+value
+
+01:12:56.040 --> 01:12:56.560
+is
+
+01:12:56.560 --> 01:12:57.320
+40.
+
+01:12:57.660 --> 01:12:57.820
+Okay.
+
+01:12:58.720 --> 01:12:59.060
+So,
+
+01:12:59.200 --> 01:12:59.840
+let's say,
+
+01:12:59.920 --> 01:13:00.760
+for non-power-training
+
+01:13:00.760 --> 01:13:02.180
+electronic control unit,
+
+01:13:02.640 --> 01:13:03.160
+we have,
+
+01:13:03.500 --> 01:13:04.000
+we need
+
+01:13:04.000 --> 01:13:05.020
+40
+
+01:13:05.020 --> 01:13:06.640
+monitoring cycles
+
+01:13:06.640 --> 01:13:08.020
+without
+
+01:13:08.020 --> 01:13:08.800
+errors
+
+01:13:08.800 --> 01:13:10.700
+to delete
+
+01:13:10.700 --> 01:13:11.540
+this DTC
+
+01:13:11.540 --> 01:13:12.280
+from the error
+
+01:13:12.280 --> 01:13:12.720
+memory.
+
+01:13:13.060 --> 01:13:13.340
+Okay.
+
+01:13:14.280 --> 01:13:14.500
+So,
+
+01:13:14.560 --> 01:13:15.080
+this means
+
+01:13:15.080 --> 01:13:15.620
+that
+
+01:13:15.620 --> 01:13:17.700
+can we
+
+01:13:17.700 --> 01:13:18.220
+count
+
+01:13:18.220 --> 01:13:18.800
+this
+
+01:13:18.800 --> 01:13:19.980
+monitoring
+
+01:13:19.980 --> 01:13:20.540
+cycle?
+
+01:13:21.000 --> 01:13:21.820
+This monitoring
+
+01:13:21.820 --> 01:13:22.720
+cycle cannot
+
+01:13:22.720 --> 01:13:23.740
+be counted
+
+01:13:23.740 --> 01:13:24.360
+because there
+
+01:13:24.360 --> 01:13:24.880
+is an error.
+
+01:13:25.260 --> 01:13:25.580
+Okay.
+
+01:13:26.300 --> 01:13:26.680
+Can we
+
+01:13:26.680 --> 01:13:27.240
+count this?
+
+01:13:27.700 --> 01:13:28.160
+Yes.
+
+01:13:28.340 --> 01:13:29.560
+I'll switch
+
+01:13:29.560 --> 01:13:29.960
+color.
+
+01:13:30.380 --> 01:13:30.760
+We can
+
+01:13:30.760 --> 01:13:31.360
+count this
+
+01:13:31.360 --> 01:13:31.660
+monitoring
+
+01:13:31.660 --> 01:13:32.060
+cycle
+
+01:13:32.060 --> 01:13:32.580
+because there
+
+01:13:32.580 --> 01:13:32.900
+is no
+
+01:13:32.900 --> 01:13:33.180
+error.
+
+01:13:33.180 --> 01:13:34.120
+we can
+
+01:13:34.120 --> 01:13:34.860
+count this.
+
+01:13:35.660 --> 01:13:36.020
+It's okay.
+
+01:13:36.200 --> 01:13:36.400
+So,
+
+01:13:36.620 --> 01:13:37.040
+here is
+
+01:13:37.040 --> 01:13:37.560
+40.
+
+01:13:38.600 --> 01:13:39.400
+Here is
+
+01:13:39.400 --> 01:13:39.880
+39.
+
+01:13:41.100 --> 01:13:41.900
+Here is
+
+01:13:41.900 --> 01:13:42.580
+38.
+
+01:13:43.320 --> 01:13:44.120
+Here is
+
+01:13:44.120 --> 01:13:44.980
+37.
+
+01:13:46.020 --> 01:13:46.660
+36.
+
+01:13:47.620 --> 01:13:48.260
+35.
+
+01:13:48.560 --> 01:13:49.280
+And so on.
+
+01:13:50.020 --> 01:13:50.320
+So,
+
+01:13:50.520 --> 01:13:51.260
+consider that
+
+01:13:51.260 --> 01:13:51.980
+this monitoring
+
+01:13:51.980 --> 01:13:53.180
+cycle is,
+
+01:13:53.380 --> 01:13:53.620
+you know,
+
+01:13:53.680 --> 01:13:54.280
+every time you
+
+01:13:54.280 --> 01:13:54.820
+use the car.
+
+01:13:54.920 --> 01:13:55.040
+Okay.
+
+01:13:55.040 --> 01:13:55.760
+You turn on
+
+01:13:55.760 --> 01:13:56.280
+the car,
+
+01:13:56.840 --> 01:13:57.200
+for example,
+
+01:13:57.480 --> 01:13:57.960
+or in
+
+01:13:57.960 --> 01:13:59.080
+this case,
+
+01:13:59.180 --> 01:13:59.800
+considering that
+
+01:13:59.800 --> 01:14:00.240
+we are just
+
+01:14:00.240 --> 01:14:00.640
+using the
+
+01:14:00.640 --> 01:14:01.380
+monitoring cycle,
+
+01:14:01.480 --> 01:14:02.080
+every time you
+
+01:14:02.080 --> 01:14:02.420
+perform
+
+01:14:03.180 --> 01:14:04.240
+you are
+
+01:14:04.240 --> 01:14:05.340
+actually doing
+
+01:14:05.340 --> 01:14:05.800
+a monitoring
+
+01:14:05.800 --> 01:14:06.340
+cycle.
+
+01:14:06.940 --> 01:14:07.420
+So,
+
+01:14:07.760 --> 01:14:08.420
+every time you
+
+01:14:08.420 --> 01:14:08.940
+turn on the
+
+01:14:08.940 --> 01:14:09.620
+car and then
+
+01:14:09.620 --> 01:14:10.220
+you turn off
+
+01:14:10.220 --> 01:14:10.620
+the car,
+
+01:14:11.280 --> 01:14:11.980
+considering that
+
+01:14:11.980 --> 01:14:12.720
+this is on
+
+01:14:12.720 --> 01:14:13.880
+and this is
+
+01:14:13.880 --> 01:14:14.660
+off every
+
+01:14:14.660 --> 01:14:15.120
+time.
+
+01:14:15.120 --> 01:14:15.400
+So,
+
+01:14:15.540 --> 01:14:15.780
+on,
+
+01:14:15.860 --> 01:14:16.160
+off,
+
+01:14:16.220 --> 01:14:16.420
+on,
+
+01:14:16.420 --> 01:14:16.680
+off,
+
+01:14:16.720 --> 01:14:17.120
+on,
+
+01:14:17.120 --> 01:14:17.640
+off,
+
+01:14:17.700 --> 01:14:18.040
+on,
+
+01:14:18.040 --> 01:14:18.520
+off,
+
+01:14:18.600 --> 01:14:18.840
+on,
+
+01:14:18.840 --> 01:14:19.500
+off,
+
+01:14:19.500 --> 01:14:19.940
+on,
+
+01:14:20.100 --> 01:14:20.500
+off,
+
+01:14:20.500 --> 01:14:20.980
+on,
+
+01:14:20.980 --> 01:14:21.500
+off,
+
+01:14:21.500 --> 01:14:22.120
+and stuff like
+
+01:14:22.120 --> 01:14:22.360
+this.
+
+01:14:22.920 --> 01:14:23.540
+Then it means
+
+01:14:23.540 --> 01:14:24.100
+that every time
+
+01:14:24.100 --> 01:14:24.580
+you use your
+
+01:14:24.580 --> 01:14:24.860
+car,
+
+01:14:25.020 --> 01:14:26.020
+and there is
+
+01:14:26.020 --> 01:14:26.440
+no error,
+
+01:14:26.800 --> 01:14:27.360
+then it's
+
+01:14:27.360 --> 01:14:28.400
+counted as a
+
+01:14:28.400 --> 01:14:29.220
+monitoring cycle
+
+01:14:29.220 --> 01:14:30.340
+without fault,
+
+01:14:30.460 --> 01:14:30.760
+so the
+
+01:14:30.760 --> 01:14:31.620
+counter decreases.
+
+01:14:31.620 --> 01:14:34.180
+It means that
+
+01:14:34.180 --> 01:14:35.600
+from this point
+
+01:14:35.600 --> 01:14:36.220
+on,
+
+01:14:36.660 --> 01:14:38.380
+for other 37
+
+01:14:38.380 --> 01:14:40.200
+times you will
+
+01:14:40.200 --> 01:14:41.320
+perform monitoring
+
+01:14:41.320 --> 01:14:41.940
+cycles,
+
+01:14:42.160 --> 01:14:43.680
+you will still
+
+01:14:43.680 --> 01:14:44.960
+have inside the
+
+01:14:44.960 --> 01:14:45.840
+error memory
+
+01:14:45.840 --> 01:14:47.220
+this DTC that
+
+01:14:47.220 --> 01:14:48.180
+we wrote here.
+
+01:14:48.680 --> 01:14:48.720
+So,
+
+01:14:48.780 --> 01:14:50.120
+DTC is 01,
+
+01:14:50.240 --> 01:14:50.900
+22,
+
+01:14:51.620 --> 01:14:52.160
+92,
+
+01:14:52.520 --> 01:14:53.320
+08.
+
+01:14:53.560 --> 01:14:54.820
+You will have
+
+01:14:54.820 --> 01:14:56.000
+this status for,
+
+01:14:56.660 --> 01:14:57.360
+in general,
+
+01:14:57.460 --> 01:14:58.540
+for 40 monitoring
+
+01:14:58.540 --> 01:14:59.060
+cycles,
+
+01:14:59.060 --> 01:15:00.060
+but from this
+
+01:15:00.060 --> 01:15:00.880
+point on it's
+
+01:15:00.880 --> 01:15:01.380
+going to be for
+
+01:15:01.380 --> 01:15:02.720
+37 monitoring
+
+01:15:02.720 --> 01:15:03.860
+cycles on.
+
+01:15:04.280 --> 01:15:04.500
+So,
+
+01:15:04.620 --> 01:15:05.280
+if this line
+
+01:15:05.280 --> 01:15:05.920
+continues,
+
+01:15:06.440 --> 01:15:07.240
+once we arrive
+
+01:15:07.240 --> 01:15:07.880
+to the end,
+
+01:15:08.300 --> 01:15:09.660
+so I put a
+
+01:15:09.660 --> 01:15:11.260
+checkered flag
+
+01:15:11.260 --> 01:15:12.140
+here to say
+
+01:15:12.140 --> 01:15:13.200
+that we arrived
+
+01:15:13.200 --> 01:15:13.820
+to the last
+
+01:15:13.820 --> 01:15:14.640
+monitoring cycle,
+
+01:15:15.080 --> 01:15:15.920
+then here the
+
+01:15:15.920 --> 01:15:16.640
+status will be,
+
+01:15:16.740 --> 01:15:17.360
+this is the,
+
+01:15:17.920 --> 01:15:18.520
+let's say we
+
+01:15:18.520 --> 01:15:19.760
+arrive to 1,
+
+01:15:19.900 --> 01:15:20.420
+this is 1,
+
+01:15:21.240 --> 01:15:21.680
+and then the
+
+01:15:21.680 --> 01:15:22.380
+next one is
+
+01:15:22.380 --> 01:15:23.020
+going to be
+
+01:15:23.020 --> 01:15:23.560
+0,
+
+01:15:23.740 --> 01:15:24.200
+0,
+
+01:15:24.340 --> 01:15:25.020
+final status
+
+01:15:25.020 --> 01:15:25.640
+use of the
+
+01:15:25.640 --> 01:15:26.120
+DTC.
+
+01:15:31.820 --> 01:15:32.880
+In this case,
+
+01:15:32.980 --> 01:15:33.560
+for non-power
+
+01:15:33.560 --> 01:15:34.300
+training electronic
+
+01:15:34.300 --> 01:15:35.060
+control unit,
+
+01:15:35.180 --> 01:15:35.700
+we are saying
+
+01:15:35.700 --> 01:15:36.600
+it's enough to
+
+01:15:36.600 --> 01:15:37.260
+use monitoring
+
+01:15:37.260 --> 01:15:37.840
+cycles,
+
+01:15:37.980 --> 01:15:38.320
+so K-ON,
+
+01:15:38.420 --> 01:15:38.680
+K-OFF,
+
+01:15:38.760 --> 01:15:39.760
+but you can
+
+01:15:39.760 --> 01:15:40.400
+understand,
+
+01:15:40.720 --> 01:15:41.220
+eventually,
+
+01:15:41.680 --> 01:15:42.460
+the risk
+
+01:15:42.460 --> 01:15:43.460
+behind this
+
+01:15:43.460 --> 01:15:43.980
+strategy.
+
+01:15:44.840 --> 01:15:45.600
+If I know
+
+01:15:45.600 --> 01:15:46.020
+about this
+
+01:15:46.020 --> 01:15:46.440
+strategy,
+
+01:15:46.580 --> 01:15:46.980
+that I have
+
+01:15:46.980 --> 01:15:47.760
+a very serious
+
+01:15:47.760 --> 01:15:48.600
+problem on my
+
+01:15:48.600 --> 01:15:48.840
+car,
+
+01:15:49.020 --> 01:15:49.980
+it will just
+
+01:15:49.980 --> 01:15:51.100
+need,
+
+01:15:51.200 --> 01:15:51.800
+we will just
+
+01:15:51.800 --> 01:15:53.560
+need to do
+
+01:15:53.560 --> 01:15:54.420
+40 times
+
+01:15:54.420 --> 01:15:54.820
+K-ON,
+
+01:15:54.820 --> 01:15:55.160
+K-OFF,
+
+01:15:55.260 --> 01:15:55.520
+K-ON,
+
+01:15:55.560 --> 01:15:55.800
+K-OFF,
+
+01:15:55.900 --> 01:15:56.120
+K-ON,
+
+01:15:56.120 --> 01:15:56.380
+K-OFF,
+
+01:15:56.480 --> 01:15:56.780
+K-OFF,
+
+01:15:56.780 --> 01:15:57.080
+K-OFF,
+
+01:15:57.080 --> 01:15:57.500
+K-OFF,
+
+01:15:57.860 --> 01:15:58.420
+and then the
+
+01:15:58.420 --> 01:15:58.840
+error will
+
+01:15:58.840 --> 01:15:59.320
+disappear.
+
+01:16:00.140 --> 01:16:01.340
+But if I have
+
+01:16:01.340 --> 01:16:02.760
+a small issue,
+
+01:16:03.000 --> 01:16:03.200
+like,
+
+01:16:03.280 --> 01:16:03.780
+I don't know,
+
+01:16:04.320 --> 01:16:05.260
+a problem on
+
+01:16:05.260 --> 01:16:06.160
+an amplifier,
+
+01:16:06.540 --> 01:16:07.800
+or simply one
+
+01:16:07.800 --> 01:16:08.400
+of the lead
+
+01:16:08.400 --> 01:16:09.400
+inside my car
+
+01:16:09.400 --> 01:16:10.360
+is not turning
+
+01:16:10.360 --> 01:16:10.680
+on,
+
+01:16:10.740 --> 01:16:11.280
+for example,
+
+01:16:11.840 --> 01:16:12.400
+and then for
+
+01:16:12.400 --> 01:16:12.840
+some reason
+
+01:16:12.840 --> 01:16:14.020
+I try to fix
+
+01:16:14.020 --> 01:16:14.580
+it and I
+
+01:16:14.580 --> 01:16:15.300
+perform 40
+
+01:16:15.300 --> 01:16:15.920
+times K-ON,
+
+01:16:16.020 --> 01:16:16.260
+K-OFF,
+
+01:16:16.360 --> 01:16:16.540
+K-ON,
+
+01:16:16.600 --> 01:16:16.820
+K-OFF,
+
+01:16:17.340 --> 01:16:17.960
+then the error
+
+01:16:17.960 --> 01:16:18.660
+will disappear
+
+01:16:18.660 --> 01:16:19.320
+and there's
+
+01:16:19.320 --> 01:16:19.600
+going to be
+
+01:16:19.600 --> 01:16:20.640
+no trace of
+
+01:16:20.640 --> 01:16:21.080
+this error
+
+01:16:21.080 --> 01:16:21.600
+inside the
+
+01:16:21.600 --> 01:16:21.980
+electronic
+
+01:16:21.980 --> 01:16:22.620
+control unit
+
+01:16:22.620 --> 01:16:23.560
+for very
+
+01:16:23.560 --> 01:16:25.160
+small problem
+
+01:16:25.160 --> 01:16:25.620
+or for
+
+01:16:25.620 --> 01:16:26.620
+smaller problems
+
+01:16:26.620 --> 01:16:27.300
+this is not
+
+01:16:27.300 --> 01:16:27.760
+a problem,
+
+01:16:27.980 --> 01:16:28.100
+okay,
+
+01:16:28.340 --> 01:16:28.860
+sorry for
+
+01:16:28.860 --> 01:16:30.480
+this mix
+
+01:16:30.480 --> 01:16:31.060
+of words,
+
+01:16:31.520 --> 01:16:31.820
+but that's
+
+01:16:31.820 --> 01:16:32.500
+not a huge
+
+01:16:32.500 --> 01:16:33.220
+issue because
+
+01:16:33.220 --> 01:16:33.640
+the issue
+
+01:16:33.640 --> 01:16:34.040
+is very
+
+01:16:34.040 --> 01:16:34.380
+small,
+
+01:16:34.720 --> 01:16:35.020
+so even
+
+01:16:35.020 --> 01:16:35.500
+though we
+
+01:16:35.500 --> 01:16:35.840
+forced,
+
+01:16:35.940 --> 01:16:36.160
+let's say,
+
+01:16:36.180 --> 01:16:36.640
+the system
+
+01:16:36.640 --> 01:16:37.120
+to delete
+
+01:16:37.120 --> 01:16:38.420
+this error
+
+01:16:38.420 --> 01:16:38.940
+from the
+
+01:16:38.940 --> 01:16:39.520
+EEPROM
+
+01:16:39.520 --> 01:16:40.100
+just doing
+
+01:16:40.100 --> 01:16:40.660
+this 40
+
+01:16:40.660 --> 01:16:41.360
+times K-ON,
+
+01:16:41.420 --> 01:16:41.680
+K-OFF,
+
+01:16:42.320 --> 01:16:42.820
+it's not a
+
+01:16:42.820 --> 01:16:43.500
+big deal,
+
+01:16:43.500 --> 01:16:44.060
+it doesn't
+
+01:16:44.060 --> 01:16:44.340
+matter,
+
+01:16:44.440 --> 01:16:44.740
+it's not a
+
+01:16:44.740 --> 01:16:45.180
+big deal.
+
+01:16:46.920 --> 01:16:47.720
+But when
+
+01:16:47.720 --> 01:16:48.720
+we talk about
+
+01:16:48.720 --> 01:16:49.440
+power train
+
+01:16:49.440 --> 01:16:50.020
+electronic
+
+01:16:50.020 --> 01:16:50.800
+control unit,
+
+01:16:50.960 --> 01:16:51.540
+the power train
+
+01:16:51.540 --> 01:16:52.020
+electronic
+
+01:16:52.020 --> 01:16:52.780
+control unit
+
+01:16:52.780 --> 01:16:53.340
+manages,
+
+01:16:54.460 --> 01:16:55.820
+let's say,
+
+01:16:55.880 --> 01:16:56.660
+very serious
+
+01:16:56.660 --> 01:16:57.100
+problem,
+
+01:16:57.220 --> 01:16:57.560
+and also
+
+01:16:57.560 --> 01:16:58.560
+the problem,
+
+01:16:58.720 --> 01:16:59.160
+the DTC
+
+01:16:59.160 --> 01:16:59.720
+that we were
+
+01:16:59.720 --> 01:17:00.460
+talking about
+
+01:17:00.460 --> 01:17:01.320
+in this
+
+01:17:01.320 --> 01:17:01.840
+example,
+
+01:17:02.440 --> 01:17:03.060
+is the DTC
+
+01:17:03.060 --> 01:17:04.760
+related to,
+
+01:17:04.840 --> 01:17:05.360
+I don't know,
+
+01:17:05.500 --> 01:17:05.920
+the accelerator
+
+01:17:05.920 --> 01:17:06.300
+pedal,
+
+01:17:06.580 --> 01:17:06.800
+okay,
+
+01:17:07.520 --> 01:17:08.740
+so it is
+
+01:17:08.740 --> 01:17:09.880
+very important
+
+01:17:09.880 --> 01:17:10.720
+that if there's
+
+01:17:10.720 --> 01:17:11.940
+been a problem
+
+01:17:11.940 --> 01:17:12.840
+in the accelerator
+
+01:17:12.840 --> 01:17:13.320
+pedal,
+
+01:17:13.980 --> 01:17:14.560
+then there
+
+01:17:14.560 --> 01:17:15.200
+would be
+
+01:17:15.200 --> 01:17:17.180
+history of
+
+01:17:17.180 --> 01:17:20.800
+this problem
+
+01:17:20.800 --> 01:17:21.560
+inside the
+
+01:17:21.560 --> 01:17:21.780
+EEPROM
+
+01:17:21.780 --> 01:17:22.320
+of the
+
+01:17:22.320 --> 01:17:22.720
+electronic
+
+01:17:22.720 --> 01:17:23.420
+control unit.
+
+01:17:23.560 --> 01:17:24.040
+So for the
+
+01:17:24.040 --> 01:17:24.580
+power train
+
+01:17:24.580 --> 01:17:25.080
+electronic
+
+01:17:25.080 --> 01:17:25.900
+control unit
+
+01:17:25.900 --> 01:17:26.720
+it's very
+
+01:17:26.720 --> 01:17:27.620
+important to
+
+01:17:27.620 --> 01:17:28.380
+keep track
+
+01:17:28.380 --> 01:17:28.960
+of these
+
+01:17:28.960 --> 01:17:29.420
+kind of
+
+01:17:29.420 --> 01:17:29.920
+problems
+
+01:17:29.920 --> 01:17:30.620
+and to
+
+01:17:30.620 --> 01:17:31.140
+keep them
+
+01:17:31.140 --> 01:17:31.760
+inside the
+
+01:17:31.760 --> 01:17:32.240
+electronic
+
+01:17:32.240 --> 01:17:33.100
+control unit
+
+01:17:33.100 --> 01:17:33.600
+for,
+
+01:17:33.960 --> 01:17:34.620
+let's say,
+
+01:17:34.740 --> 01:17:35.400
+a longer
+
+01:17:35.400 --> 01:17:36.140
+time,
+
+01:17:36.200 --> 01:17:36.640
+but it's
+
+01:17:36.640 --> 01:17:37.120
+not the
+
+01:17:37.120 --> 01:17:37.520
+time,
+
+01:17:37.620 --> 01:17:37.900
+the key
+
+01:17:37.900 --> 01:17:38.360
+parameter
+
+01:17:38.360 --> 01:17:38.820
+here.
+
+01:17:39.060 --> 01:17:39.640
+The key
+
+01:17:39.640 --> 01:17:40.120
+parameter
+
+01:17:40.120 --> 01:17:41.120
+here is
+
+01:17:41.120 --> 01:17:42.020
+a different
+
+01:17:42.020 --> 01:17:42.700
+kind of
+
+01:17:42.700 --> 01:17:43.120
+cycle,
+
+01:17:43.280 --> 01:17:43.620
+but it's
+
+01:17:43.620 --> 01:17:44.140
+not just
+
+01:17:44.140 --> 01:17:44.700
+the simple
+
+01:17:44.700 --> 01:17:45.180
+monitoring
+
+01:17:45.180 --> 01:17:45.740
+cycle
+
+01:17:45.740 --> 01:17:46.200
+that we
+
+01:17:46.200 --> 01:17:46.460
+saw
+
+01:17:46.460 --> 01:17:46.880
+before,
+
+01:17:47.240 --> 01:17:47.560
+so it's
+
+01:17:47.560 --> 01:17:48.100
+not going
+
+01:17:48.100 --> 01:17:48.320
+to be
+
+01:17:48.320 --> 01:17:48.700
+enough
+
+01:17:48.700 --> 01:17:49.160
+to have
+
+01:17:49.160 --> 01:17:49.620
+just a
+
+01:17:49.620 --> 01:17:50.060
+key-off
+
+01:17:50.060 --> 01:17:51.220
+40 times,
+
+01:17:51.400 --> 01:17:51.900
+but there
+
+01:17:51.900 --> 01:17:52.300
+will be
+
+01:17:52.300 --> 01:17:53.160
+additional
+
+01:17:53.160 --> 01:17:54.040
+conditions
+
+01:17:54.040 --> 01:17:55.220
+to consider
+
+01:17:55.220 --> 01:17:57.580
+a VOOL
+
+01:17:57.580 --> 01:17:58.200
+cycle
+
+01:17:58.200 --> 01:17:58.800
+without
+
+01:17:58.800 --> 01:17:59.700
+an EEPROM
+
+01:17:59.700 --> 01:18:00.500
+okay,
+
+01:18:00.940 --> 01:18:01.540
+so for the
+
+01:18:01.540 --> 01:18:02.020
+power train
+
+01:18:02.020 --> 01:18:02.520
+electronic
+
+01:18:02.520 --> 01:18:03.260
+control unit
+
+01:18:03.260 --> 01:18:04.080
+the counter
+
+01:18:04.080 --> 01:18:04.520
+will be
+
+01:18:04.520 --> 01:18:04.960
+the same,
+
+01:18:05.140 --> 01:18:05.280
+I mean,
+
+01:18:05.520 --> 01:18:06.340
+we are still
+
+01:18:06.340 --> 01:18:07.180
+talking about
+
+01:18:07.180 --> 01:18:09.420
+40 cycles
+
+01:18:09.420 --> 01:18:10.780
+without
+
+01:18:10.780 --> 01:18:11.800
+an EEPROM,
+
+01:18:11.820 --> 01:18:12.340
+but what
+
+01:18:12.340 --> 01:18:12.860
+kind of
+
+01:18:12.860 --> 01:18:13.360
+cycles?
+
+01:18:13.360 --> 01:18:14.220
+for the
+
+01:18:14.220 --> 01:18:14.800
+power train
+
+01:18:14.800 --> 01:18:15.380
+electronic
+
+01:18:15.380 --> 01:18:16.200
+control unit
+
+01:18:16.200 --> 01:18:17.120
+we refer
+
+01:18:17.120 --> 01:18:18.020
+to
+
+01:18:18.020 --> 01:18:19.580
+warm-up
+
+01:18:19.580 --> 01:18:20.340
+cycle.
+
+01:18:21.720 --> 01:18:22.600
+In the
+
+01:18:22.600 --> 01:18:22.920
+norms,
+
+01:18:23.040 --> 01:18:23.340
+you should
+
+01:18:23.340 --> 01:18:23.960
+find the
+
+01:18:23.960 --> 01:18:24.380
+definition
+
+01:18:24.380 --> 01:18:24.880
+of the
+
+01:18:24.880 --> 01:18:25.260
+warm-up
+
+01:18:25.260 --> 01:18:25.720
+cycle,
+
+01:18:25.900 --> 01:18:27.200
+but these
+
+01:18:27.200 --> 01:18:27.700
+days,
+
+01:18:27.920 --> 01:18:28.040
+the
+
+01:18:28.040 --> 01:18:28.500
+warm-up
+
+01:18:28.500 --> 01:18:28.880
+cycle
+
+01:18:28.880 --> 01:18:29.460
+definition
+
+01:18:29.460 --> 01:18:29.940
+can
+
+01:18:29.940 --> 01:18:30.920
+slightly
+
+01:18:30.920 --> 01:18:31.500
+change
+
+01:18:31.500 --> 01:18:32.060
+according
+
+01:18:32.060 --> 01:18:32.660
+to the
+
+01:18:32.660 --> 01:18:33.100
+kind of
+
+01:18:33.100 --> 01:18:33.420
+vehicle
+
+01:18:33.420 --> 01:18:33.740
+you're
+
+01:18:33.740 --> 01:18:34.080
+using.
+
+01:18:34.220 --> 01:18:34.320
+For
+
+01:18:34.320 --> 01:18:34.700
+example,
+
+01:18:34.840 --> 01:18:35.280
+we have
+
+01:18:35.280 --> 01:18:35.740
+a specific
+
+01:18:35.740 --> 01:18:36.300
+definition
+
+01:18:36.300 --> 01:18:37.420
+for a
+
+01:18:37.420 --> 01:18:37.840
+diesel
+
+01:18:37.840 --> 01:18:38.500
+engine
+
+01:18:38.500 --> 01:18:39.080
+warm-up
+
+01:18:39.080 --> 01:18:39.560
+cycle,
+
+01:18:40.160 --> 01:18:40.760
+we have
+
+01:18:40.760 --> 01:18:41.220
+a specific
+
+01:18:41.220 --> 01:18:41.760
+definition
+
+01:18:41.760 --> 01:18:42.200
+for a
+
+01:18:42.200 --> 01:18:42.580
+hybrid
+
+01:18:42.580 --> 01:18:43.140
+engine
+
+01:18:43.140 --> 01:18:44.380
+warm-up
+
+01:18:44.380 --> 01:18:44.840
+cycle,
+
+01:18:45.160 --> 01:18:45.820
+different
+
+01:18:45.820 --> 01:18:46.280
+definition
+
+01:18:46.280 --> 01:18:47.060
+of electric
+
+01:18:47.060 --> 01:18:47.540
+vehicle,
+
+01:18:47.660 --> 01:18:47.980
+warm-up
+
+01:18:47.980 --> 01:18:48.320
+cycle.
+
+01:18:48.440 --> 01:18:48.540
+So,
+
+01:18:48.860 --> 01:18:49.420
+according to
+
+01:18:49.420 --> 01:18:49.780
+the kind
+
+01:18:49.780 --> 01:18:50.220
+of vehicle
+
+01:18:50.220 --> 01:18:50.700
+that you're
+
+01:18:50.700 --> 01:18:51.020
+using,
+
+01:18:51.160 --> 01:18:51.600
+you might
+
+01:18:51.600 --> 01:18:52.720
+find yourself
+
+01:18:52.720 --> 01:18:53.680
+using
+
+01:18:53.680 --> 01:18:54.320
+different
+
+01:18:54.320 --> 01:18:54.700
+things,
+
+01:18:54.900 --> 01:18:55.220
+shall we?
+
+01:18:55.220 --> 01:18:55.820
+go ahead.
+
+01:18:55.820 --> 01:18:56.120
+So,
+
+01:18:56.120 --> 01:18:57.660
+the idea
+
+01:18:57.660 --> 01:18:58.320
+is that
+
+01:18:58.320 --> 01:18:59.000
+we cannot
+
+01:18:59.000 --> 01:19:00.080
+use the
+
+01:19:00.080 --> 01:19:00.440
+monitoring
+
+01:19:00.440 --> 01:19:01.200
+cycle as
+
+01:19:01.200 --> 01:19:01.480
+I was
+
+01:19:01.480 --> 01:19:01.940
+describing
+
+01:19:01.940 --> 01:19:02.720
+before just
+
+01:19:02.720 --> 01:19:02.920
+with
+
+01:19:02.920 --> 01:19:03.400
+maneuver
+
+01:19:03.400 --> 01:19:03.860
+key-off
+
+01:19:03.860 --> 01:19:04.260
+key-on,
+
+01:19:04.260 --> 01:19:05.120
+but since
+
+01:19:05.120 --> 01:19:05.380
+it is
+
+01:19:05.380 --> 01:19:05.580
+very
+
+01:19:05.580 --> 01:19:06.040
+important
+
+01:19:06.040 --> 01:19:06.980
+to track
+
+01:19:06.980 --> 01:19:07.800
+these
+
+01:19:07.800 --> 01:19:08.480
+DTCs
+
+01:19:08.480 --> 01:19:09.340
+inside the
+
+01:19:09.340 --> 01:19:09.740
+electronic
+
+01:19:09.740 --> 01:19:10.700
+control unit
+
+01:19:10.700 --> 01:19:11.600
+physical
+
+01:19:11.600 --> 01:19:12.080
+memory,
+
+01:19:12.460 --> 01:19:13.100
+then there
+
+01:19:13.100 --> 01:19:13.320
+are
+
+01:19:13.320 --> 01:19:13.840
+additional
+
+01:19:13.840 --> 01:19:14.520
+conditions.
+
+01:19:14.860 --> 01:19:15.080
+Which
+
+01:19:15.080 --> 01:19:15.400
+are these
+
+01:19:15.400 --> 01:19:15.800
+additional
+
+01:19:15.800 --> 01:19:16.360
+conditions?
+
+01:19:16.620 --> 01:19:16.820
+So,
+
+01:19:17.120 --> 01:19:17.680
+let's start
+
+01:19:17.680 --> 01:19:18.040
+from the
+
+01:19:18.040 --> 01:19:18.320
+monitoring
+
+01:19:18.320 --> 01:19:18.820
+cycle.
+
+01:19:18.960 --> 01:19:19.360
+The monitoring
+
+01:19:19.360 --> 01:19:19.980
+cycle is
+
+01:19:19.980 --> 01:19:20.420
+just
+
+01:19:20.420 --> 01:19:21.540
+key-on,
+
+01:19:21.640 --> 01:19:22.020
+key-off.
+
+01:19:22.400 --> 01:19:22.520
+So,
+
+01:19:22.640 --> 01:19:23.080
+if I do
+
+01:19:23.080 --> 01:19:24.320
+40 times
+
+01:19:24.320 --> 01:19:24.560
+key-on,
+
+01:19:24.620 --> 01:19:24.920
+key-off,
+
+01:19:25.100 --> 01:19:25.760
+then I
+
+01:19:25.760 --> 01:19:25.980
+have,
+
+01:19:26.500 --> 01:19:26.960
+without an
+
+01:19:26.960 --> 01:19:27.200
+error,
+
+01:19:27.760 --> 01:19:28.460
+I achieved
+
+01:19:28.460 --> 01:19:29.180
+these 40
+
+01:19:29.180 --> 01:19:30.200
+cycles without
+
+01:19:30.200 --> 01:19:30.640
+error,
+
+01:19:30.780 --> 01:19:31.340
+and that's it.
+
+01:19:32.700 --> 01:19:33.800
+Let's look
+
+01:19:33.800 --> 01:19:34.660
+at a more
+
+01:19:34.660 --> 01:19:35.400
+severe,
+
+01:19:35.500 --> 01:19:36.040
+let's say,
+
+01:19:36.380 --> 01:19:36.840
+cycle,
+
+01:19:37.000 --> 01:19:37.480
+that is the
+
+01:19:37.480 --> 01:19:38.620
+driving cycle.
+
+01:19:39.200 --> 01:19:39.420
+So,
+
+01:19:39.500 --> 01:19:39.880
+the driving
+
+01:19:39.880 --> 01:19:41.040
+cycle contains
+
+01:19:41.040 --> 01:19:42.420
+the, let's
+
+01:19:42.420 --> 01:19:42.500
+say,
+
+01:19:42.520 --> 01:19:43.240
+the conditions
+
+01:19:43.240 --> 01:19:43.880
+of the
+
+01:19:43.880 --> 01:19:44.240
+monitoring
+
+01:19:44.240 --> 01:19:44.800
+cycle,
+
+01:19:45.080 --> 01:19:45.660
+so key-on,
+
+01:19:45.740 --> 01:19:46.020
+key-off,
+
+01:19:46.620 --> 01:19:47.300
+but there
+
+01:19:47.300 --> 01:19:47.660
+is an
+
+01:19:47.660 --> 01:19:48.400
+additional
+
+01:19:48.400 --> 01:19:49.080
+condition,
+
+01:19:49.300 --> 01:19:49.600
+that is
+
+01:19:49.600 --> 01:19:50.060
+the engine
+
+01:19:50.060 --> 01:19:50.340
+on.
+
+01:19:51.100 --> 01:19:51.320
+So,
+
+01:19:51.400 --> 01:19:51.920
+every time
+
+01:19:51.920 --> 01:19:52.440
+you read
+
+01:19:52.440 --> 01:19:52.920
+the driving
+
+01:19:52.920 --> 01:19:53.460
+cycle,
+
+01:19:53.700 --> 01:19:54.120
+it means
+
+01:19:54.120 --> 01:19:54.840
+that it's
+
+01:19:54.840 --> 01:19:55.380
+not enough
+
+01:19:55.380 --> 01:19:55.840
+just to
+
+01:19:55.840 --> 01:19:56.320
+have to
+
+01:19:56.320 --> 01:19:56.680
+turn on
+
+01:19:56.680 --> 01:19:57.040
+the car
+
+01:19:57.040 --> 01:19:57.720
+with key-on
+
+01:19:57.720 --> 01:19:58.660
+and then
+
+01:19:58.660 --> 01:19:59.060
+key-off,
+
+01:19:59.140 --> 01:19:59.440
+but then
+
+01:19:59.440 --> 01:19:59.980
+you have to
+
+01:19:59.980 --> 01:20:00.540
+perform the
+
+01:20:00.540 --> 01:20:00.920
+key-on
+
+01:20:00.920 --> 01:20:02.300
+turning on
+
+01:20:02.300 --> 01:20:03.040
+the engine,
+
+01:20:03.860 --> 01:20:04.920
+and when
+
+01:20:04.920 --> 01:20:05.320
+you turn
+
+01:20:05.320 --> 01:20:05.620
+off,
+
+01:20:05.780 --> 01:20:06.300
+then the
+
+01:20:06.300 --> 01:20:06.660
+driving
+
+01:20:06.660 --> 01:20:07.100
+cycle
+
+01:20:07.100 --> 01:20:07.500
+will be
+
+01:20:07.500 --> 01:20:07.720
+done.
+
+01:20:09.000 --> 01:20:09.240
+The
+
+01:20:09.240 --> 01:20:09.900
+warm-up
+
+01:20:09.900 --> 01:20:10.640
+cycle is
+
+01:20:10.640 --> 01:20:11.320
+an even
+
+01:20:11.320 --> 01:20:11.780
+more
+
+01:20:11.780 --> 01:20:12.680
+severe
+
+01:20:12.680 --> 01:20:13.820
+cycle,
+
+01:20:13.960 --> 01:20:14.360
+because it
+
+01:20:14.360 --> 01:20:14.880
+contains
+
+01:20:14.880 --> 01:20:15.360
+not just
+
+01:20:15.360 --> 01:20:15.500
+the
+
+01:20:15.500 --> 01:20:15.980
+maneuvers
+
+01:20:15.980 --> 01:20:16.360
+of the
+
+01:20:16.360 --> 01:20:16.660
+monitoring
+
+01:20:16.660 --> 01:20:17.140
+cycle,
+
+01:20:17.620 --> 01:20:18.100
+not just
+
+01:20:18.100 --> 01:20:18.220
+the
+
+01:20:18.220 --> 01:20:18.840
+condition of
+
+01:20:18.840 --> 01:20:19.240
+the driving
+
+01:20:19.240 --> 01:20:19.640
+cycle,
+
+01:20:20.000 --> 01:20:20.540
+but contains
+
+01:20:20.540 --> 01:20:20.880
+also
+
+01:20:20.880 --> 01:20:21.700
+additional
+
+01:20:21.700 --> 01:20:22.440
+conditions.
+
+01:20:23.080 --> 01:20:23.760
+Once again,
+
+01:20:23.840 --> 01:20:24.400
+it depends
+
+01:20:24.400 --> 01:20:24.740
+on the
+
+01:20:24.740 --> 01:20:25.240
+kind of
+
+01:20:25.240 --> 01:20:25.980
+vehicle you're
+
+01:20:25.980 --> 01:20:26.740
+working with.
+
+01:20:26.860 --> 01:20:27.460
+For example,
+
+01:20:27.640 --> 01:20:28.300
+for diesel
+
+01:20:28.300 --> 01:20:28.980
+application,
+
+01:20:29.700 --> 01:20:30.240
+then we will
+
+01:20:30.240 --> 01:20:30.900
+have that
+
+01:20:30.900 --> 01:20:31.760
+the conditions
+
+01:20:31.760 --> 01:20:32.480
+are, of course,
+
+01:20:32.560 --> 01:20:32.920
+you have to
+
+01:20:32.920 --> 01:20:33.640
+go in key-on,
+
+01:20:34.120 --> 01:20:34.480
+of course,
+
+01:20:34.540 --> 01:20:35.000
+you have to
+
+01:20:35.000 --> 01:20:35.520
+turn on
+
+01:20:35.520 --> 01:20:36.080
+the engine,
+
+01:20:36.540 --> 01:20:37.020
+and there is
+
+01:20:37.020 --> 01:20:37.380
+also a
+
+01:20:37.380 --> 01:20:37.780
+specific
+
+01:20:37.780 --> 01:20:38.700
+condition of
+
+01:20:38.700 --> 01:20:39.440
+the delta
+
+01:20:39.440 --> 01:20:40.620
+temperature of
+
+01:20:40.620 --> 01:20:41.420
+the refrigerant
+
+01:20:41.420 --> 01:20:42.040
+liquid of
+
+01:20:42.040 --> 01:20:42.520
+the engine.
+
+01:20:43.020 --> 01:20:43.260
+So,
+
+01:20:43.360 --> 01:20:43.880
+there must be
+
+01:20:43.880 --> 01:20:44.320
+a delta
+
+01:20:44.320 --> 01:20:45.420
+temperature of,
+
+01:20:45.500 --> 01:20:46.140
+if I will
+
+01:20:46.140 --> 01:20:46.520
+remember,
+
+01:20:46.660 --> 01:20:48.740
+22.5
+
+01:20:48.740 --> 01:20:49.380
+degrees,
+
+01:20:49.840 --> 01:20:50.440
+and this
+
+01:20:50.440 --> 01:20:51.000
+delta
+
+01:20:51.000 --> 01:20:53.620
+is valid
+
+01:20:53.620 --> 01:20:54.560
+only if we
+
+01:20:54.560 --> 01:20:56.240
+reach a
+
+01:20:56.240 --> 01:20:57.400
+temperature
+
+01:20:57.400 --> 01:20:58.220
+value of
+
+01:20:58.220 --> 01:20:59.120
+the refrigerant
+
+01:20:59.120 --> 01:21:00.960
+liquid higher
+
+01:21:00.960 --> 01:21:01.620
+than 70
+
+01:21:01.620 --> 01:21:02.080
+degrees.
+
+01:21:04.160 --> 01:21:05.140
+For hybrid,
+
+01:21:05.140 --> 01:21:05.800
+the application
+
+01:21:05.800 --> 01:21:06.520
+is different.
+
+01:21:06.680 --> 01:21:07.340
+For electric
+
+01:21:07.340 --> 01:21:07.960
+application,
+
+01:21:08.120 --> 01:21:08.580
+for example,
+
+01:21:08.660 --> 01:21:09.820
+you must stay
+
+01:21:09.820 --> 01:21:10.400
+in key-on
+
+01:21:10.400 --> 01:21:11.000
+for a specific
+
+01:21:11.000 --> 01:21:11.540
+amount of
+
+01:21:11.540 --> 01:21:11.960
+time.
+
+01:21:12.340 --> 01:21:13.300
+You have to
+
+01:21:13.300 --> 01:21:15.300
+stay in
+
+01:21:15.300 --> 01:21:15.720
+idle,
+
+01:21:15.880 --> 01:21:16.180
+so with
+
+01:21:16.180 --> 01:21:16.940
+the engine
+
+01:21:16.940 --> 01:21:17.480
+on,
+
+01:21:17.960 --> 01:21:19.300
+without moving
+
+01:21:19.300 --> 01:21:20.100
+for a specific
+
+01:21:20.100 --> 01:21:21.140
+amount of
+
+01:21:21.140 --> 01:21:21.460
+time,
+
+01:21:21.940 --> 01:21:22.820
+and you have
+
+01:21:22.820 --> 01:21:23.440
+to drive
+
+01:21:23.440 --> 01:21:24.260
+your car
+
+01:21:24.260 --> 01:21:24.820
+with the
+
+01:21:24.820 --> 01:21:25.120
+speed
+
+01:21:25.120 --> 01:21:27.620
+faster than
+
+01:21:27.620 --> 01:21:28.300
+30 kilometers
+
+01:21:28.300 --> 01:21:28.820
+per hour
+
+01:21:28.820 --> 01:21:29.720
+for a specific
+
+01:21:29.720 --> 01:21:30.280
+amount of
+
+01:21:30.280 --> 01:21:30.560
+time.
+
+01:21:31.380 --> 01:21:31.920
+So, of course,
+
+01:21:32.220 --> 01:21:32.800
+according to the
+
+01:21:32.800 --> 01:21:33.460
+kind of project
+
+01:21:33.460 --> 01:21:34.000
+you're working
+
+01:21:34.000 --> 01:21:34.520
+on, you will
+
+01:21:34.520 --> 01:21:35.400
+have separate
+
+01:21:35.400 --> 01:21:36.360
+definitions and
+
+01:21:36.360 --> 01:21:37.100
+use of this
+
+01:21:37.100 --> 01:21:37.940
+warp-up cycle.
+
+01:21:39.300 --> 01:21:39.800
+I know
+
+01:21:39.800 --> 01:21:41.020
+they sound
+
+01:21:41.020 --> 01:21:41.860
+all like
+
+01:21:41.860 --> 01:21:42.940
+strange
+
+01:21:42.940 --> 01:21:43.600
+rules to
+
+01:21:43.600 --> 01:21:44.120
+be followed,
+
+01:21:44.340 --> 01:21:44.760
+but here
+
+01:21:44.760 --> 01:21:45.440
+there is a
+
+01:21:45.440 --> 01:21:46.540
+very simple
+
+01:21:46.540 --> 01:21:47.480
+idea behind
+
+01:21:47.480 --> 01:21:47.760
+it.
+
+01:21:49.060 --> 01:21:49.860
+If I just
+
+01:21:49.860 --> 01:21:50.480
+use as a
+
+01:21:50.480 --> 01:21:50.940
+condition
+
+01:21:50.940 --> 01:21:51.820
+key-on-key-off,
+
+01:21:52.000 --> 01:21:52.740
+it means that
+
+01:21:52.740 --> 01:21:53.360
+even if I
+
+01:21:53.360 --> 01:21:53.940
+don't use
+
+01:21:53.940 --> 01:21:54.360
+the car,
+
+01:21:54.580 --> 01:21:55.160
+just doing
+
+01:21:55.160 --> 01:21:55.860
+40 times
+
+01:21:55.860 --> 01:21:56.420
+key-on-key-off,
+
+01:21:56.500 --> 01:21:56.960
+key-on-key-off,
+
+01:21:57.040 --> 01:21:57.500
+key-on-key-off,
+
+01:21:57.940 --> 01:21:58.760
+then I'm
+
+01:21:58.760 --> 01:21:59.180
+like,
+
+01:21:59.880 --> 01:22:02.960
+you know,
+
+01:22:03.040 --> 01:22:04.400
+I'm kind
+
+01:22:04.400 --> 01:22:06.060
+of joking
+
+01:22:06.060 --> 01:22:06.560
+with the
+
+01:22:06.560 --> 01:22:07.040
+electronic
+
+01:22:07.040 --> 01:22:07.820
+control unit,
+
+01:22:08.000 --> 01:22:08.220
+you know?
+
+01:22:08.500 --> 01:22:09.060
+I'm just
+
+01:22:09.060 --> 01:22:10.480
+making fun
+
+01:22:10.480 --> 01:22:10.780
+of the
+
+01:22:10.780 --> 01:22:11.160
+electronic
+
+01:22:11.160 --> 01:22:11.980
+control unit,
+
+01:22:12.100 --> 01:22:12.540
+pretending
+
+01:22:12.540 --> 01:22:13.100
+that I'm
+
+01:22:13.100 --> 01:22:13.680
+using the
+
+01:22:13.680 --> 01:22:13.920
+car,
+
+01:22:14.200 --> 01:22:14.800
+while actually
+
+01:22:14.800 --> 01:22:15.320
+I'm just
+
+01:22:15.320 --> 01:22:16.300
+doing this
+
+01:22:16.300 --> 01:22:17.280
+stupid joke
+
+01:22:17.280 --> 01:22:17.760
+with the
+
+01:22:17.760 --> 01:22:18.120
+keys.
+
+01:22:18.940 --> 01:22:19.700
+The idea
+
+01:22:19.700 --> 01:22:21.320
+about this
+
+01:22:21.320 --> 01:22:22.380
+warm-up cycle
+
+01:22:22.380 --> 01:22:22.860
+is that
+
+01:22:22.860 --> 01:22:24.580
+if I have
+
+01:22:24.580 --> 01:22:25.640
+an error,
+
+01:22:26.200 --> 01:22:27.300
+I will need
+
+01:22:27.300 --> 01:22:27.800
+to keep
+
+01:22:27.800 --> 01:22:28.420
+track
+
+01:22:28.420 --> 01:22:30.500
+of these
+
+01:22:30.500 --> 01:22:33.620
+errors
+
+01:22:33.620 --> 01:22:34.060
+inside
+
+01:22:34.060 --> 01:22:34.540
+Viprom
+
+01:22:34.540 --> 01:22:36.000
+as long
+
+01:22:36.000 --> 01:22:36.320
+as it
+
+01:22:36.320 --> 01:22:36.580
+does.
+
+01:22:37.260 --> 01:22:37.540
+So,
+
+01:22:38.160 --> 01:22:38.760
+it means that
+
+01:22:38.760 --> 01:22:39.440
+I have to
+
+01:22:39.440 --> 01:22:40.240
+make sure
+
+01:22:40.240 --> 01:22:41.020
+that for
+
+01:22:41.020 --> 01:22:42.700
+40 times
+
+01:22:42.700 --> 01:22:43.840
+I actually
+
+01:22:43.840 --> 01:22:44.840
+used the
+
+01:22:44.840 --> 01:22:45.200
+car,
+
+01:22:46.140 --> 01:22:46.620
+the error
+
+01:22:46.620 --> 01:22:47.200
+was not
+
+01:22:47.200 --> 01:22:47.580
+present,
+
+01:22:47.800 --> 01:22:48.540
+and only
+
+01:22:48.540 --> 01:22:49.520
+after these
+
+01:22:49.520 --> 01:22:50.360
+40 times
+
+01:22:50.360 --> 01:22:50.720
+where I
+
+01:22:50.720 --> 01:22:51.360
+really
+
+01:22:51.360 --> 01:22:51.940
+used the
+
+01:22:51.940 --> 01:22:52.180
+car,
+
+01:22:52.880 --> 01:22:53.400
+then I
+
+01:22:53.400 --> 01:22:54.580
+feel the
+
+01:22:54.580 --> 01:22:55.160
+echo and
+
+01:22:55.160 --> 01:22:55.600
+the software
+
+01:22:55.600 --> 01:22:56.560
+will feel
+
+01:22:56.560 --> 01:22:57.180
+confident
+
+01:22:57.180 --> 01:22:58.400
+in deleting
+
+01:22:58.400 --> 01:22:59.600
+the error
+
+01:22:59.600 --> 01:23:00.040
+from the
+
+01:23:00.040 --> 01:23:00.420
+electronic
+
+01:23:00.420 --> 01:23:01.200
+control unit,
+
+01:23:01.280 --> 01:23:01.660
+because it
+
+01:23:01.660 --> 01:23:01.920
+means,
+
+01:23:02.060 --> 01:23:02.220
+okay,
+
+01:23:02.780 --> 01:23:03.460
+it's 40
+
+01:23:03.460 --> 01:23:04.220
+cycles that
+
+01:23:04.220 --> 01:23:04.600
+the car
+
+01:23:04.600 --> 01:23:05.140
+is working
+
+01:23:05.140 --> 01:23:05.600
+properly,
+
+01:23:05.600 --> 01:23:06.200
+so I don't
+
+01:23:06.200 --> 01:23:06.640
+need to
+
+01:23:06.640 --> 01:23:07.160
+keep track
+
+01:23:07.160 --> 01:23:07.520
+of this
+
+01:23:07.520 --> 01:23:08.200
+error anymore.
+
+01:23:08.960 --> 01:23:09.140
+So,
+
+01:23:09.280 --> 01:23:09.720
+why do we
+
+01:23:09.720 --> 01:23:10.100
+have all
+
+01:23:10.100 --> 01:23:10.280
+these
+
+01:23:10.280 --> 01:23:10.920
+conditions?
+
+01:23:11.080 --> 01:23:11.400
+If we
+
+01:23:11.400 --> 01:23:13.160
+think about
+
+01:23:13.160 --> 01:23:13.760
+the conditions
+
+01:23:13.760 --> 01:23:14.180
+of the
+
+01:23:14.180 --> 01:23:14.540
+electric
+
+01:23:14.540 --> 01:23:15.020
+vehicle,
+
+01:23:15.600 --> 01:23:16.100
+of course,
+
+01:23:16.180 --> 01:23:16.680
+if I use
+
+01:23:16.680 --> 01:23:17.040
+the car,
+
+01:23:17.100 --> 01:23:17.580
+for example,
+
+01:23:17.580 --> 01:23:18.360
+to go out
+
+01:23:18.360 --> 01:23:18.840
+and buy
+
+01:23:18.840 --> 01:23:19.400
+milk,
+
+01:23:19.560 --> 01:23:20.040
+or to
+
+01:23:20.040 --> 01:23:20.840
+go out
+
+01:23:20.840 --> 01:23:21.100
+and,
+
+01:23:21.220 --> 01:23:21.520
+you know,
+
+01:23:21.980 --> 01:23:22.580
+just going
+
+01:23:22.580 --> 01:23:22.980
+to a
+
+01:23:22.980 --> 01:23:23.340
+party,
+
+01:23:23.520 --> 01:23:23.720
+to a
+
+01:23:23.720 --> 01:23:24.040
+disco,
+
+01:23:24.460 --> 01:23:24.720
+to a
+
+01:23:24.720 --> 01:23:25.080
+museum,
+
+01:23:25.280 --> 01:23:25.800
+or whatever,
+
+01:23:26.520 --> 01:23:27.040
+for sure,
+
+01:23:27.120 --> 01:23:27.720
+I will have
+
+01:23:27.720 --> 01:23:28.220
+the car
+
+01:23:28.220 --> 01:23:28.920
+in K-ON,
+
+01:23:29.060 --> 01:23:29.540
+for example,
+
+01:23:29.620 --> 01:23:29.980
+because I
+
+01:23:29.980 --> 01:23:30.320
+have to
+
+01:23:30.320 --> 01:23:31.600
+set the
+
+01:23:31.600 --> 01:23:32.640
+navigator,
+
+01:23:33.160 --> 01:23:33.420
+okay,
+
+01:23:33.460 --> 01:23:33.660
+and that's
+
+01:23:33.660 --> 01:23:33.920
+the first
+
+01:23:33.920 --> 01:23:34.680
+condition to
+
+01:23:34.680 --> 01:23:35.460
+have the
+
+01:23:35.460 --> 01:23:36.180
+car just
+
+01:23:36.180 --> 01:23:36.900
+in K-ON
+
+01:23:36.900 --> 01:23:37.320
+for a
+
+01:23:37.320 --> 01:23:37.640
+specific
+
+01:23:37.640 --> 01:23:38.040
+amount
+
+01:23:38.040 --> 01:23:38.600
+of time,
+
+01:23:39.240 --> 01:23:40.040
+for sure,
+
+01:23:40.160 --> 01:23:40.440
+I will
+
+01:23:40.440 --> 01:23:40.820
+drive,
+
+01:23:40.980 --> 01:23:41.340
+I will
+
+01:23:41.340 --> 01:23:41.680
+stay
+
+01:23:41.680 --> 01:23:42.320
+like in
+
+01:23:42.320 --> 01:23:42.780
+standby
+
+01:23:42.780 --> 01:23:43.480
+for a
+
+01:23:43.480 --> 01:23:43.620
+few
+
+01:23:43.620 --> 01:23:44.200
+seconds
+
+01:23:44.200 --> 01:23:44.920
+with the
+
+01:23:44.920 --> 01:23:45.160
+engine
+
+01:23:45.160 --> 01:23:45.420
+on,
+
+01:23:45.500 --> 01:23:46.680
+because I'm
+
+01:23:46.680 --> 01:23:47.700
+100% sure
+
+01:23:47.700 --> 01:23:48.060
+that on
+
+01:23:48.060 --> 01:23:48.540
+my way
+
+01:23:48.540 --> 01:23:49.020
+I will
+
+01:23:49.020 --> 01:23:51.800
+find traffic
+
+01:23:51.800 --> 01:23:52.220
+lights,
+
+01:23:52.360 --> 01:23:52.620
+especially
+
+01:23:52.620 --> 01:23:53.000
+if you
+
+01:23:53.000 --> 01:23:53.340
+live in
+
+01:23:53.340 --> 01:23:53.700
+Torino,
+
+01:23:54.620 --> 01:23:55.780
+and that's
+
+01:23:55.780 --> 01:23:56.100
+the second
+
+01:23:56.100 --> 01:23:56.560
+condition,
+
+01:23:56.920 --> 01:23:57.620
+and if I'm
+
+01:23:57.620 --> 01:23:58.100
+using the
+
+01:23:58.100 --> 01:23:58.420
+car,
+
+01:23:58.560 --> 01:23:58.860
+especially
+
+01:23:58.860 --> 01:23:59.300
+if I have
+
+01:23:59.300 --> 01:23:59.640
+people
+
+01:23:59.640 --> 01:24:00.120
+with me,
+
+01:24:00.200 --> 01:24:00.580
+just to
+
+01:24:00.580 --> 01:24:01.060
+show off
+
+01:24:01.060 --> 01:24:01.460
+that I'm
+
+01:24:01.460 --> 01:24:01.900
+able to
+
+01:24:01.900 --> 01:24:02.300
+drive,
+
+01:24:02.800 --> 01:24:03.740
+then probably
+
+01:24:03.740 --> 01:24:05.420
+quite like
+
+01:24:05.420 --> 01:24:05.980
+I'll
+
+01:24:05.980 --> 01:24:06.620
+drive my
+
+01:24:06.620 --> 01:24:07.100
+car for
+
+01:24:07.100 --> 01:24:07.520
+a specific
+
+01:24:07.520 --> 01:24:08.160
+amount of
+
+01:24:08.160 --> 01:24:08.720
+time to
+
+01:24:08.720 --> 01:24:09.100
+a speed
+
+01:24:09.100 --> 01:24:09.960
+faster than
+
+01:24:09.960 --> 01:24:10.560
+30 km
+
+01:24:10.560 --> 01:24:11.180
+per hour,
+
+01:24:11.360 --> 01:24:12.440
+so these
+
+01:24:12.440 --> 01:24:13.220
+are all
+
+01:24:13.220 --> 01:24:14.760
+a set of
+
+01:24:14.760 --> 01:24:15.980
+conditions that
+
+01:24:15.980 --> 01:24:17.940
+are all
+
+01:24:17.940 --> 01:24:18.760
+present when
+
+01:24:18.760 --> 01:24:19.480
+you really
+
+01:24:19.480 --> 01:24:19.980
+use the
+
+01:24:19.980 --> 01:24:20.220
+car,
+
+01:24:20.360 --> 01:24:20.760
+so all
+
+01:24:20.760 --> 01:24:20.900
+these
+
+01:24:20.900 --> 01:24:21.300
+additional
+
+01:24:21.300 --> 01:24:21.820
+conditions
+
+01:24:21.820 --> 01:24:22.640
+are meant
+
+01:24:22.640 --> 01:24:25.440
+to simulate
+
+01:24:25.440 --> 01:24:25.840
+let's say
+
+01:24:25.840 --> 01:24:26.940
+real driving
+
+01:24:26.940 --> 01:24:27.400
+cycle,
+
+01:24:27.980 --> 01:24:28.540
+and if
+
+01:24:28.540 --> 01:24:29.200
+for 40
+
+01:24:29.200 --> 01:24:29.940
+times I
+
+01:24:29.940 --> 01:24:31.060
+have all
+
+01:24:31.060 --> 01:24:31.760
+these conditions
+
+01:24:31.760 --> 01:24:32.360
+and there
+
+01:24:32.360 --> 01:24:32.900
+is no
+
+01:24:32.900 --> 01:24:33.540
+fault,
+
+01:24:34.060 --> 01:24:34.800
+then I
+
+01:24:34.800 --> 01:24:35.600
+feel confident
+
+01:24:35.600 --> 01:24:36.200
+that from
+
+01:24:36.200 --> 01:24:37.220
+this 08
+
+01:24:37.220 --> 01:24:37.800
+I can
+
+01:24:37.800 --> 01:24:38.580
+move to
+
+01:24:38.580 --> 01:24:39.160
+0,
+
+01:24:39.340 --> 01:24:39.700
+0,
+
+01:24:39.700 --> 01:24:40.160
+okay,
+
+01:24:40.420 --> 01:24:41.620
+so if in
+
+01:24:41.620 --> 01:24:42.480
+all these
+
+01:24:42.480 --> 01:24:44.280
+cycles that
+
+01:24:44.280 --> 01:24:44.560
+I was
+
+01:24:44.560 --> 01:24:45.000
+referring
+
+01:24:45.000 --> 01:24:45.560
+before,
+
+01:24:45.980 --> 01:24:46.720
+we didn't
+
+01:24:46.720 --> 01:24:47.860
+do just
+
+01:24:47.860 --> 01:24:49.080
+key-off,
+
+01:24:49.200 --> 01:24:49.480
+key-on,
+
+01:24:49.600 --> 01:24:50.020
+but also
+
+01:24:50.020 --> 01:24:50.740
+key-on,
+
+01:24:51.420 --> 01:24:52.020
+engine-on,
+
+01:24:52.700 --> 01:24:54.100
+then engine
+
+01:24:54.100 --> 01:24:54.600
+install,
+
+01:24:54.860 --> 01:24:55.100
+you know,
+
+01:24:55.240 --> 01:24:56.280
+standby for
+
+01:24:56.280 --> 01:24:56.640
+a specific
+
+01:24:56.640 --> 01:24:57.180
+amount of
+
+01:24:57.180 --> 01:24:57.540
+time,
+
+01:24:57.540 --> 01:24:59.880
+then driving
+
+01:24:59.880 --> 01:25:01.780
+the speed
+
+01:25:01.780 --> 01:25:02.380
+faster than
+
+01:25:02.380 --> 01:25:02.920
+30 km
+
+01:25:02.920 --> 01:25:03.540
+per hour
+
+01:25:03.540 --> 01:25:03.980
+for a
+
+01:25:03.980 --> 01:25:04.280
+specific
+
+01:25:04.280 --> 01:25:04.780
+amount of
+
+01:25:04.780 --> 01:25:05.000
+time,
+
+01:25:05.340 --> 01:25:05.640
+or I
+
+01:25:05.640 --> 01:25:05.880
+don't know,
+
+01:25:05.920 --> 01:25:06.160
+if you
+
+01:25:06.160 --> 01:25:06.700
+are using
+
+01:25:06.700 --> 01:25:07.100
+an internal
+
+01:25:07.100 --> 01:25:07.560
+combustion
+
+01:25:07.560 --> 01:25:08.300
+engine car,
+
+01:25:08.760 --> 01:25:09.580
+then simply,
+
+01:25:09.700 --> 01:25:09.900
+you know,
+
+01:25:09.960 --> 01:25:10.500
+turning on
+
+01:25:10.500 --> 01:25:10.900
+the engine,
+
+01:25:11.060 --> 01:25:11.520
+keeping on
+
+01:25:11.520 --> 01:25:11.920
+the engine
+
+01:25:11.920 --> 01:25:12.500
+for a
+
+01:25:12.500 --> 01:25:12.760
+specific
+
+01:25:12.760 --> 01:25:13.280
+amount of
+
+01:25:13.280 --> 01:25:13.620
+time,
+
+01:25:13.780 --> 01:25:14.240
+so that
+
+01:25:14.240 --> 01:25:15.100
+the delta
+
+01:25:15.100 --> 01:25:15.640
+temperature
+
+01:25:15.640 --> 01:25:16.600
+of the
+
+01:25:16.600 --> 01:25:17.620
+refrigerant
+
+01:25:17.620 --> 01:25:18.020
+liquid
+
+01:25:18.020 --> 01:25:18.760
+goes
+
+01:25:18.760 --> 01:25:20.460
+higher than
+
+01:25:20.460 --> 01:25:21.300
+70 degrees
+
+01:25:21.300 --> 01:25:21.640
+with a
+
+01:25:21.640 --> 01:25:22.100
+delta of
+
+01:25:22.100 --> 01:25:22.940
+22.5
+
+01:25:22.940 --> 01:25:23.200
+degrees,
+
+01:25:23.280 --> 01:25:23.460
+you know,
+
+01:25:23.840 --> 01:25:24.360
+all these
+
+01:25:24.360 --> 01:25:25.060
+conditions
+
+01:25:25.060 --> 01:25:25.760
+that look
+
+01:25:25.760 --> 01:25:26.300
+like just
+
+01:25:26.300 --> 01:25:26.880
+a set of
+
+01:25:26.880 --> 01:25:27.180
+roads,
+
+01:25:27.180 --> 01:25:28.180
+actually
+
+01:25:28.180 --> 01:25:28.840
+simulation
+
+01:25:28.840 --> 01:25:29.300
+of a
+
+01:25:29.300 --> 01:25:29.720
+real
+
+01:25:29.720 --> 01:25:30.280
+case
+
+01:25:30.280 --> 01:25:31.300
+use of
+
+01:25:31.300 --> 01:25:31.460
+the
+
+01:25:31.460 --> 01:25:31.720
+car,
+
+01:25:32.520 --> 01:25:32.820
+and
+
+01:25:32.820 --> 01:25:34.640
+if we
+
+01:25:34.640 --> 01:25:35.160
+consider
+
+01:25:35.160 --> 01:25:35.520
+that
+
+01:25:35.520 --> 01:25:36.080
+in all
+
+01:25:36.080 --> 01:25:36.520
+these
+
+01:25:36.520 --> 01:25:37.240
+monitoring
+
+01:25:37.240 --> 01:25:37.760
+cycles,
+
+01:25:37.880 --> 01:25:38.180
+all these
+
+01:25:38.180 --> 01:25:38.640
+conditions
+
+01:25:38.640 --> 01:25:39.140
+are met,
+
+01:25:39.680 --> 01:25:40.780
+then we
+
+01:25:40.780 --> 01:25:41.080
+can
+
+01:25:41.080 --> 01:25:41.760
+consider
+
+01:25:41.760 --> 01:25:42.280
+a
+
+01:25:42.280 --> 01:25:43.600
+discount
+
+01:25:43.600 --> 01:25:44.340
+decreasing
+
+01:25:44.340 --> 01:25:44.980
+until
+
+01:25:44.980 --> 01:25:46.340
+we get
+
+01:25:46.340 --> 01:25:46.900
+to zero
+
+01:25:46.900 --> 01:25:47.380
+and
+
+01:25:47.380 --> 01:25:47.980
+this
+
+01:25:47.980 --> 01:25:48.720
+status,
+
+01:25:48.960 --> 01:25:49.420
+you know,
+
+01:25:49.540 --> 01:25:49.740
+the status
+
+01:25:49.740 --> 01:25:50.020
+of the
+
+01:25:50.020 --> 01:25:50.240
+DTC
+
+01:25:50.240 --> 01:25:51.140
+will become
+
+01:25:51.140 --> 01:25:51.440
+zero,
+
+01:25:51.540 --> 01:25:51.760
+zero,
+
+01:25:52.360 --> 01:25:52.680
+and
+
+01:25:52.680 --> 01:25:53.600
+the DTC
+
+01:25:53.600 --> 01:25:54.280
+is actually
+
+01:25:54.280 --> 01:25:54.820
+deleted
+
+01:25:54.820 --> 01:25:55.420
+from the
+
+01:25:55.420 --> 01:25:55.900
+electronic
+
+01:25:55.900 --> 01:25:56.800
+control unit.
+
+01:25:57.180 --> 01:26:01.220
+I hope
+
+01:26:01.220 --> 01:26:01.600
+this is
+
+01:26:01.600 --> 01:26:01.960
+clear,
+
+01:26:02.140 --> 01:26:02.620
+otherwise
+
+01:26:02.620 --> 01:26:04.660
+the nice
+
+01:26:04.660 --> 01:26:05.440
+exercise to
+
+01:26:05.440 --> 01:26:05.800
+be done
+
+01:26:05.800 --> 01:26:06.840
+is using
+
+01:26:06.840 --> 01:26:07.580
+one of the
+
+01:26:07.580 --> 01:26:08.060
+facilities
+
+01:26:08.060 --> 01:26:08.620
+that we
+
+01:26:08.620 --> 01:26:09.160
+have in
+
+01:26:09.160 --> 01:26:09.580
+the company
+
+01:26:09.580 --> 01:26:10.580
+or even
+
+01:26:10.580 --> 01:26:11.120
+one of the
+
+01:26:11.120 --> 01:26:11.640
+facilities
+
+01:26:11.640 --> 01:26:12.500
+you're using
+
+01:26:12.500 --> 01:26:13.280
+on your
+
+01:26:13.280 --> 01:26:14.320
+work and
+
+01:26:14.320 --> 01:26:14.800
+just trying
+
+01:26:14.800 --> 01:26:15.340
+to perform
+
+01:26:15.340 --> 01:26:16.100
+this exercise.
+
+01:26:16.340 --> 01:26:16.620
+So you
+
+01:26:16.620 --> 01:26:18.280
+actually set
+
+01:26:18.280 --> 01:26:18.780
+the DTC,
+
+01:26:19.720 --> 01:26:20.360
+so, you know,
+
+01:26:20.440 --> 01:26:21.040
+perform the
+
+01:26:21.040 --> 01:26:21.680
+fault condition,
+
+01:26:21.780 --> 01:26:22.200
+I don't know,
+
+01:26:22.240 --> 01:26:22.940
+an open load
+
+01:26:22.940 --> 01:26:23.440
+on a
+
+01:26:23.440 --> 01:26:23.700
+can
+
+01:26:23.700 --> 01:26:24.160
+network,
+
+01:26:24.300 --> 01:26:24.800
+for example,
+
+01:26:24.980 --> 01:26:25.460
+or on a
+
+01:26:25.460 --> 01:26:25.860
+sensor,
+
+01:26:26.160 --> 01:26:26.460
+whatever,
+
+01:26:26.680 --> 01:26:27.140
+you open
+
+01:26:27.140 --> 01:26:27.980
+load,
+
+01:26:28.480 --> 01:26:28.820
+you see
+
+01:26:28.820 --> 01:26:29.100
+that there
+
+01:26:29.100 --> 01:26:29.300
+is a
+
+01:26:29.300 --> 01:26:29.640
+DTC,
+
+01:26:30.120 --> 01:26:30.460
+you will
+
+01:26:30.460 --> 01:26:31.240
+probably read
+
+01:26:31.240 --> 01:26:32.160
+the status
+
+01:26:32.160 --> 01:26:32.500
+byte,
+
+01:26:32.640 --> 01:26:32.980
+can be
+
+01:26:32.980 --> 01:26:33.460
+8F,
+
+01:26:33.540 --> 01:26:33.880
+can be
+
+01:26:33.880 --> 01:26:34.460
+0F,
+
+01:26:34.560 --> 01:26:34.760
+whatever,
+
+01:26:35.760 --> 01:26:36.340
+and then you
+
+01:26:36.340 --> 01:26:36.880
+check for
+
+01:26:36.880 --> 01:26:37.600
+this specific
+
+01:26:37.600 --> 01:26:38.800
+DTC if there
+
+01:26:38.800 --> 01:26:39.320
+is a
+
+01:26:39.320 --> 01:26:40.240
+monitoring cycle
+
+01:26:40.240 --> 01:26:40.840
+to be done
+
+01:26:40.840 --> 01:26:41.460
+or a
+
+01:26:41.460 --> 01:26:42.180
+warm-up cycle
+
+01:26:42.180 --> 01:26:42.680
+to be done,
+
+01:26:43.060 --> 01:26:44.040
+and while you
+
+01:26:44.040 --> 01:26:44.940
+are working
+
+01:26:44.940 --> 01:26:45.380
+on it,
+
+01:26:45.380 --> 01:26:46.020
+you perform
+
+01:26:46.020 --> 01:26:46.580
+K-off,
+
+01:26:46.680 --> 01:26:46.900
+K-on
+
+01:26:46.900 --> 01:26:47.420
+without the
+
+01:26:47.420 --> 01:26:47.580
+error,
+
+01:26:47.580 --> 01:26:47.920
+and you
+
+01:26:47.920 --> 01:26:48.620
+see how
+
+01:26:48.620 --> 01:26:49.540
+the status
+
+01:26:49.540 --> 01:26:50.480
+byte evolves
+
+01:26:50.480 --> 01:26:51.740
+to become
+
+01:26:51.740 --> 01:26:52.660
+from 8F
+
+01:26:52.660 --> 01:26:53.400
+or 0F
+
+01:26:53.400 --> 01:26:54.240
+to 0,
+
+01:26:54.360 --> 01:26:54.660
+0,
+
+01:26:54.660 --> 01:26:55.320
+using the
+
+01:26:55.320 --> 01:26:56.100
+monitoring cycle
+
+01:26:56.100 --> 01:26:56.640
+or the
+
+01:26:56.640 --> 01:26:57.420
+warm-up cycle.
+
+01:26:59.040 --> 01:26:59.920
+If you read
+
+01:26:59.920 --> 01:27:00.420
+through the
+
+01:27:00.420 --> 01:27:00.940
+slides,
+
+01:27:01.100 --> 01:27:01.480
+there is
+
+01:27:01.480 --> 01:27:02.220
+a specific
+
+01:27:02.220 --> 01:27:05.240
+diagnostic
+
+01:27:05.240 --> 01:27:06.260
+service to
+
+01:27:06.260 --> 01:27:07.060
+retrieve
+
+01:27:07.060 --> 01:27:07.920
+the amount
+
+01:27:07.920 --> 01:27:08.560
+of
+
+01:27:08.560 --> 01:27:13.440
+cycles
+
+01:27:13.440 --> 01:27:14.080
+left
+
+01:27:14.080 --> 01:27:15.340
+to get
+
+01:27:15.340 --> 01:27:16.600
+to the
+
+01:27:16.600 --> 01:27:16.840
+status
+
+01:27:16.840 --> 01:27:17.180
+0,
+
+01:27:17.180 --> 01:27:17.540
+0,
+
+01:27:17.540 --> 01:27:18.340
+and this
+
+01:27:18.340 --> 01:27:18.700
+can be
+
+01:27:18.700 --> 01:27:19.220
+retrieved
+
+01:27:19.220 --> 01:27:19.480
+with
+
+01:27:19.480 --> 01:27:19.720
+the
+
+01:27:19.720 --> 01:27:20.000
+service
+
+01:27:20.000 --> 01:27:21.700
+1906.
+
+01:27:23.300 --> 01:27:23.780
+So,
+
+01:27:23.940 --> 01:27:24.200
+as you
+
+01:27:24.200 --> 01:27:24.560
+remember,
+
+01:27:24.720 --> 01:27:26.100
+19 is
+
+01:27:26.100 --> 01:27:26.620
+the service,
+
+01:27:26.840 --> 01:27:28.280
+02 is
+
+01:27:28.280 --> 01:27:28.940
+the
+
+01:27:28.940 --> 01:27:31.420
+subservice
+
+01:27:31.420 --> 01:27:31.920
+to read
+
+01:27:31.920 --> 01:27:32.320
+the error
+
+01:27:32.320 --> 01:27:32.700
+memory.
+
+01:27:33.360 --> 01:27:33.520
+So,
+
+01:27:33.700 --> 01:27:34.200
+we can
+
+01:27:34.200 --> 01:27:34.840
+even write
+
+01:27:34.840 --> 01:27:35.400
+that here.
+
+01:27:36.020 --> 01:27:36.160
+So,
+
+01:27:36.240 --> 01:27:36.600
+we have
+
+01:27:36.600 --> 01:27:37.780
+1902
+
+01:27:37.780 --> 01:27:42.340
+error
+
+01:27:42.340 --> 01:27:43.900
+memory
+
+01:27:43.900 --> 01:27:47.140
+1906
+
+01:27:47.140 --> 01:27:48.140
+1904
+
+01:27:48.140 --> 01:27:52.080
+snapshot
+
+01:27:52.080 --> 01:27:54.140
+1906
+
+01:27:54.140 --> 01:27:59.080
+extended data
+
+01:27:59.080 --> 01:27:59.980
+record.
+
+01:27:59.980 --> 01:28:01.920
+extended
+
+01:28:01.920 --> 01:28:02.980
+data
+
+01:28:02.980 --> 01:28:04.020
+record.
+
+01:28:04.020 --> 01:28:05.780
+You can read
+
+01:28:05.780 --> 01:28:06.700
+all the information
+
+01:28:06.700 --> 01:28:07.520
+in the chapter
+
+01:28:07.520 --> 01:28:09.280
+of the UDS
+
+01:28:09.280 --> 01:28:10.000
+norm about
+
+01:28:10.000 --> 01:28:10.760
+1906.
+
+01:28:10.760 --> 01:28:11.920
+This is the
+
+01:28:11.920 --> 01:28:12.920
+usual service
+
+01:28:12.920 --> 01:28:13.400
+19,
+
+01:28:13.400 --> 01:28:14.200
+the subservice
+
+01:28:14.200 --> 01:28:14.820
+06,
+
+01:28:14.820 --> 01:28:15.880
+that is used
+
+01:28:15.880 --> 01:28:16.420
+to read the
+
+01:28:16.420 --> 01:28:17.100
+extended data
+
+01:28:17.100 --> 01:28:17.480
+record,
+
+01:28:17.480 --> 01:28:18.460
+which gives you
+
+01:28:18.460 --> 01:28:20.140
+a few information.
+
+01:28:20.140 --> 01:28:20.900
+Among this
+
+01:28:20.900 --> 01:28:21.460
+information,
+
+01:28:21.540 --> 01:28:22.420
+one of the information
+
+01:28:22.420 --> 01:28:23.420
+is the amount
+
+01:28:23.420 --> 01:28:24.920
+of cycles
+
+01:28:24.920 --> 01:28:26.800
+needed
+
+01:28:26.800 --> 01:28:27.520
+to
+
+01:28:27.520 --> 01:28:29.640
+clear
+
+01:28:29.640 --> 01:28:30.700
+the error
+
+01:28:30.700 --> 01:28:31.700
+from the
+
+01:28:31.700 --> 01:28:32.440
+error memory.
+
+01:28:32.580 --> 01:28:32.720
+So,
+
+01:28:32.760 --> 01:28:33.700
+you just request
+
+01:28:33.700 --> 01:28:34.420
+1906
+
+01:28:34.420 --> 01:28:35.700
+related
+
+01:28:35.700 --> 01:28:35.960
+to
+
+01:28:35.960 --> 01:28:36.500
+201
+
+01:28:36.500 --> 01:28:37.160
+2292,
+
+01:28:37.640 --> 01:28:38.760
+and the answer
+
+01:28:38.760 --> 01:28:39.800
+will be the amount
+
+01:28:39.800 --> 01:28:40.200
+of,
+
+01:28:40.360 --> 01:28:41.540
+among all the information
+
+01:28:41.540 --> 01:28:42.340
+that are provided,
+
+01:28:42.800 --> 01:28:43.360
+the amount
+
+01:28:43.360 --> 01:28:44.100
+of cycles
+
+01:28:44.100 --> 01:28:44.920
+left to
+
+01:28:44.920 --> 01:28:46.380
+delete the error
+
+01:28:46.380 --> 01:28:46.780
+from the
+
+01:28:46.780 --> 01:28:47.280
+error memory.
+
+01:28:47.280 --> 01:28:52.120
+Last thing
+
+01:28:52.120 --> 01:28:52.620
+to say,
+
+01:28:52.720 --> 01:28:53.320
+of course,
+
+01:28:54.700 --> 01:28:55.700
+this is
+
+01:28:55.700 --> 01:28:57.760
+the behavior
+
+01:28:57.760 --> 01:28:58.540
+of the software
+
+01:28:58.540 --> 01:28:59.680
+once we sell
+
+01:28:59.680 --> 01:29:01.040
+the car.
+
+01:29:01.340 --> 01:29:01.660
+So,
+
+01:29:01.720 --> 01:29:02.460
+we sell the car
+
+01:29:02.460 --> 01:29:03.040
+with all the
+
+01:29:03.040 --> 01:29:03.380
+echo
+
+01:29:03.380 --> 01:29:04.040
+and the echo
+
+01:29:04.040 --> 01:29:04.800
+that we
+
+01:29:04.800 --> 01:29:05.480
+validated.
+
+01:29:06.220 --> 01:29:06.680
+So,
+
+01:29:06.760 --> 01:29:07.340
+this is the
+
+01:29:07.340 --> 01:29:09.220
+intended behavior
+
+01:29:09.220 --> 01:29:10.800
+once the car
+
+01:29:10.800 --> 01:29:11.480
+is out there.
+
+01:29:11.600 --> 01:29:11.880
+Because,
+
+01:29:12.020 --> 01:29:12.540
+as I said,
+
+01:29:12.580 --> 01:29:13.400
+it's very important
+
+01:29:13.400 --> 01:29:14.240
+to keep track
+
+01:29:14.240 --> 01:29:14.760
+of the error
+
+01:29:14.760 --> 01:29:15.460
+if I have
+
+01:29:15.460 --> 01:29:16.220
+an error
+
+01:29:16.220 --> 01:29:16.560
+on the
+
+01:29:16.560 --> 01:29:17.060
+electronic
+
+01:29:17.060 --> 01:29:17.540
+control.
+
+01:29:17.700 --> 01:29:18.260
+If I had
+
+01:29:18.260 --> 01:29:19.840
+an error
+
+01:29:19.840 --> 01:29:20.280
+on the
+
+01:29:20.280 --> 01:29:21.080
+accelerator pedal,
+
+01:29:21.560 --> 01:29:22.320
+I would be
+
+01:29:22.320 --> 01:29:23.560
+glad if the
+
+01:29:23.560 --> 01:29:24.700
+echo knows
+
+01:29:24.700 --> 01:29:25.220
+about it
+
+01:29:25.220 --> 01:29:25.900
+and remembers
+
+01:29:25.900 --> 01:29:26.300
+it.
+
+01:29:26.360 --> 01:29:26.500
+So,
+
+01:29:26.560 --> 01:29:27.160
+next time
+
+01:29:27.160 --> 01:29:28.000
+I bring the
+
+01:29:28.000 --> 01:29:28.400
+car to the
+
+01:29:28.400 --> 01:29:28.800
+mechanics
+
+01:29:28.800 --> 01:29:29.460
+for doing
+
+01:29:29.460 --> 01:29:29.960
+some kind
+
+01:29:29.960 --> 01:29:30.120
+of
+
+01:29:30.120 --> 01:29:30.540
+maintenance,
+
+01:29:30.800 --> 01:29:31.340
+it appears
+
+01:29:31.340 --> 01:29:32.060
+that I have
+
+01:29:32.060 --> 01:29:32.580
+any problem
+
+01:29:32.580 --> 01:29:32.840
+with the
+
+01:29:32.840 --> 01:29:33.520
+accelerator pedal.
+
+01:29:33.980 --> 01:29:34.260
+So,
+
+01:29:34.320 --> 01:29:34.620
+it won't
+
+01:29:34.620 --> 01:29:35.280
+happen again.
+
+01:29:35.440 --> 01:29:35.920
+Probably,
+
+01:29:36.660 --> 01:29:37.100
+I don't know,
+
+01:29:37.140 --> 01:29:37.480
+they will
+
+01:29:37.480 --> 01:29:38.100
+replace it
+
+01:29:38.100 --> 01:29:38.520
+anyway,
+
+01:29:38.680 --> 01:29:39.400
+just in case
+
+01:29:39.400 --> 01:29:39.840
+and stuff
+
+01:29:39.840 --> 01:29:40.260
+like this.
+
+01:29:40.320 --> 01:29:40.400
+So,
+
+01:29:40.400 --> 01:29:40.740
+it's very
+
+01:29:40.740 --> 01:29:41.140
+important
+
+01:29:41.140 --> 01:29:41.660
+we have
+
+01:29:41.660 --> 01:29:41.800
+to.
+
+01:29:42.700 --> 01:29:42.920
+So,
+
+01:29:43.020 --> 01:29:43.300
+this is
+
+01:29:43.300 --> 01:29:43.700
+important
+
+01:29:43.700 --> 01:29:44.480
+during the,
+
+01:29:44.620 --> 01:29:44.840
+let's
+
+01:29:44.840 --> 01:29:45.080
+say,
+
+01:29:45.360 --> 01:29:45.800
+when we
+
+01:29:45.800 --> 01:29:46.400
+sell
+
+01:29:46.400 --> 01:29:47.000
+power.
+
+01:29:47.940 --> 01:29:48.320
+But,
+
+01:29:48.920 --> 01:29:49.800
+while we're
+
+01:29:49.800 --> 01:29:50.180
+doing,
+
+01:29:50.500 --> 01:29:51.060
+during the
+
+01:29:51.060 --> 01:29:51.440
+development
+
+01:29:51.440 --> 01:29:51.900
+phase,
+
+01:29:51.960 --> 01:29:52.240
+of course,
+
+01:29:52.300 --> 01:29:52.800
+if I have
+
+01:29:52.800 --> 01:29:53.420
+to validate
+
+01:29:53.420 --> 01:29:54.280
+the behavior
+
+01:29:54.280 --> 01:29:55.500
+of a DTC,
+
+01:29:56.140 --> 01:29:56.560
+and please
+
+01:29:56.560 --> 01:29:57.080
+remember,
+
+01:29:57.240 --> 01:29:57.520
+in the
+
+01:29:57.520 --> 01:29:58.100
+powertrain
+
+01:29:58.100 --> 01:29:58.620
+electronic
+
+01:29:58.620 --> 01:29:59.380
+control unit,
+
+01:29:59.540 --> 01:29:59.880
+we might
+
+01:29:59.880 --> 01:30:00.700
+also have
+
+01:30:00.700 --> 01:30:01.780
+300,
+
+01:30:01.780 --> 01:30:03.080
+350,
+
+01:30:03.080 --> 01:30:04.940
+400,
+
+01:30:04.940 --> 01:30:06.120
+DTCs.
+
+01:30:06.860 --> 01:30:07.120
+So,
+
+01:30:07.280 --> 01:30:08.060
+just imagine
+
+01:30:08.060 --> 01:30:08.840
+doing every
+
+01:30:08.840 --> 01:30:09.940
+test that
+
+01:30:09.940 --> 01:30:10.320
+you do,
+
+01:30:10.720 --> 01:30:11.240
+every time
+
+01:30:11.240 --> 01:30:11.580
+you have
+
+01:30:11.580 --> 01:30:12.240
+to perform
+
+01:30:12.240 --> 01:30:13.420
+40
+
+01:30:13.420 --> 01:30:14.600
+monitoring
+
+01:30:14.600 --> 01:30:15.340
+cycles,
+
+01:30:15.820 --> 01:30:16.240
+40
+
+01:30:16.240 --> 01:30:16.760
+warm-up
+
+01:30:16.760 --> 01:30:17.280
+cycles,
+
+01:30:17.440 --> 01:30:17.620
+you know,
+
+01:30:17.680 --> 01:30:17.960
+it will
+
+01:30:17.960 --> 01:30:18.560
+take like
+
+01:30:18.560 --> 01:30:19.320
+10 years
+
+01:30:19.320 --> 01:30:20.060
+to validate
+
+01:30:20.060 --> 01:30:21.520
+all the
+
+01:30:21.520 --> 01:30:23.280
+DTCs
+
+01:30:23.280 --> 01:30:23.760
+inside a
+
+01:30:23.760 --> 01:30:24.120
+project.
+
+01:30:24.800 --> 01:30:25.000
+So,
+
+01:30:25.320 --> 01:30:26.400
+to simplify,
+
+01:30:26.900 --> 01:30:28.360
+there are
+
+01:30:28.360 --> 01:30:29.240
+many tricks,
+
+01:30:29.240 --> 01:30:29.700
+let's say,
+
+01:30:29.780 --> 01:30:30.280
+to simplify
+
+01:30:30.280 --> 01:30:31.000
+the activities
+
+01:30:31.000 --> 01:30:31.360
+of the
+
+01:30:31.360 --> 01:30:31.780
+testers,
+
+01:30:32.200 --> 01:30:32.720
+but the
+
+01:30:32.720 --> 01:30:33.120
+main
+
+01:30:33.120 --> 01:30:33.540
+trick,
+
+01:30:33.640 --> 01:30:33.920
+let's say,
+
+01:30:33.980 --> 01:30:34.260
+that is
+
+01:30:34.260 --> 01:30:35.040
+always used,
+
+01:30:35.400 --> 01:30:36.340
+is using
+
+01:30:36.340 --> 01:30:37.260
+this specific
+
+01:30:37.260 --> 01:30:38.960
+service,
+
+01:30:39.400 --> 01:30:39.820
+which is
+
+01:30:39.820 --> 01:30:39.980
+the
+
+01:30:39.980 --> 01:30:40.880
+service 14,
+
+01:30:41.040 --> 01:30:41.920
+service 14,
+
+01:30:41.920 --> 01:30:42.680
+that is used
+
+01:30:42.680 --> 01:30:43.700
+to delete
+
+01:30:43.700 --> 01:30:44.380
+the error
+
+01:30:44.380 --> 01:30:44.960
+memory.
+
+01:30:44.960 --> 01:30:46.120
+so you
+
+01:30:46.120 --> 01:30:46.460
+just
+
+01:30:46.460 --> 01:30:47.400
+launched
+
+01:30:47.400 --> 01:30:48.400
+service 14
+
+01:30:48.400 --> 01:30:48.660
+in a
+
+01:30:48.660 --> 01:30:49.360
+specific way
+
+01:30:49.360 --> 01:30:50.240
+and the
+
+01:30:50.240 --> 01:30:50.640
+EEPROM
+
+01:30:50.640 --> 01:30:51.220
+will get
+
+01:30:51.220 --> 01:30:52.280
+deleted
+
+01:30:52.280 --> 01:30:53.320
+about the
+
+01:30:53.320 --> 01:30:54.920
+DTCs
+
+01:30:54.920 --> 01:30:55.820
+stored inside
+
+01:30:55.820 --> 01:30:56.380
+the electronic
+
+01:30:56.380 --> 01:30:56.720
+quantum
+
+01:30:56.720 --> 01:30:57.120
+environment.
+
+01:30:57.580 --> 01:30:58.140
+In order
+
+01:30:58.140 --> 01:30:58.800
+to delete
+
+01:30:58.800 --> 01:30:59.920
+the EEPROM
+
+01:30:59.920 --> 01:31:00.740
+about the
+
+01:31:00.740 --> 01:31:01.160
+electronic
+
+01:31:01.160 --> 01:31:02.400
+DTCs,
+
+01:31:02.740 --> 01:31:03.160
+the service
+
+01:31:03.160 --> 01:31:03.680
+to be sent
+
+01:31:03.680 --> 01:31:03.980
+is the
+
+01:31:03.980 --> 01:31:04.620
+14 with
+
+01:31:04.620 --> 01:31:07.040
+the additional
+
+01:31:07.040 --> 01:31:07.680
+3 bytes
+
+01:31:07.680 --> 01:31:08.820
+FFFF.
+
+01:31:09.380 --> 01:31:10.060
+So,
+
+01:31:10.180 --> 01:31:10.540
+using
+
+01:31:10.540 --> 01:31:11.060
+this
+
+01:31:11.060 --> 01:31:11.760
+service,
+
+01:31:12.260 --> 01:31:12.740
+services
+
+01:31:12.740 --> 01:31:13.400
+and services,
+
+01:31:13.400 --> 01:31:14.400
+then we
+
+01:31:14.400 --> 01:31:14.760
+are going
+
+01:31:14.760 --> 01:31:15.320
+to delete
+
+01:31:15.320 --> 01:31:16.200
+all the
+
+01:31:16.200 --> 01:31:18.320
+DTCs
+
+01:31:18.320 --> 01:31:18.600
+inside
+
+01:31:18.600 --> 01:31:19.240
+the electronic
+
+01:31:19.240 --> 01:31:19.640
+quantum
+
+01:31:19.640 --> 01:31:19.980
+load.
+
+01:31:20.420 --> 01:31:20.880
+Of course,
+
+01:31:20.980 --> 01:31:21.240
+if you
+
+01:31:21.240 --> 01:31:21.500
+want
+
+01:31:21.500 --> 01:31:22.360
+details
+
+01:31:22.360 --> 01:31:22.880
+about
+
+01:31:22.880 --> 01:31:23.100
+this
+
+01:31:23.100 --> 01:31:23.420
+service,
+
+01:31:23.540 --> 01:31:23.820
+everything
+
+01:31:23.820 --> 01:31:24.120
+is
+
+01:31:24.120 --> 01:31:24.500
+listed
+
+01:31:24.500 --> 01:31:24.780
+and
+
+01:31:24.780 --> 01:31:25.240
+explained
+
+01:31:25.240 --> 01:31:25.680
+inside
+
+01:31:25.680 --> 01:31:25.820
+the
+
+01:31:25.820 --> 01:31:26.200
+EDS.
+
+01:31:26.800 --> 01:31:27.080
+So,
+
+01:31:27.320 --> 01:31:27.560
+I
+
+01:31:27.560 --> 01:31:29.120
+suggest
+
+01:31:29.120 --> 01:31:29.340
+you
+
+01:31:29.340 --> 01:31:29.860
+to go
+
+01:31:29.860 --> 01:31:30.240
+there
+
+01:31:30.240 --> 01:31:30.520
+for
+
+01:31:30.520 --> 01:31:31.100
+further
+
+01:31:31.100 --> 01:31:33.940
+details.
+
+01:31:34.080 --> 01:31:34.420
+But anyway,
+
+01:31:34.520 --> 01:31:34.840
+it's very
+
+01:31:34.840 --> 01:31:35.280
+important
+
+01:31:35.280 --> 01:31:35.680
+that we
+
+01:31:35.680 --> 01:31:36.080
+have
+
+01:31:36.080 --> 01:31:36.960
+this
+
+01:31:36.960 --> 01:31:37.580
+service
+
+01:31:37.580 --> 01:31:38.000
+because
+
+01:31:38.000 --> 01:31:38.720
+without
+
+01:31:38.720 --> 01:31:39.120
+this
+
+01:31:39.120 --> 01:31:39.540
+service,
+
+01:31:39.620 --> 01:31:39.820
+every
+
+01:31:39.820 --> 01:31:40.240
+time to
+
+01:31:40.240 --> 01:31:40.680
+validate
+
+01:31:40.680 --> 01:31:40.860
+the
+
+01:31:40.860 --> 01:31:41.220
+DTC
+
+01:31:41.220 --> 01:31:41.640
+will
+
+01:31:41.640 --> 01:31:41.920
+take
+
+01:31:41.920 --> 01:31:42.460
+10
+
+01:31:42.460 --> 01:31:42.760
+years.
+
+01:31:42.760 --> 01:31:43.340
+In
+
+01:31:43.340 --> 01:31:43.520
+this
+
+01:31:43.520 --> 01:31:43.780
+way,
+
+01:31:43.880 --> 01:31:44.120
+once
+
+01:31:44.120 --> 01:31:44.260
+I
+
+01:31:44.260 --> 01:31:44.680
+realized
+
+01:31:44.680 --> 01:31:44.980
+that
+
+01:31:44.980 --> 01:31:45.440
+okay,
+
+01:31:45.560 --> 01:31:46.020
+39,
+
+01:31:46.160 --> 01:31:46.700
+38,
+
+01:31:46.820 --> 01:31:46.980
+the
+
+01:31:46.980 --> 01:31:47.220
+status
+
+01:31:47.220 --> 01:31:47.520
+goes
+
+01:31:47.520 --> 01:31:47.720
+to
+
+01:31:47.720 --> 01:31:48.280
+08,
+
+01:31:48.460 --> 01:31:48.700
+then
+
+01:31:48.700 --> 01:31:49.920
+I
+
+01:31:49.920 --> 01:31:50.080
+don't
+
+01:31:50.080 --> 01:31:50.280
+know,
+
+01:31:50.360 --> 01:31:50.520
+I
+
+01:31:50.520 --> 01:31:51.220
+arrived
+
+01:31:51.220 --> 01:31:51.400
+to
+
+01:31:51.400 --> 01:31:51.880
+35,
+
+01:31:52.200 --> 01:31:52.380
+then
+
+01:31:52.380 --> 01:31:52.540
+I
+
+01:31:52.540 --> 01:31:52.900
+requested
+
+01:31:52.900 --> 01:31:53.340
+service
+
+01:31:53.340 --> 01:31:54.080
+1906,
+
+01:31:54.680 --> 01:31:54.860
+I
+
+01:31:54.860 --> 01:31:55.260
+realized
+
+01:31:55.260 --> 01:31:55.440
+that
+
+01:31:55.440 --> 01:31:55.600
+it's
+
+01:31:55.600 --> 01:31:55.940
+actually
+
+01:31:55.940 --> 01:31:56.440
+35,
+
+01:31:56.680 --> 01:31:56.800
+so
+
+01:31:56.800 --> 01:31:57.140
+everything
+
+01:31:57.140 --> 01:31:57.420
+is
+
+01:31:57.420 --> 01:31:57.920
+working.
+
+01:31:58.920 --> 01:31:59.280
+So,
+
+01:31:59.720 --> 01:32:00.060
+once
+
+01:32:00.060 --> 01:32:00.260
+you're
+
+01:32:00.260 --> 01:32:00.420
+done,
+
+01:32:00.500 --> 01:32:00.660
+okay,
+
+01:32:00.720 --> 01:32:00.920
+I'm
+
+01:32:00.920 --> 01:32:01.200
+sure
+
+01:32:01.200 --> 01:32:01.480
+that
+
+01:32:01.480 --> 01:32:01.860
+this
+
+01:32:01.860 --> 01:32:02.340
+logic
+
+01:32:02.340 --> 01:32:02.560
+is
+
+01:32:02.560 --> 01:32:02.920
+working,
+
+01:32:03.100 --> 01:32:03.220
+I
+
+01:32:03.220 --> 01:32:03.520
+just
+
+01:32:03.520 --> 01:32:03.900
+use
+
+01:32:03.900 --> 01:32:04.380
+service
+
+01:32:04.380 --> 01:32:05.060
+14
+
+01:32:05.060 --> 01:32:06.560
+FFFF,
+
+01:32:06.960 --> 01:32:07.140
+the
+
+01:32:07.140 --> 01:32:07.320
+error
+
+01:32:07.320 --> 01:32:07.700
+memory
+
+01:32:07.700 --> 01:32:07.960
+will
+
+01:32:07.960 --> 01:32:08.180
+get
+
+01:32:08.180 --> 01:32:08.540
+deleted,
+
+01:32:08.780 --> 01:32:08.940
+so
+
+01:32:08.940 --> 01:32:09.180
+the
+
+01:32:09.180 --> 01:32:09.500
+status
+
+01:32:09.500 --> 01:32:09.820
+will
+
+01:32:12.760 --> 01:32:13.500
+00.
+
+01:32:14.500 --> 01:32:14.960
+Okay,
+
+01:32:15.420 --> 01:32:16.840
+so
+
+01:32:16.840 --> 01:32:17.060
+I
+
+01:32:17.060 --> 01:32:17.340
+hope
+
+01:32:17.340 --> 01:32:17.620
+this
+
+01:32:17.620 --> 01:32:18.400
+clarifies
+
+01:32:18.400 --> 01:32:19.060
+everything
+
+01:32:19.060 --> 01:32:19.740
+related
+
+01:32:19.740 --> 01:32:20.180
+to
+
+01:32:20.180 --> 01:32:21.540
+going
+
+01:32:21.540 --> 01:32:21.860
+back
+
+01:32:21.860 --> 01:32:22.020
+to
+
+01:32:22.020 --> 01:32:22.160
+the
+
+01:32:22.160 --> 01:32:23.000
+status
+
+01:32:23.000 --> 01:32:23.420
+00.
+
+01:32:24.180 --> 01:32:24.860
+Of
+
+01:32:24.860 --> 01:32:25.220
+course,
+
+01:32:25.520 --> 01:32:26.540
+there
+
+01:32:26.540 --> 01:32:26.860
+are
+
+01:32:26.860 --> 01:32:27.760
+all the
+
+01:32:27.760 --> 01:32:28.300
+information
+
+01:32:28.300 --> 01:32:28.900
+inside
+
+01:32:28.900 --> 01:32:29.080
+the
+
+01:32:29.080 --> 01:32:29.440
+slides
+
+01:32:29.440 --> 01:32:29.680
+and
+
+01:32:29.680 --> 01:32:30.020
+inside
+
+01:32:30.020 --> 01:32:30.160
+the
+
+01:32:30.160 --> 01:32:30.440
+norm.
+
+01:32:30.860 --> 01:32:30.980
+There
+
+01:32:30.980 --> 01:32:31.180
+will
+
+01:32:31.180 --> 01:32:31.440
+be
+
+01:32:31.440 --> 01:32:31.580
+a
+
+01:32:31.580 --> 01:32:32.140
+third
+
+01:32:32.140 --> 01:32:32.700
+module
+
+01:32:32.700 --> 01:32:33.260
+related
+
+01:32:33.260 --> 01:32:33.500
+to
+
+01:32:33.500 --> 01:32:33.840
+how
+
+01:32:33.840 --> 01:32:34.100
+to
+
+01:32:34.100 --> 01:32:34.500
+read
+
+01:32:34.500 --> 01:32:34.740
+the
+
+01:32:34.740 --> 01:32:35.240
+UDS
+
+01:32:35.240 --> 01:32:35.720
+chapter.
+
+01:32:36.060 --> 01:32:36.180
+They
+
+01:32:36.180 --> 01:32:36.360
+are
+
+01:32:36.360 --> 01:32:36.700
+all
+
+01:32:36.700 --> 01:32:36.920
+the
+
+01:32:36.920 --> 01:32:37.200
+same,
+
+01:32:37.280 --> 01:32:37.400
+so
+
+01:32:37.400 --> 01:32:37.560
+for
+
+01:32:37.560 --> 01:32:37.860
+all
+
+01:32:37.860 --> 01:32:38.380
+services
+
+01:32:38.380 --> 01:32:38.880
+we
+
+01:32:38.880 --> 01:32:39.020
+will
+
+01:32:39.020 --> 01:32:39.280
+have
+
+01:32:39.280 --> 01:32:39.520
+the
+
+01:32:39.520 --> 01:32:39.860
+same
+
+01:32:39.860 --> 01:32:40.820
+structure
+
+01:32:40.820 --> 01:32:41.480
+of
+
+01:32:41.480 --> 01:32:41.680
+the
+
+01:32:41.680 --> 01:32:42.040
+chapter
+
+01:32:42.040 --> 01:32:42.740
+and
+
+01:32:42.760 --> 01:32:43.300
+with
+
+01:32:43.300 --> 01:32:43.860
+that
+
+01:32:43.860 --> 01:32:44.480
+third
+
+01:32:44.480 --> 01:32:45.000
+module
+
+01:32:45.000 --> 01:32:45.340
+then
+
+01:32:45.340 --> 01:32:45.500
+you
+
+01:32:45.500 --> 01:32:45.680
+will
+
+01:32:45.680 --> 01:32:46.060
+have
+
+01:32:46.060 --> 01:32:46.700
+everything
+
+01:32:46.700 --> 01:32:46.940
+you
+
+01:32:46.940 --> 01:32:47.180
+need
+
+01:32:47.180 --> 01:32:47.400
+to
+
+01:32:47.400 --> 01:32:47.720
+start
+
+01:32:47.720 --> 01:32:48.260
+working
+
+01:32:48.260 --> 01:32:48.660
+on
+
+01:32:48.660 --> 01:32:48.880
+the
+
+01:32:48.880 --> 01:32:49.300
+facilities
+
+01:32:49.300 --> 01:32:49.620
+that
+
+01:32:49.620 --> 01:32:49.740
+you
+
+01:32:49.740 --> 01:32:50.020
+have
+
+01:32:50.020 --> 01:32:50.380
+both
+
+01:32:50.380 --> 01:32:50.580
+on
+
+01:32:50.580 --> 01:32:50.760
+your
+
+01:32:50.760 --> 01:32:51.120
+work
+
+01:32:51.120 --> 01:32:51.840
+or
+
+01:32:51.840 --> 01:32:52.320
+for
+
+01:32:52.320 --> 01:32:52.800
+training
+
+01:32:52.800 --> 01:32:53.380
+purposes
+
+01:32:53.380 --> 01:32:53.940
+in
+
+01:32:53.940 --> 01:32:54.360
+all
+
+01:32:54.360 --> 01:32:55.080
+Kineton
+
+01:32:55.080 --> 01:32:58.040
+offices.
+
+01:32:59.240 --> 01:33:00.060
+In case
+
+01:33:00.060 --> 01:33:00.380
+something
+
+01:33:00.380 --> 01:33:00.720
+is not
+
+01:33:00.720 --> 01:33:01.020
+clear,
+
+01:33:01.180 --> 01:33:01.380
+some
+
+01:33:01.380 --> 01:33:01.860
+improvements
+
+01:33:01.860 --> 01:33:02.160
+are
+
+01:33:02.160 --> 01:33:02.480
+needed,
+
+01:33:02.620 --> 01:33:02.780
+there
+
+01:33:02.780 --> 01:33:02.940
+are
+
+01:33:02.940 --> 01:33:03.180
+some
+
+01:33:03.180 --> 01:33:03.480
+kind
+
+01:33:03.480 --> 01:33:03.720
+of
+
+01:33:03.720 --> 01:33:04.560
+problems,
+
+01:33:04.840 --> 01:33:05.040
+once
+
+01:33:05.040 --> 01:33:05.280
+again,
+
+01:33:05.360 --> 01:33:05.460
+you
+
+01:33:05.460 --> 01:33:05.620
+can
+
+01:33:05.620 --> 01:33:05.920
+write
+
+01:33:05.920 --> 01:33:06.120
+to
+
+01:33:06.120 --> 01:33:07.460
+pasquale.perrota
+
+01:33:07.460 --> 01:33:07.860
+at
+
+01:33:07.860 --> 01:33:08.260
+sign
+
+01:33:08.260 --> 01:33:09.440
+kineton.it
+
+01:33:09.440 --> 01:33:10.160
+or
+
+01:33:10.160 --> 01:33:11.740
+automotive.training
+
+01:33:11.740 --> 01:33:12.220
+at
+
+01:33:12.220 --> 01:33:12.640
+sign
+
+01:33:12.640 --> 01:33:14.180
+kineton.it
+

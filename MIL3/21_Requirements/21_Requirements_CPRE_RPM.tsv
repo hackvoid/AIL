@@ -1,0 +1,4589 @@
+start	end	text
+0	3300	rispetto a quanto concordato
+3300	4660	e a quanto definito
+4660	7080	nelle agende abbiamo fatto un cambio
+7080	7760	uno switch
+7760	10600	io e Gabriele abbiamo ritenuto fosse opportuno
+10600	12660	cominciare prima con
+12660	14580	la definizione
+14580	16080	e un po' la discussione sul
+16080	18140	requirement management plan
+18140	20320	e poi che diciamo
+20320	22060	terro io come discussione
+22060	24260	e poi Gabriele si inserirà
+24260	26060	con il CPRE
+26060	28840	con suggerimenti
+28840	29760	e best practice
+29760	32700	per la definizione dei requirement
+32700	35580	però diciamo
+35580	37480	prima di iniziare volevo fare
+37480	39180	velocemente un giro di tavolo
+39180	40980	per conoscervi
+40980	42880	e per sapere
+42880	45640	quanto voi siete a conoscenza
+45640	47560	del concetto di requisiti
+47560	49060	e di gestione dei requisiti
+49060	50380	se avete mai avuto modo
+50380	53220	di metterle le mani già in pasto
+53220	54800	oppure è solo un concetto
+54800	57440	che avete in mente
+57440	59440	così
+59440	60300	va bene
+60300	61840	io a gamba tesa
+61840	62600	giusto per un
+62600	65320	cappello introduttivo
+65320	66420	sulle competenze
+66420	67000	e poi ovviamente
+67000	68040	ognuno tira la sua
+68040	69140	però diciamo
+69140	70340	quasi tutti
+70340	72460	tranne qualche eccezione
+72460	73340	eccezione
+73340	74900	stanno seguendo un programma
+74900	75380	di formazione
+75980	77100	che è basato
+77100	78120	sulla validazione
+78120	79280	quindi tendenzialmente
+79280	80140	della parte destra
+80140	80820	del ciclo AB
+80820	81660	quindi abbiamo visto
+81660	82120	la parte
+82120	83800	ottimo
+83800	84060	però
+84060	85200	però è ottimo
+85200	86160	abbiamo citato
+86160	86580	appunto
+86580	87700	un po' i requisiti
+87700	88940	come si leggono
+88940	89880	come ci utilizzano
+89880	90680	è più incentrato
+90680	91380	sul testing
+91380	92480	ok però loro hanno
+92480	93500	queste conoscenze
+93500	93840	di fatto
+93840	94700	volevo solo dirti
+94700	96040	questo come riferimento
+96040	96620	perfetto
+96620	98440	va benissimo
+98440	99240	è già un buon punto
+99240	99720	di partenza
+99720	100240	ecco anche
+100240	100980	per noi
+100980	101840	come impostare
+101840	103140	ecco la discussione
+103140	104040	se andare
+104040	104580	un po'
+104680	105360	se approfondire
+105360	105940	oppure essere
+105940	107700	un po' più generali
+107700	109940	va bene
+109940	110180	diciamo
+110180	110800	se tutti
+110800	112100	siete d'accordo
+112100	112500	appoggiate
+112500	113500	quello che Pasquale
+113500	114160	ha detto
+114160	115340	diciamo eviterei
+115340	116440	questo giro di tavolo
+116440	118320	io non conosco
+118320	118900	nessuno
+118900	120080	forse ho visto Federica
+120080	121120	un attimo
+121120	121660	è apparsa
+121660	122340	sullo schermo
+122340	123780	e credo che
+123780	124800	ci conosciamo
+124800	125840	ecco ci siamo visti
+125840	126740	in sede
+126740	129200	però gli altri
+129200	129460	ecco
+129460	129980	vabbè
+129980	130400	comunque
+130400	132240	Gabriele lo conosco
+132240	133140	si vede anche in foto
+133140	133820	e Pasquale pure
+133820	134200	va bene
+134200	135320	allora
+135320	137660	allora ragazzi
+137660	139840	possiamo partire
+139840	146120	diciamo che
+146120	147840	possiamo partire
+147840	149180	con questo
+149180	150460	Requirement Management Plan
+150460	151180	ditemi quando
+151180	152680	quando vedete
+152680	153520	il mio schermo
+153520	163120	ok vabbè
+163120	164140	una piccola introduzione
+164140	164500	di me
+164500	165040	giusto per
+165040	166940	per conoscermi
+166940	167340	io sono
+167340	168140	sono in Kineton
+168140	169280	da circa due anni
+169280	170580	e
+170580	172040	mi sono occupato
+172040	173060	fin dall'inizio
+173060	173640	in Kineton
+173640	174860	della parte
+174860	176880	dei Software Requirement
+176880	179040	per poi passare
+179040	179420	adesso
+179420	179920	la parte
+179920	181100	dei System Requirement
+181100	181560	e
+181560	183280	diciamo che io
+183280	184160	diciamo non è
+184160	185540	purtroppo
+185540	186060	e per fortuna
+186060	186900	la mia prima esperienza
+186900	187360	di lavoro
+187360	187880	ecco ho avuto
+187880	189800	ho iniziato a lavorare
+189800	190580	nel 2013
+190580	191880	in Magneti Marelli
+191880	193620	e poi
+193620	195180	per sei anni
+195180	195560	come
+195560	197680	System Function Expert
+197680	198360	quindi sempre
+198360	198880	sulla parte
+198880	199960	di controllo motore
+199960	201000	centraline
+201000	201920	di controllo motore
+201920	203520	e poi sono passato
+203520	204140	sono passato
+204140	204780	in Bosch
+204780	206040	e lì
+206040	206260	ho
+206260	206840	diciamo
+206840	207520	ho svolto
+207520	207860	il ruolo
+207860	208240	di
+208240	209240	ITU
+209240	209560	quindi
+209560	211140	centraline di controllo motore
+211140	211980	e
+211980	213000	ricoprivo il ruolo
+213000	213960	di project manager
+213960	214420	quindi
+214420	215320	diciamo
+215320	216120	mi occupavo un po'
+216180	216840	di tutto
+216840	217320	il ciclo
+217320	219180	e anche
+219180	219540	un po'
+219600	220020	della parte
+220020	220360	di
+220360	221940	budget
+221940	222400	e di
+222400	223080	allocazioni
+223080	224300	di risorse
+224300	225220	quindi
+225220	225880	lì ho avuto
+225880	226220	un po'
+226340	226660	un ruolo
+226660	227120	un po' più
+227120	228240	gestionale
+228240	228600	mentre
+228600	229960	in precedenza
+229960	230520	è tuttora
+230520	231880	un ruolo
+231880	232080	un po'
+232140	232220	più
+232220	232780	tecnico
+232780	234620	detto
+234620	235320	questo
+235320	238800	passiamo
+238800	239800	alla presentazione
+239800	240300	vedete
+240300	244360	sì sì
+244360	244780	Mario
+244780	245340	si vede
+245340	248260	perfetto
+248260	248520	allora
+248520	249160	il concetto
+249160	249660	di requirement
+249660	250520	management plan
+250520	251600	il concetto
+251600	252020	di requirement
+252020	252820	management plan
+252820	253860	in pratica
+253860	254440	viene
+254440	255280	in qualche
+255280	255720	modo
+255720	258460	a supporto
+258460	259600	di tutto
+259600	260060	quel
+260060	261540	processo
+261540	262000	che
+262000	263180	si deve
+263180	263720	definire
+263720	264500	ad inizio
+264500	265100	progetto
+265100	266080	quando un progetto
+266080	267140	parte
+267140	267560	quindi
+267560	268760	un cliente
+268760	270680	chiede
+270680	271760	presso un fornitore
+271760	272400	un T1
+272400	273200	o un UOM
+273200	274160	chiede di
+274160	275560	sviluppare un progetto
+275560	277160	facendo un esempio
+277160	277460	appunto
+277460	278300	chiede di sviluppare
+278300	279360	un prodotto
+279360	280040	questo prodotto
+280040	281520	che può essere
+281520	283720	qualsiasi tipo di prodotto
+283720	284560	può essere un software
+284560	285960	può essere un pezzo meccanico
+285960	287460	un qualsiasi tipo di prodotto
+287460	288660	e quindi è necessario
+288660	290060	definire delle strategie
+290060	291000	ed un piano
+291000	292720	per portare
+292720	293380	a termine
+293380	294220	il prodotto
+294220	294800	in fase quindi
+294800	295880	punto di realizzazione
+295880	296580	può essere appunto
+296580	297540	un software
+297540	298220	può essere proprio
+298220	299140	un pezzo meccanico
+299140	300280	il discorso
+300280	300720	di requirement
+300720	301400	management plan
+301400	302200	non rientra
+302200	303420	solo in un discorso
+303420	303720	di
+303720	305100	delle attività
+305100	306240	che stiamo svolgendo noi
+306240	307180	quindi di software
+307180	307800	quindi di
+307800	309300	di realizzare
+309300	309700	un software
+309700	310480	che poi deve essere
+310480	311520	flashato
+311520	312300	nelle centraline
+312300	312780	ad esempio
+312780	314100	ma è un discorso
+314100	315560	prettamente generale
+315560	316660	quindi quando
+316660	317820	si hanno
+317820	319700	si ha di fronte
+319700	321500	una definizione
+321500	324180	quindi una realizzazione
+324180	324760	di un progetto
+324760	325300	di un processo
+325300	325720	è bene
+325720	327300	definire un piano
+327300	328500	ed una strategia
+328500	328980	per
+328980	330780	per completare
+330780	331960	tutto il flusso
+331960	332540	di lavoro
+332540	334640	in una maniera
+334640	336120	con una qualità
+336120	337640	con una qualità
+337640	338060	ecco
+338060	339020	che sia
+339020	341240	che vada incontro
+341240	341920	alle aspettative
+341920	343860	del cliente
+343860	345380	quindi
+345380	345880	il requirement
+345880	346840	management plan
+346840	349420	è una sottoparte
+349420	349860	di quello
+349860	350600	che viene definito
+350600	352040	project management plan
+352040	353820	quindi il project
+353820	354640	management plan
+354640	355300	è una cosa
+355300	356400	che è
+356400	357800	quindi al di sopra
+357800	358980	è un contenitore
+358980	360440	mentre il contenuto
+360440	361080	di questo project
+361080	361740	management plan
+361740	362320	sono una serie
+362320	363420	di documenti
+363420	364340	tra cui anche
+364340	364880	il requirement
+364880	365840	management plan
+365840	370420	che permettono
+370420	370740	quindi
+370740	372940	di documentare
+372940	373520	in qualche modo
+373520	374500	delle strategie
+374500	375560	delle metodologie
+375560	377380	per sviluppare
+377380	378880	il loro pezzetto
+378880	380780	pezzetto in che senso
+380780	381740	stiamo parlando
+381740	382960	di requirement management plan
+382960	383360	quindi
+383360	384900	il requirement management plan
+384900	385860	è un documento
+385860	386840	per sviluppare
+386840	387680	strategie
+387680	388920	e metodologie
+388920	390540	per poter
+390540	392040	analizzare
+392040	393060	raccogliere
+393060	394440	tutti i requisiti
+394440	395340	che provengono
+395340	396240	dal cliente
+396240	397120	che ha chiesto
+397120	398260	di sviluppare
+398260	399040	un prodotto
+399040	400680	quindi raccogliere
+400680	401640	questi requisiti
+401640	402920	gestirli
+402920	404180	tracciarli
+404180	405840	e portarli
+405840	407040	diciamo
+407040	407540	sino
+407540	408840	al raggiungimento
+408840	410760	della realizzazione
+410760	411260	quindi del
+411260	412280	del prodotto
+412280	415380	qualcuno
+415380	415880	se qualcuno
+415880	416280	alza la mano
+416280	417040	io non posso vedere
+417040	418240	interrompetemi
+418240	419900	vorrei farti una domanda
+419900	420880	ma questo tipo
+420880	421720	di nomenclatura
+421720	422940	ti puoi presentare
+422940	423780	ti puoi presentare
+423780	424780	che io non so chi
+424780	425940	Pasquale Perrutta
+425940	426740	sempre Pasquale
+426740	427240	sì la voce
+427240	427760	vai
+427760	428460	a posto
+428460	428840	allora
+428840	430600	questa nomenclatura
+430600	432120	del requirement management plan
+432120	432700	è una cosa
+432700	433160	diciamo
+433160	434420	che è specifica
+434420	435460	del cliente
+435460	436560	viene ad esempio
+436560	436860	da
+436860	437360	no
+437360	438240	da Spice
+438240	438940	come
+438940	440240	no no no
+440240	440860	a Spice
+440860	441500	non richiede
+441500	442800	un requirement management plan
+442800	443200	diciamo
+443200	444720	nelle sue regole
+444720	446600	il requirement management plan
+446600	448760	è un supporto
+448760	449560	al processo
+449560	452320	che include
+452320	453260	al suo interno
+453260	454200	delle metodologie
+454200	454940	a Spice
+454940	456720	ah ok ok
+456720	456960	ok
+456960	458100	è un modo per dire
+458100	458840	è un modo per dire
+458840	460060	io ho questo piano
+460060	461420	questo documento
+461420	462260	ti riporto
+462260	463340	al suo interno
+463340	465440	tutto il flusso
+465440	466260	da seguire
+466260	467700	per poter
+467700	468320	arrivare
+468320	468900	ad esempio
+468900	469740	alla
+469740	471340	al test
+471340	472100	del software
+472100	472300	no
+472300	474100	ti spiego
+474100	475340	come definire
+475340	476420	tutti i requisiti
+476420	477560	quindi come raccoglierli
+477560	478220	in che modo
+478220	479180	seguendo sempre
+479180	479900	delle metodologie
+479900	480480	a Spice
+480480	482880	è come se tu
+482880	483920	documentassi
+483920	484880	il flusso
+484880	485660	dei requisiti
+485660	486740	attraverso
+486740	488060	le metodologie a Spice
+488060	489980	però è un documento
+489980	490360	ok
+490360	491140	che ti permette
+491140	492360	di seguire
+492360	493180	e di far sì
+493180	493940	che ad esempio
+493940	494880	i requisiti
+494880	495640	vengano scritti
+495640	496740	tutti nello stesso modo
+496740	498200	che non c'è nessuno
+498200	499380	che possa deviare
+499380	500680	dal processo
+500680	502360	ok ok
+502360	503100	è interessante
+503100	503920	scusa Mario
+503920	505680	se intervengo
+505680	507740	quindi si tratta
+507740	508720	di un processo
+508720	509660	che viene ancora
+509660	510640	prima del ciclo AB
+510640	514040	no no no
+514040	514860	questo in pratica
+514860	515860	questo documento
+515860	516980	non rappresenta
+516980	517920	qui stiamo parlando
+517920	518420	del requirement
+518420	519200	management plan
+519200	520540	quindi dopo
+520540	521360	poi vedremo
+521360	522320	segue
+522320	522920	se vedete
+522920	523420	questo
+523420	524040	questo
+524040	525020	questo flusso
+525020	525680	circolare
+525680	527220	permette
+527220	527680	di
+527680	528960	raccogliere
+528960	529840	i requisiti
+529840	530920	quindi
+530920	531600	questa non è altro
+531600	532220	che la parte
+532220	532800	sinistra
+532800	533480	del ciclo AB
+533480	534980	quindi la parte
+534980	535220	di
+535220	536160	SIS 1
+536160	536720	no
+536720	538240	quindi raccogliere
+538240	539040	i requisiti
+539040	540080	strutturare
+540080	540960	i requisiti
+540960	543400	documentarli
+543400	544020	e quindi
+544020	545160	far sì che
+545160	546080	ci sia una
+546080	547300	consistenza
+547300	548980	del requisito
+548980	549800	ci sia una
+549800	551560	validità del requisito
+551560	552000	che sia
+552000	552960	che non sia
+552960	553820	ambiguo
+553820	554820	che sia atomico
+554820	555740	quindi tutto ciò
+555740	556380	che a Spice
+556380	557420	ci dice di fare
+557420	559340	di prioritizzare
+559340	560100	il requisito
+560100	561000	di garantire
+561000	561680	una qualità
+561680	562680	e nello stesso
+562680	562980	tempo
+562980	563760	di mantenerlo
+563760	564420	questo è quello
+564420	564920	che il requirement
+564920	565960	management process
+565960	567260	chiede
+567260	569180	e va a supporto
+569180	569760	del project
+569760	570660	management plan
+570660	571360	per
+571360	572900	la parte
+572900	573700	dei requisiti
+573700	575380	quindi stiamo parlando
+575380	575880	della parte
+575880	576600	sinistra
+576600	577160	alta
+577160	579200	in qualche modo
+579200	579820	se vogliamo
+579820	580780	far riferimento
+580780	581860	al ciclo AB
+581860	583940	quindi è
+583940	584240	diciamo
+584240	585000	la prima fase
+585000	585900	che viene subito
+585900	587000	dopo la richiesta
+587000	588340	del cliente
+588340	588660	sì
+588660	589400	diciamo
+589400	589760	e questo
+589760	590700	non appena
+590700	592160	il cliente
+592160	592780	ci fornisce
+592780	593540	un documento
+593540	594280	però come dicevo
+594280	594640	prima
+594640	595760	diciamo
+595760	596680	adesso noi abbiamo
+596680	597680	in testa il concetto
+597680	598400	del ciclo AB
+598400	600160	della Spice
+600160	600600	però
+600600	601920	questo adesso
+601920	603060	in questo contesto
+603060	603640	lo possiamo vedere
+603640	604820	come un supporto
+604820	605540	ecco
+605540	607040	al ciclo AB
+607040	607960	e alle metodologie
+607960	608540	Spice
+608540	610280	ma lo si può vedere
+610280	610720	in maniera
+610720	611760	molto generale
+611760	612060	perché
+612060	613700	questo documento
+613700	614200	può essere anche
+614200	614900	utilizzato
+614900	616480	per i clienti
+616480	617740	che non hanno
+617740	618860	necessità
+618860	620320	di seguire
+620320	621220	la Spice
+621220	621980	perché non hanno
+621980	622960	non sono in un ambito
+622960	623780	automotive
+623780	625460	e quindi
+625460	627380	questo documento
+627380	628660	viene a supporto
+628660	629380	comunque
+629380	630140	in ogni caso
+630140	631100	per la definizione
+631100	632120	della parte
+632120	632740	del processo
+632740	633520	dei requisiti
+633520	634520	cioè tu comunque
+634520	635020	puoi avere
+635020	635960	questo documento
+635960	637320	senza seguire
+637320	639180	alla lettera
+639180	639900	quello che ti dice
+639900	640640	a Spice
+640640	642080	Mario volevo
+642080	643060	solo aggiungere una cosa
+643060	643600	nell'ambito
+643600	644360	della formazione
+644360	645060	di base
+645060	645880	al momento
+645880	648040	i ragazzi
+648040	649000	non hanno ancora
+649000	650340	competenze
+650340	651560	legate alla Spice
+651560	652300	quindi per questo
+652300	653220	ne facciamo riferimento
+653220	654020	molto spesso
+654020	654920	al ciclo AB
+654920	655800	che è un po' più
+655800	656720	come dire
+656720	657680	semplice
+657680	659140	da strutturare
+659140	660160	però alla fine
+660160	661740	è un set di regole
+661740	662640	che aiuta
+662640	664400	all'implementazione
+664400	665040	del ciclo AB
+665040	666200	che per semplificare
+666200	666660	un attimo
+666660	667980	a tutti
+667980	668880	la visione
+668880	669420	chiaro
+669420	669780	chiaro
+669780	670000	sì
+670000	672700	diciamo che
+672700	673320	la Spice
+673320	673940	consente
+673940	674340	di
+674340	676080	fornisce
+676080	676280	ecco
+676280	676740	ci fornisce
+676740	677480	come dice Pasquale
+677480	677980	ci fornisce
+677980	678680	delle regole
+678680	679640	precise
+679640	681240	per garantire
+681240	682800	una certa qualità
+682800	684020	nel campo
+684020	685200	nel contesto
+685200	685680	dei requisiti
+685680	686560	una certa qualità
+686560	687980	nel processo
+687980	688780	dei requisiti
+688780	689140	quindi
+689140	690660	come far sì
+690660	691200	che il requisito
+691200	692000	sia chiaro
+692000	692340	sia
+692340	694260	semplice
+694260	694760	da
+694760	696440	capire
+696440	697340	a tutti i livelli
+697340	698680	sia testabile
+698680	700100	e
+700100	701460	sia
+701460	702720	diciamo
+702720	704120	feasible
+704120	705200	nel senso che
+705200	706660	il software
+706660	707200	o
+707200	707880	diciamo
+707880	708660	in quel momento
+708660	709160	il software
+709160	709840	è in grado
+709840	710380	di poter
+710380	711320	di poter
+711320	711840	recepire
+711840	712440	quel requisito
+712440	713360	e di poterlo sviluppare
+713360	713520	ecco
+713520	714420	ci sono delle regole
+714420	715340	piccole regole
+715340	717140	per poter
+717140	718380	per poter
+718380	718760	far sì
+718760	719200	che il processo
+719200	719780	dei requisiti
+719780	720320	della gestione
+720320	720800	dei requisiti
+720800	721240	sia
+721240	722960	sia
+722960	724040	compliance
+724040	724680	con quello
+724680	725260	che a Spice
+725260	726200	ci chiede
+726200	726680	e con quello
+726680	727520	che i clienti
+727520	728440	chiedono
+728440	730540	quindi a Spice
+730540	731480	sono un insieme
+731480	732420	di regole
+732420	733380	e il requirement
+733380	734220	management plan
+734220	734800	raccoglie
+734800	735560	queste regole
+735560	737020	e le mette
+737020	737940	in un documento
+737940	738580	per far sì
+738580	738980	che tu
+738980	740380	una persona
+740380	741200	che non ha mai
+741200	742000	scritto requisiti
+742000	742440	può aprire
+742440	743400	questo documento
+743400	743860	e iniziare
+743860	744360	a leggere
+744360	744800	e capire
+744800	745360	come
+745360	746860	avviene
+746860	747540	il processo
+747540	752360	quindi
+752360	755380	è un documento
+755380	755840	che non
+755840	756260	continua
+756260	756800	propriamente
+756800	757360	i requisiti
+757360	757600	ma
+757600	758980	il regolamento
+758980	759520	per scrivere
+759520	760080	i requisiti
+760080	762400	è una linea guida
+762400	763520	la Bibbia
+763520	764520	ti permette
+764520	765740	è una linea guida
+765740	767340	che ti dice
+767340	767680	guarda
+767680	768040	che tu
+768040	769080	non appena ricevi
+769080	769960	i documenti
+769960	770780	dal cliente
+770780	772120	sei in una fase
+772120	772600	del ciclo
+772600	772920	avv
+772920	773880	alta
+773880	774700	sinistra
+774700	777200	cosa devi iniziare
+777200	777680	a fare
+777680	779440	ok
+779440	780380	devi iniziare
+780380	780980	a raccogliere
+780980	781820	i requisiti
+781820	782640	devi iniziare
+782640	783760	ad analizzarli
+783760	785200	e questo
+785200	785720	lo vedremo
+785720	786320	ecco
+786320	787820	step per step
+787820	788720	nelle seguenti
+788720	789620	slides
+789620	793080	va bene
+799080	799840	diciamo
+799840	800440	il perché
+800440	801680	anche di questo
+801680	803120	requirement management plan
+803120	804640	qui mi sono
+804640	805400	dimenticato plan
+805400	806400	diciamo
+806400	806800	il perché
+806800	807420	perché ci sono
+807420	808200	tante
+808200	809240	tante sfide
+809240	809960	tanti
+809960	811360	diciamo
+811360	812180	tanti punti
+812180	812500	che
+812500	815140	potrebbero
+815140	816900	mettere in difficoltà
+816900	817820	non solo
+817820	818860	chi lavora
+818860	819440	sul processo
+819440	819740	ma
+819740	821160	anche
+821160	821960	l'intero
+821960	822360	l'intero
+822360	822860	progetto
+822860	823100	ecco
+823100	824340	l'intero
+824340	825680	l'intero
+825680	826720	ciclovita
+826720	827520	del progetto
+827520	828460	questo perché
+828460	829980	diciamo
+829980	830960	durante il ciclovita
+830960	831860	di un progetto
+831860	832600	non è detto
+832600	832900	che
+832900	833900	i requisiti
+833900	834220	che noi
+834220	834640	riceviamo
+834640	835540	dal cliente
+835540	836540	arrivino
+836540	837680	a dicembre
+837680	838420	e siano
+838420	839580	gli stessi
+839580	840860	fino alla fine
+840860	841580	del ciclovita
+841580	842400	del progetto
+842400	844800	durante questa fase
+844800	846160	i requisiti
+846160	846680	potrebbero
+846680	847440	cambiare
+847440	848040	ci potrebbero
+848040	848400	essere
+848400	850480	potrebbero
+850480	850880	cambiare
+850880	851260	ci potrebbero
+851260	851500	essere
+851500	852460	tantissime
+852460	853120	tantissimi
+853120	853460	modi
+853460	854400	per deviare
+854400	855740	che ci siano
+855740	856460	delle deviazioni
+856460	857380	dai requisiti
+857380	858620	principali
+858620	859000	quindi
+859000	859960	con questo
+859960	860420	requirement
+860420	860840	management
+860840	861180	plan
+861180	861540	con questo
+861540	862820	documento
+862820	863920	si riesce
+863920	864900	a gestire
+864900	866000	una miriade
+866000	867640	numerosi
+867640	868300	cambiamenti
+868300	868760	all'interno
+868760	869800	del ciclovita
+869800	870400	del progetto
+870400	871020	questo perché
+871020	871800	all'interno
+871800	872480	del documento
+872480	872780	è anche
+872780	873540	rappresentato
+873540	874460	come gestire
+874460	875220	eventuali
+875220	876100	cambiamenti
+876100	878160	di programma
+878160	878680	quindi
+878680	880180	quali sono
+880180	880660	le regole
+880660	881180	quali sono
+881180	883460	il modus
+883460	884040	operandi
+884040	884720	nel caso
+884720	885260	in cui
+885260	886000	ci siano
+886000	886740	dei cambiamenti
+886740	887140	all'interno
+887140	887720	del ciclovita
+887720	888260	del progetto
+888260	888580	e quindi
+888580	889960	uno è pronto
+889960	891100	ad affrontare
+891100	893020	questi cambiamenti
+893020	894560	questi cambiamenti
+894560	895020	che potrebbero
+895020	895380	venire
+895380	895920	sia
+895920	897580	potrebbero esserci
+897580	898320	sia cambiamenti
+898320	898880	interni
+898880	899480	che cambiamenti
+899480	899860	derivanti
+899860	900560	direttamente
+900560	902020	dal cliente
+902020	902460	stesso
+902460	904520	e comunque
+904520	905280	eviterebbe
+905280	905660	in qualche
+905660	906400	evita in qualche
+906400	906800	modo
+906800	907660	che ci siano
+907660	908840	delle miscommunication
+908840	909580	quindi mancate
+909580	910400	comunicazioni
+910400	911500	o mancanza
+911500	913320	di comprensione
+913320	914780	perché
+914780	915220	se
+915220	916260	non c'è
+916260	917020	una linea guida
+917020	917560	che ti dice
+917560	918840	come affrontare
+918840	919560	il processo
+919560	920840	chiunque
+920840	922020	può affrontarlo
+922020	922620	in una maniera
+922620	923200	differente
+923200	924060	rispetto ad un altro
+924060	924800	seppure
+924800	926580	ad esempio
+926580	928040	facendo l'esempio
+928040	928820	di un
+928820	930260	ambito automotive
+930260	931140	quindi ci sono
+931140	931800	delle regole
+931800	932460	definite
+932460	933380	dallo standard
+933380	934140	a spice
+934140	935400	seppure ci siano
+935400	935960	quelle regole
+935960	936540	dello standard
+936540	937300	a spice
+937300	939500	fidatevi che
+939500	941040	se non c'è
+941040	941800	un documento
+941800	942860	che dice
+942860	943580	come
+943580	944500	affrontare
+944500	945100	il processo
+945100	946160	ci sono
+946160	946980	tantissime
+946980	947740	deviazioni
+947740	948340	ognuno
+948340	949380	si sente libero
+949380	950240	di scrivere
+950240	951180	un requisito
+951180	951760	in un modo
+951760	952360	piuttosto che
+952360	953020	in un altro
+953020	954620	comprenderlo
+954620	955100	in un modo
+955100	955680	piuttosto che
+955680	956240	in un altro
+956240	956600	quindi
+956600	958080	questo è veramente
+958080	959460	molto fondamentale
+959460	961220	questo requirement
+961220	962040	management plan
+962040	963460	diciamo
+963460	964640	dalla mia esperienza
+964640	966480	ne ho visti pochi
+966480	967180	all'interno
+967180	967860	diciamo
+967860	969520	dei processi
+969520	969860	diciamo
+969860	970400	lavorando
+970400	972800	lavorando
+972800	973360	in altre
+973360	975160	in peer one
+975160	975540	anche
+975540	976200	molto
+976200	977580	molto importanti
+977580	978400	questi
+978400	978800	requirement
+978800	979440	management plan
+979440	980360	facevano fatica
+980360	981060	ad emergere
+981060	982380	ad essere eseguiti
+982380	983620	lavorando
+983620	984940	con Kineton
+984940	986320	presso Garrett
+986320	987800	lo scorso anno
+987800	988480	questo requirement
+988480	989040	management plan
+989040	989540	è servito
+989540	990420	tantissimo
+990420	991480	per evitare
+991480	992120	che ci siano
+992120	993060	queste deviazioni
+993060	994480	ed insieme
+994480	995700	al team di Garrett
+995700	996700	stavamo proprio
+996700	997640	migliorando
+997640	998320	questo requirement
+998320	998980	management plan
+998980	999500	di passo
+999500	1000840	passo dopo passo
+1000840	1002220	e devo dire
+1002220	1003840	che ha portato
+1003840	1004760	dei benefici
+1004760	1006700	non di poco conto
+1006700	1011080	scusa Mario
+1011080	1012160	giusto un esempio
+1012160	1014140	per te si fare
+1014140	1014660	un esempio
+1014660	1015520	su come
+1015520	1016380	gestisce
+1016380	1017380	i cambiamenti
+1017380	1017780	cioè
+1017780	1018820	non lo riesco
+1018820	1019500	a immaginare
+1019500	1020640	non so
+1020640	1021240	esistono
+1021240	1021900	delle regole
+1021900	1023020	su quando
+1023020	1024080	effettuarli
+1024080	1025900	no
+1025900	1026320	allora
+1026320	1026820	più che
+1026820	1028040	più che
+1028040	1028660	regole
+1028660	1029180	su quando
+1029180	1030000	effettuarli
+1030000	1031020	è come
+1031020	1031800	affrontare
+1031800	1032680	un cambiamento
+1032680	1034320	un cambiamento
+1034320	1035060	di un requisito
+1035060	1035620	ad esempio
+1035620	1037400	diciamo
+1037400	1038240	il documento
+1038240	1039000	se prima
+1039000	1039720	magari aveva
+1039720	1040240	un requisito
+1040240	1040740	del tipo
+1040740	1041180	ok
+1041180	1043520	ad esempio
+1043520	1044800	il compressore
+1044800	1045940	in quello stato
+1045940	1047280	deve avere
+1047280	1048180	una performance
+1048180	1048580	di
+1048580	1050460	un tot di kilowatt
+1050460	1052980	in un requisito
+1052980	1053440	iniziale
+1053440	1054440	il requisito
+1054440	1055480	il cambiamento
+1055480	1056280	è ad esempio
+1056280	1058040	il compressore
+1058040	1058680	in quello stato
+1058680	1059560	deve avere
+1059560	1060460	un altro
+1060460	1061660	tipo di performance
+1061660	1062260	quindi questo
+1062260	1063040	è il cambiamento
+1063040	1064980	il documento
+1064980	1065820	una volta che tu
+1065820	1066840	lo acquisisci
+1066840	1069640	come devi affrontare
+1069640	1070580	questo cambiamento
+1070580	1071300	devi
+1071300	1072380	prima
+1072380	1073200	aprire
+1073200	1074660	una change
+1074660	1075380	request
+1075380	1075840	si chiama
+1075840	1076640	change request
+1076640	1076960	perché
+1076960	1078160	appunto
+1078160	1079120	arriva una richiesta
+1079120	1080020	di cambiamento
+1080020	1081720	questa change request
+1081720	1082520	deve essere
+1082520	1084340	aperta dal project manager
+1084340	1084600	cioè
+1084600	1085740	c'è una linea guida
+1085740	1086280	dove ti dice
+1086280	1087780	quali sono i passi
+1087780	1088740	che il progetto
+1088740	1089680	deve affrontare
+1089680	1090140	per
+1090140	1091500	per
+1091500	1092820	portare a termine
+1092820	1093460	questa richiesta
+1093460	1094240	di cambiamento
+1094240	1095520	non è solo
+1095520	1096160	in carico
+1096160	1096840	a chi sviluppa
+1096840	1097520	i requisiti
+1097520	1098680	affrontare
+1098680	1099500	questa richiesta
+1099500	1100120	di cambiamento
+1100120	1101000	ma è un flusso
+1101000	1101520	è un processo
+1101520	1102660	che arriva dall'alto
+1102660	1104220	e tu che sviluppi
+1104220	1104980	il requisito
+1104980	1106000	devi sapere
+1106000	1107080	che ti è arrivata
+1107080	1107760	questa richiesta
+1107760	1108480	di cambiamento
+1108480	1108880	e quindi
+1108880	1110260	devi poter
+1110260	1111300	risalire
+1111300	1113200	al requisito
+1113200	1114520	che deve essere
+1114520	1115280	cambiato
+1115280	1118820	cambiare il requisito
+1118820	1119960	e nello stesso tempo
+1119960	1120540	il requisito
+1120540	1121220	che tu cambi
+1121220	1122020	poi chiaramente
+1122020	1123040	ha impatto
+1123040	1124300	tutto il ciclo
+1124300	1124840	avvi
+1124840	1129280	ok chiaro
+1129280	1129800	ma quindi
+1129800	1130540	può essere fatto
+1130540	1131360	in qualsiasi
+1131360	1132220	in qualsiasi
+1132220	1132640	momento
+1132640	1133420	questo cambiamento
+1133420	1135100	diciamo che
+1135100	1136700	tutto dipende
+1136700	1136920	ecco
+1136920	1138700	dalla priorità
+1138700	1139120	che si dà
+1139120	1139960	al cambiamento
+1139960	1140960	è una decisione
+1140960	1141320	che avviene
+1141320	1142480	all'interno del progetto
+1142480	1143520	il progetto
+1143520	1144400	i responsabili
+1144400	1144940	del progetto
+1144940	1145780	il project manager
+1145780	1146680	o il project leader
+1146680	1147760	dice ok
+1147760	1148700	questo cambiamento
+1148700	1149220	è arrivato
+1149220	1149900	in questo momento
+1149900	1150220	però
+1150220	1151540	noi lo
+1151540	1152760	rilasciamo
+1152760	1153500	al cliente
+1153500	1154360	si usano questi termini
+1154360	1155320	rilasciamo
+1155320	1156720	questo contenuto
+1156720	1157580	al cliente
+1157580	1158580	per la prossima
+1158580	1159480	per il prossimo
+1159480	1160020	rilascio
+1160020	1160220	ecco
+1160220	1160760	fra uno
+1160760	1161320	due mesi
+1161320	1161700	quindi
+1161700	1163420	ti dicono
+1163420	1164180	quando fare
+1164180	1164980	questo cambiamento
+1164980	1165700	ecco
+1165700	1166140	non devi
+1166140	1166900	farlo subito
+1166900	1167120	cioè
+1167120	1167500	tu
+1167500	1168640	diciamo
+1168640	1169360	responsabile
+1169360	1169800	della parte
+1169800	1170340	dei requisiti
+1170340	1171040	non riceverai
+1171040	1171520	mai
+1171520	1172780	in prima persona
+1172780	1173260	la richiesta
+1173260	1174000	di cambiamento
+1174000	1175000	arriverà sempre
+1175000	1176600	dall'alto
+1176600	1179040	e quindi
+1179040	1179420	poi
+1179420	1180520	a cascata
+1180520	1181060	tu
+1181060	1181700	saprai
+1181700	1182160	quando
+1182160	1182740	affrontare
+1182740	1183660	questo cambiamento
+1183660	1185740	in termini
+1185740	1186220	di tempo
+1186220	1187280	di tempistica
+1187280	1188180	poi
+1188180	1189320	la modalità
+1189320	1190320	e il supporto
+1190320	1191500	del Requirement Management Plan
+1191500	1192080	viene
+1192080	1193080	per poter
+1193080	1194080	risalire
+1194080	1196440	al requisito
+1196440	1197180	da cambiare
+1197180	1198180	nello stesso tempo
+1198180	1198780	siccome
+1198780	1200320	ASPICE
+1200320	1200880	le regole
+1200880	1201640	di ASPICE
+1201640	1203220	e anche
+1203220	1204560	il Requirement Management Plan
+1204560	1206240	diciamo
+1206240	1206700	la regola
+1206700	1207620	una delle regole
+1207620	1207920	è quella
+1207920	1209020	di poter
+1209020	1210060	tracciare
+1210060	1212340	i requisiti
+1212340	1213980	in modo tale
+1213980	1214580	che tu puoi
+1214580	1215340	risalire
+1215340	1216380	al requisito
+1216380	1217380	facilmente
+1217380	1219620	e puoi risalire
+1219620	1220860	anche al test case
+1220860	1221740	puoi risalire
+1221740	1222700	anche al
+1222700	1223760	codice
+1223760	1224540	questo
+1224540	1225440	con una
+1225440	1226740	diciamo
+1226740	1228500	con
+1228500	1229560	dei metodi
+1229560	1230800	di tracciabilità
+1230800	1232080	per tracciabilità
+1232080	1233540	parlo di
+1233540	1234380	ad esempio
+1234380	1235320	io ho un requisito
+1235320	1236460	del cliente
+1236460	1237180	attraverso
+1237180	1237820	un link
+1237820	1238860	che è possibile
+1238860	1239260	farlo
+1239260	1240660	con i tool
+1240660	1241160	che abbiamo
+1241160	1241840	a disposizione
+1241840	1242500	attraverso
+1242500	1242860	un link
+1242860	1243480	virtuale
+1243480	1244300	tu lo connetti
+1244300	1245080	questo requisito
+1245080	1245540	lo connetti
+1245540	1245900	ad esempio
+1245900	1246580	al software
+1246580	1247880	dal software
+1247880	1248860	lo connetti
+1248860	1250040	al modello
+1250040	1250700	dal modello
+1250700	1251200	lo connetti
+1251200	1252220	al test case
+1252220	1253200	e così via
+1253200	1254600	quindi
+1254600	1256100	ti dico
+1256100	1257120	il Requirement Management Plan
+1257120	1257460	perché
+1257460	1258920	che viene a supporto
+1258920	1259560	dei cambiamenti
+1259560	1260060	proprio perché
+1260060	1260880	definisce
+1260880	1261420	un modo
+1261420	1262080	chiaro
+1262080	1262480	di poter
+1262480	1262960	tracciare
+1262960	1263620	i requisiti
+1263620	1264360	di risalire
+1264360	1264920	il requisito
+1264920	1265940	che devi cambiare
+1265940	1267320	e quindi
+1267320	1267780	hai
+1267780	1268980	più
+1268980	1269760	praticità
+1269760	1270180	e più
+1270180	1270780	facilità
+1270780	1271900	nel gestire
+1271900	1272360	questi tipi
+1272360	1273180	di cambiamenti
+1273180	1275600	chiarissimo
+1275600	1276080	grazie
+1276080	1278100	Mario
+1278100	1278120	Mario
+1278120	1278860	una domanda
+1278860	1281100	ma questo documento
+1281100	1282320	fa riferimento
+1282320	1283600	a requisiti
+1283600	1284800	solamente
+1284800	1285340	a livello
+1285340	1286020	su E1
+1286020	1287580	o magari
+1287580	1288220	anche requisiti
+1288220	1288660	a livello
+1288660	1289420	su E2
+1289420	1290000	o su E3
+1290000	1291040	no
+1291040	1291340	no allora
+1291340	1292400	questo documento
+1292400	1293240	fa parte
+1293240	1293900	diciamo
+1293900	1295420	fa riferimento
+1295420	1296840	più in particolare
+1296840	1297320	alla parte
+1297320	1297900	alta
+1297900	1298480	a sinistra
+1298480	1298700	quindi
+1298700	1299180	SIS
+1299180	1299760	quindi a livello
+1299760	1300440	di sistema
+1300440	1301820	sì
+1301820	1303140	però
+1303140	1303780	lo si può
+1303780	1304360	tradurre
+1304360	1304780	anche
+1304780	1305980	per tutti
+1305980	1306240	i tipi
+1306240	1306940	di requisiti
+1306940	1308680	sì
+1308680	1309160	chiaramente
+1309160	1309720	c'è una prima
+1309720	1311600	sì
+1311600	1312020	vai
+1312020	1312660	continuo
+1312660	1314000	no no
+1314000	1314280	dico
+1314280	1315400	che sicuramente
+1315400	1316240	una fase
+1316240	1317440	che è
+1317440	1318460	una fase
+1318460	1318960	molto
+1318960	1321040	importante
+1321040	1322780	della parte
+1322780	1323960	di sistema
+1323960	1324520	che è la fase
+1324520	1325020	alta
+1325020	1325780	quindi la fase
+1325780	1326900	di chiarificazione
+1326900	1327740	di elicitation
+1327740	1328280	si chiama
+1328280	1329220	poi la vedremo dopo
+1329220	1330340	che sicuramente
+1330340	1330960	non
+1330960	1332360	non si può
+1332360	1333440	riflettere
+1333440	1334640	negli altri domini
+1334640	1335200	però
+1335200	1337040	il Requirement Management Plan
+1337040	1338620	può ricoprire
+1338620	1339500	tutto il ciclo
+1339500	1339780	avvi
+1339780	1342380	sia lato sistema
+1342380	1343240	sia lato software
+1343240	1343740	sia lato
+1343740	1344860	testing
+1344860	1346740	ok ok
+1346740	1347240	grazie
+1347240	1348480	ok
+1348480	1349340	chiaramente
+1349340	1350820	tutta questa presentazione
+1350820	1352540	poi si riflette
+1352540	1354240	in una documentazione
+1354240	1355640	che stiamo preparando
+1355640	1357160	e che poi
+1357160	1358640	vi mostreremo
+1358640	1359860	come secondo step
+1359860	1361520	per farvi
+1361520	1362220	capire
+1362220	1363100	poi effettivamente
+1363100	1363640	tutto quello
+1363640	1364340	che vi sto dicendo
+1364340	1365340	come si riflette
+1365340	1366580	nel documento
+1366580	1367220	vero e proprio
+1367220	1368160	io adesso
+1368160	1369060	con questa presentazione
+1369060	1369540	vi sto dando
+1369540	1370940	un'idea
+1370940	1372540	di come
+1372540	1374140	questo Requirement Management Plan
+1374140	1375380	deve essere costruito
+1375380	1376040	e di cosa
+1376040	1377060	e di cosa
+1377060	1377780	stiamo parlando
+1377780	1378080	poi
+1378080	1378800	il documento
+1378800	1379320	vero e proprio
+1379320	1379680	che voi
+1379680	1380540	prenderete
+1380540	1382120	e lo potete
+1382120	1383000	customizzare
+1383000	1384320	poi per ogni cliente
+1384320	1385380	su cui lavorate
+1385380	1386420	ve lo
+1386420	1386800	diciamo
+1386800	1387200	lo stiamo
+1387200	1388600	è in fase di preparazione
+1388600	1390360	e ve lo mostreremo
+1390360	1391280	in un secondo step
+1391280	1392340	Mario
+1392340	1392940	perdonami
+1392940	1393500	aggiungo
+1393500	1394060	un'ultima
+1394060	1395300	considerazione
+1395300	1395780	perché
+1395780	1397200	tante volte
+1397200	1397940	è capitato
+1397940	1398840	che persone
+1398840	1399220	magari
+1399220	1400560	iniziano in formazione
+1400560	1401840	e poi vanno dai clienti
+1401840	1403080	quando ho chiesto
+1403080	1403860	poi feedback
+1403860	1404940	su come
+1404940	1405520	diciamo
+1405520	1406340	la formazione
+1406340	1407400	li abbia aiutati
+1407400	1408560	uno dei feedback
+1408560	1409180	che ho ricevuto
+1409180	1409500	è
+1409500	1410940	no il cliente
+1410940	1411780	non lavora
+1411780	1412440	per dire
+1412440	1413320	secondo un ciclo
+1413320	1413700	avvi
+1413700	1414400	oppure no
+1414400	1414980	il cliente
+1414980	1416840	non ha il Requirement Management Plan
+1416840	1418100	cioè quello che voglio dire
+1418100	1419560	è capita che alcuni clienti
+1419560	1421760	non abbiano magari il documento
+1421760	1422680	chiamato esattamente
+1422680	1423500	in questo modo
+1423500	1424940	o non abbiano il cliente
+1424940	1426680	o non abbiano proprio questo documento
+1426680	1427560	ma in generale
+1427560	1429260	ritengo fondamentale
+1429260	1430640	che noi siamo esposti
+1430640	1430920	diciamo
+1430920	1431500	a questi
+1431500	1433020	temi
+1433020	1434500	e anche a una lezione del genere
+1434500	1436020	perché ciò non vieta
+1436020	1437480	le persone che vanno a lavorare
+1437480	1438100	da un cliente
+1438100	1439540	di lavorare in modo ordinato
+1439540	1440800	avere concetti di traccia
+1440800	1441800	perfetto
+1441800	1442560	giusto
+1442560	1443700	giustissimo Pasquale
+1443700	1444400	questo è proprio
+1444400	1445280	quello che
+1445280	1447400	che vogliamo trasmettere noi
+1447400	1448340	cioè questo
+1448340	1449100	non è
+1449100	1451300	come tutti i clienti
+1451300	1451860	lavorano
+1451860	1453640	questo è un modo
+1453640	1454760	per far sì
+1454760	1455400	che noi
+1455400	1456760	abbiamo
+1456760	1458280	un mindset
+1458280	1458700	di
+1458700	1459620	diciamo
+1459620	1459920	di
+1459920	1462060	abbiamo una formazione chiara
+1462060	1462560	cioè nel senso
+1462560	1463920	abbiamo degli schemi
+1463920	1465100	e una linea guida
+1465100	1465640	da seguire
+1465640	1466440	ovunque andiamo
+1466440	1466920	che poi
+1466920	1467900	chiaramente ci siano
+1467900	1468860	delle deviazioni
+1468860	1469420	o meno
+1469420	1471640	presso un cliente
+1471640	1472240	o presso un altro
+1472240	1472540	però
+1472540	1473060	diciamo
+1473060	1473960	il nostro concetto
+1473960	1474600	il nostro mindset
+1474600	1475680	è sempre lo stesso
+1475680	1476620	cioè lavorare
+1476620	1477360	con ordine
+1477360	1478300	e con qualità
+1478300	1484600	ok
+1484600	1485540	grazie Pasquale
+1485540	1486080	per questo
+1486080	1487600	bene
+1487600	1488200	diciamo
+1488200	1491780	un punto
+1491780	1492680	molto importante
+1492680	1494100	allora
+1494100	1494980	quindi
+1494980	1497380	quali sono
+1497380	1498320	gli obiettivi
+1498320	1499600	lo scopo
+1499600	1500060	principale
+1500060	1500400	di questo
+1500400	1501400	requirement management plan
+1501400	1501960	quindi è quello
+1501960	1502960	di documentare
+1502960	1503300	un po'
+1503300	1507040	di documentare
+1507040	1507520	appunto
+1507520	1508180	tutta la fase
+1508180	1509540	di gestione
+1509540	1510500	dei requisiti
+1510500	1512220	e
+1512220	1513540	sui modi
+1513540	1513900	con cui
+1513900	1514540	questi requisiti
+1514540	1515080	il modo con cui
+1515080	1515740	questi requisiti
+1515740	1516500	devono essere
+1516500	1517500	devono essere
+1517500	1519140	processati
+1519140	1520220	quindi
+1520220	1521560	c'è una prima fase
+1521560	1522880	di documentazione
+1522880	1524800	e di tracciabilità
+1524800	1525640	dei requisiti
+1525640	1528300	una definizione
+1528300	1529020	dello scopo
+1529020	1530180	del progetto
+1533300	1535020	permette appunto
+1535020	1536800	questo requirement management plan
+1536800	1537500	di facilitare
+1537500	1538340	quello che ci siamo detti
+1538340	1539140	di facilitare
+1539140	1541480	le comunicazioni
+1541480	1544140	tra i vari domini
+1544140	1544680	e per domini
+1544680	1545720	parlo di sistema
+1545720	1546420	software
+1546420	1548080	test
+1548080	1549320	quindi facilitare
+1549320	1549680	test
+1549680	1550180	codice
+1550180	1551340	quindi i domini
+1551340	1551840	parlo proprio
+1551840	1552540	del ciclo avvio
+1552540	1553180	ogni dominio
+1553180	1555380	è facilitata
+1555380	1556080	la comunicazione
+1556080	1556740	tra i domini
+1556740	1557800	e gestire
+1557800	1559900	questi cambiamenti
+1559900	1560920	improvvisi
+1560920	1562360	o cambiamenti
+1562360	1563580	relativi
+1563580	1564580	richiesti
+1564580	1565900	dal cliente
+1565900	1568100	con questi obiettivi
+1568100	1569020	con questi scopi
+1569020	1570340	il requirement management plan
+1570340	1571440	ci permette
+1571440	1571840	appunto
+1571840	1572180	di
+1572180	1574440	di portare
+1574440	1575240	a termine
+1575240	1576400	il nostro lavoro
+1576400	1577460	di portare a termine
+1577460	1577700	ecco
+1577700	1578260	tutta la parte
+1578260	1578680	di gestione
+1578680	1579340	dei requisiti
+1579340	1581380	e quindi
+1581380	1582520	di soddisfare
+1582520	1582720	un po'
+1582780	1583380	quali che sono
+1583380	1584580	le aspettative
+1584580	1585720	del cliente
+1585720	1586660	perché se il cliente
+1586660	1587560	ci manda
+1587560	1588500	dei requisiti
+1588500	1589100	vuole
+1589100	1590000	e vorrebbe
+1590000	1590880	che quei requisiti
+1590880	1592560	venissero processati
+1592560	1593360	per ottenere
+1593360	1593980	ciò che lui
+1593980	1595100	si aspetta
+1595100	1595460	e quindi
+1595460	1596600	seguendo
+1596600	1597200	un po'
+1598120	1598340	e
+1598340	1599920	facilitando
+1599920	1601340	questi punti
+1601340	1602440	queste comunicazioni
+1602440	1603220	seguendo un po'
+1603660	1604660	la parte di documentazione
+1604660	1605560	di trattabilità
+1605560	1607460	riusciamo ad ottenere
+1607460	1608240	un buon livello
+1608240	1609060	di aspettative
+1609060	1610640	un buon livello
+1610640	1611380	di qualità
+1611380	1611780	e quindi
+1611780	1612640	l'aspettativa
+1612640	1613220	del cliente
+1613220	1613760	cresce
+1613760	1615000	e noi siamo
+1615000	1616020	pronti
+1616020	1616540	per poter
+1616540	1617300	soddisfare
+1617300	1618100	queste aspettative
+1618100	1625780	chiaramente
+1625780	1626520	ci sono
+1626520	1627440	delle best practice
+1627440	1627720	quindi
+1627720	1629060	non sono
+1629060	1629820	dei nice to have
+1629820	1630080	ma
+1630080	1632320	dei punti
+1632320	1632560	che
+1632560	1634020	dovrebbero
+1634020	1634400	essere
+1634400	1635900	affrontati
+1635900	1637660	diciamo
+1637660	1638540	che
+1638540	1639560	noi dovremmo
+1639560	1640120	seguire
+1640120	1641960	per la definizione
+1641960	1642520	dei requisiti
+1642520	1643220	in generale
+1643220	1645060	e soprattutto
+1645060	1645580	la parte
+1645580	1645880	di
+1645880	1647520	diciamo
+1647520	1647920	di essere
+1647920	1648700	molto chiari
+1648700	1651360	nella definizione
+1651360	1652160	e nella descrizione
+1652160	1654440	dei nostri requisiti
+1654440	1656580	di far sì
+1656580	1657500	che ci siano
+1657500	1658620	ci siano
+1658620	1658960	delle
+1658960	1659600	diciamo
+1659600	1659960	ci siano
+1659960	1662080	delle vere
+1662080	1662460	proprie
+1662460	1663280	discussioni
+1663280	1664860	con il cliente
+1664860	1665720	e con gli altri
+1665720	1666320	domini
+1666320	1667580	per poter
+1667580	1668760	ricevere feedback
+1668760	1669820	e per poter
+1669820	1670440	diciamo
+1670440	1672220	consolidare
+1672220	1673080	un po'
+1673600	1674340	il know-how
+1674340	1675180	e
+1675180	1676840	un po'
+1676960	1677580	capire
+1677580	1679240	cosa stiamo facendo
+1679240	1679920	quindi
+1679920	1682560	instaurare
+1682560	1684360	un vero e proprio
+1684360	1685720	diciamo
+1685720	1686120	delle vere
+1686120	1686360	e proprie
+1686360	1687480	discussioni
+1687480	1688040	anche
+1688040	1688520	molto
+1688520	1690140	banali
+1690140	1690420	ma
+1690420	1691320	che
+1691320	1691960	soprattutto
+1691960	1692400	ci fanno
+1692400	1693820	consolidare
+1693820	1694100	un po'
+1694160	1694920	la tematica
+1694920	1695720	e questo
+1695720	1696220	permette
+1696220	1696640	appunto
+1696640	1697140	di essere
+1697140	1697760	chiari
+1697760	1698660	e di capire
+1698660	1699020	un po'
+1699120	1699700	l'argomento
+1699700	1700200	su cui
+1700200	1701620	stiamo lavorando
+1701620	1701820	quindi
+1701820	1702380	quanto più
+1702380	1703540	siamo informati
+1703540	1704060	quanto più
+1704060	1705140	abbiamo padronanza
+1705140	1706740	del contenuto
+1706740	1707340	e del tema
+1707340	1708180	che stiamo affrontando
+1708180	1708760	tanto più
+1708760	1709740	siamo chiari
+1709740	1710500	riusciamo ad essere
+1710500	1710940	chiari
+1710940	1711380	e riusciamo
+1711380	1713740	ad esprimerci
+1713740	1714660	con qualità
+1714660	1716480	quindi
+1716480	1717060	questi sono
+1717060	1718120	i tre punti
+1718120	1718780	fondamentali
+1718780	1719040	quindi
+1719040	1720800	essere chiari
+1720800	1721300	clarity
+1721300	1722300	e
+1722300	1723900	stakeholder engagement
+1723900	1724420	e ongoing
+1724420	1725160	communication
+1725160	1725740	diciamo
+1725740	1726500	vanno a braccetto
+1726500	1726760	perché
+1726760	1727420	chiaramente
+1727420	1728140	qui stiamo dicendo
+1728140	1728440	di
+1728440	1730220	non lavorare
+1730220	1731640	mai da soli
+1731640	1732100	perché
+1732100	1732360	sì
+1732360	1732840	è chiaro
+1732840	1733040	che
+1733040	1733740	a volte
+1733740	1735480	la tematica
+1735480	1737380	è di facile
+1737380	1738160	comprensione
+1738160	1738400	però
+1738400	1738720	è bene
+1738720	1739260	instaurare
+1739260	1740040	delle discussioni
+1740040	1740740	con il cliente
+1740740	1741360	e con altri
+1741360	1742600	colleghi
+1742600	1743440	per poter
+1743440	1744080	consolidare
+1744080	1744400	un po'
+1744780	1746080	il contenuto
+1746080	1746800	e la tematica
+1746800	1747700	quindi
+1747700	1748660	mai perdere di vista
+1748660	1749260	il fatto di
+1749260	1749640	dover
+1749640	1751260	confrontarsi
+1751260	1751780	e dover
+1751780	1752240	chiedere
+1752240	1754220	opinioni
+1754220	1755120	o spiegazioni
+1755120	1755960	ad altri
+1755960	1756640	colleghi
+1756640	1762160	quindi
+1762160	1762680	quali sono
+1762680	1763500	gli step
+1763500	1765020	per la definizione
+1765020	1766060	dei requisiti
+1766060	1767960	diciamo
+1767960	1768100	che
+1768100	1768900	li affronteremo
+1768900	1771300	nelle slide
+1771300	1771880	successive
+1771880	1772540	un po' più
+1772540	1773620	approfonditamente
+1773620	1774500	quindi
+1774500	1775040	vorrei solo
+1775040	1775480	elencare
+1775480	1776080	quindi c'è una
+1776080	1776620	prima fase
+1776620	1777340	quindi parlando
+1777340	1778200	di gestione
+1778200	1779020	dei requisiti
+1779020	1780660	in questo caso
+1780660	1781960	diciamo
+1781960	1782740	a parte
+1782740	1784540	sì
+1784540	1785460	diciamo che
+1785460	1786280	a parte
+1786280	1786840	diciamo
+1786840	1787500	la prima fase
+1787500	1788160	che è il requirement
+1788160	1789000	licitation
+1789000	1789820	che è la parte
+1789820	1790480	quindi di
+1790480	1791660	alta
+1791660	1792900	del ciclo avvi
+1792900	1794200	tutti
+1794200	1795000	gli altri
+1795000	1795460	punti
+1795460	1795940	si possono
+1795940	1796600	riflettere
+1796600	1797120	negli altri
+1797120	1797620	domini
+1797620	1798780	come diceva
+1798780	1799420	non so chi è
+1799420	1799960	che prima
+1799960	1800800	mi ha chiesto
+1800800	1801620	questa domanda
+1801620	1805040	come sono io
+1805040	1805500	siamo
+1805500	1806600	chi è?
+1807040	1808300	io non ti vedo
+1808300	1809900	Alessandro
+1809900	1810980	Alessandro
+1810980	1811460	Alessandro
+1811460	1812920	quindi a parte
+1812920	1813260	la parte
+1813260	1813620	di
+1813620	1814560	considerando
+1814560	1814840	diciamo
+1814840	1815360	scondendo
+1815360	1816120	le licitation
+1816120	1816440	però
+1816440	1817440	tutta l'altra parte
+1817440	1818120	è una parte
+1818120	1820060	che è valida
+1820060	1820880	anche per gli altri
+1820880	1821480	domini
+1821480	1822840	che consideriamo
+1822840	1823640	sempre il ciclo
+1823640	1824860	avvi
+1824860	1826040	ma in ogni caso
+1826040	1826800	considerando
+1826800	1827340	sempre
+1827340	1828040	tutta la parte
+1828040	1828760	di gestione
+1828760	1829280	dei requisiti
+1829280	1829980	in generale
+1829980	1831160	tutti i punti
+1831160	1832800	sono validi
+1832800	1834660	quindi c'è una parte
+1834660	1835580	di elicitation
+1835580	1836240	una parte
+1836240	1837460	di documentazione
+1837460	1838620	di tracciabilità
+1838620	1839680	dei requisiti
+1839680	1841980	di prioritizzazione
+1841980	1844440	di validazione
+1844440	1845060	del requisito
+1845060	1846240	e di mantenimento
+1846240	1848740	quindi
+1848740	1849140	a parte
+1849140	1850540	la bella
+1850540	1851360	diciamo
+1851360	1852180	immagine
+1852180	1852560	che mi ha
+1852560	1853100	preparato
+1853100	1854440	GPT
+1854440	1854780	però
+1854780	1855320	diciamo
+1855320	1855980	per il resto
+1855980	1856880	diciamo
+1856880	1857660	questo è un elenco
+1857660	1859200	dei passi
+1859200	1860920	da dover affrontare
+1860920	1862880	Mario
+1862880	1863500	perdonami
+1863500	1864620	che cosa si intende
+1864620	1866520	qualcosa in più
+1866520	1868080	su cosa si intende
+1868080	1869380	sulla parte
+1869380	1869680	di
+1869680	1870600	maintain
+1870600	1871940	che ho una mia idea
+1871940	1872520	ma vorrei
+1872520	1873520	che mi dicessi
+1873520	1874160	tu
+1874160	1875980	dalla tua esperienza
+1875980	1876340	diciamo
+1876340	1877460	sei sempre Pasquale
+1877460	1877680	è vero
+1877680	1877960	sì
+1877960	1878580	perdonami
+1878580	1879120	che un po'
+1879120	1879900	le scadere
+1879900	1880780	senti
+1880780	1883100	maintain
+1883100	1883700	secondo me
+1883700	1884580	io ce l'ho
+1884580	1885120	aspetta
+1885120	1885520	fammi vedere
+1885520	1886260	validation
+1886260	1887200	validation
+1887200	1888020	sì
+1888020	1888660	vabbè
+1888660	1889840	non l'ho approfondita
+1889840	1890120	però
+1890120	1890840	allora
+1890840	1891560	maintain
+1891560	1893140	è sempre
+1893140	1893780	relativa
+1893780	1894480	alla parte
+1894480	1896720	del change management
+1896720	1900280	vale a dire
+1900280	1900600	che
+1900600	1901100	una volta
+1901100	1901640	che tu hai
+1901640	1902440	definito
+1902440	1905300	il tuo requisito
+1905300	1906120	devi essere
+1906120	1906880	anche in grado
+1906880	1907300	di
+1907300	1909260	di tenerlo vivo
+1909260	1911380	nel senso
+1911380	1911680	che
+1911680	1913060	in qualsiasi tipo
+1913060	1913760	di richiesta
+1913760	1914700	di cambiamento
+1914700	1915360	o
+1915360	1916560	di cambiamento
+1916560	1917020	interno
+1917020	1917440	cambiamento
+1917440	1918140	del cliente
+1918140	1919500	tu hai la possibilità
+1919500	1920920	di raggiungere
+1920920	1921700	quel requisito
+1921700	1922140	in maniera
+1922140	1923080	veloce
+1923080	1923980	e di poterlo
+1923980	1925920	o mantenere
+1925920	1926860	nel senso
+1926860	1928080	di
+1928080	1928880	di
+1928880	1930260	di
+1930260	1931100	di poterlo
+1931100	1932340	visualizzare
+1932340	1932760	di poterlo
+1932760	1933240	raggiungere
+1933240	1933800	in qualsiasi modo
+1933800	1934040	oppure
+1934040	1934640	di poterlo
+1934640	1935380	cambiare
+1935380	1936100	in maniera
+1936100	1936460	molto
+1936460	1937160	rapida
+1937160	1938900	in dolore
+1938900	1940380	ok
+1940380	1941940	questo è il concetto
+1941940	1942500	di maintain
+1942500	1943500	chiaro
+1943500	1945500	chiaro
+1945500	1946540	avevi
+1946540	1947260	diciamo
+1947260	1948960	sono
+1948960	1950200	sono aperto
+1950200	1950820	alle tue
+1950820	1952160	alle tue
+1952160	1952640	ai tuoi dubbi
+1952640	1952940	nel senso
+1952940	1954140	se il tuo concetto
+1954140	1954700	la tua idea
+1954700	1956180	era differente
+1956180	1956880	ben venga
+1956880	1957440	la possiamo
+1957440	1958540	diciamo
+1958540	1959000	discutere
+1959000	1959520	assolutamente
+1959520	1959900	anzi
+1959900	1960360	io diciamo
+1960360	1960920	mi ero messo
+1960920	1961300	in un
+1961300	1963000	ero mentalizzato
+1963000	1963400	in modo
+1963400	1964840	forse errato
+1964840	1965220	nel senso
+1965220	1965700	io pensavo
+1965700	1966320	a due cose
+1966320	1966880	la prima
+1966880	1967700	mi veniva in mente
+1967700	1968040	una cosa
+1968040	1968700	che leggevo
+1968700	1970320	su alcune normative
+1970320	1971580	della cyber security
+1971580	1972180	per cui
+1972180	1972920	il cliente
+1972920	1973940	resta
+1973940	1975220	chi ha sviluppato
+1975220	1975860	il software
+1975860	1976540	eccetera
+1976540	1977140	il sistema
+1977140	1978360	resta responsabile
+1978360	1979520	per x anni
+1979520	1980940	della gestione
+1980940	1981840	dei problemi
+1981840	1982720	associati
+1982720	1983100	diciamo
+1983100	1984160	a tutto quanto
+1984160	1985380	concerne la cyber security
+1985380	1985720	quindi
+1985720	1986880	pensavo lì
+1986880	1987720	maintenance
+1987720	1988340	nel senso
+1988340	1988960	di dire ok
+1988960	1990120	un po' dire
+1990120	1990940	come dire
+1990940	1991520	accountability
+1991520	1992480	per i requisiti
+1992480	1993180	che vengono
+1993180	1994240	scritti
+1994240	1995060	per x anni
+1995060	1995740	sul sistema
+1995740	1996540	su cui
+1996540	1997700	verranno implementati
+1997700	1998200	ma era
+1998200	1998720	diciamo
+1998720	2000480	era un contesto
+2000480	2001340	allora
+2001340	2002160	diciamo che
+2002160	2002660	possiamo
+2002660	2003380	possiamo un po'
+2004220	2004700	ridurlo
+2004700	2005660	e renderlo più semplice
+2005660	2006280	questo concetto
+2006280	2007440	che è pur valido
+2007440	2008380	nel senso
+2008380	2009120	il mantenimento
+2009120	2010220	è chiaro che
+2010220	2011580	nella definizione
+2011580	2012300	una volta che tu
+2012300	2012960	hai definito
+2012960	2013980	quel tipo di requisito
+2013980	2015060	sei tu responsabile
+2015060	2015920	poi da qui
+2015920	2016480	a totti anni
+2016480	2018140	base al tipo
+2018140	2018660	di contratto
+2018660	2019420	che viene stabilito
+2019420	2020500	tra i clienti
+2020500	2021340	e i fornitori
+2021340	2022860	di quel requisito
+2022860	2023420	quindi tu
+2023420	2024400	per anni
+2024400	2025000	nel caso
+2025000	2025580	ci dovessero essere
+2025580	2026200	problemi
+2026200	2027000	devi essere
+2027000	2028080	tu responsabile
+2028080	2029580	di quel requisito
+2029580	2029900	e quindi
+2029900	2030800	devi essere in grado
+2030800	2032820	di poterlo gestire
+2032820	2033540	ecco
+2033540	2034840	ritorna sempre
+2034840	2035420	il discorso
+2035420	2036320	della gestione
+2036320	2038020	del requisito
+2038020	2039060	in caso
+2039060	2040120	di problemi
+2040120	2041300	o cambiamenti
+2041300	2041900	sì sì sì
+2041900	2043080	chiarissimo
+2043080	2044700	ok
+2044700	2045120	quindi
+2045120	2045620	diciamo
+2045620	2046460	è un discorso
+2046460	2048440	base
+2048440	2049160	che però
+2049160	2049840	ti permette
+2049840	2050520	diciamo
+2050520	2052020	seguendo
+2052020	2055040	un documento
+2055040	2055840	delle metodologie
+2055840	2056440	delle strategie
+2056440	2056960	ti permette
+2056960	2058560	di mantenerlo
+2058560	2060020	di tenerlo in vita
+2060020	2061420	in maniera
+2061420	2063220	non so
+2063220	2063680	non so
+2063680	2064100	forse
+2064100	2064420	non lo so
+2064420	2065680	se mi avete
+2065680	2067740	capito tutti quasi
+2067740	2067980	diciamo
+2067980	2068780	il mantenimento
+2068780	2070540	viene
+2070540	2071440	diciamo
+2071440	2074000	è tanto più
+2074000	2074660	facile
+2074660	2075480	mantenere
+2075480	2076600	il requisito
+2076600	2077120	tanto più
+2077120	2079200	quando noi
+2079200	2080260	adottiamo
+2080260	2082160	tutte queste
+2082160	2083480	metodologie
+2083480	2084580	cioè se abbiamo
+2084580	2084940	fatto
+2084940	2085500	un'ottima
+2085500	2086300	tracciabilità
+2086300	2086840	se lo abbiamo
+2086840	2088100	documentato
+2088100	2088480	in maniera
+2088480	2089300	corretta
+2089300	2090560	se lo abbiamo
+2090560	2091340	prioritizzato
+2091340	2091640	in maniera
+2091640	2092120	corretta
+2092120	2092960	il mantenimento
+2092960	2093300	viene
+2093300	2093960	e se lo abbiamo
+2093960	2094400	validato
+2094400	2094680	in maniera
+2094680	2095060	corretta
+2095060	2095700	il mantenimento
+2095700	2096060	viene
+2096060	2097900	facile
+2097900	2099020	anche
+2099020	2099980	diciamo
+2099980	2100660	un mantenimento
+2100660	2101780	semplice
+2101780	2102260	così come
+2102260	2103080	un cambiamento
+2103080	2103680	del requisito
+2103680	2104200	stesso
+2104200	2111100	ok
+2111100	2111860	chiaro
+2111860	2112320	ok
+2112320	2115540	ok
+2115540	2116260	quindi la parte
+2116260	2117180	di elicitation
+2117180	2118140	la prima parte
+2118140	2118940	è una parte
+2118940	2120820	davvero fondamentale
+2120820	2121200	diciamo
+2121200	2121760	io la reputo
+2121760	2123700	la più migliore
+2123700	2124320	come direbbe
+2124320	2124560	Miano
+2124560	2125740	però
+2125740	2127940	diciamo
+2127940	2128860	è veramente
+2128860	2131560	è fondamentale
+2131560	2131880	perché
+2131880	2132520	la parte
+2132520	2133080	di elicitation
+2133080	2134720	consiste
+2134720	2135720	nella raccolta
+2135720	2136220	di tutti
+2136220	2137360	i documenti
+2137360	2137820	che vengono
+2137820	2138220	forniti
+2138220	2139360	dal cliente
+2139360	2139940	quindi
+2139940	2140660	questi documenti
+2140660	2141660	vengono raccolti
+2141660	2142980	e devono
+2142980	2143500	essere
+2143500	2144840	diciamo
+2144840	2146000	analizzati
+2146000	2147580	e
+2147580	2149340	consolidati
+2149340	2150340	ma per poter
+2150340	2150900	fare queste
+2150900	2151460	due cose
+2151460	2152340	è necessario
+2152340	2154220	che ci siano
+2154220	2155520	delle
+2155520	2156240	chiaramente
+2156240	2157500	delle expertise
+2157500	2158200	sicuramente
+2158200	2159040	ma che ci siano
+2159040	2160420	almeno
+2160420	2161640	una di questi tre
+2161640	2162460	che ci siano
+2162460	2163320	delle interviste
+2163320	2163820	ci siano
+2163820	2166200	dei questionari
+2166200	2167360	se le vogliamo
+2167360	2167840	tradurre
+2167840	2168840	ma che ci siano
+2168840	2170640	delle vere
+2170640	2170900	e proprie
+2170900	2171920	discussioni
+2171920	2172480	come dicevo
+2172480	2172700	prima
+2172700	2173040	delle vere
+2173040	2173260	e proprie
+2173260	2173980	discussioni
+2173980	2174320	molto
+2174320	2178080	dirette
+2178080	2179340	per poter
+2179340	2180220	consolidare
+2180220	2180920	per poter
+2180920	2182120	fissare
+2182120	2183120	un determinato
+2183120	2183940	concetto
+2183940	2185820	queste interviste
+2185820	2186220	intendo
+2186220	2186780	interviste
+2186780	2187240	che possono
+2187240	2187860	essere
+2187860	2190280	verso il cliente
+2190280	2191820	o all'interno
+2191820	2192240	della stessa
+2192240	2192940	società
+2192940	2193780	con gli stessi
+2193780	2194500	colleghi
+2194500	2195720	cercare di capire
+2195720	2197380	se quel requisito
+2197380	2198780	è veramente
+2198780	2199520	un requisito
+2199520	2200380	veramente il cliente
+2200380	2201260	ci sta richiedendo
+2201260	2201760	un qualcosa
+2201760	2202780	che è fattibile
+2202780	2203960	o non è fattibile
+2203960	2204700	ci sta chiedendo
+2204700	2205220	delle cose
+2205220	2207660	che non stanno
+2207660	2208020	né in cielo
+2208020	2208460	né in terra
+2208460	2208760	quindi
+2208760	2209660	è bene
+2209660	2210640	affrontare
+2210640	2211260	questo tipo
+2211260	2213080	di attività
+2213080	2214480	per poter
+2214480	2215800	consolidare
+2215800	2216960	i documenti
+2216960	2217860	perché
+2217860	2218580	una volta
+2218580	2219240	che noi
+2219240	2219840	abbiamo
+2219840	2221100	fissato
+2221100	2222720	tutti i punti
+2222720	2224420	tutti gli altri
+2224420	2224920	step
+2224920	2226180	sono
+2226180	2227340	facilitati
+2227340	2229240	abbiamo la possibilità
+2229240	2229880	di documentare
+2229880	2230560	il requisito
+2230560	2231500	abbiamo la possibilità
+2231500	2233220	di definire
+2233220	2234680	un test case
+2234680	2235220	in maniera
+2235220	2236420	semplice
+2236420	2237940	tutti i processi
+2237940	2239160	tutti gli step
+2239160	2239660	successivi
+2239660	2240580	sono facilitati
+2240580	2241760	se riusciamo
+2241760	2242760	ad ottenere
+2242760	2243860	a valle
+2243860	2245220	di queste interviste
+2245220	2246380	di questi workshop
+2246380	2247880	di queste discussioni
+2247880	2248700	alla macchinetta
+2248700	2249240	del caffè
+2249240	2249880	o quant'altro
+2249880	2250680	che riusciamo
+2250680	2251380	ad ottenere
+2251380	2252180	un
+2252180	2253740	diciamo
+2253740	2254220	una
+2254220	2255660	a consolidare
+2255660	2256780	il requisito
+2256780	2257500	se vogliamo parlare
+2257500	2258620	di un singolo requisito
+2258620	2260860	quindi la prima parte
+2260860	2261340	è veramente
+2261340	2262320	fondamentale
+2262320	2264180	ok
+2264180	2265020	quindi immagino
+2265020	2265660	questo anche
+2265660	2266540	per eventuali
+2266540	2267080	modifiche
+2267080	2267860	sul progetto
+2267860	2268320	quindi viene
+2268320	2268760	faccio
+2268760	2270720	questi requisiti
+2270720	2271200	vengono
+2271200	2272020	mostrati
+2272020	2272600	quindi al
+2272600	2273820	cliente
+2273820	2274760	nella fase
+2274760	2275340	iniziale
+2275340	2276160	quindi questi
+2276160	2276920	primi requisiti
+2276920	2277580	di sistema
+2277580	2278080	nella fase
+2278080	2278820	iniziale
+2278820	2279500	così come
+2279500	2280080	nella fase
+2280080	2281060	di richieste
+2281060	2281920	di cambiamenti
+2281920	2282460	c'è sempre
+2282460	2282940	una fase
+2282940	2284020	di elicitation
+2284020	2285780	del requisito
+2285780	2286500	cioè
+2286500	2287020	supponi che
+2287020	2288020	il cliente
+2288020	2288420	ti invia
+2288420	2289300	un requisito
+2289300	2289740	solo
+2289740	2292780	inizia la fase
+2292780	2293720	di elicitation
+2293720	2295800	quindi tu
+2295800	2296620	consolidi
+2296620	2297640	quel requisito
+2297640	2298400	devi
+2298400	2299100	fartelo
+2299100	2299480	tuo
+2299480	2300060	devi
+2300060	2301020	essere in grado
+2301020	2302220	di averlo
+2302220	2304180	di averlo
+2304180	2304660	capito
+2304660	2305340	e di poter
+2305340	2306040	proseguire
+2306040	2307360	una volta
+2307360	2308140	che tu
+2308140	2308480	lo hai
+2308480	2309320	capito
+2309320	2309880	magari lo
+2309880	2310360	condividi
+2310360	2310840	anche con il
+2310840	2311340	cliente
+2311340	2311780	condividi
+2311780	2312440	con il cliente
+2312440	2312680	anche
+2312680	2313520	il tuo
+2313520	2314340	il tuo
+2314340	2315160	understanding
+2315160	2315820	quello che tu
+2315820	2316480	hai capito
+2316480	2317640	una volta
+2317640	2318200	che avete
+2318200	2319060	lo stesso
+2319060	2319800	understanding
+2319800	2320860	puoi procedere
+2320860	2321140	con la
+2321140	2321380	parte
+2321380	2321660	con la
+2321660	2322000	seconda
+2322000	2322360	parte
+2322360	2324060	ok
+2324060	2324720	perfetto
+2324720	2325480	ok
+2325480	2326140	sempre
+2326140	2326500	questo
+2326500	2326880	in ogni
+2326880	2328240	in ogni
+2328240	2328720	diciamo
+2328720	2330220	in ogni
+2330220	2331200	caso in cui
+2331200	2332220	arriva un nuovo
+2332220	2332720	requisito
+2332720	2333280	o un cambio
+2333280	2333960	di requisito
+2333960	2334740	si attiva
+2334740	2335120	la parte
+2335120	2335320	di
+2335320	2335980	elicitation
+2335980	2340900	poi
+2340900	2341480	questa parte
+2341480	2342060	di elicitation
+2342060	2343120	nel documento
+2343120	2343420	poi
+2343420	2344240	che stiamo
+2344240	2344640	facendo
+2344640	2345160	è
+2345160	2346120	espressa
+2346120	2346580	in vari
+2346580	2347080	step
+2347080	2347780	quindi c'è
+2347780	2348120	la parte
+2348120	2348340	in cui
+2348340	2348780	il cliente
+2348780	2349100	riceve
+2349100	2349800	che noi
+2349800	2350200	riceviamo
+2350200	2350920	il requisito
+2350920	2351680	noi come
+2351680	2352460	fornitori
+2352460	2352860	ecco come
+2352860	2353780	responsabili
+2353780	2354260	del requisito
+2354260	2354620	ad esempio
+2354620	2355420	riceviamo
+2355420	2357100	il requisito
+2357100	2357520	lo dobbiamo
+2357520	2358340	analizzare
+2358340	2360020	internamente
+2360020	2360820	dobbiamo
+2360820	2361460	condividere
+2361460	2362120	come ti dicevo
+2362120	2362560	il nostro
+2362560	2364180	quello che abbiamo
+2364180	2364760	capito
+2364760	2366220	verso il cliente
+2366220	2366660	il cliente
+2366660	2367920	deve accettare
+2367920	2368560	o deve
+2368560	2369620	confermare
+2369620	2370200	quello che tu hai
+2370200	2370480	capito
+2370480	2370780	quindi
+2370780	2372140	ti rispedisce
+2372140	2373080	un feedback
+2373080	2373820	un successivo
+2373820	2374320	feedback
+2374320	2374900	quindi ci sono
+2374900	2375640	tutte queste fasi
+2375640	2376240	che verranno
+2376240	2377820	spiegate
+2377820	2378380	descritte
+2378380	2379860	nel documento
+2379860	2380400	ed è questo
+2380400	2380700	proprio
+2380700	2381540	il required
+2381540	2382380	management plan
+2382380	2383260	cioè descrivere
+2383260	2383760	passo
+2383760	2384840	dopo passo
+2384840	2385500	cosa
+2385500	2387080	bisogna fare
+2387080	2387820	per poter
+2387820	2388280	completare
+2388280	2388640	ad esempio
+2388640	2389020	la fase
+2389020	2390260	di elicitation
+2390260	2390580	ok
+2390580	2391500	quindi al cliente
+2391500	2391800	vengono
+2391800	2392060	fatti
+2392060	2392260	vedere
+2392260	2393120	i requisiti
+2393120	2393380	quindi
+2393380	2394020	la prima fase
+2394020	2394580	di requisiti
+2394580	2395180	scritta
+2395180	2396600	già sono
+2396600	2397120	sotto forma
+2397120	2397780	di requisiti
+2397780	2398780	mi chiedevo
+2398780	2399960	allora
+2399960	2401400	il documento
+2401400	2402240	che fornisce
+2402240	2403780	il cliente
+2403780	2404860	è
+2404860	2406200	potrebbe
+2406200	2406420	avere
+2406420	2406560	una
+2406560	2408020	il più delle volte
+2408020	2408720	devi essere
+2408720	2409480	fortunata
+2409480	2411000	il cliente
+2411000	2411420	fornisce
+2411420	2411780	già
+2411780	2412380	una serie
+2412380	2413300	di requisiti
+2413300	2413700	già
+2413700	2414560	diciamo
+2414560	2416420	categorizzati
+2416420	2417640	quindi
+2417640	2418420	tu semplicemente
+2418420	2419640	leggi
+2419640	2420140	requisito
+2420140	2420780	per requisito
+2420780	2421280	e quindi
+2421280	2421920	hai già
+2421920	2422440	il requisito
+2422440	2422700	in mano
+2422700	2423280	altre volte
+2423280	2424140	ti arriva
+2424140	2424980	un documento
+2424980	2425760	un papiro
+2425760	2426600	dove tu devi
+2426600	2427660	cercare di trovare
+2427660	2428640	qual è il requisito
+2428640	2429460	e quindi
+2429460	2430080	ci deve essere
+2430080	2431040	tipo un ping pong
+2431040	2432780	di informazioni
+2432780	2433180	nel senso
+2433180	2434560	tu chiedi al cliente
+2434560	2435100	se
+2435100	2436400	quello che hai capito
+2436400	2437360	è giusto
+2437360	2437940	e quindi
+2437940	2438920	lo consolidi
+2438920	2439420	nella tua
+2439420	2439820	poi
+2439820	2441280	lo documenti
+2441280	2441900	nel tool
+2441900	2443180	di documentazione
+2443180	2444080	dei requisiti
+2444080	2446720	è un botte
+2446720	2447140	in risposta
+2447140	2447880	sul documento
+2447880	2449360	che richiedi
+2449360	2450840	perché dal cliente
+2450840	2451220	in effetti
+2451220	2451840	mi aspetterei
+2451840	2452700	più un documento
+2452700	2453180	scritto
+2453180	2454020	quindi non sotto
+2454020	2455080	forma di requisito
+2455080	2456280	quello che mi chiedeva
+2456280	2456860	era se
+2456860	2458120	il feedback
+2458120	2459420	che uno
+2459420	2460240	dà al cliente
+2460240	2460720	di quello
+2460720	2461460	che ha inteso
+2461460	2462500	era sotto
+2462500	2463500	forma di requisito
+2463500	2464080	oppure
+2464080	2465340	come vuoi
+2465340	2467420	come vuoi
+2467420	2468440	come vuoi
+2468440	2468820	diciamo
+2468820	2469640	se tu
+2469640	2471100	sei già pronta
+2471100	2472480	per poter
+2472480	2473540	per poter
+2473540	2474440	descrivere
+2474440	2475000	quello che
+2475000	2475620	ti ha richiesto
+2475620	2476020	il cliente
+2476020	2476440	sotto forma
+2476440	2476940	di requisito
+2476940	2477320	puoi anche
+2477320	2477940	condividerlo
+2477940	2478240	dicendo
+2478240	2478600	guarda
+2478600	2479100	questo è
+2479100	2479460	quello che
+2479460	2479680	io
+2479680	2480700	ho inteso
+2480700	2481700	mi puoi dare
+2481700	2482420	conferma
+2482420	2483200	e lui
+2483200	2483820	ti dà conferma
+2483820	2484240	chiaramente
+2484240	2484820	non è che
+2484820	2486200	mi aspetto
+2486200	2486580	che
+2486580	2487040	diciamo
+2487040	2487640	non ci sia
+2487640	2488540	questo
+2488540	2489100	ping pong
+2489100	2489740	di informazioni
+2489740	2491000	per ogni requisito
+2491000	2491200	ma
+2491200	2492100	sui requisiti
+2492100	2492600	lì dove
+2492600	2492940	c'è
+2492940	2493660	necessità
+2493660	2493960	di
+2493960	2494600	diciamo
+2494600	2495000	di avere
+2495000	2496020	un feedback
+2496020	2496560	ulteriore
+2496560	2497480	dal cliente
+2497480	2497960	magari
+2497960	2498760	tu alcuni requisiti
+2498760	2499700	riesci a risolverli
+2499700	2500540	internamente
+2500540	2501880	chiedi a un collega
+2501880	2504020	se lui
+2504020	2504540	ha capito
+2504540	2505500	quindi non è necessario
+2505500	2507400	ritornare dal cliente
+2507400	2508200	quindi dal cliente
+2508200	2508700	si ritorna
+2508700	2509360	nei casi in cui
+2509360	2509820	veramente
+2509820	2511460	quel requisito
+2511460	2512220	non ha
+2512220	2512980	diciamo
+2512980	2514360	gli manca qualcosa
+2514360	2515040	e quindi tu
+2515040	2516540	lo hai inteso
+2516540	2517220	ma vorresti
+2517220	2517640	un feedback
+2517640	2518340	ulteriore
+2518340	2519880	ok
+2519880	2520220	quindi
+2520220	2521320	non tutti i requisiti
+2521320	2523520	vengono mostrati
+2523520	2524720	dal cliente
+2524720	2525120	no
+2525120	2529040	chiaramente
+2529040	2529460	questo
+2529460	2531260	comporta
+2531260	2532800	una perdita
+2532800	2533280	di tempo
+2533280	2533580	però
+2533580	2534400	non dobbiamo
+2534400	2535420	considerarla tale
+2535420	2537080	perché
+2537080	2537920	diciamo
+2537920	2538480	è
+2538480	2540240	terra
+2540240	2540480	poi
+2540480	2541200	per consolidare
+2541200	2542620	per facilitarti
+2542620	2543180	il lavoro
+2543180	2545820	perché magari
+2545820	2546520	se tu non lo fai
+2546520	2547340	in questa fase
+2547340	2547920	se tu non la fai
+2547920	2548580	in questa fase
+2548580	2549260	poi ti trovi
+2549260	2549620	magari
+2549620	2550640	ad aver
+2550640	2551600	inteso
+2551600	2552340	un requisito
+2552340	2553300	in un modo diverso
+2553300	2554680	e a sviluppare il software
+2554680	2556220	non come il cliente
+2556220	2557320	si aspettava
+2557320	2560260	eh sì
+2560260	2560880	era assolutamente
+2560880	2561740	quello che immaginavo
+2561740	2562240	Mario
+2562240	2563140	al solito
+2563140	2563740	sono sempre
+2563740	2564700	masquale per rotta
+2564700	2565080	volevo
+2565080	2565820	giusto fare
+2565820	2567180	un'altra considerazione
+2567180	2568060	a me è capitato
+2568060	2568700	di lavorare
+2568700	2569580	con dei clienti
+2569580	2569960	dove
+2569960	2570640	che erano
+2570640	2571620	estremamente
+2571620	2572420	a digiuno
+2572420	2573560	di questi temi
+2573560	2574540	nell'ambito
+2574540	2575060	dei veicoli
+2575060	2575640	off-road
+2575640	2576460	trattori
+2576460	2577020	eccetera
+2577020	2577500	eccetera
+2577500	2579360	alcuni requisiti
+2579360	2580160	derivavano anche
+2580160	2580980	dalla chiamata
+2580980	2582040	incazzata
+2582040	2583120	del contadino
+2583120	2583820	che stava usando
+2583820	2584560	il trattore
+2584560	2585660	non funzionava
+2585660	2586220	e da lì
+2586220	2586640	si facevano
+2586640	2587220	dei meeting
+2587220	2588860	nei quali
+2588860	2589280	dai meeting
+2589280	2589960	si decidevano
+2589960	2590620	dobbiamo fare
+2590620	2591320	questa cosa
+2591320	2592040	chiaramente
+2592040	2592560	non c'era
+2592560	2593440	nessun documento
+2593440	2594180	non c'era niente
+2594180	2595520	però lì
+2595520	2596120	il requisito
+2596120	2596760	è diventato
+2596760	2597780	facciamo la minuta
+2597780	2598380	del meeting
+2598380	2599520	in cui stabiliamo
+2599520	2600560	che questo
+2600560	2600940	deve essere
+2600940	2601740	il comportamento
+2601740	2602280	quindi voglio
+2602280	2603240	sempre per tornare
+2603240	2604020	sul discorso
+2604020	2604580	di prima
+2604580	2605380	che tante volte
+2605380	2605880	non c'è
+2605880	2607280	tutta questa struttura
+2607280	2609300	ben organizzata
+2609300	2610700	ma la nostra capacità
+2610700	2611860	è comprendere
+2611860	2613360	anche dagli input
+2613360	2614220	diciamo
+2614220	2616020	alternativi
+2616020	2616580	che può essere
+2616580	2617140	delle parti
+2617140	2617840	incazzata
+2617840	2618440	ma non sarebbe
+2618440	2622160	sono d'accordissimo
+2622160	2622440	però
+2622440	2625020	sono d'accordissimo
+2625020	2625300	però
+2625300	2626340	diciamo
+2626340	2629280	la nostra
+2629280	2630960	la nostra
+2630960	2632980	come posso dire
+2632980	2634660	il nostro supporto
+2634660	2635620	e il nostro
+2635620	2637020	valore addizionale
+2637020	2637620	che dobbiamo dare
+2637620	2638280	al cliente
+2638280	2638840	è proprio quello
+2638840	2639240	di dire
+2639240	2639540	ok
+2639540	2640560	tu mi dai anche
+2640560	2641760	degli input
+2641760	2642480	al telefono
+2642480	2642920	una minuta
+2642920	2643900	però è necessario
+2643900	2644880	che tu mi documenti
+2644880	2645460	in qualche modo
+2645460	2646540	questo requisito
+2646540	2646900	assolutamente sì
+2646900	2651160	perché è chiaro
+2651160	2651720	che poi
+2651720	2653080	diciamo sì
+2653080	2654340	le parole
+2654340	2655320	sicuramente
+2655320	2656000	per telefono
+2656000	2656880	mai ricevere
+2656880	2657460	requisiti
+2657460	2658220	per telefono
+2658220	2658480	diciamo
+2658480	2659040	sicuramente
+2659040	2659940	o tramite minuto
+2659940	2661160	o tramite documentazione
+2661160	2661980	è bene
+2661980	2662880	è bene
+2662880	2664200	che il cliente
+2664200	2665620	ci fornisca
+2665620	2667000	queste cose
+2667000	2667780	magari per essere
+2667780	2668680	in anticipo
+2668680	2670720	per avvantaggiarci
+2670720	2672260	per avvantaggiare
+2672260	2673080	anche il cliente
+2673080	2674100	per accelerare il tutto
+2674100	2674460	magari
+2674460	2675860	da una chiamata
+2675860	2676520	noi possiamo
+2676520	2677760	possiamo dedurre
+2677760	2678440	un qualcosa
+2678440	2678800	però
+2678800	2679260	è bene
+2679260	2680620	che il cliente
+2680620	2681540	poi documenti
+2681540	2681960	il tutto
+2681960	2682500	in maniera
+2682500	2684900	processuale
+2684900	2687280	ok
+2687280	2688600	anche perché
+2688600	2688980	poi loro
+2688980	2689600	non sarebbero
+2689600	2690440	poi compliance
+2690440	2691240	con le regole
+2691240	2691780	a spice
+2691780	2692100	ecco
+2692100	2693280	noi non riusciremmo
+2693280	2693580	poi
+2693580	2694560	ad ottenere
+2694560	2695560	una tracciabilità
+2695560	2698520	completa
+2698520	2700140	se questo requisito
+2700140	2701420	non viene documentato
+2701420	2701880	in maniera
+2701880	2702800	corretta
+2702800	2709460	ok
+2709460	2710020	quindi poi
+2710020	2711080	c'è la fase
+2711080	2712540	di documentazione
+2712540	2713340	e analisi
+2713340	2714280	quindi
+2714280	2715620	questa è una fase
+2715620	2716220	che viene
+2716220	2717460	successivamente
+2717460	2718320	dopo
+2718320	2720180	o nello stesso
+2720180	2720940	contesto
+2720940	2721800	delle licitation
+2721800	2723740	possiamo anche
+2723740	2724640	iniziare a fare
+2724640	2725280	un'analisi
+2725280	2725780	per capire
+2725780	2727420	se il requisito
+2727420	2728300	è chiaro
+2728300	2729540	se è valido
+2729540	2731040	se è consistente
+2731040	2733180	se non è ambiguo
+2733180	2734160	non è ambiguo
+2734160	2735200	nel senso che
+2735200	2737940	non permette
+2737940	2738360	di avere
+2738360	2739840	differenti
+2739840	2741000	punti di vista
+2741000	2741160	o
+2741160	2741740	differenti
+2741740	2745380	modi
+2745380	2746120	di
+2746120	2749680	comprensione
+2749680	2753360	quindi
+2753360	2754020	questa fase
+2754020	2754540	può essere
+2754540	2754740	anche
+2754740	2755080	inclusa
+2755080	2755480	nella fase
+2755480	2755620	di
+2755620	2756340	licitation
+2756340	2756780	e poi
+2756780	2757120	c'è tutta
+2757120	2757500	la fase
+2757500	2757900	di
+2757900	2759140	documentazione
+2759140	2762460	documentazione
+2762460	2763120	in maniera
+2763120	2763700	chiara
+2763700	2764320	e quindi
+2764320	2764980	documentare
+2764980	2765500	il requisito
+2765500	2766020	che ci arriva
+2766020	2767140	dal cliente
+2767140	2769360	attraverso
+2769360	2770240	dei tool
+2770240	2772660	non so
+2772660	2773180	se conoscete
+2773180	2773760	qualche tool
+2773760	2774840	di documentazione
+2774840	2775500	di raccolta
+2775500	2776240	di requisiti
+2776240	2776800	può essere
+2776800	2777700	diciamo
+2777700	2778620	quello più famoso
+2778620	2779060	che però
+2779060	2780000	sta diventando
+2780000	2780340	un po'
+2780440	2781240	obsoleto
+2781240	2781540	e
+2781540	2782240	dors
+2782240	2784620	ci sta
+2784620	2785020	c'è
+2785020	2785500	jama
+2785500	2786480	c'è
+2786480	2787380	polarion
+2787380	2788340	ci sono
+2788340	2788900	diversi
+2788900	2790740	tool
+2790740	2791040	che ci
+2791040	2791440	permettono
+2791440	2792180	di documentare
+2792180	2792420	poi
+2792420	2793500	è il cliente
+2793500	2793760	che
+2793760	2794360	meno male
+2794360	2794800	guida
+2794800	2795920	nell'utilizzo
+2795920	2796340	di questo
+2796340	2796680	tool
+2796680	2797720	alcune volte
+2797720	2798700	mi è capitato
+2798700	2800500	che il cliente
+2800500	2801000	chiedesse
+2801000	2801620	a noi
+2801620	2803880	quale fosse
+2803880	2804320	un tool
+2804320	2805860	più pratico
+2805860	2806340	e più veloce
+2806340	2807380	da poter utilizzare
+2807380	2808020	perché loro
+2808020	2808700	a volte
+2808700	2809800	ci sono dei clienti
+2809800	2810180	che proprio
+2810180	2811220	non hanno proprio
+2811220	2811840	una minima idea
+2811840	2812200	di cosa
+2812200	2813680	si intende
+2813680	2815940	per gestione
+2815940	2816560	dei requisiti
+2816560	2816800	ecco
+2816800	2817540	hanno una gestione
+2817540	2817960	dei requisiti
+2817960	2818360	molto
+2818360	2818780	molto
+2818780	2820120	primitiva
+2820120	2821060	su fogli di carta
+2821060	2821800	o su word
+2821800	2822700	veramente
+2822700	2824640	alcuni
+2824640	2825320	clienti
+2825320	2825680	sono molto
+2825680	2826200	messi male
+2826200	2827060	clienti non
+2827060	2827780	automotive
+2827780	2828200	ecco
+2828200	2829040	clienti
+2829040	2831540	ad esempio
+2831540	2833000	con Dyson
+2833000	2833620	mi è capitato
+2833620	2833940	di avere
+2833940	2834660	questo
+2834660	2836060	riscontro
+2836060	2836420	dove loro
+2836420	2836880	non hanno
+2836880	2837480	una gestione
+2837480	2837980	dei requisiti
+2837980	2838220	quindi
+2838220	2839300	ci hanno chiesto
+2839300	2839880	esplicitamente
+2839880	2840600	di fornirgli
+2840600	2841860	una sorta
+2841860	2843520	di comparison
+2843520	2844720	tra i diversi tool
+2844720	2845740	le quali potrebbe essere
+2845740	2846460	quello che fa
+2846460	2847040	a caso loro
+2847040	2851120	ok
+2851120	2853760	poi abbiamo
+2853760	2854920	questo punto
+2854920	2855280	qui
+2855280	2855880	che è la parte
+2855880	2856760	di tracciabilità
+2856760	2859340	quindi un requisito
+2859340	2859900	deve essere
+2859900	2860640	tracciabile
+2860640	2861440	quindi si deve
+2861440	2862980	deve poter
+2862980	2864840	diciamo
+2864840	2866280	chiunque
+2866280	2868560	chiunque
+2868560	2870380	deve poter
+2870380	2873380	tracciare
+2873380	2874340	il requisito
+2874340	2874800	cioè
+2874800	2875440	chiunque
+2875440	2876380	più che tracciare
+2876380	2877540	chiunque deve poter
+2877540	2879640	navigare
+2879640	2880980	il flusso
+2880980	2881880	del requisito
+2881880	2882520	a partire
+2882520	2883780	dalla sorgente
+2883780	2884800	che è il documento
+2884800	2885460	del cliente
+2885460	2885900	sino
+2885900	2888220	alla validazione
+2888220	2891020	quindi deve poter
+2891020	2891620	seguire
+2891620	2892560	tutto il ciclo
+2892560	2892820	AV
+2892820	2894060	attraverso
+2894060	2894660	questa
+2894660	2895580	diciamo
+2895580	2896800	questa
+2896800	2899080	tracciabilità
+2899080	2902020	quindi il requisito
+2902020	2902920	è non solo
+2902920	2904240	non solo
+2904240	2905180	quindi deve seguire
+2905180	2905900	il modello AV
+2905900	2907240	ma deve poter
+2907240	2908000	anche
+2908000	2908940	essere
+2908940	2911300	tracciato
+2911300	2911780	a livello
+2911780	2912180	di
+2912180	2913760	di project
+2913760	2915500	management
+2915500	2916820	in che senso
+2916820	2918180	quindi c'è
+2918180	2919020	tutta la parte
+2919020	2919460	di
+2919460	2920440	questa
+2920440	2921400	immagine
+2921400	2922080	non è molto
+2922080	2923400	semplificativa
+2923400	2923980	nel senso che
+2923980	2924640	potrebbe trarre
+2924640	2925060	in inganno
+2925060	2925360	però
+2925360	2927160	abbiamo una parte
+2927160	2927540	in cui
+2927540	2928620	il requisito
+2928620	2930100	quindi la sorgente
+2930100	2930800	è collegata
+2930800	2931920	a tutti i requisiti
+2931920	2933140	relativi al
+2933140	2933860	subdomain
+2933860	2934940	quindi tutti i requisiti
+2934940	2937640	della parte
+2937640	2938300	della
+2938300	2939140	AV model
+2939140	2939800	della parte
+2939800	2940660	a sinistra
+2940660	2941920	quindi c'è
+2941920	2942360	la parte
+2942360	2942900	ad esempio
+2942900	2943400	questo qua
+2943400	2944220	possiamo considerarlo
+2944220	2944480	come
+2944480	2946000	il sys1
+2946000	2947640	e questi qua
+2947640	2947960	li possiamo
+2947960	2948480	considerare
+2948480	2949460	tutti i requisiti
+2949460	2950540	di livelli
+2950540	2951960	successivi
+2951960	2952480	la parte
+2952480	2953040	di sys2
+2953040	2953380	la parte
+2953380	2953980	di software
+2953980	2954380	la parte
+2954380	2954820	di
+2954820	2956340	diciamo
+2956340	2956600	di
+2956600	2958300	architettura
+2958300	2960000	e poi
+2960000	2960780	c'è una parte
+2960780	2961140	di
+2961140	2962380	test case
+2962380	2963740	e una parte
+2963740	2964100	anche
+2964100	2964940	relativa
+2964940	2965940	al codice
+2965940	2966920	quindi c'è
+2966920	2967580	questa parte
+2967580	2968020	qui
+2968020	2969300	che è la parte
+2969300	2969840	un po' più
+2969840	2970860	pratica
+2970860	2972980	e poi c'è
+2972980	2973420	la parte
+2973420	2973940	relativa
+2973940	2974960	al progetto
+2974960	2975600	che sono questi
+2975600	2976220	tre
+2976220	2978500	blocchi
+2978500	2979260	che fanno
+2979260	2979820	riferimento
+2979820	2980500	al task
+2980500	2982220	ad eventuali
+2982220	2983160	incidenti
+2983160	2983680	ad eventuali
+2983680	2984520	problemi
+2984520	2986160	e ad eventuali
+2986160	2986580	rischi
+2986580	2987400	che possono
+2987400	2988620	essere sollevati
+2988620	2989320	con questo
+2989320	2990160	requisito
+2990160	2991380	quindi c'è
+2991380	2991780	una fase
+2991780	2992360	pratica
+2992360	2993100	quindi il requisito
+2993100	2994000	deve poter essere
+2994000	2994580	navigabile
+2994580	2995380	tracciabile
+2995380	2997740	tecnicamente
+2997740	2998160	quindi
+2998160	2999560	con i domini
+2999560	3002380	con i domini
+3002380	3003180	facendo riferimento
+3003180	3003820	al ciclo AV
+3003820	3005720	considerando
+3005720	3006600	anche il test case
+3006600	3007240	e il source code
+3007240	3007680	e poi c'è
+3007680	3008320	questa parte
+3008320	3009900	di project
+3009900	3011860	questa immagine
+3011860	3012440	forse la devo
+3012440	3013700	migliorare
+3013700	3014020	perché
+3014020	3014540	scusa
+3014540	3015260	ma cosa
+3015260	3015840	intendi
+3015840	3019760	cosa intendi
+3019760	3020820	per rischi
+3020820	3021400	nel senso
+3021400	3022340	che il requisito
+3022340	3023160	non è scritto
+3023160	3023640	bene
+3023640	3023960	e quindi
+3023960	3024360	deve essere
+3024360	3024420	no
+3024420	3024760	no
+3024760	3025540	no
+3025540	3027140	no
+3027140	3027380	no
+3027380	3027540	no
+3027540	3027820	no
+3027820	3028400	in pratica
+3028400	3029260	questo risk
+3029260	3030700	diciamo che
+3030700	3032760	viene sollevato
+3032760	3033320	cioè
+3033320	3033980	non sempre
+3033980	3034380	questi
+3034380	3035560	sicuramente
+3035560	3036400	questo task
+3036400	3037340	sicuramente
+3037340	3038040	c'è sempre
+3038040	3039440	perché in pratica
+3039440	3040600	tu per ogni attività
+3040600	3041280	che esegui
+3041280	3041860	devi avere
+3041860	3042480	un task
+3042480	3043820	un task
+3043820	3044320	diciamo
+3044320	3044780	che ti dice
+3044780	3045600	ok tu stai lavorando
+3045600	3046040	su questa
+3046040	3047260	su questa attività
+3047260	3048520	quindi devi tracciare
+3048520	3049560	anche la tua attività
+3049560	3050440	il tuo requisito
+3050440	3052420	a livello di progetto
+3052420	3053060	per la gestione
+3053060	3053640	delle ore
+3053640	3054440	quante ore ci metti
+3054440	3055340	per lavorare
+3055340	3057100	e devi poter tracciare
+3057100	3057840	la tua attività
+3057840	3059240	poi questi due
+3059240	3060380	incidenti e rischi
+3060380	3061540	chiaramente
+3061540	3063500	si presentano
+3063500	3063980	qualora
+3063980	3065340	il requisito
+3065340	3066360	qualora ci sia
+3066360	3066920	un problema
+3066920	3067140	no
+3067140	3067960	sollevato durante
+3067960	3068700	il test case
+3068700	3069760	cioè durante la fase
+3069760	3070340	di validazione
+3070340	3071360	tu sollevi un problema
+3071360	3073540	e lo puoi
+3073540	3074260	diciamo
+3074260	3075320	chiaramente qui
+3075320	3076140	è definito
+3076140	3076780	come incidente
+3076780	3076940	però
+3076940	3077560	lo
+3077560	3078660	apri
+3078660	3079360	tu
+3079360	3080420	un issue
+3080420	3081840	e chiaramente
+3081840	3082440	questa issue
+3082440	3083460	deve essere collegata
+3083460	3084340	al requisito
+3084340	3084880	sorgente
+3084880	3085580	cioè a chi
+3085580	3086800	a qual è il requisito
+3086800	3087680	che ti sta creando
+3087680	3088260	un problema
+3088260	3091280	il rischio invece
+3091280	3092080	viene sollevato
+3092080	3092620	qualora
+3092620	3093840	diciamo
+3093840	3096160	oltre al problema
+3096160	3097160	evidenziato
+3097160	3097940	durante la fase
+3097940	3098580	di test case
+3098580	3099880	questo tipo di problema
+3099880	3100480	potrebbe
+3100480	3101700	far emergere
+3101700	3102140	dei rischi
+3102140	3102620	a livello
+3102620	3103140	di
+3103140	3104220	si chiama
+3104220	3105240	risk management
+3105240	3107760	potrebbe far
+3107760	3108100	sollevare
+3108100	3108580	dei problemi
+3108580	3108960	a livello
+3108960	3110960	di delivery
+3110960	3113680	questo problema
+3113680	3114220	ad esempio
+3114220	3115180	ha un rischio
+3115180	3116080	sulla delivery
+3116080	3116540	nel senso
+3116540	3117260	che potrebbe
+3117260	3118300	farmi ritardare
+3118300	3118860	la delivery
+3118860	3119700	perché
+3119700	3120980	c'è un problema
+3120980	3121720	e questo problema
+3121720	3122620	deve essere risolto
+3122620	3123500	quindi quali sono
+3123500	3124300	i rischi
+3124300	3125900	che questo tipo
+3125900	3126640	di requisito
+3126640	3127300	che è stato scritto
+3127300	3127940	in questo modo
+3127940	3128940	magari errato
+3128940	3129400	oppure
+3129400	3132840	non è stato scritto
+3132840	3133180	bene
+3133180	3133660	non è stato
+3133660	3134300	inteso bene
+3134300	3134940	porta
+3134940	3136160	al progetto
+3136160	3136740	al ciclo vita
+3136740	3138080	del progetto
+3138960	3140340	ok
+3140340	3140960	chiaro
+3140960	3141680	ok
+3141680	3143420	l'incidente
+3143420	3144100	visto come
+3144100	3144500	ok
+3144500	3145320	è puntuale
+3145320	3145460	no
+3145460	3146480	qual è il problema
+3146480	3146920	che io
+3146920	3147840	ho
+3147840	3149340	evidenziato
+3149340	3149900	qual è il problema
+3149900	3150200	che io
+3150200	3151000	ho riscontrato
+3151000	3152600	e il rischio
+3152600	3153340	non è altro
+3153340	3153640	che
+3153640	3154580	quali sono
+3154580	3155500	gli impatti
+3155500	3157220	che il problema
+3157220	3157660	o
+3157660	3158560	un qualsiasi tipo
+3158560	3159220	di
+3159220	3164200	più che il problema
+3164200	3165940	oltre a essere
+3165940	3166380	il problema
+3166380	3167100	perché può essere
+3167100	3167620	collegato
+3167620	3168220	incidenti e rischio
+3168220	3169160	possono essere collegati
+3169160	3170060	o magari
+3170060	3170740	c'è un qualcosa
+3170740	3171240	che non va
+3171240	3172400	a livello di requisito
+3172400	3173380	che non è stato
+3173380	3174520	ancora evidenziato
+3174520	3174880	a livello
+3174880	3176760	con un issue
+3176760	3178240	qual è il rischio
+3178240	3179280	che potrebbe portare
+3179280	3179960	ad esempio
+3179960	3181800	ad un ritardo
+3181800	3183300	del rilascio
+3183300	3184020	del software
+3184020	3185220	o ad un ritardo
+3185220	3187300	delle altre attività
+3187300	3189420	che vengono dopo
+3189420	3192280	ok
+3192280	3193660	e questa tracciabilità
+3193660	3194840	ci permette
+3194840	3195100	ecco
+3195100	3195920	di risalire
+3195920	3199900	alla sorgente
+3199900	3200840	ed è proprio
+3200840	3202360	questa tracciabilità
+3202360	3203120	che è un punto
+3203120	3204260	veramente fondamentale
+3204260	3204700	poi
+3204700	3205420	per la parte
+3205420	3206400	di mantenimento
+3206400	3206940	e per la parte
+3206940	3207920	di change management
+3207920	3213000	ok
+3213000	3227980	poi
+3227980	3228560	diciamo
+3228560	3229700	c'è una delle ultime
+3229700	3230160	parti
+3230160	3230860	che è relativa
+3230860	3231800	alla verification
+3231800	3232720	and validation
+3232720	3235560	questo
+3235560	3236480	probabilmente
+3236480	3237420	voi siete già
+3237420	3238080	abbastanza
+3238080	3239460	più o meno
+3239460	3240500	sul pezzo
+3240500	3242140	ed una fase
+3242140	3242640	in cui
+3242640	3244100	diciamo
+3244100	3244720	il team
+3244720	3246620	il team
+3246620	3248020	di validazione
+3248020	3249200	e di verifica
+3249200	3250280	diciamo
+3250280	3251500	si attiva
+3251500	3252960	per poter
+3252960	3254580	diciamo
+3254580	3256340	completare
+3256340	3257720	e supportare
+3257720	3258360	qualora ci
+3258360	3259180	dovesse essere
+3259180	3260400	bisogno
+3260400	3263860	diciamo
+3263860	3264380	il
+3264380	3266920	il punto finale
+3266920	3267400	diciamo
+3267400	3268060	supportare
+3268060	3269120	alla definizione
+3269120	3270120	definitiva
+3270120	3272120	del requisito
+3272120	3272840	sia in termini
+3272840	3273480	di descrizione
+3273480	3274220	sia in termini
+3274220	3274580	di
+3274580	3276060	testabilità
+3276060	3276800	ecco
+3276800	3277220	quindi
+3277220	3278060	c'è una fase
+3278060	3279460	di review
+3279460	3280580	dei requisiti
+3280580	3281920	che avviene
+3281920	3282860	regolarmente
+3282860	3286680	quindi con una fase
+3286680	3287140	di
+3287140	3287880	quindi
+3287880	3289320	vengono esaminati
+3289320	3290540	i requisiti
+3290540	3292240	e poi
+3292240	3292640	chiaramente
+3292640	3293200	c'è la fase
+3293200	3294020	di testing
+3294020	3295060	quindi
+3295060	3296120	durante il ciclo vita
+3296120	3297020	di un requisito
+3297020	3298800	diciamo
+3298800	3299720	una delle fasi
+3299720	3300220	finali
+3300220	3301240	del requisito
+3301240	3301940	prima di essere
+3301940	3302660	definitivamente
+3302660	3303220	approvato
+3303220	3303540	è quella
+3303540	3303880	della
+3303880	3304960	review
+3304960	3305760	che viene
+3305760	3306480	fatta
+3306480	3308040	dal team
+3308040	3309280	di validazione
+3309280	3311260	che poi
+3311260	3312000	si occuperà
+3312000	3312540	della fase
+3312540	3313560	di testing
+3313560	3314080	una volta
+3314080	3314540	che ha
+3314540	3315280	approvato
+3315280	3316440	e ha validato
+3316440	3317460	il requisito
+3317460	3317820	e la sua
+3317820	3318480	testabilità
+3318480	3319340	a livello
+3319340	3320500	descrittivo
+3320500	3322280	si pone
+3322280	3323440	quindi
+3323440	3324220	si attiva
+3324220	3325020	per la fase
+3325020	3325360	di
+3325360	3326320	testing
+3326320	3334240	chiaramente
+3334240	3334580	la fase
+3334580	3335000	di review
+3335000	3335760	e di inspection
+3335760	3338080	rientra
+3338080	3338580	nella fase
+3338580	3339460	di requirement
+3339460	3340420	management plan
+3340420	3341960	mentre la fase
+3341960	3342580	di testing
+3342580	3343200	è più
+3343200	3344040	rivolta
+3344040	3344600	alla fase
+3344600	3344980	diciamo
+3344980	3346280	alla documentazione
+3346280	3346760	della
+3346760	3348440	parte di validazione
+3348440	3349040	quindi è più
+3349040	3350660	lato validazione
+3350660	3350900	ecco
+3350900	3351380	come
+3351380	3352340	gestire
+3352340	3352820	la fase
+3352820	3353620	di testing
+3353620	3354220	quali sono
+3354220	3354780	diciamo
+3354780	3355920	le regole
+3355920	3356480	quali sono
+3356480	3357660	le best
+3357660	3358220	practice
+3358220	3359460	per poter
+3359460	3361640	affrontare
+3361640	3362000	la fase
+3362000	3363080	di testing
+3363080	3371920	ci siamo
+3371920	3372380	ragazzi
+3372380	3375000	sì sì
+3375000	3377120	sì sì
+3377120	3378300	tutto chiaro
+3378300	3380080	tutto chiaro
+3380080	3381700	ok
+3381700	3383000	quindi
+3383000	3384060	l'ultima
+3384060	3384580	fase
+3384580	3385700	è la parte
+3385700	3385900	di
+3385900	3386180	change
+3386180	3386760	management
+3386760	3388920	però
+3388920	3389620	credo
+3389620	3389800	che
+3389800	3390200	l'abbiamo
+3390200	3390920	affrontata
+3390920	3393100	a sufficienza
+3393100	3397380	niente
+3397380	3397780	che dirvi
+3397780	3398160	la fase
+3398160	3398580	di change
+3398580	3399140	management
+3399140	3400740	non so
+3400740	3400980	se
+3400980	3401440	volete
+3401440	3401740	avere
+3401740	3402100	qualche
+3402100	3402740	altro
+3402740	3405520	qualche
+3405520	3405840	altro
+3405840	3406620	dettaglio
+3406620	3406940	però
+3406940	3408660	diciamo
+3408660	3409460	la fase
+3409460	3409840	di change
+3409840	3410580	management
+3410580	3412040	è
+3412040	3414840	molto
+3414840	3416020	diciamo
+3416020	3416960	è importante
+3416960	3417360	però
+3417360	3418260	viaggia
+3418260	3419420	a braccetto
+3419420	3420580	con tutto
+3420580	3421000	quello che
+3421000	3421360	abbiamo
+3421360	3422060	definito
+3422060	3422460	prima
+3422460	3423520	senza
+3423520	3424300	tutto
+3424300	3424660	quello che
+3424660	3424880	abbiamo
+3424880	3425300	definito
+3425300	3425640	prima
+3425640	3425980	la fase
+3425980	3426360	di change
+3426360	3426820	management
+3426820	3428940	non ha
+3428940	3429800	i suoi effetti
+3429800	3432240	perché
+3432240	3432640	diciamo
+3432640	3433140	senza
+3433140	3434160	una tracciabilità
+3434160	3434640	e senza
+3434640	3435940	una documentazione
+3435940	3437520	fatta
+3437520	3437960	diciamo
+3437960	3440280	con un
+3440280	3440860	criterio
+3440860	3443380	la fase
+3443380	3443700	di change
+3443700	3444220	management
+3444220	3446720	rischia
+3446720	3447700	di portare
+3447700	3448480	ulteriori
+3448480	3449240	disordini
+3449240	3449820	all'interno
+3449820	3450440	del processo
+3450440	3451460	perché la fase
+3451460	3451700	di change
+3451700	3452080	management
+3452080	3452600	porta
+3452600	3453160	disordini
+3453160	3453880	nel processo
+3453880	3455680	perché tu
+3455680	3456260	da un momento
+3456260	3456660	all'altro
+3456660	3458000	potresti
+3458000	3459820	essere in una fase
+3459820	3460620	in cui stai
+3460620	3461340	definendo
+3461340	3462100	il requisito
+3462100	3462720	ma nello stesso
+3462720	3463120	tempo
+3463120	3464040	dopo due giorni
+3464040	3464880	il cliente
+3464880	3465300	ha deciso
+3465300	3466160	di cambiare
+3466160	3466940	quel requisito
+3466940	3468700	quindi tu devi
+3468700	3469340	essere in grado
+3469340	3469900	di affrontare
+3469900	3470780	questo cambiamento
+3470780	3472680	e questo
+3472680	3473160	cambiamento
+3473160	3474060	lo puoi affrontare
+3474060	3474400	se
+3474400	3475480	quel requisito
+3475480	3475920	lo hai
+3475920	3476840	elicitato
+3476840	3477300	no vabbè
+3477300	3477760	è brutto dire
+3477760	3478860	se lo hai
+3478860	3479580	consolidato
+3479580	3479960	nella fase
+3479960	3480680	di licitation
+3480680	3481860	quindi se
+3481860	3482260	è tuo
+3482260	3482620	già
+3482620	3484040	se tu sei
+3484040	3484420	padrone
+3484420	3485200	di quel requisito
+3485200	3486200	puoi affrontare
+3486200	3487020	un cambiamento
+3487020	3488500	se tu lo hai
+3488500	3489220	documentato
+3489220	3489720	bene
+3489720	3490880	puoi affrontare
+3490880	3491800	un cambiamento
+3491800	3492160	perché
+3492160	3493080	è padrone
+3493080	3493820	di quel requisito
+3493820	3494180	e quindi
+3494180	3495440	sai
+3495440	3497780	sei in grado
+3497780	3498480	di leggere
+3498480	3499320	il cambiamento
+3499320	3499880	e di poterlo
+3499880	3500540	apportare
+3500540	3501520	poi
+3501520	3503880	sul requisito
+3503880	3506240	la tracciabilità
+3506240	3506900	è fondamentale
+3506900	3508240	perché tu riesci
+3508240	3509080	a
+3509080	3510320	diciamo
+3510320	3511280	ad informare
+3511280	3512600	anche gli altri
+3512600	3513400	domini
+3513400	3515040	guardate che
+3515040	3516200	io questo requisito
+3516200	3516920	lo sto cambiando
+3516920	3517940	quindi tu devi cambiare
+3517940	3518940	quest'altro requisito
+3518940	3519500	software
+3519500	3520320	ad esempio
+3520320	3521480	tu devi cambiare
+3521480	3522460	questo test case
+3522460	3523580	quindi
+3523580	3524640	la tracciabilità
+3524640	3525320	è fondamentale
+3525320	3526000	per poter
+3526000	3527140	diciamo
+3527140	3528060	informare
+3528060	3529960	anche gli altri
+3529960	3530580	domini
+3530580	3531560	nel caso
+3531560	3532120	diciamo
+3532120	3533640	l'esame
+3533640	3534700	la parte di validazione
+3534700	3535980	che siete più vicini
+3535980	3536380	voi
+3536380	3537520	quindi voi sapete
+3537520	3538780	qual è il test case
+3538780	3539340	da dover
+3539340	3540980	cambiare
+3540980	3544160	e quindi
+3544160	3545040	chiaramente
+3545040	3546160	validare
+3546160	3547460	il nuovo cambiamento
+3547460	3547780	quindi
+3547780	3549100	la parte di change management
+3549100	3550060	è fondamentale
+3550060	3550380	però
+3550380	3551160	diciamo
+3551160	3552060	è molto importante
+3552060	3552360	ma
+3552360	3554300	crea disordini
+3554300	3554680	però
+3554680	3555600	questo disordine
+3555600	3556020	può essere
+3556020	3556800	minimizzato
+3556800	3558120	con
+3558120	3560880	tutti gli
+3560880	3562460	step precedenti
+3562460	3563400	sono stati affrontati
+3563400	3563880	in maniera
+3563880	3566300	corretta
+3566300	3568320	ok
+3568320	3568640	quindi
+3568640	3568900	questo
+3568900	3569480	immagino
+3569480	3570500	questi cambiamenti
+3570500	3571160	sono possibili
+3571160	3571700	fino a quando
+3571700	3572400	non viene fatta
+3572400	3572660	diciamo
+3572660	3573180	la fase di
+3573180	3573640	freezing
+3573640	3574780	dei requisiti
+3574780	3575280	dove
+3575280	3575700	dopo
+3575700	3576100	immagino
+3576100	3576540	non si possono
+3576540	3577540	più modificare
+3577540	3579040	no
+3579040	3579720	diciamo
+3579720	3583700	hai usato
+3583700	3584120	una parola
+3584120	3585160	giusta
+3585160	3585400	che
+3585400	3585940	mi sono
+3585940	3586500	dimenticato
+3586500	3587260	io di dirla
+3587260	3587580	però
+3587580	3588860	la vorrei
+3588860	3589520	riprendere
+3589520	3590760	allora
+3590760	3591520	c'è una fase
+3591520	3591800	in cui
+3591800	3592700	il cliente
+3592700	3593360	fornisce
+3593360	3594140	dei requisiti
+3594140	3596340	e il cliente
+3596340	3596720	diciamo
+3596720	3597640	il fornitore
+3597640	3598020	deve
+3598020	3598720	chiedere
+3598720	3599280	al cliente
+3599280	3599660	guarda
+3599660	3600040	che tu
+3600040	3600520	mi devi dare
+3600520	3601020	una data
+3601020	3601760	entro la quale
+3601760	3602500	quei requisiti
+3602500	3603180	poi non devono
+3603180	3603960	più cambiare
+3603960	3606440	però
+3606440	3607140	una volta
+3607140	3607980	che il cliente
+3607980	3608300	ti dà
+3608300	3608980	una data
+3608980	3610100	tu hai
+3610100	3610740	questo pacchetto
+3610740	3611400	di requisiti
+3611400	3612040	ma non è detto
+3612040	3612780	che dopo
+3612780	3613380	quella data
+3613380	3613980	questi requisiti
+3613980	3614420	non possono
+3614420	3615060	cambiare
+3615060	3619500	è chiaro
+3619500	3619820	ok
+3619820	3621220	non troppo
+3621220	3622060	chiaro
+3622060	3622480	se
+3622480	3623480	non lo so
+3623480	3623920	me lo vorresti
+3623920	3624500	spiegare un po'
+3624560	3624660	meglio
+3624660	3625240	allora
+3625240	3625520	sì
+3625520	3626500	allora
+3626500	3627260	ti faccio
+3627260	3628180	un esempio
+3628180	3628980	fammi vedere
+3628980	3636000	allora
+3636000	3636700	tu hai
+3636700	3640060	tu hai
+3640060	3641480	una timeline
+3641480	3642120	no
+3642120	3643240	questo è il tempo
+3643240	3644380	quindi
+3644380	3646600	qua tu c'hai
+3646600	3648540	il software
+3648540	3649340	la delivery
+3649340	3649960	del software
+3649960	3651440	la prima versione
+3651440	3652420	quindi versione 1
+3652420	3653720	del software
+3653720	3656060	ok
+3656060	3657380	tu ricevi
+3657380	3657800	qua
+3657800	3660480	il primo pacchetto
+3660480	3662020	i documenti
+3662020	3662260	no
+3662260	3664280	qua tu ricevi
+3664280	3664880	i documenti
+3664880	3665080	quindi
+3665080	3665780	prima versione
+3665780	3667080	dei documenti
+3667080	3669900	chiaramente
+3669900	3670580	il cliente
+3670580	3671020	dice ok
+3671020	3671960	questa prima versione
+3671960	3672620	dei documenti
+3672620	3673200	io però
+3673200	3674600	posso modificarla
+3674600	3675740	e ti potrò dare
+3675740	3676600	tutti i requisiti
+3676600	3677260	congelati
+3677260	3677600	qui
+3677600	3679420	ok
+3679420	3682120	quindi facciamo
+3682120	3682460	che questa
+3682460	3683400	è la versione 0
+3683400	3686220	questa qua
+3686220	3687080	è la prima versione
+3687080	3687640	quindi tu
+3687640	3688540	la tua attività
+3688540	3689060	la devi
+3689060	3689760	la dovresti
+3689760	3690100	in teoria
+3690100	3690660	iniziare
+3690660	3691120	da qui
+3691120	3692740	perché io
+3692740	3693220	qui ho
+3693220	3694140	tutto il congelamento
+3694140	3695260	del primo pacchetto
+3695260	3695980	dei requisiti
+3695980	3696920	ok
+3696920	3697540	però dopo
+3697540	3698140	quella fase
+3698140	3698440	diciamo
+3698440	3698960	il cliente
+3698960	3699600	non può più
+3699600	3700360	intervenire
+3700360	3701140	sui requisiti
+3701140	3702480	no
+3702480	3703580	diciamo
+3703580	3704000	in teoria
+3704000	3705380	può intervenire
+3705380	3706920	creando
+3706920	3707660	una versione
+3707660	3708360	successiva
+3708360	3712980	ok
+3712980	3714140	cioè tu qua
+3714140	3714960	inizi a lavorare
+3714960	3715380	con tutti
+3715380	3716200	questi requisiti
+3716200	3719260	chiaramente
+3719260	3719580	però
+3719580	3720620	in base
+3720620	3721740	alle tempistiche
+3721740	3723100	si decide
+3723100	3723480	se
+3723480	3725100	il cambiamento
+3725100	3726100	che è avvenuto
+3726100	3728100	tra 1
+3728100	3728720	e 2
+3728720	3730600	può essere
+3730600	3732440	incluso
+3732440	3733480	nella versione 1
+3733480	3734140	del software
+3734140	3735520	magari lui dice
+3735520	3736120	guarda che io
+3736120	3736800	te li cambio
+3736800	3738840	in questa versione 2
+3738840	3739140	però
+3739140	3740700	tutto ciò che io
+3740700	3741220	ti ho cambiato
+3741220	3742180	in questa versione 2
+3742180	3743440	tu non me la devi mettere
+3743440	3744180	nella versione 1
+3744180	3744820	del software
+3744820	3745680	ma me la devi mettere
+3745680	3746420	nella versione 2
+3746420	3746860	magari
+3746860	3748560	ok
+3748560	3749240	è capito
+3749240	3752880	oppure lui dice
+3752880	3753460	guarda che c'è
+3753460	3754280	tanto tempo
+3754280	3755040	da qui
+3755040	3756300	dalla versione 2
+3756300	3757040	al rilascio
+3757040	3757700	del software
+3757700	3759560	quindi tu hai
+3759560	3760960	tempo per poter
+3760960	3762120	diciamo
+3762120	3762840	prendere i miei
+3762840	3763620	cambiamenti
+3763620	3764760	e metterli
+3764760	3765760	diciamo
+3765760	3767180	e implementarli
+3767180	3770000	ci sono delle date
+3770000	3770860	che sono definite
+3770860	3771700	come freeze
+3771700	3772680	freeze date
+3772680	3774220	cioè le date
+3774220	3775180	di congelamento
+3775180	3776920	in cui
+3776920	3777380	ti dice
+3777380	3777840	guarda che
+3777840	3778720	il pacchetto
+3778720	3779260	di requisiti
+3779260	3779840	è pronto
+3779840	3781200	quindi tu puoi iniziare
+3781200	3782020	la tua fase
+3782020	3782840	di elicitation
+3782840	3783460	puoi iniziare
+3783460	3783920	la tua fase
+3783920	3785460	di documentazione
+3785460	3786500	però
+3786500	3787940	durante questa fase
+3787940	3789380	ci potrebbero essere
+3789380	3790020	dei cambiamenti
+3790020	3790360	che però
+3790360	3791380	devono essere
+3791380	3791900	chiaramente
+3791900	3792820	definiti
+3792820	3794620	e concordati
+3794620	3796260	con il fornitore
+3796260	3796780	che
+3796780	3798140	in base alle tempistiche
+3798140	3798460	ti dice
+3798460	3799320	ok guarda
+3799320	3800160	il requisito
+3800160	3802240	qui
+3802240	3803000	non devi più
+3803000	3803580	prendere questo
+3803580	3804180	ma devi prendere
+3804180	3804880	questo qui
+3805180	3807340	perché
+3807340	3807940	siamo ancora
+3807940	3808460	in tempo
+3808460	3809160	per poter
+3809160	3810780	implementarlo
+3810780	3811920	ok
+3811920	3812440	oppure
+3812440	3813140	se ad esempio
+3813140	3813460	lui
+3813460	3814380	ti manda
+3814380	3815220	un'altra versione
+3815220	3815580	qua
+3815580	3816960	del documento
+3816960	3819080	è chiaro
+3819080	3819560	che tu qua
+3819560	3819940	non puoi
+3819940	3820720	non puoi più
+3820720	3821920	prenderti
+3821920	3823240	i cambiamenti
+3823240	3824040	e portarli
+3824040	3824820	nella versione 1
+3824820	3825440	del software
+3825440	3830080	ok
+3830080	3831140	e quindi
+3831140	3831620	entreranno
+3831620	3832720	poi nella versione 2
+3832720	3833500	ma
+3833500	3835260	nella versione 2
+3835260	3836080	nella versione 3
+3836080	3836640	poi questo
+3836640	3837220	verrà deciso
+3837220	3837800	come ti dicevo
+3837800	3838400	a cascata
+3838400	3838700	diciamo
+3838700	3840120	il project manager
+3840120	3840660	deciderà
+3840660	3841180	quando
+3841180	3842380	integrare
+3842380	3843000	quando includere
+3843000	3844060	questi cambiamenti
+3844060	3844980	e tu saprai
+3844980	3845920	che questo cambiamento
+3845920	3846380	lo dovrai
+3846380	3846920	prendere
+3846920	3848280	in carico
+3848280	3849280	per la versione 2
+3849280	3849880	del software
+3849880	3850820	quindi se stavi
+3850820	3851460	facendo ancora
+3851460	3852060	qualche attività
+3852060	3852940	per la versione 1
+3852940	3853740	questi cambiamenti
+3853740	3854580	a te non ti devono
+3854580	3855680	interessare
+3855680	3856140	al momento
+3856140	3857080	ok
+3857080	3858380	ma c'è un momento
+3858380	3859620	esiste un momento
+3859620	3860620	in cui il cliente
+3860620	3862000	non può più intervenire
+3862000	3863000	perché ormai
+3863000	3863480	il prodotto
+3863480	3863900	deve essere
+3863900	3864800	magari rilasciato
+3864800	3865640	nel commercio
+3865640	3866740	no
+3866740	3867640	diciamo che il cliente
+3867640	3868160	ha in mano
+3868160	3869820	il cliente è quello
+3869820	3871200	che chiede a te
+3871200	3871780	di sviluppare
+3871780	3872560	qualcosa per lui
+3872560	3873660	quindi lui decide
+3873660	3875380	se lui ha i soldi
+3875380	3876660	ogni cambiamento
+3876660	3877860	che lui chiede
+3877860	3879460	ti deve pagare
+3879460	3879800	ok
+3879800	3880700	lui ti può chiedere
+3880700	3881540	anche un cambiamento
+3881540	3882900	per l'ultimo giorno
+3882900	3883160	però
+3883160	3884060	diciamo è sua
+3884060	3885100	come si dice
+3885100	3887060	è responsabilità sua
+3887060	3887900	prima di tutto
+3887900	3889740	pagarti per questo cambiamento
+3889740	3890860	e nel secondo modo
+3890860	3891840	chiaramente
+3891840	3892920	subire dei ritardi
+3892920	3894860	sul rilascio
+3894860	3895240	ok
+3895240	3896160	chiarissimo
+3896160	3896600	grazie
+3896600	3897000	sì Mario
+3897000	3898000	volevo solo aggiungere
+3898000	3898600	una cosa
+3898600	3899640	Mario
+3899640	3900320	io avrei
+3900320	3900840	scusami
+3900840	3902540	sempre Pasquale
+3902540	3903580	voglio giusto dire una cosa
+3903580	3905260	e ti lascio parlare
+3905260	3907080	e meno male
+3907080	3908520	che te ne devi andare
+3908520	3910480	quando ci sono queste lezioni
+3910480	3911340	io ne approfitto
+3911340	3912620	io sono uno studente
+3912620	3913280	sempre
+3913280	3914740	quindi è interessantissima
+3914740	3915400	questa lezione
+3915400	3916480	sempre
+3916480	3917000	bravo
+3917000	3917400	no no
+3917400	3918280	volevo soltanto dire
+3918280	3919200	che sull'ambito
+3919200	3920680	quando abbiamo spiegato
+3920680	3921740	diciamo il cycle
+3921740	3922700	eccetera eccetera
+3922700	3924340	per dare un'idea di massima
+3924340	3926460	avevo preso una scheda progetto
+3926460	3927300	di un cliente
+3927300	3928240	dove effettivamente
+3928240	3929060	a un certo punto
+3929060	3929860	del progetto
+3929860	3931000	ovviamente i requisiti
+3931000	3932120	venivano frizzati
+3932120	3934420	per trasmettere l'idea
+3934420	3935000	che chiaramente
+3935000	3936380	il requisito
+3936380	3937300	viene scritto
+3937300	3938100	approvato
+3938100	3939140	come dicevi prima
+3939140	3940480	e poi si implementa
+3940480	3941100	si testa
+3941100	3941760	eccetera eccetera
+3941760	3942600	eccetera
+3942600	3944680	l'idea del change management
+3944680	3945440	il change request
+3945440	3946040	eccetera
+3946040	3947220	è proprio per gestire
+3947220	3948460	appunto
+3948460	3948960	non voglio dire
+3948960	3949880	questi fuori process
+3949880	3950500	perché comunque
+3950500	3951580	parte del processo
+3951580	3952260	però per dire
+3952260	3953020	se il cliente
+3953020	3954200	ti chiede dei cambiamenti
+3954200	3955760	fuori programma
+3955760	3957680	anche un contesto
+3957680	3958560	rispetto a quello che
+3958560	3959560	diciamo ci siamo
+3959560	3960540	ditti con i ragazzi
+3960540	3961880	informazione
+3961880	3962560	dove guardavamo
+3962560	3963480	questa scheda progetto
+3963480	3964180	e ci dicevamo
+3964180	3965120	ok a un certo punto
+3965120	3965580	i requisiti
+3965580	3966460	sono frizzati
+3966460	3968520	questo diciamo
+3968520	3969300	è per gestire
+3969300	3970160	i cambiamenti
+3970160	3970960	successivi
+3970960	3972160	anche eventualmente
+3972160	3972840	a quelle date
+3972840	3974260	di frizz
+3974260	3974900	ma giustamente
+3974900	3975660	fino a che ci stanno
+3975660	3976300	i soldi
+3976300	3977240	è il cliente
+3977240	3977580	che fa
+3977580	3977820	questo
+3977820	3980620	no ma infatti
+3980620	3981240	stavo pensando
+3981240	3981980	proprio a quella
+3981980	3982920	diciamo
+3982920	3983300	un processo
+3983300	3984420	che ci hai fatto vedere
+3984420	3986060	ma voi non vai in contatto
+3986060	3987220	diciamo che il change management
+3987220	3987860	chiaramente
+3987860	3988940	resta che tu
+3988940	3991200	definisci delle date
+3991200	3991800	e appunto
+3991800	3993260	degli accordi economici
+3993260	3994020	con chi ti deve
+3994020	3995200	implementare il software
+3995200	3995760	poi nel momento
+3995760	3996480	in cui tu decidi
+3996480	3997160	il tuo cliente
+3997160	3997960	decidi di fare
+3997960	3998860	delle modifiche
+3998860	4000740	e il fornitore
+4000740	4001260	ti dirà
+4001260	4001700	ok
+4001700	4002640	questo va fuori
+4002640	4003980	dal nostro contratto
+4003980	4004520	iniziale
+4004520	4005160	pagami
+4005160	4006000	se il cliente
+4006000	4006840	c'ha i soldi
+4006840	4007740	allora la modifica
+4007740	4008540	si fa sempre
+4008540	4009480	se no
+4009480	4009920	no
+4009920	4011180	quindi non va in contrasto
+4011180	4011740	rispetto a quello
+4011740	4012540	che ci siamo detti
+4012540	4013680	è un approfondimento
+4013680	4015620	estremamente interessante
+4015620	4015920	direi
+4015920	4016740	infatti Mario
+4016740	4017340	Gabriele
+4017340	4018020	appucerò
+4018020	4019440	fortemente
+4019440	4020560	di questa lezione
+4020560	4021520	per i prossimi
+4021520	4022800	programmi di formazione
+4022800	4026360	sì
+4026360	4026640	no
+4026640	4027520	diciamo che
+4027520	4028220	il change management
+4028220	4028460	è che
+4028460	4029260	non vedetelo
+4029260	4030600	come qualcosa
+4030600	4032460	che vi stravolgerà
+4032460	4032940	la vita
+4032940	4033220	ecco
+4033220	4033480	non
+4033480	4035080	non abbiate paura
+4035080	4036060	di questo change management
+4036060	4036480	che può
+4036480	4037480	sembrare un po'
+4037740	4040220	che disturba
+4040220	4040500	un po'
+4040540	4041360	la nostra attività
+4041360	4041700	però
+4041700	4042840	è chiaro
+4042840	4043280	che
+4043280	4044240	che bisogna
+4044240	4044960	essere pronti
+4044960	4045660	qualora ci dovesse
+4045660	4046800	essere dei cambiamenti
+4046800	4047140	però
+4047140	4047680	diciamo
+4047680	4048620	è tutto a cascata
+4048620	4049120	cioè nel senso
+4049120	4050160	tu non dovrai mai
+4050160	4051720	a meno che non diventi
+4051720	4052780	poi un project manager
+4052780	4053400	o quant'altro
+4053400	4054240	dover discutere
+4054240	4055500	su quando far entrare
+4055500	4056120	il cambiamento
+4056120	4057380	o meno
+4057380	4058640	sulla parte di budget
+4058640	4059140	e quant'altro
+4059140	4059380	però
+4059380	4060980	tu quello che ricevi
+4060980	4062060	è una richiesta
+4062060	4063240	di cambiamento
+4063240	4064180	di quel requisito
+4064180	4066060	nella versione
+4066060	4066500	X
+4066500	4067640	del software
+4067640	4069380	cioè
+4069380	4070480	se tu stai lavorando
+4070480	4071160	per la versione
+4071160	4072180	1 del software
+4072180	4073780	e dall'alto
+4073780	4074740	ti arriva una richiesta
+4074740	4075460	di cambiare
+4075460	4076240	il requisito
+4076240	4076960	nella versione 1
+4076960	4077560	del software
+4077560	4078780	lo farai
+4078780	4079680	con tranquillità
+4079680	4080240	non c'è
+4080240	4082540	nessuna difficoltà
+4082540	4082860	ecco
+4082860	4084320	però
+4084320	4085300	è una cosa
+4085300	4086040	che ci arriva
+4086040	4086800	e dobbiamo
+4086800	4088660	saperla affrontare
+4088660	4093400	i cambiamenti
+4093400	4094180	possono arrivare
+4094180	4095060	in qualsiasi
+4095060	4095620	in qualsiasi
+4095620	4095940	momento
+4095940	4096220	però
+4096220	4096740	diciamo
+4096740	4097660	nelle fasi iniziali
+4097660	4098300	del progetto
+4098300	4098940	si tenta
+4098940	4099440	si
+4099440	4100700	si
+4100700	4102540	si consolida
+4102540	4102880	prima
+4102880	4103960	tutta la parte
+4103960	4105100	di requisiti
+4105100	4106340	iniziale
+4106340	4107480	e poi si inizia
+4107480	4107860	con la fase
+4107860	4108560	di change management
+4108560	4109520	la fase di change management
+4109520	4110400	arriva
+4110400	4111020	bene o male
+4111020	4112000	a
+4112000	4112600	diciamo
+4112600	4113520	quando si è
+4113520	4113920	già
+4113920	4115340	ai due terzi
+4115340	4116700	della fase
+4116700	4117080	di vita
+4117080	4117840	del progetto
+4117840	4118340	diciamo
+4118340	4119920	dove il cliente
+4119920	4120360	magari
+4120360	4121140	dopo aver fatto
+4121140	4122380	i primi test
+4122380	4124280	e aver avuto
+4124280	4125300	i primi riscontri
+4125300	4125960	pratici
+4125960	4126660	sul campo
+4126660	4127880	capisce
+4127880	4128180	che
+4128180	4128840	ha necessità
+4128840	4129720	di cambiare qualcosa
+4129720	4130180	e quindi
+4130180	4131300	in quel momento
+4131300	4132740	potrebbero arrivare
+4132740	4133520	dei cambiamenti
+4133520	4138200	così come
+4138200	4138600	noi
+4138600	4139100	stesso
+4139100	4139700	i fornitori
+4139700	4140800	potrebbero suggerire
+4140800	4142080	dei cambiamenti
+4142080	4143280	al cliente
+4143280	4146660	mario
+4146660	4147080	io avrei
+4147080	4147960	una domanda
+4147960	4149260	di curiosità
+4149260	4150560	alessati
+4150560	4151260	chi sei
+4151260	4151800	alessandro
+4151800	4152820	alessandro
+4152820	4153980	allora
+4153980	4154400	sì
+4154400	4155760	volevo dire
+4155760	4156320	quando
+4156320	4157280	diciamo
+4157280	4158020	ad esempio
+4158020	4159220	certi requisiti
+4159220	4160620	che sono cambiati
+4160620	4161360	non riescono
+4161360	4163340	ad essere inclusi
+4163340	4163960	all'interno
+4163960	4165080	della versione 1
+4165080	4165640	ad esempio
+4165640	4166680	perché poi
+4166680	4167540	la versione 1
+4167540	4168260	si porta
+4168260	4168860	comunque
+4168860	4170560	a termine
+4170560	4171560	per magari
+4171560	4172300	testarla
+4172300	4173420	e verificare
+4173420	4174960	altri problemi
+4174960	4176380	incombere di altri
+4176380	4176900	problemi
+4176900	4177180	e poi
+4177180	4178100	risolvere
+4178100	4179480	no
+4179480	4180200	il fatto che
+4180200	4180820	diciamo
+4180820	4181560	un requisito
+4181560	4181920	può
+4181920	4182880	o non può
+4182880	4183860	entrare
+4183860	4184660	in una versione
+4184660	4185940	quello è deciso
+4185940	4187900	ad atti livelli
+4187900	4188580	diciamo
+4188580	4190660	tu non puoi mai
+4190660	4191120	decidere
+4191120	4192020	se quel requisito
+4192020	4192760	può o non può
+4192760	4193640	entrare in un software
+4193640	4193960	diciamo
+4193960	4194380	c'è
+4194380	4195380	c'è un accordo
+4195380	4196020	che viene fatto
+4196020	4196940	tra il cliente
+4196940	4197660	e il fornitore
+4197660	4199600	diciamo
+4199600	4201160	di solito
+4201160	4202040	come dicevo
+4202040	4204040	la timeline
+4204040	4204880	le tempistiche
+4204880	4205580	fanno sempre
+4205580	4206120	da padrone
+4206120	4206380	diciamo
+4206380	4206820	sono sempre
+4206820	4207460	la chiave
+4207460	4208140	per capire
+4208140	4208800	se un requisito
+4208800	4209520	può o non può
+4209520	4210060	entrare
+4210060	4211140	in un rilascio
+4211140	4211520	software
+4211520	4212480	però è deciso
+4212480	4212800	sempre
+4212800	4214140	dall'alto
+4214140	4214440	ecco
+4214440	4215420	se è veramente
+4215420	4216280	una richiesta
+4216280	4217200	di cambiamento
+4217200	4220360	importante
+4220360	4221100	allora
+4221100	4222340	credo che ci si
+4222340	4222880	accordi
+4222880	4223260	dicendo
+4223260	4223680	ok
+4223680	4224700	ritardiamo
+4224700	4225240	di 1
+4225240	4225560	2
+4225560	4226440	3 settimane
+4226440	4227180	il rilascio
+4227180	4227440	però
+4227440	4228300	io ho necessità
+4228300	4228860	di includere
+4228860	4229620	quel cambiamento
+4229620	4230460	nella prima versione
+4230460	4231020	del software
+4231020	4234380	quello che dicevo
+4234380	4234820	magari
+4234820	4236260	i nuovi requisiti
+4236260	4236780	entreranno
+4236780	4237860	nella versione 2
+4237860	4238340	ad esempio
+4238340	4240300	quello che volevo sapere
+4240300	4240920	perché poi
+4240920	4241820	la versione 1
+4241820	4242480	si porta comunque
+4242480	4243040	al termine
+4243040	4244180	per poi testarla
+4244180	4244820	comunque
+4244820	4245360	certo
+4245360	4246580	ogni versione
+4246580	4247000	del software
+4247000	4248740	ha il suo scopo
+4248740	4249320	ogni versione
+4249320	4249820	del software
+4249820	4250700	include
+4250700	4251660	al suo interno
+4251660	4253420	tanti contenuti
+4253420	4255160	si
+4255160	4255660	ad esempio
+4255660	4256360	nella prima parte
+4256360	4257040	del software
+4257040	4257720	magari
+4257720	4258680	viene introdotta
+4258680	4259340	tutta la parte
+4259340	4261060	di comunicazione
+4261060	4262080	che è un po'
+4262520	4262940	diciamo
+4262940	4264960	il perimetro
+4264960	4265840	di tutto ciò
+4265840	4266580	che c'è dentro
+4266580	4267400	quindi
+4267400	4268700	riattivano un po'
+4268800	4269400	tutta la parte
+4269400	4270420	di comunicazioni
+4270420	4271060	tutti
+4271060	4272320	i can transiver
+4272320	4272880	tutta la parte
+4272880	4273680	di gestione
+4273680	4274520	di comunicazione
+4274520	4274820	diciamo
+4274820	4275560	quella magari
+4275560	4275900	può essere
+4275900	4276700	una prima parte
+4276700	4278640	del software
+4278640	4279000	quindi
+4279000	4280900	della prima versione
+4280900	4282120	si andranno a testare
+4282120	4282720	tutta la parte
+4282720	4283440	di comunicazione
+4283440	4283960	ad esempio
+4283960	4285940	ogni versione
+4285940	4286520	ha un suo
+4286520	4288120	scopo
+4288120	4289220	ok
+4289220	4289900	grazie
+4289900	4300120	ok
+4300120	4302840	quindi
+4302840	4303900	ritornando
+4303900	4304480	un attimo
+4304480	4306700	quindi
+4306700	4307340	molto
+4307340	4308160	velocemente
+4308160	4308800	ecco
+4308800	4309520	chiaramente
+4309520	4312120	l'RMP
+4312120	4314060	viene
+4314060	4314900	chiaramente
+4314900	4315440	non è
+4315440	4316560	un documento
+4316560	4317360	che una volta
+4317360	4318080	che uno lo fa
+4318080	4319600	diciamo
+4319600	4320160	lo prende
+4320160	4320400	per
+4320400	4321400	deve prenderlo
+4321400	4321660	chiaramente
+4321660	4322020	per buono
+4322020	4322280	però
+4322280	4323620	possiamo
+4323620	4324280	migliorarlo
+4324280	4325100	di volta in volta
+4325100	4327300	il miglioramento
+4327300	4327700	può
+4327700	4328880	esserci
+4328880	4329680	diciamo
+4329680	4330500	perché
+4330500	4331400	ci sono dei feedback
+4331400	4332580	sia interni
+4332580	4333260	dovuti a
+4333260	4334900	delle revisioni
+4334900	4335860	continue
+4335860	4337900	del documento
+4337900	4338640	o chiaramente
+4338640	4339960	molto importanti
+4339960	4340320	sono anche
+4340320	4340900	i feedback
+4340900	4343080	da parte del cliente
+4343080	4345320	che può
+4345320	4346820	sollevare
+4346820	4347600	alcuni punti
+4347600	4348180	relativamente
+4348180	4349140	al nostro processo
+4349140	4350460	se è in linea
+4350460	4351240	con quanto loro
+4351240	4352080	si aspettano
+4352080	4354300	o con i loro processi
+4354300	4355960	sono molto fondamentali
+4355960	4357400	i feedback interni
+4357400	4358460	le review interne
+4358460	4359820	e con il cliente
+4359820	4360340	e chiaramente
+4360340	4360720	una volta
+4360720	4363480	raccolte informazioni
+4363480	4366260	e spunti
+4366260	4368500	è necessario
+4368500	4369800	implementare
+4369800	4370240	questa
+4370240	4371300	lesson learned
+4371300	4373700	sono due parole
+4373700	4374000	che
+4374000	4375140	probabilmente
+4375140	4375860	sentirete
+4375860	4377920	spero
+4377920	4378480	non tanto
+4378480	4378800	però
+4378800	4383140	le troverete
+4383140	4384260	le sentirete
+4384260	4384460	diciamo
+4384460	4385060	il lesson learned
+4385060	4385480	non è altro
+4385480	4386120	che una fase
+4386120	4388020	di documentazione
+4388020	4389340	dei problemi
+4389340	4390220	che ci sono stati
+4390220	4391140	durante il ciclo vita
+4391140	4391980	di un progetto
+4391980	4392580	che possono essere
+4392580	4393460	problemi
+4393460	4394020	in questo caso
+4394020	4395340	dell'RMP
+4395340	4396740	o problemi
+4396740	4397660	proprio relativi
+4397660	4398720	al codice
+4398720	4399620	o qualsiasi tipo
+4399620	4400040	di problema
+4400040	4401320	che ci possa essere stato
+4401320	4403060	e questo lesson learned
+4403060	4403420	è una fase
+4403420	4404460	di documentazione
+4404460	4406200	per poter poi
+4406200	4406700	evitare
+4406700	4407880	in futuro
+4407880	4409480	di dover affrontare
+4409480	4410100	gli stessi tipi
+4410100	4410980	di errori
+4410980	4411600	quindi è una sorta
+4411600	4412280	di ok
+4412280	4413320	abbiamo imparato
+4413320	4414500	dalla lezione
+4414500	4416000	dall'errore
+4416000	4416800	adesso
+4416800	4417500	cerchiamo
+4417500	4418420	di non commettere
+4418420	4419000	più l'errore
+4419000	4419940	che abbiamo fatto
+4419940	4420940	diciamo questo
+4420940	4421440	è un po'
+4421440	4422240	il lesson learned
+4422240	4426360	e quindi
+4426360	4426820	in questo caso
+4426820	4427420	il lesson learned
+4427420	4428020	diciamo
+4428020	4429100	ci permette
+4429100	4429320	ecco
+4429320	4431420	di documentare
+4431420	4432380	quali sono stati
+4432380	4433100	i punti
+4433100	4433680	sollevati
+4433680	4434100	feedback
+4434100	4434620	quant'altro
+4434620	4435500	e di migliorare
+4435500	4436100	il processo
+4436100	4438300	per i progetti
+4438300	4438860	futuri
+4438860	4439100	ecco
+4439100	4440160	per il futuro
+4440160	4443340	quindi
+4443340	4443860	diciamo
+4443860	4444880	le conclusioni
+4444880	4445400	brevemente
+4445400	4446340	vorrei semplicemente
+4446340	4447120	dire quanto
+4447120	4447880	ho riportato
+4447880	4448980	qui nella parte blu
+4448980	4450140	che racchiude un po'
+4450220	4451360	quindi diciamo
+4451360	4453640	è nell'insieme
+4453640	4454740	che noi possiamo
+4454740	4455480	migliorare
+4455480	4456980	il processo
+4456980	4458220	attraverso questo
+4458220	4459560	requirement management plan
+4459560	4460660	quindi attraverso questo
+4460660	4461520	requirement management plan
+4461520	4462580	possiamo migliorare
+4462580	4463280	notevolmente
+4463280	4464600	il processo
+4464600	4466060	di gestione
+4466060	4467680	dei requisiti
+4467680	4468900	o di gestione
+4468900	4470200	di qualsiasi tipo
+4470200	4471680	di attività
+4471680	4472500	che ci richieda
+4472500	4472780	di
+4472780	4473620	di dover
+4473620	4474360	tracciare
+4474360	4475800	di dover
+4475800	4476740	documentare
+4476740	4478480	appunto
+4478480	4479560	dei requisiti
+4479560	4480520	o dei test case
+4480520	4483740	qualcuno ha alzato
+4483740	4484120	la mano
+4484120	4485820	no
+4485820	4488940	ok
+4488940	4489960	e quindi
+4489960	4491160	come ultima slide
+4491160	4493520	grazie
+4493520	4498180	ok
+4498180	4499580	diciamo
+4499580	4500240	se non ci sono
+4500240	4501080	altre domande
+4501080	4503640	e ci sono
+4503640	4504540	benvengano
+4504540	4506200	io direi
+4506200	4506820	magari di fare
+4506820	4507900	dieci minuti
+4507900	4508480	di pausa
+4508480	4510440	e poi
+4510440	4511900	Gabriele
+4511900	4515580	può iniziare
+4515580	4516280	con la sua parte
+4516280	4519500	sta benissimo
+4519500	4520640	Mario ma dopo
+4520640	4521640	ci sarai anche tu
+4521640	4523620	ok ragazzi
+4523620	4525880	sì
+4525880	4529860	perché non mi vuoi
+4529860	4530280	no no no
+4530280	4531080	volevo fare poi
+4531080	4532440	un commento
+4532440	4533120	finale
+4533120	4534300	ma se ci sarai
+4534300	4534740	tu dopo
+4534740	4535200	lo faccio
+4535200	4536200	quando termina
+4536200	4536940	anche Gabriele
+4536940	4537620	dai a posto
+4537620	4541500	io potrei
+4541500	4542460	staccarmi al volo
+4542460	4543340	perché nel frattempo
+4543340	4544320	abbiamo una
+4544320	4545120	una riunione
+4545120	4546440	con il cliente
+4546440	4547940	workshop con il cliente
+4547940	4549060	online
+4549060	4549480	diciamo
+4549480	4550440	sto aspettando
+4550440	4551000	che mi chiamino
+4551000	4551720	per presentare
+4551720	4551960	quindi
+4551960	4553180	qualora dovessi
+4553180	4554140	assentarmi un po'
+4554660	4555060	perché
+4555060	4556600	l'ho saltato
+4556600	4557160	nell'altra
+4557160	4558280	nell'altro meeting
+4558280	4559020	ok
+4559020	4561680	va bene
+4561680	4562060	ci vediamo
+4562060	4562700	tra dieci minuti
+4562700	4563140	allora
+4563140	4565540	grazie ragazzi
+4565540	4566320	a dopo
+4566320	4566720	ragazzi
+4566720	4567560	11 e 30
+4567560	4567800	allora
+4567800	4570060	a dopo
+4570060	4572020	ciao grazie
+4575120	4586440	ciao
+4586440	4586860	ciao
+4586860	4616840	Grazie a tutti.
+4616860	4646840	Grazie a tutti.
+4646860	4676840	Grazie a tutti.
+4676860	4706840	Grazie a tutti.
+4706860	4736840	Grazie a tutti.
+4736860	4766840	Grazie a tutti.
+4766860	4796840	Grazie a tutti.
+4796860	4826840	Grazie a tutti.
+4826860	4856840	Grazie a tutti.
+4856860	4886840	Grazie a tutti.
+4886860	4916840	Grazie a tutti.
+4916860	4946840	Grazie a tutti.
+4946860	4976840	Grazie a tutti.
+4976860	5006840	Grazie a tutti.
+5006860	5036840	Grazie a tutti.
+5036860	5066840	Grazie a tutti.
+5066860	5096840	Grazie a tutti.
+5096860	5126840	Grazie a tutti.
+5126860	5156840	Grazie a tutti.
+5156860	5186840	Grazie a tutti.
+5186840	5216820	Grazie a tutti.
+5216840	5218840	Una...
+5218840	5248820	Grazie a tutti.
+5248840	5278820	Grazie a tutti.
+5278840	5308820	Grazie a tutti.
+5308840	5338820	Grazie a tutti.
+5338840	5340840	Ok.
+5368840	5398820	Grazie a tutti.
+5398840	5428820	Grazie a tutti.
+5428840	5458820	Grazie a tutti.
+5458840	5488820	Grazie a tutti.
+5488840	5518820	Grazie a tutti.
+5518840	5548820	Grazie a tutti.
+5548840	5578820	Grazie a tutti.
+5578840	5608820	Grazie a tutti.
+5608840	5638820	Grazie a tutti.
+5638840	5668820	Grazie a tutti.
+5668840	5698820	Grazie a tutti.
+5698840	5728820	Grazie a tutti.
+5728840	5758820	Grazie a tutti.
+5758840	5788820	Grazie a tutti.
+5788840	5818820	Grazie a tutti.
+5818840	5848820	Grazie a tutti.
+5848840	5878820	Grazie a tutti.
+5878840	5908820	Grazie a tutti.
+5908840	5938820	Grazie a tutti.
+5938840	5968820	Grazie a tutti.
+5968840	5998820	Grazie a tutti.
+5998840	6028820	Grazie a tutti.
+6028840	6058820	Grazie a tutti.
+6058840	6088820	Grazie a tutti.
+6088840	6118820	Grazie a tutti.
+6118840	6148820	Grazie a tutti.
+6148840	6178820	Grazie a tutti.
+6178840	6208820	Grazie a tutti.
+6208840	6238820	Grazie a tutti.
+6238840	6268820	Grazie a tutti.
+6268840	6298820	Grazie a tutti.
+6298840	6300840	Grazie a tutti.
+6328840	6358820	Grazie a tutti.
+6358840	6388820	Grazie a tutti.
+6388840	6418820	Grazie a tutti.
+6418840	6448820	Grazie a tutti.
+6448840	6478820	Grazie a tutti.
+6478840	6508820	Grazie a tutti.
+6508840	6538820	Grazie a tutti.
+6538840	6568820	Grazie a tutti.
+6568840	6598820	Grazie a tutti.
+6598840	6628820	Grazie a tutti.
+6628840	6658820	Grazie a tutti.
+6658840	6688820	Grazie a tutti.
+6688840	6718820	Grazie a tutti.
+6718840	6748820	Grazie a tutti.
+6748840	6778820	Grazie a tutti.
+6778840	6808820	Grazie a tutti.
+6808840	6838820	Grazie a tutti.
+6838840	6868820	Grazie a tutti.

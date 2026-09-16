@@ -1,0 +1,372 @@
+Hi all, today we are going to have a little discussion on process, in particular we will
+introduce process in the automotive framework with the particular attention to the general
+bicycle model which is the development process mostly used in automotive sector.
+Okay, let's see briefly the contents of this lesson. We will make a brief introduction to the
+automotive framework, so we will present some numbers and facts about the automotive framework
+just to introduce you to this work. Then we will go on with the simple definition of process,
+simple and generic definition of process, then we will apply it to the automotive framework, then we
+will discuss the v-cycle process, a particular development process which is established in
+aerospace industry, and then it's been used in every integration environment such as also the
+automotive industry, and then we will conclude with an example of running the cycle process to
+to clear the idea on how it is used.
+Okay, some interesting facts and figures about the automotive industry. The automotive industry is
+very old, it began in 1860 and it has more than 150 years of history. This whole time, automotive industry
+industry has been full of technology challenges. You can think about for example the evolution of internal
+combustion engine, its optimization for efficiency and technological impact or for example the goals reached
+in the fields of safety, so how to make the vehicles more safe and secure.
+The introduction of electronics and software inside the vehicles, the autonomous driving concept
+and the electric propulsion development which are the topics very hot right now.
+So the whole history of the automotive sector has been a technological race to improve, to get better,
+or to introduce new technology and new services inside the industry.
+Some interesting numbers just to introduce you to the industry. These data are updated to 2017 but
+are still actual and usable. In these last years, almost 100 millions of vehicles have been produced yearly. The trend is
+descending. This is also because of Covid. This might surprise you, but most units are produced in China, actually.
+Where in 2018 were produced more vehicles than USA, Japan, Germany and Italy combined. So 28 millions.
+But on the other hand, quality, which can be improperly measured as revenues of an automotive car maker,
+are dominated by European, in particular Germans, which score with three groups in the top 10.
+in the top 10. The first one is Volkswagen Group, which includes Volkswagen, Audi, Porsche,
+Skoda, Lamborghini and Bentley brands. And had revenues for 260 billions, so it's first.
+At third place, the Demi Group, which is composed by brands Mercedes-Benz, Smart and Maybach. And in the
+seventh place, BMW Group Group with BMW, Mini and Ross-Royce.
+Okay, so now let's focus a bit more on this object, the car, the vehicle, but let's try to think about it
+by the means of the people that want to produce it, they want to build it, not the one that want
+to buy it and use it. So let's be in the shoes of the car maker. What is a car for a car maker?
+Well, first of all, it is a purpose built layers of components. What does it mean purpose built?
+It means that a vehicle, when it is designed, when it is created, it has to accomplish, it has to satisfy
+a mission. For example, you can think about a small city car. Its mission will be low fuel consumption,
+space optimization, in order to make it easy to park, for example, in large cities. It has to be small,
+it has to be cheap to produce and so on. This is the mission of the vehicle. For example, for a sports
+car, car maker, such as Ferrari, the mission can be completely different. The mission for a Ferrari car
+will be something like, okay, I want very, very, very high power. So I want 1000 horsepower for my engine,
+I want a fun to drive, I want increased performance, I want luxury and the best materials
+achievable, no matter the cost and so on. So the mission is the first thing that the car maker think
+go up, think about when it's starting to design a new car. And this, it is also a layers of components.
+The vehicle, it's, it does not
+start in the design phase as a whole object, but it is composed by several layers, such as the mechanical
+layers, the hardware and software layers, the electronic layers, or for example, the liquids, the oils, the
+glues that are composed and so on. All these layers must to work together in order to
+allow the car to accomplish its mission. It is easy to understand that the complexity of
+assembling and make a product of these multiple layers is very high. And this brings us to the
+the main reason of this lesson, the main cause of this lesson, such a such is an appropriate
+organizational effort is required in order to manage this complexity in design.
+Okay, let's briefly view also how how a car is built from scratch to the final product. We can divide the
+the phase of car building of and car designing in in four sub phases. The first one is of course design and
+development. In this phase, we start from scratch, we start from paper, we define the mission of the
+of the vehicle of the car. And we start to develop it by for example, using objects.
+I think you for sure heard about it, such as prototypes that are that are
+particular development vehicles with part of functionalities implemented in order to
+test it and develop it. For example, you will have the prototype to test the engine, the prototype to
+some part of the electronics and so on. During this design and development phase, you will
+you will get better and better prototypes that will start to resemble the final product that you start
+to resemble a car that is actually accomplishing the mission. Once you have accomplished this goal,
+so you have a car that is actually what you wanted to be in the first place, you start with the second phase,
+which is productization. So you obtain the car, but now you want to be sure that you can produce it
+in a controllable and serial way so that it can be produced in large number, for example.
+After productization, you start with the serial production, so your your factory is ready to
+replicate that beautiful prototype in a large number of cars. And there's also a fourth phase,
+which is after selling the car, which is called servicing. This is the services you provide to the
+final user after the car is sold, is on the street. I think you for sure heard some time about the
+recall campaign from some car maker, for example, you discover that there is a small defect in a part of
+your vehicle and then you send a message, you communicate to the people that own that vehicle
+to bring it back to the workshop in order to fix it. This is a typical case of servicing
+phase process.
+We will focus in this lesson, in this discussion, in the first phase, the design and development.
+So we will describe the process that is meant to be used for design and development. It is also used
+for product product productization, but we will not be telling that we will focus on design and development phase.
+Okay, another interesting information is who builds a car. Most people are used to think that it's the
+car maker who make all the effort and all the work to produce a car, but these are that is actually not
+true. And we can get convinced about that by starting with dividing our vehicle in different abstraction
+layers. We start from the topper one, the vehicle abstraction layer, so the whole vehicle
+schematization. Inside this full vehicle schematization there will be, for example,
+a sub-level, the subsystem of our vehicle. Inside the subsystem there will be a single component,
+such as an electronic control unit in ECU. Inside these single parts there are
+the elemental parts that are used to produce such objects, like for example, for an electronic control
+unit there will be a microcontroller, transistor, capacitors, and so on.
+On the left of the slide you see that the influence, the ownership of the
+of the OEM, which means Original Equipment Manufacturer, that is a technical name for
+calling the car maker such as FCA, Ferrari or Audi, is decreasing the most we go in deeper detail of what is used to build the car.
+The OEM has for sure the ownership of the whole vehicle level, because it knows the mission of the vehicle,
+he knows how the vehicle shall be in the end, and of course he has the knowledge on vehicle level.
+And let's see how, when we descend into the phase of, into the level of subsystem,
+the OEM often it's not capable, it does not have a specific knowledge about the peculiar subsystems, so
+it uses the aid of a specialistic suppliers that have knowledge in those subsystems that could help
+provide the equipment to build the car. There are actually some OEMs that have knowledge also in subsystems,
+one typical example is Ferrari, which is capable of designing the vehicle as a whole, but also it has strong
+knowledge in engine construction, so the subsystem engine is completely done in Ferrari.
+But most of times, the OEMs ask for help for the such called tire one supplier. A tire one supplier is a supplier
+that provides equipment directly to the OEM. A typical example of a famous tire one is a Brembo for the braking system.
+Brembo is specialized in designing a braking subsystem for a lot of vehicles, and it is widely used
+used by the most performing car for the most performing car for day braking system.
+The tire one is also in charge, for example, of the production of parts of the subsystem, such as the
+electronic control units, but even for a tire one, it's often impossible to produce every single part
+product that is required for the manufacture of a subsystem, which is why they have the tire two suppliers,
+that are suppliers that provide equipment to the tire one, equipment that is specialized for the production of
+the subsystem. For example, a tire one, which wants to develop a new electronic control unit, may ask
+help for, for example, NVIDIA or ST Electronics for a new microcontroller to be used inside the ECU.
+So, as you can see, it's not the car maker that makes all the effort, the car maker has the idea of the mission,
+but there is a lot of actors involved in the design and the manufacturing of a vehicle.
+And this is another view on the complexity of the process of development of a new vehicle.
+So, keeping this complexity in mind, let's start to introduce the concept of process. What is a process?
+Well, we can for start giving a small introduction on the concept PPT, which stands for people,
+process and tools, which is a concept of success in organizing and improve the operational efficiency
+of a business. It states that in order to have an efficient operational effort inside the business,
+you have to rely on people, of course, so their skills and their knowledge. You have to have the
+appropriate tools to perform the work, but all of these aspects shall be connected by a process. What is
+a process? A process is a series of steps and actions taken in order to produce a particular goal.
+So, it articulates the how aspect of an organization. How do we do what we want to do? The process
+describes the how. How would the process interact with tools and people? It is important that people
+have clear roles in the process and that they fully understand it. So, the process helps people to
+fulfill the role and to interact with each other. And, of course, tools can improve the process, make it
+faster. You can think, for example, to what can be done with pencil and paper and what can be done with
+the personal computer for designing a visual. We can make a very simple example of a process that you
+will see it's actually applicable to any kind of problem. And a process can very simply
+schema-schematized in this way. I have an idea or a need. I want to accomplish something.
+So, I need to have a product that implement that idea. And then I need to check if the product
+is accomplish my idea or not. You can make a simple example of a cooking example that is very simple
+to understand. Let's imagine that you want a pizza. You want to eat a pizza and you decide that you want
+to do it on your own. So, the idea is I want a pizza and I want to do it on my own. The first thing
+you do, you ask, for example, to your mother or your grandmother or you search in the internet for
+recipes. So, a list of steps that describe how the pizza is made. At the end, you will have a product,
+a pizza, no matter how it is actually. The first thing you do after you have a pizza, you will eat a slice,
+you will try a slice, then maybe the pizza is good. So, fine, you accomplished your idea, you accomplished
+your goal, but maybe it's not so good. So, what are you going to do? You start again,
+you go back in this process to see what went wrong. For example, did you use the correct recipe?
+Did you describe it properly? Maybe you understand that you don't have the manual skills to do the pizza
+yourself. So, your new process will be, okay, I just search for a good pizza restaurant on Just Eat and I
+will order from that and I will try again. This kind of process is very simple, but it's actually
+applicable and it is actually applied even to very complex environment and it is very useful because
+we can start to introduce some specific naming convention of what is used in automotive industry
+and in general in process for industrial application. Maybe you also heard some of these
+names or concepts. The first is requirements. The requirements are the way we express our idea and
+our need. Technically, it's a singular documented need that the product aims to satisfy. For example,
+when I want to define the mission of my vehicle, I will write down things like, okay, I want 1000 horsepower.
+That is a requirement. I want something that will become a goal for my project.
+Another important terminology is deliverables. Deliverables is a tangible or intangible good or service
+product as a result of a project or part of a project. That is important. The product is not only
+the final product, but also all the things that I make during the process to help obtaining the final
+product. For example, we were talking earlier of a pizza. The piece of paper on which I write
+the recipe is deliverable. It's a product because it can be checked, it can be modified, it can be
+tracked and so on. So also the output of single phases of the process are deliverables, are products.
+The last term, very important, is validation. The validation is a procedure meant to check if a
+product meets the product meets the requirements. So it's actually what we also call testing. We test
+our final product to see if the requirements, if the idea and the needs we expressed at the beginning
+are actually satisfied. As I was saying, this very simple concept can be applied even to a complex
+environment like the automotive industry. For example, nothing forbid me to put in cascade the phases of the
+design of a vehicle. I can start with a very high level vehicle concept, as we said before, OEM based.
+So we will have the writing of the requirements for the definition of the mission. For example,
+we can have another phase after that, the system design and the system architecture. We, for example,
+we will produce a drawing with the ECU topology, how the ECU are connected between each other, how they
+communicate. So the standards that allow us the communication between ECU. These are
+requirements made at system level. Then we can descend to the subsystem, where we apply this simple
+process to subsystems, usually lead led by tier one. Then we can apply this process. So requirements,
+product and the validation to component design. So the requirements for the single components that
+are used for manufacturing this subsystem. And then we are a phase in which we implement everything.
+And of course, we will have the validation phase, the testing phase. So for each phase,
+we will have its testing phase, its validation phase. Component design will have component testing.
+Subsystem design will have integration testing. So we integrate the components inside the subsystem
+and see if the subsystem is actually doing what it is meant to do. And then we have a phase of
+functional testing, which is a testing at vehicle level. So we check, we test if the vehicle is
+performing the way we define in the mission.
+Okay. There is actually this kind of process is called waterfall. As you see, every phase is
+as a beginning and an end, and you have to do the first phase in order to proceed to the other. So you
+have first to do the vehicle concept, then you will go to the system and assign and so on.
+But there is actually another way to to see how this phase we were talking about are connected
+between each other. And this lead us lead us to the famous recycle model that we will describe now.
+Let's just put the very same phases of the process we've seen before, but in a different fashion,
+in a different way. Let's put all the design part on a left branch starting from the vehicle
+schematization. So we've got concept and system design architecture, then subsystem design,
+then component design. Let's put implementation on the bottom and let's start with another branch
+on the right with all the component testing, components integration and functional.
+We can call the left branch design and development branch, right branch quality assurance branch.
+And the horizontal dimension in this case is the project management. So how I manage these phases
+all together, but in another way, it's also the time of the project. We start from the left and we end
+on the right always. An important thing we can notice by putting the phases in this shape is that there is
+actually some affinity between the phases on the design branch and the phases on the testing on the quality
+assurance branch. They are thematically similar.
+one to another. So, for example, I can think about parallelizing some activities,
+for example, on vehicle level. When I write my requirement regarding vehicle concept and system design,
+for example, I could involve my colleagues in functional testing, which do not have anything to test
+yet, but they can check my requirement. They can give additional eyes, they can put other brains
+on my requirements, they can check it, they can see if they are coherent, they are consistent,
+they are testable and so on. They can actually help me improve the quality of my requirement phase. And the
+same goes for integration test and unit test design. So the colleagues from the right branch can be involved
+before the product is actually manufactured, before the testing can start, in order to make a verification
+application or on the work on made in the design phase. This is a way of parallelizing activity to
+to make more activity in the time unit and also to improve quality. It has been
+demonstrated, especially for the software development that this kind of approach, this physical approach
+can lead to a higher quality once you reach the implementation phase. For example,
+the number of bugs that a software developed with this process is 50% less than using the waterfall approach,
+so without this additional check.
+The activity can be parallelized also inside the same branch. As we said, the horizontal dimension
+can also be seen as the time and let's make an example just to make you understand how the activities
+can be parallelized. Let's assume that the width of the block of the phases are actually the time
+required to end the whole phase. As we can see, by putting in a v-shape, the projection on the time axis
+of two blocks, for example, subsystem design and component design is less than the sum of the
+singular time required for subsystem design and component design. This is because it is possible to
+do the same kind of verification, the same kind of check between these two processes. So while I'm, for
+example, in subsystem design, I can do part of the work and then give it to the component design colleagues
+that can check if they can understand it, if it's feasible, if it's consistent and so on. So they can make
+in parallel this additional check in order to save time, in order to save project time.
+A really important feature of the Divocycle is that it's completely scalable. What does it mean?
+We are now seeing the Divocycle process applied to the whole vehicle, but what about, for example,
+if we explore the subsystem design phase, I can use the Vocycle, for example, for the software of my subsystem.
+So I can adapt the phase and I will have a software requirement phase and software architecture and
+software design configuration on the design and development branch. And I will have unit testing,
+integration testing and functional testing of the whole software. The process is exactly the same,
+but it's used to develop the software. This is very important because it allows the various actors
+we've seen before, the OEM, for example, Tire 1 and Tire 2, to speak the same language when they
+interact with each other for the design and development of vehicle subsystem and components.
+They can use the same terminology, they can use the same phases, and it's very easy for them to coordinate
+between each other when they are applying the very same process, the Vocycle process.
+There are also advanced use of the Vocycle process. For example, it is possible to make iteration or to
+apply the agility concept to it. This means, for example, I can make iteration, for example, between two
+consequent phases of my process in order to improve quality. So I can reiterate the process more and
+more time on small parts of the design in order to improve the quality. And I also can do iteration
+of the quality assurance brands. For example, I can do subsystem design, integration testing, reiterating
+it, adding new functionalities to every iteration in order to keep things under control and improve
+quality. The same for component design and component testing.
+So let's make a very quick example of a running Vocycle.
+From now on, you will see on the top right of the slide the phase of the process in which we are.
+So you don't get lost with the discussion. For the example, we will imagine we want to
+introduce a new functionality in our airbag subsystem, in our vehicle. Now the airbag system is a critical
+module module of a vehicle because it has the safety of the driver and the occupant of the vehicle are
+involved. And basically, an airbag system has two requirements, two main requirements. It has to
+deploy flawlessly in case of a major accident. So it has to deploy always in case of an accident.
+But at the same time, it doesn't have to deploy, never has to deploy when it is not required because
+it is dangerous when it is deployed like that. So it is easy to understand that the
+malfunction of the airbag system shall be promptly and properly notified to the final user. The final
+user has to know when, for any reason, the airbag system of his vehicle is not functioning. So let's
+imagine we want to introduce, we want to add this notification feature to our car.
+And for example, the first thing we may be reasoning about is how I do this notification, where I put
+this notification physically inside the car. For example, the first candidate could be the
+IPC subsystem, the instrument panel cluster, which is the first thing the driver see when he's driving.
+So for example, our first requirement could be that this notification of one function can be
+installed in our instrument panel cluster. Then again, we say that airbag system is involved in
+functional safety. Our team from functional safety suggests that the mechanism providing the malfunction
+notification shall be reliable. We don't want that the notification itself, it's not working for some
+reason. So they gave us a metric. For example, they can tell us, I want that the notification is 99% reliable. I want it
+to be working 99% of the time. So it should be to be field proof to a certain degree. This is a second requirement at high level, a vehicle concept that we have. Another requirement is that it should be
+to be field proof to be field proof to be field proof to a certain degree. This is a second requirement at high level, a vehicle concept that we have. Another example of a requirement at vehicle level,
+for example, our homologation colleagues
+inform us that there are there are constraints on how
+how the notification is given in particular they told us they tell us that a very peculiar icon must be used
+and we can choose the color between orange and red, which is red. So we have a dirt requirement. The icon shall be
+shaped like to one that is
+enforced by the homologation regulations and the color will be red.
+So the typical deliverables of the vehicle concept
+are basically specification requirements. We put the requirements in a document, in a document that can be
+managed, modified and kept and tracked
+in which we list all the desired functionalities, the definition of the vehicle mission, homologation
+constraints and so on. So it's basically a document.
+So what we do with the requirements we wrote at vehicle level, we transfer them to our system design team
+and then we start to analyze it and see what they shall do in order to satisfy those requirements.
+For example, our system design colleagues tell us that the vehicle has been designed with a domain-based
+topology. So we will have
+the ECU
+connected to each other
+and managed by a domain controller, the PWT ECU in this picture. The same for the chassis,
+the infotainment and the body, for example.
+They tell us, okay, the airbag control unit, the green one, is in the chassis domain.
+The instrument panel cluster, the red one, is in the infotainment domain. They are not in the same domain.
+We have to...
+First thing to do is to allow the communication
+of the information of the malfunction between
+the airbag control unit and the instrument panel cluster.
+So they produce the new requirements on their level
+to allow the communication between the two subsystems. It will, of course, involve also the chassis
+and the infotainment domain controllers. They will write a new protocol, a new message for the
+communication protocol that will transport the information of malfunction from the ACU
+subsystem to the IPC subsystem.
+So that the IPC, once this information is received, can turn on the lamp of the warning
+of the warning icon and warn the user that its airbag controller is malfunctioning.
+But also
+So, from the requirement at the PICOR level, we had the request that the malfunction notification
+shall be reliable, shall be very reliable. So our system engineers decide to violate locally
+the isolation of the domains by adding a direct communication between the ACU and the IPC
+in order to transport the very same information with a different medium. In this case,
+it's a simple pin-to-pin electrical communication. So when the ACU detect a malfunction, we will send
+the message on the communication bus and also will raise the voltage on this pin-to-pin communication
+in order to give the information to the IPC in two different ways. We actually
+create the redundancy in order to improve the reliability of the system.
+Okay. Typical derivables of this phase.
+It's, for example, the ACU topology, like the picture you are watching now.
+Of course, it will be more detailed, but basically how the ACU are connected between each other.
+The communication bus specification, so the list of messages that every ACU exchange with the others.
+And there may be documents, called vehicle functions, that are specification,
+specific specification, detailed on the subsystem functionalities. For example,
+there will be a document called airbag management, which explains all the functionalities that are related
+to the airbag subsystem. With these requirements at system level, we can now involve the subsystem designer,
+typically a tier one or more than one tier one, with our system requirements. For example, we will send
+the system requirements to the suppliers that provide us the airbag control unit. And we say, okay,
+these are the functionalities we want to implement. Just modify your subsystem in order to comply with it.
+The same will be done with the IPC and the Enforcement Chassis Domain Controller. So, for example, the ACU
+tier one will decide that it shall be possible by its subsystem to have diagnostic functionality implemented,
+because it has to be capable of detecting an error upon itself. For example, the software shall be capable of
+detecting if an actuator or a sensor is disconnected or it's not working,
+testing and so on. And so that the information of my function can be produced and can be put on the
+communication bus and on the dedicated pin. In a similar way, the tier one from the IPC will modify its
+subsystem in order to accept the information from the communication bus and the dedicated pin.
+the software will be modified in order to interpret this information and use to trigger the turning on of
+the lamp to get red light behind the icon on the dashboard. For the two domains controller,
+in this case, it's done what is called the gateway. So, the chassis and the infotainment will
+receive the information from the ECU in their domain and will just put it on the other communication
+channel in order to allow the switch of domain. So, to transfer the information without modification to
+the other domain. At this level, we typically have deliverables such as the hardware schematics or the
+so-called software design and software requirements specification. So, everything which is the software
+of the subsystem is produced in this phase and we also have the input output specification of the subsystems.
+Then we go at components level. The components for even for a simple application like that will be
+thousands. So, we'll just focus on the most important one, the most visible one, which is
+the red light, the red lead. And of course, the tire one that produces the IPC, it's not also a producer of lead,
+a manufacturer of lead. So, they will call a tire two specialized in building of lead light.
+They will ask for a red lead. And the tire two will provide, for example, a catalog of or a spreadsheet of
+possible candidates. The tire one can choose the one that is more appropriate for the application and it
+will install it in the subsystem. This is the usual way to interact with tire two. So, you don't develop a new lead
+for the application, but you just choose an already existing lead, which is a good match for your application.
+And then we have all the components. We have designed the subsystems and non-vehicle concept. We are done. So, we can implement
+all the modification and we will start to test it. Of course, you start testing at component level. So, the lower level. But
+let me ask you something. It is possible, for example, do you believe it's possible to test
+the lead before it's actually installed in the vehicle? The answer is, of course, yes. You can
+parallelize the activity testing and, for example, you can use a little bench with just minimal electronics
+in order to test if the lead does turn on when the current is applied or not. So, you don't have
+actually to wait for the whole implementation to test it. This is another way in which you can
+parallelize activities in the vehicle. Basically, for the component testing, but this is also applicable
+for every kind of testing. The testing activity itself is basically making the right questions and
+providing the answer. For the lead, for example, the question can be, does the lead turn when powered?
+The components work as it is intended to do? The answer to this question is the test result. So, you do the
+test and you check it. Yes or no. It does work or it does not work. If it does not work, let's see
+what the problem is. Typical unit tests. So, typical test component level are, for example, a simple piece
+of electronics like the lead or capacitor or so on. The testing of a single software module or portion of
+software, the testing of electrical harness and so on. The main deliverable of every testing phase,
+it's the test result document. So, a list of tests with the result of the test that you can share
+with whom may be interested in the test result. Same approach with the integration test at subsystem level. So,
+also, you introduce the modification to all the subsystems and you start testing the single subsystem
+without putting it in a vehicle. This is also can be done without a full integration in the vehicle. So, you don't
+need a fully implemented vehicle to test at this level. You just need to, for example, use an hardware in the loop,
+a simulator in which you just connect your single subsystem to see if it does react correctly to the
+stimulation from the outside. For example, you can test your air brake control unit at another in the loop
+bench. You can, for example, disconnect manually a sensor and test if the software detect it and raise an
+error. You can test if, after an error is raised, the information is properly communicated through
+the communication bus and dedicated pin and so on. The same can be done for the testing on the IPC subsystem
+and infotainment HSC domain controllers. So, you can just test the single subsystem without putting in the
+vehicle. The same deliverable is present here as any test phase. So, the integration test result document
+but also, usually in this phase, there can be another output, another result which is
+commonly called a change request. What is the change request? Imagine the case that you are testing your
+subsystem, you discover that actually the implementation is compliant to the requirement. So, it is correct
+by a formal point of view, but the behavior, the final behavior, the physical behavior of the subsystem
+is not compliant to what it shall be the mission or the expected behavior of the component. In this case,
+you highlight this problem by doing a change request. So, you go back to your design colleagues and say,
+okay, this is implemented as the requirement says, but maybe it's the requirement itself that is
+that is wrong or that is not detailed enough, that is not 100% correct. So, we have to change it,
+we have to modify it. So, you actually go back, you go back to the left branch, you modify the requirements
+and do another time the cycle in order to see if you corrected the problem.
+Same goes for the test at vehicle level, so for the functional tests. In this case, we will actually
+implement everything in a vehicle. Usually, in this phase, at the end, a vehicle is required we don't
+implement. You do the functionality test, the acceptance test, and for example, you will
+analyze things like, okay, I'm setting the car. There is a malfunction. Do I see the icon? The icon
+it's evident, it's visible, the color is the right one, the shape is the right one, and so on.
+So, the final implementation does satisfy my original requirements at vehicle level.
+And again, you will have an integration test result document for this phase, and
+if required, a change request if some other problem is detected at this level.
+Okay, this was the collection on the cycle. Those are my contacts. If you want to have
+clarification or if you have questions to ask, just feel free to contact me by email or on chat.
+Thank you, and have a nice day.

@@ -1,0 +1,100 @@
+Hello, my name is Fabio Brescia and today I'll talk to you about electric machines.
+In the last period we see the trend of the most of all automotive brands to switch their focus
+to the electric motors. We see this trend for fight the CO2 emission and try to reduce it.
+For motor drives we mean that devices that convert the onboard electrical energy to desired mechanical
+motion and they are the main technology for the hybrid and electric vehicle. Meanwhile electric
+machines are the key element of motor drive technology. The general requirements of electric
+machines for automotive are high torque density and high power density, wide speed range covering
+low speed creeping and high speed cruising to cover all the speed of the car without a gearbox,
+high efficiency over wide torque and speed ranges to reduce the losses power, wide constant power
+operating capability, low acoustic noise to the comfort of the driver, reasonable cost.
+Electric device can be defined as an electromechanical device for converting electrical energy into
+mechanical energy. In the right you can see the scheme of the typical architecture to convert electrical
+energy from the electric source into mechanical energy on the mechanical load. So this is the basic
+architecture of motion control system. We can see electric source that provides the energy to the drive
+system in the automotive field is the battery package. Power electronic converter that interfaces the motor with the power source and provides the motor with adjustable voltage
+current current and or frequency. The controller provides the appropriate control signals to the power converter by comparing the input command for speed and position with the actual values measured through sensors.
+The electric motor is the electric motor. The electric motor is the electric motor is the main device that converts the electric energy to the mechanical energy.
+The sensor needs to return the position or the velocity or the current of the actuator to the motion controller in order to close the control loops.
+The mechanical components transform the motion of the actuator into the desired load motion.
+In this lesson we can see in particular the electric motors. Just a reminder an electric motor converts the electrical energy into mechanical energy.
+The main layout of the electric motor consists in a cylindrical structure with a fixed part called stator and a moving one called rotor.
+We can find windings or permanent magnets in both of the structures to achieving different electrical and magnetic performances.
+The energy conversion happens in the interaction between the magnetic field of the two structures.
+We can see the main quantities of the electric machines.
+We can see the main quantities of the electric machines.
+In a motor, the induced EMF always acts to reduce the current in the loop.
+That's why it's called the back EMF.
+Faraday-Numann-Lens law establishes that the induced current in a loop is in the direction that creates a magnetic field that opposes
+the change in magnetic flux through the area enclosed by the loop.
+The induced current tends to keep the original magnetic flux through the circuit from changing.
+Here you can find the definition of the torque.
+In this slide we can see a first classification of the all-electric machines.
+In this lesson we will focus on the motors with permanent magnets and the induction motors.
+But first we must talk to the DC motors to understand how the technologies start their history.
+The benefits of the DC machines are that they can be used for simple operation
+with a simple motor control because the speed is proportional to the voltage.
+They are cheapest and simplest motor.
+The disadvantages are that requires high maintenance,
+daily generate sparks and they have a short life.
+All these problems are due to the presence of the brush.
+Motor technology is very mature and well developed,
+but for the automatic brand is no longer attractive for electric vehicle propulsion.
+It is no longer attractive for all the disadvantages of the DC motor and the demand of
+high efficiency, high power density and maintenance-free operation.
+On the right you can find the basic architecture of the DC machine.
+You can see the stator, external, equipped with salient poles, works as an inductor
+and can be realized with excitation windings or with permanent magnets.
+The final rotor, consisting of a cylinder of magnetic material, works as an armature.
+On the periphery of the rotor are uniformly distributed slots where the active conductors are hosed.
+The set of active conductors constitutes a closed circuit.
+The part in the air between the stator and rotor is called air gap.
+In this area, the magnetic field has the greatest intensity.
+The rotator is mounted on the same shaft as the rotor.
+This is for the purpose of supplied windings with the power supply voltage and ensure that the torque generated
+by the current that passes through is constant or at least any direction.
+The brush scrolls on the collector and electrically connect it to the external terminals of the machine.
+The presence of the system commutator brushes causes various issues, mainly the continuous maintenance
+required and undesired sparking.
+In this slide, you can find the working principle of the DC machines.
+The DC machine can work as a motor if the direction of the voltages and the currents
+are those shown in the picture.
+The E is made greater than V, the armature current is reversed and the machine switches
+to operate as a brake because the torque reverses becoming negative and instead of being a driving force
+it becomes braking.
+The DC machine in this condition works as a generator so it takes the energy from the load
+and converts it into electricity that can be dissipated or recovered.
+In this slide, you can see the four quadrant of operation of the DC machines.
+In this part, we will talk about the inverter.
+This device transforms the DC quantities in quantities in AC.
+The inverter design depends on the technology of power devices.
+Nowadays, the insulated gate bipolar transistor-based inverter is most attractive and has been widely
+accepted by modern electric vehicles.
+The selection of power devices is based on the voltage rating is at least twice the nominal battery voltage.
+The current rating is large enough so that there is no need to connect several power devices in parallel.
+The switching speed is sufficiently high to suppress motor harmonics and acoustic noise.
+Classified inverters of induction or permanent magnet motor into voltage-fed and current-fed types.
+But the current-fed inverters are rarely used for electric vehicle propulsion because of the need
+of a large series inductance to emulate a current source.
+In electric vehicle propulsion, it is preferred to use voltage-fed inverters because they are very simple
+and can have power flow in either direction.
+The control strategies can be classified as PWM or six-steps.
+The structure of the inverter is the same but changes the switching control technique of the various static switches.
+For PWM, it is the acronym of pulse-width modulation, so the period is the same but width changes.
+The PWM control is the comparison between
+modulating sinusoid of amplitude as and frequency fs and triangular carrier wave of constant amplitude at and frequency ft
+with at greater than as and ft greater than fs.
+When the value assumed by one of the modulators exceeds that of the triangular carrier,
+the switch s of the corresponding phase is turned on.
+When the value assumed by one of the modulators is less than that of the triangular carrier,
+it is turned off.
+On the right, you can see an example of the PWM.
+In the six-step for square wave control strategy, the switch is alternately closed and open for a time equal to
+T over 2, where T is the period of the alternating output voltage.
+The inverter changes state every T over 6 and can assume six different states, called active states.
+The amplitude of the output voltage depends only on V and the state of the switches.
+If you sum the voltage due to the branch, we can have the voltage fed to the inverter.
+Active vehicle propulsion requires the motor drives offering forward motoring,
+forward regeneration, backward motoring and backward regeneration.
+The forward regeneration is essential to capture the braking energy to increase the driving range per charge
+by over 10 percent.

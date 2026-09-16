@@ -1,0 +1,749 @@
+WEBVTT
+
+00:00.000 --> 00:07.440
+Hello everyone this is the third and final module of the diagnosis lesson. As you've seen
+
+00:08.080 --> 00:13.520
+the lesson has been divided in three modules. Module one that was about an introduction about
+
+00:13.520 --> 00:20.320
+all diagnosis and already in the first module the ISO 1429 alias UDS has been mentioned.
+
+00:21.200 --> 00:28.000
+The module two that was more focused about the status rights and how to get to the specific
+
+00:28.640 --> 00:37.040
+status and how to get back from that status still using the concepts behind this norm. Finally
+
+00:37.040 --> 00:44.240
+this last and shorter module will have a look at the norm itself so as you see here this is the
+
+00:44.240 --> 00:51.040
+ISO that has been always mentioned the ISO 14229 and here you find also the meaning of the acronym
+
+00:51.040 --> 01:00.240
+Unified Diagnostic Service UDS. Since it is mentioned so many times in the lessons and also in your
+
+01:00.800 --> 01:09.760
+daily working activities I would like to show and scroll down with you the norm to show what we
+
+01:09.760 --> 01:17.280
+really care about this norm and how to use it. So as every norm there is a summary of contents
+
+01:17.280 --> 01:26.080
+there are a lot of reference or references terms and definitions symbols so a lot of
+
+01:26.080 --> 01:31.600
+introductory pages and chapters where you know everything that is will be used during the norm
+
+01:31.600 --> 01:38.240
+is explained. But what we really care about is okay it would be interesting to read the first part
+
+01:38.240 --> 01:44.800
+you know we're talking about like 30-35 pages so it would be interesting to read also the first pages
+
+01:44.800 --> 01:55.600
+as well but once you are aware and you have basic knowledge about the UDS you will use this norm just
+
+01:55.600 --> 02:00.640
+looking at the services that you might need for your activities. As you see here
+
+02:00.640 --> 02:09.520
+there is a huge list of services all the services that are expected for this norm. So you see here the
+
+02:09.520 --> 02:19.440
+service 10 service 11 which we probably mentioned the service 27 here 22 and stuff like this. As you see the
+
+02:20.480 --> 02:28.080
+list of services is quite long and here you find also the service 14 that was mentioned in module 2 as well
+
+02:28.080 --> 02:35.920
+as the service 19 which is the main one that is mentioned and used almost in all the modules about the
+
+02:35.920 --> 02:43.760
+diagnosis that we have done before until now. Service 19 is the biggest one with the largest amount of
+
+02:43.760 --> 02:50.960
+sub-services probably for the activities we are interested in so the description of the norm will start from
+
+02:50.960 --> 02:59.520
+the easiest of the services that you will probably find yourself using which is the service 22. So just
+
+02:59.520 --> 03:08.160
+looking at the summary of the contents we just have to find the service 22 with data by identifier service 22
+
+03:08.160 --> 03:17.360
+that is page 97. So here we basically go to the page and we see how a specific service is
+
+03:17.360 --> 03:28.960
+set. This kind of structure is repeated for every service. So we are going to see the service 22 but then
+
+03:28.960 --> 03:37.360
+this kind of structure is repeated for every service. As mentioned many times in the past as well
+
+03:37.360 --> 03:43.840
+you don't have to remember everything by hearth. I mean no one will ask you to remember the whole norm
+
+03:43.840 --> 03:52.720
+or the whole norm in every service in every subservice no one will ask you for that. What you have
+
+03:52.720 --> 03:58.320
+what you have to remember what you have to to have basically is the norm itself so once you start an
+
+03:58.320 --> 04:03.600
+activity if you have to perform some activities about the diagnosis what you will need is basically
+
+04:04.160 --> 04:10.240
+diagnostic requirements for that project and if for that project the UDS is used then all you need to
+
+04:10.240 --> 04:16.080
+have to have is the UDS itself. So once you have to do an activity I don't know reading an information
+
+04:16.080 --> 04:23.440
+reading the error memo raising the error memory whatever you know that you can look in the ISO 14229
+
+04:23.440 --> 04:29.600
+alias UDS and then look for the you know the service that you might need how to write it what you should
+
+04:29.600 --> 04:37.200
+expect and things like this. So even if there are 300 pages do not get scared because what is really
+
+04:37.200 --> 04:46.160
+useful and helpful here is to have the norm read it through and knowing that you can look for
+
+04:47.680 --> 04:52.400
+information that you need just reading the norm every time you need it. We will start from service
+
+04:52.400 --> 04:57.920
+22 because it is very easy and then we will move to the service 19 which is the main one that we have
+
+04:57.920 --> 05:05.280
+always mentioned in use in the previous lessons. As always there is the service description and this is
+
+05:05.280 --> 05:10.640
+very helpful because if you already know the service to be used and you just don't remember how to write
+
+05:10.640 --> 05:17.280
+it in a frame okay then you can jump this this part this section but if you don't know what is the
+
+05:17.280 --> 05:22.880
+service that you might need then the service description of all the services might be helpful for you because
+
+05:22.880 --> 05:28.560
+it can explain what can you do with this service and eventually reading through them you can find something
+
+05:28.560 --> 05:34.880
+that can be that can suit the suit the activities that you might do so you can find the service that
+
+05:34.880 --> 05:41.680
+you might need reading the service description. In this case we already know what this service is used for
+
+05:41.680 --> 05:48.640
+but in case you have doubts you can simply read the service description to have a first introduction of
+
+05:48.640 --> 05:57.440
+the service in itself. I suggest you to do this kind of like to read at least the service description for the
+
+05:57.440 --> 06:02.720
+main services that have been mentioned in the diagnostic lessons that you might have received.
+
+06:04.880 --> 06:11.280
+After the description there's always the request message definition so in the norm you will find the
+
+06:11.280 --> 06:19.680
+long list of a long a huge number of tables okay so it's important to understand how to read them. In this
+
+06:19.680 --> 06:26.720
+case you will always have a chapter of request message as you remember all the diagnostic services are sent to
+
+06:26.720 --> 06:33.360
+the electronic control units using diagnostic scan frames okay so what you see here this is actually
+
+06:33.360 --> 06:40.000
+the hexadecimal values that you should write inside the scan frame to send diagnostic request. In this table
+
+06:40.000 --> 06:46.160
+in fact you see that on the left side there is data byte so the amount of bytes that are needed for this
+
+06:46.160 --> 06:53.200
+request and here what is the parameter name and there is the hexadecimal values. Then reading the norm you can
+
+06:53.200 --> 07:00.880
+understand also what is this CVT or this mnemonic section but for all we need now what is important
+
+07:00.880 --> 07:08.720
+is just to focus on the first column of the data byte eventually the parameter name and hexadecimal. So from
+
+07:08.720 --> 07:17.840
+here we see that to write to use the request this service the service 22 we have to write the request message in this way
+
+07:18.400 --> 07:24.400
+so we have a first byte where we have the read data by identifier request service id which is the id of
+
+07:24.400 --> 07:31.120
+the service the id of the service is 22 we already mentioned it so it means that if i want to request this
+
+07:31.120 --> 07:41.280
+kind of a service the message should start with 22 okay then it's said that the the second section of the data
+
+07:41.280 --> 07:49.680
+byte is byte 2 and byte 3 and byte 2 and byte 3 there is the data identifier so actually the code of the RDI
+
+07:49.680 --> 07:56.640
+okay this is always defined in two bytes so it means that if you want to read a specific information
+
+07:56.640 --> 08:05.600
+you will write 22 and the two bytes of the RDI okay as you see the table doesn't stop here because one of
+
+08:05.600 --> 08:10.560
+the feature of you know one of the possibilities that you have with this service is to request
+
+08:12.160 --> 08:19.760
+more than one RDI per times this is not always possible but it might be possible so this is why
+
+08:19.760 --> 08:27.360
+the table doesn't stop here and it means that you can send 22 then the two bytes for the first RDI
+
+08:27.360 --> 08:32.320
+other two bytes for the second one until you know all the RDIs that you want to all
+
+08:32.320 --> 08:45.520
+uh request for okay we can use the basic example of requesting just one uh uh RDI so what we will have
+
+08:45.520 --> 08:57.760
+is 22 and there two bytes at 10 0 8 for example okay where this will be the RDI and this is the service okay
+
+08:57.760 --> 09:10.560
+so this is the request then let's move on uh i choose this service because this service does not consider
+
+09:10.560 --> 09:17.280
+sub function but uh i'm reading the chapter 19 you will see that the chapter sorry the chapter related
+
+09:17.280 --> 09:23.360
+to service 19 you will see that this chapter will be much much longer because the service in itself
+
+09:23.360 --> 09:34.080
+expects a lot of sub functions we have mentioned the 1902 the 1904 the 1906 and the slides you will find
+
+09:34.080 --> 09:42.080
+many others much more of that but in this specific service there are no sub function so it's very it's
+
+09:42.080 --> 09:49.600
+easier for the explanation uh but uh going through the service 19 you will see that this chapter will be
+
+09:49.600 --> 09:54.800
+actually much more longer than this one where it's simply written this service does not use a sub function
+
+09:54.800 --> 10:03.680
+parameter so here it's explained what is the data identifier and what this parameter identifies the
+
+10:03.680 --> 10:09.760
+service data record being requested by the client and here there are also other references inside norm to
+
+10:10.480 --> 10:14.720
+understand what is this data identifier and how and why it's built like that
+
+10:14.720 --> 10:23.840
+so there is not just the table explaining uh uh how to write the request but also what is the positive
+
+10:23.840 --> 10:32.080
+response message definition that i should expect once i sent these i sent this uh request okay this service
+
+10:32.080 --> 10:42.720
+so again i wrote and before 22 10 0 8 then here the norm says okay this is the answer okay and here it's
+
+10:42.720 --> 10:49.440
+described the answer so the answer will be 62 because as you know as you might already know or
+
+10:50.080 --> 10:55.440
+someone has mentioned already in other videos the positive response to a specific service is going to
+
+10:55.440 --> 11:03.440
+be plus 40 in hexadecimal values so if we requested service 22 then the positive response will always start
+
+11:03.440 --> 11:12.000
+with plus 40 on the service so if you requested the service 22 then the positive response will be 22
+
+11:12.000 --> 11:18.480
+plus 40 in hexadecimal which is going to be 62 and here everything is described here i mean positive
+
+11:18.480 --> 11:26.080
+response message that message definition quite likely quite likely inside the first chapter descriptive
+
+11:26.080 --> 11:31.920
+chapters of the norm you will also also find a description of this plus 40 when there is a positive
+
+11:31.920 --> 11:38.240
+response and stuff like that uh in these tables this concept is given for granted but we are already
+
+11:38.240 --> 11:44.400
+mentioning that once we have a positive response it's going to be a plus 40. anyway so we have a plus 40
+
+11:44.400 --> 11:51.360
+then here it's data identifier so we will have 10 0 8 because this is that identifier and then we will
+
+11:51.360 --> 12:01.520
+have the data record so the actual information so if we are considering that this byte uh this byte i don't know here
+
+12:01.520 --> 12:13.920
+the content of the byte definition so that the rdi is on two bytes okay so 10 0 8 okay but then the content
+
+12:14.480 --> 12:25.120
+that it gives access to it gives access to might be i don't know 10 bytes okay so here we will have 62 as a positive
+
+12:25.120 --> 12:35.360
+response 10 0 8 which is the id data identifier and then we will have 10 bytes giving us the content of
+
+12:35.360 --> 12:41.680
+this rdi just remember back guys that rdi basically is an information that is stored inside the electronic
+
+12:41.680 --> 12:48.400
+control unit memory so what i'm doing basically here requesting the service 22 is just requesting to the
+
+12:48.400 --> 12:56.880
+electronic control unit uh this information to give and publish this information on the ken network
+
+12:56.880 --> 13:06.400
+using this specific syntax coming from vds uh then if the rdi it's uh it's just i don't know it has two bytes
+
+13:06.400 --> 13:12.160
+of information then we will just have this one one and two if it's on three bytes we have always this
+
+13:12.160 --> 13:17.840
+or if it's on four bytes we have this one as well and stuff like this okay this should be quite clear
+
+13:17.840 --> 13:23.120
+and this is explained inside the norm so in the norm is said okay the positive response message
+
+13:23.120 --> 13:29.280
+definition is going to be like this so i have one as 62 the positive response the identification codes
+
+13:29.280 --> 13:37.040
+of the data identifier and the content once again the table doesn't stop here because as i explained you
+
+13:37.040 --> 13:46.400
+before you have the chance to request more than one rdi times this is not always possible it's up also to
+
+13:46.400 --> 13:53.280
+the client that how the client decides to uh implement this part this section maybe they don't want to
+
+13:53.280 --> 13:59.680
+implement exactly the uds but maybe they have some division in the software so not always is possible
+
+13:59.680 --> 14:06.880
+to request more than one rdi times but the norm says that it's possible to read a few of them all
+
+14:06.880 --> 14:13.600
+together okay this is why the table doesn't stop but the idea is always the same so you have 62 the two bytes of
+
+14:13.600 --> 14:19.840
+the identifier and the content once the content is finished you will have once again data identifier
+
+14:19.840 --> 14:27.600
+and the content okay this should be clear here there is a definition of what is the data identifier
+
+14:27.600 --> 14:33.120
+and the data record but once again data identifier this is basically the identification number the data
+
+14:33.120 --> 14:43.120
+record is the content we access through that identifier once again guys here we are just uh this service is very
+
+14:43.120 --> 14:50.640
+easy so through the service 22 we are requesting to read some information that are stored inside the uh
+
+14:51.760 --> 14:58.160
+memory of the electronic content this information is stored with the specific identification number which we
+
+14:58.640 --> 15:05.840
+um consider to be 1008 we request can you give me the information that are uh stored with the
+
+15:05.840 --> 15:13.040
+identification number 1008 the echo will reply okay 62 1008 blah blah blah blah this is the content okay
+
+15:13.040 --> 15:22.560
+this should be quite easy then uh let's move to the next section of the norm which is the supported
+
+15:22.560 --> 15:28.800
+negative responses so every time we in this example we have given for granted that the positive that the
+
+15:28.800 --> 15:34.240
+response is positive and we explain that once we have the positive response is always plus 40 on the
+
+15:34.240 --> 15:44.560
+service that has been requested but for some reasons the echo can also reply saying i cannot give you this
+
+15:44.560 --> 15:52.400
+information so we request 22 i'll use purple so we always request the service in this way because you
+
+15:52.400 --> 16:00.240
+know we have seen it from but we have two options or deposit the response is positive and it follows the rules that
+
+16:00.240 --> 16:08.880
+we were explaining before or we have the second options where the answer is negative so the echo cannot reply
+
+16:09.520 --> 16:16.960
+to cannot you know reply positively to the services that we requested so in this case the structure will be like
+
+16:16.960 --> 16:28.560
+this one the first byte is always going to be 7f so the answer is going to be 7f 7f is used every time
+
+16:28.560 --> 16:34.000
+the echo wants to tell us the echo wants to tell us okay this is a negative response negative response to
+
+16:34.000 --> 16:39.680
+what second byte is going to be the service for which the response is negative and the service that we
+
+16:39.680 --> 16:47.120
+were requesting is the service 22 this is the second byte the third byte is going to be the the reason
+
+16:47.120 --> 16:52.880
+so the the echo always when there is a negative response the echo will always reply on these three bytes
+
+16:52.880 --> 17:00.640
+where the first one is the 7f always which tells okay every time you read 7f as first byte this is a
+
+17:00.640 --> 17:08.320
+negative response so negative response means i cannot reply okay i cannot reply to what the service 22 and
+
+17:08.320 --> 17:16.880
+then the echo always tells you why so in this case the third byte is the reason of why that the echo cannot reply
+
+17:16.880 --> 17:25.520
+uh in the norm there should be a table with all the possible negative responses that the uds expects
+
+17:25.520 --> 17:33.040
+but not all the negative responses are expected for every service so for every service that you read there
+
+17:33.040 --> 17:39.360
+is also a section of supported negative responses and there is a subtable containing only the
+
+17:39.360 --> 17:49.760
+a supported negative responses for that service so it means that if i use the service 22 the i have two
+
+17:49.760 --> 17:56.320
+options or the echo replies positive positively and that's that follows all the words that we have explained
+
+17:56.320 --> 18:06.000
+before but the other option is that the answer is negative and we will have 7f 22 and one of these negative
+
+18:06.000 --> 18:13.520
+responses so we will have these are the ones supported for the service 22 so we will have the service the
+
+18:13.520 --> 18:22.400
+reason 13 incorrect message length or invalid format means that we have requested an rdi not on two bytes but
+
+18:22.400 --> 18:31.200
+you know to buy it point something so we didn't write 22 10 0 8 but we brought 22 10 0 8 1 for example
+
+18:31.200 --> 18:36.800
+and this is wrong because the rdi are based on two bytes okay so this is the reason why we have the
+
+18:36.800 --> 18:47.040
+correct uh incorrect message length another negative response could be 22 so 7f 22 22 conditions not
+
+18:47.040 --> 18:54.000
+correct it means that you are requesting a diagnostic request when there are not all the proper conditions
+
+18:54.000 --> 19:01.440
+and expected conditions to request this service 31 request out of range so you requested an rdi that
+
+19:01.440 --> 19:10.000
+doesn't exist for example or security access denied 33 so you are requesting a diagnostic service that cannot
+
+19:10.000 --> 19:18.320
+be requested with this security access level the security access there is also a diagnostic service for
+
+19:18.320 --> 19:25.040
+the security access which is the 27 so you can have a look at it read it to understand what is this security
+
+19:25.040 --> 19:31.280
+access once again the structure that we are seeing here for the service 22 is all is the same for the
+
+19:31.280 --> 19:40.800
+service 27 the service 19 the service 14 and stuff like this okay so it's okay and it's enough to go
+
+19:40.800 --> 19:47.440
+through the structure of one service because all the others follow the same structure
+
+19:50.160 --> 19:57.760
+and then the the norm also gives us some examples so there are some preconditions that are explained
+
+19:57.760 --> 20:05.120
+here these are these are all the preconditions of this example and then there is an example probably there
+
+20:05.120 --> 20:12.240
+are also also more than one example so this example one is read single data identifier so we just are
+
+20:12.240 --> 20:18.800
+reading one rdi this guy's in this case is the bin vehicle so the vehicle identification number bin number
+
+20:20.080 --> 20:27.360
+so we will we will actually write inside the diagnostic tool or simply in a diagnostic frame in canalizer
+
+20:27.360 --> 20:34.400
+these three bytes 22 because this is the proper diagnostic service and then we will have the two bytes of the
+
+20:34.400 --> 20:43.120
+the identification number which is the f19 in this case okay so the echo will reply again uh the positive
+
+20:43.120 --> 20:52.560
+response 62 then the two bytes with the data identifier and the content of that ed of that rdi in this case
+
+20:52.560 --> 21:02.320
+the content of that rdi is based on uh 20 minus 3 17 bytes so the answer will be on 20 bytes because the first is
+
+21:02.320 --> 21:09.520
+the positive response then we will have the two bytes of the rdi and finally the content of the rdi
+
+21:11.600 --> 21:18.480
+uh here there is another example where you read not just one rdi but two rdi's so as you can see
+
+21:18.480 --> 21:26.480
+this reflects exactly what was written in the generic uh variables let's say in the table before you just
+
+21:26.480 --> 21:32.880
+write the service 22 and then two bytes for the first rdi two bytes for the second rdi and the answer
+
+21:32.880 --> 21:40.720
+in this case will be 72 because it's positive response the first the two bytes of the first rdi
+
+21:41.280 --> 21:50.240
+the content the two bytes of the second rdi and the content and it ends so here it starts another
+
+21:50.240 --> 21:56.800
+service another service another service that will follow the same structure so out of curiosity because
+
+21:56.800 --> 22:06.400
+we have always used that service we are going to scroll down also the service 19 service 19
+
+22:06.400 --> 22:24.480
+uh service 19 so we see there is a productive part where it's written uh for which are the reasons
+
+22:24.480 --> 22:30.720
+why we should use this service which is the purpose of this service and we see here also the descriptive
+
+22:30.720 --> 22:38.800
+part is descriptive part descriptive part is much longer because there is a huge set of sub services
+
+22:38.800 --> 22:47.040
+that are used for service 19. this is very helpful so i really uh invite you to read these chapters
+
+22:47.040 --> 22:53.440
+especially for the main services that services that you might use for your activities so there is always
+
+22:53.440 --> 23:00.640
+the descriptive part as you see it's very very long uh you know there are even different
+
+23:00.720 --> 23:07.040
+chapters to understand which are the service which is the services which are the purposes of the
+
+23:07.040 --> 23:14.000
+sub services and stuff like this okay so this is very very long but this is these are all the concepts
+
+23:14.000 --> 23:20.160
+as ideas that we gave you in the past videos so just reading through these sections you should find
+
+23:20.160 --> 23:26.560
+every all the things that we have already mentioned in the past in other videos so once this full
+
+23:26.560 --> 23:31.680
+introductive part has been defined probably there is also the definition of the status byte that you
+
+23:31.680 --> 23:38.240
+have in other videos so you see how long is this then you will have the usual table that we already found
+
+23:40.320 --> 23:47.760
+in the other services so there is the request message definition here you see there is first byte is the
+
+23:47.760 --> 23:55.360
+service 19 the second byte is the sub function which was not present in the uh in the table before
+
+23:55.360 --> 24:02.880
+because no sub services were expected for service 22 but for the service 19 there is a huge bunch of
+
+24:02.880 --> 24:10.480
+sub services expected and then there is the third byte of the status mask this is the famous 19 0208 that
+
+24:10.480 --> 24:19.200
+we have always mentioned in past videos okay but as you see there are 02 is just part of subs it is just one
+
+24:19.200 --> 24:27.120
+of the all the sub services that are expected for this service so we have 0 1 0 2 0 half 11 12 12 13
+
+24:27.120 --> 24:36.960
+0 3 0 4 0 5 0 6 10 you know there are there is a long long list of sub services each sub service is
+
+24:36.960 --> 24:43.520
+used for a specific purpose most of the activities that we do can be managed just with the the subservice
+
+24:43.520 --> 24:51.200
+0 2 sub services 0 4 and the subservice is 0 6 but there are a bunch of other subservices that might be
+
+24:51.200 --> 24:56.800
+helpful for other specific corner cases of your activity and you don't have to remember all of
+
+24:56.800 --> 25:03.040
+them all you have to do is just knowing that i have the norm i can use the norm and read the chapter when
+
+25:03.040 --> 25:09.040
+i need it to understand if there is a specific service or subservice that i can use to you know perform
+
+25:09.040 --> 25:15.200
+a specific validation activity or verification activity that i'm supposed to do in my work
+
+25:18.000 --> 25:25.040
+so here is the definition of all the sub function expected here you see the subservice 0 2 which is
+
+25:25.040 --> 25:32.720
+the one that we always use is called report dtc by status mask so we say service 19 subservice 0 2
+
+25:32.720 --> 25:44.480
+report the list of dtc by status mask which status mask at least 0 8 so at least the status all the dtc's
+
+25:44.480 --> 25:52.000
+that has got at least the bit 3 to 1 this is the reason why we set 0 8 but this is the reason why we
+
+25:52.000 --> 26:02.640
+can use whatever other status mask i'm not forced to use the 0 8 as the third byte of the request 19 0 2 0 8
+
+26:03.280 --> 26:08.800
+i can use something different i don't know i'm interested in the list of the dtc's that have
+
+26:08.800 --> 26:20.400
+third byte 40 so 19 0 2 40 or 19 0 2 f f 19 0 2 0 0 f and you can use it as you prefer according to the
+
+26:20.400 --> 26:26.080
+activity that you want to do most of the time if we use 0 8 because we are interested in all the dtc's
+
+26:26.080 --> 26:31.680
+that are at least saved in the error memory but this doesn't mean that you cannot use a different status mask
+
+26:32.400 --> 26:38.560
+so this is the survey the list of all the subservices expected or that you that can be implemented for
+
+26:38.560 --> 26:45.680
+service 19 just remember in the service 22 this section was empty because there are no subservices
+
+26:45.680 --> 26:51.760
+expected for that service in this one you know you see there are also two or three pages so description
+
+26:51.760 --> 26:56.320
+of the subservices okay so you start to understand why this is so important
+
+26:56.320 --> 27:07.040
+so here there is the long definition of the status by the examples so i really invite you to read all of that
+
+27:07.040 --> 27:13.040
+and once again as we have seen for the service 22 here there is a positive response message definition so what i should expect
+
+27:13.040 --> 27:19.040
+what i should expect once i have a positive response once again if the service is the 19
+
+27:19.040 --> 27:27.200
+then if there is the positive response it's going to be 19 plus 40 59 okay then 59 0 2 for example
+
+27:27.920 --> 27:35.120
+the dtc status availability mask which i invite you to study and so this is the third byte that you
+
+27:35.120 --> 27:41.920
+should study from the north and then the three bytes of the dtc because you know the dtc
+
+27:41.920 --> 27:48.480
+uh is based on three bytes plus four byte real status of the dtc which we which is what we are looking for
+
+27:51.280 --> 27:57.440
+and here there are all the examples of positive response with all the subservices so this chapter
+
+27:57.440 --> 28:02.720
+is very long because we have a lot a lot of subservices it means we have a lot of tables for
+
+28:02.720 --> 28:11.360
+every kind of example uh of course even here there is the supported negative responses code
+
+28:11.360 --> 28:18.000
+in this case we have just three cases like some function not supported uh the incorrect message
+
+28:18.000 --> 28:23.600
+length that we have always also seen on the service 22 and also the request out of range
+
+28:24.400 --> 28:30.880
+and finally there is also the message for examples with what can be yeah here you see there is also the
+
+28:30.880 --> 28:38.400
+description of what the what are the eight bit of the status byte and that's you know you have two
+
+28:38.400 --> 28:45.040
+specific videos explaining that so this is just a refresh for you and then there are you know there
+
+28:45.040 --> 28:50.960
+are examples where you know a specific uh subservice is used in this case is the one
+
+28:51.520 --> 28:58.640
+the results i might say an example with zero two you know you see here in this case uh they're not
+
+28:58.640 --> 29:06.720
+requesting the 1902 08 but they're interested in the more restrictive case where not just the bit 3 is
+
+29:06.720 --> 29:17.520
+2 1 but in this case they want bit 7 1 and the bit uh 2 to 1 okay and you know here for it follows a
+
+29:18.960 --> 29:29.200
+huge list of examples with all the subservices so just to uh sum it up this norm is not something that
+
+29:29.200 --> 29:35.680
+you read so you take this norm you read 300 pages and then you expect to be expert in ugs no
+
+29:36.640 --> 29:41.840
+this norm is very important to understand the structure of the norm probably start from service
+
+29:41.840 --> 29:49.520
+22 because that's the easy one and once it's clear the structure of every service every time
+
+29:49.520 --> 29:57.360
+you perform diagnostic activities use this norm uh looking for or the specific service if you don't
+
+29:57.360 --> 30:03.360
+remember the syntax because we have seen there are tables explaining you how to write the request which
+
+30:03.360 --> 30:09.360
+is the positive response to be expected which is the negative exponent response to be expected and also
+
+30:09.360 --> 30:18.320
+which is the which are the negative reasons for the negative uh response expected so you just read the
+
+30:18.320 --> 30:26.240
+norm if you don't remember the syntax or if you have to do something diagnostic diagnostic related but you don't
+
+30:26.240 --> 30:33.840
+know which can be the service to be used you can simply or read the service description of all the
+
+30:33.840 --> 30:41.200
+of all the services or simply just looking for keywords for example dtc for example flash of
+
+30:41.200 --> 30:50.160
+uh echo for example arrays and stuff like this probably the research the control find feature of the laptop
+
+30:50.160 --> 30:58.320
+uh applied on the norm will uh bring you to the service description chapter which is the first
+
+30:58.320 --> 31:04.320
+section of every uh service and then once you read the service description that will help you to
+
+31:04.320 --> 31:09.600
+understand if that can be a service that can help you for your validation activities or for your
+
+31:09.600 --> 31:15.200
+verification activities or diagnosis and again you don't have to remember everything about the
+
+31:15.200 --> 31:21.760
+service you just have to know how to read the UDS norm how to use it so that will help you for the
+
+31:21.760 --> 31:27.200
+further activities that you do once again if there are doubts or problems you can contact me
+
+31:27.200 --> 31:36.240
+uh i am pasquale.perrota and the email address is pasquale.perrota head sign kinethon.it or simply
+
+31:36.240 --> 31:45.360
+refer to the generic mailing list automotive.training head sign kinethon.it for further uh support and further questions
+

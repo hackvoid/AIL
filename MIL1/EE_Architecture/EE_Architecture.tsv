@@ -1,0 +1,113 @@
+start	end	text
+0	9000	Hello to everyone, I am Massimiliano Schettino and today we will follow a lesson on EE architecture.
+9000	19000	Electrical electronic architecture refers to the convergence of electronics, software and wiring into one integrated system.
+19000	25000	Let's see why we are talking about this topic in Automotive Filed.
+25000	42000	As we can read here, today an average new automobile includes more than 40 electronic controllers or ECUs, 5 miles of wiring and more than 10 million lines of software code.
+42000	53000	This is necessary in order to manage the ever increasing number of functions needed to make our vehicle ever more efficient, comfortable and smart.
+53000	59000	Such as ADAS, Automatic Emergency Break, Powertrain, BSM and so on.
+59000	64000	And their number is said to grow further.
+64000	68000	How are these ECUs connected?
+68000	83000	The main communication protocols used in Automotive Filed are CAN and LIN, but currently the Ethernet is increasingly being utilized, especially for ADAS system and connection between cluster and navigator.
+83000	87000	And we can also find FlexRay and most ones.
+87000	93000	These communication protocols have different transmission speeds.
+93000	99000	LIN is the slowest one with a bauderate of 20 Kbps.
+99000	108000	Then we have CAN, FlexRay and the top Ethernet with more than 100 Mbps.
+108000	117000	But if nowadays so performing protocols are available, why the less performing ones are still used?
+117000	120000	The reason is very easy, the cost reduction.
+120000	131000	In fact, LIN is still used for easy use with limited functionalities, like solar sensors, EBS or Intelligent Battery System or Siren.
+131000	146000	Since these secondary components are not safety-relevant TCUs and don't need a fast IO, it is acceptable to use a low speed connection.
+146000	153000	The EE architecture characterizes all the work that is done before the production of the ECUs.
+153000	158000	Network and software architecture, diagnosis and hardware standard.
+158000	167000	In network architecture, we find ECUs that will be present in the vehicle and how they are connected to each other.
+167000	172000	Software one includes code lines and schematics.
+172000	182000	Another very interesting part is the diagnostic standard, where we can also find the fault memory section for detecting faults in the vehicle.
+182000	191000	Hardware one, in the end, concerns the guidelines to follow for the physical realization of the component.
+191000	205000	All the other and successive steps as components and vehicle application tasks are not part of EEAE.
+205000	219000	In detail, there are various topics related to EE architecture, like VF, vehicle function, which explains certain functionalities of the vehicle as external light or automatic emergency brake.
+219000	224000	Other important parts are diagnostic requirements and network management.
+224000	234000	If you are wondering what sleep and wake-up management mean, you have to know that sleep mode is one of the operating states of the vehicle.
+234000	240000	This is activated when we turn off it to prevent battery discharge.
+240000	253000	In this state, all these use stop communication and deactivate all unnecessary loads, like internal and external lights, but some of them remain awake, waiting for some specific inputs.
+253000	262000	This status, in fact, is kept until one of these inputs is received, triggering the wake-up event.
+262000	268000	For example, an input could be inserting the key into the car's doors to open it.
+268000	276000	Action detected by the BCM that in turn will wake up all the others is used.
+276000	291000	The graph in this slide shows us the difference in voltage values and so in power consumption during the different phase of the sleeping process.
+291000	303000	When the key off command is sent, the ECUs continue communicating for some seconds, then they all turn off in order to minimize power consumption.
+303000	306000	For the wake-up, it is exactly the opposite.
+306000	317000	The key drivers for network architecture are integration, busload, cybersecurity, and autosar.
+317000	327000	Obviously, each of them has its own importance, but probably the two most fundamental features are busload capacity and cybersecurity.
+327000	340000	Busload should always be less than 60-65% of maximum bus capacity in order to avoid missed messages or latency issues.
+340000	350000	But over the years, with the increase of number of issues and of their functionalities, it has become increasingly difficult to comply with this limit.
+350000	357000	In addition to technology's improvement, we have to consider the introduction of new CAN type.
+357000	365000	In speed increasing order, their names are BCAN, BHCAN, CCAN, and finally FDCAN.
+365000	370000	As the baud rate increases, so does the busload capacity.
+370000	375000	In the end, there is also the possibility of finding multi-CAN network.
+375000	387000	Usually, a CAR contains 3-4 separate CANs, but in the same cases, we can find a few shared buses for a lot of issues.
+387000	397000	An example is a C1 CAN for ECM, BSM, BCM, and others in a VDB-Cellantis vehicle.
+397000	412000	As for cybersecurity, as cars become smart and networked, just think about the apps for the management of battery in BHV, it has battery electric vehicles.
+412000	431000	The risk and danger of being attacked by hackers increases, and so always new strategies must be put in place to prevent criminals from entering the vehicle or causing damage to people during driving maneuvers.
+431000	438000	This slide and the next one focus on an already introduced topic, the vehicle function.
+438000	450000	This type of document analyzes the interaction between different issues, but can concern a single car line and EE architecture.
+450000	463000	A very characteristic element we can find in VFs is the functional diagram, which shows how the involved issues interact each other and which messages are sent and received.
+463000	467000	This is an example of battery system vehicle function.
+467000	488000	We can recognize CAN messages as a status BHPCM, battery charge status, internal variables like key in ignition status, and proxy variables as battery type second EBS type.
+488000	500000	Arrows and rhombus in the scheme allow us to distinguish input from outputs for each node.
+500000	504000	A totally different type of graphic is network topology.
+504000	513000	It shows all these use and networks in an architecture, usually divided in macro functionalities.
+513000	519000	In this image we can recognize chassis, powertrain, body, and so on.
+519000	528000	Different network types have different colors, and often also main sensors and actuators are shown.
+528000	537000	The architecture in this example, the CUSW, has a star topology with the BCM as central hub.
+537000	550000	The BCM is a very important ECU, responsible for the sleep, wake up, to open and close doors, but in this case it fulfills also the fundamental task of the gateway.
+550000	567000	If an ECU needs to send a message to other ECUs with which it is not directly connected, the BCM receives this message from the sender and retransmits it, as it is, in the network of the target ECU.
+567000	584000	It is what happens when, for example, ECM sends a message to BH in order to visualize some information on the cluster, like radars ones.
+584000	597000	With more modern network topologies, like Atlantis NextGen, which includes internet connection, a top player at BCM is needed, called the Secure Gateway.
+597000	606000	It is responsible to separate telematic part from the vehicle one, for a better organization and to prevent cyber attacks.
+606000	620000	SGW, in fact, is a firewall which stops old messages, if not present in the list of the permitted ones, that are trying to pass from the telematic to the vehicle part.
+620000	631000	Another example is BEV's network topology of an electric 500, which is even more complex.
+631000	638000	We can find more ECUs and CANs, both for the telematic part and the vehicle one.
+638000	643000	Here BCM and SGW are fused in the same package.
+643000	650000	This part of lesson will focus on networks.
+650000	662000	In the previous slides, we have already seen that different types of communication protocols are used in Automotive, each of them with its own characteristic and body rate.
+662000	673000	From previous topologies, it should be clear that the most used network is the CAN one, and that, again, different classes of CAN exist.
+673000	688000	BCAN has 50 Kbps of body rate, BHCAN 125, CCAN 500 and FDCAN up to 15 Mbit.
+688000	696000	The choice of the CAN type depends by the purpose.
+696000	700000	Next-gen architecture, for example, has three CAN.
+700000	711000	Two three CANs for safety functionalities like engine, BSM, backsystem and others, while BHCAN is used for infotainment.
+711000	716000	Let's see them in detail.
+716000	732000	C1 CAN has a front part that connects together adaptive cruise control, engine control module and anti-lock braking system, and a rear part with particular component, like the one named AALA.
+732000	746000	They are isolators, also called Mammut, and their scope is to isolate the ECUs in case of electric failure, in order to protect sensitive elements and to quickly identify the fault origin.
+746000	757000	An important detail is that all these uses have two pins for CAN, CAN low and CAN high, except for ABS, which has four pins.
+757000	765000	This condition allows ABS to continue working even with a fault on the front or rear CAN side.
+765000	771000	This is fundamental, since ABS manages breaks and emergency calls.
+771000	789000	GMA-AT architecture has a similar C1 network topology, with some more easy use, like TCM, its transmission control module, and isolators.
+789000	803000	C2 CAN has a very similar topology with C1 CAN. What changes is mainly the ECUs.
+803000	817000	BHCAN connect together telematic ECUs, like instrument panel cluster, entertainment telematic module, telematic box module, and so on.
+817000	826000	In the end, if CHU issues need to exchange very important and fast messages, there is the possibility to find a private CAN.
+826000	834000	The example in this slide is a network that connects the adaptive cruise control to the apathic line feedback.
+834000	840000	In this way, it is also possible to decrease the other CAN busload.
+840000	848000	If CAM protocol is the most common one, LIN is the second.
+848000	861000	It is used for sensors, actuators, and for not too complex CCUs, as EBS , UAM ,
+861000	867000	WWSM , windshield wiper smart motor, etc.
+867000	877000	We can usually find 3-4 LIN for BCM and 1 LIN for ECM, but this number can obviously change according to the project.
+877000	891000	The OBD port is a connector usually placed under the steering wheel of each car, and that constitutes the access point to the entire vehicle.
+891000	903000	It's scope is to allow authorized people to operate diagnostic operations and or tests, but it could be used also for criminal accesses.
+903000	909000	For this reason, it is directly connected to the security gateway.
+909000	924000	Through the OBD port, it is possible to send and receive messages on the main vehicle CAN, as you can see from the pinout on the left.
+924000	931000	But it allows also to execute electrical tests, measuring line voltages and terminance resistances.
+931000	944000	Since we know that the potential difference between CAN-A and CAN-Low is in the range 0.5-1.5 volts,
+944000	956000	and that the terminator resistor is of 120 ohm, a simple multimeter can detect electrical faults inside the vehicle.
+956000	962000	I hope you all enjoyed my lesson, and for any doubt or question, here you can find my email.
+962000	967000	I can only say thank you for your attention and goodbye.
+967000	968000	If you looked there if you can see the further obvious reparations already, let me show you all the time!!!
+968000	969000	Let me show you about pois.
+969000	971000	If you look at your port of Google-Luc 해요, let me give up your espion để jeep on.
+971000	975940	This video is a guerrilla satisfyn 들어�謝謝 David fields every time, and that a hundred ans it is interesting for you to understand why.
+976000	978000	I am relieved to be xi can beHey, if you look before.
+978000	980000	I would put your own うm and adjust his at work.
+980000	981000	I actually have this on your TV and track as your feedback.
+981000	982000	You can take this video tab to guide your charts.
+982000	987940	Let everyone say with after creating ansel cœur aches and the other thing.
+987940	992000	I can lange coverÓ a spot on their kontRAC building.
+992000	993000	klimaC building.
+993000	993980	For appeal is there.
+993980	996000	I can get a few minutes from two minutes.

@@ -1,0 +1,2673 @@
+Hello everyone, I'm Pasquale Perrotta and this is the Module 2 of Diagnosis topic.
+There will be three modules, the first one already available for the Diagnosis introduction,
+the second one which is related to default management, and the third one which will be
+a walkthrough of the UDS to understand how to read it, how to use it, and things like this.
+But in the Module 2, we will work exactly for default management.
+In particular, we will understand what is the status of the DTC,
+analyzing the behavior of each of these eight bits.
+The introduction that I gave for the Diagnosis is very general to make you aware
+what is the Diagnosis, why do we use the UDS, why it is important to use it,
+and things like this. But that was pretty an introductory lesson,
+and not being very practical, being quite, let's say, far from the practical use of the UDS.
+So the intention of these two further modules is to make you closer to the concrete activities
+that you are going to do once you work for a client.
+And these will be very, very, very helpful for whatever activities you are going to do,
+which is going to be validation, verification, hardware-in-the-loop configuration, everything.
+So this will come in handy every time.
+Of course, in the slides and also in the norms that you will get, there are definitions.
+So everything that I'm going to say is reported already in the norms.
+So this lesson is a way to make things easier or to raise in you doubts about you understood.
+But anyway, everything is already reported and present in the slides and the norms
+for other presentations and things like this.
+So you have the references in case of problems.
+I please refer to your references.
+So here there is a definition and most of all some names.
+But I would like to use, as always, a tool that for me is very helpful, which is paint.
+I already prepared a couple of things that could be helpful.
+But here I would just like to mention two additional things.
+So as we said probably in the previous module, or if not, I'm going to tell you now.
+Every time we refer to a diagnostic trouble code, the DTC, we need three bytes to refer to it.
+So the identification number for the specific diagnostic trouble code is based on three bytes.
+Okay, so we will have something like this.
+I write it here, you know, in a small character and dimension.
+So we will have, I don't know, I'm just inventing, you know, a possible diagnostic trouble code
+that could be, I don't know, 01, 22, 92, for example.
+Okay.
+Okay, we can make it even a bit bigger.
+Okay.
+So as you see here, so I already write something, then we will understand what is that.
+So let's put, let's make it be even bigger.
+Okay.
+So as I was saying the identification, so the ID of the diagnostic trouble code is based on
+three bytes and I'm going to show you them.
+So this is the first byte, this is the second byte, and this is the third byte.
+Okay.
+But every time we ask to the electronic control unit the list of errors that the electronic
+control unit has stored inside it, and we will see how to do that.
+Okay.
+Okay.
+So probably this module or in the next module, we see how to do actually concrete way this
+request.
+We will always see and realize that the echo will reply always at least with four bytes.
+Okay.
+If there is an error present in this case.
+So where three bytes are related to the identification number of diagnostic trouble code.
+So let's say this is the first, this is the second, and this is the third.
+But then we will also have the fourth byte.
+This fourth byte is the status of DTC we are referring to.
+Okay.
+So this 8f that you see is, you know, a combination of 8 bit.
+And according to the values of this 8 bit, we will have a specific value.
+8f is an hexadecimal.
+So according to the bit, the value of the bits that we will have here, we will have a
+specific value of this 8f.
+So please remember, we will see how to ask to the electronic control unit the list of
+errors, for example.
+But just keep in mind, for starters, that the diagnostic, every diagnostic trouble code is
+expressed with three bytes.
+And then, and this is a statical, I mean, it's a static means it's just an identification
+number.
+Okay.
+Like, I don't know the ID of a can frame.
+Okay.
+That is an ID and it's a static.
+So this is not, this does not change.
+What actually changed is the fourth byte because the fourth byte is the representation
+of the actual status of the DTC.
+Please guys, as always, do not learn things by earth.
+So status of DTC is not just a name or a, you know, funny combination of words that someone
+in the past decide to use.
+Status of DTC actually means the status of the diagnostic trouble code.
+Always refer to the concrete things.
+Okay.
+Concrete examples.
+Let's always think about we are having a problem with our car and we are driving the
+car on the highway.
+So I already did this example in the past module.
+Okay.
+And what it really, what really matters is to understand what is the problem, make sure
+that the car and so the software behaves properly so that everything is safe.
+We can preserve the safety of the drivers, the system and all the things that we have
+said.
+Okay.
+But once we, you know, everything is safe and, you know, all the safety part is achieved,
+then it's very important for us to understand what is the status of the error.
+This is from the high level point of view, but this is also important during the development
+phase.
+If you're performing some tests that require that the error memory is clean and you have
+no errors stored.
+And then you have an error always present inside, or you have an error generally in your electronic
+control unit.
+The first step is to understand.
+Okay.
+The error of error is it.
+I have three bytes telling me which is the identification number.
+So I can actually refer and understand what is this error.
+And then looking at the fourth byte, I can see, okay, just analyzing the value of this eight
+bit, I can understand if the error is present, if the error is not present.
+If the error was present in the previous monitoring cycle, if it was present two monitoring cycles
+ago, if it's just stored, if there is a lump on.
+So these are all information that we can retrieve just looking at this fourth byte.
+Okay.
+So this is extremely important.
+I've mentioned something that might sound new for you, which is the monitoring cycle,
+but we will go through it while explaining this because we will have basically three definitions
+that we are going to give today.
+So one, let's make it a bit smaller.
+One is the monitoring cycle.
+One is the driving, oops, driving cycle.
+And another one is the warm up cycle.
+So we will have three definitions.
+Okay.
+For starters, let's, of course, these definitions in a way are reported on the norms.
+Okay.
+So, once again, you don't have to remember everything by earth.
+You just have to know, you know, where to look at, in this case, to the norm, or, you
+know, just have the material to study and to read so that you know the definition of this
+kind of stuff.
+Please do not just study by earth.
+Try to understand from the physical point of view what does it mean, all of this stuff.
+So, to start with, we will define the monitoring cycle, a cycle that goes from the K off, sorry,
+from the K on to K off.
+Okay.
+Monitoring cycle.
+Okay.
+Once again, let's analyze the word cycle.
+So it's a cycle.
+Okay.
+We are monitoring a period of something, but monitoring what?
+Okay.
+Once again, here.
+Okay.
+I can even type it here.
+Okay.
+Just to make things even clearer.
+We are talking about a, here, the status of DTC.
+Okay.
+Please always remember what we are talking about.
+Okay.
+Status of DTC.
+So what are we monitoring in this cycle?
+The status of the DTC.
+Okay.
+The two things are interconnected.
+They are connected together.
+Okay.
+So monitoring cycle.
+This is a cycle where we monitor the status of the DTC.
+And then we have the driving cycle.
+The driving cycle is basically a monitoring cycle with an additional condition, which is
+turning the engine on.
+Okay.
+So we will have the conditions that we already told, I already told you before, which is
+monitoring a cycle plus engine on.
+So you can understand that also the warmup cycle is still a cycle, but it contains more
+than one condition or two conditions.
+So it contains the condition of the monitoring cycle.
+So K on to K off.
+It contains the condition of the driving cycle.
+So you have to turn on the engine, but there are also additional conditions.
+Why I'm generic.
+I'm generic because it depends on the kind of car you're working with.
+For example, for the internal combustion engine, there could be specific conditions like to turn
+the engine on and having a specific delta temperature in the refrigerant liquid of the, yeah.
+Sorry.
+Sorry.
+The temperature of the water of the engine.
+There must, there must be a delta temperature of 25, 22 or 22.5 degrees.
+But actually I don't remember exactly, but it's written in the norm.
+So, okay.
+As I said to you before, you don't remember, no problem.
+You just read the norm.
+That's not a problem at all.
+And this is for the internal combustion engine, but there are different conditions for the hybrid,
+the hybrid propulsion systems, and even more different from the electric propulsion systems.
+Like there is a condition on time.
+You have to stay in Kayon for a specific amount of time.
+You have to drive the car with the speed faster than 30 kilometers per hour for a specific amount of time.
+So it's a more restrictive condition.
+So while we move down here in this small scheme, we are just adding conditions.
+Okay.
+So starting from the monitoring cycle, which is the, let's say the easiest one to get, getting
+to the warmup cycle where actually we have a more strict, let's say conditions.
+And there is a specific reason for it.
+So we will understand why do we have these three different scenarios and give you some details
+about it.
+Okay.
+So, okay, it's right.
+Please keep, while you watch this video, it might be helpful to have this scheme in front
+and ahead of you.
+Okay.
+So it's easier to understand names, but they're real, real, very, very simple.
+So let's try to do without the support of the scheme, but would be helpful for you to have it.
+So let's start to read from right-hand side to the left side.
+Okay.
+Bit zero, test field.
+So here we are in the hypothesis that the diagnostic trouble code in question, which is 01-22-92,
+is monitored every, I don't know, 10, every 100 milliseconds.
+Okay.
+So this means that remembering everything that we have said in the past module, which is,
+you know, all the definition of the diagnosis, the fact that the Diego must be able to retrieve signals, compare signals,
+process signals in a specific amount of time with a specific cycle time, stuff like this.
+Here we work in the hypothesis that every 10 milliseconds, sorry, 100 milliseconds, we will have a check on the status of DTC.
+Nice.
+This is very important for many reasons.
+First of all, because according to the kind of electronic control unit you will work with, you will find that most of the DTCs are with a specific cycle time check.
+So it means that every, I don't know, 10 milliseconds, 50 milliseconds, 100 milliseconds, the status of DTC is checked.
+This is mostly true for powertrain electronic control unit because they manage critical components like the accelerator pedal,
+like the water temperature, battery temperature, for example, and stuff like this.
+But if we move to other electronic control units, like, I don't know, I don't know, headlights or the cluster or the LTM radio or whatever,
+most of the time the check on the DTC is not cyclical but is on event.
+So you must do something, for example, pressing a button to control the status of a specific DTC.
+Okay.
+Or to test that everything is okay for that DTC.
+Here, for the sake of this explanation, we will say that the check is cyclical.
+So every 100 milliseconds, there's going to be a check on the status of this DTC.
+So let's consider that this DTC, the 0122.92, is an open load on, I don't know, a specific component.
+Okay.
+So basically, the fault is I have an open load.
+So basically, I don't know, a wire that has been cut.
+And whenever the load is open, so there is a missing pin or basically the wire is cut, then the fault is injected.
+So I have actually an electrical problem.
+So let's consider this example and let's go through these bits.
+Bit 0 is the test fail.
+It's called test fail.
+So it says in a very clear way, also from the definition, that this bit will be 0 if the last test executed was okay.
+This means that I'm in the conditions to perform a check on the status of the DTC.
+This check has been done, and the last time this check has been done, if it's 0, then it means that the test was okay.
+So there were no problems encountered.
+If there was, there is a problem, then, so the test fails, then this bit goes to 1.
+Okay.
+So please remember, this is the result of the last test executed.
+Why I'm stressing out this concept?
+Because there are two main things to be said about it.
+First of all, there must be the conditions to perform a test.
+So I'm saying, I'm putting myself in the easy example of 100 milliseconds cycle time.
+Okay.
+So in this case, I know that every 100 milliseconds, a test is going to happen.
+In the hypothesis that this is the only thing that we need, just the elapsing of time.
+It's not like this, because to perform a test, the electronic control unit must be supplied.
+The software should support the check of the retrieving of these signals.
+The hardware has to be able to perform this kind of test.
+So there are also other preconditions, which now I'm not mentioning.
+For now, let's just consider that the only condition that we need is that we need 100 milliseconds to elapse,
+so that the echo has all the time to perform the checks related to this error.
+Okay.
+In this case, we already have all the preconditions.
+But in the example of, as I was mentioning before, specific, let's say, minor electronic control units that do not have this kind of logic,
+but I have a logic on event, so I have to do something, the test will be executed every time, for example, I push a button.
+Because the only way to check if the circuit behind the button is working or not is by pressing the button, trying to actuate it, basically.
+So in that case, I will not have a test every 100 milliseconds, but I will have a test every time I push the button.
+Okay.
+So this is very different.
+So keep in mind that here we are in the hypothesis of a cycle time on the status of the DTC check.
+Okay.
+Every 100 milliseconds, a check happens, no other word.
+Okay.
+It's not that easy, but for the sake of the explanation, yeah, now it's that easy.
+Okay.
+This means that if we have a, let's say, a check every 100 milliseconds, let's say that here, here,
+the monitoring cycle starts.
+Okay.
+So here we have an event of KON.
+Okay.
+So once we have the KON, we are starting a monitoring cycle.
+Okay.
+This means that, okay, now I'll stretch a bit timeline, but let's consider that here, oops, sorry, here, 100 milliseconds are elapsed.
+Okay.
+So this is, this is 100 milliseconds.
+Okay.
+Okay.
+Let's use the text box 100, oops, 100 milliseconds.
+Okay.
+Great.
+Considering that this is 100 milliseconds, then as I was saying, I will stretch the timeline because
+I need this specific scheme for, to explain the bit six, but anyway, it means that here,
+after 100 milliseconds, I will have the first test executed.
+So if here, after 100 milliseconds, the test fails, then this bit goes to one.
+If the test is okay, the bit stays to zero.
+But I, I said before that this is the, the, the result of the last test executed.
+So it means that after 100 milliseconds, I have an update and it updates to zero to one,
+according to, if you have or not the error, but then there will be one other 100 milliseconds.
+Then another 100 milliseconds, 100, 100, 100, 100, and so on.
+This means that every time, every time, guys, please remember this.
+Every time I have 100 milliseconds elapse, I have an update here, here, here, here, here,
+here, here, here, here, and here.
+Okay.
+So every time I, if the condition is just that the check is done every 100 milliseconds, then
+every 100 milliseconds, I will have an update of this bit.
+So if we consider that here, the error is present, here, this will be one.
+Maybe here, I still have the problem.
+It's one, one, one.
+Then the error disappears.
+So I will have zero, zero, zero, zero, zero, zero, for example.
+Okay.
+So please remember, this is the result of the last test executed.
+So if I execute test every 100 milliseconds, it means that that bit is updated every 100 milliseconds.
+Guys, this is very important because when you will work with the diagnostic tools or simply,
+you will look for the logs in Chem, most of the time, you will see a static value.
+Okay.
+For example, 8f.
+So for you, it will mean that that bit is always to one.
+Then we see why I'm saying that with 8f, the bit zero is one.
+You will see always as it doesn't one.
+But in reality, if you, in the low level, let's say from the hardware point of view,
+and also from the software point of view, that bit is always updated every 100 milliseconds in this case.
+Okay.
+Even if you see that it's a stacked one, it's not stacked one, because that is updated at every test that is executed.
+In this case, the test is executed every 100 milliseconds.
+It means every 100 milliseconds, we will have the update of the bit zero.
+Okay.
+Nice.
+So now let's consider that we have this bit two one, for example.
+Okay.
+Because the test is failing.
+Okay.
+Let's consider the last time we have the test here fails.
+Okay.
+So the test fails here.
+And then this one.
+Great.
+Bit one test failed this monitoring cycle.
+So now we start to use this idea, the idea of the monitoring cycle from K on to K off.
+The bit one, yeah, let's see the logic behind the bit one being zero or one.
+So if at least one test is executed and that test fails in that monitoring cycle, so from a K on to a K off,
+that bit will go to one.
+So if I have at least one test failed in this monitoring cycle, then this bit will go to one.
+If I have no error test failed in this monitoring cycle, then that bit goes to zero.
+Okay.
+So in this case, if we consider here that we have had a K on event, and then where there is this green bar,
+we have a K off event, and then a K on to start a new monitoring cycle.
+Here we have a monitoring cycle, you know, because we have had a K on and we have had a K off.
+So this is a monitoring cycle.
+According to the definition that I gave you, and according to the definition that UDS gives you,
+as we see here, we have plenty of tests failed here.
+So even with one test failed, so let's consider that everything here is okay,
+but we have this first error, this first check failing, then we will have one test executed,
+at least one test executed failed, so this means that we will, the bit one will go to one,
+because we will, we would have one test failed in this monitoring cycle.
+Okay.
+So once you have a test failed, that bit goes to one and stays to one,
+because we already have one test failed in this monitoring cycle, so it stays to one,
+and that bit is not updated anymore until we move to the next monitoring cycle.
+Okay.
+So once I have the error here, it means that the bit one goes to one and stays to one until the end of the monitoring cycle.
+Okay.
+So it's not updated like the bit zero every 100 milliseconds.
+No, once I have at least one test failed in this monitoring cycle,
+then the bit goes to one and stays to one.
+Okay.
+Guys, please remember, it's extremely important to remember,
+that it's not enough just to do K-ON and K-OFF to perform a monitoring cycle.
+The monitoring cycle expects also a test to be executed.
+Okay.
+So if you are in this case, okay, you have a test every 100 milliseconds,
+so you make sure that at least 100 milliseconds elapsed so that you know that the test has been executed,
+and we are okay.
+So we can know if a test is failed or is passed.
+But if I'm in the case of a DTC that requires an action, and I do not perform the action,
+so I do not press a button, for example, it means that in that monitoring cycle, I'm not performing a test.
+So for the purpose of the status of DTC and everything we are going to see,
+that monitoring cycle does not count because we don't know if the test failed or the test passed
+because we didn't perform the test.
+Okay.
+Please be very careful on all the conditions needed to perform the test.
+In this case, we are considering as an hypothesis that the only condition is that the echo takes 100 milliseconds
+to perform these tests, and that's it.
+But there might be further conditions to make the DTC check happening.
+Okay.
+So please always keep in mind.
+Bit 2 should be the pending DTC, if I will remember.
+Yes, pending DTC.
+The pending DTC is the same as the bit 1, but bit 1 considers just one monitoring cycle.
+The bit 2 considers two monitoring cycles.
+Okay.
+So the bit 2 says, goes to 1 if we have at least one test failed in this monitoring cycle or in the previous monitoring cycle.
+Okay.
+So let's say we are here, the bit 2 checks that we have, if we have a test executed and failed here or here.
+Okay.
+So if we have an error in this monitoring cycle or in the previous monitoring cycle, like in this case,
+because as we have seen here, it is the demonstration.
+In the first monitoring cycle, we have plenty of tests failed.
+This bit goes to 1.
+So it's the same thing of the bit 1, but considers not just one monitoring cycle, but considers two monitoring cycles.
+So I hope this is clear.
+Of course, I suggest you to listen to this topic many times if you need to control the norm, everything.
+Okay.
+So now in the example that I'm doing, I'm considering that the final status that we will get is ATEF.
+Then I will explain what is that, but let's move step by step.
+So we have, we have called the test failed, which is the, a bit that gives me the result of the last test executed.
+So in this case, every test is executed every 100 milliseconds.
+It means that that bit is updated every 100 milliseconds.
+Then we have the bit 1, test failed this monitoring cycle.
+It means that if a test is failed, at least one test failed in this monitoring cycle, then this bit goes to 1.
+Bit 2 pending DTC is the same.
+So if we have two, if we have at least one test executed and failed in this monitoring cycle or in the previous monitoring cycle, then this bit goes to 1.
+Okay.
+Now we're ready to move to the bit 3.
+The bit 3 is a stored DTC.
+So this is easy because this bit goes to 1 if the error code, so the diagnostic trouble code, is saved inside the electronic control unit physical memory.
+Okay.
+So if the error is saved inside the electronic control unit memory, then this bit is 1.
+Okay.
+In this case, we are considering that we are having problems and as soon as a test, let's say, as soon as a test fails or, yeah.
+Yeah.
+Yeah.
+Yeah.
+Let's see.
+Every time, if the, at least one error, the one test fails, then the error is stored inside the electronic control unit and the bit 3 will go to 1.
+Okay.
+Now, okay, so let's move on.
+Bit 4 and bit 5, they are not used in most of the applications, specifically for the EMEA market.
+So European, African, and stuff like this.
+So this bit, quite likely you will see them as a stock.
+Okay.
+So they could be both 0, 0, 0, or they could be 1, 1, 1, 0, or 0, 1.
+Okay.
+Whatever.
+Most of the time they are stuck.
+Why?
+Because they refer to a specific maneuver of clearing their memory using the error code.
+Or memory using a specific service feature.
+But this is not used in the EMEA market.
+So most of the time you will see this bit stuck to 0.
+Since this is not a rule, I mean, these are two bits that are expected in the status of the DTC.
+When you start working on a specific activity, in case you were working with diagnosis or whenever you face the diagnosis, make sure to ask what is the behavior of bit 4 and bit 5.
+Ask the question, are these bits used or not?
+If not, which is the value they are stuck to?
+Because in my experience, they have always been 0, 0.
+But I have also seen 1, 1 or 1, 0, 0, 1, all kinds of combinations, really.
+So whenever you start, just ask if these bits are used and if they are not used, then which is the value they are stuck to?
+Of course, in case you need the behavior of bit 4 and bit 5, everything is explained in the norm and also in the slides.
+So you will have support about it.
+But for now, let's consider the easiest example where these bits are not used.
+So we will pretend they are stuck to 0, okay?
+So we consider that they are both 0 here.
+So these other combinations can be erased.
+Bit 6, okay, now we arrive at the situation where I needed this timeline bit stretched.
+So let's consider the example of, you know, let's go back to the bit 0.
+We have said that the bit 0 is updated with the last test executed on this DTC.
+And that to perform a test, we need at least 100 milliseconds.
+So every 100 milliseconds, a test is executed.
+Okay, so we have a clear idea of what happens from here on, okay?
+Because we have here 100 milliseconds.
+We have the result of the first test.
+We know that this has failed.
+And then we put this bit for specifically at this time to 1.
+Okay, great.
+But what happens here?
+We didn't see anything of what happens between the KON to the execution of the first test.
+Here, in this 100 milliseconds, basically the electronic control unit is retrieving the signals,
+is comparing them, is processing them, is trying to understand if the problem is present or not.
+So, how can we understand it?
+So, the only way we have to understand that a test is in execution is using the bit 6.
+Bit 6 is called test not completed this monitoring cycle.
+All right, so once again, the name is quite self-explanatory, okay?
+So, now I will pretend that we are in these 100 milliseconds.
+So, while I'm in these 100 milliseconds, it means that I'm still waiting for the first test to be executed.
+So, I don't have the information about the bit 0 because I don't know the result of the last test executed in this monitoring cycle, okay?
+So, the bit 0 will stay to the value of the last test executed.
+That probably was, you know, before this KON, okay?
+In another monitoring cycle that we do not see here, okay?
+So, if the test was okay, then the bit 0 is 0.
+If the test failed, then it was 1, okay?
+As clear, as simple as that.
+But we don't have the information, for example, on bit 1 because I don't know if an error is present or not in this monitoring cycle
+because in this monitoring cycle, I have no test executed, okay?
+So, in case I request the status of the DTC or simply I'm just reading the KON while I'm performing the KON
+and after I've performed the KON and I'm in these 100 milliseconds, the bit 6 will stay to 1 for this full period.
+Because in this full period, I have not test, not completed this monitoring cycle.
+It means I don't know what is the status.
+I'm still performing a test.
+I'm still performing the first test.
+So, until the first test is executed in this monitoring cycle, this bit will go to 1.
+It means that the bit 6 here, the bit 6 is 1 for these 100 milliseconds.
+As soon as the first test is executed, the bit 6 goes to 0 because one test has been executed.
+Then, if it's okay, then it means that bit 0 will go to 0.
+If it's not okay, the bit 0 will go to 1.
+And according to these values, the bit 1 will evolve as well.
+The bit 2 will evolve as well.
+The bit 3 will evolve as well.
+And stuff like this.
+So, it is very important to understand that in this first moment from the KON
+where we start the monitoring cycle and we don't have at least one test executed,
+the bit 6 will stay to 1 because it will tell the user,
+okay, look, I'm performing the test, but I'm not done yet.
+I'm still performing the first test.
+So, I don't have a clear picture of this monitoring cycle what is happening.
+Right after the 100 milliseconds, in this case, we will have a first test
+and the bit 6 will go to 0.
+Okay.
+So, basically, the bit 6 just will tell us if at least one test has been executed
+in this monitoring cycle.
+And if one test has been executed in this monitoring cycle,
+then the bit 6 is 0 because it means, okay, we already have done one test
+and we are done.
+But if we are in this first 100 milliseconds where we have no tests executed,
+then the bit 6 will stay to 1 until we execute the first test.
+But for what we are saying now, this can be considered as 0.
+bit 7 is the easiest one because the bit 7 goes to 1 in case there is the need of a lamp.
+Okay.
+Okay.
+So, if we need to turn on a warning indicator, a malfunctioning indicator lamp, the meal lamp,
+for example, the bit 7 will go to 1.
+It means the echo is requesting to turn on a lamp.
+Okay.
+Malfunctioning indication lamp.
+Be careful.
+This is a request done, for example, by the powertrain electronic control unit to the electronic control unit that actually manages the lamps.
+For example, if we are having a problem on the accelerator pedal, it's not the powertrain electronic control unit that manages directly the lamp.
+Okay.
+The lamp will be managed by the APC, the cluster.
+So, this 7 bit that goes to 1 is just a request to turn on a lamp.
+And then another echo will receive this information over can and will turn on the lamp.
+So, now we have a full picture of a potential example of a status of DTC.
+But here I see just a string of bits.
+Values of 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0, 1.
+Okay.
+So, how do we get to this 8th half?
+So, this is a very easy operation of translation, basically.
+So, we start from the assumption that you can find everywhere on internet that we have this kind of association between physical values and hexadecimal values.
+So, if we, 1 in a physical value is 1 in hexadecimal, 2 is 2, 3 is 3.
+Well, format is completely messed up here.
+So, yeah.
+Let's make things a bit better.
+Let's take here.
+We're gonna create 4, equal 4, 5, equal 5, 6, equal 6, 7, equal 7, 8, equal 8, 9, equal 9, 10, equal A, 11, equal B, 12, equal C, 13, equal A, 11, equal B, 12, equal C, 13, equal A.
+13 equal D, 14 equal E, 15 equal F.
+So, keeping in mind this table, okay, where we have on the left side the decimal value and on the right side the hexadecimal value,
+we can split these status of DTC in two parts here, okay, in two groups.
+So, there is a very easy conversion formula to achieve what we are seeing.
+So, this is, the formula is this one, two times zero times the value of the bit, okay, x, plus two times one times the value of the bit one.
+Sorry for the very bad writing.
+Plus two times two times the value of the second bit, plus two times three, oops, two times three times the value of the bit three.
+So, what we have here, two times zero is one, one, times the value of bit zero, which is one.
+So, we have one times one, one, plus two times one is two, times the value of the bit one, which is one.
+So, we will have two, plus two times two is four, times the value of the bit two, which is one.
+So, finally, we have four, plus two times three is eight, plus the value of the bit three, which is one, and this is eight.
+Eight plus four is twelve, plus two is fourteen, plus five is fifteen.
+So, finally, everything turns out in being f.
+Do you see here? We have the f, it's right here, okay?
+Same idea for this other sign.
+So, the formula is the same, two times zero, two times one, two times two, two times three.
+Here, we have all zeros.
+So, these factors will just elicitate because they are times zero, so they will get cancelled.
+The only factor that we will have is two times three times the value of the bit, let's say three, yeah, three of the group.
+This is one, two times, two times three is eight, times one is eight.
+So, the final status here will be eight.
+So, the final result, if you put together the two groups, is eight f.
+As you can see, guys, you just need to ask the electronic control unit the status of the DTC inside the memory or the status of the specific DTC.
+And only looking at this fourth bit, this eighth F, I already know a lot of information.
+I know that the last test executed failed because the bit zero is one.
+So, it means that I actually, I'm having problems.
+Because if the last test executed always fails, it means that I actually have the problem.
+This problem is present, so, in this monitoring cycle.
+So, while I'm using the car, while I'm in K-On with my car, I have a problem.
+So, the car must be checked.
+The problem was not present just now in this monitoring cycle.
+But having the bit two to one, it means that this problem was present also in the previous monitoring cycle.
+So, this is not a new problem.
+This is a problem that I already had in the previous monitoring cycle.
+In addition, since the test failed, I always, I also have this problem inside the electronic control unit memory.
+So, yeah, the ED, this DTC is saved in the error memory because I see that the bit three is to one.
+So, we're asking the electronic control unit the status of DTC.
+You know, I know that I must find this ED because it is saved inside the electronic control unit.
+The bit six is to zero.
+So, I know that in this monitoring cycle, at least one test has been done.
+So, it means that at least one, the error, the test was done and failed also because the, you know, because of all the values of the previous bits.
+Bit seven is to one.
+It means that I should, if I enter the car, I should expect also a lump on it.
+So, just looking at this 8F and knowing how to translate the different combination of bits into hexadegimal, I have all this information.
+I should expect a lump.
+I know that I have a problem.
+The problem is stored.
+The problem was present, not just now, but also in the previous monitoring cycle.
+And everything, at least one test has been done in this monitoring cycle because bit six is to zero.
+So, all this stuff, I know just looking at one byte, at least the fourth byte, just looking at it, I have all this information.
+So, you can understand the power of this bit and this status of the DC.
+Because just looking at the byte, I have a lot, a lot, a lot of information just knowing the different combination of this bit.
+So, all this video is to show you all the information going on.
+My first question is maybe perhaps not just staggering into any way or not.
+But yes, I who are!
+And give me your last announcement for the Lethal has participated again.
+So, WOE believed in the report.
+I would come back just by few weeks and begin to make the report with the wong.
+So, I have dubious.
+I think no question is, I would look as if so.
+Maybe we can sleep regularly in the days of this video.
+But then the way that the system will charge the car game, or this is not really normal or something that this looks like the pain will get a copy of itself.
+So, if I am doing that, I would say the first thing of the wake of time at the end of the day.
+Okay, the main app on our nextICK, sort of the ep парom.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+For example, in the example of this explanation, we were referring to a powertrain module, and usually the engine control module, let's say the echo that manages the engine, does not manage directly the lamps.
+So this is just a request to the echo that will actually manage the lamp. So the echo will read the request coming from this electronic control unit, and according to the kind of request that it receives, then the echo will turn on a specific lamp.
+Okay, so this is the situation, and we arrived to explain why this is defined as 8f, as remember we divide this in two parts, this is 8, and this is f.
+Okay, so I can write it here, 8f. Okay, this is everything that we have explained, this is how it finished, the last module, the part one of module two.
+But there are some topics to be discussed yet to close this module two.
+So, okay, for me it's important to understand the actual status of the DTC, so in this case, the status of the DTC is 8f, so if you recollected the information, and all the stuff explained in the module, the first part of module two, then you will realize that now, okay, we have an active fault.
+Okay, we have some kind of problem, okay, we have some kind of problem right now, but this is not on the only thing that matters to me.
+Another very important thing is once I have the status of a DTC that is actually active, then I'm always, I'm also interested in, you know, clearing the error memory.
+So, okay, I have a problem, but then I'm always interested in resolving the problem, you know, because most of the time when you have this kind of problems, then these will reflect on a high level point of view.
+I mean, you are driving your car, you have a problem on the accelerator pedal, so it will mean that, I don't know, as we said in the example, the car will slow down, then it will turn off, then probably you can turn it on,
+but then you can just drive up to, I don't know, 10 kilometers per hour, just move the car out of the street.
+So, if you keep having this problem, then your car will be useless, because you still have a problem on the accelerator pedal, nothing can be done, you know, in that case, if we do not, do not take actions, and, you know, everything will stay like this.
+So, there is actually the voo process of going to the past status, and that's what we are going to explain today.
+Another thing to remember is that, is the hypothesis that we have over here, so I changed color, I don't know, let's take purple, so that we have a check on the status of DTC, everyone under DTC.
+So, of course, I'm interested, as I was saying, to move from, I don't know, we moved from 0-0, for example, status of DTC, and now we are in 8F.
+Of course, I'm interested in moving back from 8F to 0-0.
+Why? In this way, when I have 0-0, again, it means that, first of all, I don't have the problem anymore.
+I won't have reaction recoveries anymore, because, as I said, once you have a DTC, one of the features of a DTC is not only that I have a code inside an electronic control unit that's just a piece of metal with electrical boards and stuff,
+But I actually care, I'm more, I only care, actually, that the car reacts, so that I won't get, the car won't get damaged, and most of all, we don't get hurt, and no one gets, you know, very hurt.
+So, I'm really interested in this stuff, but once I'm safe, I've stopped the car safely, and I'm alive, and, you know, everything is fine,
+Then, I want to come back to normal, and bring my car back to this old functionality, so this is why I want to move, again, from the status 8F to the status 0-0.
+So, this implies, first of all, to remember the behavior and the definition of all these bits that we have over here,
+But also, here, gets into account what we were mentioning in the module 2, part 1, and that we are explaining right now.
+So, the concept of monitoring cycle, or driving cycle, or warm-up cycle.
+So, let's start from the bit 0, this is the easy one.
+So, as we said, the bit 0 is the last, the result of the last test executed.
+So, as we, you know, considering the easy hypothesis that we made, let's draw a timeline.
+Yeah, I still use a purple line, that's trying to make it as straight as possible.
+Okay, this is the best I can do, and the best I can do is kind of nice, actually.
+Okay, then, let's make yourself more, I don't know, whatever lines, these here, here, here, here, here, here, here, and stuff like this.
+Okay, that quality, let's say, was not very, okay, so at least let's give a kind of dignity to these lines.
+Okay, so let's work with this, it's not perfect, but yeah, we can work something out.
+So, let's say we are in this monitoring cycle, and here, in this place, we have the status atif.
+Okay, so everything starts here with atif.
+Then, as you remember from the last part that you watched, and if you don't remember, please watch it back.
+When we say that there is a cyclical check on this DTC, it means that every 100 milliseconds, a test is done of this DTC.
+And if the test passes, then bit 0 goes to 0.
+If the test is failed, because there is a problem, then this bit will stay to 1.
+So, in this case, when we still have atif, it means that a test has been executed, and the test fails.
+But then, there will be, you know, a delta time of 100 milliseconds.
+Okay, let's consider that these are 100 milliseconds.
+For some reason, let's say, for some reason, the fault was, is not present anymore.
+Okay, or we can also consider, let's say, more concrete example that here, you stop the car, so you arrived, you arrived to, you know, the mechanics here, that the status is atif.
+So, you brought the car there with the floor problems, the lamp is on, the car can't accelerate, you just go for 3 hours, 10 kilometers per hour, just move the car out of the way and get to the first mechanics.
+So, this is everything that happened.
+You stop the car.
+Then, of course, you turn on the car, again, and as you know, in the first 100 milliseconds, there are no tests executed, so the bit 1 will go to 0, bit 6 will go to 1, and then we have, once again, a test.
+Okay, so, then, we have other 100 milliseconds.
+When you bring the car here, the mechanics, you know, I don't know, just, he does his check and realizes that the status is atif and you have an actual problem on the accelerator pedal,
+let's consider that in this point, the mechanics just, you know, repair, so read the error memory, realizes that you have a problem on the accelerator pedal,
+and he fixes, he or she fixes the problem on the accelerator pedal, so you won't have the problem on the potential meter anymore, okay?
+So, in the strange example that the mechanic will work, staying in K-On, so it means that you, suddenly, the fault, you know, reason is not present.
+So, if we have here the problem, and then, hypothetically, in this moment, mechanics just solves the problem, okay?
+We will move to the red, so that it is easier.
+So, here, the problem is solved.
+After 100 milliseconds, a new test is executed, and this time, since the mechanic repaired everything, then we don't have the problem anymore.
+But what is the change here?
+Considering that we are still in this monitoring cycle, okay?
+We are talking about the left side here, okay?
+We are still in this monitoring cycle, okay?
+So, yeah, this is not the best, you know, writing ever, but, yeah, that should be effective anyway.
+So, on the left, we are still in this monitoring cycle.
+After 100 milliseconds, this is 100 milliseconds, the error is not present anymore.
+So, here, the only change that we have is that the last test executed passed.
+So, the change is actually here, okay?
+So, let's give some numbers here.
+We use the Roman numbers.
+This is the first, this is the second, this is the third, this is the fourth, fifth, sixth, and whatever.
+If we need something, then we will use the other part of the sheet.
+But, anyway, we are here in the first one.
+So, the only change that I can see here is on the bit zero.
+So, the bit zero changed in the first monitoring cycle, this one.
+So, what will be the actual status?
+We will have zero here, and then one, one, one, zero, zero, zero, one.
+So, it's everything the same.
+Since it's everything the same, here, we only have eight E, okay?
+Why?
+Because this will be one, one, one, and zero.
+So, two times three times one is eight, plus four, plus two.
+This is going to be 14, 14 easy, and then we have eight E, okay?
+Of course, if you don't remember anything of this, if you don't really know what I'm talking about,
+just please watch again, module two, and eventually also module one.
+If it's not clear at all, okay?
+But, just focus on the first part of module two, and this, what I'm talking about, will be very, very clear.
+So, actually, here, the status at the first one, the recycle, is going to be eight E, okay?
+Okay, I can even type it here, maybe, see if you're eight E.
+Okay, then what happens?
+The status will be always eight E here, because we, I don't know, now, 10, 100, 100, 100.
+So, let's see, we have other tests.
+The status will be always eight E here, because the last test executed now is passing.
+So, the bit zero stays to zero.
+But, since we are still in this monitoring cycle, the bit one stays to one, because we have had at least one failure, which was this one, in this monitoring cycle.
+This means that bit one stays to one, bit two stays to one, bit three stays to one, and stuff like this, okay?
+Then, great, perfect.
+Then, we turn off the car, and turn on the car again.
+So, let's consider that we moved in the second monitoring cycle.
+Of course, there will be the usual 100 milliseconds, where we don't know if the error is present or not.
+So, the bit six will go to one, because, you know, we are about to wait, and bit one will go to zero,
+because we don't know if an error is present or not.
+So, in the meanwhile, here, we will have CC as a status, okay?
+Because, the bit six will go to one, bit two, sorry, bit one will go to zero.
+So, we will have 1100, 1100, that is CC, because it's 12, 12 CC, okay?
+Again, if you don't know what I'm talking about, just watch again the first part of module two,
+and everything should be clear.
+If not, just send me an email, or to automotive training, automotive.training, at sign, kinecon.it.
+Anyway, so, this is, before we have the first test, so, in this first 100 milliseconds,
+we will have the status is CC, but then we will have the first test.
+Since we don't have the error anymore, since we don't have the error anymore,
+then we will have that bit zero stays to zero, because the last test executed, this one, passed.
+So, bit zero stays to zero.
+But, in this monitoring cycle, we don't have any fault.
+So, it means that, in this case, also the bit one goes to zero,
+and this change happens in the second monitoring cycle, okay?
+So, considering that we still have other checks that pass, you know, always in green,
+the status of this second monitoring cycle will be 8C, okay?
+Because we have zero, zero, one, one, zero, zero, zero, zero, one, okay?
+We will have a separate discussion about bit seven,
+and the norm and the slides will really help you about this,
+because there are different, let's say, management of the lamp,
+according to what kind of lamp management that DTC requires.
+So, these, the slides will really help you clarify this.
+But, anyway, so, we have this situation.
+The bit two will stick to one,
+because in the previous monitoring cycle, we still had a fault.
+You see, here, this 8F is still present.
+So, since the bit two says that the bit two goes to one
+if an error is present in this monitoring cycle
+or in the previous monitoring cycle,
+considering that in both of them, we have had at least one test.
+We have had at least one test in this monitoring cycle
+and also in the previous one,
+and in the previous one, one of the tests failed,
+so, the bit two stays to one, okay?
+So, the status that we have in the second monitoring cycle is HC, okay?
+Great.
+But, here, what happens here?
+We have a monitoring cycle with no fault, okay?
+Great.
+Let's move on.
+We will have a separate discussion also about the bit three, okay?
+So, for now, let's focus on the first ones.
+We don't need this anymore.
+It was just an example, okay?
+And this we don't need.
+Okay, nice.
+Third monitoring cycle, usual stop.
+So, here, once again, we have 100 milliseconds,
+where we don't know if there is an error or not in this monitoring cycle.
+So, the status will be, once again, CC, okay?
+It will be CC, but then what happens?
+When we have the test here in this part,
+then, here, we will have the second monitoring cycle
+where no fault has been recorded
+because we have had at least one test executed,
+and this test executed passed
+because we don't have the fault reason anymore.
+So, in this case,
+we will have that the bit two goes to zero as well
+because we have this monitoring cycle
+or the previous monitoring cycle
+with no errors.
+It means that the bit two can go to zero as well,
+and this change happens in the third monitoring cycle, okay?
+So, what we have here,
+here, we have the situation
+where the new status is going to be 8, 8, okay?
+It's going to be 8, 8
+because we have 0, 0, 0, 1, 0, 0, 0, 1, okay?
+Great.
+The situation stays the same.
+Here, we have 8, 8, 8, 8, 8, 8, 8, 8, 8,
+and we get here that we are still 8, 8.
+Once again, we have a fourth monitoring cycle
+where we don't know if the test is present or not.
+So, we will have a status of C8
+because the bit six goes to one
+and everything is 1, 0, 0, 0.
+And then, once we have this test that passes,
+because once again,
+here, we don't have the fault reason anymore,
+this will become...
+And, okay, here, it depends on the fault management,
+lump fault management, okay?
+But now, we can consider that
+since we have three monitoring cycles
+without an error present,
+then also the lump will turn off.
+You will see that there is a
+mill-on-1 management,
+mill-on-2 management,
+mill-on-3 management,
+mill-off management.
+So, we have different kinds of management for lumps.
+Mill-off, of course,
+it means there is no need for a lump.
+Mill-on-1, it means that
+the lump will turn on immediately,
+and turn on immediately.
+Mill-on-2,
+it means that the lump will turn on
+after two cycles with the error.
+And mill-on-3,
+it means that the lump will turn on
+after three cycles when we have the fault.
+But then, for the...
+There should be...
+There is a different management
+to turning off the lump.
+And the turning off of lamps
+usually happens after three monitoring cycles
+without a fault.
+Of course,
+there could be some derogation to the norm.
+So, that's why I'm saying
+it can happen like this.
+But for this kind of behavior,
+refer to the norms.
+And, of course,
+refer to requirements of the project
+you're working on.
+Because there might be some derogation
+to the norm,
+UDS,
+or simply,
+you know,
+just read the norm
+and find out
+which is the exact behavior.
+But here,
+we consider that
+after three cycles
+without an error present,
+then the lump will turn off.
+So, the final status here
+will be 0, 8.
+Okay.
+Okay.
+Nice.
+So, we have clarified everything
+that led us to arrive
+to this status.
+0, 8.
+0, 8 means that we all...
+So, this is the change
+that happens here
+in the fourth monitoring cycle.
+So, we are arriving
+to the final status of 0, 8.
+How can I manage these three?
+This is, let's say,
+the tricky one.
+First of all,
+here we have to do
+a distinction
+between two kinds of...
+Okay.
+Now, probably,
+I will need more space.
+Okay.
+So, I hope this is still clear.
+So, here we have
+to make a distinction
+between two kinds...
+Let's make it bigger.
+Two big kinds
+of electronic control units.
+Okay.
+So,
+I will write that here.
+Let's start from
+the non-power-train
+power-train echo
+and then we have
+the power-train echo.
+So,
+why should I distinguish
+between the two?
+So,
+for non-power-train
+electronic control unit,
+the management
+of the Bith3
+is just,
+you know,
+it's enough
+for the management
+of Bith3
+to remember
+this definition.
+Okay.
+Definition of the
+monitoring cycle.
+So,
+as you remember,
+and you can read this
+from the slides
+or from the norm,
+once an error code
+is saved
+inside the electronic
+control unit,
+we have
+that the error code
+is stored
+inside the
+EEPROM
+of the EECU
+for 40,
+for now we say,
+cycles.
+Okay.
+So,
+for the non-power-train
+electronic control unit,
+it might be
+40 monitoring cycles.
+Okay.
+This is a
+calibratable
+value,
+so the norm
+suggests
+it to be
+40,
+but it's not
+mandatory.
+you can
+set it
+as
+60,
+you can
+set it
+as
+20,
+you can
+set it
+as
+800,
+you know,
+it's a
+calibratable value,
+but
+it's a
+common use
+of this
+value
+is
+40.
+Okay.
+So,
+let's say,
+for non-power-training
+electronic control unit,
+we have,
+we need
+40
+monitoring cycles
+without
+errors
+to delete
+this DTC
+from the error
+memory.
+Okay.
+So,
+this means
+that
+can we
+count
+this
+monitoring
+cycle?
+This monitoring
+cycle cannot
+be counted
+because there
+is an error.
+Okay.
+Can we
+count this?
+Yes.
+I'll switch
+color.
+We can
+count this
+monitoring
+cycle
+because there
+is no
+error.
+we can
+count this.
+It's okay.
+So,
+here is
+40.
+Here is
+39.
+Here is
+38.
+Here is
+37.
+36.
+35.
+And so on.
+So,
+consider that
+this monitoring
+cycle is,
+you know,
+every time you
+use the car.
+Okay.
+You turn on
+the car,
+for example,
+or in
+this case,
+considering that
+we are just
+using the
+monitoring cycle,
+every time you
+perform
+you are
+actually doing
+a monitoring
+cycle.
+So,
+every time you
+turn on the
+car and then
+you turn off
+the car,
+considering that
+this is on
+and this is
+off every
+time.
+So,
+on,
+off,
+on,
+off,
+on,
+off,
+on,
+off,
+on,
+off,
+on,
+off,
+on,
+off,
+and stuff like
+this.
+Then it means
+that every time
+you use your
+car,
+and there is
+no error,
+then it's
+counted as a
+monitoring cycle
+without fault,
+so the
+counter decreases.
+It means that
+from this point
+on,
+for other 37
+times you will
+perform monitoring
+cycles,
+you will still
+have inside the
+error memory
+this DTC that
+we wrote here.
+So,
+DTC is 01,
+22,
+92,
+08.
+You will have
+this status for,
+in general,
+for 40 monitoring
+cycles,
+but from this
+point on it's
+going to be for
+37 monitoring
+cycles on.
+So,
+if this line
+continues,
+once we arrive
+to the end,
+so I put a
+checkered flag
+here to say
+that we arrived
+to the last
+monitoring cycle,
+then here the
+status will be,
+this is the,
+let's say we
+arrive to 1,
+this is 1,
+and then the
+next one is
+going to be
+0,
+0,
+final status
+use of the
+DTC.
+In this case,
+for non-power
+training electronic
+control unit,
+we are saying
+it's enough to
+use monitoring
+cycles,
+so K-ON,
+K-OFF,
+but you can
+understand,
+eventually,
+the risk
+behind this
+strategy.
+If I know
+about this
+strategy,
+that I have
+a very serious
+problem on my
+car,
+it will just
+need,
+we will just
+need to do
+40 times
+K-ON,
+K-OFF,
+K-ON,
+K-OFF,
+K-ON,
+K-OFF,
+K-OFF,
+K-OFF,
+K-OFF,
+and then the
+error will
+disappear.
+But if I have
+a small issue,
+like,
+I don't know,
+a problem on
+an amplifier,
+or simply one
+of the lead
+inside my car
+is not turning
+on,
+for example,
+and then for
+some reason
+I try to fix
+it and I
+perform 40
+times K-ON,
+K-OFF,
+K-ON,
+K-OFF,
+then the error
+will disappear
+and there's
+going to be
+no trace of
+this error
+inside the
+electronic
+control unit
+for very
+small problem
+or for
+smaller problems
+this is not
+a problem,
+okay,
+sorry for
+this mix
+of words,
+but that's
+not a huge
+issue because
+the issue
+is very
+small,
+so even
+though we
+forced,
+let's say,
+the system
+to delete
+this error
+from the
+EEPROM
+just doing
+this 40
+times K-ON,
+K-OFF,
+it's not a
+big deal,
+it doesn't
+matter,
+it's not a
+big deal.
+But when
+we talk about
+power train
+electronic
+control unit,
+the power train
+electronic
+control unit
+manages,
+let's say,
+very serious
+problem,
+and also
+the problem,
+the DTC
+that we were
+talking about
+in this
+example,
+is the DTC
+related to,
+I don't know,
+the accelerator
+pedal,
+okay,
+so it is
+very important
+that if there's
+been a problem
+in the accelerator
+pedal,
+then there
+would be
+history of
+this problem
+inside the
+EEPROM
+of the
+electronic
+control unit.
+So for the
+power train
+electronic
+control unit
+it's very
+important to
+keep track
+of these
+kind of
+problems
+and to
+keep them
+inside the
+electronic
+control unit
+for,
+let's say,
+a longer
+time,
+but it's
+not the
+time,
+the key
+parameter
+here.
+The key
+parameter
+here is
+a different
+kind of
+cycle,
+but it's
+not just
+the simple
+monitoring
+cycle
+that we
+saw
+before,
+so it's
+not going
+to be
+enough
+to have
+just a
+key-off
+40 times,
+but there
+will be
+additional
+conditions
+to consider
+a VOOL
+cycle
+without
+an EEPROM
+okay,
+so for the
+power train
+electronic
+control unit
+the counter
+will be
+the same,
+I mean,
+we are still
+talking about
+40 cycles
+without
+an EEPROM,
+but what
+kind of
+cycles?
+for the
+power train
+electronic
+control unit
+we refer
+to
+warm-up
+cycle.
+In the
+norms,
+you should
+find the
+definition
+of the
+warm-up
+cycle,
+but these
+days,
+the
+warm-up
+cycle
+definition
+can
+slightly
+change
+according
+to the
+kind of
+vehicle
+you're
+using.
+For
+example,
+we have
+a specific
+definition
+for a
+diesel
+engine
+warm-up
+cycle,
+we have
+a specific
+definition
+for a
+hybrid
+engine
+warm-up
+cycle,
+different
+definition
+of electric
+vehicle,
+warm-up
+cycle.
+So,
+according to
+the kind
+of vehicle
+that you're
+using,
+you might
+find yourself
+using
+different
+things,
+shall we?
+go ahead.
+So,
+the idea
+is that
+we cannot
+use the
+monitoring
+cycle as
+I was
+describing
+before just
+with
+maneuver
+key-off
+key-on,
+but since
+it is
+very
+important
+to track
+these
+DTCs
+inside the
+electronic
+control unit
+physical
+memory,
+then there
+are
+additional
+conditions.
+Which
+are these
+additional
+conditions?
+So,
+let's start
+from the
+monitoring
+cycle.
+The monitoring
+cycle is
+just
+key-on,
+key-off.
+So,
+if I do
+40 times
+key-on,
+key-off,
+then I
+have,
+without an
+error,
+I achieved
+these 40
+cycles without
+error,
+and that's it.
+Let's look
+at a more
+severe,
+let's say,
+cycle,
+that is the
+driving cycle.
+So,
+the driving
+cycle contains
+the, let's
+say,
+the conditions
+of the
+monitoring
+cycle,
+so key-on,
+key-off,
+but there
+is an
+additional
+condition,
+that is
+the engine
+on.
+So,
+every time
+you read
+the driving
+cycle,
+it means
+that it's
+not enough
+just to
+have to
+turn on
+the car
+with key-on
+and then
+key-off,
+but then
+you have to
+perform the
+key-on
+turning on
+the engine,
+and when
+you turn
+off,
+then the
+driving
+cycle
+will be
+done.
+The
+warm-up
+cycle is
+an even
+more
+severe
+cycle,
+because it
+contains
+not just
+the
+maneuvers
+of the
+monitoring
+cycle,
+not just
+the
+condition of
+the driving
+cycle,
+but contains
+also
+additional
+conditions.
+Once again,
+it depends
+on the
+kind of
+vehicle you're
+working with.
+For example,
+for diesel
+application,
+then we will
+have that
+the conditions
+are, of course,
+you have to
+go in key-on,
+of course,
+you have to
+turn on
+the engine,
+and there is
+also a
+specific
+condition of
+the delta
+temperature of
+the refrigerant
+liquid of
+the engine.
+So,
+there must be
+a delta
+temperature of,
+if I will
+remember,
+22.5
+degrees,
+and this
+delta
+is valid
+only if we
+reach a
+temperature
+value of
+the refrigerant
+liquid higher
+than 70
+degrees.
+For hybrid,
+the application
+is different.
+For electric
+application,
+for example,
+you must stay
+in key-on
+for a specific
+amount of
+time.
+You have to
+stay in
+idle,
+so with
+the engine
+on,
+without moving
+for a specific
+amount of
+time,
+and you have
+to drive
+your car
+with the
+speed
+faster than
+30 kilometers
+per hour
+for a specific
+amount of
+time.
+So, of course,
+according to the
+kind of project
+you're working
+on, you will
+have separate
+definitions and
+use of this
+warp-up cycle.
+I know
+they sound
+all like
+strange
+rules to
+be followed,
+but here
+there is a
+very simple
+idea behind
+it.
+If I just
+use as a
+condition
+key-on-key-off,
+it means that
+even if I
+don't use
+the car,
+just doing
+40 times
+key-on-key-off,
+key-on-key-off,
+key-on-key-off,
+then I'm
+like,
+you know,
+I'm kind
+of joking
+with the
+electronic
+control unit,
+you know?
+I'm just
+making fun
+of the
+electronic
+control unit,
+pretending
+that I'm
+using the
+car,
+while actually
+I'm just
+doing this
+stupid joke
+with the
+keys.
+The idea
+about this
+warm-up cycle
+is that
+if I have
+an error,
+I will need
+to keep
+track
+of these
+errors
+inside
+Viprom
+as long
+as it
+does.
+So,
+it means that
+I have to
+make sure
+that for
+40 times
+I actually
+used the
+car,
+the error
+was not
+present,
+and only
+after these
+40 times
+where I
+really
+used the
+car,
+then I
+feel the
+echo and
+the software
+will feel
+confident
+in deleting
+the error
+from the
+electronic
+control unit,
+because it
+means,
+okay,
+it's 40
+cycles that
+the car
+is working
+properly,
+so I don't
+need to
+keep track
+of this
+error anymore.
+So,
+why do we
+have all
+these
+conditions?
+If we
+think about
+the conditions
+of the
+electric
+vehicle,
+of course,
+if I use
+the car,
+for example,
+to go out
+and buy
+milk,
+or to
+go out
+and,
+you know,
+just going
+to a
+party,
+to a
+disco,
+to a
+museum,
+or whatever,
+for sure,
+I will have
+the car
+in K-ON,
+for example,
+because I
+have to
+set the
+navigator,
+okay,
+and that's
+the first
+condition to
+have the
+car just
+in K-ON
+for a
+specific
+amount
+of time,
+for sure,
+I will
+drive,
+I will
+stay
+like in
+standby
+for a
+few
+seconds
+with the
+engine
+on,
+because I'm
+100% sure
+that on
+my way
+I will
+find traffic
+lights,
+especially
+if you
+live in
+Torino,
+and that's
+the second
+condition,
+and if I'm
+using the
+car,
+especially
+if I have
+people
+with me,
+just to
+show off
+that I'm
+able to
+drive,
+then probably
+quite like
+I'll
+drive my
+car for
+a specific
+amount of
+time to
+a speed
+faster than
+30 km
+per hour,
+so these
+are all
+a set of
+conditions that
+are all
+present when
+you really
+use the
+car,
+so all
+these
+additional
+conditions
+are meant
+to simulate
+let's say
+real driving
+cycle,
+and if
+for 40
+times I
+have all
+these conditions
+and there
+is no
+fault,
+then I
+feel confident
+that from
+this 08
+I can
+move to
+0,
+0,
+okay,
+so if in
+all these
+cycles that
+I was
+referring
+before,
+we didn't
+do just
+key-off,
+key-on,
+but also
+key-on,
+engine-on,
+then engine
+install,
+you know,
+standby for
+a specific
+amount of
+time,
+then driving
+the speed
+faster than
+30 km
+per hour
+for a
+specific
+amount of
+time,
+or I
+don't know,
+if you
+are using
+an internal
+combustion
+engine car,
+then simply,
+you know,
+turning on
+the engine,
+keeping on
+the engine
+for a
+specific
+amount of
+time,
+so that
+the delta
+temperature
+of the
+refrigerant
+liquid
+goes
+higher than
+70 degrees
+with a
+delta of
+22.5
+degrees,
+you know,
+all these
+conditions
+that look
+like just
+a set of
+roads,
+actually
+simulation
+of a
+real
+case
+use of
+the
+car,
+and
+if we
+consider
+that
+in all
+these
+monitoring
+cycles,
+all these
+conditions
+are met,
+then we
+can
+consider
+a
+discount
+decreasing
+until
+we get
+to zero
+and
+this
+status,
+you know,
+the status
+of the
+DTC
+will become
+zero,
+zero,
+and
+the DTC
+is actually
+deleted
+from the
+electronic
+control unit.
+I hope
+this is
+clear,
+otherwise
+the nice
+exercise to
+be done
+is using
+one of the
+facilities
+that we
+have in
+the company
+or even
+one of the
+facilities
+you're using
+on your
+work and
+just trying
+to perform
+this exercise.
+So you
+actually set
+the DTC,
+so, you know,
+perform the
+fault condition,
+I don't know,
+an open load
+on a
+can
+network,
+for example,
+or on a
+sensor,
+whatever,
+you open
+load,
+you see
+that there
+is a
+DTC,
+you will
+probably read
+the status
+byte,
+can be
+8F,
+can be
+0F,
+whatever,
+and then you
+check for
+this specific
+DTC if there
+is a
+monitoring cycle
+to be done
+or a
+warm-up cycle
+to be done,
+and while you
+are working
+on it,
+you perform
+K-off,
+K-on
+without the
+error,
+and you
+see how
+the status
+byte evolves
+to become
+from 8F
+or 0F
+to 0,
+0,
+using the
+monitoring cycle
+or the
+warm-up cycle.
+If you read
+through the
+slides,
+there is
+a specific
+diagnostic
+service to
+retrieve
+the amount
+of
+cycles
+left
+to get
+to the
+status
+0,
+0,
+and this
+can be
+retrieved
+with
+the
+service
+1906.
+So,
+as you
+remember,
+19 is
+the service,
+02 is
+the
+subservice
+to read
+the error
+memory.
+So,
+we can
+even write
+that here.
+So,
+we have
+1902
+error
+memory
+1906
+1904
+snapshot
+1906
+extended data
+record.
+extended
+data
+record.
+You can read
+all the information
+in the chapter
+of the UDS
+norm about
+1906.
+This is the
+usual service
+19,
+the subservice
+06,
+that is used
+to read the
+extended data
+record,
+which gives you
+a few information.
+Among this
+information,
+one of the information
+is the amount
+of cycles
+needed
+to
+clear
+the error
+from the
+error memory.
+So,
+you just request
+1906
+related
+to
+201
+2292,
+and the answer
+will be the amount
+of,
+among all the information
+that are provided,
+the amount
+of cycles
+left to
+delete the error
+from the
+error memory.
+Last thing
+to say,
+of course,
+this is
+the behavior
+of the software
+once we sell
+the car.
+So,
+we sell the car
+with all the
+echo
+and the echo
+that we
+validated.
+So,
+this is the
+intended behavior
+once the car
+is out there.
+Because,
+as I said,
+it's very important
+to keep track
+of the error
+if I have
+an error
+on the
+electronic
+control.
+If I had
+an error
+on the
+accelerator pedal,
+I would be
+glad if the
+echo knows
+about it
+and remembers
+it.
+So,
+next time
+I bring the
+car to the
+mechanics
+for doing
+some kind
+of
+maintenance,
+it appears
+that I have
+any problem
+with the
+accelerator pedal.
+So,
+it won't
+happen again.
+Probably,
+I don't know,
+they will
+replace it
+anyway,
+just in case
+and stuff
+like this.
+So,
+it's very
+important
+we have
+to.
+So,
+this is
+important
+during the,
+let's
+say,
+when we
+sell
+power.
+But,
+while we're
+doing,
+during the
+development
+phase,
+of course,
+if I have
+to validate
+the behavior
+of a DTC,
+and please
+remember,
+in the
+powertrain
+electronic
+control unit,
+we might
+also have
+300,
+350,
+400,
+DTCs.
+So,
+just imagine
+doing every
+test that
+you do,
+every time
+you have
+to perform
+40
+monitoring
+cycles,
+40
+warm-up
+cycles,
+you know,
+it will
+take like
+10 years
+to validate
+all the
+DTCs
+inside a
+project.
+So,
+to simplify,
+there are
+many tricks,
+let's say,
+to simplify
+the activities
+of the
+testers,
+but the
+main
+trick,
+let's say,
+that is
+always used,
+is using
+this specific
+service,
+which is
+the
+service 14,
+service 14,
+that is used
+to delete
+the error
+memory.
+so you
+just
+launched
+service 14
+in a
+specific way
+and the
+EEPROM
+will get
+deleted
+about the
+DTCs
+stored inside
+the electronic
+quantum
+environment.
+In order
+to delete
+the EEPROM
+about the
+electronic
+DTCs,
+the service
+to be sent
+is the
+14 with
+the additional
+3 bytes
+FFFF.
+So,
+using
+this
+service,
+services
+and services,
+then we
+are going
+to delete
+all the
+DTCs
+inside
+the electronic
+quantum
+load.
+Of course,
+if you
+want
+details
+about
+this
+service,
+everything
+is
+listed
+and
+explained
+inside
+the
+EDS.
+So,
+I
+suggest
+you
+to go
+there
+for
+further
+details.
+But anyway,
+it's very
+important
+that we
+have
+this
+service
+because
+without
+this
+service,
+every
+time to
+validate
+the
+DTC
+will
+take
+10
+years.
+In
+this
+way,
+once
+I
+realized
+that
+okay,
+39,
+38,
+the
+status
+goes
+to
+08,
+then
+I
+don't
+know,
+I
+arrived
+to
+35,
+then
+I
+requested
+service
+1906,
+I
+realized
+that
+it's
+actually
+35,
+so
+everything
+is
+working.
+So,
+once
+you're
+done,
+okay,
+I'm
+sure
+that
+this
+logic
+is
+working,
+I
+just
+use
+service
+14
+FFFF,
+the
+error
+memory
+will
+get
+deleted,
+so
+the
+status
+will
+00.
+Okay,
+so
+I
+hope
+this
+clarifies
+everything
+related
+to
+going
+back
+to
+the
+status
+00.
+Of
+course,
+there
+are
+all the
+information
+inside
+the
+slides
+and
+inside
+the
+norm.
+There
+will
+be
+a
+third
+module
+related
+to
+how
+to
+read
+the
+UDS
+chapter.
+They
+are
+all
+the
+same,
+so
+for
+all
+services
+we
+will
+have
+the
+same
+structure
+of
+the
+chapter
+and
+with
+that
+third
+module
+then
+you
+will
+have
+everything
+you
+need
+to
+start
+working
+on
+the
+facilities
+that
+you
+have
+both
+on
+your
+work
+or
+for
+training
+purposes
+in
+all
+Kineton
+offices.
+In case
+something
+is not
+clear,
+some
+improvements
+are
+needed,
+there
+are
+some
+kind
+of
+problems,
+once
+again,
+you
+can
+write
+to
+pasquale.perrota
+at
+sign
+kineton.it
+or
+automotive.training
+at
+sign
+kineton.it

@@ -1,0 +1,331 @@
+start	end	text
+0	6000	Hi all, I'm Massimiliano Schettino and today we will talk about CAPL.
+6000	11000	CAPL is an acronym and it stands for CAN ACCESS programming language.
+11000	20000	The CAPL is a C-like programming language and it is a very powerful instrument we have when we want to execute test cases
+20000	29000	or when we want to simulate or emulate electronic control units while we are using vector tools like CANALYZER or CANO.
+29000	38000	The first thing you should know about CAPL is that it is a procedural language. It is controlled by events.
+38000	48000	We will have several program blocks or so-called event procedures that will be executed when a certain event will occur.
+48000	63000	The type of events we are talking about are key press event, occurrence of messages, CAN, LIN or Ethernet or some action that occurs cyclically such as the timers.
+63000	82000	Here you can see a CANO configuration window and in order to write a CAPL code we have to access the CAPL browser and we can do that directly from the session tool or by double-clicking a program nodding configuration.
+82000	87000	This is what you can see when you open a vector CAPL browser.
+87000	102000	On the left side you can find the F3 with all the defined variables while on the right side you can find a list of events and system and you can drag and drop the events from the list inside the code.
+102000	111000	In simple tab you can find also network messages and signal and again you can drag and drop them directly into the code.
+111000	117000	As you can see in central window you can write your code.
+117000	124000	If you open a blank script it contains just an int block and a variable one.
+124000	133000	The first one will allow you to add libraries to the code while the second one is useful to define and initialize your variables.
+133000	137000	And after the variables block you can continue writing your code.
+137000	156000	One of the first important features of the CAPL is that once you have configured canalizer or CANO and you have linked a CAN database the CAPL browser will recognize the messages and signals names directly from the database.
+156000	163000	And so you can choose the message you are interested in directly while you are typing its name.
+163000	170000	Each CAPL code consists of three distinct parts.
+170000	180000	The first one the global variable declaration is the part where you declare and initialize the variable you will see when you use in the rest of the code.
+180000	189000	The second one event procedures is the main part of the code where you write the actions to be performed when an event occurs.
+189000	196000	The third one is the user defined function where you can define and create your own custom functions.
+196000	200000	Let's talk about the first one the variables.
+200000	205000	In CAPL we can find the same data types of C language.
+205000	211000	It has the integer variables floating point numbers or the declaration of arrays.
+211000	218000	But we can find also different variables such as CAN message and TIMERS.
+218000	226000	All the variables except for the timer can or cannot be initialized in the declaration.
+226000	235000	If a variable is not manually initialized, it will be automatically initialized by the compiler, usually to the zero value.
+235000	248000	Today we will not focus on integer variables and long point numbers, but we will focus our attention on the other one, CAN messages and TIMERS.
+248000	260000	There are two types of TIMERS, the ones based in seconds that are called simply TIMERS and ones based in milliseconds called MS TIMERS.
+260000	263000	They have to be initialized.
+263000	269000	We have no other choice, otherwise we cannot use a timer inside the code.
+269000	274000	Obviously their scope is to generate time events.
+274000	290000	We will define them in variables, as you can see in the example, by writing TIMER or MS TIMER and writing the name T or T1.
+290000	301000	Then, inside our code, we will initialize the timer giving them a value with the proper function called SETTIMER.
+301000	315000	In the example, we initialize the second timer T to 10 seconds and the milliseconds timer T1 to 100 milliseconds.
+315000	320000	When we initialize a timer, the timer starts.
+320000	338000	For what concerns the other variables, the messages, we can declare them thanks to their message identifier, if we have no database, or also to their message name if the database has been linked to the configuration.
+338000	352000	As you can see in the example, we can use the identifier in hexadecimal or in decimal, we can use the name inside the database, or we can decide to define it later.
+352000	361000	But in each case, we define also a name, M1, 2, 3, or 4, that we will use inside the code.
+361000	370000	After we have defined a message, we can have access to different information of it.
+370000	390000	As you can see here, if you write the name you gave to the message, in this case M1, and dot, you can have access to the message identifier, to the data linked code.
+390000	399000	To the direction of the transmission, to the remote transmission request, or to the time points and units.
+399000	409000	Now that we have finished with the overview on the variables, we can continue with the main part of the CAPL code.
+409000	415000	We have always to remember that it is an event procedure code.
+415000	420000	And so we will talk about the event procedures.
+420000	436000	The main event procedure you can use in CAPL are on message, for the receipt of the akin message, on key, if we want to do something when we press a key on our laptop keyboard.
+436000	441000	On pre-start, for the initialization of the measurement.
+441000	444000	On start, when the measurement starts.
+444000	450000	On stop of measurement, if we have to do something when the measurement ends.
+450000	460000	On error active, passive, or pass off, that reacts for specific diagnostic condition.
+460000	463000	On timer, if a timer elapses.
+463000	467000	On error frame, if an error frame occurs.
+467000	468000	On error frame occurs.
+468000	472000	And on environment variable.
+472000	475000	That is useful only for canon.
+475000	483000	Cause, a canalizer does not give the possibility to use the environment variables.
+483000	494000	And you will use this block each time the value of the environment variable will change.
+494000	497000	Now we will see them one by one.
+497000	499000	And let's start with the messages.
+499000	512000	On message will allow us to write a block that will be executed each time a certain message will be received on a certain can.
+512000	517000	We can react to a message thanks to ID.
+517000	519000	Decimal or extra decimal.
+519000	521000	To the name.
+521000	523000	We can find the database.
+523000	527000	Or we can define it thanks to the chip.
+527000	530000	That is a specific path.
+530000	533000	Composed by the name of the can.
+533000	539000	In which the message travel.
+539000	544000	And then the ID.
+544000	548000	But we can also react to several messages.
+548000	554000	With the star we react to all messages in all the buses.
+554000	562000	With the name of the can dot star we react to all messages of a single network.
+562000	572000	And then thanks to a range of IDs.
+572000	579000	We can react to all messages with identifier between the extremes we define.
+579000	583000	In this case one hundred and two hundred.
+583000	588000	Here it is shown an example.
+588000	592000	Of what we call with the name of gateway.
+592000	595000	In the first part we define a message.
+595000	598000	In can one bus.
+598000	601000	34 is the ID.
+601000	603000	And send message one.
+603000	606000	Is the name we give to the message.
+606000	607000	In second part.
+607000	609000	We say that.
+609000	611000	Each time.
+611000	614000	The can one dot thirty one message.
+614000	615000	Is received.
+615000	617000	What we do.
+617000	619000	Is declare.
+619000	621000	Another message.
+621000	622000	This time.
+622000	624000	In the can two.
+624000	625000	Bus.
+625000	627000	And with name.
+627000	628000	Send message two.
+628000	630000	But the ID.
+630000	631000	Will be always the same.
+631000	632000	34.
+632000	633000	The.
+633000	634000	Keyword is.
+634000	635000	We will see this.
+635000	636000	Later.
+636000	637000	In this lesson.
+637000	638000	But for now.
+638000	639000	You have just to know.
+639000	640000	That.
+640000	641000	With this declaration.
+641000	642000	We put.
+642000	643000	Send message two.
+643000	644000	Equal.
+644000	645000	To the message.
+645000	646000	Can one dot thirty four.
+646000	647000	We modify something.
+647000	648000	Inside.
+648000	649000	Send message two.
+649000	650000	In this case.
+650000	651000	The byte four.
+651000	652000	And we put it.
+652000	653000	Equal to zero.
+653000	654000	And we put it.
+654000	655000	Equal to zero.
+655000	656000	We modify something.
+656000	657000	Inside.
+657000	658000	Send message two.
+658000	659000	In this case.
+659000	660000	The byte four.
+660000	661000	And we put it.
+661000	662000	Equal to zero.
+662000	663000	And then.
+663000	664000	We send.
+664000	665000	Inside.
+665000	666000	Inside.
+666000	667000	The bus.
+667000	668000	In this case.
+668000	669000	Is.
+669000	670000	Can two.
+670000	671000	The send message.
+671000	672000	Two.
+675000	676000	The scope.
+676000	677000	Of.
+677000	678000	This.
+678000	679000	Very.
+679000	680000	Simple.
+680000	681000	But.
+681000	682000	Useful.
+682000	683000	Example.
+683000	684000	Is that.
+684000	685000	We have the possibility.
+685000	686000	To.
+686000	687000	Receive.
+687000	688000	One message.
+688000	689000	Or.
+689000	690000	Multiple message.
+690000	691000	From.
+691000	692000	Them.
+692000	693000	And.
+693000	694000	Them.
+694000	695000	In.
+695000	696000	Another game.
+696000	697000	Let's.
+697000	698000	Continue with the.
+698000	699000	Keyboard.
+699000	700000	Events.
+700000	701000	We can.
+701000	702000	React.
+702000	703000	To.
+703000	704000	The precperce of key a.
+704000	705000	To space bar.
+705000	706000	To.
+706000	709000	If one.
+709000	716200	then to the combination of control f12 to the page up button to the home button
+716840	719960	or to any kind of keypress
+723000	731640	this kind of reaction could be very helpful when you want an output when the user decide that you
+731640	743080	want it and as usual now we will see an example we define an integral variable counter and we put it
+743080	753400	initially equal to zero each time we will press the key a we will write on the right window of canoe
+753400	764360	or canalizer a certain text in this case a total of a percentage d or where percentage g will be
+764360	773800	replaced by the value of counter in that moment and then messages and the id of the messages counted
+775240	782360	on the right we will see that each time the message with a certain id is received in a certain can
+784040	795720	counter is increased and the message is sent and each time other kind any other kind of message
+796360	804840	but also the one with the id we can find here we will send it inside the can
+804840	817000	from these lines we can easily understand that this cpl code is done for a
+818840	823960	a canalizer tool because for the canalizer tool we have always
+823960	837880	to write output this when we react to a message otherwise the the message will be not sent to the ecu under test
+838920	842440	while in in canon it will be not necessary
+842440	854760	let's focus again our attention on the timers and now we know how to declare and initialize the timer but
+854760	862360	then we have to do something when they expire and the event we will use in this case will be on timer
+862360	873320	timer timers are very useful when we want to develop cyclic action or to do something after a delay as we saw
+874280	883240	in previous slides the function set timers need two parameters one the first one is the name of the timer
+883240	893880	and second one is its length um it could be both a timer in second or an ms timer in milliseconds
+894520	902440	and in these two cases it will vary also the maximum length in the first case in fact
+902440	912760	uh we can count up to one thousand seven hundred ninety nine seconds in the second time in seven case i'm
+912760	928120	sorry we can count up to 65535 milliseconds if we want to use a timer cyclically we have two options
+928120	938520	functions the first one will be to set a normal timer wait that it elapses and then set it again
+939400	947880	the second one is using a proper function of the cpl language that is set timer cyclic that each time
+947880	951000	will elapse it will reset it again
+951000	963240	and here you can see the difference between the two type of timers in both codes we define a message
+964120	975880	and the timer when we press a we set a timer but on the left we do it once so once the timer will be elapsed
+975880	989320	no other block will be triggered while on the right part we set a cyclic timer and so if we continue reading
+989320	996840	the code when the timer elapses the message will be sent multiple times
+996840	1011480	until we don't stop the timer or the measurement stops on the left instead we will send the message in output just once
+1014760	1021240	if you think that the most part of the ken messages are periodical so they are cyclic
+1022200	1026600	the set timer cyclic can be very useful
+1029480	1036760	let's then talk about the reaction to the system events we are talking about pre-start start and stop
+1036760	1046520	measurement it is what happen when we press the start and the stop measurement button on canalizer or canon
+1046520	1064040	we can use this kind of blocks just once in our code we have always to remember that the cpl is a
+1064040	1074520	procedural language and so the first block that will be executed is the pre-start and no other block
+1074520	1081640	can be executed in parallel when we press the go button in canalizer or canoe
+1082680	1089480	we can then thanks to the pre-start block initialize variable read data from files
+1089480	1096440	or write something in the right window since the measurement is not started yet we cannot send
+1096440	1107080	can messages into the bus or set timer after the press start then we can do whatever is written in
+1107080	1117640	on start block and then here we can set timer or send messages into the bus but also initialize
+1117640	1126840	environment variable if we are using canal at this time the measurement starts when you press the stop
+1126840	1137800	button then a on-stop measurement event is executed at this point not only the measurement finish but we
+1137800	1145240	can also print statistics in right window or output messages into the bus or write a log file
+1147720	1157560	continuing we have the error events obviously this is not the scope of this lesson to talk about these
+1157560	1167080	different kind of errors or states but i just want to underline that this kind of event are very useful
+1167080	1177080	useful if we want to monitor the error states of an issue and if we want to terminate the measurement if
+1177080	1187000	necessary or if we want to execute a reset if the bus of state is reached we can also
+1187000	1202040	also access the error counter that lead the issue to reach these states thanks to the keyword error count in tx or in rx
+1203880	1207160	and in the last part of the slide you have a little example
+1207160	1216680	on what you can do with this kind of event and thanks to the error counter
+1219480	1227560	now that the event overview is finished i just want to do a quick recap on the most used expression
+1227560	1237080	that you can find in cpl but obviously you can find in all chip based language and so the instruction blocks
+1237640	1248440	the if condition blocks the if f block the switch case default blocks loops as for while and while
+1249160	1253080	the continue and break instruction the continue and break instruction and the return instruction
+1255320	1258040	and the syntax is the same of the c language
+1261160	1267320	for what concern the keyword is that we have found several times in the previous examples
+1267320	1274680	as you have probably already understood it refers to the element
+1277320	1285000	of the event block in which it is contained here are two examples one for a canned message
+1285560	1293800	and so the first this on the left will refer to the message with id 10 100 i'm sorry and on the right
+1293800	1304760	instead it is referring to an environment variable called variable one and this will refer to the value of this variable
+1307160	1316280	now that the first part of this lesson is ended i want to propose you a summarizing example in which
+1316280	1323960	we want to simulate the behavior of an issue called the body control module
+1325160	1334600	as you can see the first part includes exploit and second part we define some variables two messages
+1335880	1340680	one integer one this infotainment steering with control management
+1341560	1348200	uh we put it equal to zero and so it is not enabled it means that probably
+1349640	1352520	if it is equal to one it will be enabled
+1355320	1364280	each time we receive the bcm underscore comment we read the value of one of its messages one of its signal i'm sorry
+1364280	1375000	and if it is if the the signal named operational mode status is equal to four five six seven eight
+1375800	1383800	and so if we add ignition on and press start and start and cranking or ignition on and you know we will
+1383800	1390840	enable the management otherwise you know other cases we will not enable it
+1390840	1398840	why we need to enable or disable the infotainment steering wheel contrast management
+1399800	1406440	because when we press a button uh into the the panel
+1409320	1415960	the panel view of a canoe or canalizer the code will check the value of this
+1415960	1429240	this variable and if it the management is enabled it will put a signal value inside the message
+1429240	1439320	svc i'm talking about command underscore 11 c does equal to a variable an environment variable value
+1440040	1450760	otherwise it will do nothing in case in which management is enabled it will also output the message so the message
+1450760	1461880	will be sent on can and at each environment variable command 11 12
+1461880	1472600	and then 13 14 it is assigned a certain button as you can see a down button and right button
+1474600	1476440	uh okay button and up button
+1480440	1487160	it is something that can be done uh thanks to the panel editor in can or canalizer
+1487720	1491480	and you will see it better also in a calm lesson
+1495400	1503480	and the idea is that normally the the button value is so the environment variable value is equal to zero
+1503480	1512760	and each time it changes and it became equal to one if we consider the the first instruction for example
+1512760	1519960	then if the management is enabled this is the only case in which something will happen
+1521320	1527960	the command underscore 11 status will be equal to one and the message will be sent
+1529400	1531160	otherwise nothing will happen
+1531160	1541880	as i was saying before first most specific part is ended but now i will speak also about the
+1544280	1550600	correlation and the differences between two tools very powerful
+1550600	1556440	as easy block and cpl are
+1559240	1566920	during test activity both on vehicle and hardware in the loop it will happen very often that you have
+1566920	1571080	to change signals video we are talking about
+1571080	1582760	signals of messages sent by real issues in some cases you cannot just put the hardware in the loop or the vehicle
+1583640	1591000	in the condition for which the real issue send that signal that you need for several reasons
+1591880	1596600	dangerous condition for the drivers possible damages to vehicle components
+1597320	1600920	difficult vehicle condition or tests particularly long
+1603160	1604360	or in condition
+1606520	1614120	not so easy irreplicatable other application cases are loss of communication between real issues
+1614840	1621480	or impossibility fault it is message counter or cyclical randomness check servers
+1621480	1629160	in this case something that could really help us are the easy blocks and the cpl code
+1631240	1637000	you should already know that on can there could be several kind of frames
+1637880	1645720	on event cyclic on event or just the cyclic ones and according to the signal type
+1646440	1650280	we can choose the type of gateway that we should use
+1653640	1663720	if you need to work just with on event messages on it we can use with no issues the interactive generator block
+1663720	1674200	and thanks to it you can manually modify the signals and messages parameters
+1675800	1686440	in using the eg block you put the node in parallel with the canvas and so you have not to interrupt
+1686440	1689960	the bus and this hold the t connection
+1692120	1700440	again it is not the purpose of this lesson to explain how the eg block works but what you need to know
+1700440	1713080	is that this tool is very powerful because it allows you with no kind of knowledge of c or other language
+1714200	1723160	to modify as you prefer each message or signal inside a dbc and so the signals value
+1723160	1731400	value if the message has to be sent or not cycle time and so on and so on
+1733960	1743560	but the main characteristic of dg is the possibility to configure and interactively send messages during
+1743560	1751560	a running measurement online it means that you have not to prepare nothing before you start the measurement
+1752280	1756920	but you can change everything during the measurement run
+1761320	1763880	this slide summarize what i've just said
+1768680	1775640	the cpl instead is used to generate and send cyclic and cyclic uneven messages
+1775640	1787960	in this case you need to physically interrupt the canvas you have to put the cpl and so the concase
+1788600	1798360	between the two issue and in this case also adding the terminal resistance 120 ohm for each canvas
+1798360	1810760	this wire scheme is called s connection this is an example of gateway if you remember it is something
+1810760	1822200	similar to one of the first example we have seen in this lesson and it is useful to pass each message that is
+1822200	1834840	received in one can to the other can and vice versa without we modify nothing it is used only if you want to listen
+1835720	1851480	what the issues are saying it could be useful for diagnostic needed for example let's read one block and then the others
+1851480	1861960	obviously obviously will be the same for each message sent on ken2 we define a message
+1861960	1873400	variable for ken1 and if the direction of the message on ken2 is not received so it is transmitted
+1873400	1881480	then we will not do nothing we will exit from this block otherwise if the direction is received
+1882120	1888200	we will send the message called msg in ken1 and we will exit
+1891880	1900360	instead if we want to modify something inside the message for example a signal value what we can do
+1901080	1914600	is to choose a key in this case will be one or zero in order to modify a variable we define in the variables block
+1915240	1923160	the x variable and if we press one the variable will be equal to one zero the variable will be equal to zero
+1923160	1924760	so
+1928120	1937880	if x is equal to one and the id is equal to a certain value because obviously we want just to modify the
+1937880	1949080	signal of one single message we will define the message that we will send in the other can we will modify the
+1949080	1950760	signal that we want
+1954360	1965640	in this case we will calculate also the crcr of the message and we will send in output the message as it is
+1965640	1976600	in all the other cases so for the other messages and in case we have not pressed the key one
+1978600	1982280	we will do the gateway as it was in the previous slide
+1982280	1994760	so which are the common uses of the cpl the first one we have already seen for the specific cyclic on
+1995560	2002920	cyclic uneven messages if we want to set a loss of communication between real issues you can imagine
+2002920	2012680	that it is very simple the only thing that you have to do is avoid that the signals and messages you
+2012680	2016600	receive on a can will be sent in output on the other can
+2016600	2029320	to set impossible data transmission reception always thanks to modification we have already seen
+2030760	2039400	to change multiple signals on the same time as have you seen in the ag block since it is something that
+2039400	2049640	we have to do manually and during the measurement we can do just one by one and at the end to change signals
+2049640	2058600	belonging to different campuses thanks to double gateway at the end the ag can do just a single gateway
+2058600	2073880	and i would conclude with the last summarizing slide on the advantages and disadvantages of cpl and the easy block
+2074760	2083160	for the cpl we have the possibility to change a signal independently from the type of frame it belongs
+2083160	2094600	since it is a code language it is very flexible and adaptable it gives us the possibility to change
+2094600	2099480	signal in two different can in same time as we have already said
+2101800	2111160	and it gives a wide range of programming the only limit is our capability to program it obviously
+2111880	2119240	it has a lot of advantages it has a lot of advantages it will have also some disadvantages it need to write
+2119240	2128120	a c plus plus script so if someone is not too good to use the c plus plus languages will have some
+2128120	2136760	difficulties but not so many i would say you need to physically interrupt canvas
+2136760	2149480	c plus it is not like the eg block and above a breakout box is needed for this purpose on the other side the eg block
+2149480	2158360	is very very easy and fast to configure and to use it does not interrupt the can since it requires just
+2158920	2169240	a t connection the disadvantages the main disadvantage is that it gives the possibility to change only message
+2169240	2181720	an event since once you press to send on the eg block the message will be sent just once and there is nothing
+2181720	2184840	that you can do to see who cyclically send it
+2189160	2200120	i will say that that's all thanks for your attention i hope that my explanation was clear the slides were clear
+2200120	2209560	and i will say goodbye
+2209560	2211560	you

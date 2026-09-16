@@ -1,0 +1,854 @@
+start	end	text
+0	12720	okay okay here we are so let me share the screen
+12720	28480	do you see the screen guys
+28480	39360	yes yeah you should see verification software at some point yes okay yeah what
+42480	58080	no sorry okay nice well so this is a very huge topic verification software actually
+58080	66160	a lot of people have worked on it personally I've done this activity for two years and a half working
+66160	76000	on electric vehicles and this is a very first step to make you very close to what are going
+76000	84160	to be the activities that you might do for for kinaton this is a very long topic comparable to
+84160	92960	diagnosis let's say so hopefully we're gonna have a few exercises and review with other colleagues as
+92960	101200	well and we might have also some openings for this kind of activities so specific effort would be
+101200	113200	needed here so as every real teacher which I'm not but as every real teacher starts let's start with
+113200	119920	some definitions so for this lesson I picked a couple of definitions that I liked let's start from the
+119920	128720	first one that I called academic definition so this is let's say the correct definition to
+129840	135360	yeah define what is software verification so we can even try to read it software verification
+135360	142560	is a discipline of software engineering whose goal is to assure that software fully satisfies all the
+142560	152240	expected requirements let's clarify something immediately well today now you're alone in the office but
+152240	159520	tomorrow when other people will join you can ask them how I stressed out the importance of what I'm going
+159520	168320	to do requirements when you read the requirements here you know I don't know you can do a murales in your
+168320	177200	office saying requirements you can I don't know draw requirements on your copy book you can have a tattoo
+177200	182880	requirements on your right or left arm whatever it helps you just remember the importance of requirements
+183920	189040	so let's read it again software verification is a discipline of software engineering whose goal is to
+189040	195680	assure that software fully satisfies all the expected requirements so the requirements are always
+195680	203040	the input for our activities okay we work with the software most likely we will perform some tests
+203600	209600	our goal is to assure that the software behaves according to the requirements so if I don't have the
+209600	215200	requirements I don't know what to test I don't know how to test and most of all I don't know if the test
+215760	223360	is okay or not okay because I don't know if the expected result is according to the requirements okay so
+223360	230000	what you should learn from this lesson specifically is the how important requirements are and that
+230000	236960	these requirements are always the input for our activities okay and this applies to everything I mean
+236960	245120	to the diagnosis to can network stuff to general software features we're gonna see
+245120	255280	all of them start with requirements and then tests test cases will come test execution will come test results
+255280	260640	will come okay but the extremely important thing is the importance of requirements
+263440	271760	and this is let's say first definition then I'll add I've added a second definition which you know it's a name
+271760	280640	that I gave so you I do not suggest you to write useful definition of software verification over google because I
+280640	289120	might be scared of the results that will come out but yeah this is the one that I like the main goal of
+289120	299040	verification is to ensure that software is compliant with new requirements once again requirements are mentioned okay
+299040	307520	so again I don't know if the meanwhile meanwhile I'm talking you are already deciding if you should get a tattoo or ask Mario
+308400	315600	on Gino to paint the walls writing requirements you know I don't know you will let me know at the end of the lesson
+316240	327360	but the common point here is the importance of requirements as you might already notice there are some differences between these definitions
+328240	337760	and we will go through them in the next slides but since I'm a bit probably not just a bit older than you
+338880	349600	I see this kind of war between you these two definitions as this battle between these two characters but I'm not sure
+349600	365440	for some of you know stack and three do you know this video game yeah I know nice wow I know it so all the video game is so famous or you were as old as me so one of the two stuff
+365440	369980	No, I am 25, but I used to play it when I was young.
+370120	371500	I also played Mortal Kombat.
+374180	377040	We have some gamers here in the office.
+377460	378260	Wow, nice.
+378560	384200	Last time I did the lesson, people were very happy when I showed this video game.
+384200	388080	And I was happy too, because I didn't feel that old.
+388080	396400	Anyway, so let's see how these two definitions, let's say, battles between each other,
+396500	400160	even though they are really defining the same stuff.
+400960	403680	So let's start from the academic definition.
+404620	409080	Yeah, here is a kind of, it's written again.
+410020	411320	Let's go through it.
+411440	416560	So there are positive aspects and aspects that I would like to clarify.
+416560	421480	So the positive aspect of this definition is that, of course, it's a proper definition.
+421680	425420	Okay, it's in theory the correct one.
+425520	429300	So if someone asks you, what is software verification?
+429700	433740	Then this answer will be probably the correct one.
+433740	440920	Okay, so it's a discipline of software engineering whose goal is to assure that software fully satisfies all the expected requirements.
+440920	448840	Whenever you say software, checking that the software is compliant with requirements,
+448840	458360	when you say that, you are almost 90% of times correct when they ask you something about it.
+458360	462760	Okay, so, yeah, again, requirements.
+462980	470320	That's the first thing that you should think of when talking about software verification or testing in general.
+470320	481360	Okay, the only thing that it has to be commented or clarified here is the word fully.
+481580	486120	As you see, I circle it with an orange kind of circle.
+486120	495180	So, why so, we will see more in details why it's needed to comment it.
+495380	497580	But in general, it's like this.
+497740	501600	So when we work on a software or we have to test the software,
+502060	506820	we have to make sure that the software satisfies all the requirements.
+507000	508940	Okay, so in theory, this is correct.
+508940	513900	But we will see that we can start work in the middle of the project.
+514380	518080	Some requirements are copied from another project and were already tested.
+518640	520460	Some other requirements are not applicable.
+520800	526940	So in the working activities, sometimes we, well, not sometimes,
+527160	534600	most of the times we don't have to test the requirements of all the components of all the car
+534600	537180	because probably some of them have been already satisfied.
+537440	542660	Some of them are not applicable or some of them have been just copied from another project.
+543140	545900	And in this new project, that part of the software is the same.
+546060	550320	So probably the does have to be tested again.
+551140	553380	Okay, so fully is correct.
+553820	557100	Satisfying all the requirements is correct in general.
+557580	560820	But when we arrive to work on the practical stuff,
+561000	563560	it's a bit tricky.
+563560	567380	Okay, because we don't have to do everything back again every time.
+571720	573080	Guys, just one sec.
+573120	575740	I received an important message I should take.
+590920	591400	Okay.
+593560	598800	So that's why, since I didn't like completely this definition,
+599000	601960	I added this definition as well, which is the useful one.
+602500	605480	Here I like because there are a couple of things that
+605480	609900	give me the chance to explain even better the verification.
+610180	612380	First of all, is the main goal of a verification.
+613380	616120	This means that there are other goals of a verification,
+616120	618920	and we will see them in the next slides.
+619640	623560	But the main difference compared to the other definition is that here,
+623560	628440	to ensure that the software is compliant with new requirements.
+628440	637000	So, as always, as I'm saying already probably it's already the 10th time that I'm saying this,
+637000	641160	as always, we have to make sure that the software is compliant with the requirements.
+641160	649000	But in the previous definition, they said that it has to be compliant with fully satisfies the requirements.
+649000	652440	So it means all the requirements must be satisfied.
+652440	658520	In this definition, let's say it's the same, but when it comes to actually perform the tests,
+658520	664280	what we do is to make sure that the software is compliant with the new requirements.
+664280	670280	Why this is important, because the old requirements are not important anymore.
+670280	674200	No, they're important, but since they're already, I don't know,
+675560	678360	old requirements, maybe they have been already tested,
+678360	682360	or maybe we already know that on the software are satisfied.
+682360	687000	So what we do basically here is to be, to test new requirements,
+687000	691400	because that will refer to a new part of the software, okay.
+691400	698440	Is this clear, guys, is the first distinction between the two?
+698440	699800	Yes, yes, it's clear.
+701080	704360	Okay, of course, guys, this is a weaker definition, because
+705960	707960	the proper definition is the previous one.
+708760	714600	The main goal, that the goal of the verification is to ensure that the software fully satisfies the requirement.
+714600	717640	Okay, so this is the definition of verification.
+718280	726520	But when we start working, you will notice that we won't test all the requirements every time,
+726520	732280	but you will work on a delta, on new requirements, on something that is new,
+732280	737080	or there was a problem before, so you never work every time on all the requirements.
+737080	740600	But the final goal is to be compliant with all the requirements.
+740600	753640	Okay, okay, so guys, sorry, once again, for the message that I was getting.
+753640	767800	Okay, okay, let's move on.
+769960	776840	So here it comes again, your dearest friend or enemy, according to how you
+776840	782440	felt about it the first time you saw it, that is the WooCycle.
+783240	786200	So where are we with the verification?
+788360	793560	I won't go through the WooCycle again, because you already have two lessons about it,
+793560	799720	so I'm sure that those two lessons are more than enough to understand the basics of the WooCycle.
+799720	805000	Here is just an overview, just to remind you, and to show you once again, that the first thing,
+805000	812040	also in the WooCycle, as is probably been already said in the videos, is the requirements.
+812040	816760	Here it says software requirements, because this WooCycle is specific for the software,
+817400	820840	but consider that for everything that is has to be,
+823480	828360	that, you know, it's related to a project, there is a requirement to do it.
+828360	833800	Okay, so here it's software requirements, but there might be also other kind of requirements,
+833800	841400	also about, I don't know, the materials to be used, the packaging, how to ship this stuff,
+841400	843400	you know, there might be requirements for everything.
+843960	852200	Basically, it's the client asking how to do something, okay, and this will become a requirement.
+852200	857160	In this case, it's a software requirement, but there might be also other kind of requirements as well, okay.
+858360	863400	So, once again, first step is having the software requirements.
+865800	872520	We will, we have some slides after, but basically requirements really are just documents, okay.
+872520	879080	Think of it as, I don't know, a Word document, a PDF document, whatever, it's text, okay, most of the time,
+879880	887480	saying the software should behave like this, and there is an explanation of how a specific behavior should be,
+889000	891640	what is the behavior that has to be reached, okay.
+893480	898040	This document is then shared with the software developers.
+898840	906120	Software developers might be of the same company, might be of an external company, might be one person,
+906120	911960	might be 300 people, okay, whatever, so there's not a specific rule.
+913560	918920	I work with the clients where sometimes the software developers were internal,
+918920	926280	some other times are external, so this distinction between internal and external is important,
+926280	934440	because, of course, if the team is internal, you share the same tools, probably you have the same permissions of tools,
+934440	940120	so it's much easier to communication, and you can get further access to the software as well.
+940760	947240	If the software developers are external, so basically the client is giving the,
+947240	956120	the burden, let's say, of doing the software to an external company, then quite likely you will have
+956120	962760	few restrictions and limitations, because probably you use two different tools, a discussion on how to make
+962760	972120	everything compatible must be done, or even stupidly you cannot talk, for example, over teams, for example,
+972120	979400	because you are from two different companies, so this distinction between having the team internal or external
+980680	986520	creates some practical issues, let's say, but for now this is a very
+986520	993880	introductory lesson about verification, so we not, we will not go through all these very specific details.
+994840	1001640	Anyway, when a requirement is written, so when we have this document explaining how the software should behave,
+1002600	1009160	and remember, it's just a piece of paper, okay, so there's nothing, you just have a piece of paper with a few stuff written on it,
+1010280	1015480	then this document is given to the software developers, the software developers, of course, will not start
+1015480	1022120	immediately doing the, the, the, the code, okay, the code lines, so first of all there will be a software architecture,
+1022120	1029080	where will they kind of design how software should be built from a very high level point of view,
+1030040	1034680	and then from software architecture, we move to software design and software de-verification,
+1034680	1040120	where from this big picture, then you start to clarify specific parts of the software,
+1040840	1045880	finally getting to the software construction, where the actual code is written, okay,
+1045880	1056280	this lesson, generally guys, the training that you are following follow, focuses on the testing part,
+1056280	1064360	so what happens, what happens on the left side, is not a big concern of this training,
+1065160	1071640	I'm actually working on software requirements, so in case are needed, I can give you further
+1072360	1077960	explanations and stuff, but what we really care about is everything that comes here,
+1078760	1085400	from the right side, let's say of this cycle, okay, so I'm just explaining also the left part,
+1085400	1093480	to give you a general idea of where it starts our activity, so where our, the input for our activities
+1093480	1098760	were born, and when it comes the time when we have to work on it, okay,
+1098760	1111480	great, so once we arrive to the software construction, then the software actually will be released,
+1112360	1117800	once we have the software, then it comes, when, then it comes the time when we can start working,
+1117800	1124200	because as a test engineer, the input for our activities are, let's say, two, basically, one
+1125000	1131160	is the software requirements, because we have to know which is the intended behavior of the software,
+1132120	1138280	two, of course, is the software, otherwise we don't know what to test, and third, of course,
+1138280	1145080	we will need an hardware in the loop or a vehicle, but we will see it later in the slides.
+1145080	1148840	Is this clear, guys, until here?
+1152760	1153080	Yes.
+1155880	1158040	Cindy, did you want to make a question?
+1159400	1161160	No, I was just going to say yes.
+1161160	1162440	Okay, nice, great.
+1165160	1168360	Well, so let's move on then.
+1168360	1178360	Yeah, yeah, here, just a note, the left part of the cycle, here we are in the software development phase,
+1178360	1184840	once the software is ready, then we go on the right side, which is the quality assurance of the software,
+1184840	1191000	because basically, on the left side, the software is prepared, here is ready, of course, already the
+1191000	1199480	software developers perform some tests, but the tests that they perform are not on very complex systems
+1199480	1206280	that we will use at work, so our job will be to raise, let's say, the quality of the software, which
+1206280	1214680	means making sure that once this software is used, in our case, on the real system, which means on the
+1214680	1221720	vehicle, it's not going to be dangerous, it will perform as expected, and stuff like this, okay,
+1221720	1225000	so basically, we raise the quality of the software itself.
+1228440	1238760	Verification side generally lies here, okay, so we receive the software and then we perform unit tests
+1238760	1247640	about it, so we focus just on one module or one component, so one electronic control unit,
+1248920	1256680	we make sure that the software works properly, and then we'll start a new kind of tests further,
+1256680	1260920	the integration tests and functional tests, which imply more complex hardware in the room,
+1260920	1267560	or even the vehicle itself, so when we talk about verification, basically, we are stuck here, let's say,
+1267560	1273240	in software, let's say, construction, but it's not our case, because we are not software developers,
+1273240	1279960	what we do, basically, is the unit test section, but once again, the next slides, we will have
+1279960	1289800	further details about it. So we have already mentioned it, and these are the points that we will go through,
+1289800	1295240	first of all, the software requirements, I hope you are already making your mind what you get,
+1295240	1310680	what, sorry, I'm sure it was an incredible, incredibly smart thing to do, but I didn't hear anything,
+1310680	1319560	didn't understand, but I trust you, it was a very nice thing to say, so anyway, software requirements,
+1319560	1329960	which are the, or general requirements, which are the starting point, always, why the saying main goal
+1329960	1335080	is very important, because the main goal of verification is to ensure that software is compliant
+1335080	1340600	with requirements, but there are also other goals that we should achieve, and also the difference between
+1340600	1345960	fully and new, some of the stuff I've already, let's say, explained in advance, but we will have a
+1345960	1357000	dedicated slides for it. Okay, so, first of all, software requirements, as I already said before,
+1357000	1364920	these are the first, first step in the whole cycle as well, the starting point, so even though we are on
+1364920	1371560	the right side of the cycle, it's important to know what are these software requirements, because these
+1371560	1379720	are going, morning, morning, sorry for being late, but there were a lot of traffic on my way,
+1380680	1383480	okay, okay, I'm just sorry, thank you, okay,
+1386360	1389560	so starting point is, as I was saying, software requirements,
+1391240	1397320	and these are the inputs for all our activities, so whenever you start an activity,
+1397880	1404040	for one client or another, the first thing that is, of course, related to tests and stuff,
+1405800	1411480	one of the first questions to ask is, can I have the requirement for this specific,
+1411480	1417800	I don't know, feature that I should test, it's important, guys, to ask, and probably to ask many
+1417800	1426040	times, because in some situations, it's not that easy to have requirements, the process is not as smooth
+1426040	1436120	as it's supposed to be, it's not as rich as it should be, so sometimes you should, you work on some
+1436120	1442040	features without having the requirements, so this should not happen, first of all, ask always about
+1442040	1447400	requirements, requirements are one of the input for your activities, without them, you are doing
+1448200	1453000	you're just playing with the software, with the hardware in the loop, with the vehicle, okay,
+1459320	1468120	again, here is, this is an example of a requirement, okay, so as you see, this is a document,
+1468120	1472840	okay, probably this is an informative part, some of the requirements related to the software are,
+1473400	1480120	let's say, very short, they're defined as atomic, okay, so the requirement should give you just one
+1480120	1490120	instruction, a software requirement, if this signal is equal to three, then this variable goes to false,
+1490120	1501400	for example, this is a proper requirement, very short, with one instruction, they're defined as atomic,
+1501400	1508600	okay, so unit, basically, but also there are some parts of the requirements where the architecture
+1508600	1515160	is explained where, you know, more high level requirements are, this is an example, so this is an example
+1515160	1525960	related to, yeah, I mean, electric propulsion, and this is an example of an architecture, whatever,
+1525960	1539800	this is one of the case, yeah, so basically, the, the, the, the software developer team will just get
+1539800	1545560	this document, and out of this document, some other requirements should be, uh, defined,
+1545560	1553000	and, guys, just to think of something, I don't know if you remember, uh, the cycle exercise that we did,
+1553000	1559800	there was a timeline, we have the same timeline in these slides as well, but later in the presentation,
+1560440	1567720	as you remember, from the point the project is accepted, to the moment where we have the car,
+1567720	1579960	it, uh, probably, there is, uh, nine months or ten months of, you know, wait, uh, it, it means that
+1579960	1586920	when we start writing the requirements, we don't even have the car, in some cases, so the requirements,
+1586920	1595400	of course, cannot be so very, very specific, because we are just writing a document, so we cannot
+1595400	1603560	anticipate all the problems that the car might have, or we cannot know where it's important to specify
+1604200	1610200	the specific feature for the software stuff, so consider that the requirement at the beginning must
+1610200	1619080	be very general, so very high level, just a very high level explanation of how the car or specific
+1619080	1625320	system or specific component should work, but then, uh, during the timeline of the
+1625320	1631800	project, so as soon as the project goes on, the requirements get, uh, more detailed every time,
+1631800	1637400	okay, so these, I'm saying this, because this requirement that you see here is a very high level
+1637400	1643320	explanation, okay, it's just an example of an architecture where you can find the basics for
+1643320	1649480	every electric car, okay, so this is not a very detailed explanation of how
+1649480	1657560	a car should work and what, what the software should contain just looking at this picture, okay, so
+1657560	1663880	probably this is a first explanation, first requirement, early requirement in the project,
+1663880	1669000	probably from these requirements a lot of others followed, okay,
+1675560	1675800	so
+1679480	1695880	main goal, so this is the slide I really care about, so slide 9 is the, on the second place of things to
+1695880	1704520	learn from this lesson, the first one, as you might know already, is about requirement, uh, I remember I had,
+1704520	1713560	let me think about it, because I remember I had the catchphrase for the, the class before yours,
+1714600	1722680	uh, yeah, it was, uh, have the requirement, read the requirement, understand the requirement,
+1722680	1728520	and, uh, make sure that the software is compliant with this requirement, it should be something like
+1728520	1734360	this, and you can ask other people when they'll be back in the office, but yeah, so, and I repeated,
+1734360	1745400	repeated that sentence and that phrase, like, uh, 50 times in lesson, uh, yeah, so have the requirement,
+1745400	1751800	for sure, because as I would say that usually when you go to a client, the process is not as defined as
+1751800	1758360	it should be and always supposed to be like in the slides, so first, uh, first the task is to get
+1758360	1763560	the requirement, so have the requirement, the second task is read the requirements,
+1764920	1769560	third task is understand the requirements, because otherwise you are doing, I don't know,
+1770200	1777080	monkey, uh, work where you just perform mechanical stuff without understanding anything,
+1777800	1783240	the first step is to make sure that the software is compliant with the requirements, because this is
+1783240	1792840	actually the, the, the goal of our activity and why we are paid for if you work as a verification,
+1792840	1801320	validation engineer, okay, uh, main goal, so let's see why this slide is so important,
+1802040	1809480	first thing, as we were saying software requirements, once again, uh, we have said that the goal is to
+1809480	1815000	make sure that the software is compliant with this requirement, so if the software is compliant, 100
+1815000	1824440	compliant with the requirements, then, uh, we are working properly and this is, let's say, uh, a model expression
+1824440	1831880	of a manager happy when you declare that the software is 100 compliant with requirements, okay,
+1833160	1839960	but this is just one part, so let's see what there is, uh, left to discuss, we haven't mentioned
+1839960	1846840	this central part, the gray one, the famous test cases, which I don't know if you've already written
+1846840	1859560	in the past, or for sure you have heard about them, is extremely important to, uh, write down
+1859560	1868760	the manual words that you do while you perform the tests, for many reasons, so you, as I was saying,
+1868760	1875400	the input of your activities are requirements, okay, so you enter the office, you sit at your table,
+1876120	1883400	uh, whatever you find on your desk, in your computer, or wherever, this pile of requirements, okay,
+1883400	1892200	so just a document, once again, so you, you have accomplished the first task, which is half the
+1892200	1898600	requirement, the second task is read the requirement, so you take this file, you start reading the
+1898600	1904600	requirements, third task is to understand the requirement, so what are we talking about,
+1905640	1909960	fourth task is to make sure that the software is compliant with the requirement, so,
+1911080	1928280	to get to the, the first, for the fourth task, oh, sorry guys, the battery is low, give me just, uh, one minute,
+1928600	1931960	last night, the battery is full of Cincinnati.
+1931960	1935340	So, um, we have out- ills-
+1935340	1965320	Thank you.
+1965340	1981040	So to accomplish the fourth step, which is making sure that the software is compliant with the requirements, I have to do a couple of things.
+1981040	1988240	So one is to, that I'm already suggesting you, which is writing the test cases.
+1988240	1992040	So why do you think it's important to write test cases?
+1993680	1996460	Let's think together about it.
+1997640	2005120	Because an option could be, okay, I have the software, I have, let's say, a bench stop where I can perform the tests.
+2005840	2006860	I just do the tests.
+2006860	2009780	And then I say, yeah, okay, it works.
+2010700	2012780	So why should I write test cases?
+2014660	2019860	I see at least a couple of reasons, but let's have an open discussion about it.
+2019860	2029440	So we can document everything and show to the client?
+2032860	2035600	Yeah, kind of like it.
+2035700	2038340	So document everything and show to the client.
+2038340	2040560	What do you mean with show to the client?
+2041140	2042600	Why should you show?
+2042740	2045140	To verify what we have done.
+2046100	2050080	Yeah, to show that we've made some progress maybe.
+2050660	2057620	And to see if it's according to the requirements or it's working well.
+2057620	2060720	Yeah, it also helps for future work.
+2062240	2063740	Okay, okay.
+2064040	2066500	So let's say, for example, when...
+2066500	2068640	We've got a couple of good reasons.
+2069100	2072940	Maybe they have to be said in a slightly different way, but they're right fast.
+2073460	2073960	Yeah, please go ahead.
+2073960	2078760	Maybe to see if the software has issues and it's not working properly.
+2082000	2084680	And why should we write test cases for it?
+2084680	2094660	I'm not saying it's wrong.
+2095080	2096120	Yeah, I get it.
+2096220	2096520	I get it.
+2096860	2102580	So we write the test cases, we test them, and then we see if we have problems or not.
+2102980	2105020	So we write the test cases.
+2105680	2111600	I believe we think that, like, what will be the...
+2111600	2112640	How do we say?
+2112640	2114960	The nature, not the nature.
+2115260	2115500	Anyway.
+2117240	2119920	It's all in my head, but I don't know how to explain it to you.
+2121360	2121600	So.
+2125060	2130700	Maybe it's to make it easy for future tests.
+2130700	2139160	Or maybe to verify the software meets the requirements.
+2141300	2146420	And, like, we imagine what the future will be for the software.
+2146620	2150340	So we test in different cases.
+2150340	2156400	So we think about all the cases that the software will go through.
+2157100	2158320	Like, we think for the future.
+2159040	2161860	Oh, so the software works in different conditions.
+2162040	2162300	Yeah.
+2162360	2162700	Yeah.
+2162880	2163540	The conditions.
+2164900	2165240	Okay.
+2165240	2169400	Let's try to wrap up all the nice things that you gave me about it.
+2169780	2172160	So, okay.
+2172160	2175480	First of all, we, you know, we have a document.
+2175840	2178280	Sometimes we don't have the software yet.
+2178280	2184780	So, sometimes the client might ask, okay, start to write test cases.
+2185900	2190200	Because you can, let's say, anticipate some work.
+2190200	2197180	So you start writing test cases, reading, having the requirement, reading the requirement, and understanding the requirement.
+2197180	2206940	So that once you have the software and the benchtop or the car that you should use is ready, you already have all the maneuvers done.
+2206940	2216820	So, when some of you were saying, oh, to make it easier, to make the other activities easier, the testing activities easier, or saying something like this.
+2217160	2218120	Yeah, that's correct.
+2218320	2220820	That's one of the goal of writing test cases.
+2220820	2231240	So, I take the requirements, I write test cases, and maybe I share these test cases to another team that will perform test cases.
+2231240	2240180	So, they won't have to have the requirement, read the requirement, understand the requirement, stuff like this, because all of these steps have been done by you.
+2240180	2251780	Okay, so this is one of the reasons to write test cases, to have clear maneuvers to perform, let's say, to verify that requirement.
+2252900	2261360	Another thing is, has probably seen you, I don't know who was saying, to show a kind of progress to the client.
+2261360	2279720	This is not exactly true, because we have another staff to show that we have done activities, we will see later, but it's very important to have also test cases where we can say, okay, we have done, today, we have done 10 test cases, 20 test cases, 50 test cases.
+2279720	2293080	Okay, in our world, that's a key parameter for showing progress, not just to the client, but whoever, whoever is your responsible, in Kinet or wherever, it will work.
+2293440	2305100	Okay, and if you say, I performed 50 test cases, and your responsibility is, okay, which one, and you have nothing, how can you say you performed 50 test cases?
+2305100	2313100	So, writing test cases is also very important, for, to show progress that you've done on the activities.
+2315500	2319020	There are also other reasons why we write test cases.
+2319740	2333340	Let's say, you perform, you have requirement, you write the test cases, so you have a maneuver, you perform it, okay, then for some reason, there are problems, or that feature has to be tested again.
+2335100	2339660	Maybe, maybe, in eight months, since the first time you performed the test.
+2340920	2348940	How can I perform the same test, exactly, the same test again, if I don't have the maneuver written down?
+2349820	2362060	So, it's extremely important to run the test cases, also because the same test might, might be executed, not just in one software, but also, eventually, potentially, in all the softwares,
+2362060	2373980	the same test cases, from that point on, and sometimes, you can be asked to perform the same tests, even one year later, you performed the first time that cast, that test, okay.
+2373980	2390600	So, even though, while you are doing the test, it looks stupid to write down all the steps, like, I go in K-On, I set this variable to 3, which means, I don't know, dot open, for example.
+2390600	2404600	Then I wait five seconds, then I, you know, when you're doing that, it's very, let's say, stupid, you don't need that, all those details, because you think, okay, I know how to do it.
+2404600	2426300	But, but think in perspective, you might be, uh, asked to perform the exact same test, one year later, or two years later, it happened to me to perform some tests, one year later, on a specific feature, maybe I'll tell you about that later.
+2426300	2440260	And you really should trust your version, the past version of yourself, about doing him or her a good job here, because otherwise, it's going to be a mess.
+2440260	2462040	Okay, so, we, we said to make life easier to other tests, let's say, to say it in a proper way, writing the, let's say, checklist, so a list of tests to be executed, this is one reason, second reason is to show progresses, which is not exactly true, but more or less.
+2462040	2477500	Another thing, as we said, is to, yeah, have a bunch of tests, and, uh, written in a specific way, so that we can, uh, perform these tests again later in the future.
+2478940	2490960	The most important thing, guys, anyway, is that the software, software requirements are fully implemented in the software, okay, so the software is compliant with the requirements.
+2490960	2501440	So, the process, once that we have the requirements, and each requirement must be covered at least by one test cases.
+2501440	2517260	So, here we are saying that each line, okay, each instruction, the requirement, must have at least a test case is linked to it, because in this way, we are saying that every part of the requirements are covered at least by one test.
+2517260	2545040	So, this means getting, this means getting close to achieving the fourth step that I was saying before, I'll just remember you that the first step is have the requirement, second step is read the requirement, the third step is understand the requirement, then let's say we have a fourth step, which is writing test cases, and then the fifth step is, uh, make sure that the software is compliant with the requirements, okay, so yeah, five steps.
+2545040	2559680	The fourth step, which is, you know, make us very close to achieving the final goal of the verification activities, which is making sure that the software is compliant with the requirements.
+2559680	2563680	How can I be sure that the software is compliant with the requirements?
+2563680	2575680	Well, first of all, I have to make sure that each line, so each requirement, each instruction that I have in the requirement is covered at least, at least by one test cases.
+2575680	2595680	Then you can have two test cases, then you can have two test cases per requirement, three test cases per requirement, maybe there is a requirement that is a bit tricky, so you cover it with the 20 test cases, okay, so there is no really a high threshold on this.
+2595680	2619500	There is no real high threshold on this, uh, the battery is a lower threshold, the lower threshold is to have at least, at least one test cases linked to each requirement.
+2619500	2645500	Now that I'm working on requirements, I might even say that you must have at least two test cases on requirement, one saying the software should work like this, and another test case is saying, okay, when the software, when I perform a maneuver different from the one explained in the requirement, then the software shouldn't behave as written in the requirement.
+2645500	2652500	So the positive one, so the positive one and the negative one, okay, this is the rule generally accepted.
+2652500	2670500	So the one test case is very minimum for, you know, doing a, almost, let's say, poor job, two test cases is actually a good way to improve your work.
+2670500	2685500	Okay, so we are, we arrived at a point where we have the requirement, we have read the requirement, we have understood, hopefully, the requirement, we wrote the test cases, then what should I do?
+2685500	2699500	In case you didn't get is a question for you guys.
+2709500	2710500	Something the requirements.
+2710500	2711500	Well, can you be much more specific?
+2711500	2734500	So think, really think of yourself entering the office, you enter, you sit at the table, you have your file of requirements, probably digital file of requirements, you have them, you read them, understand them.
+2734500	2746500	Then you open, I don't know, an Excel file, for example, you write your test cases, then what you have again, you just have a word file explaining how software should behave.
+2746500	2752500	And then you have an Excel file saying which are the maneuvers to be done.
+2752500	2757500	Then, is this enough to say, yeah, the car will work.
+2757500	2759500	So we do the maneuvers, and then make the test.
+2759500	2763500	Yeah, of course, of course, guys, that's the main part.
+2763500	2771500	Okay, it's extremely important, again, to have the requirement, read the requirement, understand the requirement, write test cases.
+2771500	2784500	Of course, these are all fundamental steps, but then, of course, we have to perform the tests, otherwise, you know, we're just, we stop just right before the main part.
+2784500	2806500	So we perform the test, okay, according to the test cases that we've written, and the bench top, or anyway, what we have to perform the tests, we might find ourselves doing unit tests, which means tests on a specific component.
+2806500	2829500	So I don't know, one electronic control unit, for example, or on tests of integration, integration test, which means testing a, you know, a more complex bench top where we have more than one electronic control unit or more than one module talk to each other.
+2829500	2841500	So maybe you are testing some features that involve more than one electronic control unit, so two, three, five electronic control units talking to each other, for example.
+2841500	2853500	And also we can get to functional tests, which are high, let's say, tests from a high level point of view, I would say, I would call them driver point of view.
+2853500	2866500	So just think always of yourself entering the car and doing maneuvers, okay, so everything that you might do in the car that can be considered as a functional test.
+2866500	2875500	So not really getting into details of the variables inside the electronic control unit, but just caring about the maneuver to be done in the vehicle.
+2875500	2888500	Okay, so basically, I don't know, I will open the door, I turn right side, the steering wheel, I put in the car, first gear or whatever, okay, this kind of maneuvers.
+2888500	2890500	Then what is missing here.
+2890500	2904500	So we have said, we have the requirement, we did the requirement, we understand the requirement, we write test cases, we perform the test cases, then,
+2904500	2918960	what happens here so you have a test case saying open the door turn the car on try to move the
+2918960	2923820	car with door open okay this is the maneuver you do it then
+2934500	2955440	then we see if everything is okay and if everything is okay I don't know what is the next step then
+2955440	2960840	but if it has a problem we check the requirements
+2960840	2971700	why you check the requirement if there is a problem or maybe we check our test cases I
+2971700	2981300	think we send it back so they can fix it yeah they can fix it for developers guys so I give
+2981300	2989640	you 15 seconds to think better about it give me just one minute you think about it I have to write
+2989640	3014480	okay
+3014480	3024720	okay so you were saying something that i like which means i do the test cases and
+3026000	3031600	if something is wrong i check the requirements so it's not really clear this part
+3033600	3039520	so please let's uh let's think and discuss about it again so we perform test cases then
+3039520	3050960	uh then uh if the if the tests are going bad uh we will we'll say that
+3054080	3061200	the team to remake the requirements so we can check them again and if the requirements are okay
+3062080	3069120	we can go to the next stage i have a couple of questions so uh first one
+3070320	3076000	how can you know that requirements are not okay that's the first question why do you say uh
+3077120	3084320	maybe i see if the requirements are maybe it's something missing that uh we can do the test cases
+3084320	3088880	yeah no no might be might be but the requirements are wrong
+3092560	3098000	i just want to know why you started all i see if the requirement is wrong consider that most of the
+3098000	3104080	the time requirements are an input to your activities so most of the time they should be
+3104080	3112320	correct or sometimes so it's very rare that the problem are the requirements that's why i'm asking
+3112320	3120320	why you started questioning immediately the requirements it can be of course it can happen but requirements are wrong
+3122240	3127120	but yeah that's the second question the first question that i want to ask is you told me if
+3127120	3132240	the test is going bad how can you know the test is going bad let's say
+3135360	3142240	it doesn't tell the output that we act so and what is the output that you are expecting
+3142240	3150560	now maybe for example if we expect the one it it gives for example zero and it throws a matter
+3150560	3156480	no no it's that that's clear away from the requirements oh oh finally finally that's what
+3156480	3163200	i wanted to hear guys the requirements are our input and the requirement says how the software should
+3163200	3172160	behave so i write i read the requirement that says okay you enter the car if you have the door open and
+3172160	3179120	you try to move the car the car won't move for example okay so this is an example of requirement okay
+3179840	3187520	then you read requirement you write this case you say okay so the maneuver is i open the door i turn on
+3187520	3196080	the car i insert the car i insert the first gear and the car the requirement does not just say the
+3196080	3202320	manual says the manual the requirement says also what is the expected behavior the expected behavior is
+3202320	3208720	the car will not move okay so when you write the test cases you perform the full maneuver saying open the
+3208720	3217040	door key on turn on the car put first gear and try to move then the way to say that the test is okay
+3217040	3225920	or the test is not okay so i suggest to you not to use the test is going bad going bad is not really
+3226480	3233440	this is scientific the scientific part let's say here is or okay meaning the software is compliant with
+3233440	3239760	the requirement or not okay the software is not compliant with the requirement okay you we have just two
+3239760	3246480	options here no others so how can i know if a test is okay or a test is not okay
+3247040	3253840	simply reading having reading understanding the requirements in the test cases you will not
+3253840	3259280	write just the maneuver you will write the maneuver so there is a section that is called i don't know
+3260400	3270160	test steps uh where to be done procedure of tests whatever okay every client has his own name but the
+3270160	3277840	important thing is step is to write down all the steps and the maneuvers to be done but you have also
+3277840	3286640	another column saying which are the the let's say the acceptance criteria the expected behavior behaviors
+3286640	3294480	to accept the test here again everyone has fun choosing different names but the main idea is i have
+3294480	3302320	the maneuver in the requirements i have the maneuver let's say the intended behavior so the maneuver plus the
+3302320	3310800	intended behavior and in this way i can know if a test is okay or a test is not okay is this clear guys
+3310800	3316480	it's extremely important to know this because how can you know if a test is okay or not okay if you don't
+3316480	3320240	have you don't have you don't read and you don't understand the requirements
+3323760	3331600	so to sum up you have the requirement you read them understand them you write test cases you perform
+3332160	3342480	test cases and you put an okay or a not okay in your report according to the expected behavior
+3343440	3348480	uh from uh from uh from the requirement itself okay
+3354000	3357200	it's clear thank you great
+3359680	3364480	okay so we have written test cases we have uh
+3366720	3371600	we're adding the report okay or not okay and stuff like this
+3372480	3372800	then
+3375120	3380160	what should i do while doing the test for example what should i do once i have the result
+3381200	3383520	there are a couple of things more that i want to know
+3388240	3392080	uh check again write a report
+3393440	3399360	yeah okay we have the report we have written okay or not okay great
+3399360	3408880	so there are two things that are missing the first one is if i'm supposed to do something while i
+3408880	3414480	like perform the test cases or i have to add the specific information inside the report apart
+3414480	3422560	from the result and the second one is how should i behave when i have an okay or when i have a not okay
+3423920	3432000	so first thing i'm doing the test and i put okay for example in the report should i do something more
+3432000	3440720	from the technical point of view so we have uh maybe maybe suggest your own modifications
+3442720	3445200	modification or what for example
+3446240	3454160	uh extra uh extra requirements that you have tested on your own or maybe you suggest some changes
+3454160	3466720	extra requirements that you have tested on your own so okay in general of course if there are
+3466720	3473600	improvements to the requirements or to the members because yeah as i was saying maybe you can find
+3473600	3481280	yourself working with test cases written by someone else okay this this can be a case of activities as
+3481280	3490960	well in that case of course if you see something to be improved yeah sure but uh this is something you
+3490960	3497760	know why is this this lesson is important this lesson is important because it tries to give you a process
+3497760	3505760	process it's important because okay the process is clear but then when you'll start working and you don't know
+3506880	3512960	that you don't know the bank stop you don't understand the requirement maybe you don't have the requirements
+3512960	3520560	because uh the person that should share the requirement is enjoying the national holiday in albania you
+3520560	3527680	know all kind of problems that you might face you have a daily target of things to
+3527920	3536000	get done i don't know for example 100 tests per day 100 is crazy now let's say five let's say five
+3536720	3544880	so you do not get too much scared five tests per day nice you don't know anything you don't know what
+3544880	3553760	to do so the file the final thing done at the end of the day is zero tests zero tests then the day after
+3553760	3560720	you start to get requirements but you don't know the the bench top so just the day after you perform
+3560720	3568320	just one test maybe you did it even in a wrong way it comes the third day you have the chance to talk to
+3568320	3573920	someone they tell you oh look this requirement this test is completely wrong you're supposed to do like
+3573920	3580720	this so at the end of the day you perform one test but it was the one of the day before so where i'm getting
+3580720	3590640	at with this big apparently stupid monologue when you start working at the beginning you will
+3592960	3600480	let's say have a lot of delay on the targets that the client will set for you so the the temptation
+3600480	3608320	let's say you will have is okay let's jump some steps so that i can achieve the target that the client
+3608320	3614640	gave me and i won't get you know bad reviews or whatever so you say yeah i have the requirements
+3614640	3618640	but i already have the test cases written by someone so i don't need to read them i don't
+3618640	3624160	need to understand the requirements let's directly jump to perform the test okay this this can be a
+3624160	3632560	strategy but it's a very short-term strategy the long-term strategy is trying to understand exactly how
+3632560	3638880	the process works trying to stick with it the beginning it's normal to be delay with the target
+3639920	3646400	but i assured you that you will start just conveniently forgetting the process because you
+3646400	3652480	have to speed up your activities this is why i'm focusing so much how should be the process because
+3652480	3657520	this is very important to work like this because this will improve a lot quality of your work
+3658080	3663680	might be slower at the beginning but then you will get much faster and most of all better
+3664240	3671360	and more comprehensive of stuff about car in the future that's why it's extremely important to focus on it
+3673840	3681200	so all of this to say yeah improvements okay okay but there are other two important stuff that i'm not
+3681200	3693600	hearing so we performed the test okay do you think the client or kinet or whoever will just trust your word
+3694400	3706720	i mean i'm sure you are all extremely nice people meant for paradise from here to 100 years from today but
+3706720	3714240	you know you're doing an activity you just write the excel file saying ah yeah these tests are okay
+3716080	3723200	is the client supposed to believe you on your word or do we have some other some something
+3723200	3751920	so we have to send them a report of the work that we have done sorry the work that we are done until that moment
+3753200	3759920	okay the report can be i don't know word file a powerpoint file an excel file that is just a
+3759920	3767680	we can we can record it oh nice that's what i wanted to hear so whatever you do as whatever
+3768320	3777680	guys and we whatever you do the report is fundamental because at the end of the day we talk through reports
+3777680	3785120	you know we don't open every time all the record and stuff because we trust the person but this is on
+3785120	3794080	a daily basis then it might be the case or it happens of course it happens uh quite often that we have to
+3794080	3801040	show what we have done not through reports but through a report the famous log also the log that you did
+3801040	3808000	using the analyzer that time or the analyzer that time so all the log that you performed and then analyzed
+3808000	3815600	offline later that's what actual this is the process when performing tests so once again we have an
+3815600	3823680	additional step have the requirement read the requirement understand the requirement write test cases
+3824320	3833920	perform test cases and while performing them record them recording test that we are doing and of course
+3833920	3840080	checking if the behavior of the software is compliant with the requirement in that case we put okay
+3840720	3847680	if it's not compliant then we put not okay so this is important guys because when you have to start a
+3847680	3855520	discussion about a specific maneuver or something yeah the maneuver performed can be helpful to quick to
+3855520	3864400	understand quicker quickly what you did in that log but then the way to communicate between teams is using
+3864400	3871200	the record that you did that's the only way because those are actual data not your word or your report or your
+3871200	3879600	maneuver okay i can make them up whenever i want about the reports about maneuvers i can fake maneuvers three
+3879600	3888080	years later oh yeah i did like this you know no one might question in that case with the record yes with
+3888080	3895760	the record is official it's the actual record of what you did on the car and that's the proof of our work and the
+3895760	3908720	proof most of all that uh looking and analyzing that uh record we see that the software is actually compliant with the requirements and the
+3908720	3916720	okay that we put on the report is justified not just because we are good people and our okay can be in trust but also
+3916720	3924960	because there is a set of data that confirms that the behavior of the software is compliant with the requirements
+3924960	3931600	and the only way we have to show it is through record it might be actually the most important thing
+3931600	3940160	of our activities but let's say from the legal point of view is this clear guys this is extremely important
+3942320	3949920	all of these steps are important so i hope you're getting them writing them down uh you will have this
+3949920	3961680	lesson recorded so you can listen or you create some you know you know those youtube videos like 10 minutes of
+3961680	3968880	someone doing something yeah you can make a video youtube video of myself saying have the requirement read
+3968880	3977280	the requirement understand the requirement write test cases perform maneuvers while recording them
+3977280	3984800	um setting the result okay according to the requirements to make sure that software is compliant with the
+3984800	3989840	requirements that case okay it's not compliant with regard requirements that case is not okay
+3991360	3995520	clear guys do you have questions doubts
+3995520	4007920	you want to resign after this lesson yeah all comments are appreciated maybe we're sick this coming
+4011280	4011680	okay
+4014400	4023360	so what happens if i put okay so we clear the first part okay second part what is the expect let's say what
+4023360	4028400	what should we do if the test is okay what should we do if the test is not okay
+4033760	4040400	uh i think in both cases we should communicate it to the to our colleagues like yeah either if it's okay
+4042160	4046720	we should speak to our colleagues that everything went fine and this test
+4046720	4049440	passed all the validation and also if it's not okay
+4049440	4059920	okay again tell them that it's not okay how frequent for you uh it depends on the importance of the test i think
+4061120	4061680	and uh
+4064800	4072240	yeah i like a lot this answer because i would accept it also let's say daily basis even though it depends i
+4072240	4077840	mean it depends on the activities because if you have milestone i don't know a touch point meeting every week
+4077840	4085280	for example if you agree to discuss the results every week it can be okay to give weekly results even though
+4086480	4094000	i uh i prefer having let's say daily report because it really gives you the idea of where you are heading
+4094000	4100160	your activities even for yourself and not not necessarily to share with the manager but just to have
+4100160	4110240	yourself an idea on on a daily basis how your work is doing and going so for sure let's say we have a every
+4110240	4120640	three days uh uh progress meeting with the the manager so every three day we communicate the results
+4121440	4125920	but i like luck when you said depends on the importance of the test because
+4125920	4132400	if it's okay most of the time okay you put okay in the report uh you moved from
+4133360	4141600	i don't know 50 percent of activities done to 50.02 okay we are all happy we are advancing great
+4142880	4147360	the the main thing happens when the test is not okay so if it's a small not okay
+4147360	4156160	okay and okay you put a not okay and then after three days you will say you will explain to the manager
+4156160	4165440	look i performed 100 tests i don't know 90 were okay and 10 were not okay so among those 10 are not okay
+4165440	4174400	there is this one that is very it gives a lot of problems okay so if you find a test that is very
+4174400	4184480	dangerous it's important to let's say alert people above you immediately of course guys before starting
+4184480	4191120	all these warnings and stuff it's important that you are sure that that's not okay so before you just
+4191120	4199120	express your thoughts be sure of have performed a proper analysis of what you're doing but yeah anyway
+4199120	4208240	so the frequent frequency is i don't know daily for example or i don't weekly or every three days
+4208240	4214000	every two days whatever but my suggestion is daily because you will have daily targets so if you have
+4214000	4221840	daily targets i would say i have a daily update of the report that's my suggestion and if something
+4221840	4228640	very bad happens for example you realize that performing a specific maneuver the car will start
+4228640	4235600	accelerate by itself then that might worth mentioning as soon as possible to the manager saying look
+4235600	4244080	i found this very weird behavior it looks very dangerous so what should we do should we do this that
+4244080	4252720	and stuff like this and have a let's say discussion with someone in a higher position than doing that this
+4252720	4260720	moment okay do you think is enough just to work your manager
+4266640	4272160	the answer might be yes okay i'm not saying it's necessarily wrong but do you think it's enough
+4272160	4285120	uh so just the manager i think maybe it's uh needed but not enough you also have to uh communicate to your
+4285120	4288480	teammates because our testes may be implied in there
+4291840	4301360	i know like it may be like a waterfall logic if uh if something is wrong in our uh task it may imply
+4301360	4306960	directly to another colleague task and we have to communicate as soon as possible uh yeah this is
+4306960	4312960	correct but it's not the main the main it's not the main thing for a specific reason i'll ask you a
+4312960	4316640	question what is the main what is the goal of verification
+4316640	4332640	uh to verify whether all the requirements are in the right function are functioning right
+4334560	4343360	or say that let's say in a slightly different way that the software is compliant with the requirements
+4343360	4350160	yeah yeah so when you perform a test and you declare that this test is not okay you're basically
+4350720	4357520	basically saying the software is not compliant so our goal in the end is to make sure that the software
+4357520	4363440	is compliant with the requirement so when there is a not okay what do you think should be the next
+4363440	4370320	action okay to warn the manager or the teammates because maybe their activities might be affected these
+4370320	4377360	are all yeah organized things to do but warning people that something is not working
+4378240	4385600	it's not enough to fix the problem the software will not fix by itself just because you will tell
+4385600	4393200	people ah it's not working so what do you think should be the next step the next action to do
+4393200	4400320	uh maybe we can suggest them a solution by our role
+4402880	4419600	uh okay two things suggest to them with them second of all how can you know what is the solution
+4419600	4432080	i don't know i i don't know if it's our job but we can communicate with software engineering to make
+4433200	4444560	the new software complained with the requirements okay okay this i like guys there is this work
+4444560	4454960	uh we work with clients that are so big that uh it's very hard you know to have a full picture of it
+4454960	4462400	so to work properly we have to be aware of which are the input of our activities and which are the outputs
+4462400	4470960	okay so we which are the team that we work with from where the input of our activities come and where the
+4470960	4481920	output of our activities go in this case we have said for the past wow it's 10 no no break yeah you are brave
+4483040	4491040	anyway we have said for one hour and a half almost that there is a person writing requirements okay let's
+4491040	4500640	say team writing requirements this team so the first uh let's say the interaction that you have
+4500640	4507760	is with the software requirements team eventually because you will write the test cases so you see
+4507760	4513280	that the input of one of your activities is having the requirement okay so one of the interaction that
+4513280	4521920	you might have is with the requirements team okay and that's the first thing second thing is that
+4521920	4527520	this requirement are received also by the software development team the software development team reads the
+4527520	4533280	requirement they understand the requirement there is a requirement licitation but yeah you we will not
+4533280	4540480	go through those steps there finally the software developers will produce a software and will publish a
+4540480	4552160	software for you so you will get a let's do something like this okay let's use the most powerful tool of all time
+4552160	4575760	name which is paint okay so here as as i was saying we have the first interaction okay let's say we we are this part that cases and text execution okay we are here
+4575760	4596320	this is not really professional but yeah that that's us okay nice this is the first interaction with the software requirements team or requirements team because you receive the requirements
+4596320	4605680	sometimes you don't have a direct connection with the requirements team sometimes you just receive the documents and that's it okay but that's the that's the first interaction
+4606400	4613120	another interaction that you have is with the software development team okay that cares about this part
+4615360	4622320	the interaction so here we have uh write it in a better here
+4624720	4630160	here we have the requirements okay as an input here as input we have
+4630160	4634880	here we have
+4634880	4635200	here
+4638160	4639200	we have software
+4647200	4647520	great
+4647520	4660240	then what is our what we do we here we are just receiving stuff okay so what we do back to these clips
+4661280	4669680	so if the if everything is okay then we have an output saying okay uh software is compliant okay
+4670320	4677600	so our report goes out to the management saying we have covered i don't know 50 of the requirements and
+4677600	4682400	the software is compliant with these 50 of requirements okay nice
+4683520	4687920	the thing is when it's not okay we perform an analysis
+4687920	4699040	saying okay the requirement says that uh if i try to drive the car with the door open the car will not move
+4701360	4708560	so most of the time we have to consider the requirements as frozen the requirement arrives
+4708560	4714400	you when they have been already discussed accepted and stuff like this so most of the time the problem
+4714400	4720320	are not the requirements so let's consider the requirements are correct if the requirements are
+4720320	4728960	correct and then you perform the maneuver and the uh the software does not behave as you expect
+4728960	4739120	then you have to do something to warn what the software developers so here there is an interaction
+4739120	4745760	back to the software developers saying look the software is not working properly so considering
+4745760	4750960	that the requirements are okay we can ignore this part because we say okay this part is correct
+4750960	4763200	we open an issue we open a ticket we open a point you know there are different we raise an issue everyone says every
+4763200	4772560	clients talk about it as in a different way but basically we open an issue to the software development team
+4772560	4779920	saying look you have given us a software that is not compliant to requirement so you should make something
+4779920	4789680	different they will analyze not your report not your maneuver not your mail they will analyze your record
+4789680	4795280	your log this is the way to talk to the other team so that's why it's so important to record the
+4795280	4802720	managers first of all to let's say demonstrate that you worked and what you do second of all is whenever
+4802720	4809520	there is a problem or for some reason we have to analyze what you did the only way to talk between
+4809520	4818480	teams is using the recordings nothing else of course the mail will help with your describing what was going on
+4819280	4825040	of course the reference to the requirement helps of course the test maneuver helps you know all this
+4825040	4833520	stuff are very helpful but at the end of the day the software developer will care about the behavior of the system
+4833520	4843760	not your behavior okay of course we do a first analysis like i see that the variable that should go to
+4843760	4850240	three stays stuck to zero in that case it's very evident the issue and you say look the issue might be
+4850240	4855840	this variable that is stuck to zero but of course it's up to you to understand what was the problem
+4855840	4865600	so you always perform first let's say a pre-analysis of the issue but then if the software is not compliant
+4865600	4873920	with the requirements we just raise an issue and warn in an official way with an email or with a
+4875120	4883920	tool i don't know the tool that i've seen to the clients are i don't know jira or polarion or mantis
+4883920	4894560	or jama or whatever really there are there are a lot of tools for the issue tracking but most of
+4894560	4902000	the time when there is a not okay in your report it cannot stay in your report it must go somewhere
+4902000	4908800	else and this somewhere else is warning the software developer team if it's a software problem
+4908800	4918240	or the requirements team if it's a requirement problem okay in fact i added here all these marks
+4919920	4926960	to say there is an extremely important stuff which is the issue tracking if it is okay then we move on
+4926960	4934240	the whole report with all the okays and all the reports and everything if it's not okay it's up to you to
+4934240	4944240	manage the issue until the issue is fixed so first of all you say look this is not okay i open a ticket
+4944240	4954080	i open a point i raise an issue whatever to the software developers team they will read your problem
+4954080	4959360	eventually they will ask for clarification they will ask for the maneuver they will ask for the software
+4959360	4965520	that you were working on if you were working on an hil if you were working on a card so they will ask you
+4965520	4972640	a bunch of questions once the issue is clear they will analyze the issue then they will tell you okay
+4972640	4979440	we have found the problem solution will enter in the next software and then the cycle starts back again
+4980080	4984800	so they've moved from software architecture or software design or software construction directly
+4984800	4990560	they will change the software they will produce a new software and you will receive the new software
+4991600	4998880	how can you know that now the behavior is fixed because you in the past have written the test cases
+4998880	5006800	so you know exactly which is the maneuver to be repeated in the exact same way you perform the same test
+5006800	5014400	with the new software containing the it's called the bug fix and you declare and record the
+5014400	5022880	the maneuver and you check that now the test is okay because they fixed software once all this cycle is done
+5022880	5029040	then you can move on because now the software is compliant with the requirement
+5032400	5033520	is this clear guys
+5042400	5042880	yes
+5044400	5045600	yes clear
+5048080	5048480	okay
+5055200	5055520	great
+5058960	5067600	so yeah here you know what one said all of these this is the main part of the lesson okay right after the
+5067600	5076000	the uh the requirement stuff so having the requirement reading the requirement understanding the requirement
+5076640	5083440	writing test the cases recording the maneuver that we do so while we perform the test
+5084640	5085680	putting the okay
+5087760	5093520	or not okay in the report according to the expected behavior coming from the requirements
+5094080	5101360	if the test if the test is okay then okay if the test is not okay then we have to raise an issue to the right
+5101360	5109360	team according it's a problem of the software of requirement or something else okay
+5109360	5118000	this is extremely important this is the part i really care about and it will be really help you
+5118000	5128880	uh working properly then we start to move more on the practical part here we mentioned the unit test
+5128880	5136160	integration test the functional test so let's see what are the components that we might use for perform these tests
+5136160	5149440	uh we can have oh sorry okay yeah uh we can find ourselves working on the component uh
+5149440	5153280	uh on the component uh
+5155360	5159600	hardware in the loop they're called the component hardware in the loop because basically what you have
+5159600	5166160	is just one component which is an electronic control unit like this one this is the real hardware
+5166960	5174000	and then you have an hardware in the loop or model simulating the card okay
+5174000	5184240	in this case this um configuration is an easy configuration because you have just one real hardware
+5185280	5191440	and all the everything else is a model so it's easy to configure it because every you can simulate
+5191440	5196960	whatever because the there is a model of the car there's not the real cars you you can change the the
+5196960	5206800	the tire size you can i don't know force the the the speed to 300 kilometers per hour you know whatever
+5206800	5212400	it's a model so you can do whatever you want the only real thing is the electronic control unit and the
+5212400	5218960	software inside this electronic control unit for this reason it's very flexible because of course you can
+5218960	5226240	also perform some tests with a very dangerous situation i don't know driving to 200 kilometers per hour
+5226240	5232560	downhill for example would be very dangerous for a driver but it's not a problem on a simulator
+5233680	5239600	sometimes this kind of system is too simplified because uh you know
+5242320	5246960	at the end of the day okay the goal is to make sure that software is compliant with the requirements
+5247840	5256160	okay and the subsequent thing is that once we put this software in an electronic control unit and then
+5256160	5265360	in a car the car first of all should be safe no one will buy a car that after 100 kilometers just
+5266160	5274400	broke broke down break down uh doesn't break just accelerate or or stuff i hope you remember all the
+5274400	5280400	problems that i guess healthy had on the highway while we were discussing about the diagnosis
+5281120	5288640	so you don't want to buy those kind of car so i cannot rely on the safety and the proper behavior
+5288640	5298480	of the car just basing everything on tests done with just this echo and a motor okay so this kind of
+5298480	5305920	setup is very extremely helpful for the early stage of the of the project the i've actually worked most of
+5305920	5312800	the time this kind of setup with one electronic control unit so you can focus a lot on this echo
+5313440	5317920	most of the time this activity is done with power train electronic control units because they are the
+5317920	5325120	most important one but then once you have performed the test with this kind of simulator then for sure
+5325120	5333040	the next phase of testing will move to a much complex system it can be called the system
+5333040	5340160	hardware in the loop integrated hardware in the loop integrated system you know whatever the name can be
+5340160	5347360	whatever the difference here is that you just you don't have just one hardware real hardware coming
+5347360	5353760	from the car you might have two hardware three hardware i don't know like two electronic control units
+5353760	5360960	three electronic control units five electronic control units you might have also some sensors some
+5360960	5367360	activators there are i've seen some benchtops where you can even find the steering wheel the headlight
+5367360	5375680	so you basically there is the whole car just be basically without the chassis and the plastic part
+5375680	5382640	around but apart from that everything is there steering wheel the arrows the stereo everything okay even the horn
+5383840	5392880	you know everything in that case of course the complexity is higher so while in the previous configuration
+5392880	5399600	you can force the model to do weird stuff in this case you really have to be careful because now you
+5399600	5408080	start to have real component one of the examples that i'm thinking of is the tests done with the battery pack
+5408080	5416720	and the inverter and all the electric motors in that case you cannot force a you know high power because
+5416720	5423680	you have actually the battery so you have to be very careful in performing these crazy maneuvers because in that case
+5423680	5436000	you will actually have a source of energy giving actual electricity out so that can be a problem okay the system is less flexible of course
+5437360	5444400	and here i introduced the the concept of significance i'm not sure this is the right translation from english
+5444400	5456160	because in italian for now let's use significance but the concept is what i was explaining before meaning
+5457680	5462880	the final goal is to ensure that the software is compliant with the requirements okay and the
+5462880	5468560	some basic consequence of this is that once we put everything in the car everything is safe and everything
+5468560	5479920	is working properly so if i just test one hardware and the bull car is a model of course those kind of tests can help me
+5479920	5488080	but i cannot trust them 100 because i'm just testing one part of the car while the rest is a model so the significance
+5488080	5498400	let's say the meaning uh of uh let's say the level of trust i can say uh of that test on a bull car
+5498400	5504800	is limited because we are just testing one part with this kind of bench top we're starting to test not
+5504800	5511200	just the small part of the car but the bigger part of the car it's not the car yet so we are not testing
+5511200	5518000	the full system but we are starting to test the system that is closer to the car so we're starting to test
+5518000	5528160	something that can be compared somehow with the car that's what i mean with significant or level of trust
+5528400	5528880	let's see
+5532720	5535920	finally we have the functional test
+5537840	5544240	functional test as i was saying are tests done and driver level point of view so you can find yourself
+5544240	5551280	working in you know this is i guess alfa romeo julia for example
+5551280	5562320	uh this might be a mclaren of some sort so someone might find yourself working in alfa romeo someone
+5562320	5569040	here or this mclaren for example these are just random pictures taken from internet or from uh
+5570560	5578400	let's say old time people like some of you you might like working on ducato you know they're all kind
+5578400	5589920	everything for all tastes you know um here the complexity is at its highest of course uh the car
+5591840	5598160	you cannot really change stuff on the car okay so that's the system that's the full system so the
+5598160	5606640	complexity is very high because when we when i say complexity it's a 360 degrees because when you work
+5606640	5612800	in the car you can have all sorts of problems not just software related you can have i don't know
+5615280	5623680	tires the flat tire so you cannot use the car because you have one tire less for example
+5624480	5630880	or i don't know that the battery of your computer is low so you cannot do a test of 30 minutes out
+5630880	5640160	in the street uh or the battery of the car is low because i don't know you forgot something on and the
+5640160	5645920	day after the battery is out you cannot do the tests so at the end of the day you will have a delay
+5645920	5652560	the manager will ask why you have a delay and then you have to explain you know all of this stuff uh you
+5652560	5662080	can find dead animals in the car as well you know i've heard and seen very strange stuff in the car so
+5662080	5670800	it's not just software related but when you go on real world all kind of stuff can happen it's not
+5670800	5676960	flexible as i was saying and of course the significance is at this highest because this is we are actually
+5676960	5686880	testing the system okay so we cannot get closer than this to the car that we will actually uh sell okay
+5690160	5690560	um
+5693920	5701200	yeah here there is an italian quotation well it's translated to italian it's for a man there are
+5701200	5712400	few innocents uh way to kept it busy which is making money uh why i'm seeing this uh because most of the time
+5712400	5724720	when we work on a project it's very rare that we work on a new project most of the time the projects are
+5724720	5732080	considered as carry over a carry over a carry over means we take you know an old project or a previous
+5732080	5739280	project and then we use part of that project and we make a new car so when you listen to all those fancy
+5739280	5750800	advertisements in the car on the tv saying ah the new car x new version of uh you know whatever car
+5750800	5760080	uh most of the time almost 95 percent of the times that's not the new car at all sometimes it's the
+5760080	5767680	same car of a previous one just they changed slightly the headlight form or this you know shape of
+5767680	5776560	whatever interior part yeah new car basically the car is the same uh why am i saying the same because
+5776560	5784640	it's the same uh from the hardware point of view because they built the car the same factory
+5784640	5792480	eventually or with the same architecture but also they copy actually the software from one project
+5792480	5801200	and they start another project starting from the previous one okay so we most of the time you will
+5801200	5813600	listen talking about the level of carry over i don't know 50 carry over 75 of carry over 100 of carry over
+5813600	5821680	which means it's the same software just probably some headlights will change or some very minor stuff will
+5821680	5829520	change why we do that we do that because in this way we save a lot a lot a lot of money
+5831200	5839600	guys when i graduated i'm the mechanical engineer and when i finished university i thought yeah
+5839600	5848400	well car car is all about engines all about tires is all about chassis yeah whatever that's my dream
+5848400	5856160	when i finished university but then i realized that there's nothing about it because on road car
+5856800	5864000	engine is always the same tires are always the same you know it's so standardized everything from the
+5864000	5873440	mechanical point of view that's there's very left to be done honestly uh but on the software side
+5874080	5878640	all the money basically went on testing the software side at least on road cars
+5878640	5890720	so that's why i'm in this field still because this is where the the the the the the money goes on road
+5890720	5899120	cars in testing activities so to save money of people working performing tests or you know all the
+5899120	5906000	verification engineers that are supposed to verify that are supposed to have the requirement read the
+5906000	5912640	requirement understand the requirement write test cases perform the test cases while recording
+5913520	5921040	making sure that the test is complies met meets accepting criteria so that the software is compliant
+5921040	5927440	with the requirement and making sure that if it's not compliant the tester will raise an issue and will
+5927440	5932720	follow it until it's fixed and the software then behaves according to the requirement
+5933600	5939040	all of this you just forget about it because you have the same software as before you just use the
+5939040	5945520	work done by someone else of course you cannot trust 100 to send everything so there will be some
+5945520	5951200	activities but if you completely take one software from a previous project that you use on a new project
+5951200	5957680	with the same hardware the same software same architecture whatever then the testing activities will be
+5957680	5966480	much smaller and the money spent on the project will be much less so you see that every time there is
+5966480	5969600	a carryover of everything most of the times and
+5972880	5979440	really five percent of the cars are new on the market all the others are just copy of others
+5979440	5997120	okay this is the let's see last slide uh part uh almost everything i said in the cycle part two lesson
+5997840	6004640	is what i said when i do when i usually do this lesson so i won't really go through this slide
+6004640	6013440	a lot uh because we have covered everything but what something that i want to do is just giving you
+6014560	6024240	a last concept before stopping because really i've never talked for two hours without stop since a long
+6024240	6034000	time uh which is the the question of the questions the king of the question the queen of questions
+6034800	6044160	of about verification that is what is the difference between verification and validation
+6045840	6054000	boom you know explosion civil wars among people and clients uh going crazy and stuff this is the
+6054000	6059600	question that most of the time they ask the first one is what is the verification and all steps to be done
+6059600	6065600	and we have covered it with the list i told you before but then they will ask okay what is the
+6065600	6075040	difference between verification and validation uh you will slowly understand by doing it but let's
+6075040	6086240	try to explain looking at this picture so in the early phase of the project uh we have the usual you
+6086240	6092560	know i just go i'll move on because this is the same slide that i used for the cycle part two lesson
+6093360	6097920	so we have the first part of the project where basically we have
+6100880	6107680	approval from the high management of the project then there is a software requirements team that start
+6107680	6113520	writing the requirements okay these requirements then are shared to the software development team
+6113520	6119200	software development team produce the software and shares the software with you great
+6121600	6128880	at the beginning we uh this is let's say a new project okay let's consider these slides is
+6128880	6135200	representing a new project so first of all we have to make sure that the software is compliant with the
+6135200	6144720	requirement and we know now that that's the process the verification we have defined the verification okay so making
+6144720	6149920	sure that the software is compliant with the requirement great and that's what we basically do so there's not
+6149920	6154400	much more to be said about verification i already spent two hours about it
+6154400	6168400	so let's focus on the right part of this slide where you see there is this purple rectangle b and b in purple that starts really late in the project
+6169280	6179280	that's when the validation starts why not the verification started here because uh yeah that's the first software
+6179280	6194160	would be 100 for example the verification started here in september 2020 and went on or most indefinitely while the validation started for some reason one year later
+6195600	6208240	what happened this one year during this one year the verification team ensured that the software was and is compliant with the requirement
+6208240	6214800	once we make sure that the software is compliant with all the requirements so we have
+6215520	6221840	all the requirements expected for the project and the software developers have implemented everything
+6221840	6229040	coming from the requirements and the verification team has verified that all the required software is compliant with all
+6229040	6235680	the requirements when we arrive at this point and it comes the time that we test again all the requirements but this
+6235680	6244560	time inside the card while why we do this because in this case we are sure that the software generally in hil
+6245200	6255440	uh you know on uh prototypes so in a not in a let's say uh cts car or a car that is very close to the
+6255440	6262320	production one but just prototypes so we use basically development tools we make sure that the software works
+6262320	6269280	properly with development tools but once we are sure that the software is compliant with all the requirements
+6269280	6277200	then we have to make sure that everything works properly also in the car so having the software compliant
+6277200	6284640	with the requirement says okay that the software is should be saved to go in the car then it starts the validation
+6284640	6294640	phase where all the requirements are tested again but in the car in order to tune some parameters
+6295200	6303280	to make sure that the behavior is not just compliant with the requirements but also is okay from the
+6303280	6310080	driver point of view i mean let's consider we have a map of i accelerate 10 percent of the accelerator pedal
+6310080	6317360	and i get the 15 newton meters of torque for example okay maybe the requirement is met but then i put this
+6317360	6325040	software inside the car and the car does you know there are vibrations there are sudden acceleration the
+6325040	6333280	feeling of accelerating is not correct or is not the one desired actually by the market so in that case
+6333280	6341120	the software is working properly but it's not really like how it should be the final car in that case you start
+6341120	6348400	tuning some parameters where the logic of the software works because it has been already verified by the
+6348400	6355760	verification team but there are some parameters to be tuned some constants to be tuned inside the software
+6355760	6368800	which are called calibrations that will be adjust during the validation activities so to sum up everything and close
+6371120	6378720	everything here because it's late finally i need to break you too probably what is the difference between
+6378720	6389840	a verification and validation verification we know verification is uh the activity of ensuring that the software is compliant with the requirement
+6391760	6396160	the validation so the difference between the verification and validation is that the validation
+6396720	6406960	performs basically the same activities so ensuring that the system is uh behaves according to the requirement
+6406960	6419760	starting starting from the assumption that the software has been already verified so i consider that the software doesn't have bugs so the software is working properly because
+6420720	6430400	it has been already verified and the validation checks that the system in itself so basically these are activities done on the car most of the times
+6431040	6441520	the system the system behaves according not just to the requirement because i expect that but also that the behavior is like the expected one and the desired one at high level
+6441520	6454880	consider guys once again that the requirements are written one here in the house before of the car so i cannot imagine all the side corner corner cases the side scenarios that i can get
+6454880	6463360	once i get once i have a car so maybe there are some adjustments to be done some other stuff that i couldn't test into the hil i have to test in the car
+6463920	6468800	so i basically repeat everything that has been done in the verification phase i do it again
+6469680	6475760	in the car so having a system that is much closer to the final tool at the final the
+6475760	6485440	of the car that is sold on the market starting from the assumption that the software has been verified so
+6485440	6493360	i'm supposed not to work on the software logic but just on these tuning parameters called calibrations
+6494000	6500640	that will adjust the behavior of the car so finally i can sell in the market a car that is not only compliant
+6500640	6508400	with the requirements but it's also let's say nice to drive and is actually compliant with the main idea of
+6508400	6513840	the client okay so the intended idea of the client of the car
+6518560	6528800	okay so uh we can uh let's see uh discuss about these slides a lot because there are a lot of stuff that
+6528800	6536720	we haven't mentioned by the quality gate pg uh the mule part but i guess this part is covered also in
+6536720	6545680	boost cycle part two so my suggestion for today would be to uh review what we have done today
+6547680	6554000	uh eventually have a look also the full cycle too if you do not recollect it because this focus just on
+6554000	6557120	this last part and having the knowledge of what we have said about
+6557120	6563520	uh verification this can be helpful for you to have a wider picture of this slide as well
+6564960	6571920	and uh yeah i guess we will talk again tomorrow just starting from this point on
+6572880	6577360	because from this part on then it starts the operative part
+6579440	6584800	where we start to focus on writing the test cases how to write the test cases
+6584800	6589600	uh how we want to check while performing test cases and stuff like this but
+6590720	6602160	these are just focuses on what we have said that slide 10 i guess nine nine yeah this one okay
+6602720	6606320	so this is the focus i would like you to have and write down
+6606320	6615440	uh wherever you want on your body on the wall of the office on the floor ceiling or whatever having the
+6615440	6623920	requirement understanding the requirement sorry reading the requirement no sorry having the requirement
+6623920	6630400	reading the requirement understanding the requirement writing the test cases perform test cases
+6630400	6643440	uh while recording them and then uh checking that the the behavior meets the requirement setting okay or if it's not okay
+6643440	6650400	raising an issue and following the issue until the issue is fixed we will see that to write test cases there are further
+6650400	6657920	information information information information to be added but we will see tomorrow where we will continue from this slide
+6658880	6667840	okay uh there is also other material in the folder there are also some exercises but for today i would like you to
+6668640	6674480	focus on this just create the scheme of the process and we will uh discuss it
+6675280	6681280	tomorrow again and we will slide uh slowly move to a more operative part
+6682480	6689840	of course uh if there are questions this is time to ask or uh if they come after
+6690560	6695440	the explanation please reach to me at this after okay okay
+6697600	6699280	do you have uh questions
+6699280	6715520	it's all clear thank you for me it's clear too thank you great so thank you all guys and see you tomorrow
+6717440	6727280	see you bye bye bye

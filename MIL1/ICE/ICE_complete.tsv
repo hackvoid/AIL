@@ -1,0 +1,1246 @@
+start	end	text
+0	10560	you should be able to see my screen yes okay so let's have a start this is the
+10560	18480	basic this is the basic design of our internal combustion engines so here in
+18480	24120	this slide you can see the you can see the names of the main parts of the of
+24120	32100	the engine of a four-stroke engine okay let's talk let's spend just a word about
+32100	41100	the basic operation as we as the name says the four-stroke engine has four main
+41100	48420	phases intake compression expansion and exhaust I use the animation in order to
+48420	56220	to have a clear idea here let's wait for the cycle to start again so intake phase
+56220	64860	compression expansion and exhaust phase respectively so what happens can you see
+64860	74240	the can you see the ad arrow the pointer yes okay great yes okay okay so what
+74240	79760	happens is that during the intake phase the the mixture of air and the fuel
+79760	84480	because of course we need both in order to in order for the combustion to occur we
+84480	90380	need both air that contains oxygen that that is the oxidizer of the combustion
+90380	97580	reaction and the fuel that is the this the fuel that that is oxidized that burns
+97580	105020	basically and allows us to allows us to to get some mechanical work at the
+105020	112740	crankshaft power engine so through the intake manifold the air fuel mixture is
+112740	117700	sucked in the combustion chamber that is this part here then the motion of the
+117700	124700	piston compresses the air fuel mixture then there is this there is this guy here
+124700	130880	this guy here is only presenting spark ignition engine in in fact this is
+130880	136880	called the spark plug that is what triggers the that is what triggers the
+136880	143500	combustion the operation of a diesel engine is slightly different than the we
+143500	148760	will see it in the following so the air fuel mixture is sucked in through the
+148760	153320	intake manifold compressed then there is the spark plug that triggers the
+153320	160440	that triggers the combustion the combustion of curse the the gas contained into the
+160440	167560	combustion chambers expand so that basically they push the piston downwards and
+167560	174880	the the the connecting rod gives a torque at the crankshaft level that is the
+174880	180920	mechanical work that that is the the the final goal of an internal combustion
+180920	185740	engine that is getting metamechanical work at the crankshaft level and then the
+185740	191840	motion of the piston pushes the exhaust gases out of the combustion chamber these
+191840	197100	two guys here are the valves the poppet valves that regulate the the flow of the
+197100	205360	intake and the exhaust gases inwards and outwards the the combustion chambers the
+205360	214900	combustion chamber the the two camshafts that are this particular shape you can see it here if you
+214900	221500	basically you see it in just one on just one plane the actual shape of a of a camshaft is
+221500	232480	like this basically these these profiles this this particular shape is made in such a way that
+232480	240800	while the the camshaft is rotating at some point it pushes the it can regulate the it can push the
+240800	247980	the the poppet valve and open the the manifold the intake and exhaust manifold respectively
+247980	260720	okay so let's see some relevant parameters for for internal combustion engines first of all some some
+260720	269040	important names top dead center that is the that is the the top level the the the highest level reached
+269040	279740	by the by the motion of the piston bottom that center that is the the the the lowest point reached
+279740	286660	by the motion of the of the piston the difference between the the distance between the top dead center
+286660	292980	and bottom dead center is called the pistol stroke other important parameters that you may have heard
+292980	301700	of is the displacement that is uh basically in practice the displacement is the overall volume of
+301700	308980	all the combustion chambers of an engine because as you uh as you could probably know an engine is normally
+308980	315700	not made of just one cylinder except for uh for uh for example uh scooters scooters and mopeds uh
+317380	325220	most of the times have a single cylinder engines while for cars is the uh normally we have uh we have
+325220	334020	several cylinders from uh two to n cylinders so basically the displacement is the sum of the uh of the
+334020	343860	volumes of the volumes of the volumes swept by the by the piston in fact here you can see uh the uh if i denote
+343860	353300	the bore with b and the stroke by s this is the area of the piston uh times the uh the stroke is the volume
+353300	361380	swept by the piston times nc that is the number of cylinder in the uh in the engine so it's the overall volume
+361380	369700	swept by the by the by the piston another important parameter is the compression ratio that is the
+369700	377540	ratio between the volume at bottom that center and volume at top that center volume at bottom and the
+377540	383620	bottom that center is the it's the maximum volume of the combustion chamber also including the dead volume
+383620	391220	up here and the uh the volume at top dead center is basically the the dead volume the area that is not
+391220	397380	the volume the volume that is not swept by the by the piston up here so the compression ratio gives
+397380	404820	an idea it gives you an idea of how much we compress the air fuel mixture uh during the during the engine
+404820	412900	operation another important parameter but actually not that relevant because since uh since we'll be
+412900	421060	dealing uh mainly with uh with engines with car engines this uh this parameter will always be it's
+421060	427300	a design parameter and will be always something around one basically the difference is that the
+427300	433700	broadly the stroke ratio is the ratio between the bore and the stroke of the of the of the engine
+435140	440020	here in the animation you can see what happens with different uh stroke ratios
+440020	449140	if you have a lower stroke ratio uh with the equal engine speed will we're going to have an higher uh
+449140	453060	piston speed respect to an engine with an higher stroke ratio
+455780	462260	with uh with equal uh with equal um energy speed you see here that the the these three engines these
+462260	469060	three uh these three engines have uh have the same rotational speed but the uh the piston speed is different for
+469060	478340	these three okay then another another important parameter is the air fuel ratio that is the uh the ratio
+478340	483940	between the uh between the the master the the air mess flow and the end of your flow
+487460	496020	okay now let's uh talk specifically about um spark ignition engines that is gasoline engines
+499060	509540	uh in uh in standard the um spark ignition engines the um what happens is that what we are uh what is
+509540	517940	accessing the combustion chamber um through the intake manifold is uh an air fuel mixer
+520340	527460	so imagine that we have this uh this stream of air fuel mixer that is accessing the um the the combustion
+527460	533140	chamber chamber that is compressed and then there is the spark plug that triggers the combustion
+533780	537300	what happens after that the spark plug is triggered the combustion
+538020	544740	that we have uh uh that we have a flame front that is this guy here this orange this orange area here
+544740	551780	that moves radially from the spark plug the place where the uh where the spark is triggered
+552340	558580	towards the the outer part of the combustion chamber so we have this uh like this combustion waves
+559220	564980	this combustion wave that moves from the spark plug towards the the outer part of the combustion chamber
+567380	574820	for a traditional uh oh okay another important thing is that obviously the uh since the combustion
+574820	583460	occurs occurs in the uh in the flame front the flame front will have uh burnt gases at its shoulder and
+583460	587620	will have a fresh air fuel mixer ready to be burned in front of it
+590420	598740	so another important thing for uh for traditional spark ignition engine is that the air fuel mixer is stoichiometric
+599540	605140	what does stoichiometric means do any of you know what stoichiometric mixture means
+611540	622660	i think from what i've read and seen that is a mixture that the air and fuel are in the ratio that
+622660	634100	uh when the exhaust happens we don't have like salt or only monoxide carbon yeah basically it's the uh yeah
+634100	642420	it's uh it's uh yeah it's that's basically it basically the stoichiometric ratio is the air fuel mixture
+642420	651300	ratio for which we have complete combustion of the fuel without um and at exhaust there is no partial
+651300	658740	combustion products and no excess oxygen so basically we're going to have just complete combustion
+658740	668580	products at the exhaust and the most important thing no residual oxygen at the uh at the exhaust
+669620	675620	so all the oxygen at our disposal all the oxygen contained in the air that we've uh that we've that
+675620	684180	we've uh sucked in the combustion chamber has been used so no excess oxygen at the exhaust
+687140	694420	uh this uh for um this is stoichiometric the um the the stoichiometric ratio is established it's a
+694420	702500	quite precise number and it depends on the fuel for gasoline it's uh 14.7 something it's around that
+702500	708180	number as you will see in the following and it depends on the uh it strictly depends on the fuel
+708180	713540	it's a different number for uh for for gasoline it's a different number for uh it's another number
+713540	721860	for uh for a methane it's another number for uh lpg and it's another number for uh let's say i don't know
+721860	732820	other uh other fuels used in spark ignition engines for uh ethanol alcohol for example or uh methanol okay
+733700	741140	so uh keep in mind that the uh that ideally the air fuel mixture that we use in our spark ignition
+741140	746980	engine ideally should be always stoichiometric so no excess oxygen at the exhaust
+746980	754580	in a spark ignition engine another important thing is that torque is regulated by modulating the airflow
+755940	761700	let's see what do i mean when i say that the uh that the torque and hence power is regulated by
+761700	768980	modulating the airflow roughly speaking without this is a totally general formula we can see the power
+768980	776100	expressed as the product of an efficiency that is a function of the uh of the operating point of the
+776100	782580	engine the operating point of the engine is defined by engine speed and um and torque and output torque
+783700	787460	this is an efficiency so this is dimensionless times the
+790100	799140	times the fuel flow times the um hi is a parameter is the heating value of the of the fuel that we're using
+799780	806020	so this this parameter basically indicates how much energy we get when burning a given
+806020	813060	quantity of uh given quantity of uh given quantity of that fuel so it's expressed as a unit of energy
+813060	822180	divided by a by a mass so it's uh kilojoules per kilograms a kilogram kilojoules per kilogram and
+822180	833060	it's a parameter it's fixed it depends only on the fuel so since we know that the um that the the mixer in a spark
+833060	842740	ignition engine engine shall always be stoichiometric um we can express the the fuel the the the the fuel flow as
+842740	851140	uh the uh air flow the air mass flow divided by the air fuel ratio and we know that this number should be fixed
+851780	858740	for a spark ignition engine so basically we can express the the the fuel mass flow like this like this product
+859620	864900	one divided by air fuel ratio times the uh the master flow the air mass flow
+867140	872660	since this is fixed the only thing that i can that i can act on in this formula in order to change the
+872660	881140	power is the um is the uh air mass flow so this is what i mean when i say that in a spark ignition engine
+881140	886820	the the torque and that's the power is regulated by modulating the airflow because this is the only quantity
+886820	891300	this is the only variable where i can act in order to uh to vary the power of the engine
+895060	897380	is this clear any questions so far
+900100	905140	clear it's clear okay great let's go ahead
+908100	912900	so let's have another word on the on the importance of having a stoichiometric creation in an engine
+912900	921780	as i said the um for a gasoline engine the air fuel the stoichiometric air fuel ratio uh is uh is
+921780	925620	around there is something around this number it's something around the 14.7
+927700	934260	what happens in case the um in case when in cases when the air fuel ratio is not this number but is a
+934260	942260	higher or lower in case of rich mixer what happens to the engine is that the uh the engine this is all
+942260	948340	this is always in case when the uh when the mixer is not excessively rich the uh the engine operates
+948980	954500	almost normally so i mean that the user that when you're driving your car you cannot realize that the
+954500	962820	mixer is slightly rich when the when this ratio is around uh let's say 16 16 dot something you won't see
+962820	968100	any difference any you won't have any any strange feeling when driving your car because the uh the engine
+968100	975220	will operate almost normally but what will happen it will happen if this if this value is higher than
+975220	982900	expected it means that there is um sorry if this value is lower than expected in case of rich mixer
+984100	991380	what will happen is that this happens because the uh the fuel flow is higher than what it should be in
+991380	999220	order for a vast geometric mixture so it means that there will be not enough oxygen to burn all this
+999220	1008820	fuel so at exhaust we're gonna find the partial fuel oxidates oxidation products like hc it's uh it's
+1008820	1015220	hydrocarbons for that are hydrocarbons coming from the partial combustion of the gasoline carbon monoxide
+1015220	1024100	that is another partial combustion products uh and uh and soot soot is the um is the uh is the carbon uh
+1024100	1027140	is the carbon particulate that gives smoke at the exhaust
+1029700	1037620	and um all these are pollutants all these are pollutants and if we are uh injecting if we are you
+1037620	1046980	giving to the engine more fuel than uh then uh than necessary what will happen is that the fuel consumption
+1046980	1052420	will be higher than expected because more fuel than necessary is going to be used by the engine
+1053300	1058820	the opposite case is the case of lean mixer that is when the air fuel ratio is higher than 14.7
+1059780	1067380	so it means that allegedly we are either injecting uh less fuel than expected or we are aspiring more
+1067380	1076500	air than expected so ifr is going to be a number uh above 14.7 in terms of operation we are we are
+1076500	1082980	probably going to have irregular operation misfire so it means that the combustion doesn't uh the
+1082980	1089620	combustion doesn't doesn't progress smoothly it doesn't progress the combustion cannot be uh the
+1089620	1090660	combustion is not good
+1090660	1100900	another important thing is that the the flame front uh that is this guy here the the image the uh the
+1102580	1108260	the abstract surface where you can imagine that the combustion occurs this moves with a finite speed
+1108820	1113700	radially from the spark plug towards the other part of the combustion chamber with a finite speed
+1114420	1119140	when the mixture is lean the flame front is going to be slower than expected
+1121060	1126180	you can see the flame front as a as a flame literally you can see it as a flame
+1126900	1133540	so if it moves slower and so it means that the combustion takes more time to occur it means that you
+1133540	1141060	have a live flame uh that uh that stays for longer into the combustion chamber so basically you have this
+1141060	1146580	flame that is eating the metal parts of the uh of the of the engine that are exposed to this flame all
+1146580	1151220	the inner parts of the engine that are exposed to the combustion and this may lead to overheating
+1152180	1156980	overheating may cause engine knock and printing your pre-ignition for those of you that don't know
+1156980	1162660	what uh what knock and pre-ignition are we're going to see it in the following but just keep in mind that
+1162660	1169140	in case of lean mixer uh of course there are engines that are designed in order to uh in order to
+1169140	1174180	operate in lean mixer conditions because that there are some advantages in working these conditions
+1174180	1179620	but it should be engines designed especially for running on a on a lean mixer
+1181460	1187780	but for an engine not designed not designed as such the uh the result will be an increase
+1187780	1193860	an increase in the mechanical and thermal stresses although as i said in some cases for engine especially
+1193860	1200420	designed to operate in a to operate with the lean mixer there could be an um an increase in the
+1200420	1207460	efficiency but keep in mind that the uh physical damage to the engine can be done it could be
+1207460	1214180	counter-intuitive because it's it would expect that if i use more if i use more uh if i use more fuel
+1214180	1220900	there will be much much more heat and so the the engine could could get overheated but no overheating
+1220900	1228020	occurs when actually i'm using less fuel than expected so in case only mixture that is a far
+1228020	1231940	more dangerous condition for the edge in respect to the rich mixture conditions
+1234420	1243460	okay so let's have a word about combustion that occurs in the um in a spark ignition engine as i said
+1243460	1256180	the the the flame front moves with a finite speed that is high but not really high compared to the um to the uh to the uh to the speed of the to the engine speed
+1257220	1266980	because the engine speed is could be any number between 1000 and uh let's say normally for a for a for a car
+1266980	1275540	from could be any number between 1000 and 6000 rpm 6000 rpm if you think about it it's a lot because it means
+1275540	1282260	that you have the uh that you have the piston going up and down a hundred times a second that is not that is
+1282260	1292900	not trivial so it's a it's quite high it's quite a high speed so it becomes relevant how much time the combustion
+1292900	1302180	combustion takes to uh takes to occur so as i said the combustion uh the uh the flame front uh takes uh
+1302180	1309940	moves with a finite speed so and uh in order to have an increase in pressure so that the uh the piston
+1309940	1317220	can be pushed downwards and produce a mechanical torque at the ground shaft uh it means that imagine a
+1317220	1321780	a very uh a very slow picture that you can uh that you can see the combustion chamber and you can see
+1321780	1327940	with the the flame front progressing the pressure will increase some will increase as the flame front
+1327940	1334020	progresses progresses from the from the spark plug towards the outer part of the combustion chamber
+1334660	1342340	so it means that in order to have a pressure high enough to produce uh uh to produce a a force at the
+1342340	1352020	piston level i shall have the um i shall have the the the flame front to be uh to be quite fast i mean in
+1352020	1358500	order to have an appreciation a substantial pressure increase i need to have the combustion to be uh to
+1358500	1368260	be almost total at this level do you agree but as i said the combustion takes some time to uh take some
+1368260	1376260	time to occur and since the piston is moving is moving quite fast it means that i have to trigger
+1376260	1382900	the spark plug i have to trigger the i have to trigger the spark a little bit in advance respect to the
+1382900	1391860	time when the piston gets to the top at that to the top that center so i need some spark advance so spark
+1391860	1399860	advance is a time that is a actually a spark advance is a is an angle is the angle respect to the top dead
+1399860	1407940	center that i trigger the spark that i uh that i trigger the combustion by uh by lighting the the spark plug
+1410420	1416340	is the is the angle before the before the top dead center that i have to use in order to have an
+1416340	1424100	unappreciatable pressure level when the piston gets to the top dead center that is the the moment where
+1424100	1430420	the pressure has to be high enough in order to push the piston downwards is this clear
+1433540	1440340	yes okay let's say the let's say the let's see the the opposite case for you if it's not completely
+1440340	1446900	clear to to some of you what will happen if i if i trigger the combustion when the piston is already
+1446900	1452180	at the top dead center what will happen is that the i trigger the combustion i have the piston at the
+1452180	1461460	top dead center the combustion starts but the pressure will i will have a a good extent of a sufficient
+1461460	1467860	amount of the mixer that is burnt when the piston has already gone down gone downwards so the pressure
+1467860	1474660	increase would wouldn't be that uh wouldn't be i won't have the peak pressure in a good position for
+1474660	1480820	the piston in order to in order to to together to to harvest the maximum energy at the crankshaft level
+1484580	1490660	so i need some spark advance i need to trigger the combustion some degrees before the top dead center
+1490660	1500980	typically the spark advances are somewhere between uh are somewhere between 15 or even 10 up to 40 in
+1500980	1510100	some cases for uh for since since since engines uh since um um uh later engines have the ability to
+1510100	1518900	regulate to uh to to vary the the spark advance during engine operation basically the uh the the spark advance
+1518900	1525940	could be uh is normally the most most common value is between 15 and 25 but uh modern engines are able
+1525940	1532020	to regulate the spark advance anywhere between uh between uh 10 15 degrees and even 40 degrees in some
+1532020	1541540	cases for very low load okay but keep in mind that what happens if the spark advance is too high
+1542260	1547540	here in this graph in this chart here you see the you see the the pressure as a function of the
+1547540	1557860	as a function of the uh of the crank angle here 360 is the top dead center so here for this case here
+1557860	1564580	15 degrees it happens what i uh what i uh what i mentioned that last that is i um i triggered the
+1564580	1570660	combustion too late so just a few degrees before the top dead center so what happens is that the pressure
+1570660	1576500	peak is very low on the other hand what happens when i trigger the combustion a lot before the a lot
+1576500	1584020	before the the top dead center i have a very high pressure i have a very high peak pressure
+1585460	1591140	uh so ideally i can gather the maximum energy from the grankshaft but in this case what happens is that
+1591140	1597300	before the top dead center the pressure is already very high so i could have an increase of the mechanical
+1597300	1605700	stresses because the piston has to push has to push towards a high pressure level so that's why the uh that's
+1605700	1613700	why the spark advance should be high but not not too high because if it's too high what happens is that
+1613700	1620340	uh is that again have an increase of of the mechanical of the thermal and mechanical stresses in the engines
+1620340	1627060	because what happens to i guess when i compress it it's temperature increases so that's why there's
+1627060	1633620	there's also an increase of the uh of the thermal stresses uh along with uh with an increase of the
+1633620	1642500	mechanical stresses that's because of this another thing that could happen is uh once again engine knock
+1642500	1653060	and uh engine knock as we will see in the in the following and uh unless i use higher octane
+1653060	1663860	uh number fuels octane number is a quality index for uh for for fuels that indicates the uh the maximum
+1663860	1673700	extent that i can uh to to which i can compress a stereometric mixture of air and a given fuel uh before
+1673700	1683620	it um before it uh it uh burns until the combustion starts on its own without triggering to it with the spark plug
+1684660	1690500	so it's the it's the maximum extent to which i can compress the uh an air fuel stoichiometric mixture
+1690500	1695860	before it uh uh setting yourself uh self burns self-ignite self ignites
+1695860	1706260	the higher it is the better it is it's typically somewhere between 95 and 100 for gasoline uh while
+1706260	1712020	while it can reach uh it can reach 120 for some fuels like methane questions
+1717220	1717460	no
+1717460	1729860	okay so uh let's go ahead in this slide something i wanted to mention is also the influence of the
+1729860	1735780	compression ratio of the um oh something i uh something i didn't mention that is the most important
+1735780	1741460	thing is that higher spark advance increases the peak pressure and does it increases the power and the
+1741460	1746020	the power in deficiency why does it increase the power it increases the power because i have an
+1746020	1754340	higher peak pressure so imagine this case 30 degrees with respect to 15 degrees uh in this case i'm
+1754340	1760020	going to have with the same amount of fuel with the same fuel usage i'm going to have an higher
+1760020	1765140	pressure so i'm going to have an higher power uh respect to this case when the spark advance is too low
+1765780	1771380	so with a uh with an higher spark advance ideally i will have an higher efficiency higher power and thus
+1771380	1778260	higher efficiency with the same amount of fuel use but i cannot increase the spark advance too much
+1778260	1783140	because otherwise it will happen what i mentioned before that is increase of mechanical and thermal stresses
+1783140	1786900	because the piston is moving towards uh towards a high pressure level
+1789620	1797860	okay so something about the compression ratio because it's uh it's uh it's something that goes um that goes
+1797860	1803540	with the uh with the spark advance the spark advance um it's uh it's uh it's a parameter it's something
+1803540	1809220	that i can act on during engine operation while the compression ratio it's something designed that
+1809220	1815540	it's something that is designed i mean there is actually a couple of engines with variable compression
+1815540	1821300	ratio on the market but it's not what i'm trying to talk about here let's think about the uh the the
+1821300	1827380	simple the the basic configuration of an internal combustion engine so the compression ratio it's a
+1827380	1835860	design parameter it's something i cannot change during engine operation so higher compression ratios
+1835860	1842740	lead to higher efficiency you can see the chart here of the influence of uh for an ideal for ideal
+1842740	1848500	engines the influence of the compression ratio on the efficiency the higher the compression ratio the
+1848500	1855700	higher the efficiency for the reasons for the same reasons that i mentioned when i talked about the
+1855700	1861380	the spark advance an higher compression ratio increases the mechanical and thermal stresses because i
+1861380	1869700	need to compress more my fuel mixture and could lead to engine knock and self ignition because if i compress
+1869700	1876820	too much the fuel mixture it will self-ignite unless i use a higher octane number fuels
+1879460	1886020	so an important note is that if i want to have an engine with a with an higher compression ratio
+1886020	1893860	i have to act on the spark advance i may have to reduce the spark advance in order to uh in order
+1893860	1899060	to avoid the phenomenon the the phenomena that i just mentioned that is engine knock and self ignition
+1900740	1908260	turbocharged engines since the uh probably some of you may not know what turbocharged engines
+1908260	1915060	are uh basically it's engines that where the fuel mixture is compressed by an external compressor
+1916020	1921540	in the following we'll see how these engines since the the mixture is already compressed by this
+1921540	1930260	compressor in beforehand uh may have to use lower compression ratios thus reducing the basic thermal
+1930260	1937220	efficiency of the engine but this is uh just keep in mind that normally higher compression ratios lead
+1937220	1943220	to higher efficiency but the compression ratio cannot be too high in order to avoid uh engine
+1943220	1948500	knock and self ignition and keep in mind that it is a design parameter so you cannot change it
+1948500	1956180	during engine operation so we mentioned a few times before misfire knock and pre-ignition
+1956180	1964900	now let's see what these three things are all these three are combustion defects misfire when does misfire
+1965860	1972340	when does misfire happen misfire happens when the fuel is too much diluted into the intake air
+1973380	1980660	so it means that the that the mixer is too lean the air fuel ratio is too high in this case i don't have
+1980660	1990020	enough fuel so the combustion cannot occur what happens is that uh what happens is that i have my unburned fuel
+1990020	1997460	and uh and there that is uh that it is charged at the exhaust of the engine and this is pollutants
+1998020	2004340	and of course the driver is not happy because he's feeling a jerk in the in the engine acceleration
+2004340	2013220	and uh um and uh i'm throwing away money and uh it's of course pollutants that i am discharging at
+2013220	2021140	the exhaust of the engines out of the engine the opposite case is choke the case of choke is when
+2021140	2028340	the fuel is too little diluted into the intake air so it means that there is too much fuel respect to the
+2028340	2033940	air that i'm sucking into the combustion chains also in this case the combustion cannot occur
+2034740	2041780	the consequence is that i'm discharging unborn the fuel at the exhaust that is again pollutants
+2041780	2047700	and the driver is not happy because the uh since the combustion has not occurred for that cycle i will
+2047700	2057380	feel a jerk in the engine in the engine in the engine torque now let's talk about knock and pre-ignition
+2057380	2064340	that is the two phenomena that has that have to be avoided that have to be avoided in order to uh
+2064340	2072020	to break the engine what is knock knock is when the combustion is triggered by some other hot
+2072020	2078660	hot spot that is normally the edge of the exhaust valve in the combustion chamber after the start of
+2078660	2086100	the combustion triggered by the spark plug so you can see the animation here that what happens i have
+2086100	2093220	the the combustion triggered by the spark plug the combustion progresses um in some other place inside
+2093220	2098500	the combustion chamber i have another hot spot that triggers the creation of another flame front
+2099540	2105060	what happens is that i have two flame fronts that collide when the two flame fronts collide
+2105060	2111860	i have the release of a shock wave the shock wave progress inside the combustion chamber and basically
+2111860	2121220	is like i'm giving a i'm hitting with the hammer the the engine end so this is a very a very impulsive
+2121220	2127300	a very strong impulsive mechanical shock that i'm giving to the engine so it's something that in the long
+2127300	2134100	run may create the potential may create damage to the engine so knock happens when there is another
+2134100	2140100	hot spot that can trigger the combustions the combustion after the uh after the spark plug
+2141220	2148180	pre-ignition is very similar to knock but it's uh it's a lot worse respect to to knock because while
+2148180	2154900	less knock is acceptable in some way to have a few cycles where i have a little bit of knock of engine
+2154900	2161300	knocking that has to be of course mitigated that has to be mitigated it has to be controlled in order
+2161300	2168820	not to have mechanical damage pre-gnition is uh is worse it could cause a lot of damage to the engine
+2170020	2175940	so this happens uh pre-gnition occurs when the combustion is triggered by also still by some other
+2175940	2181700	hot spot in the combustion chamber but the combustion is triggered before the start of the combustion by the
+2181700	2189460	the spark plug so it means that the combustion is triggered by this hot spot a lot before the uh
+2189460	2197940	the piston reaches the top dead center so basically um it's like i have a you it's like i'm having an
+2197940	2204420	angie it's like i'm trying to use a huge spark advance i'm trying to use to use a huge spark advance
+2204420	2212820	and i have uh i have two combustions at the same time once again the collision of the two flame fronts
+2212820	2221940	a lot before the top dead center may cause uh causes a a dramatic increase in the mechanical and thermal
+2221940	2229700	stresses but pre-ignition is normally while knock may occur during the normal engine operation especially
+2229700	2238100	if i'm uh with uh with the with engine that uh that that are designed to operate with a lean with a lean
+2238100	2245780	mixer pre-ignition is something that could that should be avoided in uh that should be avoided always
+2247060	2252340	because uh the lot of damage that it can cause it's uh it's very high the amount of damage it can cause
+2254020	2258900	the pre-ignition is always a symptom it's always something that happens in when the uh when something
+2258900	2263780	is not working properly in the engine it could be caused by overheating so it means that the the
+2263780	2269540	cooling circuit of my engine is not working as it should the compression ratio is too high so it means
+2269540	2276820	that i've totally that i've totally messed up the design of my engine uh or uh yeah well basically
+2276820	2281460	that's it break mission normally occurs when there's a when there's something that is not working as
+2281460	2283540	expected in the engine normally overeating
+2283540	2294260	okay now let's see how we um how we we control the we control the fuel flow in uh how we control the
+2294260	2298820	fuel flow and that's the power in an engine as i said the power the torque and that's the power in
+2298820	2303700	internal combustion engine in a spark ignition engine is controlled by modulating the fuel flow
+2303700	2311300	so uh that's uh that's uh that's a schematic where you can see all the uh where you can see all the
+2311300	2319140	sensor where all the sensors involved in the uh in the process and let's follow this uh uh this uh
+2319140	2325380	this uh this this list in order to understand what happens as i said the air fuel mixer should be
+2325380	2335860	stoichiometric uh when the in order to have a fuel mixture an air fuel mixer that is stoichiometric uh
+2335860	2344820	as i said i have to regulate the um the airflow the airflow is modulated by this guy here that is the uh
+2344820	2351380	the throttle valve it's basically a valve that is uh that is able to choke the intake manifold in order
+2351380	2357380	to modulate the airflow how does it modulate the airflow if i choke it it's like when i have a so
+2357380	2363780	when i'm drinking my coke with a with a straw and i um and i close the straw with my fingers
+2364420	2370980	so basically what changes here since the volumetric flow for the uh the volume flow of the of the
+2370980	2377940	gases that i'm sucking inside the combustion chamber is fixed because it's fixed by the piston motion what
+2377940	2385860	changes is the air density inside the straight here between the um between the throttle valve and the
+2385860	2392180	uh and the combustion chamber what changes is the density when the valve is closed when this valve
+2392180	2399460	is closed the density is low when this valve is fully open the the density is higher so i have the uh
+2399460	2406660	the the density of the the air um the air density at atmospheric conditions when this valve is fully open
+2407940	2419060	so keep in mind that the throttle opening angle is related to the accelerator pedal pressure i mean
+2419620	2424900	when i say that they're related i mean that they are not mechanically connected but they are strictly
+2424900	2430900	related so keep in mind that the uh the more i push the accelerator pedal the more the throttle valve
+2430900	2437780	opens of course there is an actuator here with actuated with some logic by the engine control unit
+2437780	2442900	but uh but i mean they are very closely very closely related
+2445620	2450820	so once i've understood how i modulate the airflow inside the engine
+2452260	2461060	uh in order to uh in order to have a stoichiometric uh stoichiometric mixture i have to understand how much
+2461060	2470340	fuel to inject with this guy here that is the fuel injector located right before the intake port where
+2470340	2472260	the valve closes the intake manifold
+2474580	2476660	so i need to know how much fuel to inject
+2478500	2486900	the intake so if i since i want to have stoichiometric ratio i have to know exactly how much fuel i have to know
+2486900	2491300	um i have to know how much air i'm sucking inside the combustion chamber
+2492100	2500900	so in order to uh to know the uh the mess of air that i'm uh that i've uh uh that i've sucked inside the combustion
+2500900	2512420	chamber i need to uh to evaluate i need this all these sensors here basically this is not always present but
+2512420	2519860	these two the e80 and the map are always present what are these three guys maf is the mass air flow sensor
+2520900	2528820	this is not always present but it's a present of many times that is a sensor that is able to
+2528820	2536340	directly measure the uh the master flow the massive flow rate while these two guys here are the intake
+2536340	2542820	air temperature sensor and the uh manifold absolute pressure sensor so they are able to measure the
+2542820	2548900	pressure and temperature of the air inside the intake manifold why do i need to know the uh the
+2548900	2555300	pressure and the temperature inside the intake manifold because like that i can evaluate the i can
+2555300	2562180	calculate the air density once i know the air density the volume the volumetric airflow is established
+2562180	2566820	because it's grossly uh it's grossly fixed because it's established by the piston motion
+2567700	2573060	i can calculate the mess i can i can i can produce an estimate of the of the airflow
+2576420	2577140	so uh
+2581940	2588900	as i said uh once i know the mess uh the mess uh the the the mess of air that i've sucked inside the
+2588900	2596020	combustion chamber i know the how much fuel i need to inject inside the inside my combustion chamber as
+2596020	2606740	well in order to have the stoichiometric ratio i may need some feedback action some feedback in order to
+2606740	2612260	have a very precise regulation of the of the air of the air fuel ratio inside the engine
+2612260	2619620	this feedback this feedback action comes from the lambda sensor that is located at the exhaust
+2620420	2626820	because there are transients there during especially during transient conditions uh transient conditions
+2627380	2635060	uh errors in the measurements of temperature pressure and so on or at um at very high energy speeds
+2635060	2643620	uh or uh for uh uh phenomena dynamic phenomenon the dynamic phenomena in the uh in the intake and exhaust
+2643620	2651540	manifold uh there are many factors that can affect the goodness that may produce a little error on my
+2651540	2659220	estimate of the uh of the um of the m dot intake of the messware that i've uh that i've sucked inside the combustion
+2659220	2667620	chamber so in order to have a very good regulation of the uh of the of the fuel ratio i need some feedback action
+2667620	2672980	that comes from the lambda sensor the lambda sensor is able just keep in mind that it is able to measure
+2675780	2683460	the the concentration of the oxygen at the exhaust ideally as we said if we have stoichiometric combustion
+2683460	2696180	we are not going to have oxygen at the exhaust but some of you may say i have an oxygen at exhaust even in uh
+2696180	2698660	in a rich mixer conditions right
+2703220	2704340	so how does it work
+2704340	2716340	it works that i have a baseline estimate of the uh of the master flow coming right by the sensors here
+2716340	2721380	the signals coming from the sensors here are used by the engine control unit in order to compute
+2721380	2727860	a first estimate of the of the of the air mess flow and eject some fuel based on that estimate
+2727860	2739220	at the exhaust uh the lambda sensors says that there is no oxygen at the exhaust the engine control module
+2739220	2745380	uh takes this information from the lambda sensors and decide and establishes to inject for the next
+2745380	2754100	cycle a little bit less of a little bit less of fuel so once again injector injects a little bit less
+2754100	2760580	of fuel that respect to the previous cycle the combustion occurs this time the lambda sensors
+2760580	2768260	detects that there is some oxygen at the exhaust so the signal from the lambda sensor goes goes to
+2768260	2773540	the engine control module the engine control module still using the information coming from the sensors
+2773540	2780660	and the feedback from the lambda sensors decides to inject a little bit less a little bit more fuel
+2780660	2786500	respect to the previous cycle so basically the regulation of the of the of the air fuel mixture
+2786500	2791700	is something that uh you can see since the the regulation is very fast the uh the dynamic of this
+2791700	2797140	sensor is very very is very very fast if you could look at the lambda uh at the value of the of
+2797140	2804100	the lambda coming from the lambda sensor you will see it chatter between zero and one because basically
+2804100	2812100	the uh the the the air fuel ratio is always chattering around 14.7 but since the regulation is very very fast
+2812100	2819300	it's uh and the end is very very fine uh this is not important because on average we will always be
+2819300	2822660	somewhere around 14.7 in terms of air fuel ratio
+2826020	2828660	everything clear questions
+2828660	2846580	it was clear okay great let's go ahead now let's talk a little bit about the difference between uh
+2847540	2853220	just an introduction because uh in the following in the following we are going to talk about diesel engines
+2853220	2862100	in a diesel engine respect to uh here in this animation you have a diesel engine on the left
+2862660	2868660	and the gasoline engine on the right the first difference between the diesel and the gasoline engine
+2868660	2874820	is that the intake is free there is no throttle body so the airflow depends on depends roughly
+2875380	2881460	in a naturally aspirated engine i mean when there is nothing that compresses the intake air it depends
+2881460	2894500	roughly only on the engine speed uh okay the first consequence of having a uh of not having a throttle valve
+2895540	2902420	is that the diesel engine always operates with excess air so it means that in a diesel engine the the
+2902420	2909140	mixer is always lean respect to a gasoline engine where we always want we want a stoichiometric crash all the time
+2911700	2919940	another difference is the uh is how the combustion takes place the combustion in a diesel engine
+2921060	2928340	occurs in most since the compassion is not triggered by a spark plug like a like in a spark ignition engine
+2930020	2940180	in a diesel engine the uh the the combustion occurs by compression i mean the piston compresses the air fuel
+2940180	2945700	mixture so much so much that at some points itself ignites and the combustion occurs
+2947940	2953060	and since the combustion up uh occurs in a totally different way in a diesel engine respect to a
+2953060	2961300	gasoline engine the combustion lasts for longer less you know in a gasoline engine you can uh uh yes i know
+2961300	2967380	i mentioned that the that the combustion uh depends on the uh that the combustion takes a finite time
+2967380	2975220	because of the finite speed of the uh the flame front but ideally you can see that in a in a gasoline
+2975220	2981780	engine the combustion is uh the combustion is very very quick compared to diesel engine in a diesel engine
+2981780	2987300	the combustion takes a good part of the expansion stroke in order to be completed
+2987300	2994900	this is another difference another difference is that in a diesel engine there is no spark plug because
+2994900	3000420	the combustion starts spontaneously for the high pressures and temperatures reached in the engine so
+3000420	3007460	it means that the piston presses compresses the uh the gases the combustible gases the air fuel mixture a lot
+3007460	3014900	more respect to a spark ignition engine the typical endocomba the the typical uh the typical maximum
+3014900	3022900	pressure of a diesel engine are above 100 bars compared to the 50 60 70 bars that can be attained in a
+3023940	3030580	in a spark ignition engine in order to attain the desired pressures the compression pressures are higher
+3030580	3037780	in a diesel engine respect to spark ignition one for a spark ignition uh a benchmark number that you
+3037780	3043940	could keep in mind for the compression ratio is somewhere around 10 9 while for the diesel engine
+3043940	3052100	the compression ratio is normally between 15 and 20. another difference between these two engines is
+3052100	3057860	two is the uh is the fuel that we are using in a since in a diesel engine we are using diesel fuel
+3058420	3068340	that uh unlike gasoline is not volatile it's not volatile at all so uh while in a in a gasoline engine we
+3068340	3076420	could just uh inject uh we could just use a very cheap injector in the intake manifold that that when we
+3076420	3082500	injected the fuel it was immediately dissolved inside the inside the the airstream in a diesel engine we
+3082500	3091940	couldn't do that because the fuel is not volatile uh so we need an injector normally
+3092740	3099380	directly mounted inside the combustion chamber so the injection occurs immediately it occurs directly
+3099380	3104980	in the combustion chamber and not in the intake port like it normally occurs with spark ignition engines
+3104980	3113300	engines although there are uh direct injection engines uh that use gasoline as well uh in a diesel engine
+3113300	3119940	uh the uh the diesel fuel as i said is not volatile so it needs to be injected at very high pressures
+3119940	3128180	in order to be atomized while in a uh in a gasoline engine since the the fuel was very volatile we just
+3128180	3139060	injected it and it was immediately dissolved in the intake s3 okay so let's go ahead
+3142020	3149540	the main characteristics of a diesel engine in a diesel engine since the uh the fuel is injected with
+3149540	3157700	a spray of um not very volatile fuel i have this mist of droplets that is dissolved in the
+3157700	3165140	dissolved inside the uh inside the combustion chamber inside the intake air but since it's not volatile
+3165140	3173620	as i said we have a mist so we have all these tiny droplets of fuel dispersed inside the combustion
+3173620	3184020	chamber so the air fuel mixture is disomogeneous by its nature since i have liquid droplets inside uh inside
+3184020	3188100	the air inside the air um inside the the intake air
+3191300	3200020	so i may have areas no not i may have i have areas where the where the afr is zero like in the fuel
+3200020	3207060	droplets because i have no air i have just fuel so the air fuel so the uh see so the air fuel ratio is
+3207060	3215380	locally zero and the areas where i have just there and the and so the fr is infinity although the global
+3215380	3220820	the overall air flow air flow ratio is a lot higher than the stoichiometric value
+3223780	3232660	another important thing is when does combat when does the injection occurs the injection occurs when the
+3232660	3239860	pressure and temperature are already high enough in order to uh to uh for the combustion to take place
+3241940	3250660	but it takes some time uh to for the combustion to start so it means what do i mean i mean that i
+3250660	3256420	have the piston that compresses the uh that compresses the the air just the air because the fuel is injected at
+3256420	3264020	at some point by the injector the air is so compressed that the pressure and temperature
+3264020	3272340	conditions are are already good for make the combustion start but after that i've injected the fuel
+3272340	3279860	i have to wait some time before the combustion starts and this is physiological it is this is due to
+3279860	3286340	how the combustion occurs and it depends on the fuel and it depends on temperature a lot on the temperature
+3286820	3292900	at the time of injection a lot this time this finite time that i have to wait before the combustion
+3292900	3299140	starts is called the ignition delay we'll see later in detail its influence
+3302820	3310260	if you think about it this time as i said depends on the fuel ideally i would want this time to be the
+3310260	3317060	shortest possible because if this time would be something like two seconds i could have an engine
+3317060	3324660	moving at an extremely slow speed because i have to wait a very long ignition delay when the combustion
+3324660	3331140	starts because if i had the faster engine i think if the uh think about when the uh what would happen if
+3331140	3339540	the ignition delay was too high if it was a if at limit um i think uh an extremization would be think
+3339540	3344580	that ignition delay would be higher would be longer than the whole duration of a cycle
+3346340	3353140	so ideally i would want the ignition delay to be the shortest possible one of the metrics one of the
+3353140	3359700	indexes that made that measure the quality of diesel fuels is the city number city number that is uh
+3359700	3367220	for commercial diesel fuels between 50 and 60. uh one of the things that the city number measures is
+3367220	3374580	the ignition delay so uh the highest the uh the higher the the city number the the low the um the
+3374580	3384500	shortest will be the uh the ignition delay so city number high good low bed low city in a high city number
+3384500	3392980	means a short ignition delay and that's it another difference is in the how the combustion uh how the
+3392980	3400100	what the combustion mechanism is while the uh the the combustion in the spark ignition engine
+3400100	3410180	uh is was pre-mixed it's normally denoted as pre-mixed technically meaning that the uh that the the air fuel
+3410180	3419700	mixture is obvious there is uh when it gets inside the combustion chamber is already suitable to have
+3419700	3427700	combustion in a uh and i have a three and i need to trigger uh and i just have to trigger the combustion
+3427700	3433780	with a spark plug the combustion in a diesel engine is diffusive we'll see later what it means
+3436980	3444500	okay another thing is that we already mentioned that the intake is free there is no throttle body
+3444500	3453060	inside the intake manifold of a of a diesel engine so it means that i'm not that i cannot use the airflow
+3453060	3459700	i i'm not going to use the airflow to modulate the torque and then the power like i did in a spark
+3459700	3464740	ignition engine by modulating the airflow i won't i won't use it to control the to control the power
+3465300	3471300	but you but you can imagine that the quantity of of of air that i'm that i'm sucking inside the
+3471300	3480100	combustion chamber is always the same so another huge difference with a spark ignition engine is that in
+3480100	3485540	diesel engines i can control the torque and then the power by directly controlling the amount of fuel
+3485540	3494660	that i inject so more fuel uh more fuel i inject more torque i produce more power i produce so no need
+3494660	3503220	to control the the the intake airflow another important thing is the efficiency of a diesel engine
+3503220	3508740	as probably many of you many of you will will already know diesel engines have normally a higher
+3508740	3514980	efficiency respect to respect to uh respect to the spark ignition respect to gasoline engines this
+3514980	3521300	is due to two factors the absence of the absence of the throttle is uh uh is uh uh
+3524980	3532020	it implies a loss it's inherently a loss already because uh basically i'm using something that
+3532020	3539060	chokes the flow so it's a it's a it's a pressure loss so it's something that implies it's something
+3539060	3547620	that inherently uh causes a loss and i need that loss in order to control the power in a spark ignition
+3547620	3556020	engine while i don't need it in a diesel engine this factor uh along with the with the air compression
+3556020	3562020	ratios allow higher efficiencies in a diesel engine compared to spark ignition engine
+3564580	3570980	so let's spend the word on the combustion on a diesel engine i try to be uh to be the the simplest
+3570980	3576980	as possible in this uh in explaining this thing because otherwise it can be uh because it's a it's a
+3576980	3582500	lot more complicated in reality but i'll try to to to keep up to keep the focus just on important things
+3582500	3591540	as i said we have this uh this spray of fuel that is injected inside the combustion chamber
+3592340	3598180	now let's make a zoom in this part here inside this mist of air and fuel droplets
+3600100	3606260	as i said we have the other part where the uh lambda is uh uh lambda is just uh uh
+3606260	3613060	uh it's mentioned in the figure so uh you need the definition of lambda lambda is the ratio between
+3613060	3622820	the current f fuel ratio and the stoichiometric fuel ratio so lambda is ideally one when the combustion
+3622820	3627940	is stoichiometric and it's higher than one when the combustion is uh when the combustion is uh when the
+3627940	3640180	the combustion is lean, and is lower than one when the air-free mixture is rich.
+3641220	3649540	So in the fuel droplet, lambda is zero, and the other part in the air that is not in the
+3649540	3652740	rest of the air inside the combustion chamber is infinity.
+3652740	3659620	So let's make a zoom around the fuel droplet.
+3660900	3667620	We have the liquid kernel of the drop that is where we have lambda equals zero.
+3668500	3672900	Keep in mind that the temperatures and pressures inside the combustion chambers are very high.
+3673460	3678900	So since the temperature is very high, I mentioned that this fuel is not volatile, but at that
+3678900	3685540	temperature, several hundred degrees, that the diesel fuel is volatile, so it evaporates a little bit.
+3686180	3689700	So around the liquid droplet, we have the fuel vapors.
+3690340	3692900	We have lambda that is between zero and one.
+3694580	3701700	And the concentration of the fuel gets lower and lower as we get far radially from the fuel drop.
+3701700	3712500	So we have zero, 0.1, 0.2, 0.3, etc., until I get to an area where lambda equals 1.
+3716500	3724900	So it means that in this area here, the mixture conditions are stoichiometric.
+3724900	3728900	In this area, we have the reaction zone.
+3730020	3736900	The reaction zone, you can see it as a flame front that doesn't move and we have it repeated
+3738500	3744340	an infinite number of times because I have a reaction zone around each droplet inside this mist.
+3744340	3756180	What happens in the reaction zone zone? I said that it is like the flame front that we had in a spark ignition engine.
+3757140	3763060	In this reaction zone, that is the area where the actual combustion occurs, we have the combustion
+3763060	3773860	that is fed from one side, from the inner part of this sphere here, by the fuel vapors coming from
+3773860	3783940	the evaporation of the fuel drop. And the fuel is fed from this part here, ideally, coming from the fuel vapors.
+3784900	3795380	While the air necessary to have the combustion comes from the outer part, where we have air and no fuel.
+3795380	3801060	So basically, we have air coming from the outside and fuel coming from the inside,
+3801940	3805460	and the burnt gases that are scavenged that go away in the combustion chamber.
+3807620	3813860	What happens? As the combustion progresses, we have the temperatures that get higher and higher
+3813860	3820180	inside the combustion chamber, and the fuel drop that keeps on evaporating. So it gets smaller and smaller.
+3822820	3828420	On the other hand, we have the burnt gases that are produced, and so the oxygen concentration
+3828420	3838420	around this droplet goes down. It decreases the oxygen concentration. At some point, if the oxygen
+3838420	3846660	concentration outside the reaction zone gets too low, the combustion may stop. This may happen in case,
+3846660	3853540	for example, if I have imagined that the air around the droplet is not moving. So I have a lot of burnt
+3853540	3860020	gases that are being scavenged, and at some point, I only have a lot of burnt gases around the drop,
+3860020	3865140	they are only the fuel drop. So it means that I have
+3869460	3876900	imagine that this happens when I have poor jet mixing or low turbulence inside the combustion chamber,
+3876900	3883620	because if I had high turbulence or very good jet mixing, I would have the air recirculating around
+3883620	3891380	the droplet, and so I wouldn't get in the conditions where the burnt gases basically surround the fuel
+3891380	3903380	drop and the combustion, the oxygen concentration gets too low. So imagine that I have so many burnt gases that
+3903380	3909620	the oxygen concentration goes below the acceptable conditions to have combustion,
+3911220	3921060	so that the combustion stops before the combustion of the drop is completed. So I will have a small
+3921060	3928980	kernel of liquid fuel surrounded by burnt gases at a very high temperature, in an environment at a very high
+3928980	3938020	temperature and pressure. What will happen will be the so-called carbonization reaction. That is something
+3938020	3947860	that happens to hydrocarbons when they undergo very high temperature conditions in lack of oxygen.
+3947860	3959780	It's called the carbonization reaction. Literally, what kind of molecules are fuels normally? It's
+3959780	3967860	molecules that are made of carbon, hydrogen, and oxygen, ideally, or even carbon and hydrogen only,
+3967860	3975940	like gasoline and diesel fuel. What happens in the carbonization reaction, to make it short,
+3975940	3985380	is that I have these compounds made of carbon and hydrogen that cannot be burned because there's
+3985380	3994580	not enough oxygen in order to complete their oxidization. So what happens is that since the
+3994580	4000740	temperature is very high, the chemical bonds between the carbon and hydrogen are broken because of the
+4000740	4007540	high temperature, the hydrogen just goes away because it's a gas, and the solid kernel of carbon remains,
+4008660	4021380	that is a grain of soot. So what happens, that grain of soot multiplied by some million becomes a cloud of
+4021380	4032420	smoke at the exhaust of your diesel engine. So this is a very simple, a very simple explanation of how
+4032420	4034500	soot is produced inside the diesel engine.
+4037300	4045220	So it comes, it comes spontaneous to imagine that in order to have less fuel production,
+4045220	4053460	I need, I may want this fuel drop to be the smallest possible, because if it's smaller,
+4053460	4060980	I can burn it completely, because the oxygen concentration gets too low and stop the combustion.
+4061620	4066500	So the smaller the fuel droplets are, the easier it gets to vaporize them completely,
+4066500	4072180	and so have a low soot formation at the exhaust. Questions?
+4077540	4079620	No, it's all clear. Okay.
+4081780	4092900	Okay, great. So let's go ahead so that we can have a 10 minutes stop in a, in a, in a short while. So
+4092900	4101140	um, what I wanted to mention here is that, is the ignition delay that I mentioned before. That is the
+4101140	4107060	time that I have to wait, although I have the good conditions of temperature and pressure inside the
+4107060	4111460	combustion chamber, it's the time that I have to wait after that I've injected the fuel in order to,
+4112020	4118100	to have the combustion to start. As I mentioned, the ignition delay is extremely sensitive with
+4118100	4127220	temperature. As you can see in this chart here, just 200, uh, just 200 degrees, 200 degrees in, uh,
+4127220	4136020	in, uh, of change in temperature may lay, may, may, may lead to, uh, the comedy, the ignition delay to become
+4137140	4142020	a hundred times higher, because this is a logarithmic scale. It's not a linear scale.
+4142020	4152980	So this case here, 1100 degrees, the ignition delay is 100 microseconds. This case here, 900 K of
+4152980	4162500	temperature, the ignition delay is 10,000 microseconds. So it gets, uh, a hundred times higher with a change
+4162500	4176660	of only 20, uh, 200 degrees. So it's very, very, very sensitive on temperature. Uh, so, especially in
+4176660	4182100	case of cold start, in diesel engine, I'm going to find the glow plugs that are used in cold start.
+4183140	4189060	Glow plugs are basically resistances. They are installed in the, in the, uh, they are installed with
+4189060	4196340	the tip in the, in the combustion chamber. So that, uh, uh, when I have to start the engine in, uh, in,
+4196340	4202660	uh, in, um, in very cold conditions, the, this tip gets very, very hot for a, just for a one,
+4202660	4208900	for just for a couple of seconds after I turn the key before, uh, before triggering the, before
+4208900	4216260	starting the, the starter motor. And it creates a hot spot that comes very useful because locally,
+4216260	4221220	around the tip of the glow plug, since the temperature will get, uh, will get high immediately,
+4221780	4228580	the, uh, the ignition delay around the, uh, the, the tip of the glow plug, uh, the ignition delay
+4228580	4233940	will be reduced because the temperature will be higher. So that's why I need glow plugs in a diesel
+4233940	4242100	engine in, uh, when I have to cold start the engine. Another thing that is worth mentioning is
+4242100	4249220	the influence of, uh, uh, whereas in the spark ignition engines, uh, I needed the spark advance
+4249220	4255860	because the combustion took a little bit of time to get to, uh, to, uh, to raise the pressure, uh,
+4255860	4262580	to a good level in order to have, uh, to have torque at the crankshaft. And I, luckily in a, in a diesel
+4262580	4269300	engine, I won't have a spark advance because I don't have a spark plug, but I will have injection advance.
+4269300	4276980	So I need the, since I have to wait for the, for the ignition delay this time, because I don't have
+4276980	4282340	a flame front, like I had in a spark ignition engine, but I have to wait still for the, uh,
+4282340	4289620	for the ignition delay. I'm going to need an injection advance. All the considerations we made
+4289620	4298020	for the spark advance in a gasoline engines apply exactly to the injection advance in a diesel engine.
+4298020	4307060	So it should be, it should be long enough. Um, the advance should be long enough in order to have,
+4307060	4312260	uh, to have the good synchronization between the pressure peak and the, uh, and the crankshaft
+4312260	4320020	position and so the piston position, but not do I in order to keep the mechanical and thermal stresses low.
+4320740	4329940	So the same, the exact same consideration apply as the spark advance, uh, for the spark ignition engines.
+4329940	4334980	Now, just a word on the pollutants.
+4338740	4344740	When do I produce the suit suit? The two main poll, uh, uh, uh, just an introduction. The two main
+4344740	4350580	pollutants for a diesel engine are suit and NOx. NOx are the, uh, nitrogen oxides.
+4350580	4358180	The suit is produced when locally I have locally or globally, I have too little oxygen because we,
+4358180	4365540	uh, we've seen that the suit is produced when the combustion stop, uh, when the combustion stops due
+4365540	4374580	to, uh, due to lack of oxygen. This may be because of pure, uh, air fuel mixing. So either low turbulence
+4374580	4381380	or, uh, injectors that are not able to, uh, are not able to vaporize, uh, to vaporize the fuel properly.
+4383860	4390020	Another factor that may cause a suit production is, uh, uh, the temperature too low. So, uh,
+4390020	4396500	the injection advance is too, uh, it may happen that the, uh, the injection advance is too low.
+4396500	4404420	And, uh, in some cases, but it's, uh, it's conditions where the, where the engine is not
+4404420	4408740	operating properly. In some cases, the suit can be produced also when the temperature is too high,
+4408740	4415700	but I don't want to go into detail of that. On the other hand, uh, nitrogen oxide production.
+4416580	4423940	As I said, the atmospheric air is made of 79, uh, I probably didn't mention that, uh, the air that
+4423940	4431300	we breathe. The atmospheric air is made, uh, of, uh, some 79% of nitrogen and just 21% of oxygen.
+4432980	4437780	Nitrogen and oxygen in the atmospheric air are in their molecular form. So it's, uh,
+4437780	4443380	uh, it's a molecule made of two atoms of oxygen and the molecule of nitrogen made of two, uh, two atoms
+4443380	4452180	of nitrogen, O2 and then two, respectively. The molecular nitrogen is usually considered
+4452740	4459060	an inert gas. So it means that is not, uh, that this doesn't take part in the combustion process,
+4459060	4461620	but this is true only at low temperatures.
+4463700	4471140	While it can be considered, uh, uh, it can be considered, uh, um, an inert gas for a spark ignition
+4471140	4476260	engine because the temperatures that we, that are reached in the combustion chamber as are not that
+4476260	4483780	high. Although some, uh, nitrogen oxides are also produced in a, in a, in a gasoline engine,
+4483780	4490180	in a diesel engine, uh, in a diesel engine, we produce, we may potentially produce a lot
+4490180	4495380	of nitrogen oxides because the temperatures are basically higher.
+4495380	4504980	Since the temperature of higher are higher, the nitrogen passes from the molecular form
+4504980	4511220	to the atomic form. This is due not only to the higher temperature, but also to the longer combustion
+4511220	4519140	times. So we're going to have the decomposition of nitrogen and oxygen from their molecular form
+4519140	4529780	to their atomic form, N and O. Uh, another thing. In a diesel engine, we're going to have plenty
+4529780	4539780	of excess oxygen that can oxidize the atomic nitrogen that conversely to, uh, to, uh, in opposite to its
+4539780	4548340	molecular form and to atomic nitrogen is extremely reactive. So it's not inert at all. It's very, very,
+4548340	4557140	very reactive. So in these cases, by the, uh, by the, uh, coexistence of all these conditions,
+4557140	4565300	what happens is that nitrogen oxidizes in a diesel engine. It can oxidize, it, it can oxidize a lot
+4565300	4572820	more than what would normally happen in a spark ignition engine. So we can have, uh, nitrous oxides,
+4573380	4581060	and no N2 and also N3 actually, uh, as pollutants in a diesel engine. And this is the worst pollutant
+4581060	4590820	that we could have, uh, because it's the pollutant that is taking to the death of diesel engine, uh,
+4592020	4598420	due to the, uh, strict restriction regulation along years. The, the, the limit and factor,
+4598420	4602820	the limiting factor is the, uh, is the limitation of, uh, nitrous oxides.
+4602820	4612340	Okay. So we have seen what the, uh, what the two main, uh, what the two main pollutants are,
+4612340	4620900	soot and nitrous oxides. Uh, just a few observations. The soot is basically produced,
+4620900	4626580	is basically unburned fuel. So it means that the engine is operating in low efficiency conditions.
+4626580	4636340	One of the things that may produce, uh, that may produce soot is, uh, low in chamber temperature.
+4636340	4641700	On the other hand, nitrous oxides are produced due to the higher temperature
+4642820	4652340	in the combustion chamber in a diesel engine. So, uh, high temperature and excess oxygen. So we have
+4652340	4659300	nitrous oxides that are produced by a temperature. Soot is produced by also by low temperature and low
+4659300	4666580	efficiency. But if you know some of thermodynamics, you may remember that in an engine, in, uh, any
+4666580	4673940	machine, in any, uh, in, uh, in, uh, in any, any kind of engine, uh, doesn't matter if it's an internal
+4673940	4680180	combustion engine or a turbine and so on, the efficiency is higher when the maximum temperature of the
+4680180	4688900	thermodynamic cycle is higher. So what does this mean? It means that, uh, nitrous oxides are produced
+4688900	4696660	because the efficiency of a diesel engine is very high. While on the other hand, soot is produced
+4696660	4705940	when the efficiency is low. Soot production is a, uh, is a consequence of, uh, is a consequence of low efficiency.
+4705940	4711460	Okay. Questions?
+4711460	4724180	No, it's clear. Okay. Okay. Great. Let's go ahead. Just, let's spend the word about the common rail injection.
+4724180	4732020	That is the, um, the, uh, the, uh, the, the most common, uh, the most common injection system used by
+4732020	4737460	I, um, I, the, I, they're saying a hundred percent of, uh, diesel engine manufacturers.
+4740660	4750420	Okay. This is, uh, uh, uh, very basic schematic of the system. So we have a fuel tank. The fuel tank,
+4750420	4756820	uh, uh, uh, gets the fuel, uh, um, basically is connected, uh, is connected to a, to a gear pump,
+4756820	4762740	to a low pressure of fuel pump that, so that the fuel is sent to a high pressure pump. The high
+4762740	4768660	pressure pump is normally connected, uh, is normally, uh, powered by the, uh, by the crankshaft of the
+4768660	4776420	engine. So that is, is directly connected to the, to the crankshaft. The, uh, the high pressure,
+4776420	4785540	the highly pressurized, um, the highly pressurized, uh, fuel is sent to the fuel rail. This fuel rail,
+4785540	4792660	you can see it, uh, you can see it as an hydraulic accumulator where we have, uh, uh, um, where we
+4792660	4801540	have a plenum. We have, uh, uh, uh, we have a, uh, proportionally higher volume of fuel always
+4801540	4807540	available at high pressure coming from the, from the high pressure pump. The comedy, the rail,
+4807540	4812100	the pressure of the rail is regulated by this pressure regulator. That is, uh, whose pressure
+4812100	4817700	is controlled by the, uh, by the engine control unit. But the most important thing is that,
+4817700	4823220	uh, this is an hydraulic accumulator. So it means that is a pressure buffer for, uh, for the fuel.
+4824420	4827700	So that, uh, all the injectors, one injector per cylinder,
+4829060	4834100	as always, uh, uh, fuel at very high pressure at its disposal to be injected.
+4834980	4840020	These injectors are normally piezoelectric. So, uh, they can, uh, they can be opened and closed
+4840020	4845460	very fast, controlled by the engine control unit. They have a response time that is very, that is
+4845460	4853220	very low. So low that, uh, uh, in a few milliseconds of duration of the, uh, of the useful, of the phase
+4853220	4860820	that we can use for injection, we can have an injection pattern like this. So think that in one,
+4860820	4866260	two milliseconds, we can have an injection path like this. We can have five, we can have the five
+4866260	4871220	injection inside an injection phase, just one or two milliseconds.
+4874020	4880020	Uh, this multiple in jail of this multiple injection is one, each one of these has a role.
+4880900	4889860	We will see it in the following. Okay. So the pilot injection that is, uh, that takes place, uh,
+4889860	4897540	uh, quite a, uh, quite a bit before the, before the top dead center, uh, has the role of, uh, heating
+4897540	4902820	up a little bit the temperature, taking the temperature a little bit up in the, the combustion
+4902820	4908420	chamber before the main injection. And it normally occurs a lot before the top dead center.
+4910820	4915860	The, uh, the scope of this injection is to increase the temperature inside the, inside the combustion
+4915860	4924420	chamber enough, uh, in order to reduce the ignition delay. Then we have the pre-injection. The pre-injection
+4924420	4932100	reduces oxygen availability at the time of the main injection. Since, uh, it reduces the oxygen
+4932100	4938340	availability, it reduces NOx production. But as we said in the previous, in the previous slide,
+4938340	4944100	when we talked about the pollutants, what happens when we have, uh, less, less, less oxygen available.
+4945620	4951060	Uh, that we produce more soot. We produce more soot, but we produce, uh, we produce more soot,
+4951060	4960420	but we produce less nitrogen oxides. Then we have the main injection. That is the, uh, the main amount of
+4960420	4966260	fuel that is injected in order to produce the torque and then the power. After the main injection, we have
+4966260	4974580	an after injection. A little bit after the, um, that is, uh, normally, normally it's made, uh, just a
+4974580	4982580	little bit before the top dead center, a little bit later, uh, than the top dead center. The scope of the
+4982580	4989380	after injection is to promote the oxidation of the excess soot that we produce, that we have produced
+4989380	4996180	because of the pre-injection. And also to sustain the combustion process longer after the main combustion.
+4997140	5007140	So basically it has to, uh, the, uh, the goal of the after injection is, uh, is twofold. So try to burn
+5007140	5014820	the excess soot that we have produced because of the pre-injection and sustain the combustion, uh, after
+5014820	5022100	the main injection. Then a lot later than the top dead center, we have the post-injection. The post-injection
+5022100	5026660	is not, uh, uh, it's not made all the time. It's not made all the time during engine operation.
+5027300	5032340	But, uh, the only purpose of this injection, since it doesn't participate in any way in the production
+5032340	5037380	of your, of torque that we can, uh, that we can harvest at the grand shaft because it, uh, it's, uh,
+5037380	5043300	it's made, uh, too late to respect to the top dead center. Uh, the only, the only scope of this
+5043300	5049060	injection is to, uh, is to increase the exhaust temperature. Why do we need to increase the exhaust
+5049060	5055220	temperature? Because, uh, the, uh, high exhaust temperature is necessary in order to carry out
+5055220	5063700	the, uh, DPF regeneration, the regeneration of the, uh, of the diesel particulate filter. So the post-injection
+5063700	5070820	takes place only when we need to regenerate the, uh, the, um, the, uh, the diesel particulate filter,
+5070820	5076180	the diesel component that we will see, uh, that we will see in a, in a while. It's an after-treatment
+5076180	5085700	system, basically. Okay, we finished the first part. Then I have, uh, another, uh, uh, another deck of
+5085700	5098660	slides to show, but... Okay, so let's jump this first slide. Uh, now let's try to give an answer
+5098660	5102660	to this question. How to increase the power of an internal combustion engine?
+5102660	5112420	The two possible solutions are, uh, either to increase the engine displacement using larger
+5112420	5123380	cylinders or use, uh, more cylinders of the same size or, um, another thing that I could do, uh, is
+5124340	5132580	try to increase the maximum engine speed since, uh, as you may already know, the, the engine power
+5132580	5140340	is given by the product of the, uh, of the output torque times the, uh, the angular velocity.
+5140340	5146100	So if I increase the engine speed, increase the angular velocity, and so I can, then I can increase
+5146100	5153220	the power. Increasing the engine displacement means that I can, uh, that I can use, uh, that I can, uh,
+5153220	5161060	uh, uh, that I can have more air at the intake. I can increase the airflow so I can, uh, so I can burn
+5161060	5169700	more fuel and basically again obtain more power. The third way and the one we are more interested in
+5170340	5176260	is, um, is to increase the maximum torque by increasing in-cylinder maximum pressure.
+5177540	5186020	Increasing in-cylinder maximum pressure, what does this mean? This means that, uh, um, that I can, um,
+5186020	5193300	if I increase the, uh, the in-cylinder pressure, I can, uh, um, I, uh, by doing this, I increase
+5193300	5203780	the density of, uh, the intake air and, uh, so, uh, the, uh, the mass of the air that I'm sucking inside
+5203780	5212740	the combustion chamber is, um, is, uh, is higher and, um, and so I can use more fuel, I can burn more fuel.
+5216020	5221460	Um, so the thing is more air, more fuel, more power.
+5224980	5231140	The main way to, um, to, uh, to do this is using, is turbocharging.
+5231780	5238500	That is, using a turbocharger that is the, the device that you can see here. The goal is to have
+5238500	5244020	more air, so more oxygen, and so more fuel that can be used in order to obtain more power.
+5244020	5250580	The, uh, the practical way, uh, to obtain this is using a compressor that increases the pressure
+5250580	5258180	in intake manifold. The compressor is mechanically, uh, connected on the same axis to a turbine.
+5258180	5263220	So, uh, the device that you see here, here on the right with the blue arrows, it's the compressor.
+5263780	5270740	That is, uh, how does a compressor work, basically. There is this component here. This is the, uh,
+5270740	5277460	uh, this is the rotor of the, uh, of the compressor that, uh, spins very fast in a way like, uh,
+5277460	5284020	I don't know if any of you has ever taken a, a hair dryer apart. Inside there is, uh, there is a rotor
+5284020	5290180	that is moved by a motor that, uh, not, not in here. Here, here, there's no motor. Here, there, here,
+5290180	5297780	there is, uh, the, um, the rotor is moved in a way that we will see. Uh, this rotor spins very fast,
+5297780	5307300	and so the air is, uh, uh, is pushed outwards on, uh, on this, uh, on the stator here and, um, and, uh,
+5307300	5316420	and is given and is, uh, is, uh, is, uh, is, uh, is conveyed, uh, is rooted to the, uh, to the inlet manifold.
+5316420	5328260	So, uh, how do we, how do we move the rotor of the compressor? Uh, we don't have a motor, as I said,
+5328260	5335220	but we have a turbine connected in the same axis. We have on the same axis the rotor of the compressor
+5335220	5340980	and the rotor of the turbine. The turbine, without going into too much detail, it's a, it's a thermal
+5340980	5348340	machine that allows to, uh, to use the energy from the, uh, from the exhaust gases, that is basically
+5348340	5354100	waste energy. We expand them into this turbine and we can get mechanical work on this axis.
+5354980	5361220	This, uh, the, uh, the rotational motion at, uh, at the turbine, since they're connected on the same
+5361220	5366260	axis, this mechanical power obtained at the turbine level can be used in the compressor in order to
+5366260	5373940	compress the intake air. So, the good thing is that, since we are using the energy from the exhaust
+5373940	5383300	gases, uh, I already mentioned that it's waste energy, so it comes almost for free. And, um, the
+5383300	5388820	assembly that you see here in the figure is called a turbocharger because it's, uh, it's, uh, it's
+5388820	5394340	basically two machines, compressor and turbine connected on the same, uh, connected on the same axis
+5394340	5404100	and, uh, basically they form a, uh, uh, just one component. What are the pros and cons of turbocharging?
+5405780	5414020	Uh, let's say that the main objective of adopting turbocharging in an indirect injection engine
+5414020	5421060	is to, uh, is to increase the torque and thus increase the power so that we can obtain, so that
+5421060	5427860	we can obtain a higher power. You hear me? Okay. We were on slide three.
+5434740	5440340	Indrit, do you have a question? No, it's just, we were on slide three. We're
+5441940	5444500	further away, but we were just on slide three.
+5445140	5446100	I cannot hear you.
+5449220	5455300	You were in slide three. Now it's okay. You were just in slide three when, uh, explaining.
+5455300	5459380	Oh, okay. Okay. Sorry. How did this happen?
+5459380	5467060	Um, that's strange.
+5474900	5477060	A bit. So try to restart the presentation.
+5477060	5490740	Yeah, that's, uh, that's all I can do, basically.
+5490740	5507300	Okay. I'm gonna share my entire screen so that, uh, there is no...
+5507300	5522980	We are sure that there's not going to be any problem anymore. So the thing that I was talking about...
+5522980	5529300	Let's start from, let's start over from, uh, from slide four.
+5530820	5534500	So, as I said, uh, can you see, can you see the presentation now?
+5534500	5535620	Yes.
+5535620	5536260	Yes.
+5536260	5536580	Yes.
+5536580	5536660	Yes.
+5536660	5537140	Yes.
+5537140	5537700	Yes.
+5537700	5543620	Okay, great. Okay, great. So we have the compressor on the right and the turbine on the left.
+5544500	5551380	The compressor rotor, the rotor rotates, takes the mechanical energy from the turbine here that uses
+5551380	5557460	the waste energy from the exhaust gases. The, uh, the turbine rotor and the compressor rotor are
+5557460	5564100	connected on the same axis. So they rotate all together. So we get, uh, we, uh, harvest mechanical
+5564100	5569380	energy here at the turbine level. This mechanical power is used in the compressor in order to compress
+5569380	5576660	the intake gases that are, that are conveyed to the, uh, to the inlet manifold. So that's how it
+5576660	5581780	works, basically. Uh, do you have any questions? No.
+5582420	5592740	Okay. Okay. Let's go ahead. Now, the pros and cons of turbocharging. As I was about to, uh,
+5592740	5598820	as I was about to say in a spark ignition engine, the main objective is to increase a higher power
+5598820	5604740	with an engine of the same displacement. So I can obtain a higher power with an engine of a small
+5604740	5611380	displacement because of the, uh, the, the air that I make, the air that I'm, uh, that I'm giving at the
+5611380	5622020	intake has a higher density than the, than the ambient air. So, um, another advantage, uh, just keep this
+5622020	5627620	in mind, although I had to cut the, uh, the part that talked about this in detail from the, uh, from the
+5627620	5633540	previous, uh, from the, uh, from the, uh, the deck of slides that I used this morning. The presence of
+5633540	5639860	the compressor, uh, that pushes the air into the engine, uh, reduces the overall pumping losses. What
+5639860	5648260	does this mean? Uh, as I, the, the piston by going, uh, but when it goes downwards to suck in the intake
+5648260	5657620	air, basically, uh, has to, uh, has to, uh, has to, has to spend some mechanical energy to, um, to, uh, to,
+5657620	5666660	uh, to, to suck in the intake air. And, uh, the energy that has to spend, uh, um, is due to the, uh,
+5666660	5672260	is due to the presence of the, of the puppet valve and the, and the throttle body that they choke the
+5672260	5680100	flow, the air flow, uh, into the, into the intake line, to the, uh, from the, from the throttle body
+5680100	5686900	to the, uh, to the combustion chamber. So the, uh, the presence of the compressor, since it, uh,
+5686900	5692980	compresses the air, it mitigates this effect in some way, because the air is already compressed.
+5692980	5700500	So the, uh, we are mitigating the pressure drop across the, uh, across, uh, not, not the throttle body,
+5700500	5704260	because the throttle body is supposed to be wide open, because increase in power,
+5704260	5709860	it's an increase in maximum power, but the, the pressure drop induced by the, by the puppet valve.
+5712260	5719140	So, um, the presence of the compressor, that, uh, compress, that, uh, boot that pushes in the air
+5719140	5724420	inside the combustion chamber, and the piston doesn't have to spend any, we don't have to spend any
+5724420	5730020	mechanical energy at the piston level in order to suck in the air, as we, uh, should do if, uh,
+5730020	5736020	we didn't have a compressor. Just, uh, keep in mind that in, uh, especially in, in very high load
+5736020	5743540	conditions, the, uh, uh, the, uh, the presence of the compressor, uh, increases, uh, may increase
+5743540	5751140	a little bit the efficiency. In a diesel engine, on the other end, the, uh, the peak power and the
+5751140	5757780	efficiency are always increased, because the, uh, because I'm using the, um, the, the diesel engine
+5757780	5762500	is not, uh, doesn't have to, uh, doesn't have to operate in a stoichiometric, uh, stoichiometric
+5762500	5770100	mixture conditions. So, uh, since, uh, a diesel engine is made to always operate with excess air,
+5770900	5778340	uh, we are using, uh, we are using, uh, in the turbine, uh, an energy that would be otherwise, uh,
+5778340	5783140	wasted. So, uh, the, uh, the peak power and the overall efficiency in a diesel engine,
+5783140	5788260	by using the turbocharger, are always increased. Conversely to a spark ignition engine.
+5791940	5793940	Just, uh,
+5793940	5806340	Okay.
+5809940	5810340	Okay.
+5812900	5818740	So...
+5818740	5829380	So let's go ahead.
+5833620	5842500	Another pro, or another, uh, positive point of, um, uh, of, um, okay, I already mentioned this,
+5842500	5848020	actually, in a spark ignition engine, in some cases, especially when the, uh, when the turbocharger
+5848020	5853860	has been carefully, has been carefully chosen in order to maximize the efficiency in certain areas,
+5854420	5860340	we can obtain, uh, we can obtain an increase in the, in the overall efficiency of the, of the engine,
+5860340	5868980	of the turbocharged engine, respect to the natural aspirated one. Okay. The, um, let's, uh, uh,
+5868980	5873460	let's talk about the outcomes of having, uh, of having a turbocharged engine.
+5873460	5881060	The first of, uh, uh, uh, the, the cons is the, is the increased overall system complexity,
+5881060	5885300	because we're adding a component to this component, it will be, we knew, uh, is going to need the
+5885300	5892900	lubrication. Uh, this component, uh, is going to, uh, uh, will imply the presence of, uh, uh, of, uh,
+5892900	5897140	of, uh, some other components that we will see in the, in the, in the following.
+5897140	5903860	Uh, another aspect that is a con, but not very, uh, but, uh, it also has a positive side,
+5903860	5908660	is that the turbocharger introduces a series of degrees of freedom. That is, uh, a number
+5908660	5914260	of actuators that need to be good to, that need to be controlled in order to guarantee the best
+5914260	5921940	efficiency and integrity. Uh, I already mentioned that the, that the system, uh, that the system
+5921940	5931460	complex complexity increases. Uh, so the, uh, the main component that is worth mentioning,
+5931460	5937460	although it's not always present, is that, uh, the air compressed, uh, in, uh, by the compressor
+5937460	5943940	needs to be cooled before being fed to the, uh, to the engine. Why is this?
+5943940	5953140	Uh, guys, uh, I'm, uh, I have to, I have to take a call. Just, uh, give me a second.
+5955860	5957300	Okay. Okay.
+5960100	5972660	DG. Oui. Si. Si.
+5973940	5976180	Sì.
+5976180	5978480	Eh, sì, un po', sì, all'inizio?
+5982400	5987560	Mmm. Sì, penso un, penso tra le 10 e le 15 ore al primo kl hammer.
+5993560	5994200	Um, hm, sì.
+5996100	5999460	Sì, sì, no, ma è, ci sta come stima. Un paio di giorni, sì.
+5999460	6002900	Un paio di giorni, sempre a blocchi di, sempre a blocchi di una a due ore però, eh?
+6002900	6003820	Uh-hm.
+6003940	6029220	okay okay see okay okay guys i'm back sorry for the interruption
+6033940	6038420	okay
+6043620	6051060	where were we okay the intercooler the air that is compressed in the compressor has to be has to
+6051060	6058980	be cooled down before giving before being given as input to the to the engine because since
+6058980	6067060	the air is a gas so when it is compressed it heats up its temperature goes up so it needs to be cooled
+6067060	6075940	before being given as input to the engine because otherwise the uh the um the otherwise the system
+6075940	6082500	efficiency the uh the system the system efficiency decreases because basically for those of you are
+6082500	6088580	familiar with thermodynamics the the uh the lowest temperature or the lower temperature of the
+6088580	6096180	thermodynamic cycle goes up thus decreasing efficiency another potential disadvantage
+6096180	6102180	although this is uh very mitigated by by adapting some other some other systems in addition with the
+6102180	6107540	turbocharger is that the turbine and compressor assembly inertia may introduce a delay in the
+6107540	6115780	system known as turbo lag that is uh imagine that the uh that the uh that the shaft the turbocharger
+6115780	6126820	shaft rotates at several thousands of rpm by uh several thousands of rpm i mean that it rotates at
+6126820	6141300	uh a minimum of 50 000 rpm to a maximum of 400 000 rpm so it rotates quite fast and uh the the inertia of this
+6141300	6148820	component that rotates very fast introduces uh introduces an inertia introduced a delay inside the system into the air dynamics
+6148820	6152980	into the air in the exhaust dynamics this delay is known as turbo lag
+6152980	6167700	so this is the uh this is a very basic schematic of uh of um of the inlet and the exhaust line of our turbocharger engine
+6168420	6178500	so we have air at the inlet we have the master flow the master flow sensor we have the um uh the uh the
+6178500	6184740	temperature sensor that you that i already mentioned in the uh from this morning from the previous deck
+6185460	6193940	then we have the compressor inlet the air is compressed by the compressor it is cooled down by the intercooler
+6193940	6202340	the intercooler is is like another radiator that is located uh it could be located uh either on uh under the
+6202340	6208260	bumper or uh above the bumper or uh above the wheel it depends it could be located uh it could be located
+6208260	6217060	everywhere but uh it's just uh an a neat exchanger uh totally similar to the uh totally similar to the uh to
+6217060	6224260	the to the one that is used to uh to keep the to keep the um the the coolant uh the coolant cool
+6224260	6234340	then we have this component dgr let's not go into the detail with this one we're going to uh to talk
+6234340	6244020	about this in a while then there is the uh the dmap the manifold absolute pressure sensor intake valve
+6244020	6252580	then we have the exhaust line so exhaust valve we have again dgr we have the exhaust pressure uh the
+6252580	6260980	exhaust pressure sensor and then we have the turbine so we have the our hot gases from the exhaust that
+6260980	6269380	go into the turbine that allow us to get some uh to to get the uh to get some mechanical energy that we
+6269380	6275780	can use to move the compressor connected on the same axis with the turbine and then there is the
+6275780	6286340	tube outlet to the exhaust here on the turbine you see this evrt actuator that is the uh that is basically
+6286340	6292340	the um something that is called with another name uh it is called with another name in the following
+6292340	6298820	with this presentation it's basically this is the vgt the variable geometry turbine that we will that
+6298820	6308420	we'll talk about uh in a second so when i mentioned that there were some additional degrees of freedoms
+6308420	6312740	some additional degrees of freedom that are introduced by the uh by the presence of the
+6312740	6316580	turbocharger i was referring to the waste gate and variable geometry turbine
+6318660	6325140	the waste gate valve is a valve that bypasses a fraction of the exhaust gases that are sent to the
+6325140	6335460	turbine in order to uh without letting them pass into the turbine so basically this valve um takes a
+6335460	6343060	fraction of the of the of the exhaust gases and bypass them to the exhaust line without letting them
+6343060	6350340	pass through the turbine so basically we uh this valve prevents a part of the residual energy of the
+6350340	6356660	waste gases to be extracted and so basically the at the end of the at the end of the day we are reducing
+6356660	6361540	the mechanical power that we get at the turbine level by opening the uh the waste gate valve
+6363060	6370340	the waste gate valve opening is controlled by the uh by the cm and why why should we uh why should we
+6370340	6379540	decide to uh to to not to not to use some of the waste energy from the exhaust gases and let it bypass it
+6379540	6386580	right to the exhaust line this is done in order to limit the turbine speed to limit either the turbine
+6386580	6392580	speed or the boost pressure by boost pressure i mean the i mean the pressure induced by the presence
+6392580	6398900	of the compressor so on the intake line the boost pressure is the uh is the pressure increase that
+6398900	6405540	i obtain respect to ambient uh to the ambient pressure uh due to the presence of the of the compressor
+6405540	6415540	so the uh the engine control module denoted the ccm may decide if the turbine is spinning too fast or
+6415540	6420660	if the compressor is pumping too much air into the engine respect to the to the um to the operating
+6420660	6426500	condition to the current operating condition of the engine the engine control module decides to
+6426500	6431780	establishes to open this waste gate valve to a certain extent it opens it a little bit in order to
+6431780	6438500	bypass a fraction of the exhaust gases to the exhaust line so we reduce the mechanical power extracted
+6438500	6444980	the turbine level and so the mechanical power used by by the compressor and transferred to the intake
+6444980	6448740	gases so basically we compress we compress the intake air less
+6451860	6458180	so in order to limit the uh in order to obtain this information to uh to uh to make this decision
+6458180	6465060	to uh to uh to implement this policy the engine control module uses information from the ebp that is
+6465060	6468260	the exhaust pressure sensor this guy down here
+6470900	6478900	and the manifold absolute pressure this one these two are used this one on the exhaust line and this one
+6478900	6486340	on the intake line are used to establish whether i have to open the wastegate valve in order to uh because
+6486340	6496580	the uh because the intake care is at an excessive press pressure or because the exhaust pressure is
+6496580	6502900	too high if the exhaust pressure is why it means then more of a loading the turbine so basically the
+6502900	6510660	the wastegate valve is something that is used in order to uh in order to um to uh to in answer to to
+6510660	6519620	prevent mechanical damage to the turbocharger another component that does uh that does for sure pretty
+6519620	6526500	much pretty much a similar job to the wastegate valve but also something else is the variable geometry turbine
+6529060	6535540	let's not go into too much detail the variable what the variable geometry turbine does is modifying the
+6535540	6541940	the flow conditions at the turbine level by adjusting the inclination of this bay of these blades here
+6542580	6549860	so it increases or reduces the area available for the exhaust gases to pass through and to pass through
+6549860	6559700	and be conveyed to the uh to the to the turbine rotor so when the exhaust flow is high these blades open
+6559700	6567780	and they close when the um when the uh when the exhaust flow is smaller so that basically uh whatever
+6567780	6577940	what happens when uh uh when a fluid is forced to pass uh uh through a to a smaller opening it increases its
+6577940	6585860	speed if these blades would be more inclined if the fuel if the exhaust flow was lower basically the fluid
+6585860	6591620	won't be accelerated by these blades so i wouldn't extract any mechanical power i would extract little
+6591620	6598340	mechanical power from the turbine because of the low efficiency while if the flow increases if i keep
+6598340	6604500	this small inclination so the small opening of the veins of the turbine what would happen that the flow would
+6604500	6610580	be too much accelerated so i would i would have too much mechanical power extracted from the turbine and this
+6610580	6621140	may lead to over speed this may lead to speed in the first place in uh um in uh a second thing
+6621140	6628100	that uh that should that uh that the presence of the vgt avoids is the sonic clock i don't i don't remember
+6628100	6640420	the name of the block was only go in english just let me check
+6640580	6652100	the sonic block basically if this opening is too if this opening is too small and the exhaust flow uh
+6652100	6658580	the exhaust flow is too high what happens is that in the in the highest portion of this of this opening
+6658580	6665780	here between two blades the uh the speed of sound is reached by the exhaust gases and when the speed of
+6665780	6672020	sound is reached if we don't have a particular if we don't have a modification in the shape of the uh
+6672020	6678660	of the opening uh basically the fluid is not able to accelerate so when we reach the uh the the speed of
+6678660	6688820	sound the the the uh the the exhaust flow is locked so uh we need to have a larger opening otherwise we
+6688820	6692900	cannot uh we cannot uh we cannot increase the excess the exhaust flow anymore
+6695860	6702980	okay this is uh um as we said in uh in practice the variable geometry turbine can modify the flow
+6702980	6712500	conditions and uh uh through the example that i uh that i uh that i that i made you may have understood
+6712500	6719780	that another thing that the the vgt does is improving the efficiency of the of the turbine
+6721060	6726180	improving the the efficiency of the turbine brings another advantage
+6731540	6739780	the main thing is that is like having a turbine with different with n different geometries
+6740660	6750500	so it's like i'm not limited i'm not limited by the size of the turbine i i enhance by by using a vgt i
+6750500	6758020	enhance the range of uh operating conditions the efficiency that i can have and an advantage of the offer
+6758020	6768500	by this is that uh is that the the the maximum efficiency range of the turbine is is wider and this in some way
+6769780	6776340	in some way mitigates also the problem of the turbo lag because the turbo lag is due to the fact that
+6776340	6781460	imagine that i have a huge turbine a turbine with the large vein like this were like like in this
+6781460	6786100	convert but fixed like can they go into this configuration that i have that i have here with
+6786100	6793540	the vgt that is fully open what would happen that at partial loads when i have uh when i have a low
+6793540	6800900	exhaust flow um as i mentioned i would have the the fluid that would be accelerated the veins of the
+6800900	6809220	of the stator between the plates so i wouldn't i wouldn't have any uh i wouldn't have any any
+6809220	6816340	mechanical power that is extracted at the turbine level just little or no power would be would be
+6816340	6827220	extracted so this leads to uh to a non-optimal operation of the engine by having this by having
+6827220	6833460	this system that allows me to move the blades i can switch seamlessly between this configuration and
+6833460	6841220	this configuration that enhances a lot the uh the exhaust the exhaust flow the generation of power at
+6841220	6846260	the turbine level and thus the operation of the compressor on the other side and this is this
+6846260	6852580	implies the reduction of the turbo lag because it's like having n different turbines that can
+6852580	6859780	change their configuration so the turbo lag is is is very mitigated by the adoption of the of a
+6859780	6869060	variable geometry turbine another component is this guy here that i uh that i didn't that i just mentioned
+6869060	6874500	but i didn't explain the scope of this component that is the exhaust gas recirculation bulb
+6874500	6881700	as the name says the exhaust gas recirculation bulb recirculates the fraction of the exhaust gases
+6882500	6885540	from the exhaust line towards the intake line
+6888260	6894740	uh the exhaust gases are uh are inert they don't contain uh they don't contain any any fuel
+6895460	6902180	and they don't they contain uh less oxygen than ambient air if you think about diesel engine they
+6902180	6906500	contain the exhaust gas they contain the exhaust gases still contain some oxygen but a lot less than
+6906500	6914420	the than the ambient air so that we can we can consider them as inert as inert gases the introduction
+6915300	6920180	the introduction of uh inert gas inert gases at the intake uh implies that we have uh we have a mass of gas of the um we have the same mass of gas that this time is sucked in by the sorry
+6920180	6940180	sucked in into the combustion chamber that is made of exhaust gases and air so the mass is approximately the same as if we didn't have the exhaust valve but some of these gases are not taking part into the combustion process so it's like uh it's like uh it's like the
+6940180	6946180	approximately the same as if we didn't have the exhaust valve but some of these cases are not
+6946180	6952580	taking part into the combustion process so it's like it's like having a thermal inertia inside
+6952580	6958020	the combustion chamber because i have to eat up i still have to eat up the same mess of fluid
+6958020	6963060	but some of this doesn't take part into the combustion so since i've had this thermal inertia
+6964020	6970260	this lowers the in chamber temperature so this reduces the nitrous oxides production
+6971700	6977060	but since i'm lowering in chamber temperature as you if you remember what we mentioned before
+6978340	6981620	if we reduce the chamber temperature we also reduce efficiency
+6984180	6992500	so uh you may say uh why are we uh it's it's madness to introduce this component no it's not
+6992500	6999060	actually it's not really a madness because this reduces the uh the uh the nitrous oxide
+6999060	7005780	production that is really the thing and the the main goal of having this component on a turbocharger
+7005780	7016820	engine another reason why the nitrous oxide production is reduced by adapting any gr valve
+7017620	7025780	is that there is less oxygen available uh to be uh to to oxidize the um to oxidize the nitrogen
+7028340	7037700	in some cases with accurate design with accurate design of the system in it is possible to increase
+7037700	7044020	the engine efficiency a little bit by adopting the agr but it's the the increase in the efficiency is
+7044020	7050740	negligible and basically what we can try to do with an accurate calibration is to uh is to try to
+7050740	7062580	mitigate the downside of having an egr so uh so the egr doesn't really increase efficiency but we can do
+7062580	7068260	uh we can do something in order to uh to to reduce its negative influence
+7068260	7080660	okay one good thing about the egr is that the uh the exhaust gases that are recirculated and that are
+7081380	7087620	given as uh again that are given back to the intake of the engine already contain some suit
+7088660	7095620	this suit if is recirculated inside the uh inside the combustion chamber and involved in another combustion
+7095620	7102020	process uh two good thing may happen two good things may happen the first thing is that this
+7102020	7109060	suit is burned so the overall suit production may be reduced but another good thing that could happen
+7109060	7116820	is that if we have a small if in the in the initial exhaust egr charge we have small particles of
+7116820	7126020	suit uh if the if we uh when we recirculate this exhaust the exhaust the the suit particles may get larger
+7126020	7133940	because they could uh they could act as uh condensation grains for uh for other suit so basically we may
+7133940	7140020	obtain larger suit uh larger suit grains larger suit grains are good because they are more easily
+7140020	7149860	trapped by the diesel particle field particulate filter so this is a good thing the bad thing is that
+7150580	7158900	we are recirculating exhaust gases inside the valve with very narrow operative areas so uh since we are
+7158900	7164260	recirculating something that contains suit this this suit may be may create deposits inside this valve
+7164260	7171300	and this valve maybe uh maybe uh could get clogged uh in in the later life of the engine that is uh
+7172260	7177460	that is uh that is uh that is something that uh that some of you that have a diesel car with a
+7177460	7181620	with a with a high number of kilometers may have may have may have observed already
+7184500	7190180	so uh oh another thing that i didn't that i forgot to mention is that the the exhaust gases
+7190180	7196260	before give before being uh given back at the intake of the engine need to be uh need to be cooled down
+7196260	7202980	with this component that is an egr cooler is uh it's just a small heat exchanger that is used in order
+7202980	7215700	to lower the uh the exhaust gases temperature from uh 300 200 something degrees to uh to 50 60 70 degrees
+7215700	7224820	and so not heat up the um the uh the intake temperature too much and thus decrease efficiency
+7228260	7237060	okay now let's uh let's talk a little bit about gdi gdi stands for gasoline direct injection
+7238260	7243460	i mentioned a couple of time already that we may have gasoline engines with direct injection
+7244020	7253620	the ones we talked about this morning where uh we're all undirect uh undirect gasoline uh indirect spark
+7253620	7261140	ignition engines while i want to uh to talk a little bit about the uh about gasoline engines with
+7261140	7263220	direct injection that is gdi
+7263220	7273860	uh these engines this kind of engines is our engines that have uh that are still gasoline engines but
+7273860	7275860	has something in common with diesel engines
+7278340	7284820	mainly due to the fact that uh in these engines the injector the the fuel is directly injected into
+7284820	7290820	the combustion chamber without being injected in the at the intake port like in the cases that
+7290820	7305700	that we've seen so far okay the main thing is that since we have an injector we have a spray like we did for
+7305700	7314820	uh for the for us as we've seen for the for the diesel engine the the charge is uh could be disomogeneous
+7314820	7322820	uh could be you could be we could use a disomogeneous charge at low loads of at low engine loads so when
+7322820	7330180	the engine is rotating is rotating at a low speed and we are asking for a low torque to our engine we may
+7330180	7337780	operate this engine in stratified the charge mode what does stratified the charge mean it means that we have
+7337780	7344420	our spray that injects the fuel as the spray is the spray diffuses inside the combustion chamber
+7346180	7355460	the objective is to have a stoichiometric to a slightly rich mixture around the spark plug in order that
+7355460	7362900	the combustion starts immediately as the combine as the as the spark as the spark is ignited
+7362900	7374820	and lean mixture in the outer parts of the combustion chamber lean mixture means very lean combi very lean
+7374820	7380020	uh mixer at the uh at the at the outskirts of the combustion chamber
+7382820	7392500	why is this this this as i already mentioned may lead to an increase of the overall efficiency because of
+7392500	7400020	the fact that we're using lean mixture in at least in some part of the engine but these engines are
+7400020	7409700	designed in order to operate like this um and this kind of combustion this stratified the charge uh this
+7409700	7419700	stratified charge injection is adapted only when the engine is operating at uh low or medium loads at the best
+7419700	7426580	not for high loads another advantage of directing that is the main advantage actually of direct of that
+7427300	7432740	direct combat direct combat direct injection gasoline engines is that higher compression ratios can be
+7432740	7440100	achieved why can we achieve higher compression ratios because what is being compressed by the piston
+7440820	7452020	is not air fuel mixture but it's just air the um the combined the fuel is injected only at a certain point so there is no
+7452020	7462180	risk of um there is no risk of knocking until we don't inject the until we don't inject the the the fuel
+7462180	7472100	throttle another advantage is that the throttle can be uh since these engines are made to operate with the uh
+7472100	7481620	not with uh not in uh strictly stoichiometric conditions but these engines are are designed to uh to uh to be a
+7481620	7492020	little bit um to operate a bit with uh with a linear mixture uh the the throttle is still present but
+7492180	7501620	can be kept uh more open i mean the ball the um the policy the the opening uh policy of the of the throttle
+7501620	7510500	is not strictly related to the to the wider pressure i mean at least the uh what happens is that the
+7510500	7517700	throttle can be can be kept let's say can be kept a little bit more open than an indirect injection engine
+7517700	7526340	because the engine is designed to operate with more air than a rather irrespective to an indirect injection
+7526340	7539140	engine okay all these happens uh like this point one and the point three happen for uh low to medium
+7539140	7548340	loads at high loads the ecm normally switches to homogeneous charge mode so if you think about
+7548340	7552420	it when the engine is rotating very fast and we are requiring a lot of power to the engine
+7553140	7561460	a lot of turbulence a lot of fluid dynamic mixing is supposed to to occur here so basically the engine
+7561460	7570580	operates the ecm switches to the stratified charge mode to the uh to the uh to the stoichiometric uh to
+7570580	7578820	the stoichiometric operation mode so it operates like uh uh like an indirect injection engine with the
+7578820	7585140	advantage of having uh of having an air compression ratio higher compression ratio due to the fact that
+7585860	7592900	that the uh that the fuel is injected later uh after that the air is being compressed into the into the combustion chamber
+7596100	7603940	uh the bad thing is that the uh is that during the transience especially when especially when
+7603940	7609460	operating is stratified the charge mode we have to make an accurate control of the combustion
+7609460	7619380	uh this is particular this is advantage only this is advantageous uh especially in case of an hybrid
+7619380	7625620	powertrain because in an hybrid powertrain we have a there is a there is a almost a decoupling between the
+7625620	7632660	uh the power uh the power uh from the from the thermal unit and the power required by the driver through
+7632660	7641060	the accelerator pedal so basically the all these advantages are are more felt with an hybrid powertrain
+7642820	7649220	another disadvantage is always is of course the increased system complexity another disadvantage is
+7649220	7654980	that the the fuel injectors are very complicated are far more complicated than the ones that we can
+7654980	7660100	find in an indirect injection engine because they're more similar to uh they're more similar to the
+7660100	7665780	injectors that we may find in a diesel engine rather than the ones that we find in an indirect injection
+7665780	7676180	gasoline engine uh another disadvantage regards regards the the pollutants uh the first one is that
+7676180	7683940	since there is less time for extra for air fuel mixing because the uh there's just a very short lapse of
+7683940	7691220	time between uh between when the the fuel is injected and when the combustion is started by the spark plug
+7691220	7700660	there is a very little time for a fuel mixing so uh there is some suit formation uh differently from
+7700660	7708020	what happened with the uh with the with indirect injection gasoline engines and since the the combustion
+7708020	7715620	is linear compared to an indirect gasoline gasoline engine the uh the the nox the nitrous oxide emissions are
+7715620	7727780	higher okay another system that is found in uh in many in many engines especially uh especially
+7729460	7737940	gasoline is vvl and vvt variable valve lift and variable valve timing variable valve lift
+7738180	7746260	as the name says means that it's a system that um all these systems are um are uh are always
+7746260	7753700	implemented mechanically in a different way by by uh by each manufacturer each manufacturer has its own
+7753700	7763620	see as its own system like bmw bmw as valvetronic uh for uh valvetronic that is a mixed vvl vvt system onda
+7763620	7772100	uh that is uh that is basically uh that is basically uh that is basically a vvt system but now its later
+7772100	7783780	implementations are mixed vvl vvt uh stellantis has the uh has the uh multi-air system every manufacturer has
+7783780	7790820	its own implementation its own solution but the uh the most important thing is understanding what is what
+7790820	7797220	are the implications of this system that is a system that allows me to as a function of the operating
+7797220	7805380	conditions of the engine to have a different lift of the valves and the different timing by timing i mean
+7805380	7814020	the uh the time at which the valve the valves uh primarily the intake valves and secondarily exhaust
+7814020	7821220	valves although the effect by having a system like that on the exhaust valves uh are are very are
+7821220	7827780	negligible so the most important thing is having this on the on the intake valves uh by timing i means
+7827780	7834660	the i mean the uh the opening and closing times of the valves that are normally established by the shape
+7834660	7838820	of the uh of the cams the cams on the camshaft
+7841940	7842820	so um
+7845220	7851780	the main advantage is that the variable valve timing allows to uh allows to optimize the opening and
+7851780	7859780	closing times so that we can that we can exploit some uh uh some dynamic phenomena in the uh in the
+7860420	7865140	in the manifolds in order to obtain more power and increase the engine efficiency
+7866020	7873460	or expand the engine uh the engine torque along all the operating range so we have an engine that
+7873460	7879860	breathes better along uh in a you know in a wider operating conditions range
+7881780	7896260	uh so uh blah blah blah another important uh another important aspect this uh related to the uh to
+7896260	7903700	having a vvl system that is a variable valve lift system is that i may think if i have a system that
+7903700	7911460	allows me to change the maximum opening of the of the of the intake valve i may think too
+7911780	7921780	eliminate the throttle body so i could use this system in order to uh i could use this system
+7921780	7926980	i could use the fact that i can control the opening of the intake valve i could use this system to
+7927540	7931780	eliminate the throttle body and just use this system to modulate the airflow
+7933460	7937060	so i may have a reduction of the pumping losses by using this system
+7937060	7941860	guys questions
+7944980	7946500	no okay
+7948660	7957540	okay great let's go ahead uh my favorite system of uh uh my favorite vbt vbl system is the fca multi-air
+7958500	7964340	because uh um differently from from the ones adopted by other manufacturers
+7965380	7970100	uh this is uh this system is very simple and this system is extremely effective
+7970100	7977380	and gives a huge uh a huge margin of controllability on the uh on the on the on the opening and closing on
+7977380	7983060	the valve opening and closing uh timings and um and the end policy
+7983060	7990980	so this system just without going into much detail because it's a mess to explain it i i advise you
+7990980	7995940	to uh to watch this video on youtube where there is an animation that explains it very well because
+7995940	8002980	it's far easier to uh to see it working rather than explaining how it works but basically the main thing
+8002980	8010340	with this system is that the camshaft doesn't move the valves anymore uh the camshaft is just used to uh
+8010340	8017140	to move uh uh to move uh um an oil pump that pressurize that press pressurizes some oil
+8017700	8024580	and basically the uh the opening and closing of the valves is regulated by opening and closing uh electrical
+8024580	8035140	valves that uh that uh that that allow to to exploit the pressure of the brain of the oil pressurized by
+8035140	8041780	the camshaft in order to open and to open and close the valves so this system is really simple and is
+8041780	8050580	really really effective and i uh warmly have warmly advice to uh to give a look at the at the um at the
+8050580	8062180	youtube video in the link so let's try to talk a little bit about the exhaust suffer treatment
+8062180	8068260	systems the most important one that you may have already heard of is the catalytic converter
+8070260	8079700	the catalytic converter or three-way catalyst is uh is a system used in um in uh in the spark
+8079700	8089620	ignition engines in order to reduce the uh the three main pollutants so uh nitrogen oxides carbon monoxide
+8089620	8099220	and uh unburned tidal carbons this is mainly used in spark ignition engines but it's also used in it's
+8099220	8106260	also used in diesel engines but as you will see uh this is more important for spark ignition engines but
+8106260	8114340	although we have it in diesel engines as well for diesel engines this system is named the doc diesel
+8114340	8124660	oxidizer catalyst operates a temperature above 200 200 degrees in spark ignition engines the operating
+8124660	8134820	temperature is a little bit higher and this disregards the first part of this or the three-way catalyst
+8134820	8141620	the first part of the three-way catalyst is the oxidizer part the part that is devoted to the oxidation
+8141620	8147380	of the partially oxidized compounds hydrocarbons and carbon monoxide
+8150740	8159300	of course this component to operate since it's an oxidizer catalyst requires the presence of oxygen at the
+8159300	8167060	exhaust so this system operates at very good efficiency when the uh when the mixture when the air fuel
+8167060	8176100	mixture of the engine is stoichiometric or slightly but very slightly lean so when there is a very little
+8176100	8182900	excess oxygen not too much otherwise we'll get in this other area where the hydrocarbons cannot be oxidized
+8182900	8190420	properly because there is too much oxygen so it's like we have some kind of misfire at the catalyst level
+8190420	8198820	after the combustion so we need to be we need to be in uh right so best the best efficiency is obtained
+8198820	8204420	in more or less stoichiometric conditions so this is another important another important reason
+8204420	8215140	uh so so that we have to operate the engine at stoichiometric conditions the second part of the of the catalyst is
+8215140	8226980	not an oxidizer but is a real a reductant catalyst once again it operates uh it operates it has a very good
+8226980	8234980	deficiency in uh in stoichiometric conditions more or less here but its best efficiency since since it's a
+8234980	8243060	reductant catalyst uh the best efficient is the best efficiency is obtained when the conditions are slightly
+8243860	8250900	where the mixture conditions are slightly rich because this is a regular reductant catalyst so its activity
+8250900	8260180	is uh is negatively affected by the presence of uh by the presence of oxygen at the exhaust so in order to
+8260180	8266820	obtain the maximum uh the maximum efficiency for both uh we shall operate the engine at stoichiometric
+8266820	8275220	conditions that is pretty much around here so that we have the maximum conversion efficiency for uh for
+8275220	8284660	both catalysts at the same time the oxide the oxidizer and the reductant one one thing that is worth
+8284660	8292660	mentioning is that in order to uh this component is an um is a subject to homologation so there is a
+8292660	8298980	there is a there are regulations that uh in order to uh keep the uh the pollutant emissions law this
+8298980	8307620	component has to be continuously monitored in order to uh in order to monitor its degradation and uh its
+8307620	8318340	correct operation shall be guaranteed so uh in order to monitor the catalyst operation we have the catalyst
+8318340	8324740	let's uh just uh just i'll just use it as a as a reference figure the catalyst is something made like
+8324740	8332180	this it's a metal container with a honeycomb structure inside where with the where there is a uh uh uh
+8332180	8338820	where there is a catalyst uh dispersed on the surface it's made of two parts for the first part
+8338820	8343620	that is oxidizer and the first the second part is a reductant but the structure is pretty much like
+8343620	8349540	the one that you see here in the figure so we have the exhaust gases that get in from this side and get
+8349540	8354660	out on the other side in order to monitor the efficiency of this component we need two lambda
+8354660	8362020	zones one at the beginning one at the one before this component that is the same one that we used to
+8362020	8370180	that we used to uh to um to to to measure the presence of oxygen at the exhaust so used for uh for
+8370180	8377300	for fuel injection control but but we have but we need another lambda zone at the output of this component
+8377300	8384500	in order to uh in order to monitor its operation when these two lambda zones um give the
+8384500	8392260	same value for the oxygen concentration it means that the catalyst is um that the catalyst is degraded
+8392260	8401220	and so it needs to be uh to be substituted because the catalyst obviously uh operates in good me it
+8401940	8408740	i can observe i can understand that the the catalyst is operating correctly when uh when i see different
+8409300	8414660	values different signals coming from the lambda zones because it means that the catalyst has done something
+8414660	8443540	so now let's talk about the the dpf gpf system dpf stands for diesel particle filter
+8443540	8452260	this system is uh this system is uh is is an after treatment system is an exhaust after treatment system
+8452260	8461780	that is designed to reduce the the the the amount of soot that is released into the atmospheric air
+8463780	8468180	so this system is basically constituted by a by a metal container
+8468180	8476420	with uh with uh with a with the only comb structure inside like the one that you see here uh made of a
+8476420	8486580	metal or a ceramic material that mechanically captures the soot particles this matrix this uh ceramic or metal matrix
+8486580	8507300	is uh is um is um uh it has a uh a catalyst on on its surface a catalyst a substance that a compound that uh acts as a catalyst for the oxidation for the combustion of the soot that uh uh that uh that uh this captured inside
+8507300	8517540	this uh into this uh into this uh into this uh this only comb structure so how does it work basically it's very simple
+8518180	8525060	imagine that this only comb structure is made of a series of uh of a very narrow uh parallel channels
+8526100	8532180	where uh um where are soot deposits so um carbon deposits build up
+8532180	8542260	and uh uh at some point when uh the engine control model detects that enough soot that enough soot has
+8542260	8549220	been trapped by this system the uh the engine control model detects that there's a high pressure difference
+8549220	8556500	between the the input the inlet and the outlet of this component due to the fact that the uh the the
+8556500	8563620	channels forming the forming the forming the the uh the only comb structure inside are clogged by the by the
+8563620	8569700	carbon deposits it activates a so-called dpf regeneration strategy
+8572020	8581220	in order to regenerate this filter this dpf strategy entails that the uh the temperature of the exhaust
+8581220	8589940	gases have to be very high uh in uh during operation especially when in low load conditions where the
+8589940	8597140	exhaust temperature is low there is a lot of soot that is captured inside this component but by natural
+8597140	8603380	by normal engine operation the uh the exhaust temperature is not high enough in order to in order
+8603380	8609780	to trigger this regeneration the regeneration is basically uh uh what is it what is it basically
+8610660	8617860	it's just uh that the party the the carbon deposits that are uh that form inside these uh inside the
+8617860	8626020	the small channels of this uh of this uh of this component they are literally burned um this uh burning
+8626020	8631300	this combustion reaction is enhanced by the presence of a catalyst on the surface of these uh of this
+8631300	8645220	sonic home structure uh so as i already mentioned the uh this uh the regeneration strategy is the
+8645220	8649620	the regeneration strategy is necessary because in normal operation in normal operating conditions
+8649620	8655140	especially in case of low load low speed like driving in traffic for example the exhaust temperature is
+8655140	8666020	not high enough to uh to uh to make this uh this trap the suit burn so the ecm activates the dpf uh the dpf
+8666020	8673620	regeneration strategy do you remember that i mentioned in uh in the last slide of the previous deck that
+8673620	8681380	there was a post injection in diesel in diesel engines that were used only for dpf regeneration strategy
+8681380	8692740	only to regenerate the dpf yes okay so that the ecm uh decides to make the uh that that post injection
+8692740	8699460	that post injection has the only purpose of raising the um the exhaust gas temperature
+8699460	8708180	and this is part of the uh of the dpf regeneration strategy another thing that is done during the uh
+8708180	8718740	during the dpf regeneration strategy is uh adapting a low egr uh low egr openings so it means that uh that
+8718740	8725700	the egr valve is uh is closed is not opened in order to recirculate the uh in order to recirculate the
+8725700	8733860	the exhaust gases why do we do this this is done to have the maximum possible quantity of oxygen at the
+8733860	8742500	exhaust so that the um the uh the suit that is deposited that is trapped into this component can be
+8742500	8753140	fully burned uh quickly and completely so dpf regeneration strategy fuel post injection in order to
+8753140	8758340	depending on current load conditions in order to see to increase exhaust temperature and dedicated low
+8758340	8766340	egr strategy to increase the oxygen availability the gpf is the uh is pretty much the same thing
+8767620	8775460	but this system has the acronym means gasoline particle filter you may say why do we need the
+8775460	8782820	particle filter in a gasoline engine and the answer is this component is used in direct injection in
+8782820	8792100	gdi engines so direct injection gasoline engines that we've mentioned already produce a little bit of
+8792100	8802820	soot also the indirect engine the indirect the indirect injection gasoline engines make a little bit of
+8802820	8810820	soot but uh but this is uh it's it's it's an extremely small quantity it's totally negligible compared to uh
+8810820	8817060	to amount the amount of the amount of soot that is produced in a gdi engine but once again the amount
+8817060	8823700	of soot that is produced in a gdi engine is a little is a lot less than the amount of soot that is produced
+8823700	8833060	by a diesel engine the only difference the dpf and the gpf system are almost identical the only relevant
+8833060	8841380	difference is that the gpf requires uh requires no dedicated uh not dedicated regeneration strategy
+8842340	8851460	why is that this is uh this is because the in a gasoline engine the exhaust temperature is uh on
+8851460	8857300	average a lot higher than the uh than the exhaust temperature that we could observe in a diesel engine
+8857300	8865700	so normally in gasoline engines there is no dedicated gpf regeneration strategy because uh regeneration
+8866260	8874900	occurs automatically during a normal engine operation uh the only the only thing that uh the only thing
+8874900	8883300	that the only active policy that can be actuated by the uh by the by the engine control module is uh to uh
+8883300	8890660	make some kind of different policy some different uh uh actuation of for example analogously for the uh
+8890660	8897060	for the diesel engine something that can be done at the level of the egr valve when it is installed
+8897060	8904020	in the uh when it is installed in gasoline engines because it is we we may have an egr valve also on
+8904020	8911220	gasoline engines not also not only in uh especially if if they're directly injected not only in diesel engines
+8911220	8919540	or for example another thing that the ecm could actively do to regenerate the gpf could be the
+8919540	8928260	the management of the vbl vbt system or act a little bit on the spark advance and so on but the the main
+8928260	8936100	thing is that there is no post injection in a in a gasoline system used for regenerating the gpf
+8936100	8944980	gpf let's say that at least in a gasoline engine the adoption of this kind of component doesn't entail
+8944980	8952740	an additional consumption of fuel uh like like it happens in uh in diesel engines because in diesel
+8952740	8957700	engines in order to regenerate the particle filter it is necessary to spend an additional quantity of
+8957700	8964420	fuel that is used just to heat up the the exhaust gases while this does that well this doesn't happen
+8964420	8973380	in uh in gasoline engines in indirect direct injection gasoline engines there uh there may be another
+8973380	8980580	observation regarding the uh regarding the engine wear and uh and uh engine lubricant life because uh
+8980580	8988420	one another another consequence of uh adopting a post injection is that uh uh is that the the engine
+8988420	8995860	lubricant degradates faster and loses its lubricant properties when uh when um when uh when uh when
+8995860	9004340	dpf regeneration starts to be uh when the when the diesel engine with the dpf is used for most of the time
+9004340	9010740	in traffic when a lot of suit builds up into this system so regeneration has to be active regeneration
+9010740	9017460	policies to be triggered very often in order to uh in order to uh in order to to regenerate the filter
+9018580	9027300	the adoption of post injection um shortens the engine lubricant life and this may lead to uh additional
+9027300	9035700	engine wear but this is just uh an additional information not really important for for for you maybe
+9035700	9048020	okay i think that this is the uh this last few slide the last few slides the uh one of the newest
+9048020	9054740	after treatment systems uh used on diesel engines is the scr selective catalytic reduction system
+9057140	9064740	the main purpose of this system is to reduce the uh is to reduce the the nitrous oxides uh at the exhaust
+9064740	9072900	level so once we produced by uh by engine operation nitrous oxides we have this system in order to reduce
+9072900	9082820	them and avoid releasing them in the atmosphere how does this system work this system uses an aqueous
+9082820	9090900	solution of urea named adiblu that is injected uh that is injected a pill a dedicated a dedicated reactor
+9090900	9097380	that is the system that is the system that you see here so this is the exhaust line or diesel engine we
+9097380	9104900	have the diesel oxidant catalyst we have the dpf the diesel particle filter then we have let's forget
+9104900	9114180	this for a moment we have this additional system that is the selective catalyst scr and then we have this
+9114180	9122420	additional component scr appeal this system there is this urea dosing system that injects this adiblu that
+9122420	9132100	is a that is a solution that is a mixture of water and urea how does this system work the urea decomposes
+9133860	9141300	by effect of heat into ammonia ammonia is the actual reactant that is used in the scr
+9141300	9148820	water ammonia is a problem that is flammable toxic and volatile so it's not something that that that
+9148820	9156420	can be carried around easily that's why urea is used instead of pure ammonia because ammonia can be uh is
+9156420	9163460	a ammonia can be uh can be carried around but the problem is that is that ammonia is extremely volatile and
+9163460	9173380	is toxic so it's it's easier and safer to uh to have ammonia in the form of uh of a mixture of water and
+9173380	9179780	urea but ammonia is the actual reactant that is used in this kind of catalyst
+9181860	9188020	so the reactor the structure of the reactor is exactly the same as the dpf and the three-way catalyst
+9188020	9194980	so there's a onycom structure with many parallel channels where there is on the surface of these
+9194980	9196980	of the onycom structure there is a catalyst
+9199940	9209060	so this catalyst in the case of scr is made is a is a vanadium based is a vanadium based catalyst
+9209060	9219140	so what happens the ammonia the presence of the ammonia reduces the nitrous oxides into nitrogen and
+9219140	9231460	oxygen again there is a down there is a there are some aspects that have to be taken into consideration
+9231460	9241700	the first thing is that the concentration of nitrous oxides that is the pollutant that
+9241700	9248500	we want to eliminate from our exhaust gases has a very low concentration into the exhaust gases
+9250980	9259460	so uh the time the dwelling time of the of exhaust gases and ammonia into uh into the catalyst
+9259460	9267220	shall be quite long because the uh because the the thing that we want to uh that we want to react
+9267220	9273220	and that we want to reduce the nitrous oxides is at a very low concentration
+9276180	9284500	so uh in order to uh in order to try to uh to to reduce uh the more we can the nitrous oxides
+9285140	9292420	we shall inject more ammonia more ammonia than necessary more urea than necessary but if we inject
+9292420	9297940	more urea than necessary what does it happen it happens that we are going to have more ammonia than
+9297940	9306180	the quantity that we need in order to reduce the nitrous oxides and having ammonia at the exhaust is
+9306180	9310820	even worse than having the nitrous oxides for the reasons that we mentioned before
+9310820	9319940	in order to do this this catalyst this component the ecr is split in two we have the ecr first that is
+9319940	9327300	an active component and then we have a second part that is called the scr asc asc asc stands for
+9327300	9334020	ammonia slip catalyst what is the purpose of this second part the purpose of the second part is to
+9334020	9343700	uh absorb like uh like a sponge it it is used as a buffer for ammonia this this catalyst here is
+9343700	9350100	almost it's very similar to the one to the ecr but this part doesn't have a urea dosing system so
+9350100	9357620	that this part here acts as a uh as an ammonia buffer so the because it's able to it is able to
+9357620	9363780	absorb the access ammonia from the first stage and to release it like for example imagine a transit
+9363780	9370340	where the engine is producing more nitrous oxides than expected this catalyst is able to use the uh
+9370340	9378260	uh the the excess ammonia from the uh from the previous operation and uh uh and act as a buffer
+9378260	9385780	basically so that we have uh so that we have no ammonia at the exhaust ammonia at the exhaust is the
+9386340	9390260	is the uh is the main thing that has to be avoided when having this kind of system
+9390260	9396660	uh so okay questions
+9406260	9419380	hello no it's all no question yes no no okay okay guys so this is just a schematic this is uh like
+9420340	9429060	the the first the first scr systems back in 2018 2019 were had a structure similar similar to this they
+9429060	9436100	were quite simple so they was just the the metal vessel with a urea dosing system and a few sensors and
+9436100	9447460	so on but i just want to show you how in like in 2021 the system has become complex the ecr system
+9448420	9454100	just there is a there is a few slides but i just want to uh want to take a minute just to show you
+9454100	9460980	how the ecr system has become complicated the long years so actually this is just not the uh this just
+9460980	9467940	not just not the cr system it's just it's all the it's all the exhaust line but uh here you can see that
+9467940	9475300	the system is quite has become quite complicated there is uh two urea two urea injectors there is a
+9475300	9482260	uh uh there is a lot of sensors of oxygen sensors and ox sensors all over the place uh the system is uh uh
+9482260	9490260	the system is uh uh the system is uh is uh is uh is temperature is temperature regulated uh so well yeah
+9490260	9498260	so well yeah respect to this one the actual the actual current implementation of the system looks
+9498260	9505220	uh looks uh uh more like this where there is as you can see a lot of components and so it entails a lot
+9505220	9511300	a lot of control and a lot of software and functions that need to be implemented and then validated
+9511860	9518180	respect to the uh to the previous implementations and all this system have to be has to be integrated
+9518180	9523460	into the uh has to be integrated with the powertrain uh with the powertrain functionalities
+9524020	9530180	so it's uh yeah it was just to show you that that it could be quite uh quite challenging and
+9530180	9543860	and uh that this system may increase the system complication uh more than a bit

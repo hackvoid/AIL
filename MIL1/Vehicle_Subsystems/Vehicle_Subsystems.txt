@@ -1,0 +1,138 @@
+Hello to everyone, I am Massimiliano Schettino and today we will follow a lesson on Vehicle
+Subsystems. Vehicle Subsystems are defined as the different components like Burke Disks,
+Alternators, Valves and so on that cooperates for the specific functionalities as reduce
+vehicle speed, avoid battery discharge, reduce car emission, etc. and that make up an entire
+vehicle when built together. Let's begin with the braking system, a critical component
+on vehicle safety. A vehicle braking system is responsible for slowing down or stopping
+the vehicle when needed. There are two primary types of brakes, drum brakes and disc brakes.
+A drum brake consists of a metal rotating drum and friction coated surfaces called brake shoes.
+When the driver applies the brake, these shoes press against the drum, creating friction that
+slows the vehicle down. Drum brakes are more common in older vehicles and are still used
+on the rear wheels of some modern cars due to their cost effectiveness. Disc brakes, on
+the other hand, are positioned inside the wheel and rely on an hydraulic system to function.
+When the brake pedal is pressed, hydraulic pressure forces the brake pads to clamp onto a rotating
+metal disc or rotor, slowing the wheel. Disc brakes offer superior stopping power and are widely
+used in modern vehicles.
+Now let's talk about vehicle dynamics, specifically overseer and underseer. Overseers occurs when
+a car's rear wheels lose traction during a turn, causing the vehicle to turn more sharply than intended.
+This behavior can lead to skidding or spinning, particularly in rear-wheel drive cars, or in conditions
+of low traction. Underseer, in contrast, happens when the front wheels lose traction, causing the
+car to follow a wider path than intended. Drivers often experience understeer in front wheel-driver
+cars when turning at high speeds or during sudden maneuvers. Correcting understeer typically involves
+reducing speed and realigning the steering.
+Moving on to the anti-lock brake system, or ABS. ABS prevents wheels lockup during braking by
+continuously monitoring the rotational speed of each wheel. Sensors placed on each wheel relay
+this information to the electronic control unit . If the ECU detects that a wheel is about
+to lockup, it modulates the brake pressure to that wheel, allowing it to maintain traction.
+This system enhances vehicle stability and reduces stopping distances, particularly on slippery surfaces.
+Electronic brake force distribution, or EBD, works in conjunction with ABS to optimize braking performance.
+During braking, the low distribution on the wheels varies, with the rear wheels generally experiencing
+less grip. EBD adjusts the braking force applied to each wheel to prevent rear wheel lockup and
+maintain vehicle stability, especially during cornering. Electronic stability control, also known
+as ESP or DSC, is a system designed to enhance vehicle stability during skidding events. The ECU monitors the
+car's trajectory and compares it to the driver's intended path. If a discrepancy is detected, the system reduces engine power
+and applies braking to individual wheels to correct the car's motion. This intervention prevents accidents
+by helping the driver to maintain control.
+The traction control system, also known as anti-spin regulation, prevents wheel spin during acceleration.
+This system is particularly useful in low traction conditions such as rain or ice. Sensors detect wheel spin,
+and DSU adjusts engine power or applies braking to spinning wheel, ensuring optimal traction.
+The heel holder system assists drivers when starting on an incline. It prevents the vehicle from rolling
+backward during the transition from the brake pedal to the accelerator, offering convenience and reducing
+the risk of accidents. Alternators are responsible for keeping the vehicle's battery charged and powering
+electrical components. Since alternating current EC cannot be stored, alternators use a rectifier to convert
+DC to direct current DC for storage. Modern vehicles often feature smart alternators, say SAM,
+which adjusts the power drawn from the engine based on the vehicle's operational state, improving efficiency.
+The starter motor is a key component in an internal combustion engine.
+It's primary function is to draw electrical current from the battery to turn the engine over until it reaches
+a speed sufficient for self-sustaining operation. It is mechanically connected to the engine's
+craft shafts and engaged only during the startup phase. Modern starter motors are compact yet powerful,
+and ensuring reliable ignition in all conditions. Next, we will discuss emission-related subsystems,
+crucial for reducing the environmental impact of vehicles.
+Exhaust gas recirculation system recirculates a little portion of exhaust
+exhaust gases back into the engine's intake main fold. By doing so, it reduces combustion temperatures
+and the formation of nitrogen oxides, or NOx, a harmful pollutant. The AGR system is controlled by the
+engine control unit, which adjusts the recirculation rate using a PWM signal.
+The diesel particulate filter, or DPF, is designed to trap and remove particulate matter from diesel exhaust.
+It works in conjunction with the catalytic converter and uses diagnostic software to monitor and maintain
+its functionality. Periodic regeneration burns off accumulated salt, ensuring efficient operation.
+The lambda probe is a sensor that measures the oxygen concentration in a vehicle's exhaust gases.
+By comparing this measurement to the oxygen levels in the ambient air,
+it determines the air-fuel mixture in the engine. The lambda value indicates whether the mixture
+is stichiometric, where lambda is equal to 1, rich, if lambda is minus than 1, or lean, if lambda is
+greater than 1. This information helps the engine control unit in optimizing fuel injection and in reducing emissions.
+There are different types of lambda probes, zirconium dioxide, titanium dioxide, and double lambda probes.
+Zirconium dioxide probes reproduce a voltage signal based on oxygen levels, while titanium
+dioxide probes measure resistance changes. Double lambda probes enhance precision by using two sensors
+to provide more accurate data, improving engine efficiency and reducing emissions.
+A catalytic converter reduces harmful emissions by converting pollutants into less harmful substances.
+It operates within the exhaust system, using a catalytic to promote chemical reactions that oxidize
+carbon monoxide and hydrocarbons while using nitrogen oxides. The catalytic converter also contributes
+to noise reduction in the exhaust system. There are three main types of catalytic converters,
+reducing, oxidizing, and three-way. Reducing converters target nitrogen oxides, oxidizing converters
+handle carbon monoxide and hydrocarbons, and three-way converters combine this function for engines
+operating with the stoichiometric combustion. These devices are essential for meeting modern emission standard.
+Selective catalytic reduction is a process used to reduce nitrogen oxides in diesel engine exhaust.
+By introducing a reducing agent, typically urea, into the exhaust system, the system promotes
+chemical reactions that convert NOx into harmless nitrogen and water vapor. The SCR system requires precise dosing
+and a specially designed catalyst to ensure effectiveness.
+Let's now pass to valve timing, which is essential for efficient operation of a four-stroke engine.
+Valve timing refers to the synchronization of the opening and closing of the engine's intake
+and exhaust valves with the movement of the pistons.
+This synchronization is achieved using chains, belts, or gears to link the camshaft and crankshaft.
+Accurate valve timing ensures optimal engine performance, fuel efficiency, and reduced emissions.
+Fixed valve timing uses a camshaft with a constant profile, resulting in unchanging valve operation
+of the system. This simplicity is cost-effective, but limits optimization across varying engine speeds.
+Variable valve timing, on the other hand, dynamically adjusts the timing and duration of valve operation.
+This system improves performance at different engine speeds, enhances fuel efficiency, and reduces emissions.
+For example, at low RPM, valve timing may prioritize smoothness, while at high RPM, it shifts to maximize power output.
+There are several mechanisms to control valve timing.
+Camshaft rotation, that adjusts the timing without altering the duration.
+Double-toothed gear, that incorporates a gear that can slide, changing the valve timing.
+While variation of cam effects alters the cam's impact on valve operation,
+influencing the duration and amplitude of timing.
+These methods allow manufacturers to fine-tune engine performance based on specific requirements.
+Some engines employ advanced configuration, such as double cam, where multiple cams with different
+profiles control the same valve, offering flexibility for different driving conditions.
+Rocker arm, that uses a single cam and a rocker arm system to adjust the valve's actuation,
+and this allows fine control over the valve's behavior.
+Or disengageable cams, where these cams can slide along the shaft and lock bolts in a closed position, enabling the engine to deactivate certain cylinders, improving fuel efficiency during load-demand scenarios.
+Automotive manufacturers have developed various variable timing systems.
+Examples include VTAC by Honda, that optimizes performance and efficiency through multi-stage cam profiles.
+VTAC by Honda, that offers seamless adjustment to camshaft timing.
+Or multi-air by Fiat, that uses an electronically controlled hydraulic system for precise valve timing and lift control.
+This system combines flexibility and efficiency, reducing emissions while enhancing power.
+Let's open a parenthesis on multi-air system.
+Fiat's multi-air system represents a leap in valve timing technology.
+It uses an hydraulic tupper controlled by an electronic valve to modify the camshaft's influence on the valves.
+This innovation enables precise control of valve opening and closing, adapting to driving condition and throttle input.
+The result is improved power delivery, reduced emissions, and better fuel economy.
+Now let's move on the transmission system, which plays a key role in transferring engine power to the wheels while optimizing torque and speed.
+Transmissions act as speed reducers, allowing the engine to operate efficiently across varying demands, whether for acceleration, steady cruising, or climbing.
+The basis of transmission system is the gearbox.
+It modifies the torque coming from the engine by selecting different gear ratios.
+Lower gears provide higher torque, useful for climbing or acceleration, while higher gears focus on speed and fuel efficiency during cruising.
+Modern gearboxes are designed to minimize power losses and maximize efficiency, offering smooth transitions between gears for optimal driving experiences.
+Transmissions can be manual, automatic, or a combination of both.
+Automated manual transmission, or AMTS, combines the mechanics of manual gearbox with automated clutch and gear shifted controls.
+An electronic control unit manages these operations, providing the efficiency of a manual system with the convenience of automation.
+Dual clutch transmissions combine the benefits of manual and automatic systems.
+They use two separate clutches for odd and even gears, enabling rapid gear changes with minimal power interruption.
+This design enhances both performance and fuel efficiency, making it a preferred choice in high-performance and luxury vehicles.
+Automatic transmissions use hydraulic systems and planetary gear sets to change gears seamlessly.
+The torque converter replaces the clutch, enabling smooth power transfer and eliminating the need for manual gear changes.
+This system prioritizes comfort and easy to use.
+To the torque converter is a critical component of automatic transmission.
+Positioned between the engine and the transmission, it replaces the traditional clutch.
+It enables smooth power transfer during acceleration and allows the engine to idle without stalling the vehicle.
+Additionally, it provides torque multiplication at low speeds, improving vehicle performance.
+Finally, let's discuss the traction system, which determines how power is distributed to the wheels.
+The choice of traction system significantly impacts a vehicle's handling and performance in different driving conditions.
+Front wheel drive or FWD.
+Here the engine powers the front wheels, offering better fuel efficiency and compact design.
+For the rear wheel drive or FWD, the power is sent to the rear wheels, enhancing handling and performance, especially in sports car.
+But we have also the four wheel drive or FWD, where power is equally distributed to all wheels, making it ideal for off-road and rugged terrain.
+Finally, the all wheel drive or AWD, where it dynamically distributes power between axles based on traction needs, ensuring optimal performance in varying road conditions.
+Well, this concludes our session on vehicle subsystems.
+The systems for the backbone of modern automotive engineering, contributing to safety, efficiency and performance.
+I hope you all enjoyed my lesson, and for any doubts or questions, here you can find my email.
+I can only say thank you for the attention and goodbye.

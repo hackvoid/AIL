@@ -1,0 +1,474 @@
+start	end	text
+0	7000	Okay, great. I will start to share my screen.
+7000	12000	It's a second.
+12000	23000	So, anybody knows what is Inca and what is used for?
+23000	27000	Do you know anything about it?
+27000	30000	Yes, a little bit.
+30000	35000	Okay, Hamza, you know, just leave your colleagues to know.
+35000	40000	Okay, I'll just watch.
+40000	43000	Andrea.
+43000	48000	I'm learning it with Inca, basically.
+48000	52000	What is it used for?
+52000	55000	Yeah, basically, yeah.
+55000	67000	I'm learning that just to see the signals to monitor in them, to set the calibration also.
+67000	72000	And to flash the software, the software maybe.
+72000	76000	Okay, I don't know what else to say.
+76000	83000	Okay, I'm going to explain the most important function for Inca and what is used for.
+83000	90000	Inca is used mainly to interface with the internal signal of the echo,
+90000	99000	which can be the CPU, BPCM, whatever echo which has access to its software, the hardware,
+99000	107000	which is through to ethos or cable build.
+107000	111000	The ethos should be like this.
+111000	125000	It's this hardware which permits you the communication between the physical echo and the software to be able to read the internal signal of the echo.
+125000	129000	Okay, so.
+129000	133000	The echo in the vehicle is in this picture.
+133000	140000	It's a VDCM of Maserati, which is a.
+140000	145000	Excused X-CityK cable, high speed communication.
+145000	150000	As you can see, it's a development echo and it has its.
+150000	153000	X-CityK module that coming out of it.
+153000	156000	There are two differences between the echoes.
+156000	157000	One is production.
+157000	162000	The one you have in your vehicle at home when you have your vehicle.
+162000	168000	If you open it, you don't have this port of X-CityK module because it's a closed echo.
+168000	174000	And the coast is around like 50 to 100 euros for the production one.
+174000	180000	For the development one, it can reach 15,000 euros for only development echo.
+180000	190000	It depends on the complexity of the hardware and the microcontroller.
+190000	197000	So the communication with the ethos is coming on through a cable which called X-CityK.
+197000	204000	If we want to communicate only with one echo, then no need for the ethos.
+204000	208000	I will have a cable which is called X-CityK host.
+208000	213000	You should go directly from the echo to your PC directly.
+213000	219000	Other than that, if you want to connect other cans or connect more than echo,
+219000	225000	you should adapt the modulators, as you can see in this picture.
+225000	231000	It's 891, where you have the first port, for example, the host, which goes to your PC.
+232000	236000	Those two ports can be connected to other two echoes.
+236000	241000	And the others, as you can see, they are scan FD and lean to.
+241000	247000	It depends on the needs of your implementation and what you are testing,
+247000	251000	what you need to have in your data or ink.
+251000	260000	That's why it depends on the goal and the target that you want to achieve by the log that you have.
+260000	265000	If I want to have everything in the same log with scan signals, lean signals,
+265000	270000	and the Bose echoes, then I need to adapt an ethos complex like this,
+270000	272000	and it costs a lot of money.
+272000	276000	Other than that, I just need to see the internal signals of the AVCU.
+276000	278000	There is no need for that.
+278000	289000	And for the can logs, you can just log by the encase normally through the OBD on Kanalyzer.
+289000	295000	So, let's go in Inka and check what we need.
+295000	298000	As you can see, this is the main page of Inka.
+298000	306000	I have a version 7.2, which is limited for if you are going to work in cell-length side.
+306000	316000	For AVCU2, it's not supported, so I recommend you on your PCs to upgrade it to the 7.3,
+316000	325000	at least, to be able to open the software AVCU2 offline.
+325000	328000	And we're going to check this right now.
+328000	334000	So, the main thing about Inka is you have a database.
+334000	337000	In this case, I'm working on different projects.
+337000	344000	I have Lukato, HTT, smart car, cell, and you have different modules.
+344000	352000	So, first thing, just create a top folder.
+352000	355000	Just to have everything inside it.
+355000	359000	And then inside this, you can add your software.
+359000	366000	You can add your DBCs and so on.
+366000	369000	So, let's say you want to add your software.
+369000	376000	What you should do, just right-click on it, add and go to A2L.
+376000	394000	Then go to check where I downloaded the software or go to the folder directly.
+395000	400000	The first thing you're going to add is A2L, which is the base of the software.
+400000	402000	Then just copy.
+402000	405000	So, you have the poster post.
+405000	408000	And then it will ask you, what is the hex file?
+408000	412000	Then I will go there, paste the same.
+412000	418000	And then I don't have hex file, I have S19, which is equal to the hex file.
+418000	421000	It's the calibration file.
+421000	424000	In this case, there is two.
+424000	426000	That's it.
+426000	434000	If I'm working on vehicle on a development echo, and I need, and I don't have the MMO code association on my vehicle,
+434000	436000	I'm talking first to learn the sport.
+436000	448000	But in this case, we have the mobilizer function on on a dataset, which is the association between the body and AVCU has already done.
+448000	452000	I need to flash the MMO code, which is the S191.
+452000	458000	Other than that, you will flash the MMO, which is the new development echo.
+458000	464000	You just put it on this vehicle to do your stuff and testing and so on.
+464000	472000	So, you just need to flash the MMO off, because you don't have the association between body and AVCU.
+472000	480000	Or other main echo, which is EDCM, HTTP, and so on.
+480000	490000	Okay, once you click on it, it's going to take a while to build your software and ink.
+490000	497000	But once it's built, you can see that you have the software here.
+497000	504000	Then you have its name and the hex oil is here.
+504000	506000	Okay.
+506000	513000	So, a recommendation, just copy the first part and paste it here.
+513000	515000	Okay.
+515000	516000	Why?
+516000	519000	This is the main dataset built.
+519000	525000	And if I want to change something, I will change it on this one gray one.
+525000	532000	But if I don't want to change anything, I will just right click and freeze it.
+532000	537000	This will freeze my calibration on this dataset.
+537000	539000	So, I know that this one.
+539000	545000	But let's say I want to add another one.
+545000	546000	I want to change something.
+546000	554000	Then I will rename it and move the equation to.
+554000	555000	Okay.
+555000	558000	Then you have the same dataset here.
+558000	565000	To change it, you need to go to calibration data manager to change it.
+565000	570000	Other than that, you can change it even on the working page.
+570000	573000	Okay.
+573000	576000	Got my point?
+576000	579000	Any questions?
+579000	580000	Okay.
+580000	582000	Now questions.
+582000	583000	Okay.
+583000	586000	So, I will go to add a workspace here.
+586000	590000	Let's say, oil.
+590000	600000	And add the data software that I just inserted here.
+600000	603000	And so on.
+603000	608000	So, he's telling me, okay, he created a new workspace.
+608000	613000	And you inserted a software.
+613000	616000	What hardware you are using.
+616000	619000	And he's giving you all the options for it.
+619000	620000	Okay.
+620000	623000	But since I'm using, you know, in my vehicle.
+623000	628000	And I will pick this choice.
+628000	630000	Which is the one that I'm adapting.
+630000	633000	Other than that, you can choose another module.
+633000	635000	As the one I showed you before.
+635000	638000	Which is the eight.
+638000	642000	As for example, eight, nine, one or eight, nine, two.
+642000	644000	It's depend on the most used one.
+644000	648000	The one you have on your vehicle or on your simulator.
+648000	649000	Okay.
+649000	655000	So, I will use this one.
+655000	662000	This is the second.
+662000	663000	Okay.
+663000	666000	Beside that the hardware and the software.
+666000	671000	There is an experiment here in the workspace.
+671000	672000	Okay.
+672000	675000	So, just to repeat the workspace, you can add it here.
+675000	678000	Add workspace and you have your own workspace.
+678000	679000	Okay.
+679000	685000	If you want to add on this workspace an experiment.
+685000	686000	A new one.
+686000	689000	Just add experiment.
+689000	691000	Okay.
+691000	695000	And go and insert it here.
+695000	704000	But if let's say one of my team or a calibrator or anybody that asked me to do a certain test
+704000	711000	on the vehicle or the simulator told me can you insert those variables or can you use this
+711000	713000	experiment while you are working.
+713000	725000	So, I will just go to the folder that you want to import it and go import the file or the
+725000	728000	experiment.
+728000	729000	Okay.
+729000	730000	So, I have one here.
+730000	731000	Okay.
+731000	739000	There is like one for the base software testing or other things that I had before.
+739000	741000	So, let's say take this one.
+741000	745000	And then as you can see it's point EXP.
+745000	750000	The extension for the experiments.
+750000	757000	Okay.
+758000	760000	Then open this window.
+760000	764000	Just tell you, okay, imported, positive.
+764000	769000	And you have the version here.
+769000	771000	And let's say, okay, I will change this.
+771000	773000	I want the new one that I uploaded.
+773000	774000	Okay.
+774000	776000	I will take this one here.
+776000	779000	Now, let's check the first thing harder.
+779000	782000	Let's go here.
+782000	783000	Okay.
+784000	792000	As you can see, this is the main window to align with your echo in Inca.
+792000	798000	If you don't find your heard or you have to search it by this lens and depend on your interface,
+798000	805000	what you are connecting with your echo, if you are connected via Ethernet or USB or whatever else,
+805000	808000	you will just try to search for it.
+808000	812000	But since I'm on offline here, I will just show you everything offline.
+812000	817000	And I'm using the one in the vehicle, which is a city chaos.
+817000	825000	So, let's say if you have a lot of echoes and a lot of stuff, there is a bar called name here.
+825000	829000	And I want to name it AVCU1.
+829000	830000	Apply.
+830000	831000	What will have it?
+831000	832000	I will have it here.
+832000	835000	Look, it's called AVC1.
+835000	843000	So, let's give you an indication of what echo you are connected to if it's aligned or not and so on.
+843000	846000	When you have more than one echo.
+846000	853000	Another thing for the automatic connection and the alignment of the echo.
+853000	860000	Inca should be aligned with the software clashed on the echo.
+861000	866000	So, there is a working page where you change your calibration.
+866000	874000	There is a reference page where you have the freeze calibration that you cannot change it.
+874000	877000	And then you have the one in the echo.
+877000	885000	So, the alignment between the echo and what is in the working and reference page should be here.
+885000	890000	And if I go to this two arrows, it will start the initialization.
+890000	892000	Let's say, okay, I'm not connected.
+892000	894000	I don't see anything.
+894000	906000	But the only thing I see is this software, 24b, 20c, 0, 3a, 0, which is for x to 15, with you, which is opened here.
+906000	909000	Okay.
+909000	923000	So, if I'm connected to a real vehicle, I will have or everything is red because I'm not aligned to the actual echo and vehicle.
+923000	929000	Other than that, I will have like a misalignment only for the working page or something like this.
+929000	936000	I have the same software. I will have everything aligned between the reference, the working and the code page.
+936000	938000	Okay.
+938000	944000	So, my recommendation is to set this retry always.
+944000	946000	Initialize automatically.
+946000	953000	If you are working with a lot of calibrations in the working page and need to maintain it,
+953000	959000	then you can adapt this option of download to the working page.
+959000	966000	And after you set your settings, click on apply to save it and maintain it.
+966000	977000	Other than that, for to maintain this option of the working page, I would suggest to go here, auto-star behavior, always working page, just to maintain it.
+977000	981000	Okay. And then don't forget the hit Apply.
+981000	991000	Okay. Let's say we aligned, we are on vehicle, and we want to flash.
+991000	997000	For the alignment, first of all, you need to hit always F3.
+997000	1003000	If you are using your laptop, there is FN function, so hit on FN, the plus F3.
+1003000	1009000	Other than that, you can hit here, initialize hardware, and it will initialize by its own.
+1009000	1016000	But since we don't see the hardware here because we are offline, this is not visible for the moment.
+1016000	1021000	So, let's say I want to flash, this is the window, those two arrows.
+1021000	1026000	I will go to Enhance it, flash programming, code and data.
+1026000	1034000	I will flash from the reference page, which is I set as read only to the echo flash.
+1034000	1039000	Here is the name of the dataset that I am flashing.
+1039000	1049000	This is the working page that has changed the reference page, and then you hit do it.
+1049000	1061000	What is this window? This window is saying that I need a file, which is a translation for the software, to be able to flash this software.
+1061000	1069000	This file is, for the London site, is present and the release note.
+1069000	1073000	I will show it to you later.
+1073000	1079000	But you have to use this file, which is for this software.
+1079000	1085000	If they change the streamline or they change the software 24b to 23d,
+1085000	1091000	and they are choosing a different profile, we need to edit here.
+1091000	1095000	As you can see, I have in this link three different profiles,
+1095000	1103000	1 for M189, 1 for M182, and 1 for VF and Ducato.
+1103000	1112000	How to configure it? You just have to have your file and the PC, install it, and go to the file, select the file, which contains the profile,
+1112000	1118000	and then it will be installed so easily.
+1118000	1123000	Here you just set normal, and you have the options to flash.
+1123000	1129000	Go to all the software, which has code and data and calibration.
+1129000	1135000	Calibrations only, but I recommend to flash all the packets together.
+1135000	1142000	Nowadays, because it should be associated together, other than that, in all the implementation,
+1142000	1148000	and the software mainly didn't change for a while, so they only changed data set calibration,
+1148000	1152000	so you can flash the data set.
+1152000	1158000	But nowadays, in the London site, you have a release every week, not every day.
+1158000	1161000	It depends on the project and the agency.
+1161000	1167000	For the bootloader, it's the one written in the release node for the London site,
+1167000	1174000	and it's a hex file, which can be flashed by file,
+1174000	1180000	just the first time that it's changed it for the release node.
+1180000	1186000	If it doesn't change and you flashed already the same bootloader, you don't need to flash it every time, just the first time.
+1187000	1196000	If you lost communication with your Echo, and you are not able to communicate it with your Echo VSCDA or Bianca,
+1196000	1207000	maybe you should flash your bootloader in order to try to refresh again the proper software,
+1207000	1212000	maybe mistaken and flash the wrong software, this is a way to recover it.
+1212000	1221000	In this case, we want to flash the whole software, we use all code and that and calibration option.
+1221000	1225000	Then hit OK and say OK, you are offline and so on.
+1225000	1229000	But since we are offline, there is no need to proceed,
+1229000	1233000	because you would just have another window, which is called assertreset,
+1233000	1238000	and then you have to choose it, reset Echo and the flag will start,
+1238000	1247000	and then a window will open, tells you when the flash is going, if it's failed or it's successful.
+1247000	1256000	Once you've finished, it will start the automatic alignment, other than that you can align by hand.
+1256000	1269000	This option, we can use the data set for the working page that we changed it or,
+1269000	1273000	and the moment we didn't change anything, we just said that.
+1273000	1283000	OK, then to open the experiment, you can open it from this icon or from the hardware inside the one selected here.
+1283000	1289000	Any questions for the moment? I think it's clear, easy.
+1289000	1294000	Any doubts?
+1294000	1298000	Nothing? OK.
+1298000	1303000	Wait, I can't hear you. Can you repeat?
+1303000	1306000	I was saying so far, so good.
+1306000	1309000	OK, thank you. Let's go.
+1309000	1317000	So, let's open the experiment and say, OK, since I'm offline, I will go and hit now,
+1317000	1323000	but if you are in vehicle on a simulator, just try to hit yes in this condition.
+1323000	1333000	So, it can align with the hardware and goes through the actual Echo software.
+1333000	1338000	So, this is the experiment in ink, as you can see.
+1338000	1349000	I had already configured an experiment, which was with the signals that I need.
+1349000	1359000	If I don't know what signals needed, I have to look at my test case and understand what I'm testing, what I need to do.
+1359000	1377000	If I'm going to do it on vehicle, I should have a window with all the main signals for the power modding or at least the signals to give you the feedback of the cities of the vehicle just to understand.
+1377000	1394000	If you are in KON, if you have contact or closed, if you are on drive ready, if the feedback from the VPCM is coming correctly and conductors are actually closed, the park lock is engaged, if we be is engaged and so on.
+1394000	1405000	All of these basic signals need to be in front of you just to give you a feedback about your testing or simulator or the vehicle doesn't change anything.
+1405000	1413000	You need to understand that through ink, you need to see what is going on in the vehicle without watching the vehicle too.
+1413000	1428000	So, in front of you, I want you to focus on the actual cities of the park lock, what is happening or what is the sock, what is the p-lock position and so on.
+1428000	1439000	So, not only can signals, I want you to get even the internal signals for this variable, maybe there is a misalignment between can signals and internal signals.
+1439000	1455000	So, be aware of what you are testing, try to have the dedicated signals for the test you are adapting and the correct ring that contains all the information for the test.
+1455000	1460000	You can even log it in the background without opening the experiment.
+1460000	1470000	So, first of all, if I want to open a new experiment, there is this button, but if I want to open a different one, I will hit this button.
+1470000	1484000	This one is for saving, graphic interface, this is the hardware button, this just to go to the main window of Inca and here what you need it for the variable selection.
+1485000	1490000	So, this is your main window where you can pick the signals.
+1490000	1499000	Let's say I want the signal for the key, command the ignition STS, and you have it here.
+1499000	1512000	I have the can signal, I have the base of it, so let's say I don't remember actually the signal, I will put a lot of stars and then you are going to have it here.
+1513000	1524000	So, stars give you the option to search for your signal correctly and get the accurate signals that you want.
+1524000	1533000	Let's say I want the one coming from the can or and the one coming from the base of it and so you can select them.
+1533000	1539000	Okay, once you selected your signals, I have to adapt at the roster.
+1539000	1544000	What is the roster is? It's an sampling time of your signals.
+1544000	1561000	So, let's say your echo has the ability to give you the signals that you need to monitor on certain frequency.
+1561000	1575000	So, let's say if I'm adapting an option of 50 milliseconds, then I'm expecting a sample of every signal H 50 milliseconds.
+1575000	1585000	Okay, so every 50 milliseconds, I will get a sample for the command ignition STS.
+1586000	1597000	If I'm adapting a foster roster, which is the 25 milliseconds, then I have two samples in 50 milliseconds and so on.
+1597000	1602000	It's the maximum speed that you have for in this condition is 25 milliseconds.
+1602000	1608000	There is another option here as you can see three points in 125 milliseconds and so on.
+1608000	1614000	But the 25 for sure is the main and fastest one in this situation.
+1614000	1623000	There is a 10 milliseconds and one milliseconds in different echoes and projects depends on the implementation.
+1623000	1636000	This is a VCO one. It's different than other projects. Okay, so depend on the actual speed of the ring that is going on in the VCO model.
+1636000	1646000	You need to adapt the correct speed over faster one to get the evolution of the signal in front of you.
+1646000	1658000	Other than that, if I'm if I'm watching the signal in 100 milliseconds, but the actual signal evolves at every 25 milliseconds, I lost three frames.
+1658000	1671000	Okay, so I lost three samples of the same signal. Maybe it's picked to 400 and came back to zero and I didn't see anything because I'm not watching with the right roster in this condition.
+1671000	1679000	Okay, the raster is so important to see what's happening to your data.
+1679000	1688000	You hit okay and play to start seeing the actual signals.
+1688000	1696000	But since I'm offline, I don't see anything. Let's say you had this window and you forget about the measure rate.
+1696000	1705000	So you click here, I click go to measure rate and then you can change it directly after picking it.
+1705000	1710000	Okay, as you can see here is selected for 50 milliseconds.
+1710000	1719000	Okay, beside than that, you can choose calibrations.
+1719000	1736000	Let's say and I will choose only calls as you can see you can pick whatever calibration you want and hit enter.
+1736000	1742000	Okay, but as you can see, I'm not able to change any calibration in this condition.
+1742000	1747000	Why? Because I'm in working in reference page. I'm not in the working page.
+1747000	1755000	So, first of all, this is your indication of the situation with the echo.
+1755000	1762000	Here, he lost communication. I'm not communicating with the echo. So he said, okay, echo off, no access.
+1762000	1776000	If I'm aligned and everything is okay, I will just see this equal to zero where I don't have any calibration modified in the working page and I don't have any issues with the communication.
+1776000	1789000	If I have a difference between working page, a reference page can tell me, okay, there is a check sum error and it's going to be visible in this condition and you need to align in all conditions.
+1789000	1800000	So, to be able to change calibrations, just hit the working page other than that align and then go back to working page.
+1800000	1817000	For the calibration, you can hit increment F7, decrement F6 or use the buttons here to change it and to remove all the changes, control you.
+1817000	1825000	Okay, as you can reset to reference page value. Okay, as you can see, there are a lot of shortcuts here that you can adopt.
+1825000	1840000	If I'm changing the size of the window, I can click alt plus and then it will come back to this optimal size for the window for the column alto and so on.
+1840000	1844000	It depends on what you need to do with your ink.
+1844000	1868000	I recommend you to use it offline to start exercising with your ink offline before going to the vehicle or just to how to pick and create a window with the proper signals and calibration needed for your activity.
+1868000	1881000	Okay, then let's check other windows. Let's say, okay, I got my signals, I'm play, I'm in play, I'm in simulator and I want to lock them and over as I want.
+1881000	1892000	I will go just hit the red button, which is lock. As you can see, the cursor start time started for the recording time.
+1892000	1902000	If you have space enough space on your PC in your database, it will give you the maximum time for your log.
+1902000	1919000	It depends on the your PC and the space on it. It depends on the database and a lot of variables, but as you can see, if you have a strong PC, you can have a lot of time.
+1919000	1931000	Because we are offline, I'm not logging any data, so the data is actually empty because we are offline. So as you can see, it's giving you the maximum time, which is seven hours.
+1931000	1937000	But if you are in vehicle, maybe you can tell you one or two hours, depending on your PC.
+1937000	1943000	And you can change the calibration while you are doing testing and so on.
+1943000	1949000	But let's say in your log, I want to log even the calibration.
+1949000	1954000	How you can do that? Okay, first of all, you have to do it before starting the log.
+1954000	1964000	So to save the log, you just have to play and then it will start saving and give you another window, which is this one.
+1964000	1971000	Where in this window, you have the actual path, the file.
+1971000	1981000	And the name and all the details about the software, the reference page and working page, just keep it on.
+1981000	1986000	It's going to be useful once you open offline the data.
+1986000	2002000	For my recommendation, just at least use always the date at the beginning, the program, the name and the facility that you are using.
+2002000	2008000	Then after that, try the software and the test you were doing.
+2008000	2015000	Okay, and if it's okay or not, okay, write the number of the tests after you load the software.
+2015000	2020000	Okay, if I want this acquisition, I will hit save and I will have it in the past.
+2020000	2029000	Other than that, I can discard it and say, okay, I don't want it just so that I will be lost. Yes, I didn't log anything.
+2029000	2035000	I will put back my calibration, control you and I don't have anything to change.
+2035000	2043000	Just have the alignment here. Okay, let's say I want to configure this window.
+2043000	2051000	You will hit this button while you are in stop and then you can configure your path from here and change the name of the log here.
+2051000	2064000	Let's say be 64 and say, okay, 24b, underscore 24, zero, three, eight, zero.
+2064000	2067000	This is a software that we are adapting right now.
+2067000	2072000	But this information is the name of the log.
+2072000	2077000	Why I am telling you to set your log in this way?
+2077000	2086000	Because once you send the log to a calibrator or a function owner, you need to understand when you did this on what project?
+2086000	2089000	Because it's not working only on your project.
+2089000	2091000	On what facility? So it's in vehicle.
+2091000	2101000	It has more meaning that one is doing it on the hill because he doesn't know if on the simulator, everything is connected properly or not.
+2102000	2109000	And the software used, so he is updated on which software and which calibration release.
+2109000	2116000	Okay, so then the name of the test was the number and the result.
+2116000	2119000	As you can see, okay, not okay, depends on you.
+2119000	2128000	And you can use the time format or you can sit it before and the beginning and I will just remove like this.
+2128000	2133000	As you can see, it's updated automatically if you set this option.
+2133000	2139000	If you are doing a checklist and you don't want to change the name, want to maintain it.
+2139000	2143000	So say, okay, test one.
+2143000	2146000	And then I will hit the auto increase by one.
+2146000	2150000	I will just get one here.
+2150000	2156000	And it's going to increase test one, test two, test three and then you can check the result of line.
+2156000	2162000	Whatever you want, you can do, write your name, company project and vehicle and so on.
+2162000	2167000	Or the recording here, there is other tasks that's not needed.
+2167000	2175000	The triggers is needed only if you have something happening on event.
+2175000	2183000	So let's say I need to understand when I am having a reset on my software or.
+2183000	2192000	I wanted acceleration or only when a DTC is set in my memory start to the acquisition 30 minutes before and 30 minutes after.
+2192000	2201000	Here where you're going to set your trigger and you can put it manual or automatic and depends on you what you want to do.
+2201000	2204000	So you're going to insert all your condition.
+2204000	2209000	There is the logic ports to add to your signal.
+2209000	2218000	So you adhere the actual signals that you need to monitor and you set all the conditions to start the trigger.
+2218000	2225000	Then it's at the time that you want to log before and after the event.
+2225000	2231000	But since we want to log by hand on the current simulator, we just give it off.
+2231000	2235000	This is just for automatic stuff or on event stuff that you want.
+2235000	2243000	Don't want to lose all the memory of the PC for all this log or you don't need all the data to be so huge.
+2243000	2250000	So you set a trigger to log it in a specific condition.
+2250000	2262000	This is a window for MDA which gives the measurement that analysis program which opened the Inca log files.
+2262000	2273000	Here I recommend to remove this sign always the chicken box because it's generate other XDA files based on the layers.
+2273000	2277000	Just remove it and it okay.
+2277000	2282000	Then remember always to save your file.
+2282000	2286000	So let's say we want to log the calibration.
+2286000	2295000	I am in the layer number level three and I want to add.
+2295000	2297000	I want to log the calibration.
+2297000	2305000	So I will just hit on it and as you can see.
+2305000	2313000	There is the poor calibration here and you can hit them here.
+2313000	2325000	Then once you added this to the filter recorder, you can hit okay and those are locked in the log that you have.
+2325000	2338000	Any questions or concerns anything that you can understand.
+2338000	2341000	You have things clear?
+2341000	2343000	Okay.
+2343000	2356000	Let's say a calibrator sent you a file which contains different calibrations to modify just to try a test or to check if it solves the issue that you are facing.
+2356000	2364000	Then there is a DCM file or CSV file is going to be sent with all the calibration.
+2364000	2380000	I am going to go to stop then that is it variables read all calibrations from file and then I will just pick the file which has the calibration in this condition CSV this one or DCM.
+2380000	2389000	Once you open it, it's going to align and you will have the difference here between the reference page and working page.
+2389000	2392000	Okay, directly in your income.
+2392000	2400000	Then you can do your log and send the data to the calibrator or analyze it offline by yourself.
+2400000	2401000	Okay.
+2401000	2405000	In this window, you can see all the echoes connected.
+2405000	2408000	We have only one echo which is ABC one.
+2408000	2425000	As you can see here is this window where you have your echo but if I have a multiple echo, I will have another parts here down which give me the status of both echoes like let's say I'm working if you're working on a hybrid project.
+2425000	2432000	You're going to need to log the HCP and HCP and sometimes you need to log even the ECM.
+2432000	2439000	So you have three echoes in front of you and you understand that all of them are aligned or not.
+2439000	2445000	In this condition, you will see the software here and the status for everyone down here.
+2445000	2451000	Other than that, you can select them from this window.
+2451000	2454000	Okay, let's go next.
+2454000	2461000	Everything in anchor is clear.
+2461000	2465000	Okay.
+2465000	2478000	Let's go to another important part which is the calibration that the manager when I want to change calibration or a generator file or a line.
+2478000	2486000	A data set to different calibrations, I will go and hit this option to be able to play with calibrations.
+2486000	2503000	So in this case, you will have the main part comparison source which is let's say the software that I have.
+2503000	2509000	Let's take the calibration modification.
+2509000	2513000	I remove this one. I remove everything.
+2513000	2518000	And then I will just add the variables I need.
+2518000	2523000	Okay, and then once you add here, let's say,
+2523000	2530000	and let's say I will have this one for example, change.
+2530000	2534000	Okay, as you can see this calibration on this data set is zero.
+2534000	2538000	So I will open it, go to hit and change it to one.
+2538000	2543000	Okay, so now I change the calibration to one.
+2543000	2547000	So I want to compare it with a file.
+2547000	2553000	So I will add a data set which is the main one that I didn't change and compare here.
+2553000	2556000	Okay, and as you can see, there is a difference between them.
+2556000	2563000	Okay, you can change between the main difference and the data set by this button.
+2563000	2569000	And you can see which is the main one on the main difference is zero on the second one.
+2569000	2572000	It's not zero. It's different than zero.
+2572000	2575000	Okay.
+2575000	2578000	Now, if you want to compare highlighted,
+2578000	2583000	you will just need say, okay, DCM,
+2583000	2586000	Prova,
+2586000	2592000	and I will put it in partition X.
+2592000	2595000	Compare highlighted. It's going to generate a file.
+2595000	2601000	Let's go and check the file on here.
+2601000	2608000	Okay, as you can see, the file is HTML and it's open like this.
+2608000	2613000	And it's give you the master data set
+2613000	2616000	and the compared one.
+2616000	2621000	And here is the calibration that I picked and I choose, as you can see,
+2621000	2628000	on the main data set you have it on zero and on the modification one you have it on one.
+2628000	2630000	Got it?
+2630000	2636000	So this is how you can create a Cal compare between two different data set
+2636000	2641000	and how to modify your calibration with calibration data manager.
+2641000	2645000	Once you change your calibration,
+2645000	2650000	you just need to close the window and save it.
+2650000	2657000	Then you have your software this one changed.
+2657000	2661000	But let's say, okay, I changed a calibration different than this one
+2661000	2664000	and I don't want to change this data set anymore.
+2664000	2670000	I will freeze it again by setting it only.
+2670000	2674000	Other than that, you can modify the same data set again
+2674000	2681000	with the calibration data manager or on working page.
+2681000	2686000	Okay.
+2686000	2699000	Any questions, concerns?
+2699000	2707000	Nice.
+2707000	2715000	Can you share the software maybe so that we can try to use
+2715000	2722000	to try to do some experiment like playing with a game?
+2722000	2723000	Sure.
+2723000	2724000	Okay.
+2724000	2726000	We are working on M182, right?
+2726000	2727000	Yeah.
+2727000	2728000	Yeah.
+2728000	2731000	But it's just a little bit to be...
+2731000	2732000	Yeah.
+2732000	2733000	How are you doing with you?
+2733000	2734000	I'm sure no problem.
+2734000	2735000	I can send you myself.
+2735000	2741000	But I will suggest you to use the A to L and X file from M182
+2741000	2743000	and it's just be the same.
+2743000	2747000	At least you have the variables and signals of your project
+2747000	2755000	and you can directly try to train on the signals needed for yourself or your vehicle.
+2755000	2757000	But I can share my stuff.
+2757000	2759000	No problem if you want.
+2759000	2760000	Okay.
+2760000	2761000	Fantastic.
+2761000	2762000	Thank you.
+2762000	2763000	No problem.
+2763000	2765000	I mean, everything is clear.
+2765000	2767000	You have any clarification or something?
+2767000	2768000	No, thank you.
+2768000	2769000	It's obvious.
+2769000	2770000	Okay.
+2770000	2771000	Okay.
+2771000	2772000	Hamza.
+2772000	2773000	All good.
+2773000	2774000	Thanks, Kalibis.
+2774000	2775000	No problem.
+2775000	2776000	Okay.
+2776000	2777000	We can close it out here.
+2777000	2786000	Guys, I have a nice day.
+2787000	2788000	Bye guys.
+2788000	2789000	Bye-bye.
+2789000	2790000	Thank you.
+2790000	2791000	Thank you.
+2791000	2792000	Thank you.
+2792000	2793000	Bye.

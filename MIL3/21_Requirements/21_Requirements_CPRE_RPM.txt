@@ -1,0 +1,4588 @@
+rispetto a quanto concordato
+e a quanto definito
+nelle agende abbiamo fatto un cambio
+uno switch
+io e Gabriele abbiamo ritenuto fosse opportuno
+cominciare prima con
+la definizione
+e un po' la discussione sul
+requirement management plan
+e poi che diciamo
+terro io come discussione
+e poi Gabriele si inserirà
+con il CPRE
+con suggerimenti
+e best practice
+per la definizione dei requirement
+però diciamo
+prima di iniziare volevo fare
+velocemente un giro di tavolo
+per conoscervi
+e per sapere
+quanto voi siete a conoscenza
+del concetto di requisiti
+e di gestione dei requisiti
+se avete mai avuto modo
+di metterle le mani già in pasto
+oppure è solo un concetto
+che avete in mente
+così
+va bene
+io a gamba tesa
+giusto per un
+cappello introduttivo
+sulle competenze
+e poi ovviamente
+ognuno tira la sua
+però diciamo
+quasi tutti
+tranne qualche eccezione
+eccezione
+stanno seguendo un programma
+di formazione
+che è basato
+sulla validazione
+quindi tendenzialmente
+della parte destra
+del ciclo AB
+quindi abbiamo visto
+la parte
+ottimo
+però
+però è ottimo
+abbiamo citato
+appunto
+un po' i requisiti
+come si leggono
+come ci utilizzano
+è più incentrato
+sul testing
+ok però loro hanno
+queste conoscenze
+di fatto
+volevo solo dirti
+questo come riferimento
+perfetto
+va benissimo
+è già un buon punto
+di partenza
+ecco anche
+per noi
+come impostare
+ecco la discussione
+se andare
+un po'
+se approfondire
+oppure essere
+un po' più generali
+va bene
+diciamo
+se tutti
+siete d'accordo
+appoggiate
+quello che Pasquale
+ha detto
+diciamo eviterei
+questo giro di tavolo
+io non conosco
+nessuno
+forse ho visto Federica
+un attimo
+è apparsa
+sullo schermo
+e credo che
+ci conosciamo
+ecco ci siamo visti
+in sede
+però gli altri
+ecco
+vabbè
+comunque
+Gabriele lo conosco
+si vede anche in foto
+e Pasquale pure
+va bene
+allora
+allora ragazzi
+possiamo partire
+diciamo che
+possiamo partire
+con questo
+Requirement Management Plan
+ditemi quando
+quando vedete
+il mio schermo
+ok vabbè
+una piccola introduzione
+di me
+giusto per
+per conoscermi
+io sono
+sono in Kineton
+da circa due anni
+e
+mi sono occupato
+fin dall'inizio
+in Kineton
+della parte
+dei Software Requirement
+per poi passare
+adesso
+la parte
+dei System Requirement
+e
+diciamo che io
+diciamo non è
+purtroppo
+e per fortuna
+la mia prima esperienza
+di lavoro
+ecco ho avuto
+ho iniziato a lavorare
+nel 2013
+in Magneti Marelli
+e poi
+per sei anni
+come
+System Function Expert
+quindi sempre
+sulla parte
+di controllo motore
+centraline
+di controllo motore
+e poi sono passato
+sono passato
+in Bosch
+e lì
+ho
+diciamo
+ho svolto
+il ruolo
+di
+ITU
+quindi
+centraline di controllo motore
+e
+ricoprivo il ruolo
+di project manager
+quindi
+diciamo
+mi occupavo un po'
+di tutto
+il ciclo
+e anche
+un po'
+della parte
+di
+budget
+e di
+allocazioni
+di risorse
+quindi
+lì ho avuto
+un po'
+un ruolo
+un po' più
+gestionale
+mentre
+in precedenza
+è tuttora
+un ruolo
+un po'
+più
+tecnico
+detto
+questo
+passiamo
+alla presentazione
+vedete
+sì sì
+Mario
+si vede
+perfetto
+allora
+il concetto
+di requirement
+management plan
+il concetto
+di requirement
+management plan
+in pratica
+viene
+in qualche
+modo
+a supporto
+di tutto
+quel
+processo
+che
+si deve
+definire
+ad inizio
+progetto
+quando un progetto
+parte
+quindi
+un cliente
+chiede
+presso un fornitore
+un T1
+o un UOM
+chiede di
+sviluppare un progetto
+facendo un esempio
+appunto
+chiede di sviluppare
+un prodotto
+questo prodotto
+che può essere
+qualsiasi tipo di prodotto
+può essere un software
+può essere un pezzo meccanico
+un qualsiasi tipo di prodotto
+e quindi è necessario
+definire delle strategie
+ed un piano
+per portare
+a termine
+il prodotto
+in fase quindi
+punto di realizzazione
+può essere appunto
+un software
+può essere proprio
+un pezzo meccanico
+il discorso
+di requirement
+management plan
+non rientra
+solo in un discorso
+di
+delle attività
+che stiamo svolgendo noi
+quindi di software
+quindi di
+di realizzare
+un software
+che poi deve essere
+flashato
+nelle centraline
+ad esempio
+ma è un discorso
+prettamente generale
+quindi quando
+si hanno
+si ha di fronte
+una definizione
+quindi una realizzazione
+di un progetto
+di un processo
+è bene
+definire un piano
+ed una strategia
+per
+per completare
+tutto il flusso
+di lavoro
+in una maniera
+con una qualità
+con una qualità
+ecco
+che sia
+che vada incontro
+alle aspettative
+del cliente
+quindi
+il requirement
+management plan
+è una sottoparte
+di quello
+che viene definito
+project management plan
+quindi il project
+management plan
+è una cosa
+che è
+quindi al di sopra
+è un contenitore
+mentre il contenuto
+di questo project
+management plan
+sono una serie
+di documenti
+tra cui anche
+il requirement
+management plan
+che permettono
+quindi
+di documentare
+in qualche modo
+delle strategie
+delle metodologie
+per sviluppare
+il loro pezzetto
+pezzetto in che senso
+stiamo parlando
+di requirement management plan
+quindi
+il requirement management plan
+è un documento
+per sviluppare
+strategie
+e metodologie
+per poter
+analizzare
+raccogliere
+tutti i requisiti
+che provengono
+dal cliente
+che ha chiesto
+di sviluppare
+un prodotto
+quindi raccogliere
+questi requisiti
+gestirli
+tracciarli
+e portarli
+diciamo
+sino
+al raggiungimento
+della realizzazione
+quindi del
+del prodotto
+qualcuno
+se qualcuno
+alza la mano
+io non posso vedere
+interrompetemi
+vorrei farti una domanda
+ma questo tipo
+di nomenclatura
+ti puoi presentare
+ti puoi presentare
+che io non so chi
+Pasquale Perrutta
+sempre Pasquale
+sì la voce
+vai
+a posto
+allora
+questa nomenclatura
+del requirement management plan
+è una cosa
+diciamo
+che è specifica
+del cliente
+viene ad esempio
+da
+no
+da Spice
+come
+no no no
+a Spice
+non richiede
+un requirement management plan
+diciamo
+nelle sue regole
+il requirement management plan
+è un supporto
+al processo
+che include
+al suo interno
+delle metodologie
+a Spice
+ah ok ok
+ok
+è un modo per dire
+è un modo per dire
+io ho questo piano
+questo documento
+ti riporto
+al suo interno
+tutto il flusso
+da seguire
+per poter
+arrivare
+ad esempio
+alla
+al test
+del software
+no
+ti spiego
+come definire
+tutti i requisiti
+quindi come raccoglierli
+in che modo
+seguendo sempre
+delle metodologie
+a Spice
+è come se tu
+documentassi
+il flusso
+dei requisiti
+attraverso
+le metodologie a Spice
+però è un documento
+ok
+che ti permette
+di seguire
+e di far sì
+che ad esempio
+i requisiti
+vengano scritti
+tutti nello stesso modo
+che non c'è nessuno
+che possa deviare
+dal processo
+ok ok
+è interessante
+scusa Mario
+se intervengo
+quindi si tratta
+di un processo
+che viene ancora
+prima del ciclo AB
+no no no
+questo in pratica
+questo documento
+non rappresenta
+qui stiamo parlando
+del requirement
+management plan
+quindi dopo
+poi vedremo
+segue
+se vedete
+questo
+questo
+questo flusso
+circolare
+permette
+di
+raccogliere
+i requisiti
+quindi
+questa non è altro
+che la parte
+sinistra
+del ciclo AB
+quindi la parte
+di
+SIS 1
+no
+quindi raccogliere
+i requisiti
+strutturare
+i requisiti
+documentarli
+e quindi
+far sì che
+ci sia una
+consistenza
+del requisito
+ci sia una
+validità del requisito
+che sia
+che non sia
+ambiguo
+che sia atomico
+quindi tutto ciò
+che a Spice
+ci dice di fare
+di prioritizzare
+il requisito
+di garantire
+una qualità
+e nello stesso
+tempo
+di mantenerlo
+questo è quello
+che il requirement
+management process
+chiede
+e va a supporto
+del project
+management plan
+per
+la parte
+dei requisiti
+quindi stiamo parlando
+della parte
+sinistra
+alta
+in qualche modo
+se vogliamo
+far riferimento
+al ciclo AB
+quindi è
+diciamo
+la prima fase
+che viene subito
+dopo la richiesta
+del cliente
+sì
+diciamo
+e questo
+non appena
+il cliente
+ci fornisce
+un documento
+però come dicevo
+prima
+diciamo
+adesso noi abbiamo
+in testa il concetto
+del ciclo AB
+della Spice
+però
+questo adesso
+in questo contesto
+lo possiamo vedere
+come un supporto
+ecco
+al ciclo AB
+e alle metodologie
+Spice
+ma lo si può vedere
+in maniera
+molto generale
+perché
+questo documento
+può essere anche
+utilizzato
+per i clienti
+che non hanno
+necessità
+di seguire
+la Spice
+perché non hanno
+non sono in un ambito
+automotive
+e quindi
+questo documento
+viene a supporto
+comunque
+in ogni caso
+per la definizione
+della parte
+del processo
+dei requisiti
+cioè tu comunque
+puoi avere
+questo documento
+senza seguire
+alla lettera
+quello che ti dice
+a Spice
+Mario volevo
+solo aggiungere una cosa
+nell'ambito
+della formazione
+di base
+al momento
+i ragazzi
+non hanno ancora
+competenze
+legate alla Spice
+quindi per questo
+ne facciamo riferimento
+molto spesso
+al ciclo AB
+che è un po' più
+come dire
+semplice
+da strutturare
+però alla fine
+è un set di regole
+che aiuta
+all'implementazione
+del ciclo AB
+che per semplificare
+un attimo
+a tutti
+la visione
+chiaro
+chiaro
+sì
+diciamo che
+la Spice
+consente
+di
+fornisce
+ecco
+ci fornisce
+come dice Pasquale
+ci fornisce
+delle regole
+precise
+per garantire
+una certa qualità
+nel campo
+nel contesto
+dei requisiti
+una certa qualità
+nel processo
+dei requisiti
+quindi
+come far sì
+che il requisito
+sia chiaro
+sia
+semplice
+da
+capire
+a tutti i livelli
+sia testabile
+e
+sia
+diciamo
+feasible
+nel senso che
+il software
+o
+diciamo
+in quel momento
+il software
+è in grado
+di poter
+di poter
+recepire
+quel requisito
+e di poterlo sviluppare
+ecco
+ci sono delle regole
+piccole regole
+per poter
+per poter
+far sì
+che il processo
+dei requisiti
+della gestione
+dei requisiti
+sia
+sia
+compliance
+con quello
+che a Spice
+ci chiede
+e con quello
+che i clienti
+chiedono
+quindi a Spice
+sono un insieme
+di regole
+e il requirement
+management plan
+raccoglie
+queste regole
+e le mette
+in un documento
+per far sì
+che tu
+una persona
+che non ha mai
+scritto requisiti
+può aprire
+questo documento
+e iniziare
+a leggere
+e capire
+come
+avviene
+il processo
+quindi
+è un documento
+che non
+continua
+propriamente
+i requisiti
+ma
+il regolamento
+per scrivere
+i requisiti
+è una linea guida
+la Bibbia
+ti permette
+è una linea guida
+che ti dice
+guarda
+che tu
+non appena ricevi
+i documenti
+dal cliente
+sei in una fase
+del ciclo
+avv
+alta
+sinistra
+cosa devi iniziare
+a fare
+ok
+devi iniziare
+a raccogliere
+i requisiti
+devi iniziare
+ad analizzarli
+e questo
+lo vedremo
+ecco
+step per step
+nelle seguenti
+slides
+va bene
+diciamo
+il perché
+anche di questo
+requirement management plan
+qui mi sono
+dimenticato plan
+diciamo
+il perché
+perché ci sono
+tante
+tante sfide
+tanti
+diciamo
+tanti punti
+che
+potrebbero
+mettere in difficoltà
+non solo
+chi lavora
+sul processo
+ma
+anche
+l'intero
+l'intero
+progetto
+ecco
+l'intero
+l'intero
+ciclovita
+del progetto
+questo perché
+diciamo
+durante il ciclovita
+di un progetto
+non è detto
+che
+i requisiti
+che noi
+riceviamo
+dal cliente
+arrivino
+a dicembre
+e siano
+gli stessi
+fino alla fine
+del ciclovita
+del progetto
+durante questa fase
+i requisiti
+potrebbero
+cambiare
+ci potrebbero
+essere
+potrebbero
+cambiare
+ci potrebbero
+essere
+tantissime
+tantissimi
+modi
+per deviare
+che ci siano
+delle deviazioni
+dai requisiti
+principali
+quindi
+con questo
+requirement
+management
+plan
+con questo
+documento
+si riesce
+a gestire
+una miriade
+numerosi
+cambiamenti
+all'interno
+del ciclovita
+del progetto
+questo perché
+all'interno
+del documento
+è anche
+rappresentato
+come gestire
+eventuali
+cambiamenti
+di programma
+quindi
+quali sono
+le regole
+quali sono
+il modus
+operandi
+nel caso
+in cui
+ci siano
+dei cambiamenti
+all'interno
+del ciclovita
+del progetto
+e quindi
+uno è pronto
+ad affrontare
+questi cambiamenti
+questi cambiamenti
+che potrebbero
+venire
+sia
+potrebbero esserci
+sia cambiamenti
+interni
+che cambiamenti
+derivanti
+direttamente
+dal cliente
+stesso
+e comunque
+eviterebbe
+in qualche
+evita in qualche
+modo
+che ci siano
+delle miscommunication
+quindi mancate
+comunicazioni
+o mancanza
+di comprensione
+perché
+se
+non c'è
+una linea guida
+che ti dice
+come affrontare
+il processo
+chiunque
+può affrontarlo
+in una maniera
+differente
+rispetto ad un altro
+seppure
+ad esempio
+facendo l'esempio
+di un
+ambito automotive
+quindi ci sono
+delle regole
+definite
+dallo standard
+a spice
+seppure ci siano
+quelle regole
+dello standard
+a spice
+fidatevi che
+se non c'è
+un documento
+che dice
+come
+affrontare
+il processo
+ci sono
+tantissime
+deviazioni
+ognuno
+si sente libero
+di scrivere
+un requisito
+in un modo
+piuttosto che
+in un altro
+comprenderlo
+in un modo
+piuttosto che
+in un altro
+quindi
+questo è veramente
+molto fondamentale
+questo requirement
+management plan
+diciamo
+dalla mia esperienza
+ne ho visti pochi
+all'interno
+diciamo
+dei processi
+diciamo
+lavorando
+lavorando
+in altre
+in peer one
+anche
+molto
+molto importanti
+questi
+requirement
+management plan
+facevano fatica
+ad emergere
+ad essere eseguiti
+lavorando
+con Kineton
+presso Garrett
+lo scorso anno
+questo requirement
+management plan
+è servito
+tantissimo
+per evitare
+che ci siano
+queste deviazioni
+ed insieme
+al team di Garrett
+stavamo proprio
+migliorando
+questo requirement
+management plan
+di passo
+passo dopo passo
+e devo dire
+che ha portato
+dei benefici
+non di poco conto
+scusa Mario
+giusto un esempio
+per te si fare
+un esempio
+su come
+gestisce
+i cambiamenti
+cioè
+non lo riesco
+a immaginare
+non so
+esistono
+delle regole
+su quando
+effettuarli
+no
+allora
+più che
+più che
+regole
+su quando
+effettuarli
+è come
+affrontare
+un cambiamento
+un cambiamento
+di un requisito
+ad esempio
+diciamo
+il documento
+se prima
+magari aveva
+un requisito
+del tipo
+ok
+ad esempio
+il compressore
+in quello stato
+deve avere
+una performance
+di
+un tot di kilowatt
+in un requisito
+iniziale
+il requisito
+il cambiamento
+è ad esempio
+il compressore
+in quello stato
+deve avere
+un altro
+tipo di performance
+quindi questo
+è il cambiamento
+il documento
+una volta che tu
+lo acquisisci
+come devi affrontare
+questo cambiamento
+devi
+prima
+aprire
+una change
+request
+si chiama
+change request
+perché
+appunto
+arriva una richiesta
+di cambiamento
+questa change request
+deve essere
+aperta dal project manager
+cioè
+c'è una linea guida
+dove ti dice
+quali sono i passi
+che il progetto
+deve affrontare
+per
+per
+portare a termine
+questa richiesta
+di cambiamento
+non è solo
+in carico
+a chi sviluppa
+i requisiti
+affrontare
+questa richiesta
+di cambiamento
+ma è un flusso
+è un processo
+che arriva dall'alto
+e tu che sviluppi
+il requisito
+devi sapere
+che ti è arrivata
+questa richiesta
+di cambiamento
+e quindi
+devi poter
+risalire
+al requisito
+che deve essere
+cambiato
+cambiare il requisito
+e nello stesso tempo
+il requisito
+che tu cambi
+poi chiaramente
+ha impatto
+tutto il ciclo
+avvi
+ok chiaro
+ma quindi
+può essere fatto
+in qualsiasi
+in qualsiasi
+momento
+questo cambiamento
+diciamo che
+tutto dipende
+ecco
+dalla priorità
+che si dà
+al cambiamento
+è una decisione
+che avviene
+all'interno del progetto
+il progetto
+i responsabili
+del progetto
+il project manager
+o il project leader
+dice ok
+questo cambiamento
+è arrivato
+in questo momento
+però
+noi lo
+rilasciamo
+al cliente
+si usano questi termini
+rilasciamo
+questo contenuto
+al cliente
+per la prossima
+per il prossimo
+rilascio
+ecco
+fra uno
+due mesi
+quindi
+ti dicono
+quando fare
+questo cambiamento
+ecco
+non devi
+farlo subito
+cioè
+tu
+diciamo
+responsabile
+della parte
+dei requisiti
+non riceverai
+mai
+in prima persona
+la richiesta
+di cambiamento
+arriverà sempre
+dall'alto
+e quindi
+poi
+a cascata
+tu
+saprai
+quando
+affrontare
+questo cambiamento
+in termini
+di tempo
+di tempistica
+poi
+la modalità
+e il supporto
+del Requirement Management Plan
+viene
+per poter
+risalire
+al requisito
+da cambiare
+nello stesso tempo
+siccome
+ASPICE
+le regole
+di ASPICE
+e anche
+il Requirement Management Plan
+diciamo
+la regola
+una delle regole
+è quella
+di poter
+tracciare
+i requisiti
+in modo tale
+che tu puoi
+risalire
+al requisito
+facilmente
+e puoi risalire
+anche al test case
+puoi risalire
+anche al
+codice
+questo
+con una
+diciamo
+con
+dei metodi
+di tracciabilità
+per tracciabilità
+parlo di
+ad esempio
+io ho un requisito
+del cliente
+attraverso
+un link
+che è possibile
+farlo
+con i tool
+che abbiamo
+a disposizione
+attraverso
+un link
+virtuale
+tu lo connetti
+questo requisito
+lo connetti
+ad esempio
+al software
+dal software
+lo connetti
+al modello
+dal modello
+lo connetti
+al test case
+e così via
+quindi
+ti dico
+il Requirement Management Plan
+perché
+che viene a supporto
+dei cambiamenti
+proprio perché
+definisce
+un modo
+chiaro
+di poter
+tracciare
+i requisiti
+di risalire
+il requisito
+che devi cambiare
+e quindi
+hai
+più
+praticità
+e più
+facilità
+nel gestire
+questi tipi
+di cambiamenti
+chiarissimo
+grazie
+Mario
+Mario
+una domanda
+ma questo documento
+fa riferimento
+a requisiti
+solamente
+a livello
+su E1
+o magari
+anche requisiti
+a livello
+su E2
+o su E3
+no
+no allora
+questo documento
+fa parte
+diciamo
+fa riferimento
+più in particolare
+alla parte
+alta
+a sinistra
+quindi
+SIS
+quindi a livello
+di sistema
+sì
+però
+lo si può
+tradurre
+anche
+per tutti
+i tipi
+di requisiti
+sì
+chiaramente
+c'è una prima
+sì
+vai
+continuo
+no no
+dico
+che sicuramente
+una fase
+che è
+una fase
+molto
+importante
+della parte
+di sistema
+che è la fase
+alta
+quindi la fase
+di chiarificazione
+di elicitation
+si chiama
+poi la vedremo dopo
+che sicuramente
+non
+non si può
+riflettere
+negli altri domini
+però
+il Requirement Management Plan
+può ricoprire
+tutto il ciclo
+avvi
+sia lato sistema
+sia lato software
+sia lato
+testing
+ok ok
+grazie
+ok
+chiaramente
+tutta questa presentazione
+poi si riflette
+in una documentazione
+che stiamo preparando
+e che poi
+vi mostreremo
+come secondo step
+per farvi
+capire
+poi effettivamente
+tutto quello
+che vi sto dicendo
+come si riflette
+nel documento
+vero e proprio
+io adesso
+con questa presentazione
+vi sto dando
+un'idea
+di come
+questo Requirement Management Plan
+deve essere costruito
+e di cosa
+e di cosa
+stiamo parlando
+poi
+il documento
+vero e proprio
+che voi
+prenderete
+e lo potete
+customizzare
+poi per ogni cliente
+su cui lavorate
+ve lo
+diciamo
+lo stiamo
+è in fase di preparazione
+e ve lo mostreremo
+in un secondo step
+Mario
+perdonami
+aggiungo
+un'ultima
+considerazione
+perché
+tante volte
+è capitato
+che persone
+magari
+iniziano in formazione
+e poi vanno dai clienti
+quando ho chiesto
+poi feedback
+su come
+diciamo
+la formazione
+li abbia aiutati
+uno dei feedback
+che ho ricevuto
+è
+no il cliente
+non lavora
+per dire
+secondo un ciclo
+avvi
+oppure no
+il cliente
+non ha il Requirement Management Plan
+cioè quello che voglio dire
+è capita che alcuni clienti
+non abbiano magari il documento
+chiamato esattamente
+in questo modo
+o non abbiano il cliente
+o non abbiano proprio questo documento
+ma in generale
+ritengo fondamentale
+che noi siamo esposti
+diciamo
+a questi
+temi
+e anche a una lezione del genere
+perché ciò non vieta
+le persone che vanno a lavorare
+da un cliente
+di lavorare in modo ordinato
+avere concetti di traccia
+perfetto
+giusto
+giustissimo Pasquale
+questo è proprio
+quello che
+che vogliamo trasmettere noi
+cioè questo
+non è
+come tutti i clienti
+lavorano
+questo è un modo
+per far sì
+che noi
+abbiamo
+un mindset
+di
+diciamo
+di
+abbiamo una formazione chiara
+cioè nel senso
+abbiamo degli schemi
+e una linea guida
+da seguire
+ovunque andiamo
+che poi
+chiaramente ci siano
+delle deviazioni
+o meno
+presso un cliente
+o presso un altro
+però
+diciamo
+il nostro concetto
+il nostro mindset
+è sempre lo stesso
+cioè lavorare
+con ordine
+e con qualità
+ok
+grazie Pasquale
+per questo
+bene
+diciamo
+un punto
+molto importante
+allora
+quindi
+quali sono
+gli obiettivi
+lo scopo
+principale
+di questo
+requirement management plan
+quindi è quello
+di documentare
+un po'
+di documentare
+appunto
+tutta la fase
+di gestione
+dei requisiti
+e
+sui modi
+con cui
+questi requisiti
+il modo con cui
+questi requisiti
+devono essere
+devono essere
+processati
+quindi
+c'è una prima fase
+di documentazione
+e di tracciabilità
+dei requisiti
+una definizione
+dello scopo
+del progetto
+permette appunto
+questo requirement management plan
+di facilitare
+quello che ci siamo detti
+di facilitare
+le comunicazioni
+tra i vari domini
+e per domini
+parlo di sistema
+software
+test
+quindi facilitare
+test
+codice
+quindi i domini
+parlo proprio
+del ciclo avvio
+ogni dominio
+è facilitata
+la comunicazione
+tra i domini
+e gestire
+questi cambiamenti
+improvvisi
+o cambiamenti
+relativi
+richiesti
+dal cliente
+con questi obiettivi
+con questi scopi
+il requirement management plan
+ci permette
+appunto
+di
+di portare
+a termine
+il nostro lavoro
+di portare a termine
+ecco
+tutta la parte
+di gestione
+dei requisiti
+e quindi
+di soddisfare
+un po'
+quali che sono
+le aspettative
+del cliente
+perché se il cliente
+ci manda
+dei requisiti
+vuole
+e vorrebbe
+che quei requisiti
+venissero processati
+per ottenere
+ciò che lui
+si aspetta
+e quindi
+seguendo
+un po'
+e
+facilitando
+questi punti
+queste comunicazioni
+seguendo un po'
+la parte di documentazione
+di trattabilità
+riusciamo ad ottenere
+un buon livello
+di aspettative
+un buon livello
+di qualità
+e quindi
+l'aspettativa
+del cliente
+cresce
+e noi siamo
+pronti
+per poter
+soddisfare
+queste aspettative
+chiaramente
+ci sono
+delle best practice
+quindi
+non sono
+dei nice to have
+ma
+dei punti
+che
+dovrebbero
+essere
+affrontati
+diciamo
+che
+noi dovremmo
+seguire
+per la definizione
+dei requisiti
+in generale
+e soprattutto
+la parte
+di
+diciamo
+di essere
+molto chiari
+nella definizione
+e nella descrizione
+dei nostri requisiti
+di far sì
+che ci siano
+ci siano
+delle
+diciamo
+ci siano
+delle vere
+proprie
+discussioni
+con il cliente
+e con gli altri
+domini
+per poter
+ricevere feedback
+e per poter
+diciamo
+consolidare
+un po'
+il know-how
+e
+un po'
+capire
+cosa stiamo facendo
+quindi
+instaurare
+un vero e proprio
+diciamo
+delle vere
+e proprie
+discussioni
+anche
+molto
+banali
+ma
+che
+soprattutto
+ci fanno
+consolidare
+un po'
+la tematica
+e questo
+permette
+appunto
+di essere
+chiari
+e di capire
+un po'
+l'argomento
+su cui
+stiamo lavorando
+quindi
+quanto più
+siamo informati
+quanto più
+abbiamo padronanza
+del contenuto
+e del tema
+che stiamo affrontando
+tanto più
+siamo chiari
+riusciamo ad essere
+chiari
+e riusciamo
+ad esprimerci
+con qualità
+quindi
+questi sono
+i tre punti
+fondamentali
+quindi
+essere chiari
+clarity
+e
+stakeholder engagement
+e ongoing
+communication
+diciamo
+vanno a braccetto
+perché
+chiaramente
+qui stiamo dicendo
+di
+non lavorare
+mai da soli
+perché
+sì
+è chiaro
+che
+a volte
+la tematica
+è di facile
+comprensione
+però
+è bene
+instaurare
+delle discussioni
+con il cliente
+e con altri
+colleghi
+per poter
+consolidare
+un po'
+il contenuto
+e la tematica
+quindi
+mai perdere di vista
+il fatto di
+dover
+confrontarsi
+e dover
+chiedere
+opinioni
+o spiegazioni
+ad altri
+colleghi
+quindi
+quali sono
+gli step
+per la definizione
+dei requisiti
+diciamo
+che
+li affronteremo
+nelle slide
+successive
+un po' più
+approfonditamente
+quindi
+vorrei solo
+elencare
+quindi c'è una
+prima fase
+quindi parlando
+di gestione
+dei requisiti
+in questo caso
+diciamo
+a parte
+sì
+diciamo che
+a parte
+diciamo
+la prima fase
+che è il requirement
+licitation
+che è la parte
+quindi di
+alta
+del ciclo avvi
+tutti
+gli altri
+punti
+si possono
+riflettere
+negli altri
+domini
+come diceva
+non so chi è
+che prima
+mi ha chiesto
+questa domanda
+come sono io
+siamo
+chi è?
+io non ti vedo
+Alessandro
+Alessandro
+Alessandro
+quindi a parte
+la parte
+di
+considerando
+diciamo
+scondendo
+le licitation
+però
+tutta l'altra parte
+è una parte
+che è valida
+anche per gli altri
+domini
+che consideriamo
+sempre il ciclo
+avvi
+ma in ogni caso
+considerando
+sempre
+tutta la parte
+di gestione
+dei requisiti
+in generale
+tutti i punti
+sono validi
+quindi c'è una parte
+di elicitation
+una parte
+di documentazione
+di tracciabilità
+dei requisiti
+di prioritizzazione
+di validazione
+del requisito
+e di mantenimento
+quindi
+a parte
+la bella
+diciamo
+immagine
+che mi ha
+preparato
+GPT
+però
+diciamo
+per il resto
+diciamo
+questo è un elenco
+dei passi
+da dover affrontare
+Mario
+perdonami
+che cosa si intende
+qualcosa in più
+su cosa si intende
+sulla parte
+di
+maintain
+che ho una mia idea
+ma vorrei
+che mi dicessi
+tu
+dalla tua esperienza
+diciamo
+sei sempre Pasquale
+è vero
+sì
+perdonami
+che un po'
+le scadere
+senti
+maintain
+secondo me
+io ce l'ho
+aspetta
+fammi vedere
+validation
+validation
+sì
+vabbè
+non l'ho approfondita
+però
+allora
+maintain
+è sempre
+relativa
+alla parte
+del change management
+vale a dire
+che
+una volta
+che tu hai
+definito
+il tuo requisito
+devi essere
+anche in grado
+di
+di tenerlo vivo
+nel senso
+che
+in qualsiasi tipo
+di richiesta
+di cambiamento
+o
+di cambiamento
+interno
+cambiamento
+del cliente
+tu hai la possibilità
+di raggiungere
+quel requisito
+in maniera
+veloce
+e di poterlo
+o mantenere
+nel senso
+di
+di
+di
+di poterlo
+visualizzare
+di poterlo
+raggiungere
+in qualsiasi modo
+oppure
+di poterlo
+cambiare
+in maniera
+molto
+rapida
+in dolore
+ok
+questo è il concetto
+di maintain
+chiaro
+chiaro
+avevi
+diciamo
+sono
+sono aperto
+alle tue
+alle tue
+ai tuoi dubbi
+nel senso
+se il tuo concetto
+la tua idea
+era differente
+ben venga
+la possiamo
+diciamo
+discutere
+assolutamente
+anzi
+io diciamo
+mi ero messo
+in un
+ero mentalizzato
+in modo
+forse errato
+nel senso
+io pensavo
+a due cose
+la prima
+mi veniva in mente
+una cosa
+che leggevo
+su alcune normative
+della cyber security
+per cui
+il cliente
+resta
+chi ha sviluppato
+il software
+eccetera
+il sistema
+resta responsabile
+per x anni
+della gestione
+dei problemi
+associati
+diciamo
+a tutto quanto
+concerne la cyber security
+quindi
+pensavo lì
+maintenance
+nel senso
+di dire ok
+un po' dire
+come dire
+accountability
+per i requisiti
+che vengono
+scritti
+per x anni
+sul sistema
+su cui
+verranno implementati
+ma era
+diciamo
+era un contesto
+allora
+diciamo che
+possiamo
+possiamo un po'
+ridurlo
+e renderlo più semplice
+questo concetto
+che è pur valido
+nel senso
+il mantenimento
+è chiaro che
+nella definizione
+una volta che tu
+hai definito
+quel tipo di requisito
+sei tu responsabile
+poi da qui
+a totti anni
+base al tipo
+di contratto
+che viene stabilito
+tra i clienti
+e i fornitori
+di quel requisito
+quindi tu
+per anni
+nel caso
+ci dovessero essere
+problemi
+devi essere
+tu responsabile
+di quel requisito
+e quindi
+devi essere in grado
+di poterlo gestire
+ecco
+ritorna sempre
+il discorso
+della gestione
+del requisito
+in caso
+di problemi
+o cambiamenti
+sì sì sì
+chiarissimo
+ok
+quindi
+diciamo
+è un discorso
+base
+che però
+ti permette
+diciamo
+seguendo
+un documento
+delle metodologie
+delle strategie
+ti permette
+di mantenerlo
+di tenerlo in vita
+in maniera
+non so
+non so
+forse
+non lo so
+se mi avete
+capito tutti quasi
+diciamo
+il mantenimento
+viene
+diciamo
+è tanto più
+facile
+mantenere
+il requisito
+tanto più
+quando noi
+adottiamo
+tutte queste
+metodologie
+cioè se abbiamo
+fatto
+un'ottima
+tracciabilità
+se lo abbiamo
+documentato
+in maniera
+corretta
+se lo abbiamo
+prioritizzato
+in maniera
+corretta
+il mantenimento
+viene
+e se lo abbiamo
+validato
+in maniera
+corretta
+il mantenimento
+viene
+facile
+anche
+diciamo
+un mantenimento
+semplice
+così come
+un cambiamento
+del requisito
+stesso
+ok
+chiaro
+ok
+ok
+quindi la parte
+di elicitation
+la prima parte
+è una parte
+davvero fondamentale
+diciamo
+io la reputo
+la più migliore
+come direbbe
+Miano
+però
+diciamo
+è veramente
+è fondamentale
+perché
+la parte
+di elicitation
+consiste
+nella raccolta
+di tutti
+i documenti
+che vengono
+forniti
+dal cliente
+quindi
+questi documenti
+vengono raccolti
+e devono
+essere
+diciamo
+analizzati
+e
+consolidati
+ma per poter
+fare queste
+due cose
+è necessario
+che ci siano
+delle
+chiaramente
+delle expertise
+sicuramente
+ma che ci siano
+almeno
+una di questi tre
+che ci siano
+delle interviste
+ci siano
+dei questionari
+se le vogliamo
+tradurre
+ma che ci siano
+delle vere
+e proprie
+discussioni
+come dicevo
+prima
+delle vere
+e proprie
+discussioni
+molto
+dirette
+per poter
+consolidare
+per poter
+fissare
+un determinato
+concetto
+queste interviste
+intendo
+interviste
+che possono
+essere
+verso il cliente
+o all'interno
+della stessa
+società
+con gli stessi
+colleghi
+cercare di capire
+se quel requisito
+è veramente
+un requisito
+veramente il cliente
+ci sta richiedendo
+un qualcosa
+che è fattibile
+o non è fattibile
+ci sta chiedendo
+delle cose
+che non stanno
+né in cielo
+né in terra
+quindi
+è bene
+affrontare
+questo tipo
+di attività
+per poter
+consolidare
+i documenti
+perché
+una volta
+che noi
+abbiamo
+fissato
+tutti i punti
+tutti gli altri
+step
+sono
+facilitati
+abbiamo la possibilità
+di documentare
+il requisito
+abbiamo la possibilità
+di definire
+un test case
+in maniera
+semplice
+tutti i processi
+tutti gli step
+successivi
+sono facilitati
+se riusciamo
+ad ottenere
+a valle
+di queste interviste
+di questi workshop
+di queste discussioni
+alla macchinetta
+del caffè
+o quant'altro
+che riusciamo
+ad ottenere
+un
+diciamo
+una
+a consolidare
+il requisito
+se vogliamo parlare
+di un singolo requisito
+quindi la prima parte
+è veramente
+fondamentale
+ok
+quindi immagino
+questo anche
+per eventuali
+modifiche
+sul progetto
+quindi viene
+faccio
+questi requisiti
+vengono
+mostrati
+quindi al
+cliente
+nella fase
+iniziale
+quindi questi
+primi requisiti
+di sistema
+nella fase
+iniziale
+così come
+nella fase
+di richieste
+di cambiamenti
+c'è sempre
+una fase
+di elicitation
+del requisito
+cioè
+supponi che
+il cliente
+ti invia
+un requisito
+solo
+inizia la fase
+di elicitation
+quindi tu
+consolidi
+quel requisito
+devi
+fartelo
+tuo
+devi
+essere in grado
+di averlo
+di averlo
+capito
+e di poter
+proseguire
+una volta
+che tu
+lo hai
+capito
+magari lo
+condividi
+anche con il
+cliente
+condividi
+con il cliente
+anche
+il tuo
+il tuo
+understanding
+quello che tu
+hai capito
+una volta
+che avete
+lo stesso
+understanding
+puoi procedere
+con la
+parte
+con la
+seconda
+parte
+ok
+perfetto
+ok
+sempre
+questo
+in ogni
+in ogni
+diciamo
+in ogni
+caso in cui
+arriva un nuovo
+requisito
+o un cambio
+di requisito
+si attiva
+la parte
+di
+elicitation
+poi
+questa parte
+di elicitation
+nel documento
+poi
+che stiamo
+facendo
+è
+espressa
+in vari
+step
+quindi c'è
+la parte
+in cui
+il cliente
+riceve
+che noi
+riceviamo
+il requisito
+noi come
+fornitori
+ecco come
+responsabili
+del requisito
+ad esempio
+riceviamo
+il requisito
+lo dobbiamo
+analizzare
+internamente
+dobbiamo
+condividere
+come ti dicevo
+il nostro
+quello che abbiamo
+capito
+verso il cliente
+il cliente
+deve accettare
+o deve
+confermare
+quello che tu hai
+capito
+quindi
+ti rispedisce
+un feedback
+un successivo
+feedback
+quindi ci sono
+tutte queste fasi
+che verranno
+spiegate
+descritte
+nel documento
+ed è questo
+proprio
+il required
+management plan
+cioè descrivere
+passo
+dopo passo
+cosa
+bisogna fare
+per poter
+completare
+ad esempio
+la fase
+di elicitation
+ok
+quindi al cliente
+vengono
+fatti
+vedere
+i requisiti
+quindi
+la prima fase
+di requisiti
+scritta
+già sono
+sotto forma
+di requisiti
+mi chiedevo
+allora
+il documento
+che fornisce
+il cliente
+è
+potrebbe
+avere
+una
+il più delle volte
+devi essere
+fortunata
+il cliente
+fornisce
+già
+una serie
+di requisiti
+già
+diciamo
+categorizzati
+quindi
+tu semplicemente
+leggi
+requisito
+per requisito
+e quindi
+hai già
+il requisito
+in mano
+altre volte
+ti arriva
+un documento
+un papiro
+dove tu devi
+cercare di trovare
+qual è il requisito
+e quindi
+ci deve essere
+tipo un ping pong
+di informazioni
+nel senso
+tu chiedi al cliente
+se
+quello che hai capito
+è giusto
+e quindi
+lo consolidi
+nella tua
+poi
+lo documenti
+nel tool
+di documentazione
+dei requisiti
+è un botte
+in risposta
+sul documento
+che richiedi
+perché dal cliente
+in effetti
+mi aspetterei
+più un documento
+scritto
+quindi non sotto
+forma di requisito
+quello che mi chiedeva
+era se
+il feedback
+che uno
+dà al cliente
+di quello
+che ha inteso
+era sotto
+forma di requisito
+oppure
+come vuoi
+come vuoi
+come vuoi
+diciamo
+se tu
+sei già pronta
+per poter
+per poter
+descrivere
+quello che
+ti ha richiesto
+il cliente
+sotto forma
+di requisito
+puoi anche
+condividerlo
+dicendo
+guarda
+questo è
+quello che
+io
+ho inteso
+mi puoi dare
+conferma
+e lui
+ti dà conferma
+chiaramente
+non è che
+mi aspetto
+che
+diciamo
+non ci sia
+questo
+ping pong
+di informazioni
+per ogni requisito
+ma
+sui requisiti
+lì dove
+c'è
+necessità
+di
+diciamo
+di avere
+un feedback
+ulteriore
+dal cliente
+magari
+tu alcuni requisiti
+riesci a risolverli
+internamente
+chiedi a un collega
+se lui
+ha capito
+quindi non è necessario
+ritornare dal cliente
+quindi dal cliente
+si ritorna
+nei casi in cui
+veramente
+quel requisito
+non ha
+diciamo
+gli manca qualcosa
+e quindi tu
+lo hai inteso
+ma vorresti
+un feedback
+ulteriore
+ok
+quindi
+non tutti i requisiti
+vengono mostrati
+dal cliente
+no
+chiaramente
+questo
+comporta
+una perdita
+di tempo
+però
+non dobbiamo
+considerarla tale
+perché
+diciamo
+è
+terra
+poi
+per consolidare
+per facilitarti
+il lavoro
+perché magari
+se tu non lo fai
+in questa fase
+se tu non la fai
+in questa fase
+poi ti trovi
+magari
+ad aver
+inteso
+un requisito
+in un modo diverso
+e a sviluppare il software
+non come il cliente
+si aspettava
+eh sì
+era assolutamente
+quello che immaginavo
+Mario
+al solito
+sono sempre
+masquale per rotta
+volevo
+giusto fare
+un'altra considerazione
+a me è capitato
+di lavorare
+con dei clienti
+dove
+che erano
+estremamente
+a digiuno
+di questi temi
+nell'ambito
+dei veicoli
+off-road
+trattori
+eccetera
+eccetera
+alcuni requisiti
+derivavano anche
+dalla chiamata
+incazzata
+del contadino
+che stava usando
+il trattore
+non funzionava
+e da lì
+si facevano
+dei meeting
+nei quali
+dai meeting
+si decidevano
+dobbiamo fare
+questa cosa
+chiaramente
+non c'era
+nessun documento
+non c'era niente
+però lì
+il requisito
+è diventato
+facciamo la minuta
+del meeting
+in cui stabiliamo
+che questo
+deve essere
+il comportamento
+quindi voglio
+sempre per tornare
+sul discorso
+di prima
+che tante volte
+non c'è
+tutta questa struttura
+ben organizzata
+ma la nostra capacità
+è comprendere
+anche dagli input
+diciamo
+alternativi
+che può essere
+delle parti
+incazzata
+ma non sarebbe
+sono d'accordissimo
+però
+sono d'accordissimo
+però
+diciamo
+la nostra
+la nostra
+come posso dire
+il nostro supporto
+e il nostro
+valore addizionale
+che dobbiamo dare
+al cliente
+è proprio quello
+di dire
+ok
+tu mi dai anche
+degli input
+al telefono
+una minuta
+però è necessario
+che tu mi documenti
+in qualche modo
+questo requisito
+assolutamente sì
+perché è chiaro
+che poi
+diciamo sì
+le parole
+sicuramente
+per telefono
+mai ricevere
+requisiti
+per telefono
+diciamo
+sicuramente
+o tramite minuto
+o tramite documentazione
+è bene
+è bene
+che il cliente
+ci fornisca
+queste cose
+magari per essere
+in anticipo
+per avvantaggiarci
+per avvantaggiare
+anche il cliente
+per accelerare il tutto
+magari
+da una chiamata
+noi possiamo
+possiamo dedurre
+un qualcosa
+però
+è bene
+che il cliente
+poi documenti
+il tutto
+in maniera
+processuale
+ok
+anche perché
+poi loro
+non sarebbero
+poi compliance
+con le regole
+a spice
+ecco
+noi non riusciremmo
+poi
+ad ottenere
+una tracciabilità
+completa
+se questo requisito
+non viene documentato
+in maniera
+corretta
+ok
+quindi poi
+c'è la fase
+di documentazione
+e analisi
+quindi
+questa è una fase
+che viene
+successivamente
+dopo
+o nello stesso
+contesto
+delle licitation
+possiamo anche
+iniziare a fare
+un'analisi
+per capire
+se il requisito
+è chiaro
+se è valido
+se è consistente
+se non è ambiguo
+non è ambiguo
+nel senso che
+non permette
+di avere
+differenti
+punti di vista
+o
+differenti
+modi
+di
+comprensione
+quindi
+questa fase
+può essere
+anche
+inclusa
+nella fase
+di
+licitation
+e poi
+c'è tutta
+la fase
+di
+documentazione
+documentazione
+in maniera
+chiara
+e quindi
+documentare
+il requisito
+che ci arriva
+dal cliente
+attraverso
+dei tool
+non so
+se conoscete
+qualche tool
+di documentazione
+di raccolta
+di requisiti
+può essere
+diciamo
+quello più famoso
+che però
+sta diventando
+un po'
+obsoleto
+e
+dors
+ci sta
+c'è
+jama
+c'è
+polarion
+ci sono
+diversi
+tool
+che ci
+permettono
+di documentare
+poi
+è il cliente
+che
+meno male
+guida
+nell'utilizzo
+di questo
+tool
+alcune volte
+mi è capitato
+che il cliente
+chiedesse
+a noi
+quale fosse
+un tool
+più pratico
+e più veloce
+da poter utilizzare
+perché loro
+a volte
+ci sono dei clienti
+che proprio
+non hanno proprio
+una minima idea
+di cosa
+si intende
+per gestione
+dei requisiti
+ecco
+hanno una gestione
+dei requisiti
+molto
+molto
+primitiva
+su fogli di carta
+o su word
+veramente
+alcuni
+clienti
+sono molto
+messi male
+clienti non
+automotive
+ecco
+clienti
+ad esempio
+con Dyson
+mi è capitato
+di avere
+questo
+riscontro
+dove loro
+non hanno
+una gestione
+dei requisiti
+quindi
+ci hanno chiesto
+esplicitamente
+di fornirgli
+una sorta
+di comparison
+tra i diversi tool
+le quali potrebbe essere
+quello che fa
+a caso loro
+ok
+poi abbiamo
+questo punto
+qui
+che è la parte
+di tracciabilità
+quindi un requisito
+deve essere
+tracciabile
+quindi si deve
+deve poter
+diciamo
+chiunque
+chiunque
+deve poter
+tracciare
+il requisito
+cioè
+chiunque
+più che tracciare
+chiunque deve poter
+navigare
+il flusso
+del requisito
+a partire
+dalla sorgente
+che è il documento
+del cliente
+sino
+alla validazione
+quindi deve poter
+seguire
+tutto il ciclo
+AV
+attraverso
+questa
+diciamo
+questa
+tracciabilità
+quindi il requisito
+è non solo
+non solo
+quindi deve seguire
+il modello AV
+ma deve poter
+anche
+essere
+tracciato
+a livello
+di
+di project
+management
+in che senso
+quindi c'è
+tutta la parte
+di
+questa
+immagine
+non è molto
+semplificativa
+nel senso che
+potrebbe trarre
+in inganno
+però
+abbiamo una parte
+in cui
+il requisito
+quindi la sorgente
+è collegata
+a tutti i requisiti
+relativi al
+subdomain
+quindi tutti i requisiti
+della parte
+della
+AV model
+della parte
+a sinistra
+quindi c'è
+la parte
+ad esempio
+questo qua
+possiamo considerarlo
+come
+il sys1
+e questi qua
+li possiamo
+considerare
+tutti i requisiti
+di livelli
+successivi
+la parte
+di sys2
+la parte
+di software
+la parte
+di
+diciamo
+di
+architettura
+e poi
+c'è una parte
+di
+test case
+e una parte
+anche
+relativa
+al codice
+quindi c'è
+questa parte
+qui
+che è la parte
+un po' più
+pratica
+e poi c'è
+la parte
+relativa
+al progetto
+che sono questi
+tre
+blocchi
+che fanno
+riferimento
+al task
+ad eventuali
+incidenti
+ad eventuali
+problemi
+e ad eventuali
+rischi
+che possono
+essere sollevati
+con questo
+requisito
+quindi c'è
+una fase
+pratica
+quindi il requisito
+deve poter essere
+navigabile
+tracciabile
+tecnicamente
+quindi
+con i domini
+con i domini
+facendo riferimento
+al ciclo AV
+considerando
+anche il test case
+e il source code
+e poi c'è
+questa parte
+di project
+questa immagine
+forse la devo
+migliorare
+perché
+scusa
+ma cosa
+intendi
+cosa intendi
+per rischi
+nel senso
+che il requisito
+non è scritto
+bene
+e quindi
+deve essere
+no
+no
+no
+no
+no
+no
+no
+in pratica
+questo risk
+diciamo che
+viene sollevato
+cioè
+non sempre
+questi
+sicuramente
+questo task
+sicuramente
+c'è sempre
+perché in pratica
+tu per ogni attività
+che esegui
+devi avere
+un task
+un task
+diciamo
+che ti dice
+ok tu stai lavorando
+su questa
+su questa attività
+quindi devi tracciare
+anche la tua attività
+il tuo requisito
+a livello di progetto
+per la gestione
+delle ore
+quante ore ci metti
+per lavorare
+e devi poter tracciare
+la tua attività
+poi questi due
+incidenti e rischi
+chiaramente
+si presentano
+qualora
+il requisito
+qualora ci sia
+un problema
+no
+sollevato durante
+il test case
+cioè durante la fase
+di validazione
+tu sollevi un problema
+e lo puoi
+diciamo
+chiaramente qui
+è definito
+come incidente
+però
+lo
+apri
+tu
+un issue
+e chiaramente
+questa issue
+deve essere collegata
+al requisito
+sorgente
+cioè a chi
+a qual è il requisito
+che ti sta creando
+un problema
+il rischio invece
+viene sollevato
+qualora
+diciamo
+oltre al problema
+evidenziato
+durante la fase
+di test case
+questo tipo di problema
+potrebbe
+far emergere
+dei rischi
+a livello
+di
+si chiama
+risk management
+potrebbe far
+sollevare
+dei problemi
+a livello
+di delivery
+questo problema
+ad esempio
+ha un rischio
+sulla delivery
+nel senso
+che potrebbe
+farmi ritardare
+la delivery
+perché
+c'è un problema
+e questo problema
+deve essere risolto
+quindi quali sono
+i rischi
+che questo tipo
+di requisito
+che è stato scritto
+in questo modo
+magari errato
+oppure
+non è stato scritto
+bene
+non è stato
+inteso bene
+porta
+al progetto
+al ciclo vita
+del progetto
+ok
+chiaro
+ok
+l'incidente
+visto come
+ok
+è puntuale
+no
+qual è il problema
+che io
+ho
+evidenziato
+qual è il problema
+che io
+ho riscontrato
+e il rischio
+non è altro
+che
+quali sono
+gli impatti
+che il problema
+o
+un qualsiasi tipo
+di
+più che il problema
+oltre a essere
+il problema
+perché può essere
+collegato
+incidenti e rischio
+possono essere collegati
+o magari
+c'è un qualcosa
+che non va
+a livello di requisito
+che non è stato
+ancora evidenziato
+a livello
+con un issue
+qual è il rischio
+che potrebbe portare
+ad esempio
+ad un ritardo
+del rilascio
+del software
+o ad un ritardo
+delle altre attività
+che vengono dopo
+ok
+e questa tracciabilità
+ci permette
+ecco
+di risalire
+alla sorgente
+ed è proprio
+questa tracciabilità
+che è un punto
+veramente fondamentale
+poi
+per la parte
+di mantenimento
+e per la parte
+di change management
+ok
+poi
+diciamo
+c'è una delle ultime
+parti
+che è relativa
+alla verification
+and validation
+questo
+probabilmente
+voi siete già
+abbastanza
+più o meno
+sul pezzo
+ed una fase
+in cui
+diciamo
+il team
+il team
+di validazione
+e di verifica
+diciamo
+si attiva
+per poter
+diciamo
+completare
+e supportare
+qualora ci
+dovesse essere
+bisogno
+diciamo
+il
+il punto finale
+diciamo
+supportare
+alla definizione
+definitiva
+del requisito
+sia in termini
+di descrizione
+sia in termini
+di
+testabilità
+ecco
+quindi
+c'è una fase
+di review
+dei requisiti
+che avviene
+regolarmente
+quindi con una fase
+di
+quindi
+vengono esaminati
+i requisiti
+e poi
+chiaramente
+c'è la fase
+di testing
+quindi
+durante il ciclo vita
+di un requisito
+diciamo
+una delle fasi
+finali
+del requisito
+prima di essere
+definitivamente
+approvato
+è quella
+della
+review
+che viene
+fatta
+dal team
+di validazione
+che poi
+si occuperà
+della fase
+di testing
+una volta
+che ha
+approvato
+e ha validato
+il requisito
+e la sua
+testabilità
+a livello
+descrittivo
+si pone
+quindi
+si attiva
+per la fase
+di
+testing
+chiaramente
+la fase
+di review
+e di inspection
+rientra
+nella fase
+di requirement
+management plan
+mentre la fase
+di testing
+è più
+rivolta
+alla fase
+diciamo
+alla documentazione
+della
+parte di validazione
+quindi è più
+lato validazione
+ecco
+come
+gestire
+la fase
+di testing
+quali sono
+diciamo
+le regole
+quali sono
+le best
+practice
+per poter
+affrontare
+la fase
+di testing
+ci siamo
+ragazzi
+sì sì
+sì sì
+tutto chiaro
+tutto chiaro
+ok
+quindi
+l'ultima
+fase
+è la parte
+di
+change
+management
+però
+credo
+che
+l'abbiamo
+affrontata
+a sufficienza
+niente
+che dirvi
+la fase
+di change
+management
+non so
+se
+volete
+avere
+qualche
+altro
+qualche
+altro
+dettaglio
+però
+diciamo
+la fase
+di change
+management
+è
+molto
+diciamo
+è importante
+però
+viaggia
+a braccetto
+con tutto
+quello che
+abbiamo
+definito
+prima
+senza
+tutto
+quello che
+abbiamo
+definito
+prima
+la fase
+di change
+management
+non ha
+i suoi effetti
+perché
+diciamo
+senza
+una tracciabilità
+e senza
+una documentazione
+fatta
+diciamo
+con un
+criterio
+la fase
+di change
+management
+rischia
+di portare
+ulteriori
+disordini
+all'interno
+del processo
+perché la fase
+di change
+management
+porta
+disordini
+nel processo
+perché tu
+da un momento
+all'altro
+potresti
+essere in una fase
+in cui stai
+definendo
+il requisito
+ma nello stesso
+tempo
+dopo due giorni
+il cliente
+ha deciso
+di cambiare
+quel requisito
+quindi tu devi
+essere in grado
+di affrontare
+questo cambiamento
+e questo
+cambiamento
+lo puoi affrontare
+se
+quel requisito
+lo hai
+elicitato
+no vabbè
+è brutto dire
+se lo hai
+consolidato
+nella fase
+di licitation
+quindi se
+è tuo
+già
+se tu sei
+padrone
+di quel requisito
+puoi affrontare
+un cambiamento
+se tu lo hai
+documentato
+bene
+puoi affrontare
+un cambiamento
+perché
+è padrone
+di quel requisito
+e quindi
+sai
+sei in grado
+di leggere
+il cambiamento
+e di poterlo
+apportare
+poi
+sul requisito
+la tracciabilità
+è fondamentale
+perché tu riesci
+a
+diciamo
+ad informare
+anche gli altri
+domini
+guardate che
+io questo requisito
+lo sto cambiando
+quindi tu devi cambiare
+quest'altro requisito
+software
+ad esempio
+tu devi cambiare
+questo test case
+quindi
+la tracciabilità
+è fondamentale
+per poter
+diciamo
+informare
+anche gli altri
+domini
+nel caso
+diciamo
+l'esame
+la parte di validazione
+che siete più vicini
+voi
+quindi voi sapete
+qual è il test case
+da dover
+cambiare
+e quindi
+chiaramente
+validare
+il nuovo cambiamento
+quindi
+la parte di change management
+è fondamentale
+però
+diciamo
+è molto importante
+ma
+crea disordini
+però
+questo disordine
+può essere
+minimizzato
+con
+tutti gli
+step precedenti
+sono stati affrontati
+in maniera
+corretta
+ok
+quindi
+questo
+immagino
+questi cambiamenti
+sono possibili
+fino a quando
+non viene fatta
+diciamo
+la fase di
+freezing
+dei requisiti
+dove
+dopo
+immagino
+non si possono
+più modificare
+no
+diciamo
+hai usato
+una parola
+giusta
+che
+mi sono
+dimenticato
+io di dirla
+però
+la vorrei
+riprendere
+allora
+c'è una fase
+in cui
+il cliente
+fornisce
+dei requisiti
+e il cliente
+diciamo
+il fornitore
+deve
+chiedere
+al cliente
+guarda
+che tu
+mi devi dare
+una data
+entro la quale
+quei requisiti
+poi non devono
+più cambiare
+però
+una volta
+che il cliente
+ti dà
+una data
+tu hai
+questo pacchetto
+di requisiti
+ma non è detto
+che dopo
+quella data
+questi requisiti
+non possono
+cambiare
+è chiaro
+ok
+non troppo
+chiaro
+se
+non lo so
+me lo vorresti
+spiegare un po'
+meglio
+allora
+sì
+allora
+ti faccio
+un esempio
+fammi vedere
+allora
+tu hai
+tu hai
+una timeline
+no
+questo è il tempo
+quindi
+qua tu c'hai
+il software
+la delivery
+del software
+la prima versione
+quindi versione 1
+del software
+ok
+tu ricevi
+qua
+il primo pacchetto
+i documenti
+no
+qua tu ricevi
+i documenti
+quindi
+prima versione
+dei documenti
+chiaramente
+il cliente
+dice ok
+questa prima versione
+dei documenti
+io però
+posso modificarla
+e ti potrò dare
+tutti i requisiti
+congelati
+qui
+ok
+quindi facciamo
+che questa
+è la versione 0
+questa qua
+è la prima versione
+quindi tu
+la tua attività
+la devi
+la dovresti
+in teoria
+iniziare
+da qui
+perché io
+qui ho
+tutto il congelamento
+del primo pacchetto
+dei requisiti
+ok
+però dopo
+quella fase
+diciamo
+il cliente
+non può più
+intervenire
+sui requisiti
+no
+diciamo
+in teoria
+può intervenire
+creando
+una versione
+successiva
+ok
+cioè tu qua
+inizi a lavorare
+con tutti
+questi requisiti
+chiaramente
+però
+in base
+alle tempistiche
+si decide
+se
+il cambiamento
+che è avvenuto
+tra 1
+e 2
+può essere
+incluso
+nella versione 1
+del software
+magari lui dice
+guarda che io
+te li cambio
+in questa versione 2
+però
+tutto ciò che io
+ti ho cambiato
+in questa versione 2
+tu non me la devi mettere
+nella versione 1
+del software
+ma me la devi mettere
+nella versione 2
+magari
+ok
+è capito
+oppure lui dice
+guarda che c'è
+tanto tempo
+da qui
+dalla versione 2
+al rilascio
+del software
+quindi tu hai
+tempo per poter
+diciamo
+prendere i miei
+cambiamenti
+e metterli
+diciamo
+e implementarli
+ci sono delle date
+che sono definite
+come freeze
+freeze date
+cioè le date
+di congelamento
+in cui
+ti dice
+guarda che
+il pacchetto
+di requisiti
+è pronto
+quindi tu puoi iniziare
+la tua fase
+di elicitation
+puoi iniziare
+la tua fase
+di documentazione
+però
+durante questa fase
+ci potrebbero essere
+dei cambiamenti
+che però
+devono essere
+chiaramente
+definiti
+e concordati
+con il fornitore
+che
+in base alle tempistiche
+ti dice
+ok guarda
+il requisito
+qui
+non devi più
+prendere questo
+ma devi prendere
+questo qui
+perché
+siamo ancora
+in tempo
+per poter
+implementarlo
+ok
+oppure
+se ad esempio
+lui
+ti manda
+un'altra versione
+qua
+del documento
+è chiaro
+che tu qua
+non puoi
+non puoi più
+prenderti
+i cambiamenti
+e portarli
+nella versione 1
+del software
+ok
+e quindi
+entreranno
+poi nella versione 2
+ma
+nella versione 2
+nella versione 3
+poi questo
+verrà deciso
+come ti dicevo
+a cascata
+diciamo
+il project manager
+deciderà
+quando
+integrare
+quando includere
+questi cambiamenti
+e tu saprai
+che questo cambiamento
+lo dovrai
+prendere
+in carico
+per la versione 2
+del software
+quindi se stavi
+facendo ancora
+qualche attività
+per la versione 1
+questi cambiamenti
+a te non ti devono
+interessare
+al momento
+ok
+ma c'è un momento
+esiste un momento
+in cui il cliente
+non può più intervenire
+perché ormai
+il prodotto
+deve essere
+magari rilasciato
+nel commercio
+no
+diciamo che il cliente
+ha in mano
+il cliente è quello
+che chiede a te
+di sviluppare
+qualcosa per lui
+quindi lui decide
+se lui ha i soldi
+ogni cambiamento
+che lui chiede
+ti deve pagare
+ok
+lui ti può chiedere
+anche un cambiamento
+per l'ultimo giorno
+però
+diciamo è sua
+come si dice
+è responsabilità sua
+prima di tutto
+pagarti per questo cambiamento
+e nel secondo modo
+chiaramente
+subire dei ritardi
+sul rilascio
+ok
+chiarissimo
+grazie
+sì Mario
+volevo solo aggiungere
+una cosa
+Mario
+io avrei
+scusami
+sempre Pasquale
+voglio giusto dire una cosa
+e ti lascio parlare
+e meno male
+che te ne devi andare
+quando ci sono queste lezioni
+io ne approfitto
+io sono uno studente
+sempre
+quindi è interessantissima
+questa lezione
+sempre
+bravo
+no no
+volevo soltanto dire
+che sull'ambito
+quando abbiamo spiegato
+diciamo il cycle
+eccetera eccetera
+per dare un'idea di massima
+avevo preso una scheda progetto
+di un cliente
+dove effettivamente
+a un certo punto
+del progetto
+ovviamente i requisiti
+venivano frizzati
+per trasmettere l'idea
+che chiaramente
+il requisito
+viene scritto
+approvato
+come dicevi prima
+e poi si implementa
+si testa
+eccetera eccetera
+eccetera
+l'idea del change management
+il change request
+eccetera
+è proprio per gestire
+appunto
+non voglio dire
+questi fuori process
+perché comunque
+parte del processo
+però per dire
+se il cliente
+ti chiede dei cambiamenti
+fuori programma
+anche un contesto
+rispetto a quello che
+diciamo ci siamo
+ditti con i ragazzi
+informazione
+dove guardavamo
+questa scheda progetto
+e ci dicevamo
+ok a un certo punto
+i requisiti
+sono frizzati
+questo diciamo
+è per gestire
+i cambiamenti
+successivi
+anche eventualmente
+a quelle date
+di frizz
+ma giustamente
+fino a che ci stanno
+i soldi
+è il cliente
+che fa
+questo
+no ma infatti
+stavo pensando
+proprio a quella
+diciamo
+un processo
+che ci hai fatto vedere
+ma voi non vai in contatto
+diciamo che il change management
+chiaramente
+resta che tu
+definisci delle date
+e appunto
+degli accordi economici
+con chi ti deve
+implementare il software
+poi nel momento
+in cui tu decidi
+il tuo cliente
+decidi di fare
+delle modifiche
+e il fornitore
+ti dirà
+ok
+questo va fuori
+dal nostro contratto
+iniziale
+pagami
+se il cliente
+c'ha i soldi
+allora la modifica
+si fa sempre
+se no
+no
+quindi non va in contrasto
+rispetto a quello
+che ci siamo detti
+è un approfondimento
+estremamente interessante
+direi
+infatti Mario
+Gabriele
+appucerò
+fortemente
+di questa lezione
+per i prossimi
+programmi di formazione
+sì
+no
+diciamo che
+il change management
+è che
+non vedetelo
+come qualcosa
+che vi stravolgerà
+la vita
+ecco
+non
+non abbiate paura
+di questo change management
+che può
+sembrare un po'
+che disturba
+un po'
+la nostra attività
+però
+è chiaro
+che
+che bisogna
+essere pronti
+qualora ci dovesse
+essere dei cambiamenti
+però
+diciamo
+è tutto a cascata
+cioè nel senso
+tu non dovrai mai
+a meno che non diventi
+poi un project manager
+o quant'altro
+dover discutere
+su quando far entrare
+il cambiamento
+o meno
+sulla parte di budget
+e quant'altro
+però
+tu quello che ricevi
+è una richiesta
+di cambiamento
+di quel requisito
+nella versione
+X
+del software
+cioè
+se tu stai lavorando
+per la versione
+1 del software
+e dall'alto
+ti arriva una richiesta
+di cambiare
+il requisito
+nella versione 1
+del software
+lo farai
+con tranquillità
+non c'è
+nessuna difficoltà
+ecco
+però
+è una cosa
+che ci arriva
+e dobbiamo
+saperla affrontare
+i cambiamenti
+possono arrivare
+in qualsiasi
+in qualsiasi
+momento
+però
+diciamo
+nelle fasi iniziali
+del progetto
+si tenta
+si
+si
+si consolida
+prima
+tutta la parte
+di requisiti
+iniziale
+e poi si inizia
+con la fase
+di change management
+la fase di change management
+arriva
+bene o male
+a
+diciamo
+quando si è
+già
+ai due terzi
+della fase
+di vita
+del progetto
+diciamo
+dove il cliente
+magari
+dopo aver fatto
+i primi test
+e aver avuto
+i primi riscontri
+pratici
+sul campo
+capisce
+che
+ha necessità
+di cambiare qualcosa
+e quindi
+in quel momento
+potrebbero arrivare
+dei cambiamenti
+così come
+noi
+stesso
+i fornitori
+potrebbero suggerire
+dei cambiamenti
+al cliente
+mario
+io avrei
+una domanda
+di curiosità
+alessati
+chi sei
+alessandro
+alessandro
+allora
+sì
+volevo dire
+quando
+diciamo
+ad esempio
+certi requisiti
+che sono cambiati
+non riescono
+ad essere inclusi
+all'interno
+della versione 1
+ad esempio
+perché poi
+la versione 1
+si porta
+comunque
+a termine
+per magari
+testarla
+e verificare
+altri problemi
+incombere di altri
+problemi
+e poi
+risolvere
+no
+il fatto che
+diciamo
+un requisito
+può
+o non può
+entrare
+in una versione
+quello è deciso
+ad atti livelli
+diciamo
+tu non puoi mai
+decidere
+se quel requisito
+può o non può
+entrare in un software
+diciamo
+c'è
+c'è un accordo
+che viene fatto
+tra il cliente
+e il fornitore
+diciamo
+di solito
+come dicevo
+la timeline
+le tempistiche
+fanno sempre
+da padrone
+diciamo
+sono sempre
+la chiave
+per capire
+se un requisito
+può o non può
+entrare
+in un rilascio
+software
+però è deciso
+sempre
+dall'alto
+ecco
+se è veramente
+una richiesta
+di cambiamento
+importante
+allora
+credo che ci si
+accordi
+dicendo
+ok
+ritardiamo
+di 1
+2
+3 settimane
+il rilascio
+però
+io ho necessità
+di includere
+quel cambiamento
+nella prima versione
+del software
+quello che dicevo
+magari
+i nuovi requisiti
+entreranno
+nella versione 2
+ad esempio
+quello che volevo sapere
+perché poi
+la versione 1
+si porta comunque
+al termine
+per poi testarla
+comunque
+certo
+ogni versione
+del software
+ha il suo scopo
+ogni versione
+del software
+include
+al suo interno
+tanti contenuti
+si
+ad esempio
+nella prima parte
+del software
+magari
+viene introdotta
+tutta la parte
+di comunicazione
+che è un po'
+diciamo
+il perimetro
+di tutto ciò
+che c'è dentro
+quindi
+riattivano un po'
+tutta la parte
+di comunicazioni
+tutti
+i can transiver
+tutta la parte
+di gestione
+di comunicazione
+diciamo
+quella magari
+può essere
+una prima parte
+del software
+quindi
+della prima versione
+si andranno a testare
+tutta la parte
+di comunicazione
+ad esempio
+ogni versione
+ha un suo
+scopo
+ok
+grazie
+ok
+quindi
+ritornando
+un attimo
+quindi
+molto
+velocemente
+ecco
+chiaramente
+l'RMP
+viene
+chiaramente
+non è
+un documento
+che una volta
+che uno lo fa
+diciamo
+lo prende
+per
+deve prenderlo
+chiaramente
+per buono
+però
+possiamo
+migliorarlo
+di volta in volta
+il miglioramento
+può
+esserci
+diciamo
+perché
+ci sono dei feedback
+sia interni
+dovuti a
+delle revisioni
+continue
+del documento
+o chiaramente
+molto importanti
+sono anche
+i feedback
+da parte del cliente
+che può
+sollevare
+alcuni punti
+relativamente
+al nostro processo
+se è in linea
+con quanto loro
+si aspettano
+o con i loro processi
+sono molto fondamentali
+i feedback interni
+le review interne
+e con il cliente
+e chiaramente
+una volta
+raccolte informazioni
+e spunti
+è necessario
+implementare
+questa
+lesson learned
+sono due parole
+che
+probabilmente
+sentirete
+spero
+non tanto
+però
+le troverete
+le sentirete
+diciamo
+il lesson learned
+non è altro
+che una fase
+di documentazione
+dei problemi
+che ci sono stati
+durante il ciclo vita
+di un progetto
+che possono essere
+problemi
+in questo caso
+dell'RMP
+o problemi
+proprio relativi
+al codice
+o qualsiasi tipo
+di problema
+che ci possa essere stato
+e questo lesson learned
+è una fase
+di documentazione
+per poter poi
+evitare
+in futuro
+di dover affrontare
+gli stessi tipi
+di errori
+quindi è una sorta
+di ok
+abbiamo imparato
+dalla lezione
+dall'errore
+adesso
+cerchiamo
+di non commettere
+più l'errore
+che abbiamo fatto
+diciamo questo
+è un po'
+il lesson learned
+e quindi
+in questo caso
+il lesson learned
+diciamo
+ci permette
+ecco
+di documentare
+quali sono stati
+i punti
+sollevati
+feedback
+quant'altro
+e di migliorare
+il processo
+per i progetti
+futuri
+ecco
+per il futuro
+quindi
+diciamo
+le conclusioni
+brevemente
+vorrei semplicemente
+dire quanto
+ho riportato
+qui nella parte blu
+che racchiude un po'
+quindi diciamo
+è nell'insieme
+che noi possiamo
+migliorare
+il processo
+attraverso questo
+requirement management plan
+quindi attraverso questo
+requirement management plan
+possiamo migliorare
+notevolmente
+il processo
+di gestione
+dei requisiti
+o di gestione
+di qualsiasi tipo
+di attività
+che ci richieda
+di
+di dover
+tracciare
+di dover
+documentare
+appunto
+dei requisiti
+o dei test case
+qualcuno ha alzato
+la mano
+no
+ok
+e quindi
+come ultima slide
+grazie
+ok
+diciamo
+se non ci sono
+altre domande
+e ci sono
+benvengano
+io direi
+magari di fare
+dieci minuti
+di pausa
+e poi
+Gabriele
+può iniziare
+con la sua parte
+sta benissimo
+Mario ma dopo
+ci sarai anche tu
+ok ragazzi
+sì
+perché non mi vuoi
+no no no
+volevo fare poi
+un commento
+finale
+ma se ci sarai
+tu dopo
+lo faccio
+quando termina
+anche Gabriele
+dai a posto
+io potrei
+staccarmi al volo
+perché nel frattempo
+abbiamo una
+una riunione
+con il cliente
+workshop con il cliente
+online
+diciamo
+sto aspettando
+che mi chiamino
+per presentare
+quindi
+qualora dovessi
+assentarmi un po'
+perché
+l'ho saltato
+nell'altra
+nell'altro meeting
+ok
+va bene
+ci vediamo
+tra dieci minuti
+allora
+grazie ragazzi
+a dopo
+ragazzi
+11 e 30
+allora
+a dopo
+ciao grazie
+ciao
+ciao
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Una...
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Ok.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.
+Grazie a tutti.

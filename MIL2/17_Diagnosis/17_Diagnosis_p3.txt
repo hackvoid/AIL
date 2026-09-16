@@ -1,0 +1,249 @@
+Hello everyone this is the third and final module of the diagnosis lesson. As you've seen
+the lesson has been divided in three modules. Module one that was about an introduction about
+all diagnosis and already in the first module the ISO 1429 alias UDS has been mentioned.
+The module two that was more focused about the status rights and how to get to the specific
+status and how to get back from that status still using the concepts behind this norm. Finally
+this last and shorter module will have a look at the norm itself so as you see here this is the
+ISO that has been always mentioned the ISO 14229 and here you find also the meaning of the acronym
+Unified Diagnostic Service UDS. Since it is mentioned so many times in the lessons and also in your
+daily working activities I would like to show and scroll down with you the norm to show what we
+really care about this norm and how to use it. So as every norm there is a summary of contents
+there are a lot of reference or references terms and definitions symbols so a lot of
+introductory pages and chapters where you know everything that is will be used during the norm
+is explained. But what we really care about is okay it would be interesting to read the first part
+you know we're talking about like 30-35 pages so it would be interesting to read also the first pages
+as well but once you are aware and you have basic knowledge about the UDS you will use this norm just
+looking at the services that you might need for your activities. As you see here
+there is a huge list of services all the services that are expected for this norm. So you see here the
+service 10 service 11 which we probably mentioned the service 27 here 22 and stuff like this. As you see the
+list of services is quite long and here you find also the service 14 that was mentioned in module 2 as well
+as the service 19 which is the main one that is mentioned and used almost in all the modules about the
+diagnosis that we have done before until now. Service 19 is the biggest one with the largest amount of
+sub-services probably for the activities we are interested in so the description of the norm will start from
+the easiest of the services that you will probably find yourself using which is the service 22. So just
+looking at the summary of the contents we just have to find the service 22 with data by identifier service 22
+that is page 97. So here we basically go to the page and we see how a specific service is
+set. This kind of structure is repeated for every service. So we are going to see the service 22 but then
+this kind of structure is repeated for every service. As mentioned many times in the past as well
+you don't have to remember everything by hearth. I mean no one will ask you to remember the whole norm
+or the whole norm in every service in every subservice no one will ask you for that. What you have
+what you have to remember what you have to to have basically is the norm itself so once you start an
+activity if you have to perform some activities about the diagnosis what you will need is basically
+diagnostic requirements for that project and if for that project the UDS is used then all you need to
+have to have is the UDS itself. So once you have to do an activity I don't know reading an information
+reading the error memo raising the error memory whatever you know that you can look in the ISO 14229
+alias UDS and then look for the you know the service that you might need how to write it what you should
+expect and things like this. So even if there are 300 pages do not get scared because what is really
+useful and helpful here is to have the norm read it through and knowing that you can look for
+information that you need just reading the norm every time you need it. We will start from service
+22 because it is very easy and then we will move to the service 19 which is the main one that we have
+always mentioned in use in the previous lessons. As always there is the service description and this is
+very helpful because if you already know the service to be used and you just don't remember how to write
+it in a frame okay then you can jump this this part this section but if you don't know what is the
+service that you might need then the service description of all the services might be helpful for you because
+it can explain what can you do with this service and eventually reading through them you can find something
+that can be that can suit the suit the activities that you might do so you can find the service that
+you might need reading the service description. In this case we already know what this service is used for
+but in case you have doubts you can simply read the service description to have a first introduction of
+the service in itself. I suggest you to do this kind of like to read at least the service description for the
+main services that have been mentioned in the diagnostic lessons that you might have received.
+After the description there's always the request message definition so in the norm you will find the
+long list of a long a huge number of tables okay so it's important to understand how to read them. In this
+case you will always have a chapter of request message as you remember all the diagnostic services are sent to
+the electronic control units using diagnostic scan frames okay so what you see here this is actually
+the hexadecimal values that you should write inside the scan frame to send diagnostic request. In this table
+in fact you see that on the left side there is data byte so the amount of bytes that are needed for this
+request and here what is the parameter name and there is the hexadecimal values. Then reading the norm you can
+understand also what is this CVT or this mnemonic section but for all we need now what is important
+is just to focus on the first column of the data byte eventually the parameter name and hexadecimal. So from
+here we see that to write to use the request this service the service 22 we have to write the request message in this way
+so we have a first byte where we have the read data by identifier request service id which is the id of
+the service the id of the service is 22 we already mentioned it so it means that if i want to request this
+kind of a service the message should start with 22 okay then it's said that the the second section of the data
+byte is byte 2 and byte 3 and byte 2 and byte 3 there is the data identifier so actually the code of the RDI
+okay this is always defined in two bytes so it means that if you want to read a specific information
+you will write 22 and the two bytes of the RDI okay as you see the table doesn't stop here because one of
+the feature of you know one of the possibilities that you have with this service is to request
+more than one RDI per times this is not always possible but it might be possible so this is why
+the table doesn't stop here and it means that you can send 22 then the two bytes for the first RDI
+other two bytes for the second one until you know all the RDIs that you want to all
+uh request for okay we can use the basic example of requesting just one uh uh RDI so what we will have
+is 22 and there two bytes at 10 0 8 for example okay where this will be the RDI and this is the service okay
+so this is the request then let's move on uh i choose this service because this service does not consider
+sub function but uh i'm reading the chapter 19 you will see that the chapter sorry the chapter related
+to service 19 you will see that this chapter will be much much longer because the service in itself
+expects a lot of sub functions we have mentioned the 1902 the 1904 the 1906 and the slides you will find
+many others much more of that but in this specific service there are no sub function so it's very it's
+easier for the explanation uh but uh going through the service 19 you will see that this chapter will be
+actually much more longer than this one where it's simply written this service does not use a sub function
+parameter so here it's explained what is the data identifier and what this parameter identifies the
+service data record being requested by the client and here there are also other references inside norm to
+understand what is this data identifier and how and why it's built like that
+so there is not just the table explaining uh uh how to write the request but also what is the positive
+response message definition that i should expect once i sent these i sent this uh request okay this service
+so again i wrote and before 22 10 0 8 then here the norm says okay this is the answer okay and here it's
+described the answer so the answer will be 62 because as you know as you might already know or
+someone has mentioned already in other videos the positive response to a specific service is going to
+be plus 40 in hexadecimal values so if we requested service 22 then the positive response will always start
+with plus 40 on the service so if you requested the service 22 then the positive response will be 22
+plus 40 in hexadecimal which is going to be 62 and here everything is described here i mean positive
+response message that message definition quite likely quite likely inside the first chapter descriptive
+chapters of the norm you will also also find a description of this plus 40 when there is a positive
+response and stuff like that uh in these tables this concept is given for granted but we are already
+mentioning that once we have a positive response it's going to be a plus 40. anyway so we have a plus 40
+then here it's data identifier so we will have 10 0 8 because this is that identifier and then we will
+have the data record so the actual information so if we are considering that this byte uh this byte i don't know here
+the content of the byte definition so that the rdi is on two bytes okay so 10 0 8 okay but then the content
+that it gives access to it gives access to might be i don't know 10 bytes okay so here we will have 62 as a positive
+response 10 0 8 which is the id data identifier and then we will have 10 bytes giving us the content of
+this rdi just remember back guys that rdi basically is an information that is stored inside the electronic
+control unit memory so what i'm doing basically here requesting the service 22 is just requesting to the
+electronic control unit uh this information to give and publish this information on the ken network
+using this specific syntax coming from vds uh then if the rdi it's uh it's just i don't know it has two bytes
+of information then we will just have this one one and two if it's on three bytes we have always this
+or if it's on four bytes we have this one as well and stuff like this okay this should be quite clear
+and this is explained inside the norm so in the norm is said okay the positive response message
+definition is going to be like this so i have one as 62 the positive response the identification codes
+of the data identifier and the content once again the table doesn't stop here because as i explained you
+before you have the chance to request more than one rdi times this is not always possible it's up also to
+the client that how the client decides to uh implement this part this section maybe they don't want to
+implement exactly the uds but maybe they have some division in the software so not always is possible
+to request more than one rdi times but the norm says that it's possible to read a few of them all
+together okay this is why the table doesn't stop but the idea is always the same so you have 62 the two bytes of
+the identifier and the content once the content is finished you will have once again data identifier
+and the content okay this should be clear here there is a definition of what is the data identifier
+and the data record but once again data identifier this is basically the identification number the data
+record is the content we access through that identifier once again guys here we are just uh this service is very
+easy so through the service 22 we are requesting to read some information that are stored inside the uh
+memory of the electronic content this information is stored with the specific identification number which we
+um consider to be 1008 we request can you give me the information that are uh stored with the
+identification number 1008 the echo will reply okay 62 1008 blah blah blah blah this is the content okay
+this should be quite easy then uh let's move to the next section of the norm which is the supported
+negative responses so every time we in this example we have given for granted that the positive that the
+response is positive and we explain that once we have the positive response is always plus 40 on the
+service that has been requested but for some reasons the echo can also reply saying i cannot give you this
+information so we request 22 i'll use purple so we always request the service in this way because you
+know we have seen it from but we have two options or deposit the response is positive and it follows the rules that
+we were explaining before or we have the second options where the answer is negative so the echo cannot reply
+to cannot you know reply positively to the services that we requested so in this case the structure will be like
+this one the first byte is always going to be 7f so the answer is going to be 7f 7f is used every time
+the echo wants to tell us the echo wants to tell us okay this is a negative response negative response to
+what second byte is going to be the service for which the response is negative and the service that we
+were requesting is the service 22 this is the second byte the third byte is going to be the the reason
+so the the echo always when there is a negative response the echo will always reply on these three bytes
+where the first one is the 7f always which tells okay every time you read 7f as first byte this is a
+negative response so negative response means i cannot reply okay i cannot reply to what the service 22 and
+then the echo always tells you why so in this case the third byte is the reason of why that the echo cannot reply
+uh in the norm there should be a table with all the possible negative responses that the uds expects
+but not all the negative responses are expected for every service so for every service that you read there
+is also a section of supported negative responses and there is a subtable containing only the
+a supported negative responses for that service so it means that if i use the service 22 the i have two
+options or the echo replies positive positively and that's that follows all the words that we have explained
+before but the other option is that the answer is negative and we will have 7f 22 and one of these negative
+responses so we will have these are the ones supported for the service 22 so we will have the service the
+reason 13 incorrect message length or invalid format means that we have requested an rdi not on two bytes but
+you know to buy it point something so we didn't write 22 10 0 8 but we brought 22 10 0 8 1 for example
+and this is wrong because the rdi are based on two bytes okay so this is the reason why we have the
+correct uh incorrect message length another negative response could be 22 so 7f 22 22 conditions not
+correct it means that you are requesting a diagnostic request when there are not all the proper conditions
+and expected conditions to request this service 31 request out of range so you requested an rdi that
+doesn't exist for example or security access denied 33 so you are requesting a diagnostic service that cannot
+be requested with this security access level the security access there is also a diagnostic service for
+the security access which is the 27 so you can have a look at it read it to understand what is this security
+access once again the structure that we are seeing here for the service 22 is all is the same for the
+service 27 the service 19 the service 14 and stuff like this okay so it's okay and it's enough to go
+through the structure of one service because all the others follow the same structure
+and then the the norm also gives us some examples so there are some preconditions that are explained
+here these are these are all the preconditions of this example and then there is an example probably there
+are also also more than one example so this example one is read single data identifier so we just are
+reading one rdi this guy's in this case is the bin vehicle so the vehicle identification number bin number
+so we will we will actually write inside the diagnostic tool or simply in a diagnostic frame in canalizer
+these three bytes 22 because this is the proper diagnostic service and then we will have the two bytes of the
+the identification number which is the f19 in this case okay so the echo will reply again uh the positive
+response 62 then the two bytes with the data identifier and the content of that ed of that rdi in this case
+the content of that rdi is based on uh 20 minus 3 17 bytes so the answer will be on 20 bytes because the first is
+the positive response then we will have the two bytes of the rdi and finally the content of the rdi
+uh here there is another example where you read not just one rdi but two rdi's so as you can see
+this reflects exactly what was written in the generic uh variables let's say in the table before you just
+write the service 22 and then two bytes for the first rdi two bytes for the second rdi and the answer
+in this case will be 72 because it's positive response the first the two bytes of the first rdi
+the content the two bytes of the second rdi and the content and it ends so here it starts another
+service another service another service that will follow the same structure so out of curiosity because
+we have always used that service we are going to scroll down also the service 19 service 19
+uh service 19 so we see there is a productive part where it's written uh for which are the reasons
+why we should use this service which is the purpose of this service and we see here also the descriptive
+part is descriptive part descriptive part is much longer because there is a huge set of sub services
+that are used for service 19. this is very helpful so i really uh invite you to read these chapters
+especially for the main services that services that you might use for your activities so there is always
+the descriptive part as you see it's very very long uh you know there are even different
+chapters to understand which are the service which is the services which are the purposes of the
+sub services and stuff like this okay so this is very very long but this is these are all the concepts
+as ideas that we gave you in the past videos so just reading through these sections you should find
+every all the things that we have already mentioned in the past in other videos so once this full
+introductive part has been defined probably there is also the definition of the status byte that you
+have in other videos so you see how long is this then you will have the usual table that we already found
+in the other services so there is the request message definition here you see there is first byte is the
+service 19 the second byte is the sub function which was not present in the uh in the table before
+because no sub services were expected for service 22 but for the service 19 there is a huge bunch of
+sub services expected and then there is the third byte of the status mask this is the famous 19 0208 that
+we have always mentioned in past videos okay but as you see there are 02 is just part of subs it is just one
+of the all the sub services that are expected for this service so we have 0 1 0 2 0 half 11 12 12 13
+0 3 0 4 0 5 0 6 10 you know there are there is a long long list of sub services each sub service is
+used for a specific purpose most of the activities that we do can be managed just with the the subservice
+0 2 sub services 0 4 and the subservice is 0 6 but there are a bunch of other subservices that might be
+helpful for other specific corner cases of your activity and you don't have to remember all of
+them all you have to do is just knowing that i have the norm i can use the norm and read the chapter when
+i need it to understand if there is a specific service or subservice that i can use to you know perform
+a specific validation activity or verification activity that i'm supposed to do in my work
+so here is the definition of all the sub function expected here you see the subservice 0 2 which is
+the one that we always use is called report dtc by status mask so we say service 19 subservice 0 2
+report the list of dtc by status mask which status mask at least 0 8 so at least the status all the dtc's
+that has got at least the bit 3 to 1 this is the reason why we set 0 8 but this is the reason why we
+can use whatever other status mask i'm not forced to use the 0 8 as the third byte of the request 19 0 2 0 8
+i can use something different i don't know i'm interested in the list of the dtc's that have
+third byte 40 so 19 0 2 40 or 19 0 2 f f 19 0 2 0 0 f and you can use it as you prefer according to the
+activity that you want to do most of the time if we use 0 8 because we are interested in all the dtc's
+that are at least saved in the error memory but this doesn't mean that you cannot use a different status mask
+so this is the survey the list of all the subservices expected or that you that can be implemented for
+service 19 just remember in the service 22 this section was empty because there are no subservices
+expected for that service in this one you know you see there are also two or three pages so description
+of the subservices okay so you start to understand why this is so important
+so here there is the long definition of the status by the examples so i really invite you to read all of that
+and once again as we have seen for the service 22 here there is a positive response message definition so what i should expect
+what i should expect once i have a positive response once again if the service is the 19
+then if there is the positive response it's going to be 19 plus 40 59 okay then 59 0 2 for example
+the dtc status availability mask which i invite you to study and so this is the third byte that you
+should study from the north and then the three bytes of the dtc because you know the dtc
+uh is based on three bytes plus four byte real status of the dtc which we which is what we are looking for
+and here there are all the examples of positive response with all the subservices so this chapter
+is very long because we have a lot a lot of subservices it means we have a lot of tables for
+every kind of example uh of course even here there is the supported negative responses code
+in this case we have just three cases like some function not supported uh the incorrect message
+length that we have always also seen on the service 22 and also the request out of range
+and finally there is also the message for examples with what can be yeah here you see there is also the
+description of what the what are the eight bit of the status byte and that's you know you have two
+specific videos explaining that so this is just a refresh for you and then there are you know there
+are examples where you know a specific uh subservice is used in this case is the one
+the results i might say an example with zero two you know you see here in this case uh they're not
+requesting the 1902 08 but they're interested in the more restrictive case where not just the bit 3 is
+2 1 but in this case they want bit 7 1 and the bit uh 2 to 1 okay and you know here for it follows a
+huge list of examples with all the subservices so just to uh sum it up this norm is not something that
+you read so you take this norm you read 300 pages and then you expect to be expert in ugs no
+this norm is very important to understand the structure of the norm probably start from service
+22 because that's the easy one and once it's clear the structure of every service every time
+you perform diagnostic activities use this norm uh looking for or the specific service if you don't
+remember the syntax because we have seen there are tables explaining you how to write the request which
+is the positive response to be expected which is the negative exponent response to be expected and also
+which is the which are the negative reasons for the negative uh response expected so you just read the
+norm if you don't remember the syntax or if you have to do something diagnostic diagnostic related but you don't
+know which can be the service to be used you can simply or read the service description of all the
+of all the services or simply just looking for keywords for example dtc for example flash of
+uh echo for example arrays and stuff like this probably the research the control find feature of the laptop
+uh applied on the norm will uh bring you to the service description chapter which is the first
+section of every uh service and then once you read the service description that will help you to
+understand if that can be a service that can help you for your validation activities or for your
+verification activities or diagnosis and again you don't have to remember everything about the
+service you just have to know how to read the UDS norm how to use it so that will help you for the
+further activities that you do once again if there are doubts or problems you can contact me
+uh i am pasquale.perrota and the email address is pasquale.perrota head sign kinethon.it or simply
+refer to the generic mailing list automotive.training head sign kinethon.it for further uh support and further questions

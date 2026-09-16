@@ -1,0 +1,13766 @@
+WEBVTT
+
+00:00.000 --> 00:03.300
+rispetto a quanto concordato
+
+00:03.300 --> 00:04.660
+e a quanto definito
+
+00:04.660 --> 00:07.080
+nelle agende abbiamo fatto un cambio
+
+00:07.080 --> 00:07.760
+uno switch
+
+00:07.760 --> 00:10.600
+io e Gabriele abbiamo ritenuto fosse opportuno
+
+00:10.600 --> 00:12.660
+cominciare prima con
+
+00:12.660 --> 00:14.580
+la definizione
+
+00:14.580 --> 00:16.080
+e un po' la discussione sul
+
+00:16.080 --> 00:18.140
+requirement management plan
+
+00:18.140 --> 00:20.320
+e poi che diciamo
+
+00:20.320 --> 00:22.060
+terro io come discussione
+
+00:22.060 --> 00:24.260
+e poi Gabriele si inserirà
+
+00:24.260 --> 00:26.060
+con il CPRE
+
+00:26.060 --> 00:28.840
+con suggerimenti
+
+00:28.840 --> 00:29.760
+e best practice
+
+00:29.760 --> 00:32.700
+per la definizione dei requirement
+
+00:32.700 --> 00:35.580
+però diciamo
+
+00:35.580 --> 00:37.480
+prima di iniziare volevo fare
+
+00:37.480 --> 00:39.180
+velocemente un giro di tavolo
+
+00:39.180 --> 00:40.980
+per conoscervi
+
+00:40.980 --> 00:42.880
+e per sapere
+
+00:42.880 --> 00:45.640
+quanto voi siete a conoscenza
+
+00:45.640 --> 00:47.560
+del concetto di requisiti
+
+00:47.560 --> 00:49.060
+e di gestione dei requisiti
+
+00:49.060 --> 00:50.380
+se avete mai avuto modo
+
+00:50.380 --> 00:53.220
+di metterle le mani già in pasto
+
+00:53.220 --> 00:54.800
+oppure è solo un concetto
+
+00:54.800 --> 00:57.440
+che avete in mente
+
+00:57.440 --> 00:59.440
+così
+
+00:59.440 --> 01:00.300
+va bene
+
+01:00.300 --> 01:01.840
+io a gamba tesa
+
+01:01.840 --> 01:02.600
+giusto per un
+
+01:02.600 --> 01:05.320
+cappello introduttivo
+
+01:05.320 --> 01:06.420
+sulle competenze
+
+01:06.420 --> 01:07.000
+e poi ovviamente
+
+01:07.000 --> 01:08.040
+ognuno tira la sua
+
+01:08.040 --> 01:09.140
+però diciamo
+
+01:09.140 --> 01:10.340
+quasi tutti
+
+01:10.340 --> 01:12.460
+tranne qualche eccezione
+
+01:12.460 --> 01:13.340
+eccezione
+
+01:13.340 --> 01:14.900
+stanno seguendo un programma
+
+01:14.900 --> 01:15.380
+di formazione
+
+01:15.980 --> 01:17.100
+che è basato
+
+01:17.100 --> 01:18.120
+sulla validazione
+
+01:18.120 --> 01:19.280
+quindi tendenzialmente
+
+01:19.280 --> 01:20.140
+della parte destra
+
+01:20.140 --> 01:20.820
+del ciclo AB
+
+01:20.820 --> 01:21.660
+quindi abbiamo visto
+
+01:21.660 --> 01:22.120
+la parte
+
+01:22.120 --> 01:23.800
+ottimo
+
+01:23.800 --> 01:24.060
+però
+
+01:24.060 --> 01:25.200
+però è ottimo
+
+01:25.200 --> 01:26.160
+abbiamo citato
+
+01:26.160 --> 01:26.580
+appunto
+
+01:26.580 --> 01:27.700
+un po' i requisiti
+
+01:27.700 --> 01:28.940
+come si leggono
+
+01:28.940 --> 01:29.880
+come ci utilizzano
+
+01:29.880 --> 01:30.680
+è più incentrato
+
+01:30.680 --> 01:31.380
+sul testing
+
+01:31.380 --> 01:32.480
+ok però loro hanno
+
+01:32.480 --> 01:33.500
+queste conoscenze
+
+01:33.500 --> 01:33.840
+di fatto
+
+01:33.840 --> 01:34.700
+volevo solo dirti
+
+01:34.700 --> 01:36.040
+questo come riferimento
+
+01:36.040 --> 01:36.620
+perfetto
+
+01:36.620 --> 01:38.440
+va benissimo
+
+01:38.440 --> 01:39.240
+è già un buon punto
+
+01:39.240 --> 01:39.720
+di partenza
+
+01:39.720 --> 01:40.240
+ecco anche
+
+01:40.240 --> 01:40.980
+per noi
+
+01:40.980 --> 01:41.840
+come impostare
+
+01:41.840 --> 01:43.140
+ecco la discussione
+
+01:43.140 --> 01:44.040
+se andare
+
+01:44.040 --> 01:44.580
+un po'
+
+01:44.680 --> 01:45.360
+se approfondire
+
+01:45.360 --> 01:45.940
+oppure essere
+
+01:45.940 --> 01:47.700
+un po' più generali
+
+01:47.700 --> 01:49.940
+va bene
+
+01:49.940 --> 01:50.180
+diciamo
+
+01:50.180 --> 01:50.800
+se tutti
+
+01:50.800 --> 01:52.100
+siete d'accordo
+
+01:52.100 --> 01:52.500
+appoggiate
+
+01:52.500 --> 01:53.500
+quello che Pasquale
+
+01:53.500 --> 01:54.160
+ha detto
+
+01:54.160 --> 01:55.340
+diciamo eviterei
+
+01:55.340 --> 01:56.440
+questo giro di tavolo
+
+01:56.440 --> 01:58.320
+io non conosco
+
+01:58.320 --> 01:58.900
+nessuno
+
+01:58.900 --> 02:00.080
+forse ho visto Federica
+
+02:00.080 --> 02:01.120
+un attimo
+
+02:01.120 --> 02:01.660
+è apparsa
+
+02:01.660 --> 02:02.340
+sullo schermo
+
+02:02.340 --> 02:03.780
+e credo che
+
+02:03.780 --> 02:04.800
+ci conosciamo
+
+02:04.800 --> 02:05.840
+ecco ci siamo visti
+
+02:05.840 --> 02:06.740
+in sede
+
+02:06.740 --> 02:09.200
+però gli altri
+
+02:09.200 --> 02:09.460
+ecco
+
+02:09.460 --> 02:09.980
+vabbè
+
+02:09.980 --> 02:10.400
+comunque
+
+02:10.400 --> 02:12.240
+Gabriele lo conosco
+
+02:12.240 --> 02:13.140
+si vede anche in foto
+
+02:13.140 --> 02:13.820
+e Pasquale pure
+
+02:13.820 --> 02:14.200
+va bene
+
+02:14.200 --> 02:15.320
+allora
+
+02:15.320 --> 02:17.660
+allora ragazzi
+
+02:17.660 --> 02:19.840
+possiamo partire
+
+02:19.840 --> 02:26.120
+diciamo che
+
+02:26.120 --> 02:27.840
+possiamo partire
+
+02:27.840 --> 02:29.180
+con questo
+
+02:29.180 --> 02:30.460
+Requirement Management Plan
+
+02:30.460 --> 02:31.180
+ditemi quando
+
+02:31.180 --> 02:32.680
+quando vedete
+
+02:32.680 --> 02:33.520
+il mio schermo
+
+02:33.520 --> 02:43.120
+ok vabbè
+
+02:43.120 --> 02:44.140
+una piccola introduzione
+
+02:44.140 --> 02:44.500
+di me
+
+02:44.500 --> 02:45.040
+giusto per
+
+02:45.040 --> 02:46.940
+per conoscermi
+
+02:46.940 --> 02:47.340
+io sono
+
+02:47.340 --> 02:48.140
+sono in Kineton
+
+02:48.140 --> 02:49.280
+da circa due anni
+
+02:49.280 --> 02:50.580
+e
+
+02:50.580 --> 02:52.040
+mi sono occupato
+
+02:52.040 --> 02:53.060
+fin dall'inizio
+
+02:53.060 --> 02:53.640
+in Kineton
+
+02:53.640 --> 02:54.860
+della parte
+
+02:54.860 --> 02:56.880
+dei Software Requirement
+
+02:56.880 --> 02:59.040
+per poi passare
+
+02:59.040 --> 02:59.420
+adesso
+
+02:59.420 --> 02:59.920
+la parte
+
+02:59.920 --> 03:01.100
+dei System Requirement
+
+03:01.100 --> 03:01.560
+e
+
+03:01.560 --> 03:03.280
+diciamo che io
+
+03:03.280 --> 03:04.160
+diciamo non è
+
+03:04.160 --> 03:05.540
+purtroppo
+
+03:05.540 --> 03:06.060
+e per fortuna
+
+03:06.060 --> 03:06.900
+la mia prima esperienza
+
+03:06.900 --> 03:07.360
+di lavoro
+
+03:07.360 --> 03:07.880
+ecco ho avuto
+
+03:07.880 --> 03:09.800
+ho iniziato a lavorare
+
+03:09.800 --> 03:10.580
+nel 2013
+
+03:10.580 --> 03:11.880
+in Magneti Marelli
+
+03:11.880 --> 03:13.620
+e poi
+
+03:13.620 --> 03:15.180
+per sei anni
+
+03:15.180 --> 03:15.560
+come
+
+03:15.560 --> 03:17.680
+System Function Expert
+
+03:17.680 --> 03:18.360
+quindi sempre
+
+03:18.360 --> 03:18.880
+sulla parte
+
+03:18.880 --> 03:19.960
+di controllo motore
+
+03:19.960 --> 03:21.000
+centraline
+
+03:21.000 --> 03:21.920
+di controllo motore
+
+03:21.920 --> 03:23.520
+e poi sono passato
+
+03:23.520 --> 03:24.140
+sono passato
+
+03:24.140 --> 03:24.780
+in Bosch
+
+03:24.780 --> 03:26.040
+e lì
+
+03:26.040 --> 03:26.260
+ho
+
+03:26.260 --> 03:26.840
+diciamo
+
+03:26.840 --> 03:27.520
+ho svolto
+
+03:27.520 --> 03:27.860
+il ruolo
+
+03:27.860 --> 03:28.240
+di
+
+03:28.240 --> 03:29.240
+ITU
+
+03:29.240 --> 03:29.560
+quindi
+
+03:29.560 --> 03:31.140
+centraline di controllo motore
+
+03:31.140 --> 03:31.980
+e
+
+03:31.980 --> 03:33.000
+ricoprivo il ruolo
+
+03:33.000 --> 03:33.960
+di project manager
+
+03:33.960 --> 03:34.420
+quindi
+
+03:34.420 --> 03:35.320
+diciamo
+
+03:35.320 --> 03:36.120
+mi occupavo un po'
+
+03:36.180 --> 03:36.840
+di tutto
+
+03:36.840 --> 03:37.320
+il ciclo
+
+03:37.320 --> 03:39.180
+e anche
+
+03:39.180 --> 03:39.540
+un po'
+
+03:39.600 --> 03:40.020
+della parte
+
+03:40.020 --> 03:40.360
+di
+
+03:40.360 --> 03:41.940
+budget
+
+03:41.940 --> 03:42.400
+e di
+
+03:42.400 --> 03:43.080
+allocazioni
+
+03:43.080 --> 03:44.300
+di risorse
+
+03:44.300 --> 03:45.220
+quindi
+
+03:45.220 --> 03:45.880
+lì ho avuto
+
+03:45.880 --> 03:46.220
+un po'
+
+03:46.340 --> 03:46.660
+un ruolo
+
+03:46.660 --> 03:47.120
+un po' più
+
+03:47.120 --> 03:48.240
+gestionale
+
+03:48.240 --> 03:48.600
+mentre
+
+03:48.600 --> 03:49.960
+in precedenza
+
+03:49.960 --> 03:50.520
+è tuttora
+
+03:50.520 --> 03:51.880
+un ruolo
+
+03:51.880 --> 03:52.080
+un po'
+
+03:52.140 --> 03:52.220
+più
+
+03:52.220 --> 03:52.780
+tecnico
+
+03:52.780 --> 03:54.620
+detto
+
+03:54.620 --> 03:55.320
+questo
+
+03:55.320 --> 03:58.800
+passiamo
+
+03:58.800 --> 03:59.800
+alla presentazione
+
+03:59.800 --> 04:00.300
+vedete
+
+04:00.300 --> 04:04.360
+sì sì
+
+04:04.360 --> 04:04.780
+Mario
+
+04:04.780 --> 04:05.340
+si vede
+
+04:05.340 --> 04:08.260
+perfetto
+
+04:08.260 --> 04:08.520
+allora
+
+04:08.520 --> 04:09.160
+il concetto
+
+04:09.160 --> 04:09.660
+di requirement
+
+04:09.660 --> 04:10.520
+management plan
+
+04:10.520 --> 04:11.600
+il concetto
+
+04:11.600 --> 04:12.020
+di requirement
+
+04:12.020 --> 04:12.820
+management plan
+
+04:12.820 --> 04:13.860
+in pratica
+
+04:13.860 --> 04:14.440
+viene
+
+04:14.440 --> 04:15.280
+in qualche
+
+04:15.280 --> 04:15.720
+modo
+
+04:15.720 --> 04:18.460
+a supporto
+
+04:18.460 --> 04:19.600
+di tutto
+
+04:19.600 --> 04:20.060
+quel
+
+04:20.060 --> 04:21.540
+processo
+
+04:21.540 --> 04:22.000
+che
+
+04:22.000 --> 04:23.180
+si deve
+
+04:23.180 --> 04:23.720
+definire
+
+04:23.720 --> 04:24.500
+ad inizio
+
+04:24.500 --> 04:25.100
+progetto
+
+04:25.100 --> 04:26.080
+quando un progetto
+
+04:26.080 --> 04:27.140
+parte
+
+04:27.140 --> 04:27.560
+quindi
+
+04:27.560 --> 04:28.760
+un cliente
+
+04:28.760 --> 04:30.680
+chiede
+
+04:30.680 --> 04:31.760
+presso un fornitore
+
+04:31.760 --> 04:32.400
+un T1
+
+04:32.400 --> 04:33.200
+o un UOM
+
+04:33.200 --> 04:34.160
+chiede di
+
+04:34.160 --> 04:35.560
+sviluppare un progetto
+
+04:35.560 --> 04:37.160
+facendo un esempio
+
+04:37.160 --> 04:37.460
+appunto
+
+04:37.460 --> 04:38.300
+chiede di sviluppare
+
+04:38.300 --> 04:39.360
+un prodotto
+
+04:39.360 --> 04:40.040
+questo prodotto
+
+04:40.040 --> 04:41.520
+che può essere
+
+04:41.520 --> 04:43.720
+qualsiasi tipo di prodotto
+
+04:43.720 --> 04:44.560
+può essere un software
+
+04:44.560 --> 04:45.960
+può essere un pezzo meccanico
+
+04:45.960 --> 04:47.460
+un qualsiasi tipo di prodotto
+
+04:47.460 --> 04:48.660
+e quindi è necessario
+
+04:48.660 --> 04:50.060
+definire delle strategie
+
+04:50.060 --> 04:51.000
+ed un piano
+
+04:51.000 --> 04:52.720
+per portare
+
+04:52.720 --> 04:53.380
+a termine
+
+04:53.380 --> 04:54.220
+il prodotto
+
+04:54.220 --> 04:54.800
+in fase quindi
+
+04:54.800 --> 04:55.880
+punto di realizzazione
+
+04:55.880 --> 04:56.580
+può essere appunto
+
+04:56.580 --> 04:57.540
+un software
+
+04:57.540 --> 04:58.220
+può essere proprio
+
+04:58.220 --> 04:59.140
+un pezzo meccanico
+
+04:59.140 --> 05:00.280
+il discorso
+
+05:00.280 --> 05:00.720
+di requirement
+
+05:00.720 --> 05:01.400
+management plan
+
+05:01.400 --> 05:02.200
+non rientra
+
+05:02.200 --> 05:03.420
+solo in un discorso
+
+05:03.420 --> 05:03.720
+di
+
+05:03.720 --> 05:05.100
+delle attività
+
+05:05.100 --> 05:06.240
+che stiamo svolgendo noi
+
+05:06.240 --> 05:07.180
+quindi di software
+
+05:07.180 --> 05:07.800
+quindi di
+
+05:07.800 --> 05:09.300
+di realizzare
+
+05:09.300 --> 05:09.700
+un software
+
+05:09.700 --> 05:10.480
+che poi deve essere
+
+05:10.480 --> 05:11.520
+flashato
+
+05:11.520 --> 05:12.300
+nelle centraline
+
+05:12.300 --> 05:12.780
+ad esempio
+
+05:12.780 --> 05:14.100
+ma è un discorso
+
+05:14.100 --> 05:15.560
+prettamente generale
+
+05:15.560 --> 05:16.660
+quindi quando
+
+05:16.660 --> 05:17.820
+si hanno
+
+05:17.820 --> 05:19.700
+si ha di fronte
+
+05:19.700 --> 05:21.500
+una definizione
+
+05:21.500 --> 05:24.180
+quindi una realizzazione
+
+05:24.180 --> 05:24.760
+di un progetto
+
+05:24.760 --> 05:25.300
+di un processo
+
+05:25.300 --> 05:25.720
+è bene
+
+05:25.720 --> 05:27.300
+definire un piano
+
+05:27.300 --> 05:28.500
+ed una strategia
+
+05:28.500 --> 05:28.980
+per
+
+05:28.980 --> 05:30.780
+per completare
+
+05:30.780 --> 05:31.960
+tutto il flusso
+
+05:31.960 --> 05:32.540
+di lavoro
+
+05:32.540 --> 05:34.640
+in una maniera
+
+05:34.640 --> 05:36.120
+con una qualità
+
+05:36.120 --> 05:37.640
+con una qualità
+
+05:37.640 --> 05:38.060
+ecco
+
+05:38.060 --> 05:39.020
+che sia
+
+05:39.020 --> 05:41.240
+che vada incontro
+
+05:41.240 --> 05:41.920
+alle aspettative
+
+05:41.920 --> 05:43.860
+del cliente
+
+05:43.860 --> 05:45.380
+quindi
+
+05:45.380 --> 05:45.880
+il requirement
+
+05:45.880 --> 05:46.840
+management plan
+
+05:46.840 --> 05:49.420
+è una sottoparte
+
+05:49.420 --> 05:49.860
+di quello
+
+05:49.860 --> 05:50.600
+che viene definito
+
+05:50.600 --> 05:52.040
+project management plan
+
+05:52.040 --> 05:53.820
+quindi il project
+
+05:53.820 --> 05:54.640
+management plan
+
+05:54.640 --> 05:55.300
+è una cosa
+
+05:55.300 --> 05:56.400
+che è
+
+05:56.400 --> 05:57.800
+quindi al di sopra
+
+05:57.800 --> 05:58.980
+è un contenitore
+
+05:58.980 --> 06:00.440
+mentre il contenuto
+
+06:00.440 --> 06:01.080
+di questo project
+
+06:01.080 --> 06:01.740
+management plan
+
+06:01.740 --> 06:02.320
+sono una serie
+
+06:02.320 --> 06:03.420
+di documenti
+
+06:03.420 --> 06:04.340
+tra cui anche
+
+06:04.340 --> 06:04.880
+il requirement
+
+06:04.880 --> 06:05.840
+management plan
+
+06:05.840 --> 06:10.420
+che permettono
+
+06:10.420 --> 06:10.740
+quindi
+
+06:10.740 --> 06:12.940
+di documentare
+
+06:12.940 --> 06:13.520
+in qualche modo
+
+06:13.520 --> 06:14.500
+delle strategie
+
+06:14.500 --> 06:15.560
+delle metodologie
+
+06:15.560 --> 06:17.380
+per sviluppare
+
+06:17.380 --> 06:18.880
+il loro pezzetto
+
+06:18.880 --> 06:20.780
+pezzetto in che senso
+
+06:20.780 --> 06:21.740
+stiamo parlando
+
+06:21.740 --> 06:22.960
+di requirement management plan
+
+06:22.960 --> 06:23.360
+quindi
+
+06:23.360 --> 06:24.900
+il requirement management plan
+
+06:24.900 --> 06:25.860
+è un documento
+
+06:25.860 --> 06:26.840
+per sviluppare
+
+06:26.840 --> 06:27.680
+strategie
+
+06:27.680 --> 06:28.920
+e metodologie
+
+06:28.920 --> 06:30.540
+per poter
+
+06:30.540 --> 06:32.040
+analizzare
+
+06:32.040 --> 06:33.060
+raccogliere
+
+06:33.060 --> 06:34.440
+tutti i requisiti
+
+06:34.440 --> 06:35.340
+che provengono
+
+06:35.340 --> 06:36.240
+dal cliente
+
+06:36.240 --> 06:37.120
+che ha chiesto
+
+06:37.120 --> 06:38.260
+di sviluppare
+
+06:38.260 --> 06:39.040
+un prodotto
+
+06:39.040 --> 06:40.680
+quindi raccogliere
+
+06:40.680 --> 06:41.640
+questi requisiti
+
+06:41.640 --> 06:42.920
+gestirli
+
+06:42.920 --> 06:44.180
+tracciarli
+
+06:44.180 --> 06:45.840
+e portarli
+
+06:45.840 --> 06:47.040
+diciamo
+
+06:47.040 --> 06:47.540
+sino
+
+06:47.540 --> 06:48.840
+al raggiungimento
+
+06:48.840 --> 06:50.760
+della realizzazione
+
+06:50.760 --> 06:51.260
+quindi del
+
+06:51.260 --> 06:52.280
+del prodotto
+
+06:52.280 --> 06:55.380
+qualcuno
+
+06:55.380 --> 06:55.880
+se qualcuno
+
+06:55.880 --> 06:56.280
+alza la mano
+
+06:56.280 --> 06:57.040
+io non posso vedere
+
+06:57.040 --> 06:58.240
+interrompetemi
+
+06:58.240 --> 06:59.900
+vorrei farti una domanda
+
+06:59.900 --> 07:00.880
+ma questo tipo
+
+07:00.880 --> 07:01.720
+di nomenclatura
+
+07:01.720 --> 07:02.940
+ti puoi presentare
+
+07:02.940 --> 07:03.780
+ti puoi presentare
+
+07:03.780 --> 07:04.780
+che io non so chi
+
+07:04.780 --> 07:05.940
+Pasquale Perrutta
+
+07:05.940 --> 07:06.740
+sempre Pasquale
+
+07:06.740 --> 07:07.240
+sì la voce
+
+07:07.240 --> 07:07.760
+vai
+
+07:07.760 --> 07:08.460
+a posto
+
+07:08.460 --> 07:08.840
+allora
+
+07:08.840 --> 07:10.600
+questa nomenclatura
+
+07:10.600 --> 07:12.120
+del requirement management plan
+
+07:12.120 --> 07:12.700
+è una cosa
+
+07:12.700 --> 07:13.160
+diciamo
+
+07:13.160 --> 07:14.420
+che è specifica
+
+07:14.420 --> 07:15.460
+del cliente
+
+07:15.460 --> 07:16.560
+viene ad esempio
+
+07:16.560 --> 07:16.860
+da
+
+07:16.860 --> 07:17.360
+no
+
+07:17.360 --> 07:18.240
+da Spice
+
+07:18.240 --> 07:18.940
+come
+
+07:18.940 --> 07:20.240
+no no no
+
+07:20.240 --> 07:20.860
+a Spice
+
+07:20.860 --> 07:21.500
+non richiede
+
+07:21.500 --> 07:22.800
+un requirement management plan
+
+07:22.800 --> 07:23.200
+diciamo
+
+07:23.200 --> 07:24.720
+nelle sue regole
+
+07:24.720 --> 07:26.600
+il requirement management plan
+
+07:26.600 --> 07:28.760
+è un supporto
+
+07:28.760 --> 07:29.560
+al processo
+
+07:29.560 --> 07:32.320
+che include
+
+07:32.320 --> 07:33.260
+al suo interno
+
+07:33.260 --> 07:34.200
+delle metodologie
+
+07:34.200 --> 07:34.940
+a Spice
+
+07:34.940 --> 07:36.720
+ah ok ok
+
+07:36.720 --> 07:36.960
+ok
+
+07:36.960 --> 07:38.100
+è un modo per dire
+
+07:38.100 --> 07:38.840
+è un modo per dire
+
+07:38.840 --> 07:40.060
+io ho questo piano
+
+07:40.060 --> 07:41.420
+questo documento
+
+07:41.420 --> 07:42.260
+ti riporto
+
+07:42.260 --> 07:43.340
+al suo interno
+
+07:43.340 --> 07:45.440
+tutto il flusso
+
+07:45.440 --> 07:46.260
+da seguire
+
+07:46.260 --> 07:47.700
+per poter
+
+07:47.700 --> 07:48.320
+arrivare
+
+07:48.320 --> 07:48.900
+ad esempio
+
+07:48.900 --> 07:49.740
+alla
+
+07:49.740 --> 07:51.340
+al test
+
+07:51.340 --> 07:52.100
+del software
+
+07:52.100 --> 07:52.300
+no
+
+07:52.300 --> 07:54.100
+ti spiego
+
+07:54.100 --> 07:55.340
+come definire
+
+07:55.340 --> 07:56.420
+tutti i requisiti
+
+07:56.420 --> 07:57.560
+quindi come raccoglierli
+
+07:57.560 --> 07:58.220
+in che modo
+
+07:58.220 --> 07:59.180
+seguendo sempre
+
+07:59.180 --> 07:59.900
+delle metodologie
+
+07:59.900 --> 08:00.480
+a Spice
+
+08:00.480 --> 08:02.880
+è come se tu
+
+08:02.880 --> 08:03.920
+documentassi
+
+08:03.920 --> 08:04.880
+il flusso
+
+08:04.880 --> 08:05.660
+dei requisiti
+
+08:05.660 --> 08:06.740
+attraverso
+
+08:06.740 --> 08:08.060
+le metodologie a Spice
+
+08:08.060 --> 08:09.980
+però è un documento
+
+08:09.980 --> 08:10.360
+ok
+
+08:10.360 --> 08:11.140
+che ti permette
+
+08:11.140 --> 08:12.360
+di seguire
+
+08:12.360 --> 08:13.180
+e di far sì
+
+08:13.180 --> 08:13.940
+che ad esempio
+
+08:13.940 --> 08:14.880
+i requisiti
+
+08:14.880 --> 08:15.640
+vengano scritti
+
+08:15.640 --> 08:16.740
+tutti nello stesso modo
+
+08:16.740 --> 08:18.200
+che non c'è nessuno
+
+08:18.200 --> 08:19.380
+che possa deviare
+
+08:19.380 --> 08:20.680
+dal processo
+
+08:20.680 --> 08:22.360
+ok ok
+
+08:22.360 --> 08:23.100
+è interessante
+
+08:23.100 --> 08:23.920
+scusa Mario
+
+08:23.920 --> 08:25.680
+se intervengo
+
+08:25.680 --> 08:27.740
+quindi si tratta
+
+08:27.740 --> 08:28.720
+di un processo
+
+08:28.720 --> 08:29.660
+che viene ancora
+
+08:29.660 --> 08:30.640
+prima del ciclo AB
+
+08:30.640 --> 08:34.040
+no no no
+
+08:34.040 --> 08:34.860
+questo in pratica
+
+08:34.860 --> 08:35.860
+questo documento
+
+08:35.860 --> 08:36.980
+non rappresenta
+
+08:36.980 --> 08:37.920
+qui stiamo parlando
+
+08:37.920 --> 08:38.420
+del requirement
+
+08:38.420 --> 08:39.200
+management plan
+
+08:39.200 --> 08:40.540
+quindi dopo
+
+08:40.540 --> 08:41.360
+poi vedremo
+
+08:41.360 --> 08:42.320
+segue
+
+08:42.320 --> 08:42.920
+se vedete
+
+08:42.920 --> 08:43.420
+questo
+
+08:43.420 --> 08:44.040
+questo
+
+08:44.040 --> 08:45.020
+questo flusso
+
+08:45.020 --> 08:45.680
+circolare
+
+08:45.680 --> 08:47.220
+permette
+
+08:47.220 --> 08:47.680
+di
+
+08:47.680 --> 08:48.960
+raccogliere
+
+08:48.960 --> 08:49.840
+i requisiti
+
+08:49.840 --> 08:50.920
+quindi
+
+08:50.920 --> 08:51.600
+questa non è altro
+
+08:51.600 --> 08:52.220
+che la parte
+
+08:52.220 --> 08:52.800
+sinistra
+
+08:52.800 --> 08:53.480
+del ciclo AB
+
+08:53.480 --> 08:54.980
+quindi la parte
+
+08:54.980 --> 08:55.220
+di
+
+08:55.220 --> 08:56.160
+SIS 1
+
+08:56.160 --> 08:56.720
+no
+
+08:56.720 --> 08:58.240
+quindi raccogliere
+
+08:58.240 --> 08:59.040
+i requisiti
+
+08:59.040 --> 09:00.080
+strutturare
+
+09:00.080 --> 09:00.960
+i requisiti
+
+09:00.960 --> 09:03.400
+documentarli
+
+09:03.400 --> 09:04.020
+e quindi
+
+09:04.020 --> 09:05.160
+far sì che
+
+09:05.160 --> 09:06.080
+ci sia una
+
+09:06.080 --> 09:07.300
+consistenza
+
+09:07.300 --> 09:08.980
+del requisito
+
+09:08.980 --> 09:09.800
+ci sia una
+
+09:09.800 --> 09:11.560
+validità del requisito
+
+09:11.560 --> 09:12.000
+che sia
+
+09:12.000 --> 09:12.960
+che non sia
+
+09:12.960 --> 09:13.820
+ambiguo
+
+09:13.820 --> 09:14.820
+che sia atomico
+
+09:14.820 --> 09:15.740
+quindi tutto ciò
+
+09:15.740 --> 09:16.380
+che a Spice
+
+09:16.380 --> 09:17.420
+ci dice di fare
+
+09:17.420 --> 09:19.340
+di prioritizzare
+
+09:19.340 --> 09:20.100
+il requisito
+
+09:20.100 --> 09:21.000
+di garantire
+
+09:21.000 --> 09:21.680
+una qualità
+
+09:21.680 --> 09:22.680
+e nello stesso
+
+09:22.680 --> 09:22.980
+tempo
+
+09:22.980 --> 09:23.760
+di mantenerlo
+
+09:23.760 --> 09:24.420
+questo è quello
+
+09:24.420 --> 09:24.920
+che il requirement
+
+09:24.920 --> 09:25.960
+management process
+
+09:25.960 --> 09:27.260
+chiede
+
+09:27.260 --> 09:29.180
+e va a supporto
+
+09:29.180 --> 09:29.760
+del project
+
+09:29.760 --> 09:30.660
+management plan
+
+09:30.660 --> 09:31.360
+per
+
+09:31.360 --> 09:32.900
+la parte
+
+09:32.900 --> 09:33.700
+dei requisiti
+
+09:33.700 --> 09:35.380
+quindi stiamo parlando
+
+09:35.380 --> 09:35.880
+della parte
+
+09:35.880 --> 09:36.600
+sinistra
+
+09:36.600 --> 09:37.160
+alta
+
+09:37.160 --> 09:39.200
+in qualche modo
+
+09:39.200 --> 09:39.820
+se vogliamo
+
+09:39.820 --> 09:40.780
+far riferimento
+
+09:40.780 --> 09:41.860
+al ciclo AB
+
+09:41.860 --> 09:43.940
+quindi è
+
+09:43.940 --> 09:44.240
+diciamo
+
+09:44.240 --> 09:45.000
+la prima fase
+
+09:45.000 --> 09:45.900
+che viene subito
+
+09:45.900 --> 09:47.000
+dopo la richiesta
+
+09:47.000 --> 09:48.340
+del cliente
+
+09:48.340 --> 09:48.660
+sì
+
+09:48.660 --> 09:49.400
+diciamo
+
+09:49.400 --> 09:49.760
+e questo
+
+09:49.760 --> 09:50.700
+non appena
+
+09:50.700 --> 09:52.160
+il cliente
+
+09:52.160 --> 09:52.780
+ci fornisce
+
+09:52.780 --> 09:53.540
+un documento
+
+09:53.540 --> 09:54.280
+però come dicevo
+
+09:54.280 --> 09:54.640
+prima
+
+09:54.640 --> 09:55.760
+diciamo
+
+09:55.760 --> 09:56.680
+adesso noi abbiamo
+
+09:56.680 --> 09:57.680
+in testa il concetto
+
+09:57.680 --> 09:58.400
+del ciclo AB
+
+09:58.400 --> 10:00.160
+della Spice
+
+10:00.160 --> 10:00.600
+però
+
+10:00.600 --> 10:01.920
+questo adesso
+
+10:01.920 --> 10:03.060
+in questo contesto
+
+10:03.060 --> 10:03.640
+lo possiamo vedere
+
+10:03.640 --> 10:04.820
+come un supporto
+
+10:04.820 --> 10:05.540
+ecco
+
+10:05.540 --> 10:07.040
+al ciclo AB
+
+10:07.040 --> 10:07.960
+e alle metodologie
+
+10:07.960 --> 10:08.540
+Spice
+
+10:08.540 --> 10:10.280
+ma lo si può vedere
+
+10:10.280 --> 10:10.720
+in maniera
+
+10:10.720 --> 10:11.760
+molto generale
+
+10:11.760 --> 10:12.060
+perché
+
+10:12.060 --> 10:13.700
+questo documento
+
+10:13.700 --> 10:14.200
+può essere anche
+
+10:14.200 --> 10:14.900
+utilizzato
+
+10:14.900 --> 10:16.480
+per i clienti
+
+10:16.480 --> 10:17.740
+che non hanno
+
+10:17.740 --> 10:18.860
+necessità
+
+10:18.860 --> 10:20.320
+di seguire
+
+10:20.320 --> 10:21.220
+la Spice
+
+10:21.220 --> 10:21.980
+perché non hanno
+
+10:21.980 --> 10:22.960
+non sono in un ambito
+
+10:22.960 --> 10:23.780
+automotive
+
+10:23.780 --> 10:25.460
+e quindi
+
+10:25.460 --> 10:27.380
+questo documento
+
+10:27.380 --> 10:28.660
+viene a supporto
+
+10:28.660 --> 10:29.380
+comunque
+
+10:29.380 --> 10:30.140
+in ogni caso
+
+10:30.140 --> 10:31.100
+per la definizione
+
+10:31.100 --> 10:32.120
+della parte
+
+10:32.120 --> 10:32.740
+del processo
+
+10:32.740 --> 10:33.520
+dei requisiti
+
+10:33.520 --> 10:34.520
+cioè tu comunque
+
+10:34.520 --> 10:35.020
+puoi avere
+
+10:35.020 --> 10:35.960
+questo documento
+
+10:35.960 --> 10:37.320
+senza seguire
+
+10:37.320 --> 10:39.180
+alla lettera
+
+10:39.180 --> 10:39.900
+quello che ti dice
+
+10:39.900 --> 10:40.640
+a Spice
+
+10:40.640 --> 10:42.080
+Mario volevo
+
+10:42.080 --> 10:43.060
+solo aggiungere una cosa
+
+10:43.060 --> 10:43.600
+nell'ambito
+
+10:43.600 --> 10:44.360
+della formazione
+
+10:44.360 --> 10:45.060
+di base
+
+10:45.060 --> 10:45.880
+al momento
+
+10:45.880 --> 10:48.040
+i ragazzi
+
+10:48.040 --> 10:49.000
+non hanno ancora
+
+10:49.000 --> 10:50.340
+competenze
+
+10:50.340 --> 10:51.560
+legate alla Spice
+
+10:51.560 --> 10:52.300
+quindi per questo
+
+10:52.300 --> 10:53.220
+ne facciamo riferimento
+
+10:53.220 --> 10:54.020
+molto spesso
+
+10:54.020 --> 10:54.920
+al ciclo AB
+
+10:54.920 --> 10:55.800
+che è un po' più
+
+10:55.800 --> 10:56.720
+come dire
+
+10:56.720 --> 10:57.680
+semplice
+
+10:57.680 --> 10:59.140
+da strutturare
+
+10:59.140 --> 11:00.160
+però alla fine
+
+11:00.160 --> 11:01.740
+è un set di regole
+
+11:01.740 --> 11:02.640
+che aiuta
+
+11:02.640 --> 11:04.400
+all'implementazione
+
+11:04.400 --> 11:05.040
+del ciclo AB
+
+11:05.040 --> 11:06.200
+che per semplificare
+
+11:06.200 --> 11:06.660
+un attimo
+
+11:06.660 --> 11:07.980
+a tutti
+
+11:07.980 --> 11:08.880
+la visione
+
+11:08.880 --> 11:09.420
+chiaro
+
+11:09.420 --> 11:09.780
+chiaro
+
+11:09.780 --> 11:10.000
+sì
+
+11:10.000 --> 11:12.700
+diciamo che
+
+11:12.700 --> 11:13.320
+la Spice
+
+11:13.320 --> 11:13.940
+consente
+
+11:13.940 --> 11:14.340
+di
+
+11:14.340 --> 11:16.080
+fornisce
+
+11:16.080 --> 11:16.280
+ecco
+
+11:16.280 --> 11:16.740
+ci fornisce
+
+11:16.740 --> 11:17.480
+come dice Pasquale
+
+11:17.480 --> 11:17.980
+ci fornisce
+
+11:17.980 --> 11:18.680
+delle regole
+
+11:18.680 --> 11:19.640
+precise
+
+11:19.640 --> 11:21.240
+per garantire
+
+11:21.240 --> 11:22.800
+una certa qualità
+
+11:22.800 --> 11:24.020
+nel campo
+
+11:24.020 --> 11:25.200
+nel contesto
+
+11:25.200 --> 11:25.680
+dei requisiti
+
+11:25.680 --> 11:26.560
+una certa qualità
+
+11:26.560 --> 11:27.980
+nel processo
+
+11:27.980 --> 11:28.780
+dei requisiti
+
+11:28.780 --> 11:29.140
+quindi
+
+11:29.140 --> 11:30.660
+come far sì
+
+11:30.660 --> 11:31.200
+che il requisito
+
+11:31.200 --> 11:32.000
+sia chiaro
+
+11:32.000 --> 11:32.340
+sia
+
+11:32.340 --> 11:34.260
+semplice
+
+11:34.260 --> 11:34.760
+da
+
+11:34.760 --> 11:36.440
+capire
+
+11:36.440 --> 11:37.340
+a tutti i livelli
+
+11:37.340 --> 11:38.680
+sia testabile
+
+11:38.680 --> 11:40.100
+e
+
+11:40.100 --> 11:41.460
+sia
+
+11:41.460 --> 11:42.720
+diciamo
+
+11:42.720 --> 11:44.120
+feasible
+
+11:44.120 --> 11:45.200
+nel senso che
+
+11:45.200 --> 11:46.660
+il software
+
+11:46.660 --> 11:47.200
+o
+
+11:47.200 --> 11:47.880
+diciamo
+
+11:47.880 --> 11:48.660
+in quel momento
+
+11:48.660 --> 11:49.160
+il software
+
+11:49.160 --> 11:49.840
+è in grado
+
+11:49.840 --> 11:50.380
+di poter
+
+11:50.380 --> 11:51.320
+di poter
+
+11:51.320 --> 11:51.840
+recepire
+
+11:51.840 --> 11:52.440
+quel requisito
+
+11:52.440 --> 11:53.360
+e di poterlo sviluppare
+
+11:53.360 --> 11:53.520
+ecco
+
+11:53.520 --> 11:54.420
+ci sono delle regole
+
+11:54.420 --> 11:55.340
+piccole regole
+
+11:55.340 --> 11:57.140
+per poter
+
+11:57.140 --> 11:58.380
+per poter
+
+11:58.380 --> 11:58.760
+far sì
+
+11:58.760 --> 11:59.200
+che il processo
+
+11:59.200 --> 11:59.780
+dei requisiti
+
+11:59.780 --> 12:00.320
+della gestione
+
+12:00.320 --> 12:00.800
+dei requisiti
+
+12:00.800 --> 12:01.240
+sia
+
+12:01.240 --> 12:02.960
+sia
+
+12:02.960 --> 12:04.040
+compliance
+
+12:04.040 --> 12:04.680
+con quello
+
+12:04.680 --> 12:05.260
+che a Spice
+
+12:05.260 --> 12:06.200
+ci chiede
+
+12:06.200 --> 12:06.680
+e con quello
+
+12:06.680 --> 12:07.520
+che i clienti
+
+12:07.520 --> 12:08.440
+chiedono
+
+12:08.440 --> 12:10.540
+quindi a Spice
+
+12:10.540 --> 12:11.480
+sono un insieme
+
+12:11.480 --> 12:12.420
+di regole
+
+12:12.420 --> 12:13.380
+e il requirement
+
+12:13.380 --> 12:14.220
+management plan
+
+12:14.220 --> 12:14.800
+raccoglie
+
+12:14.800 --> 12:15.560
+queste regole
+
+12:15.560 --> 12:17.020
+e le mette
+
+12:17.020 --> 12:17.940
+in un documento
+
+12:17.940 --> 12:18.580
+per far sì
+
+12:18.580 --> 12:18.980
+che tu
+
+12:18.980 --> 12:20.380
+una persona
+
+12:20.380 --> 12:21.200
+che non ha mai
+
+12:21.200 --> 12:22.000
+scritto requisiti
+
+12:22.000 --> 12:22.440
+può aprire
+
+12:22.440 --> 12:23.400
+questo documento
+
+12:23.400 --> 12:23.860
+e iniziare
+
+12:23.860 --> 12:24.360
+a leggere
+
+12:24.360 --> 12:24.800
+e capire
+
+12:24.800 --> 12:25.360
+come
+
+12:25.360 --> 12:26.860
+avviene
+
+12:26.860 --> 12:27.540
+il processo
+
+12:27.540 --> 12:32.360
+quindi
+
+12:32.360 --> 12:35.380
+è un documento
+
+12:35.380 --> 12:35.840
+che non
+
+12:35.840 --> 12:36.260
+continua
+
+12:36.260 --> 12:36.800
+propriamente
+
+12:36.800 --> 12:37.360
+i requisiti
+
+12:37.360 --> 12:37.600
+ma
+
+12:37.600 --> 12:38.980
+il regolamento
+
+12:38.980 --> 12:39.520
+per scrivere
+
+12:39.520 --> 12:40.080
+i requisiti
+
+12:40.080 --> 12:42.400
+è una linea guida
+
+12:42.400 --> 12:43.520
+la Bibbia
+
+12:43.520 --> 12:44.520
+ti permette
+
+12:44.520 --> 12:45.740
+è una linea guida
+
+12:45.740 --> 12:47.340
+che ti dice
+
+12:47.340 --> 12:47.680
+guarda
+
+12:47.680 --> 12:48.040
+che tu
+
+12:48.040 --> 12:49.080
+non appena ricevi
+
+12:49.080 --> 12:49.960
+i documenti
+
+12:49.960 --> 12:50.780
+dal cliente
+
+12:50.780 --> 12:52.120
+sei in una fase
+
+12:52.120 --> 12:52.600
+del ciclo
+
+12:52.600 --> 12:52.920
+avv
+
+12:52.920 --> 12:53.880
+alta
+
+12:53.880 --> 12:54.700
+sinistra
+
+12:54.700 --> 12:57.200
+cosa devi iniziare
+
+12:57.200 --> 12:57.680
+a fare
+
+12:57.680 --> 12:59.440
+ok
+
+12:59.440 --> 13:00.380
+devi iniziare
+
+13:00.380 --> 13:00.980
+a raccogliere
+
+13:00.980 --> 13:01.820
+i requisiti
+
+13:01.820 --> 13:02.640
+devi iniziare
+
+13:02.640 --> 13:03.760
+ad analizzarli
+
+13:03.760 --> 13:05.200
+e questo
+
+13:05.200 --> 13:05.720
+lo vedremo
+
+13:05.720 --> 13:06.320
+ecco
+
+13:06.320 --> 13:07.820
+step per step
+
+13:07.820 --> 13:08.720
+nelle seguenti
+
+13:08.720 --> 13:09.620
+slides
+
+13:09.620 --> 13:13.080
+va bene
+
+13:19.080 --> 13:19.840
+diciamo
+
+13:19.840 --> 13:20.440
+il perché
+
+13:20.440 --> 13:21.680
+anche di questo
+
+13:21.680 --> 13:23.120
+requirement management plan
+
+13:23.120 --> 13:24.640
+qui mi sono
+
+13:24.640 --> 13:25.400
+dimenticato plan
+
+13:25.400 --> 13:26.400
+diciamo
+
+13:26.400 --> 13:26.800
+il perché
+
+13:26.800 --> 13:27.420
+perché ci sono
+
+13:27.420 --> 13:28.200
+tante
+
+13:28.200 --> 13:29.240
+tante sfide
+
+13:29.240 --> 13:29.960
+tanti
+
+13:29.960 --> 13:31.360
+diciamo
+
+13:31.360 --> 13:32.180
+tanti punti
+
+13:32.180 --> 13:32.500
+che
+
+13:32.500 --> 13:35.140
+potrebbero
+
+13:35.140 --> 13:36.900
+mettere in difficoltà
+
+13:36.900 --> 13:37.820
+non solo
+
+13:37.820 --> 13:38.860
+chi lavora
+
+13:38.860 --> 13:39.440
+sul processo
+
+13:39.440 --> 13:39.740
+ma
+
+13:39.740 --> 13:41.160
+anche
+
+13:41.160 --> 13:41.960
+l'intero
+
+13:41.960 --> 13:42.360
+l'intero
+
+13:42.360 --> 13:42.860
+progetto
+
+13:42.860 --> 13:43.100
+ecco
+
+13:43.100 --> 13:44.340
+l'intero
+
+13:44.340 --> 13:45.680
+l'intero
+
+13:45.680 --> 13:46.720
+ciclovita
+
+13:46.720 --> 13:47.520
+del progetto
+
+13:47.520 --> 13:48.460
+questo perché
+
+13:48.460 --> 13:49.980
+diciamo
+
+13:49.980 --> 13:50.960
+durante il ciclovita
+
+13:50.960 --> 13:51.860
+di un progetto
+
+13:51.860 --> 13:52.600
+non è detto
+
+13:52.600 --> 13:52.900
+che
+
+13:52.900 --> 13:53.900
+i requisiti
+
+13:53.900 --> 13:54.220
+che noi
+
+13:54.220 --> 13:54.640
+riceviamo
+
+13:54.640 --> 13:55.540
+dal cliente
+
+13:55.540 --> 13:56.540
+arrivino
+
+13:56.540 --> 13:57.680
+a dicembre
+
+13:57.680 --> 13:58.420
+e siano
+
+13:58.420 --> 13:59.580
+gli stessi
+
+13:59.580 --> 14:00.860
+fino alla fine
+
+14:00.860 --> 14:01.580
+del ciclovita
+
+14:01.580 --> 14:02.400
+del progetto
+
+14:02.400 --> 14:04.800
+durante questa fase
+
+14:04.800 --> 14:06.160
+i requisiti
+
+14:06.160 --> 14:06.680
+potrebbero
+
+14:06.680 --> 14:07.440
+cambiare
+
+14:07.440 --> 14:08.040
+ci potrebbero
+
+14:08.040 --> 14:08.400
+essere
+
+14:08.400 --> 14:10.480
+potrebbero
+
+14:10.480 --> 14:10.880
+cambiare
+
+14:10.880 --> 14:11.260
+ci potrebbero
+
+14:11.260 --> 14:11.500
+essere
+
+14:11.500 --> 14:12.460
+tantissime
+
+14:12.460 --> 14:13.120
+tantissimi
+
+14:13.120 --> 14:13.460
+modi
+
+14:13.460 --> 14:14.400
+per deviare
+
+14:14.400 --> 14:15.740
+che ci siano
+
+14:15.740 --> 14:16.460
+delle deviazioni
+
+14:16.460 --> 14:17.380
+dai requisiti
+
+14:17.380 --> 14:18.620
+principali
+
+14:18.620 --> 14:19.000
+quindi
+
+14:19.000 --> 14:19.960
+con questo
+
+14:19.960 --> 14:20.420
+requirement
+
+14:20.420 --> 14:20.840
+management
+
+14:20.840 --> 14:21.180
+plan
+
+14:21.180 --> 14:21.540
+con questo
+
+14:21.540 --> 14:22.820
+documento
+
+14:22.820 --> 14:23.920
+si riesce
+
+14:23.920 --> 14:24.900
+a gestire
+
+14:24.900 --> 14:26.000
+una miriade
+
+14:26.000 --> 14:27.640
+numerosi
+
+14:27.640 --> 14:28.300
+cambiamenti
+
+14:28.300 --> 14:28.760
+all'interno
+
+14:28.760 --> 14:29.800
+del ciclovita
+
+14:29.800 --> 14:30.400
+del progetto
+
+14:30.400 --> 14:31.020
+questo perché
+
+14:31.020 --> 14:31.800
+all'interno
+
+14:31.800 --> 14:32.480
+del documento
+
+14:32.480 --> 14:32.780
+è anche
+
+14:32.780 --> 14:33.540
+rappresentato
+
+14:33.540 --> 14:34.460
+come gestire
+
+14:34.460 --> 14:35.220
+eventuali
+
+14:35.220 --> 14:36.100
+cambiamenti
+
+14:36.100 --> 14:38.160
+di programma
+
+14:38.160 --> 14:38.680
+quindi
+
+14:38.680 --> 14:40.180
+quali sono
+
+14:40.180 --> 14:40.660
+le regole
+
+14:40.660 --> 14:41.180
+quali sono
+
+14:41.180 --> 14:43.460
+il modus
+
+14:43.460 --> 14:44.040
+operandi
+
+14:44.040 --> 14:44.720
+nel caso
+
+14:44.720 --> 14:45.260
+in cui
+
+14:45.260 --> 14:46.000
+ci siano
+
+14:46.000 --> 14:46.740
+dei cambiamenti
+
+14:46.740 --> 14:47.140
+all'interno
+
+14:47.140 --> 14:47.720
+del ciclovita
+
+14:47.720 --> 14:48.260
+del progetto
+
+14:48.260 --> 14:48.580
+e quindi
+
+14:48.580 --> 14:49.960
+uno è pronto
+
+14:49.960 --> 14:51.100
+ad affrontare
+
+14:51.100 --> 14:53.020
+questi cambiamenti
+
+14:53.020 --> 14:54.560
+questi cambiamenti
+
+14:54.560 --> 14:55.020
+che potrebbero
+
+14:55.020 --> 14:55.380
+venire
+
+14:55.380 --> 14:55.920
+sia
+
+14:55.920 --> 14:57.580
+potrebbero esserci
+
+14:57.580 --> 14:58.320
+sia cambiamenti
+
+14:58.320 --> 14:58.880
+interni
+
+14:58.880 --> 14:59.480
+che cambiamenti
+
+14:59.480 --> 14:59.860
+derivanti
+
+14:59.860 --> 15:00.560
+direttamente
+
+15:00.560 --> 15:02.020
+dal cliente
+
+15:02.020 --> 15:02.460
+stesso
+
+15:02.460 --> 15:04.520
+e comunque
+
+15:04.520 --> 15:05.280
+eviterebbe
+
+15:05.280 --> 15:05.660
+in qualche
+
+15:05.660 --> 15:06.400
+evita in qualche
+
+15:06.400 --> 15:06.800
+modo
+
+15:06.800 --> 15:07.660
+che ci siano
+
+15:07.660 --> 15:08.840
+delle miscommunication
+
+15:08.840 --> 15:09.580
+quindi mancate
+
+15:09.580 --> 15:10.400
+comunicazioni
+
+15:10.400 --> 15:11.500
+o mancanza
+
+15:11.500 --> 15:13.320
+di comprensione
+
+15:13.320 --> 15:14.780
+perché
+
+15:14.780 --> 15:15.220
+se
+
+15:15.220 --> 15:16.260
+non c'è
+
+15:16.260 --> 15:17.020
+una linea guida
+
+15:17.020 --> 15:17.560
+che ti dice
+
+15:17.560 --> 15:18.840
+come affrontare
+
+15:18.840 --> 15:19.560
+il processo
+
+15:19.560 --> 15:20.840
+chiunque
+
+15:20.840 --> 15:22.020
+può affrontarlo
+
+15:22.020 --> 15:22.620
+in una maniera
+
+15:22.620 --> 15:23.200
+differente
+
+15:23.200 --> 15:24.060
+rispetto ad un altro
+
+15:24.060 --> 15:24.800
+seppure
+
+15:24.800 --> 15:26.580
+ad esempio
+
+15:26.580 --> 15:28.040
+facendo l'esempio
+
+15:28.040 --> 15:28.820
+di un
+
+15:28.820 --> 15:30.260
+ambito automotive
+
+15:30.260 --> 15:31.140
+quindi ci sono
+
+15:31.140 --> 15:31.800
+delle regole
+
+15:31.800 --> 15:32.460
+definite
+
+15:32.460 --> 15:33.380
+dallo standard
+
+15:33.380 --> 15:34.140
+a spice
+
+15:34.140 --> 15:35.400
+seppure ci siano
+
+15:35.400 --> 15:35.960
+quelle regole
+
+15:35.960 --> 15:36.540
+dello standard
+
+15:36.540 --> 15:37.300
+a spice
+
+15:37.300 --> 15:39.500
+fidatevi che
+
+15:39.500 --> 15:41.040
+se non c'è
+
+15:41.040 --> 15:41.800
+un documento
+
+15:41.800 --> 15:42.860
+che dice
+
+15:42.860 --> 15:43.580
+come
+
+15:43.580 --> 15:44.500
+affrontare
+
+15:44.500 --> 15:45.100
+il processo
+
+15:45.100 --> 15:46.160
+ci sono
+
+15:46.160 --> 15:46.980
+tantissime
+
+15:46.980 --> 15:47.740
+deviazioni
+
+15:47.740 --> 15:48.340
+ognuno
+
+15:48.340 --> 15:49.380
+si sente libero
+
+15:49.380 --> 15:50.240
+di scrivere
+
+15:50.240 --> 15:51.180
+un requisito
+
+15:51.180 --> 15:51.760
+in un modo
+
+15:51.760 --> 15:52.360
+piuttosto che
+
+15:52.360 --> 15:53.020
+in un altro
+
+15:53.020 --> 15:54.620
+comprenderlo
+
+15:54.620 --> 15:55.100
+in un modo
+
+15:55.100 --> 15:55.680
+piuttosto che
+
+15:55.680 --> 15:56.240
+in un altro
+
+15:56.240 --> 15:56.600
+quindi
+
+15:56.600 --> 15:58.080
+questo è veramente
+
+15:58.080 --> 15:59.460
+molto fondamentale
+
+15:59.460 --> 16:01.220
+questo requirement
+
+16:01.220 --> 16:02.040
+management plan
+
+16:02.040 --> 16:03.460
+diciamo
+
+16:03.460 --> 16:04.640
+dalla mia esperienza
+
+16:04.640 --> 16:06.480
+ne ho visti pochi
+
+16:06.480 --> 16:07.180
+all'interno
+
+16:07.180 --> 16:07.860
+diciamo
+
+16:07.860 --> 16:09.520
+dei processi
+
+16:09.520 --> 16:09.860
+diciamo
+
+16:09.860 --> 16:10.400
+lavorando
+
+16:10.400 --> 16:12.800
+lavorando
+
+16:12.800 --> 16:13.360
+in altre
+
+16:13.360 --> 16:15.160
+in peer one
+
+16:15.160 --> 16:15.540
+anche
+
+16:15.540 --> 16:16.200
+molto
+
+16:16.200 --> 16:17.580
+molto importanti
+
+16:17.580 --> 16:18.400
+questi
+
+16:18.400 --> 16:18.800
+requirement
+
+16:18.800 --> 16:19.440
+management plan
+
+16:19.440 --> 16:20.360
+facevano fatica
+
+16:20.360 --> 16:21.060
+ad emergere
+
+16:21.060 --> 16:22.380
+ad essere eseguiti
+
+16:22.380 --> 16:23.620
+lavorando
+
+16:23.620 --> 16:24.940
+con Kineton
+
+16:24.940 --> 16:26.320
+presso Garrett
+
+16:26.320 --> 16:27.800
+lo scorso anno
+
+16:27.800 --> 16:28.480
+questo requirement
+
+16:28.480 --> 16:29.040
+management plan
+
+16:29.040 --> 16:29.540
+è servito
+
+16:29.540 --> 16:30.420
+tantissimo
+
+16:30.420 --> 16:31.480
+per evitare
+
+16:31.480 --> 16:32.120
+che ci siano
+
+16:32.120 --> 16:33.060
+queste deviazioni
+
+16:33.060 --> 16:34.480
+ed insieme
+
+16:34.480 --> 16:35.700
+al team di Garrett
+
+16:35.700 --> 16:36.700
+stavamo proprio
+
+16:36.700 --> 16:37.640
+migliorando
+
+16:37.640 --> 16:38.320
+questo requirement
+
+16:38.320 --> 16:38.980
+management plan
+
+16:38.980 --> 16:39.500
+di passo
+
+16:39.500 --> 16:40.840
+passo dopo passo
+
+16:40.840 --> 16:42.220
+e devo dire
+
+16:42.220 --> 16:43.840
+che ha portato
+
+16:43.840 --> 16:44.760
+dei benefici
+
+16:44.760 --> 16:46.700
+non di poco conto
+
+16:46.700 --> 16:51.080
+scusa Mario
+
+16:51.080 --> 16:52.160
+giusto un esempio
+
+16:52.160 --> 16:54.140
+per te si fare
+
+16:54.140 --> 16:54.660
+un esempio
+
+16:54.660 --> 16:55.520
+su come
+
+16:55.520 --> 16:56.380
+gestisce
+
+16:56.380 --> 16:57.380
+i cambiamenti
+
+16:57.380 --> 16:57.780
+cioè
+
+16:57.780 --> 16:58.820
+non lo riesco
+
+16:58.820 --> 16:59.500
+a immaginare
+
+16:59.500 --> 17:00.640
+non so
+
+17:00.640 --> 17:01.240
+esistono
+
+17:01.240 --> 17:01.900
+delle regole
+
+17:01.900 --> 17:03.020
+su quando
+
+17:03.020 --> 17:04.080
+effettuarli
+
+17:04.080 --> 17:05.900
+no
+
+17:05.900 --> 17:06.320
+allora
+
+17:06.320 --> 17:06.820
+più che
+
+17:06.820 --> 17:08.040
+più che
+
+17:08.040 --> 17:08.660
+regole
+
+17:08.660 --> 17:09.180
+su quando
+
+17:09.180 --> 17:10.000
+effettuarli
+
+17:10.000 --> 17:11.020
+è come
+
+17:11.020 --> 17:11.800
+affrontare
+
+17:11.800 --> 17:12.680
+un cambiamento
+
+17:12.680 --> 17:14.320
+un cambiamento
+
+17:14.320 --> 17:15.060
+di un requisito
+
+17:15.060 --> 17:15.620
+ad esempio
+
+17:15.620 --> 17:17.400
+diciamo
+
+17:17.400 --> 17:18.240
+il documento
+
+17:18.240 --> 17:19.000
+se prima
+
+17:19.000 --> 17:19.720
+magari aveva
+
+17:19.720 --> 17:20.240
+un requisito
+
+17:20.240 --> 17:20.740
+del tipo
+
+17:20.740 --> 17:21.180
+ok
+
+17:21.180 --> 17:23.520
+ad esempio
+
+17:23.520 --> 17:24.800
+il compressore
+
+17:24.800 --> 17:25.940
+in quello stato
+
+17:25.940 --> 17:27.280
+deve avere
+
+17:27.280 --> 17:28.180
+una performance
+
+17:28.180 --> 17:28.580
+di
+
+17:28.580 --> 17:30.460
+un tot di kilowatt
+
+17:30.460 --> 17:32.980
+in un requisito
+
+17:32.980 --> 17:33.440
+iniziale
+
+17:33.440 --> 17:34.440
+il requisito
+
+17:34.440 --> 17:35.480
+il cambiamento
+
+17:35.480 --> 17:36.280
+è ad esempio
+
+17:36.280 --> 17:38.040
+il compressore
+
+17:38.040 --> 17:38.680
+in quello stato
+
+17:38.680 --> 17:39.560
+deve avere
+
+17:39.560 --> 17:40.460
+un altro
+
+17:40.460 --> 17:41.660
+tipo di performance
+
+17:41.660 --> 17:42.260
+quindi questo
+
+17:42.260 --> 17:43.040
+è il cambiamento
+
+17:43.040 --> 17:44.980
+il documento
+
+17:44.980 --> 17:45.820
+una volta che tu
+
+17:45.820 --> 17:46.840
+lo acquisisci
+
+17:46.840 --> 17:49.640
+come devi affrontare
+
+17:49.640 --> 17:50.580
+questo cambiamento
+
+17:50.580 --> 17:51.300
+devi
+
+17:51.300 --> 17:52.380
+prima
+
+17:52.380 --> 17:53.200
+aprire
+
+17:53.200 --> 17:54.660
+una change
+
+17:54.660 --> 17:55.380
+request
+
+17:55.380 --> 17:55.840
+si chiama
+
+17:55.840 --> 17:56.640
+change request
+
+17:56.640 --> 17:56.960
+perché
+
+17:56.960 --> 17:58.160
+appunto
+
+17:58.160 --> 17:59.120
+arriva una richiesta
+
+17:59.120 --> 18:00.020
+di cambiamento
+
+18:00.020 --> 18:01.720
+questa change request
+
+18:01.720 --> 18:02.520
+deve essere
+
+18:02.520 --> 18:04.340
+aperta dal project manager
+
+18:04.340 --> 18:04.600
+cioè
+
+18:04.600 --> 18:05.740
+c'è una linea guida
+
+18:05.740 --> 18:06.280
+dove ti dice
+
+18:06.280 --> 18:07.780
+quali sono i passi
+
+18:07.780 --> 18:08.740
+che il progetto
+
+18:08.740 --> 18:09.680
+deve affrontare
+
+18:09.680 --> 18:10.140
+per
+
+18:10.140 --> 18:11.500
+per
+
+18:11.500 --> 18:12.820
+portare a termine
+
+18:12.820 --> 18:13.460
+questa richiesta
+
+18:13.460 --> 18:14.240
+di cambiamento
+
+18:14.240 --> 18:15.520
+non è solo
+
+18:15.520 --> 18:16.160
+in carico
+
+18:16.160 --> 18:16.840
+a chi sviluppa
+
+18:16.840 --> 18:17.520
+i requisiti
+
+18:17.520 --> 18:18.680
+affrontare
+
+18:18.680 --> 18:19.500
+questa richiesta
+
+18:19.500 --> 18:20.120
+di cambiamento
+
+18:20.120 --> 18:21.000
+ma è un flusso
+
+18:21.000 --> 18:21.520
+è un processo
+
+18:21.520 --> 18:22.660
+che arriva dall'alto
+
+18:22.660 --> 18:24.220
+e tu che sviluppi
+
+18:24.220 --> 18:24.980
+il requisito
+
+18:24.980 --> 18:26.000
+devi sapere
+
+18:26.000 --> 18:27.080
+che ti è arrivata
+
+18:27.080 --> 18:27.760
+questa richiesta
+
+18:27.760 --> 18:28.480
+di cambiamento
+
+18:28.480 --> 18:28.880
+e quindi
+
+18:28.880 --> 18:30.260
+devi poter
+
+18:30.260 --> 18:31.300
+risalire
+
+18:31.300 --> 18:33.200
+al requisito
+
+18:33.200 --> 18:34.520
+che deve essere
+
+18:34.520 --> 18:35.280
+cambiato
+
+18:35.280 --> 18:38.820
+cambiare il requisito
+
+18:38.820 --> 18:39.960
+e nello stesso tempo
+
+18:39.960 --> 18:40.540
+il requisito
+
+18:40.540 --> 18:41.220
+che tu cambi
+
+18:41.220 --> 18:42.020
+poi chiaramente
+
+18:42.020 --> 18:43.040
+ha impatto
+
+18:43.040 --> 18:44.300
+tutto il ciclo
+
+18:44.300 --> 18:44.840
+avvi
+
+18:44.840 --> 18:49.280
+ok chiaro
+
+18:49.280 --> 18:49.800
+ma quindi
+
+18:49.800 --> 18:50.540
+può essere fatto
+
+18:50.540 --> 18:51.360
+in qualsiasi
+
+18:51.360 --> 18:52.220
+in qualsiasi
+
+18:52.220 --> 18:52.640
+momento
+
+18:52.640 --> 18:53.420
+questo cambiamento
+
+18:53.420 --> 18:55.100
+diciamo che
+
+18:55.100 --> 18:56.700
+tutto dipende
+
+18:56.700 --> 18:56.920
+ecco
+
+18:56.920 --> 18:58.700
+dalla priorità
+
+18:58.700 --> 18:59.120
+che si dà
+
+18:59.120 --> 18:59.960
+al cambiamento
+
+18:59.960 --> 19:00.960
+è una decisione
+
+19:00.960 --> 19:01.320
+che avviene
+
+19:01.320 --> 19:02.480
+all'interno del progetto
+
+19:02.480 --> 19:03.520
+il progetto
+
+19:03.520 --> 19:04.400
+i responsabili
+
+19:04.400 --> 19:04.940
+del progetto
+
+19:04.940 --> 19:05.780
+il project manager
+
+19:05.780 --> 19:06.680
+o il project leader
+
+19:06.680 --> 19:07.760
+dice ok
+
+19:07.760 --> 19:08.700
+questo cambiamento
+
+19:08.700 --> 19:09.220
+è arrivato
+
+19:09.220 --> 19:09.900
+in questo momento
+
+19:09.900 --> 19:10.220
+però
+
+19:10.220 --> 19:11.540
+noi lo
+
+19:11.540 --> 19:12.760
+rilasciamo
+
+19:12.760 --> 19:13.500
+al cliente
+
+19:13.500 --> 19:14.360
+si usano questi termini
+
+19:14.360 --> 19:15.320
+rilasciamo
+
+19:15.320 --> 19:16.720
+questo contenuto
+
+19:16.720 --> 19:17.580
+al cliente
+
+19:17.580 --> 19:18.580
+per la prossima
+
+19:18.580 --> 19:19.480
+per il prossimo
+
+19:19.480 --> 19:20.020
+rilascio
+
+19:20.020 --> 19:20.220
+ecco
+
+19:20.220 --> 19:20.760
+fra uno
+
+19:20.760 --> 19:21.320
+due mesi
+
+19:21.320 --> 19:21.700
+quindi
+
+19:21.700 --> 19:23.420
+ti dicono
+
+19:23.420 --> 19:24.180
+quando fare
+
+19:24.180 --> 19:24.980
+questo cambiamento
+
+19:24.980 --> 19:25.700
+ecco
+
+19:25.700 --> 19:26.140
+non devi
+
+19:26.140 --> 19:26.900
+farlo subito
+
+19:26.900 --> 19:27.120
+cioè
+
+19:27.120 --> 19:27.500
+tu
+
+19:27.500 --> 19:28.640
+diciamo
+
+19:28.640 --> 19:29.360
+responsabile
+
+19:29.360 --> 19:29.800
+della parte
+
+19:29.800 --> 19:30.340
+dei requisiti
+
+19:30.340 --> 19:31.040
+non riceverai
+
+19:31.040 --> 19:31.520
+mai
+
+19:31.520 --> 19:32.780
+in prima persona
+
+19:32.780 --> 19:33.260
+la richiesta
+
+19:33.260 --> 19:34.000
+di cambiamento
+
+19:34.000 --> 19:35.000
+arriverà sempre
+
+19:35.000 --> 19:36.600
+dall'alto
+
+19:36.600 --> 19:39.040
+e quindi
+
+19:39.040 --> 19:39.420
+poi
+
+19:39.420 --> 19:40.520
+a cascata
+
+19:40.520 --> 19:41.060
+tu
+
+19:41.060 --> 19:41.700
+saprai
+
+19:41.700 --> 19:42.160
+quando
+
+19:42.160 --> 19:42.740
+affrontare
+
+19:42.740 --> 19:43.660
+questo cambiamento
+
+19:43.660 --> 19:45.740
+in termini
+
+19:45.740 --> 19:46.220
+di tempo
+
+19:46.220 --> 19:47.280
+di tempistica
+
+19:47.280 --> 19:48.180
+poi
+
+19:48.180 --> 19:49.320
+la modalità
+
+19:49.320 --> 19:50.320
+e il supporto
+
+19:50.320 --> 19:51.500
+del Requirement Management Plan
+
+19:51.500 --> 19:52.080
+viene
+
+19:52.080 --> 19:53.080
+per poter
+
+19:53.080 --> 19:54.080
+risalire
+
+19:54.080 --> 19:56.440
+al requisito
+
+19:56.440 --> 19:57.180
+da cambiare
+
+19:57.180 --> 19:58.180
+nello stesso tempo
+
+19:58.180 --> 19:58.780
+siccome
+
+19:58.780 --> 20:00.320
+ASPICE
+
+20:00.320 --> 20:00.880
+le regole
+
+20:00.880 --> 20:01.640
+di ASPICE
+
+20:01.640 --> 20:03.220
+e anche
+
+20:03.220 --> 20:04.560
+il Requirement Management Plan
+
+20:04.560 --> 20:06.240
+diciamo
+
+20:06.240 --> 20:06.700
+la regola
+
+20:06.700 --> 20:07.620
+una delle regole
+
+20:07.620 --> 20:07.920
+è quella
+
+20:07.920 --> 20:09.020
+di poter
+
+20:09.020 --> 20:10.060
+tracciare
+
+20:10.060 --> 20:12.340
+i requisiti
+
+20:12.340 --> 20:13.980
+in modo tale
+
+20:13.980 --> 20:14.580
+che tu puoi
+
+20:14.580 --> 20:15.340
+risalire
+
+20:15.340 --> 20:16.380
+al requisito
+
+20:16.380 --> 20:17.380
+facilmente
+
+20:17.380 --> 20:19.620
+e puoi risalire
+
+20:19.620 --> 20:20.860
+anche al test case
+
+20:20.860 --> 20:21.740
+puoi risalire
+
+20:21.740 --> 20:22.700
+anche al
+
+20:22.700 --> 20:23.760
+codice
+
+20:23.760 --> 20:24.540
+questo
+
+20:24.540 --> 20:25.440
+con una
+
+20:25.440 --> 20:26.740
+diciamo
+
+20:26.740 --> 20:28.500
+con
+
+20:28.500 --> 20:29.560
+dei metodi
+
+20:29.560 --> 20:30.800
+di tracciabilità
+
+20:30.800 --> 20:32.080
+per tracciabilità
+
+20:32.080 --> 20:33.540
+parlo di
+
+20:33.540 --> 20:34.380
+ad esempio
+
+20:34.380 --> 20:35.320
+io ho un requisito
+
+20:35.320 --> 20:36.460
+del cliente
+
+20:36.460 --> 20:37.180
+attraverso
+
+20:37.180 --> 20:37.820
+un link
+
+20:37.820 --> 20:38.860
+che è possibile
+
+20:38.860 --> 20:39.260
+farlo
+
+20:39.260 --> 20:40.660
+con i tool
+
+20:40.660 --> 20:41.160
+che abbiamo
+
+20:41.160 --> 20:41.840
+a disposizione
+
+20:41.840 --> 20:42.500
+attraverso
+
+20:42.500 --> 20:42.860
+un link
+
+20:42.860 --> 20:43.480
+virtuale
+
+20:43.480 --> 20:44.300
+tu lo connetti
+
+20:44.300 --> 20:45.080
+questo requisito
+
+20:45.080 --> 20:45.540
+lo connetti
+
+20:45.540 --> 20:45.900
+ad esempio
+
+20:45.900 --> 20:46.580
+al software
+
+20:46.580 --> 20:47.880
+dal software
+
+20:47.880 --> 20:48.860
+lo connetti
+
+20:48.860 --> 20:50.040
+al modello
+
+20:50.040 --> 20:50.700
+dal modello
+
+20:50.700 --> 20:51.200
+lo connetti
+
+20:51.200 --> 20:52.220
+al test case
+
+20:52.220 --> 20:53.200
+e così via
+
+20:53.200 --> 20:54.600
+quindi
+
+20:54.600 --> 20:56.100
+ti dico
+
+20:56.100 --> 20:57.120
+il Requirement Management Plan
+
+20:57.120 --> 20:57.460
+perché
+
+20:57.460 --> 20:58.920
+che viene a supporto
+
+20:58.920 --> 20:59.560
+dei cambiamenti
+
+20:59.560 --> 21:00.060
+proprio perché
+
+21:00.060 --> 21:00.880
+definisce
+
+21:00.880 --> 21:01.420
+un modo
+
+21:01.420 --> 21:02.080
+chiaro
+
+21:02.080 --> 21:02.480
+di poter
+
+21:02.480 --> 21:02.960
+tracciare
+
+21:02.960 --> 21:03.620
+i requisiti
+
+21:03.620 --> 21:04.360
+di risalire
+
+21:04.360 --> 21:04.920
+il requisito
+
+21:04.920 --> 21:05.940
+che devi cambiare
+
+21:05.940 --> 21:07.320
+e quindi
+
+21:07.320 --> 21:07.780
+hai
+
+21:07.780 --> 21:08.980
+più
+
+21:08.980 --> 21:09.760
+praticità
+
+21:09.760 --> 21:10.180
+e più
+
+21:10.180 --> 21:10.780
+facilità
+
+21:10.780 --> 21:11.900
+nel gestire
+
+21:11.900 --> 21:12.360
+questi tipi
+
+21:12.360 --> 21:13.180
+di cambiamenti
+
+21:13.180 --> 21:15.600
+chiarissimo
+
+21:15.600 --> 21:16.080
+grazie
+
+21:16.080 --> 21:18.100
+Mario
+
+21:18.100 --> 21:18.120
+Mario
+
+21:18.120 --> 21:18.860
+una domanda
+
+21:18.860 --> 21:21.100
+ma questo documento
+
+21:21.100 --> 21:22.320
+fa riferimento
+
+21:22.320 --> 21:23.600
+a requisiti
+
+21:23.600 --> 21:24.800
+solamente
+
+21:24.800 --> 21:25.340
+a livello
+
+21:25.340 --> 21:26.020
+su E1
+
+21:26.020 --> 21:27.580
+o magari
+
+21:27.580 --> 21:28.220
+anche requisiti
+
+21:28.220 --> 21:28.660
+a livello
+
+21:28.660 --> 21:29.420
+su E2
+
+21:29.420 --> 21:30.000
+o su E3
+
+21:30.000 --> 21:31.040
+no
+
+21:31.040 --> 21:31.340
+no allora
+
+21:31.340 --> 21:32.400
+questo documento
+
+21:32.400 --> 21:33.240
+fa parte
+
+21:33.240 --> 21:33.900
+diciamo
+
+21:33.900 --> 21:35.420
+fa riferimento
+
+21:35.420 --> 21:36.840
+più in particolare
+
+21:36.840 --> 21:37.320
+alla parte
+
+21:37.320 --> 21:37.900
+alta
+
+21:37.900 --> 21:38.480
+a sinistra
+
+21:38.480 --> 21:38.700
+quindi
+
+21:38.700 --> 21:39.180
+SIS
+
+21:39.180 --> 21:39.760
+quindi a livello
+
+21:39.760 --> 21:40.440
+di sistema
+
+21:40.440 --> 21:41.820
+sì
+
+21:41.820 --> 21:43.140
+però
+
+21:43.140 --> 21:43.780
+lo si può
+
+21:43.780 --> 21:44.360
+tradurre
+
+21:44.360 --> 21:44.780
+anche
+
+21:44.780 --> 21:45.980
+per tutti
+
+21:45.980 --> 21:46.240
+i tipi
+
+21:46.240 --> 21:46.940
+di requisiti
+
+21:46.940 --> 21:48.680
+sì
+
+21:48.680 --> 21:49.160
+chiaramente
+
+21:49.160 --> 21:49.720
+c'è una prima
+
+21:49.720 --> 21:51.600
+sì
+
+21:51.600 --> 21:52.020
+vai
+
+21:52.020 --> 21:52.660
+continuo
+
+21:52.660 --> 21:54.000
+no no
+
+21:54.000 --> 21:54.280
+dico
+
+21:54.280 --> 21:55.400
+che sicuramente
+
+21:55.400 --> 21:56.240
+una fase
+
+21:56.240 --> 21:57.440
+che è
+
+21:57.440 --> 21:58.460
+una fase
+
+21:58.460 --> 21:58.960
+molto
+
+21:58.960 --> 22:01.040
+importante
+
+22:01.040 --> 22:02.780
+della parte
+
+22:02.780 --> 22:03.960
+di sistema
+
+22:03.960 --> 22:04.520
+che è la fase
+
+22:04.520 --> 22:05.020
+alta
+
+22:05.020 --> 22:05.780
+quindi la fase
+
+22:05.780 --> 22:06.900
+di chiarificazione
+
+22:06.900 --> 22:07.740
+di elicitation
+
+22:07.740 --> 22:08.280
+si chiama
+
+22:08.280 --> 22:09.220
+poi la vedremo dopo
+
+22:09.220 --> 22:10.340
+che sicuramente
+
+22:10.340 --> 22:10.960
+non
+
+22:10.960 --> 22:12.360
+non si può
+
+22:12.360 --> 22:13.440
+riflettere
+
+22:13.440 --> 22:14.640
+negli altri domini
+
+22:14.640 --> 22:15.200
+però
+
+22:15.200 --> 22:17.040
+il Requirement Management Plan
+
+22:17.040 --> 22:18.620
+può ricoprire
+
+22:18.620 --> 22:19.500
+tutto il ciclo
+
+22:19.500 --> 22:19.780
+avvi
+
+22:19.780 --> 22:22.380
+sia lato sistema
+
+22:22.380 --> 22:23.240
+sia lato software
+
+22:23.240 --> 22:23.740
+sia lato
+
+22:23.740 --> 22:24.860
+testing
+
+22:24.860 --> 22:26.740
+ok ok
+
+22:26.740 --> 22:27.240
+grazie
+
+22:27.240 --> 22:28.480
+ok
+
+22:28.480 --> 22:29.340
+chiaramente
+
+22:29.340 --> 22:30.820
+tutta questa presentazione
+
+22:30.820 --> 22:32.540
+poi si riflette
+
+22:32.540 --> 22:34.240
+in una documentazione
+
+22:34.240 --> 22:35.640
+che stiamo preparando
+
+22:35.640 --> 22:37.160
+e che poi
+
+22:37.160 --> 22:38.640
+vi mostreremo
+
+22:38.640 --> 22:39.860
+come secondo step
+
+22:39.860 --> 22:41.520
+per farvi
+
+22:41.520 --> 22:42.220
+capire
+
+22:42.220 --> 22:43.100
+poi effettivamente
+
+22:43.100 --> 22:43.640
+tutto quello
+
+22:43.640 --> 22:44.340
+che vi sto dicendo
+
+22:44.340 --> 22:45.340
+come si riflette
+
+22:45.340 --> 22:46.580
+nel documento
+
+22:46.580 --> 22:47.220
+vero e proprio
+
+22:47.220 --> 22:48.160
+io adesso
+
+22:48.160 --> 22:49.060
+con questa presentazione
+
+22:49.060 --> 22:49.540
+vi sto dando
+
+22:49.540 --> 22:50.940
+un'idea
+
+22:50.940 --> 22:52.540
+di come
+
+22:52.540 --> 22:54.140
+questo Requirement Management Plan
+
+22:54.140 --> 22:55.380
+deve essere costruito
+
+22:55.380 --> 22:56.040
+e di cosa
+
+22:56.040 --> 22:57.060
+e di cosa
+
+22:57.060 --> 22:57.780
+stiamo parlando
+
+22:57.780 --> 22:58.080
+poi
+
+22:58.080 --> 22:58.800
+il documento
+
+22:58.800 --> 22:59.320
+vero e proprio
+
+22:59.320 --> 22:59.680
+che voi
+
+22:59.680 --> 23:00.540
+prenderete
+
+23:00.540 --> 23:02.120
+e lo potete
+
+23:02.120 --> 23:03.000
+customizzare
+
+23:03.000 --> 23:04.320
+poi per ogni cliente
+
+23:04.320 --> 23:05.380
+su cui lavorate
+
+23:05.380 --> 23:06.420
+ve lo
+
+23:06.420 --> 23:06.800
+diciamo
+
+23:06.800 --> 23:07.200
+lo stiamo
+
+23:07.200 --> 23:08.600
+è in fase di preparazione
+
+23:08.600 --> 23:10.360
+e ve lo mostreremo
+
+23:10.360 --> 23:11.280
+in un secondo step
+
+23:11.280 --> 23:12.340
+Mario
+
+23:12.340 --> 23:12.940
+perdonami
+
+23:12.940 --> 23:13.500
+aggiungo
+
+23:13.500 --> 23:14.060
+un'ultima
+
+23:14.060 --> 23:15.300
+considerazione
+
+23:15.300 --> 23:15.780
+perché
+
+23:15.780 --> 23:17.200
+tante volte
+
+23:17.200 --> 23:17.940
+è capitato
+
+23:17.940 --> 23:18.840
+che persone
+
+23:18.840 --> 23:19.220
+magari
+
+23:19.220 --> 23:20.560
+iniziano in formazione
+
+23:20.560 --> 23:21.840
+e poi vanno dai clienti
+
+23:21.840 --> 23:23.080
+quando ho chiesto
+
+23:23.080 --> 23:23.860
+poi feedback
+
+23:23.860 --> 23:24.940
+su come
+
+23:24.940 --> 23:25.520
+diciamo
+
+23:25.520 --> 23:26.340
+la formazione
+
+23:26.340 --> 23:27.400
+li abbia aiutati
+
+23:27.400 --> 23:28.560
+uno dei feedback
+
+23:28.560 --> 23:29.180
+che ho ricevuto
+
+23:29.180 --> 23:29.500
+è
+
+23:29.500 --> 23:30.940
+no il cliente
+
+23:30.940 --> 23:31.780
+non lavora
+
+23:31.780 --> 23:32.440
+per dire
+
+23:32.440 --> 23:33.320
+secondo un ciclo
+
+23:33.320 --> 23:33.700
+avvi
+
+23:33.700 --> 23:34.400
+oppure no
+
+23:34.400 --> 23:34.980
+il cliente
+
+23:34.980 --> 23:36.840
+non ha il Requirement Management Plan
+
+23:36.840 --> 23:38.100
+cioè quello che voglio dire
+
+23:38.100 --> 23:39.560
+è capita che alcuni clienti
+
+23:39.560 --> 23:41.760
+non abbiano magari il documento
+
+23:41.760 --> 23:42.680
+chiamato esattamente
+
+23:42.680 --> 23:43.500
+in questo modo
+
+23:43.500 --> 23:44.940
+o non abbiano il cliente
+
+23:44.940 --> 23:46.680
+o non abbiano proprio questo documento
+
+23:46.680 --> 23:47.560
+ma in generale
+
+23:47.560 --> 23:49.260
+ritengo fondamentale
+
+23:49.260 --> 23:50.640
+che noi siamo esposti
+
+23:50.640 --> 23:50.920
+diciamo
+
+23:50.920 --> 23:51.500
+a questi
+
+23:51.500 --> 23:53.020
+temi
+
+23:53.020 --> 23:54.500
+e anche a una lezione del genere
+
+23:54.500 --> 23:56.020
+perché ciò non vieta
+
+23:56.020 --> 23:57.480
+le persone che vanno a lavorare
+
+23:57.480 --> 23:58.100
+da un cliente
+
+23:58.100 --> 23:59.540
+di lavorare in modo ordinato
+
+23:59.540 --> 24:00.800
+avere concetti di traccia
+
+24:00.800 --> 24:01.800
+perfetto
+
+24:01.800 --> 24:02.560
+giusto
+
+24:02.560 --> 24:03.700
+giustissimo Pasquale
+
+24:03.700 --> 24:04.400
+questo è proprio
+
+24:04.400 --> 24:05.280
+quello che
+
+24:05.280 --> 24:07.400
+che vogliamo trasmettere noi
+
+24:07.400 --> 24:08.340
+cioè questo
+
+24:08.340 --> 24:09.100
+non è
+
+24:09.100 --> 24:11.300
+come tutti i clienti
+
+24:11.300 --> 24:11.860
+lavorano
+
+24:11.860 --> 24:13.640
+questo è un modo
+
+24:13.640 --> 24:14.760
+per far sì
+
+24:14.760 --> 24:15.400
+che noi
+
+24:15.400 --> 24:16.760
+abbiamo
+
+24:16.760 --> 24:18.280
+un mindset
+
+24:18.280 --> 24:18.700
+di
+
+24:18.700 --> 24:19.620
+diciamo
+
+24:19.620 --> 24:19.920
+di
+
+24:19.920 --> 24:22.060
+abbiamo una formazione chiara
+
+24:22.060 --> 24:22.560
+cioè nel senso
+
+24:22.560 --> 24:23.920
+abbiamo degli schemi
+
+24:23.920 --> 24:25.100
+e una linea guida
+
+24:25.100 --> 24:25.640
+da seguire
+
+24:25.640 --> 24:26.440
+ovunque andiamo
+
+24:26.440 --> 24:26.920
+che poi
+
+24:26.920 --> 24:27.900
+chiaramente ci siano
+
+24:27.900 --> 24:28.860
+delle deviazioni
+
+24:28.860 --> 24:29.420
+o meno
+
+24:29.420 --> 24:31.640
+presso un cliente
+
+24:31.640 --> 24:32.240
+o presso un altro
+
+24:32.240 --> 24:32.540
+però
+
+24:32.540 --> 24:33.060
+diciamo
+
+24:33.060 --> 24:33.960
+il nostro concetto
+
+24:33.960 --> 24:34.600
+il nostro mindset
+
+24:34.600 --> 24:35.680
+è sempre lo stesso
+
+24:35.680 --> 24:36.620
+cioè lavorare
+
+24:36.620 --> 24:37.360
+con ordine
+
+24:37.360 --> 24:38.300
+e con qualità
+
+24:38.300 --> 24:44.600
+ok
+
+24:44.600 --> 24:45.540
+grazie Pasquale
+
+24:45.540 --> 24:46.080
+per questo
+
+24:46.080 --> 24:47.600
+bene
+
+24:47.600 --> 24:48.200
+diciamo
+
+24:48.200 --> 24:51.780
+un punto
+
+24:51.780 --> 24:52.680
+molto importante
+
+24:52.680 --> 24:54.100
+allora
+
+24:54.100 --> 24:54.980
+quindi
+
+24:54.980 --> 24:57.380
+quali sono
+
+24:57.380 --> 24:58.320
+gli obiettivi
+
+24:58.320 --> 24:59.600
+lo scopo
+
+24:59.600 --> 25:00.060
+principale
+
+25:00.060 --> 25:00.400
+di questo
+
+25:00.400 --> 25:01.400
+requirement management plan
+
+25:01.400 --> 25:01.960
+quindi è quello
+
+25:01.960 --> 25:02.960
+di documentare
+
+25:02.960 --> 25:03.300
+un po'
+
+25:03.300 --> 25:07.040
+di documentare
+
+25:07.040 --> 25:07.520
+appunto
+
+25:07.520 --> 25:08.180
+tutta la fase
+
+25:08.180 --> 25:09.540
+di gestione
+
+25:09.540 --> 25:10.500
+dei requisiti
+
+25:10.500 --> 25:12.220
+e
+
+25:12.220 --> 25:13.540
+sui modi
+
+25:13.540 --> 25:13.900
+con cui
+
+25:13.900 --> 25:14.540
+questi requisiti
+
+25:14.540 --> 25:15.080
+il modo con cui
+
+25:15.080 --> 25:15.740
+questi requisiti
+
+25:15.740 --> 25:16.500
+devono essere
+
+25:16.500 --> 25:17.500
+devono essere
+
+25:17.500 --> 25:19.140
+processati
+
+25:19.140 --> 25:20.220
+quindi
+
+25:20.220 --> 25:21.560
+c'è una prima fase
+
+25:21.560 --> 25:22.880
+di documentazione
+
+25:22.880 --> 25:24.800
+e di tracciabilità
+
+25:24.800 --> 25:25.640
+dei requisiti
+
+25:25.640 --> 25:28.300
+una definizione
+
+25:28.300 --> 25:29.020
+dello scopo
+
+25:29.020 --> 25:30.180
+del progetto
+
+25:33.300 --> 25:35.020
+permette appunto
+
+25:35.020 --> 25:36.800
+questo requirement management plan
+
+25:36.800 --> 25:37.500
+di facilitare
+
+25:37.500 --> 25:38.340
+quello che ci siamo detti
+
+25:38.340 --> 25:39.140
+di facilitare
+
+25:39.140 --> 25:41.480
+le comunicazioni
+
+25:41.480 --> 25:44.140
+tra i vari domini
+
+25:44.140 --> 25:44.680
+e per domini
+
+25:44.680 --> 25:45.720
+parlo di sistema
+
+25:45.720 --> 25:46.420
+software
+
+25:46.420 --> 25:48.080
+test
+
+25:48.080 --> 25:49.320
+quindi facilitare
+
+25:49.320 --> 25:49.680
+test
+
+25:49.680 --> 25:50.180
+codice
+
+25:50.180 --> 25:51.340
+quindi i domini
+
+25:51.340 --> 25:51.840
+parlo proprio
+
+25:51.840 --> 25:52.540
+del ciclo avvio
+
+25:52.540 --> 25:53.180
+ogni dominio
+
+25:53.180 --> 25:55.380
+è facilitata
+
+25:55.380 --> 25:56.080
+la comunicazione
+
+25:56.080 --> 25:56.740
+tra i domini
+
+25:56.740 --> 25:57.800
+e gestire
+
+25:57.800 --> 25:59.900
+questi cambiamenti
+
+25:59.900 --> 26:00.920
+improvvisi
+
+26:00.920 --> 26:02.360
+o cambiamenti
+
+26:02.360 --> 26:03.580
+relativi
+
+26:03.580 --> 26:04.580
+richiesti
+
+26:04.580 --> 26:05.900
+dal cliente
+
+26:05.900 --> 26:08.100
+con questi obiettivi
+
+26:08.100 --> 26:09.020
+con questi scopi
+
+26:09.020 --> 26:10.340
+il requirement management plan
+
+26:10.340 --> 26:11.440
+ci permette
+
+26:11.440 --> 26:11.840
+appunto
+
+26:11.840 --> 26:12.180
+di
+
+26:12.180 --> 26:14.440
+di portare
+
+26:14.440 --> 26:15.240
+a termine
+
+26:15.240 --> 26:16.400
+il nostro lavoro
+
+26:16.400 --> 26:17.460
+di portare a termine
+
+26:17.460 --> 26:17.700
+ecco
+
+26:17.700 --> 26:18.260
+tutta la parte
+
+26:18.260 --> 26:18.680
+di gestione
+
+26:18.680 --> 26:19.340
+dei requisiti
+
+26:19.340 --> 26:21.380
+e quindi
+
+26:21.380 --> 26:22.520
+di soddisfare
+
+26:22.520 --> 26:22.720
+un po'
+
+26:22.780 --> 26:23.380
+quali che sono
+
+26:23.380 --> 26:24.580
+le aspettative
+
+26:24.580 --> 26:25.720
+del cliente
+
+26:25.720 --> 26:26.660
+perché se il cliente
+
+26:26.660 --> 26:27.560
+ci manda
+
+26:27.560 --> 26:28.500
+dei requisiti
+
+26:28.500 --> 26:29.100
+vuole
+
+26:29.100 --> 26:30.000
+e vorrebbe
+
+26:30.000 --> 26:30.880
+che quei requisiti
+
+26:30.880 --> 26:32.560
+venissero processati
+
+26:32.560 --> 26:33.360
+per ottenere
+
+26:33.360 --> 26:33.980
+ciò che lui
+
+26:33.980 --> 26:35.100
+si aspetta
+
+26:35.100 --> 26:35.460
+e quindi
+
+26:35.460 --> 26:36.600
+seguendo
+
+26:36.600 --> 26:37.200
+un po'
+
+26:38.120 --> 26:38.340
+e
+
+26:38.340 --> 26:39.920
+facilitando
+
+26:39.920 --> 26:41.340
+questi punti
+
+26:41.340 --> 26:42.440
+queste comunicazioni
+
+26:42.440 --> 26:43.220
+seguendo un po'
+
+26:43.660 --> 26:44.660
+la parte di documentazione
+
+26:44.660 --> 26:45.560
+di trattabilità
+
+26:45.560 --> 26:47.460
+riusciamo ad ottenere
+
+26:47.460 --> 26:48.240
+un buon livello
+
+26:48.240 --> 26:49.060
+di aspettative
+
+26:49.060 --> 26:50.640
+un buon livello
+
+26:50.640 --> 26:51.380
+di qualità
+
+26:51.380 --> 26:51.780
+e quindi
+
+26:51.780 --> 26:52.640
+l'aspettativa
+
+26:52.640 --> 26:53.220
+del cliente
+
+26:53.220 --> 26:53.760
+cresce
+
+26:53.760 --> 26:55.000
+e noi siamo
+
+26:55.000 --> 26:56.020
+pronti
+
+26:56.020 --> 26:56.540
+per poter
+
+26:56.540 --> 26:57.300
+soddisfare
+
+26:57.300 --> 26:58.100
+queste aspettative
+
+26:58.100 --> 27:05.780
+chiaramente
+
+27:05.780 --> 27:06.520
+ci sono
+
+27:06.520 --> 27:07.440
+delle best practice
+
+27:07.440 --> 27:07.720
+quindi
+
+27:07.720 --> 27:09.060
+non sono
+
+27:09.060 --> 27:09.820
+dei nice to have
+
+27:09.820 --> 27:10.080
+ma
+
+27:10.080 --> 27:12.320
+dei punti
+
+27:12.320 --> 27:12.560
+che
+
+27:12.560 --> 27:14.020
+dovrebbero
+
+27:14.020 --> 27:14.400
+essere
+
+27:14.400 --> 27:15.900
+affrontati
+
+27:15.900 --> 27:17.660
+diciamo
+
+27:17.660 --> 27:18.540
+che
+
+27:18.540 --> 27:19.560
+noi dovremmo
+
+27:19.560 --> 27:20.120
+seguire
+
+27:20.120 --> 27:21.960
+per la definizione
+
+27:21.960 --> 27:22.520
+dei requisiti
+
+27:22.520 --> 27:23.220
+in generale
+
+27:23.220 --> 27:25.060
+e soprattutto
+
+27:25.060 --> 27:25.580
+la parte
+
+27:25.580 --> 27:25.880
+di
+
+27:25.880 --> 27:27.520
+diciamo
+
+27:27.520 --> 27:27.920
+di essere
+
+27:27.920 --> 27:28.700
+molto chiari
+
+27:28.700 --> 27:31.360
+nella definizione
+
+27:31.360 --> 27:32.160
+e nella descrizione
+
+27:32.160 --> 27:34.440
+dei nostri requisiti
+
+27:34.440 --> 27:36.580
+di far sì
+
+27:36.580 --> 27:37.500
+che ci siano
+
+27:37.500 --> 27:38.620
+ci siano
+
+27:38.620 --> 27:38.960
+delle
+
+27:38.960 --> 27:39.600
+diciamo
+
+27:39.600 --> 27:39.960
+ci siano
+
+27:39.960 --> 27:42.080
+delle vere
+
+27:42.080 --> 27:42.460
+proprie
+
+27:42.460 --> 27:43.280
+discussioni
+
+27:43.280 --> 27:44.860
+con il cliente
+
+27:44.860 --> 27:45.720
+e con gli altri
+
+27:45.720 --> 27:46.320
+domini
+
+27:46.320 --> 27:47.580
+per poter
+
+27:47.580 --> 27:48.760
+ricevere feedback
+
+27:48.760 --> 27:49.820
+e per poter
+
+27:49.820 --> 27:50.440
+diciamo
+
+27:50.440 --> 27:52.220
+consolidare
+
+27:52.220 --> 27:53.080
+un po'
+
+27:53.600 --> 27:54.340
+il know-how
+
+27:54.340 --> 27:55.180
+e
+
+27:55.180 --> 27:56.840
+un po'
+
+27:56.960 --> 27:57.580
+capire
+
+27:57.580 --> 27:59.240
+cosa stiamo facendo
+
+27:59.240 --> 27:59.920
+quindi
+
+27:59.920 --> 28:02.560
+instaurare
+
+28:02.560 --> 28:04.360
+un vero e proprio
+
+28:04.360 --> 28:05.720
+diciamo
+
+28:05.720 --> 28:06.120
+delle vere
+
+28:06.120 --> 28:06.360
+e proprie
+
+28:06.360 --> 28:07.480
+discussioni
+
+28:07.480 --> 28:08.040
+anche
+
+28:08.040 --> 28:08.520
+molto
+
+28:08.520 --> 28:10.140
+banali
+
+28:10.140 --> 28:10.420
+ma
+
+28:10.420 --> 28:11.320
+che
+
+28:11.320 --> 28:11.960
+soprattutto
+
+28:11.960 --> 28:12.400
+ci fanno
+
+28:12.400 --> 28:13.820
+consolidare
+
+28:13.820 --> 28:14.100
+un po'
+
+28:14.160 --> 28:14.920
+la tematica
+
+28:14.920 --> 28:15.720
+e questo
+
+28:15.720 --> 28:16.220
+permette
+
+28:16.220 --> 28:16.640
+appunto
+
+28:16.640 --> 28:17.140
+di essere
+
+28:17.140 --> 28:17.760
+chiari
+
+28:17.760 --> 28:18.660
+e di capire
+
+28:18.660 --> 28:19.020
+un po'
+
+28:19.120 --> 28:19.700
+l'argomento
+
+28:19.700 --> 28:20.200
+su cui
+
+28:20.200 --> 28:21.620
+stiamo lavorando
+
+28:21.620 --> 28:21.820
+quindi
+
+28:21.820 --> 28:22.380
+quanto più
+
+28:22.380 --> 28:23.540
+siamo informati
+
+28:23.540 --> 28:24.060
+quanto più
+
+28:24.060 --> 28:25.140
+abbiamo padronanza
+
+28:25.140 --> 28:26.740
+del contenuto
+
+28:26.740 --> 28:27.340
+e del tema
+
+28:27.340 --> 28:28.180
+che stiamo affrontando
+
+28:28.180 --> 28:28.760
+tanto più
+
+28:28.760 --> 28:29.740
+siamo chiari
+
+28:29.740 --> 28:30.500
+riusciamo ad essere
+
+28:30.500 --> 28:30.940
+chiari
+
+28:30.940 --> 28:31.380
+e riusciamo
+
+28:31.380 --> 28:33.740
+ad esprimerci
+
+28:33.740 --> 28:34.660
+con qualità
+
+28:34.660 --> 28:36.480
+quindi
+
+28:36.480 --> 28:37.060
+questi sono
+
+28:37.060 --> 28:38.120
+i tre punti
+
+28:38.120 --> 28:38.780
+fondamentali
+
+28:38.780 --> 28:39.040
+quindi
+
+28:39.040 --> 28:40.800
+essere chiari
+
+28:40.800 --> 28:41.300
+clarity
+
+28:41.300 --> 28:42.300
+e
+
+28:42.300 --> 28:43.900
+stakeholder engagement
+
+28:43.900 --> 28:44.420
+e ongoing
+
+28:44.420 --> 28:45.160
+communication
+
+28:45.160 --> 28:45.740
+diciamo
+
+28:45.740 --> 28:46.500
+vanno a braccetto
+
+28:46.500 --> 28:46.760
+perché
+
+28:46.760 --> 28:47.420
+chiaramente
+
+28:47.420 --> 28:48.140
+qui stiamo dicendo
+
+28:48.140 --> 28:48.440
+di
+
+28:48.440 --> 28:50.220
+non lavorare
+
+28:50.220 --> 28:51.640
+mai da soli
+
+28:51.640 --> 28:52.100
+perché
+
+28:52.100 --> 28:52.360
+sì
+
+28:52.360 --> 28:52.840
+è chiaro
+
+28:52.840 --> 28:53.040
+che
+
+28:53.040 --> 28:53.740
+a volte
+
+28:53.740 --> 28:55.480
+la tematica
+
+28:55.480 --> 28:57.380
+è di facile
+
+28:57.380 --> 28:58.160
+comprensione
+
+28:58.160 --> 28:58.400
+però
+
+28:58.400 --> 28:58.720
+è bene
+
+28:58.720 --> 28:59.260
+instaurare
+
+28:59.260 --> 29:00.040
+delle discussioni
+
+29:00.040 --> 29:00.740
+con il cliente
+
+29:00.740 --> 29:01.360
+e con altri
+
+29:01.360 --> 29:02.600
+colleghi
+
+29:02.600 --> 29:03.440
+per poter
+
+29:03.440 --> 29:04.080
+consolidare
+
+29:04.080 --> 29:04.400
+un po'
+
+29:04.780 --> 29:06.080
+il contenuto
+
+29:06.080 --> 29:06.800
+e la tematica
+
+29:06.800 --> 29:07.700
+quindi
+
+29:07.700 --> 29:08.660
+mai perdere di vista
+
+29:08.660 --> 29:09.260
+il fatto di
+
+29:09.260 --> 29:09.640
+dover
+
+29:09.640 --> 29:11.260
+confrontarsi
+
+29:11.260 --> 29:11.780
+e dover
+
+29:11.780 --> 29:12.240
+chiedere
+
+29:12.240 --> 29:14.220
+opinioni
+
+29:14.220 --> 29:15.120
+o spiegazioni
+
+29:15.120 --> 29:15.960
+ad altri
+
+29:15.960 --> 29:16.640
+colleghi
+
+29:16.640 --> 29:22.160
+quindi
+
+29:22.160 --> 29:22.680
+quali sono
+
+29:22.680 --> 29:23.500
+gli step
+
+29:23.500 --> 29:25.020
+per la definizione
+
+29:25.020 --> 29:26.060
+dei requisiti
+
+29:26.060 --> 29:27.960
+diciamo
+
+29:27.960 --> 29:28.100
+che
+
+29:28.100 --> 29:28.900
+li affronteremo
+
+29:28.900 --> 29:31.300
+nelle slide
+
+29:31.300 --> 29:31.880
+successive
+
+29:31.880 --> 29:32.540
+un po' più
+
+29:32.540 --> 29:33.620
+approfonditamente
+
+29:33.620 --> 29:34.500
+quindi
+
+29:34.500 --> 29:35.040
+vorrei solo
+
+29:35.040 --> 29:35.480
+elencare
+
+29:35.480 --> 29:36.080
+quindi c'è una
+
+29:36.080 --> 29:36.620
+prima fase
+
+29:36.620 --> 29:37.340
+quindi parlando
+
+29:37.340 --> 29:38.200
+di gestione
+
+29:38.200 --> 29:39.020
+dei requisiti
+
+29:39.020 --> 29:40.660
+in questo caso
+
+29:40.660 --> 29:41.960
+diciamo
+
+29:41.960 --> 29:42.740
+a parte
+
+29:42.740 --> 29:44.540
+sì
+
+29:44.540 --> 29:45.460
+diciamo che
+
+29:45.460 --> 29:46.280
+a parte
+
+29:46.280 --> 29:46.840
+diciamo
+
+29:46.840 --> 29:47.500
+la prima fase
+
+29:47.500 --> 29:48.160
+che è il requirement
+
+29:48.160 --> 29:49.000
+licitation
+
+29:49.000 --> 29:49.820
+che è la parte
+
+29:49.820 --> 29:50.480
+quindi di
+
+29:50.480 --> 29:51.660
+alta
+
+29:51.660 --> 29:52.900
+del ciclo avvi
+
+29:52.900 --> 29:54.200
+tutti
+
+29:54.200 --> 29:55.000
+gli altri
+
+29:55.000 --> 29:55.460
+punti
+
+29:55.460 --> 29:55.940
+si possono
+
+29:55.940 --> 29:56.600
+riflettere
+
+29:56.600 --> 29:57.120
+negli altri
+
+29:57.120 --> 29:57.620
+domini
+
+29:57.620 --> 29:58.780
+come diceva
+
+29:58.780 --> 29:59.420
+non so chi è
+
+29:59.420 --> 29:59.960
+che prima
+
+29:59.960 --> 30:00.800
+mi ha chiesto
+
+30:00.800 --> 30:01.620
+questa domanda
+
+30:01.620 --> 30:05.040
+come sono io
+
+30:05.040 --> 30:05.500
+siamo
+
+30:05.500 --> 30:06.600
+chi è?
+
+30:07.040 --> 30:08.300
+io non ti vedo
+
+30:08.300 --> 30:09.900
+Alessandro
+
+30:09.900 --> 30:10.980
+Alessandro
+
+30:10.980 --> 30:11.460
+Alessandro
+
+30:11.460 --> 30:12.920
+quindi a parte
+
+30:12.920 --> 30:13.260
+la parte
+
+30:13.260 --> 30:13.620
+di
+
+30:13.620 --> 30:14.560
+considerando
+
+30:14.560 --> 30:14.840
+diciamo
+
+30:14.840 --> 30:15.360
+scondendo
+
+30:15.360 --> 30:16.120
+le licitation
+
+30:16.120 --> 30:16.440
+però
+
+30:16.440 --> 30:17.440
+tutta l'altra parte
+
+30:17.440 --> 30:18.120
+è una parte
+
+30:18.120 --> 30:20.060
+che è valida
+
+30:20.060 --> 30:20.880
+anche per gli altri
+
+30:20.880 --> 30:21.480
+domini
+
+30:21.480 --> 30:22.840
+che consideriamo
+
+30:22.840 --> 30:23.640
+sempre il ciclo
+
+30:23.640 --> 30:24.860
+avvi
+
+30:24.860 --> 30:26.040
+ma in ogni caso
+
+30:26.040 --> 30:26.800
+considerando
+
+30:26.800 --> 30:27.340
+sempre
+
+30:27.340 --> 30:28.040
+tutta la parte
+
+30:28.040 --> 30:28.760
+di gestione
+
+30:28.760 --> 30:29.280
+dei requisiti
+
+30:29.280 --> 30:29.980
+in generale
+
+30:29.980 --> 30:31.160
+tutti i punti
+
+30:31.160 --> 30:32.800
+sono validi
+
+30:32.800 --> 30:34.660
+quindi c'è una parte
+
+30:34.660 --> 30:35.580
+di elicitation
+
+30:35.580 --> 30:36.240
+una parte
+
+30:36.240 --> 30:37.460
+di documentazione
+
+30:37.460 --> 30:38.620
+di tracciabilità
+
+30:38.620 --> 30:39.680
+dei requisiti
+
+30:39.680 --> 30:41.980
+di prioritizzazione
+
+30:41.980 --> 30:44.440
+di validazione
+
+30:44.440 --> 30:45.060
+del requisito
+
+30:45.060 --> 30:46.240
+e di mantenimento
+
+30:46.240 --> 30:48.740
+quindi
+
+30:48.740 --> 30:49.140
+a parte
+
+30:49.140 --> 30:50.540
+la bella
+
+30:50.540 --> 30:51.360
+diciamo
+
+30:51.360 --> 30:52.180
+immagine
+
+30:52.180 --> 30:52.560
+che mi ha
+
+30:52.560 --> 30:53.100
+preparato
+
+30:53.100 --> 30:54.440
+GPT
+
+30:54.440 --> 30:54.780
+però
+
+30:54.780 --> 30:55.320
+diciamo
+
+30:55.320 --> 30:55.980
+per il resto
+
+30:55.980 --> 30:56.880
+diciamo
+
+30:56.880 --> 30:57.660
+questo è un elenco
+
+30:57.660 --> 30:59.200
+dei passi
+
+30:59.200 --> 31:00.920
+da dover affrontare
+
+31:00.920 --> 31:02.880
+Mario
+
+31:02.880 --> 31:03.500
+perdonami
+
+31:03.500 --> 31:04.620
+che cosa si intende
+
+31:04.620 --> 31:06.520
+qualcosa in più
+
+31:06.520 --> 31:08.080
+su cosa si intende
+
+31:08.080 --> 31:09.380
+sulla parte
+
+31:09.380 --> 31:09.680
+di
+
+31:09.680 --> 31:10.600
+maintain
+
+31:10.600 --> 31:11.940
+che ho una mia idea
+
+31:11.940 --> 31:12.520
+ma vorrei
+
+31:12.520 --> 31:13.520
+che mi dicessi
+
+31:13.520 --> 31:14.160
+tu
+
+31:14.160 --> 31:15.980
+dalla tua esperienza
+
+31:15.980 --> 31:16.340
+diciamo
+
+31:16.340 --> 31:17.460
+sei sempre Pasquale
+
+31:17.460 --> 31:17.680
+è vero
+
+31:17.680 --> 31:17.960
+sì
+
+31:17.960 --> 31:18.580
+perdonami
+
+31:18.580 --> 31:19.120
+che un po'
+
+31:19.120 --> 31:19.900
+le scadere
+
+31:19.900 --> 31:20.780
+senti
+
+31:20.780 --> 31:23.100
+maintain
+
+31:23.100 --> 31:23.700
+secondo me
+
+31:23.700 --> 31:24.580
+io ce l'ho
+
+31:24.580 --> 31:25.120
+aspetta
+
+31:25.120 --> 31:25.520
+fammi vedere
+
+31:25.520 --> 31:26.260
+validation
+
+31:26.260 --> 31:27.200
+validation
+
+31:27.200 --> 31:28.020
+sì
+
+31:28.020 --> 31:28.660
+vabbè
+
+31:28.660 --> 31:29.840
+non l'ho approfondita
+
+31:29.840 --> 31:30.120
+però
+
+31:30.120 --> 31:30.840
+allora
+
+31:30.840 --> 31:31.560
+maintain
+
+31:31.560 --> 31:33.140
+è sempre
+
+31:33.140 --> 31:33.780
+relativa
+
+31:33.780 --> 31:34.480
+alla parte
+
+31:34.480 --> 31:36.720
+del change management
+
+31:36.720 --> 31:40.280
+vale a dire
+
+31:40.280 --> 31:40.600
+che
+
+31:40.600 --> 31:41.100
+una volta
+
+31:41.100 --> 31:41.640
+che tu hai
+
+31:41.640 --> 31:42.440
+definito
+
+31:42.440 --> 31:45.300
+il tuo requisito
+
+31:45.300 --> 31:46.120
+devi essere
+
+31:46.120 --> 31:46.880
+anche in grado
+
+31:46.880 --> 31:47.300
+di
+
+31:47.300 --> 31:49.260
+di tenerlo vivo
+
+31:49.260 --> 31:51.380
+nel senso
+
+31:51.380 --> 31:51.680
+che
+
+31:51.680 --> 31:53.060
+in qualsiasi tipo
+
+31:53.060 --> 31:53.760
+di richiesta
+
+31:53.760 --> 31:54.700
+di cambiamento
+
+31:54.700 --> 31:55.360
+o
+
+31:55.360 --> 31:56.560
+di cambiamento
+
+31:56.560 --> 31:57.020
+interno
+
+31:57.020 --> 31:57.440
+cambiamento
+
+31:57.440 --> 31:58.140
+del cliente
+
+31:58.140 --> 31:59.500
+tu hai la possibilità
+
+31:59.500 --> 32:00.920
+di raggiungere
+
+32:00.920 --> 32:01.700
+quel requisito
+
+32:01.700 --> 32:02.140
+in maniera
+
+32:02.140 --> 32:03.080
+veloce
+
+32:03.080 --> 32:03.980
+e di poterlo
+
+32:03.980 --> 32:05.920
+o mantenere
+
+32:05.920 --> 32:06.860
+nel senso
+
+32:06.860 --> 32:08.080
+di
+
+32:08.080 --> 32:08.880
+di
+
+32:08.880 --> 32:10.260
+di
+
+32:10.260 --> 32:11.100
+di poterlo
+
+32:11.100 --> 32:12.340
+visualizzare
+
+32:12.340 --> 32:12.760
+di poterlo
+
+32:12.760 --> 32:13.240
+raggiungere
+
+32:13.240 --> 32:13.800
+in qualsiasi modo
+
+32:13.800 --> 32:14.040
+oppure
+
+32:14.040 --> 32:14.640
+di poterlo
+
+32:14.640 --> 32:15.380
+cambiare
+
+32:15.380 --> 32:16.100
+in maniera
+
+32:16.100 --> 32:16.460
+molto
+
+32:16.460 --> 32:17.160
+rapida
+
+32:17.160 --> 32:18.900
+in dolore
+
+32:18.900 --> 32:20.380
+ok
+
+32:20.380 --> 32:21.940
+questo è il concetto
+
+32:21.940 --> 32:22.500
+di maintain
+
+32:22.500 --> 32:23.500
+chiaro
+
+32:23.500 --> 32:25.500
+chiaro
+
+32:25.500 --> 32:26.540
+avevi
+
+32:26.540 --> 32:27.260
+diciamo
+
+32:27.260 --> 32:28.960
+sono
+
+32:28.960 --> 32:30.200
+sono aperto
+
+32:30.200 --> 32:30.820
+alle tue
+
+32:30.820 --> 32:32.160
+alle tue
+
+32:32.160 --> 32:32.640
+ai tuoi dubbi
+
+32:32.640 --> 32:32.940
+nel senso
+
+32:32.940 --> 32:34.140
+se il tuo concetto
+
+32:34.140 --> 32:34.700
+la tua idea
+
+32:34.700 --> 32:36.180
+era differente
+
+32:36.180 --> 32:36.880
+ben venga
+
+32:36.880 --> 32:37.440
+la possiamo
+
+32:37.440 --> 32:38.540
+diciamo
+
+32:38.540 --> 32:39.000
+discutere
+
+32:39.000 --> 32:39.520
+assolutamente
+
+32:39.520 --> 32:39.900
+anzi
+
+32:39.900 --> 32:40.360
+io diciamo
+
+32:40.360 --> 32:40.920
+mi ero messo
+
+32:40.920 --> 32:41.300
+in un
+
+32:41.300 --> 32:43.000
+ero mentalizzato
+
+32:43.000 --> 32:43.400
+in modo
+
+32:43.400 --> 32:44.840
+forse errato
+
+32:44.840 --> 32:45.220
+nel senso
+
+32:45.220 --> 32:45.700
+io pensavo
+
+32:45.700 --> 32:46.320
+a due cose
+
+32:46.320 --> 32:46.880
+la prima
+
+32:46.880 --> 32:47.700
+mi veniva in mente
+
+32:47.700 --> 32:48.040
+una cosa
+
+32:48.040 --> 32:48.700
+che leggevo
+
+32:48.700 --> 32:50.320
+su alcune normative
+
+32:50.320 --> 32:51.580
+della cyber security
+
+32:51.580 --> 32:52.180
+per cui
+
+32:52.180 --> 32:52.920
+il cliente
+
+32:52.920 --> 32:53.940
+resta
+
+32:53.940 --> 32:55.220
+chi ha sviluppato
+
+32:55.220 --> 32:55.860
+il software
+
+32:55.860 --> 32:56.540
+eccetera
+
+32:56.540 --> 32:57.140
+il sistema
+
+32:57.140 --> 32:58.360
+resta responsabile
+
+32:58.360 --> 32:59.520
+per x anni
+
+32:59.520 --> 33:00.940
+della gestione
+
+33:00.940 --> 33:01.840
+dei problemi
+
+33:01.840 --> 33:02.720
+associati
+
+33:02.720 --> 33:03.100
+diciamo
+
+33:03.100 --> 33:04.160
+a tutto quanto
+
+33:04.160 --> 33:05.380
+concerne la cyber security
+
+33:05.380 --> 33:05.720
+quindi
+
+33:05.720 --> 33:06.880
+pensavo lì
+
+33:06.880 --> 33:07.720
+maintenance
+
+33:07.720 --> 33:08.340
+nel senso
+
+33:08.340 --> 33:08.960
+di dire ok
+
+33:08.960 --> 33:10.120
+un po' dire
+
+33:10.120 --> 33:10.940
+come dire
+
+33:10.940 --> 33:11.520
+accountability
+
+33:11.520 --> 33:12.480
+per i requisiti
+
+33:12.480 --> 33:13.180
+che vengono
+
+33:13.180 --> 33:14.240
+scritti
+
+33:14.240 --> 33:15.060
+per x anni
+
+33:15.060 --> 33:15.740
+sul sistema
+
+33:15.740 --> 33:16.540
+su cui
+
+33:16.540 --> 33:17.700
+verranno implementati
+
+33:17.700 --> 33:18.200
+ma era
+
+33:18.200 --> 33:18.720
+diciamo
+
+33:18.720 --> 33:20.480
+era un contesto
+
+33:20.480 --> 33:21.340
+allora
+
+33:21.340 --> 33:22.160
+diciamo che
+
+33:22.160 --> 33:22.660
+possiamo
+
+33:22.660 --> 33:23.380
+possiamo un po'
+
+33:24.220 --> 33:24.700
+ridurlo
+
+33:24.700 --> 33:25.660
+e renderlo più semplice
+
+33:25.660 --> 33:26.280
+questo concetto
+
+33:26.280 --> 33:27.440
+che è pur valido
+
+33:27.440 --> 33:28.380
+nel senso
+
+33:28.380 --> 33:29.120
+il mantenimento
+
+33:29.120 --> 33:30.220
+è chiaro che
+
+33:30.220 --> 33:31.580
+nella definizione
+
+33:31.580 --> 33:32.300
+una volta che tu
+
+33:32.300 --> 33:32.960
+hai definito
+
+33:32.960 --> 33:33.980
+quel tipo di requisito
+
+33:33.980 --> 33:35.060
+sei tu responsabile
+
+33:35.060 --> 33:35.920
+poi da qui
+
+33:35.920 --> 33:36.480
+a totti anni
+
+33:36.480 --> 33:38.140
+base al tipo
+
+33:38.140 --> 33:38.660
+di contratto
+
+33:38.660 --> 33:39.420
+che viene stabilito
+
+33:39.420 --> 33:40.500
+tra i clienti
+
+33:40.500 --> 33:41.340
+e i fornitori
+
+33:41.340 --> 33:42.860
+di quel requisito
+
+33:42.860 --> 33:43.420
+quindi tu
+
+33:43.420 --> 33:44.400
+per anni
+
+33:44.400 --> 33:45.000
+nel caso
+
+33:45.000 --> 33:45.580
+ci dovessero essere
+
+33:45.580 --> 33:46.200
+problemi
+
+33:46.200 --> 33:47.000
+devi essere
+
+33:47.000 --> 33:48.080
+tu responsabile
+
+33:48.080 --> 33:49.580
+di quel requisito
+
+33:49.580 --> 33:49.900
+e quindi
+
+33:49.900 --> 33:50.800
+devi essere in grado
+
+33:50.800 --> 33:52.820
+di poterlo gestire
+
+33:52.820 --> 33:53.540
+ecco
+
+33:53.540 --> 33:54.840
+ritorna sempre
+
+33:54.840 --> 33:55.420
+il discorso
+
+33:55.420 --> 33:56.320
+della gestione
+
+33:56.320 --> 33:58.020
+del requisito
+
+33:58.020 --> 33:59.060
+in caso
+
+33:59.060 --> 34:00.120
+di problemi
+
+34:00.120 --> 34:01.300
+o cambiamenti
+
+34:01.300 --> 34:01.900
+sì sì sì
+
+34:01.900 --> 34:03.080
+chiarissimo
+
+34:03.080 --> 34:04.700
+ok
+
+34:04.700 --> 34:05.120
+quindi
+
+34:05.120 --> 34:05.620
+diciamo
+
+34:05.620 --> 34:06.460
+è un discorso
+
+34:06.460 --> 34:08.440
+base
+
+34:08.440 --> 34:09.160
+che però
+
+34:09.160 --> 34:09.840
+ti permette
+
+34:09.840 --> 34:10.520
+diciamo
+
+34:10.520 --> 34:12.020
+seguendo
+
+34:12.020 --> 34:15.040
+un documento
+
+34:15.040 --> 34:15.840
+delle metodologie
+
+34:15.840 --> 34:16.440
+delle strategie
+
+34:16.440 --> 34:16.960
+ti permette
+
+34:16.960 --> 34:18.560
+di mantenerlo
+
+34:18.560 --> 34:20.020
+di tenerlo in vita
+
+34:20.020 --> 34:21.420
+in maniera
+
+34:21.420 --> 34:23.220
+non so
+
+34:23.220 --> 34:23.680
+non so
+
+34:23.680 --> 34:24.100
+forse
+
+34:24.100 --> 34:24.420
+non lo so
+
+34:24.420 --> 34:25.680
+se mi avete
+
+34:25.680 --> 34:27.740
+capito tutti quasi
+
+34:27.740 --> 34:27.980
+diciamo
+
+34:27.980 --> 34:28.780
+il mantenimento
+
+34:28.780 --> 34:30.540
+viene
+
+34:30.540 --> 34:31.440
+diciamo
+
+34:31.440 --> 34:34.000
+è tanto più
+
+34:34.000 --> 34:34.660
+facile
+
+34:34.660 --> 34:35.480
+mantenere
+
+34:35.480 --> 34:36.600
+il requisito
+
+34:36.600 --> 34:37.120
+tanto più
+
+34:37.120 --> 34:39.200
+quando noi
+
+34:39.200 --> 34:40.260
+adottiamo
+
+34:40.260 --> 34:42.160
+tutte queste
+
+34:42.160 --> 34:43.480
+metodologie
+
+34:43.480 --> 34:44.580
+cioè se abbiamo
+
+34:44.580 --> 34:44.940
+fatto
+
+34:44.940 --> 34:45.500
+un'ottima
+
+34:45.500 --> 34:46.300
+tracciabilità
+
+34:46.300 --> 34:46.840
+se lo abbiamo
+
+34:46.840 --> 34:48.100
+documentato
+
+34:48.100 --> 34:48.480
+in maniera
+
+34:48.480 --> 34:49.300
+corretta
+
+34:49.300 --> 34:50.560
+se lo abbiamo
+
+34:50.560 --> 34:51.340
+prioritizzato
+
+34:51.340 --> 34:51.640
+in maniera
+
+34:51.640 --> 34:52.120
+corretta
+
+34:52.120 --> 34:52.960
+il mantenimento
+
+34:52.960 --> 34:53.300
+viene
+
+34:53.300 --> 34:53.960
+e se lo abbiamo
+
+34:53.960 --> 34:54.400
+validato
+
+34:54.400 --> 34:54.680
+in maniera
+
+34:54.680 --> 34:55.060
+corretta
+
+34:55.060 --> 34:55.700
+il mantenimento
+
+34:55.700 --> 34:56.060
+viene
+
+34:56.060 --> 34:57.900
+facile
+
+34:57.900 --> 34:59.020
+anche
+
+34:59.020 --> 34:59.980
+diciamo
+
+34:59.980 --> 35:00.660
+un mantenimento
+
+35:00.660 --> 35:01.780
+semplice
+
+35:01.780 --> 35:02.260
+così come
+
+35:02.260 --> 35:03.080
+un cambiamento
+
+35:03.080 --> 35:03.680
+del requisito
+
+35:03.680 --> 35:04.200
+stesso
+
+35:04.200 --> 35:11.100
+ok
+
+35:11.100 --> 35:11.860
+chiaro
+
+35:11.860 --> 35:12.320
+ok
+
+35:12.320 --> 35:15.540
+ok
+
+35:15.540 --> 35:16.260
+quindi la parte
+
+35:16.260 --> 35:17.180
+di elicitation
+
+35:17.180 --> 35:18.140
+la prima parte
+
+35:18.140 --> 35:18.940
+è una parte
+
+35:18.940 --> 35:20.820
+davvero fondamentale
+
+35:20.820 --> 35:21.200
+diciamo
+
+35:21.200 --> 35:21.760
+io la reputo
+
+35:21.760 --> 35:23.700
+la più migliore
+
+35:23.700 --> 35:24.320
+come direbbe
+
+35:24.320 --> 35:24.560
+Miano
+
+35:24.560 --> 35:25.740
+però
+
+35:25.740 --> 35:27.940
+diciamo
+
+35:27.940 --> 35:28.860
+è veramente
+
+35:28.860 --> 35:31.560
+è fondamentale
+
+35:31.560 --> 35:31.880
+perché
+
+35:31.880 --> 35:32.520
+la parte
+
+35:32.520 --> 35:33.080
+di elicitation
+
+35:33.080 --> 35:34.720
+consiste
+
+35:34.720 --> 35:35.720
+nella raccolta
+
+35:35.720 --> 35:36.220
+di tutti
+
+35:36.220 --> 35:37.360
+i documenti
+
+35:37.360 --> 35:37.820
+che vengono
+
+35:37.820 --> 35:38.220
+forniti
+
+35:38.220 --> 35:39.360
+dal cliente
+
+35:39.360 --> 35:39.940
+quindi
+
+35:39.940 --> 35:40.660
+questi documenti
+
+35:40.660 --> 35:41.660
+vengono raccolti
+
+35:41.660 --> 35:42.980
+e devono
+
+35:42.980 --> 35:43.500
+essere
+
+35:43.500 --> 35:44.840
+diciamo
+
+35:44.840 --> 35:46.000
+analizzati
+
+35:46.000 --> 35:47.580
+e
+
+35:47.580 --> 35:49.340
+consolidati
+
+35:49.340 --> 35:50.340
+ma per poter
+
+35:50.340 --> 35:50.900
+fare queste
+
+35:50.900 --> 35:51.460
+due cose
+
+35:51.460 --> 35:52.340
+è necessario
+
+35:52.340 --> 35:54.220
+che ci siano
+
+35:54.220 --> 35:55.520
+delle
+
+35:55.520 --> 35:56.240
+chiaramente
+
+35:56.240 --> 35:57.500
+delle expertise
+
+35:57.500 --> 35:58.200
+sicuramente
+
+35:58.200 --> 35:59.040
+ma che ci siano
+
+35:59.040 --> 36:00.420
+almeno
+
+36:00.420 --> 36:01.640
+una di questi tre
+
+36:01.640 --> 36:02.460
+che ci siano
+
+36:02.460 --> 36:03.320
+delle interviste
+
+36:03.320 --> 36:03.820
+ci siano
+
+36:03.820 --> 36:06.200
+dei questionari
+
+36:06.200 --> 36:07.360
+se le vogliamo
+
+36:07.360 --> 36:07.840
+tradurre
+
+36:07.840 --> 36:08.840
+ma che ci siano
+
+36:08.840 --> 36:10.640
+delle vere
+
+36:10.640 --> 36:10.900
+e proprie
+
+36:10.900 --> 36:11.920
+discussioni
+
+36:11.920 --> 36:12.480
+come dicevo
+
+36:12.480 --> 36:12.700
+prima
+
+36:12.700 --> 36:13.040
+delle vere
+
+36:13.040 --> 36:13.260
+e proprie
+
+36:13.260 --> 36:13.980
+discussioni
+
+36:13.980 --> 36:14.320
+molto
+
+36:14.320 --> 36:18.080
+dirette
+
+36:18.080 --> 36:19.340
+per poter
+
+36:19.340 --> 36:20.220
+consolidare
+
+36:20.220 --> 36:20.920
+per poter
+
+36:20.920 --> 36:22.120
+fissare
+
+36:22.120 --> 36:23.120
+un determinato
+
+36:23.120 --> 36:23.940
+concetto
+
+36:23.940 --> 36:25.820
+queste interviste
+
+36:25.820 --> 36:26.220
+intendo
+
+36:26.220 --> 36:26.780
+interviste
+
+36:26.780 --> 36:27.240
+che possono
+
+36:27.240 --> 36:27.860
+essere
+
+36:27.860 --> 36:30.280
+verso il cliente
+
+36:30.280 --> 36:31.820
+o all'interno
+
+36:31.820 --> 36:32.240
+della stessa
+
+36:32.240 --> 36:32.940
+società
+
+36:32.940 --> 36:33.780
+con gli stessi
+
+36:33.780 --> 36:34.500
+colleghi
+
+36:34.500 --> 36:35.720
+cercare di capire
+
+36:35.720 --> 36:37.380
+se quel requisito
+
+36:37.380 --> 36:38.780
+è veramente
+
+36:38.780 --> 36:39.520
+un requisito
+
+36:39.520 --> 36:40.380
+veramente il cliente
+
+36:40.380 --> 36:41.260
+ci sta richiedendo
+
+36:41.260 --> 36:41.760
+un qualcosa
+
+36:41.760 --> 36:42.780
+che è fattibile
+
+36:42.780 --> 36:43.960
+o non è fattibile
+
+36:43.960 --> 36:44.700
+ci sta chiedendo
+
+36:44.700 --> 36:45.220
+delle cose
+
+36:45.220 --> 36:47.660
+che non stanno
+
+36:47.660 --> 36:48.020
+né in cielo
+
+36:48.020 --> 36:48.460
+né in terra
+
+36:48.460 --> 36:48.760
+quindi
+
+36:48.760 --> 36:49.660
+è bene
+
+36:49.660 --> 36:50.640
+affrontare
+
+36:50.640 --> 36:51.260
+questo tipo
+
+36:51.260 --> 36:53.080
+di attività
+
+36:53.080 --> 36:54.480
+per poter
+
+36:54.480 --> 36:55.800
+consolidare
+
+36:55.800 --> 36:56.960
+i documenti
+
+36:56.960 --> 36:57.860
+perché
+
+36:57.860 --> 36:58.580
+una volta
+
+36:58.580 --> 36:59.240
+che noi
+
+36:59.240 --> 36:59.840
+abbiamo
+
+36:59.840 --> 37:01.100
+fissato
+
+37:01.100 --> 37:02.720
+tutti i punti
+
+37:02.720 --> 37:04.420
+tutti gli altri
+
+37:04.420 --> 37:04.920
+step
+
+37:04.920 --> 37:06.180
+sono
+
+37:06.180 --> 37:07.340
+facilitati
+
+37:07.340 --> 37:09.240
+abbiamo la possibilità
+
+37:09.240 --> 37:09.880
+di documentare
+
+37:09.880 --> 37:10.560
+il requisito
+
+37:10.560 --> 37:11.500
+abbiamo la possibilità
+
+37:11.500 --> 37:13.220
+di definire
+
+37:13.220 --> 37:14.680
+un test case
+
+37:14.680 --> 37:15.220
+in maniera
+
+37:15.220 --> 37:16.420
+semplice
+
+37:16.420 --> 37:17.940
+tutti i processi
+
+37:17.940 --> 37:19.160
+tutti gli step
+
+37:19.160 --> 37:19.660
+successivi
+
+37:19.660 --> 37:20.580
+sono facilitati
+
+37:20.580 --> 37:21.760
+se riusciamo
+
+37:21.760 --> 37:22.760
+ad ottenere
+
+37:22.760 --> 37:23.860
+a valle
+
+37:23.860 --> 37:25.220
+di queste interviste
+
+37:25.220 --> 37:26.380
+di questi workshop
+
+37:26.380 --> 37:27.880
+di queste discussioni
+
+37:27.880 --> 37:28.700
+alla macchinetta
+
+37:28.700 --> 37:29.240
+del caffè
+
+37:29.240 --> 37:29.880
+o quant'altro
+
+37:29.880 --> 37:30.680
+che riusciamo
+
+37:30.680 --> 37:31.380
+ad ottenere
+
+37:31.380 --> 37:32.180
+un
+
+37:32.180 --> 37:33.740
+diciamo
+
+37:33.740 --> 37:34.220
+una
+
+37:34.220 --> 37:35.660
+a consolidare
+
+37:35.660 --> 37:36.780
+il requisito
+
+37:36.780 --> 37:37.500
+se vogliamo parlare
+
+37:37.500 --> 37:38.620
+di un singolo requisito
+
+37:38.620 --> 37:40.860
+quindi la prima parte
+
+37:40.860 --> 37:41.340
+è veramente
+
+37:41.340 --> 37:42.320
+fondamentale
+
+37:42.320 --> 37:44.180
+ok
+
+37:44.180 --> 37:45.020
+quindi immagino
+
+37:45.020 --> 37:45.660
+questo anche
+
+37:45.660 --> 37:46.540
+per eventuali
+
+37:46.540 --> 37:47.080
+modifiche
+
+37:47.080 --> 37:47.860
+sul progetto
+
+37:47.860 --> 37:48.320
+quindi viene
+
+37:48.320 --> 37:48.760
+faccio
+
+37:48.760 --> 37:50.720
+questi requisiti
+
+37:50.720 --> 37:51.200
+vengono
+
+37:51.200 --> 37:52.020
+mostrati
+
+37:52.020 --> 37:52.600
+quindi al
+
+37:52.600 --> 37:53.820
+cliente
+
+37:53.820 --> 37:54.760
+nella fase
+
+37:54.760 --> 37:55.340
+iniziale
+
+37:55.340 --> 37:56.160
+quindi questi
+
+37:56.160 --> 37:56.920
+primi requisiti
+
+37:56.920 --> 37:57.580
+di sistema
+
+37:57.580 --> 37:58.080
+nella fase
+
+37:58.080 --> 37:58.820
+iniziale
+
+37:58.820 --> 37:59.500
+così come
+
+37:59.500 --> 38:00.080
+nella fase
+
+38:00.080 --> 38:01.060
+di richieste
+
+38:01.060 --> 38:01.920
+di cambiamenti
+
+38:01.920 --> 38:02.460
+c'è sempre
+
+38:02.460 --> 38:02.940
+una fase
+
+38:02.940 --> 38:04.020
+di elicitation
+
+38:04.020 --> 38:05.780
+del requisito
+
+38:05.780 --> 38:06.500
+cioè
+
+38:06.500 --> 38:07.020
+supponi che
+
+38:07.020 --> 38:08.020
+il cliente
+
+38:08.020 --> 38:08.420
+ti invia
+
+38:08.420 --> 38:09.300
+un requisito
+
+38:09.300 --> 38:09.740
+solo
+
+38:09.740 --> 38:12.780
+inizia la fase
+
+38:12.780 --> 38:13.720
+di elicitation
+
+38:13.720 --> 38:15.800
+quindi tu
+
+38:15.800 --> 38:16.620
+consolidi
+
+38:16.620 --> 38:17.640
+quel requisito
+
+38:17.640 --> 38:18.400
+devi
+
+38:18.400 --> 38:19.100
+fartelo
+
+38:19.100 --> 38:19.480
+tuo
+
+38:19.480 --> 38:20.060
+devi
+
+38:20.060 --> 38:21.020
+essere in grado
+
+38:21.020 --> 38:22.220
+di averlo
+
+38:22.220 --> 38:24.180
+di averlo
+
+38:24.180 --> 38:24.660
+capito
+
+38:24.660 --> 38:25.340
+e di poter
+
+38:25.340 --> 38:26.040
+proseguire
+
+38:26.040 --> 38:27.360
+una volta
+
+38:27.360 --> 38:28.140
+che tu
+
+38:28.140 --> 38:28.480
+lo hai
+
+38:28.480 --> 38:29.320
+capito
+
+38:29.320 --> 38:29.880
+magari lo
+
+38:29.880 --> 38:30.360
+condividi
+
+38:30.360 --> 38:30.840
+anche con il
+
+38:30.840 --> 38:31.340
+cliente
+
+38:31.340 --> 38:31.780
+condividi
+
+38:31.780 --> 38:32.440
+con il cliente
+
+38:32.440 --> 38:32.680
+anche
+
+38:32.680 --> 38:33.520
+il tuo
+
+38:33.520 --> 38:34.340
+il tuo
+
+38:34.340 --> 38:35.160
+understanding
+
+38:35.160 --> 38:35.820
+quello che tu
+
+38:35.820 --> 38:36.480
+hai capito
+
+38:36.480 --> 38:37.640
+una volta
+
+38:37.640 --> 38:38.200
+che avete
+
+38:38.200 --> 38:39.060
+lo stesso
+
+38:39.060 --> 38:39.800
+understanding
+
+38:39.800 --> 38:40.860
+puoi procedere
+
+38:40.860 --> 38:41.140
+con la
+
+38:41.140 --> 38:41.380
+parte
+
+38:41.380 --> 38:41.660
+con la
+
+38:41.660 --> 38:42.000
+seconda
+
+38:42.000 --> 38:42.360
+parte
+
+38:42.360 --> 38:44.060
+ok
+
+38:44.060 --> 38:44.720
+perfetto
+
+38:44.720 --> 38:45.480
+ok
+
+38:45.480 --> 38:46.140
+sempre
+
+38:46.140 --> 38:46.500
+questo
+
+38:46.500 --> 38:46.880
+in ogni
+
+38:46.880 --> 38:48.240
+in ogni
+
+38:48.240 --> 38:48.720
+diciamo
+
+38:48.720 --> 38:50.220
+in ogni
+
+38:50.220 --> 38:51.200
+caso in cui
+
+38:51.200 --> 38:52.220
+arriva un nuovo
+
+38:52.220 --> 38:52.720
+requisito
+
+38:52.720 --> 38:53.280
+o un cambio
+
+38:53.280 --> 38:53.960
+di requisito
+
+38:53.960 --> 38:54.740
+si attiva
+
+38:54.740 --> 38:55.120
+la parte
+
+38:55.120 --> 38:55.320
+di
+
+38:55.320 --> 38:55.980
+elicitation
+
+38:55.980 --> 39:00.900
+poi
+
+39:00.900 --> 39:01.480
+questa parte
+
+39:01.480 --> 39:02.060
+di elicitation
+
+39:02.060 --> 39:03.120
+nel documento
+
+39:03.120 --> 39:03.420
+poi
+
+39:03.420 --> 39:04.240
+che stiamo
+
+39:04.240 --> 39:04.640
+facendo
+
+39:04.640 --> 39:05.160
+è
+
+39:05.160 --> 39:06.120
+espressa
+
+39:06.120 --> 39:06.580
+in vari
+
+39:06.580 --> 39:07.080
+step
+
+39:07.080 --> 39:07.780
+quindi c'è
+
+39:07.780 --> 39:08.120
+la parte
+
+39:08.120 --> 39:08.340
+in cui
+
+39:08.340 --> 39:08.780
+il cliente
+
+39:08.780 --> 39:09.100
+riceve
+
+39:09.100 --> 39:09.800
+che noi
+
+39:09.800 --> 39:10.200
+riceviamo
+
+39:10.200 --> 39:10.920
+il requisito
+
+39:10.920 --> 39:11.680
+noi come
+
+39:11.680 --> 39:12.460
+fornitori
+
+39:12.460 --> 39:12.860
+ecco come
+
+39:12.860 --> 39:13.780
+responsabili
+
+39:13.780 --> 39:14.260
+del requisito
+
+39:14.260 --> 39:14.620
+ad esempio
+
+39:14.620 --> 39:15.420
+riceviamo
+
+39:15.420 --> 39:17.100
+il requisito
+
+39:17.100 --> 39:17.520
+lo dobbiamo
+
+39:17.520 --> 39:18.340
+analizzare
+
+39:18.340 --> 39:20.020
+internamente
+
+39:20.020 --> 39:20.820
+dobbiamo
+
+39:20.820 --> 39:21.460
+condividere
+
+39:21.460 --> 39:22.120
+come ti dicevo
+
+39:22.120 --> 39:22.560
+il nostro
+
+39:22.560 --> 39:24.180
+quello che abbiamo
+
+39:24.180 --> 39:24.760
+capito
+
+39:24.760 --> 39:26.220
+verso il cliente
+
+39:26.220 --> 39:26.660
+il cliente
+
+39:26.660 --> 39:27.920
+deve accettare
+
+39:27.920 --> 39:28.560
+o deve
+
+39:28.560 --> 39:29.620
+confermare
+
+39:29.620 --> 39:30.200
+quello che tu hai
+
+39:30.200 --> 39:30.480
+capito
+
+39:30.480 --> 39:30.780
+quindi
+
+39:30.780 --> 39:32.140
+ti rispedisce
+
+39:32.140 --> 39:33.080
+un feedback
+
+39:33.080 --> 39:33.820
+un successivo
+
+39:33.820 --> 39:34.320
+feedback
+
+39:34.320 --> 39:34.900
+quindi ci sono
+
+39:34.900 --> 39:35.640
+tutte queste fasi
+
+39:35.640 --> 39:36.240
+che verranno
+
+39:36.240 --> 39:37.820
+spiegate
+
+39:37.820 --> 39:38.380
+descritte
+
+39:38.380 --> 39:39.860
+nel documento
+
+39:39.860 --> 39:40.400
+ed è questo
+
+39:40.400 --> 39:40.700
+proprio
+
+39:40.700 --> 39:41.540
+il required
+
+39:41.540 --> 39:42.380
+management plan
+
+39:42.380 --> 39:43.260
+cioè descrivere
+
+39:43.260 --> 39:43.760
+passo
+
+39:43.760 --> 39:44.840
+dopo passo
+
+39:44.840 --> 39:45.500
+cosa
+
+39:45.500 --> 39:47.080
+bisogna fare
+
+39:47.080 --> 39:47.820
+per poter
+
+39:47.820 --> 39:48.280
+completare
+
+39:48.280 --> 39:48.640
+ad esempio
+
+39:48.640 --> 39:49.020
+la fase
+
+39:49.020 --> 39:50.260
+di elicitation
+
+39:50.260 --> 39:50.580
+ok
+
+39:50.580 --> 39:51.500
+quindi al cliente
+
+39:51.500 --> 39:51.800
+vengono
+
+39:51.800 --> 39:52.060
+fatti
+
+39:52.060 --> 39:52.260
+vedere
+
+39:52.260 --> 39:53.120
+i requisiti
+
+39:53.120 --> 39:53.380
+quindi
+
+39:53.380 --> 39:54.020
+la prima fase
+
+39:54.020 --> 39:54.580
+di requisiti
+
+39:54.580 --> 39:55.180
+scritta
+
+39:55.180 --> 39:56.600
+già sono
+
+39:56.600 --> 39:57.120
+sotto forma
+
+39:57.120 --> 39:57.780
+di requisiti
+
+39:57.780 --> 39:58.780
+mi chiedevo
+
+39:58.780 --> 39:59.960
+allora
+
+39:59.960 --> 40:01.400
+il documento
+
+40:01.400 --> 40:02.240
+che fornisce
+
+40:02.240 --> 40:03.780
+il cliente
+
+40:03.780 --> 40:04.860
+è
+
+40:04.860 --> 40:06.200
+potrebbe
+
+40:06.200 --> 40:06.420
+avere
+
+40:06.420 --> 40:06.560
+una
+
+40:06.560 --> 40:08.020
+il più delle volte
+
+40:08.020 --> 40:08.720
+devi essere
+
+40:08.720 --> 40:09.480
+fortunata
+
+40:09.480 --> 40:11.000
+il cliente
+
+40:11.000 --> 40:11.420
+fornisce
+
+40:11.420 --> 40:11.780
+già
+
+40:11.780 --> 40:12.380
+una serie
+
+40:12.380 --> 40:13.300
+di requisiti
+
+40:13.300 --> 40:13.700
+già
+
+40:13.700 --> 40:14.560
+diciamo
+
+40:14.560 --> 40:16.420
+categorizzati
+
+40:16.420 --> 40:17.640
+quindi
+
+40:17.640 --> 40:18.420
+tu semplicemente
+
+40:18.420 --> 40:19.640
+leggi
+
+40:19.640 --> 40:20.140
+requisito
+
+40:20.140 --> 40:20.780
+per requisito
+
+40:20.780 --> 40:21.280
+e quindi
+
+40:21.280 --> 40:21.920
+hai già
+
+40:21.920 --> 40:22.440
+il requisito
+
+40:22.440 --> 40:22.700
+in mano
+
+40:22.700 --> 40:23.280
+altre volte
+
+40:23.280 --> 40:24.140
+ti arriva
+
+40:24.140 --> 40:24.980
+un documento
+
+40:24.980 --> 40:25.760
+un papiro
+
+40:25.760 --> 40:26.600
+dove tu devi
+
+40:26.600 --> 40:27.660
+cercare di trovare
+
+40:27.660 --> 40:28.640
+qual è il requisito
+
+40:28.640 --> 40:29.460
+e quindi
+
+40:29.460 --> 40:30.080
+ci deve essere
+
+40:30.080 --> 40:31.040
+tipo un ping pong
+
+40:31.040 --> 40:32.780
+di informazioni
+
+40:32.780 --> 40:33.180
+nel senso
+
+40:33.180 --> 40:34.560
+tu chiedi al cliente
+
+40:34.560 --> 40:35.100
+se
+
+40:35.100 --> 40:36.400
+quello che hai capito
+
+40:36.400 --> 40:37.360
+è giusto
+
+40:37.360 --> 40:37.940
+e quindi
+
+40:37.940 --> 40:38.920
+lo consolidi
+
+40:38.920 --> 40:39.420
+nella tua
+
+40:39.420 --> 40:39.820
+poi
+
+40:39.820 --> 40:41.280
+lo documenti
+
+40:41.280 --> 40:41.900
+nel tool
+
+40:41.900 --> 40:43.180
+di documentazione
+
+40:43.180 --> 40:44.080
+dei requisiti
+
+40:44.080 --> 40:46.720
+è un botte
+
+40:46.720 --> 40:47.140
+in risposta
+
+40:47.140 --> 40:47.880
+sul documento
+
+40:47.880 --> 40:49.360
+che richiedi
+
+40:49.360 --> 40:50.840
+perché dal cliente
+
+40:50.840 --> 40:51.220
+in effetti
+
+40:51.220 --> 40:51.840
+mi aspetterei
+
+40:51.840 --> 40:52.700
+più un documento
+
+40:52.700 --> 40:53.180
+scritto
+
+40:53.180 --> 40:54.020
+quindi non sotto
+
+40:54.020 --> 40:55.080
+forma di requisito
+
+40:55.080 --> 40:56.280
+quello che mi chiedeva
+
+40:56.280 --> 40:56.860
+era se
+
+40:56.860 --> 40:58.120
+il feedback
+
+40:58.120 --> 40:59.420
+che uno
+
+40:59.420 --> 41:00.240
+dà al cliente
+
+41:00.240 --> 41:00.720
+di quello
+
+41:00.720 --> 41:01.460
+che ha inteso
+
+41:01.460 --> 41:02.500
+era sotto
+
+41:02.500 --> 41:03.500
+forma di requisito
+
+41:03.500 --> 41:04.080
+oppure
+
+41:04.080 --> 41:05.340
+come vuoi
+
+41:05.340 --> 41:07.420
+come vuoi
+
+41:07.420 --> 41:08.440
+come vuoi
+
+41:08.440 --> 41:08.820
+diciamo
+
+41:08.820 --> 41:09.640
+se tu
+
+41:09.640 --> 41:11.100
+sei già pronta
+
+41:11.100 --> 41:12.480
+per poter
+
+41:12.480 --> 41:13.540
+per poter
+
+41:13.540 --> 41:14.440
+descrivere
+
+41:14.440 --> 41:15.000
+quello che
+
+41:15.000 --> 41:15.620
+ti ha richiesto
+
+41:15.620 --> 41:16.020
+il cliente
+
+41:16.020 --> 41:16.440
+sotto forma
+
+41:16.440 --> 41:16.940
+di requisito
+
+41:16.940 --> 41:17.320
+puoi anche
+
+41:17.320 --> 41:17.940
+condividerlo
+
+41:17.940 --> 41:18.240
+dicendo
+
+41:18.240 --> 41:18.600
+guarda
+
+41:18.600 --> 41:19.100
+questo è
+
+41:19.100 --> 41:19.460
+quello che
+
+41:19.460 --> 41:19.680
+io
+
+41:19.680 --> 41:20.700
+ho inteso
+
+41:20.700 --> 41:21.700
+mi puoi dare
+
+41:21.700 --> 41:22.420
+conferma
+
+41:22.420 --> 41:23.200
+e lui
+
+41:23.200 --> 41:23.820
+ti dà conferma
+
+41:23.820 --> 41:24.240
+chiaramente
+
+41:24.240 --> 41:24.820
+non è che
+
+41:24.820 --> 41:26.200
+mi aspetto
+
+41:26.200 --> 41:26.580
+che
+
+41:26.580 --> 41:27.040
+diciamo
+
+41:27.040 --> 41:27.640
+non ci sia
+
+41:27.640 --> 41:28.540
+questo
+
+41:28.540 --> 41:29.100
+ping pong
+
+41:29.100 --> 41:29.740
+di informazioni
+
+41:29.740 --> 41:31.000
+per ogni requisito
+
+41:31.000 --> 41:31.200
+ma
+
+41:31.200 --> 41:32.100
+sui requisiti
+
+41:32.100 --> 41:32.600
+lì dove
+
+41:32.600 --> 41:32.940
+c'è
+
+41:32.940 --> 41:33.660
+necessità
+
+41:33.660 --> 41:33.960
+di
+
+41:33.960 --> 41:34.600
+diciamo
+
+41:34.600 --> 41:35.000
+di avere
+
+41:35.000 --> 41:36.020
+un feedback
+
+41:36.020 --> 41:36.560
+ulteriore
+
+41:36.560 --> 41:37.480
+dal cliente
+
+41:37.480 --> 41:37.960
+magari
+
+41:37.960 --> 41:38.760
+tu alcuni requisiti
+
+41:38.760 --> 41:39.700
+riesci a risolverli
+
+41:39.700 --> 41:40.540
+internamente
+
+41:40.540 --> 41:41.880
+chiedi a un collega
+
+41:41.880 --> 41:44.020
+se lui
+
+41:44.020 --> 41:44.540
+ha capito
+
+41:44.540 --> 41:45.500
+quindi non è necessario
+
+41:45.500 --> 41:47.400
+ritornare dal cliente
+
+41:47.400 --> 41:48.200
+quindi dal cliente
+
+41:48.200 --> 41:48.700
+si ritorna
+
+41:48.700 --> 41:49.360
+nei casi in cui
+
+41:49.360 --> 41:49.820
+veramente
+
+41:49.820 --> 41:51.460
+quel requisito
+
+41:51.460 --> 41:52.220
+non ha
+
+41:52.220 --> 41:52.980
+diciamo
+
+41:52.980 --> 41:54.360
+gli manca qualcosa
+
+41:54.360 --> 41:55.040
+e quindi tu
+
+41:55.040 --> 41:56.540
+lo hai inteso
+
+41:56.540 --> 41:57.220
+ma vorresti
+
+41:57.220 --> 41:57.640
+un feedback
+
+41:57.640 --> 41:58.340
+ulteriore
+
+41:58.340 --> 41:59.880
+ok
+
+41:59.880 --> 42:00.220
+quindi
+
+42:00.220 --> 42:01.320
+non tutti i requisiti
+
+42:01.320 --> 42:03.520
+vengono mostrati
+
+42:03.520 --> 42:04.720
+dal cliente
+
+42:04.720 --> 42:05.120
+no
+
+42:05.120 --> 42:09.040
+chiaramente
+
+42:09.040 --> 42:09.460
+questo
+
+42:09.460 --> 42:11.260
+comporta
+
+42:11.260 --> 42:12.800
+una perdita
+
+42:12.800 --> 42:13.280
+di tempo
+
+42:13.280 --> 42:13.580
+però
+
+42:13.580 --> 42:14.400
+non dobbiamo
+
+42:14.400 --> 42:15.420
+considerarla tale
+
+42:15.420 --> 42:17.080
+perché
+
+42:17.080 --> 42:17.920
+diciamo
+
+42:17.920 --> 42:18.480
+è
+
+42:18.480 --> 42:20.240
+terra
+
+42:20.240 --> 42:20.480
+poi
+
+42:20.480 --> 42:21.200
+per consolidare
+
+42:21.200 --> 42:22.620
+per facilitarti
+
+42:22.620 --> 42:23.180
+il lavoro
+
+42:23.180 --> 42:25.820
+perché magari
+
+42:25.820 --> 42:26.520
+se tu non lo fai
+
+42:26.520 --> 42:27.340
+in questa fase
+
+42:27.340 --> 42:27.920
+se tu non la fai
+
+42:27.920 --> 42:28.580
+in questa fase
+
+42:28.580 --> 42:29.260
+poi ti trovi
+
+42:29.260 --> 42:29.620
+magari
+
+42:29.620 --> 42:30.640
+ad aver
+
+42:30.640 --> 42:31.600
+inteso
+
+42:31.600 --> 42:32.340
+un requisito
+
+42:32.340 --> 42:33.300
+in un modo diverso
+
+42:33.300 --> 42:34.680
+e a sviluppare il software
+
+42:34.680 --> 42:36.220
+non come il cliente
+
+42:36.220 --> 42:37.320
+si aspettava
+
+42:37.320 --> 42:40.260
+eh sì
+
+42:40.260 --> 42:40.880
+era assolutamente
+
+42:40.880 --> 42:41.740
+quello che immaginavo
+
+42:41.740 --> 42:42.240
+Mario
+
+42:42.240 --> 42:43.140
+al solito
+
+42:43.140 --> 42:43.740
+sono sempre
+
+42:43.740 --> 42:44.700
+masquale per rotta
+
+42:44.700 --> 42:45.080
+volevo
+
+42:45.080 --> 42:45.820
+giusto fare
+
+42:45.820 --> 42:47.180
+un'altra considerazione
+
+42:47.180 --> 42:48.060
+a me è capitato
+
+42:48.060 --> 42:48.700
+di lavorare
+
+42:48.700 --> 42:49.580
+con dei clienti
+
+42:49.580 --> 42:49.960
+dove
+
+42:49.960 --> 42:50.640
+che erano
+
+42:50.640 --> 42:51.620
+estremamente
+
+42:51.620 --> 42:52.420
+a digiuno
+
+42:52.420 --> 42:53.560
+di questi temi
+
+42:53.560 --> 42:54.540
+nell'ambito
+
+42:54.540 --> 42:55.060
+dei veicoli
+
+42:55.060 --> 42:55.640
+off-road
+
+42:55.640 --> 42:56.460
+trattori
+
+42:56.460 --> 42:57.020
+eccetera
+
+42:57.020 --> 42:57.500
+eccetera
+
+42:57.500 --> 42:59.360
+alcuni requisiti
+
+42:59.360 --> 43:00.160
+derivavano anche
+
+43:00.160 --> 43:00.980
+dalla chiamata
+
+43:00.980 --> 43:02.040
+incazzata
+
+43:02.040 --> 43:03.120
+del contadino
+
+43:03.120 --> 43:03.820
+che stava usando
+
+43:03.820 --> 43:04.560
+il trattore
+
+43:04.560 --> 43:05.660
+non funzionava
+
+43:05.660 --> 43:06.220
+e da lì
+
+43:06.220 --> 43:06.640
+si facevano
+
+43:06.640 --> 43:07.220
+dei meeting
+
+43:07.220 --> 43:08.860
+nei quali
+
+43:08.860 --> 43:09.280
+dai meeting
+
+43:09.280 --> 43:09.960
+si decidevano
+
+43:09.960 --> 43:10.620
+dobbiamo fare
+
+43:10.620 --> 43:11.320
+questa cosa
+
+43:11.320 --> 43:12.040
+chiaramente
+
+43:12.040 --> 43:12.560
+non c'era
+
+43:12.560 --> 43:13.440
+nessun documento
+
+43:13.440 --> 43:14.180
+non c'era niente
+
+43:14.180 --> 43:15.520
+però lì
+
+43:15.520 --> 43:16.120
+il requisito
+
+43:16.120 --> 43:16.760
+è diventato
+
+43:16.760 --> 43:17.780
+facciamo la minuta
+
+43:17.780 --> 43:18.380
+del meeting
+
+43:18.380 --> 43:19.520
+in cui stabiliamo
+
+43:19.520 --> 43:20.560
+che questo
+
+43:20.560 --> 43:20.940
+deve essere
+
+43:20.940 --> 43:21.740
+il comportamento
+
+43:21.740 --> 43:22.280
+quindi voglio
+
+43:22.280 --> 43:23.240
+sempre per tornare
+
+43:23.240 --> 43:24.020
+sul discorso
+
+43:24.020 --> 43:24.580
+di prima
+
+43:24.580 --> 43:25.380
+che tante volte
+
+43:25.380 --> 43:25.880
+non c'è
+
+43:25.880 --> 43:27.280
+tutta questa struttura
+
+43:27.280 --> 43:29.300
+ben organizzata
+
+43:29.300 --> 43:30.700
+ma la nostra capacità
+
+43:30.700 --> 43:31.860
+è comprendere
+
+43:31.860 --> 43:33.360
+anche dagli input
+
+43:33.360 --> 43:34.220
+diciamo
+
+43:34.220 --> 43:36.020
+alternativi
+
+43:36.020 --> 43:36.580
+che può essere
+
+43:36.580 --> 43:37.140
+delle parti
+
+43:37.140 --> 43:37.840
+incazzata
+
+43:37.840 --> 43:38.440
+ma non sarebbe
+
+43:38.440 --> 43:42.160
+sono d'accordissimo
+
+43:42.160 --> 43:42.440
+però
+
+43:42.440 --> 43:45.020
+sono d'accordissimo
+
+43:45.020 --> 43:45.300
+però
+
+43:45.300 --> 43:46.340
+diciamo
+
+43:46.340 --> 43:49.280
+la nostra
+
+43:49.280 --> 43:50.960
+la nostra
+
+43:50.960 --> 43:52.980
+come posso dire
+
+43:52.980 --> 43:54.660
+il nostro supporto
+
+43:54.660 --> 43:55.620
+e il nostro
+
+43:55.620 --> 43:57.020
+valore addizionale
+
+43:57.020 --> 43:57.620
+che dobbiamo dare
+
+43:57.620 --> 43:58.280
+al cliente
+
+43:58.280 --> 43:58.840
+è proprio quello
+
+43:58.840 --> 43:59.240
+di dire
+
+43:59.240 --> 43:59.540
+ok
+
+43:59.540 --> 44:00.560
+tu mi dai anche
+
+44:00.560 --> 44:01.760
+degli input
+
+44:01.760 --> 44:02.480
+al telefono
+
+44:02.480 --> 44:02.920
+una minuta
+
+44:02.920 --> 44:03.900
+però è necessario
+
+44:03.900 --> 44:04.880
+che tu mi documenti
+
+44:04.880 --> 44:05.460
+in qualche modo
+
+44:05.460 --> 44:06.540
+questo requisito
+
+44:06.540 --> 44:06.900
+assolutamente sì
+
+44:06.900 --> 44:11.160
+perché è chiaro
+
+44:11.160 --> 44:11.720
+che poi
+
+44:11.720 --> 44:13.080
+diciamo sì
+
+44:13.080 --> 44:14.340
+le parole
+
+44:14.340 --> 44:15.320
+sicuramente
+
+44:15.320 --> 44:16.000
+per telefono
+
+44:16.000 --> 44:16.880
+mai ricevere
+
+44:16.880 --> 44:17.460
+requisiti
+
+44:17.460 --> 44:18.220
+per telefono
+
+44:18.220 --> 44:18.480
+diciamo
+
+44:18.480 --> 44:19.040
+sicuramente
+
+44:19.040 --> 44:19.940
+o tramite minuto
+
+44:19.940 --> 44:21.160
+o tramite documentazione
+
+44:21.160 --> 44:21.980
+è bene
+
+44:21.980 --> 44:22.880
+è bene
+
+44:22.880 --> 44:24.200
+che il cliente
+
+44:24.200 --> 44:25.620
+ci fornisca
+
+44:25.620 --> 44:27.000
+queste cose
+
+44:27.000 --> 44:27.780
+magari per essere
+
+44:27.780 --> 44:28.680
+in anticipo
+
+44:28.680 --> 44:30.720
+per avvantaggiarci
+
+44:30.720 --> 44:32.260
+per avvantaggiare
+
+44:32.260 --> 44:33.080
+anche il cliente
+
+44:33.080 --> 44:34.100
+per accelerare il tutto
+
+44:34.100 --> 44:34.460
+magari
+
+44:34.460 --> 44:35.860
+da una chiamata
+
+44:35.860 --> 44:36.520
+noi possiamo
+
+44:36.520 --> 44:37.760
+possiamo dedurre
+
+44:37.760 --> 44:38.440
+un qualcosa
+
+44:38.440 --> 44:38.800
+però
+
+44:38.800 --> 44:39.260
+è bene
+
+44:39.260 --> 44:40.620
+che il cliente
+
+44:40.620 --> 44:41.540
+poi documenti
+
+44:41.540 --> 44:41.960
+il tutto
+
+44:41.960 --> 44:42.500
+in maniera
+
+44:42.500 --> 44:44.900
+processuale
+
+44:44.900 --> 44:47.280
+ok
+
+44:47.280 --> 44:48.600
+anche perché
+
+44:48.600 --> 44:48.980
+poi loro
+
+44:48.980 --> 44:49.600
+non sarebbero
+
+44:49.600 --> 44:50.440
+poi compliance
+
+44:50.440 --> 44:51.240
+con le regole
+
+44:51.240 --> 44:51.780
+a spice
+
+44:51.780 --> 44:52.100
+ecco
+
+44:52.100 --> 44:53.280
+noi non riusciremmo
+
+44:53.280 --> 44:53.580
+poi
+
+44:53.580 --> 44:54.560
+ad ottenere
+
+44:54.560 --> 44:55.560
+una tracciabilità
+
+44:55.560 --> 44:58.520
+completa
+
+44:58.520 --> 45:00.140
+se questo requisito
+
+45:00.140 --> 45:01.420
+non viene documentato
+
+45:01.420 --> 45:01.880
+in maniera
+
+45:01.880 --> 45:02.800
+corretta
+
+45:02.800 --> 45:09.460
+ok
+
+45:09.460 --> 45:10.020
+quindi poi
+
+45:10.020 --> 45:11.080
+c'è la fase
+
+45:11.080 --> 45:12.540
+di documentazione
+
+45:12.540 --> 45:13.340
+e analisi
+
+45:13.340 --> 45:14.280
+quindi
+
+45:14.280 --> 45:15.620
+questa è una fase
+
+45:15.620 --> 45:16.220
+che viene
+
+45:16.220 --> 45:17.460
+successivamente
+
+45:17.460 --> 45:18.320
+dopo
+
+45:18.320 --> 45:20.180
+o nello stesso
+
+45:20.180 --> 45:20.940
+contesto
+
+45:20.940 --> 45:21.800
+delle licitation
+
+45:21.800 --> 45:23.740
+possiamo anche
+
+45:23.740 --> 45:24.640
+iniziare a fare
+
+45:24.640 --> 45:25.280
+un'analisi
+
+45:25.280 --> 45:25.780
+per capire
+
+45:25.780 --> 45:27.420
+se il requisito
+
+45:27.420 --> 45:28.300
+è chiaro
+
+45:28.300 --> 45:29.540
+se è valido
+
+45:29.540 --> 45:31.040
+se è consistente
+
+45:31.040 --> 45:33.180
+se non è ambiguo
+
+45:33.180 --> 45:34.160
+non è ambiguo
+
+45:34.160 --> 45:35.200
+nel senso che
+
+45:35.200 --> 45:37.940
+non permette
+
+45:37.940 --> 45:38.360
+di avere
+
+45:38.360 --> 45:39.840
+differenti
+
+45:39.840 --> 45:41.000
+punti di vista
+
+45:41.000 --> 45:41.160
+o
+
+45:41.160 --> 45:41.740
+differenti
+
+45:41.740 --> 45:45.380
+modi
+
+45:45.380 --> 45:46.120
+di
+
+45:46.120 --> 45:49.680
+comprensione
+
+45:49.680 --> 45:53.360
+quindi
+
+45:53.360 --> 45:54.020
+questa fase
+
+45:54.020 --> 45:54.540
+può essere
+
+45:54.540 --> 45:54.740
+anche
+
+45:54.740 --> 45:55.080
+inclusa
+
+45:55.080 --> 45:55.480
+nella fase
+
+45:55.480 --> 45:55.620
+di
+
+45:55.620 --> 45:56.340
+licitation
+
+45:56.340 --> 45:56.780
+e poi
+
+45:56.780 --> 45:57.120
+c'è tutta
+
+45:57.120 --> 45:57.500
+la fase
+
+45:57.500 --> 45:57.900
+di
+
+45:57.900 --> 45:59.140
+documentazione
+
+45:59.140 --> 46:02.460
+documentazione
+
+46:02.460 --> 46:03.120
+in maniera
+
+46:03.120 --> 46:03.700
+chiara
+
+46:03.700 --> 46:04.320
+e quindi
+
+46:04.320 --> 46:04.980
+documentare
+
+46:04.980 --> 46:05.500
+il requisito
+
+46:05.500 --> 46:06.020
+che ci arriva
+
+46:06.020 --> 46:07.140
+dal cliente
+
+46:07.140 --> 46:09.360
+attraverso
+
+46:09.360 --> 46:10.240
+dei tool
+
+46:10.240 --> 46:12.660
+non so
+
+46:12.660 --> 46:13.180
+se conoscete
+
+46:13.180 --> 46:13.760
+qualche tool
+
+46:13.760 --> 46:14.840
+di documentazione
+
+46:14.840 --> 46:15.500
+di raccolta
+
+46:15.500 --> 46:16.240
+di requisiti
+
+46:16.240 --> 46:16.800
+può essere
+
+46:16.800 --> 46:17.700
+diciamo
+
+46:17.700 --> 46:18.620
+quello più famoso
+
+46:18.620 --> 46:19.060
+che però
+
+46:19.060 --> 46:20.000
+sta diventando
+
+46:20.000 --> 46:20.340
+un po'
+
+46:20.440 --> 46:21.240
+obsoleto
+
+46:21.240 --> 46:21.540
+e
+
+46:21.540 --> 46:22.240
+dors
+
+46:22.240 --> 46:24.620
+ci sta
+
+46:24.620 --> 46:25.020
+c'è
+
+46:25.020 --> 46:25.500
+jama
+
+46:25.500 --> 46:26.480
+c'è
+
+46:26.480 --> 46:27.380
+polarion
+
+46:27.380 --> 46:28.340
+ci sono
+
+46:28.340 --> 46:28.900
+diversi
+
+46:28.900 --> 46:30.740
+tool
+
+46:30.740 --> 46:31.040
+che ci
+
+46:31.040 --> 46:31.440
+permettono
+
+46:31.440 --> 46:32.180
+di documentare
+
+46:32.180 --> 46:32.420
+poi
+
+46:32.420 --> 46:33.500
+è il cliente
+
+46:33.500 --> 46:33.760
+che
+
+46:33.760 --> 46:34.360
+meno male
+
+46:34.360 --> 46:34.800
+guida
+
+46:34.800 --> 46:35.920
+nell'utilizzo
+
+46:35.920 --> 46:36.340
+di questo
+
+46:36.340 --> 46:36.680
+tool
+
+46:36.680 --> 46:37.720
+alcune volte
+
+46:37.720 --> 46:38.700
+mi è capitato
+
+46:38.700 --> 46:40.500
+che il cliente
+
+46:40.500 --> 46:41.000
+chiedesse
+
+46:41.000 --> 46:41.620
+a noi
+
+46:41.620 --> 46:43.880
+quale fosse
+
+46:43.880 --> 46:44.320
+un tool
+
+46:44.320 --> 46:45.860
+più pratico
+
+46:45.860 --> 46:46.340
+e più veloce
+
+46:46.340 --> 46:47.380
+da poter utilizzare
+
+46:47.380 --> 46:48.020
+perché loro
+
+46:48.020 --> 46:48.700
+a volte
+
+46:48.700 --> 46:49.800
+ci sono dei clienti
+
+46:49.800 --> 46:50.180
+che proprio
+
+46:50.180 --> 46:51.220
+non hanno proprio
+
+46:51.220 --> 46:51.840
+una minima idea
+
+46:51.840 --> 46:52.200
+di cosa
+
+46:52.200 --> 46:53.680
+si intende
+
+46:53.680 --> 46:55.940
+per gestione
+
+46:55.940 --> 46:56.560
+dei requisiti
+
+46:56.560 --> 46:56.800
+ecco
+
+46:56.800 --> 46:57.540
+hanno una gestione
+
+46:57.540 --> 46:57.960
+dei requisiti
+
+46:57.960 --> 46:58.360
+molto
+
+46:58.360 --> 46:58.780
+molto
+
+46:58.780 --> 47:00.120
+primitiva
+
+47:00.120 --> 47:01.060
+su fogli di carta
+
+47:01.060 --> 47:01.800
+o su word
+
+47:01.800 --> 47:02.700
+veramente
+
+47:02.700 --> 47:04.640
+alcuni
+
+47:04.640 --> 47:05.320
+clienti
+
+47:05.320 --> 47:05.680
+sono molto
+
+47:05.680 --> 47:06.200
+messi male
+
+47:06.200 --> 47:07.060
+clienti non
+
+47:07.060 --> 47:07.780
+automotive
+
+47:07.780 --> 47:08.200
+ecco
+
+47:08.200 --> 47:09.040
+clienti
+
+47:09.040 --> 47:11.540
+ad esempio
+
+47:11.540 --> 47:13.000
+con Dyson
+
+47:13.000 --> 47:13.620
+mi è capitato
+
+47:13.620 --> 47:13.940
+di avere
+
+47:13.940 --> 47:14.660
+questo
+
+47:14.660 --> 47:16.060
+riscontro
+
+47:16.060 --> 47:16.420
+dove loro
+
+47:16.420 --> 47:16.880
+non hanno
+
+47:16.880 --> 47:17.480
+una gestione
+
+47:17.480 --> 47:17.980
+dei requisiti
+
+47:17.980 --> 47:18.220
+quindi
+
+47:18.220 --> 47:19.300
+ci hanno chiesto
+
+47:19.300 --> 47:19.880
+esplicitamente
+
+47:19.880 --> 47:20.600
+di fornirgli
+
+47:20.600 --> 47:21.860
+una sorta
+
+47:21.860 --> 47:23.520
+di comparison
+
+47:23.520 --> 47:24.720
+tra i diversi tool
+
+47:24.720 --> 47:25.740
+le quali potrebbe essere
+
+47:25.740 --> 47:26.460
+quello che fa
+
+47:26.460 --> 47:27.040
+a caso loro
+
+47:27.040 --> 47:31.120
+ok
+
+47:31.120 --> 47:33.760
+poi abbiamo
+
+47:33.760 --> 47:34.920
+questo punto
+
+47:34.920 --> 47:35.280
+qui
+
+47:35.280 --> 47:35.880
+che è la parte
+
+47:35.880 --> 47:36.760
+di tracciabilità
+
+47:36.760 --> 47:39.340
+quindi un requisito
+
+47:39.340 --> 47:39.900
+deve essere
+
+47:39.900 --> 47:40.640
+tracciabile
+
+47:40.640 --> 47:41.440
+quindi si deve
+
+47:41.440 --> 47:42.980
+deve poter
+
+47:42.980 --> 47:44.840
+diciamo
+
+47:44.840 --> 47:46.280
+chiunque
+
+47:46.280 --> 47:48.560
+chiunque
+
+47:48.560 --> 47:50.380
+deve poter
+
+47:50.380 --> 47:53.380
+tracciare
+
+47:53.380 --> 47:54.340
+il requisito
+
+47:54.340 --> 47:54.800
+cioè
+
+47:54.800 --> 47:55.440
+chiunque
+
+47:55.440 --> 47:56.380
+più che tracciare
+
+47:56.380 --> 47:57.540
+chiunque deve poter
+
+47:57.540 --> 47:59.640
+navigare
+
+47:59.640 --> 48:00.980
+il flusso
+
+48:00.980 --> 48:01.880
+del requisito
+
+48:01.880 --> 48:02.520
+a partire
+
+48:02.520 --> 48:03.780
+dalla sorgente
+
+48:03.780 --> 48:04.800
+che è il documento
+
+48:04.800 --> 48:05.460
+del cliente
+
+48:05.460 --> 48:05.900
+sino
+
+48:05.900 --> 48:08.220
+alla validazione
+
+48:08.220 --> 48:11.020
+quindi deve poter
+
+48:11.020 --> 48:11.620
+seguire
+
+48:11.620 --> 48:12.560
+tutto il ciclo
+
+48:12.560 --> 48:12.820
+AV
+
+48:12.820 --> 48:14.060
+attraverso
+
+48:14.060 --> 48:14.660
+questa
+
+48:14.660 --> 48:15.580
+diciamo
+
+48:15.580 --> 48:16.800
+questa
+
+48:16.800 --> 48:19.080
+tracciabilità
+
+48:19.080 --> 48:22.020
+quindi il requisito
+
+48:22.020 --> 48:22.920
+è non solo
+
+48:22.920 --> 48:24.240
+non solo
+
+48:24.240 --> 48:25.180
+quindi deve seguire
+
+48:25.180 --> 48:25.900
+il modello AV
+
+48:25.900 --> 48:27.240
+ma deve poter
+
+48:27.240 --> 48:28.000
+anche
+
+48:28.000 --> 48:28.940
+essere
+
+48:28.940 --> 48:31.300
+tracciato
+
+48:31.300 --> 48:31.780
+a livello
+
+48:31.780 --> 48:32.180
+di
+
+48:32.180 --> 48:33.760
+di project
+
+48:33.760 --> 48:35.500
+management
+
+48:35.500 --> 48:36.820
+in che senso
+
+48:36.820 --> 48:38.180
+quindi c'è
+
+48:38.180 --> 48:39.020
+tutta la parte
+
+48:39.020 --> 48:39.460
+di
+
+48:39.460 --> 48:40.440
+questa
+
+48:40.440 --> 48:41.400
+immagine
+
+48:41.400 --> 48:42.080
+non è molto
+
+48:42.080 --> 48:43.400
+semplificativa
+
+48:43.400 --> 48:43.980
+nel senso che
+
+48:43.980 --> 48:44.640
+potrebbe trarre
+
+48:44.640 --> 48:45.060
+in inganno
+
+48:45.060 --> 48:45.360
+però
+
+48:45.360 --> 48:47.160
+abbiamo una parte
+
+48:47.160 --> 48:47.540
+in cui
+
+48:47.540 --> 48:48.620
+il requisito
+
+48:48.620 --> 48:50.100
+quindi la sorgente
+
+48:50.100 --> 48:50.800
+è collegata
+
+48:50.800 --> 48:51.920
+a tutti i requisiti
+
+48:51.920 --> 48:53.140
+relativi al
+
+48:53.140 --> 48:53.860
+subdomain
+
+48:53.860 --> 48:54.940
+quindi tutti i requisiti
+
+48:54.940 --> 48:57.640
+della parte
+
+48:57.640 --> 48:58.300
+della
+
+48:58.300 --> 48:59.140
+AV model
+
+48:59.140 --> 48:59.800
+della parte
+
+48:59.800 --> 49:00.660
+a sinistra
+
+49:00.660 --> 49:01.920
+quindi c'è
+
+49:01.920 --> 49:02.360
+la parte
+
+49:02.360 --> 49:02.900
+ad esempio
+
+49:02.900 --> 49:03.400
+questo qua
+
+49:03.400 --> 49:04.220
+possiamo considerarlo
+
+49:04.220 --> 49:04.480
+come
+
+49:04.480 --> 49:06.000
+il sys1
+
+49:06.000 --> 49:07.640
+e questi qua
+
+49:07.640 --> 49:07.960
+li possiamo
+
+49:07.960 --> 49:08.480
+considerare
+
+49:08.480 --> 49:09.460
+tutti i requisiti
+
+49:09.460 --> 49:10.540
+di livelli
+
+49:10.540 --> 49:11.960
+successivi
+
+49:11.960 --> 49:12.480
+la parte
+
+49:12.480 --> 49:13.040
+di sys2
+
+49:13.040 --> 49:13.380
+la parte
+
+49:13.380 --> 49:13.980
+di software
+
+49:13.980 --> 49:14.380
+la parte
+
+49:14.380 --> 49:14.820
+di
+
+49:14.820 --> 49:16.340
+diciamo
+
+49:16.340 --> 49:16.600
+di
+
+49:16.600 --> 49:18.300
+architettura
+
+49:18.300 --> 49:20.000
+e poi
+
+49:20.000 --> 49:20.780
+c'è una parte
+
+49:20.780 --> 49:21.140
+di
+
+49:21.140 --> 49:22.380
+test case
+
+49:22.380 --> 49:23.740
+e una parte
+
+49:23.740 --> 49:24.100
+anche
+
+49:24.100 --> 49:24.940
+relativa
+
+49:24.940 --> 49:25.940
+al codice
+
+49:25.940 --> 49:26.920
+quindi c'è
+
+49:26.920 --> 49:27.580
+questa parte
+
+49:27.580 --> 49:28.020
+qui
+
+49:28.020 --> 49:29.300
+che è la parte
+
+49:29.300 --> 49:29.840
+un po' più
+
+49:29.840 --> 49:30.860
+pratica
+
+49:30.860 --> 49:32.980
+e poi c'è
+
+49:32.980 --> 49:33.420
+la parte
+
+49:33.420 --> 49:33.940
+relativa
+
+49:33.940 --> 49:34.960
+al progetto
+
+49:34.960 --> 49:35.600
+che sono questi
+
+49:35.600 --> 49:36.220
+tre
+
+49:36.220 --> 49:38.500
+blocchi
+
+49:38.500 --> 49:39.260
+che fanno
+
+49:39.260 --> 49:39.820
+riferimento
+
+49:39.820 --> 49:40.500
+al task
+
+49:40.500 --> 49:42.220
+ad eventuali
+
+49:42.220 --> 49:43.160
+incidenti
+
+49:43.160 --> 49:43.680
+ad eventuali
+
+49:43.680 --> 49:44.520
+problemi
+
+49:44.520 --> 49:46.160
+e ad eventuali
+
+49:46.160 --> 49:46.580
+rischi
+
+49:46.580 --> 49:47.400
+che possono
+
+49:47.400 --> 49:48.620
+essere sollevati
+
+49:48.620 --> 49:49.320
+con questo
+
+49:49.320 --> 49:50.160
+requisito
+
+49:50.160 --> 49:51.380
+quindi c'è
+
+49:51.380 --> 49:51.780
+una fase
+
+49:51.780 --> 49:52.360
+pratica
+
+49:52.360 --> 49:53.100
+quindi il requisito
+
+49:53.100 --> 49:54.000
+deve poter essere
+
+49:54.000 --> 49:54.580
+navigabile
+
+49:54.580 --> 49:55.380
+tracciabile
+
+49:55.380 --> 49:57.740
+tecnicamente
+
+49:57.740 --> 49:58.160
+quindi
+
+49:58.160 --> 49:59.560
+con i domini
+
+49:59.560 --> 50:02.380
+con i domini
+
+50:02.380 --> 50:03.180
+facendo riferimento
+
+50:03.180 --> 50:03.820
+al ciclo AV
+
+50:03.820 --> 50:05.720
+considerando
+
+50:05.720 --> 50:06.600
+anche il test case
+
+50:06.600 --> 50:07.240
+e il source code
+
+50:07.240 --> 50:07.680
+e poi c'è
+
+50:07.680 --> 50:08.320
+questa parte
+
+50:08.320 --> 50:09.900
+di project
+
+50:09.900 --> 50:11.860
+questa immagine
+
+50:11.860 --> 50:12.440
+forse la devo
+
+50:12.440 --> 50:13.700
+migliorare
+
+50:13.700 --> 50:14.020
+perché
+
+50:14.020 --> 50:14.540
+scusa
+
+50:14.540 --> 50:15.260
+ma cosa
+
+50:15.260 --> 50:15.840
+intendi
+
+50:15.840 --> 50:19.760
+cosa intendi
+
+50:19.760 --> 50:20.820
+per rischi
+
+50:20.820 --> 50:21.400
+nel senso
+
+50:21.400 --> 50:22.340
+che il requisito
+
+50:22.340 --> 50:23.160
+non è scritto
+
+50:23.160 --> 50:23.640
+bene
+
+50:23.640 --> 50:23.960
+e quindi
+
+50:23.960 --> 50:24.360
+deve essere
+
+50:24.360 --> 50:24.420
+no
+
+50:24.420 --> 50:24.760
+no
+
+50:24.760 --> 50:25.540
+no
+
+50:25.540 --> 50:27.140
+no
+
+50:27.140 --> 50:27.380
+no
+
+50:27.380 --> 50:27.540
+no
+
+50:27.540 --> 50:27.820
+no
+
+50:27.820 --> 50:28.400
+in pratica
+
+50:28.400 --> 50:29.260
+questo risk
+
+50:29.260 --> 50:30.700
+diciamo che
+
+50:30.700 --> 50:32.760
+viene sollevato
+
+50:32.760 --> 50:33.320
+cioè
+
+50:33.320 --> 50:33.980
+non sempre
+
+50:33.980 --> 50:34.380
+questi
+
+50:34.380 --> 50:35.560
+sicuramente
+
+50:35.560 --> 50:36.400
+questo task
+
+50:36.400 --> 50:37.340
+sicuramente
+
+50:37.340 --> 50:38.040
+c'è sempre
+
+50:38.040 --> 50:39.440
+perché in pratica
+
+50:39.440 --> 50:40.600
+tu per ogni attività
+
+50:40.600 --> 50:41.280
+che esegui
+
+50:41.280 --> 50:41.860
+devi avere
+
+50:41.860 --> 50:42.480
+un task
+
+50:42.480 --> 50:43.820
+un task
+
+50:43.820 --> 50:44.320
+diciamo
+
+50:44.320 --> 50:44.780
+che ti dice
+
+50:44.780 --> 50:45.600
+ok tu stai lavorando
+
+50:45.600 --> 50:46.040
+su questa
+
+50:46.040 --> 50:47.260
+su questa attività
+
+50:47.260 --> 50:48.520
+quindi devi tracciare
+
+50:48.520 --> 50:49.560
+anche la tua attività
+
+50:49.560 --> 50:50.440
+il tuo requisito
+
+50:50.440 --> 50:52.420
+a livello di progetto
+
+50:52.420 --> 50:53.060
+per la gestione
+
+50:53.060 --> 50:53.640
+delle ore
+
+50:53.640 --> 50:54.440
+quante ore ci metti
+
+50:54.440 --> 50:55.340
+per lavorare
+
+50:55.340 --> 50:57.100
+e devi poter tracciare
+
+50:57.100 --> 50:57.840
+la tua attività
+
+50:57.840 --> 50:59.240
+poi questi due
+
+50:59.240 --> 51:00.380
+incidenti e rischi
+
+51:00.380 --> 51:01.540
+chiaramente
+
+51:01.540 --> 51:03.500
+si presentano
+
+51:03.500 --> 51:03.980
+qualora
+
+51:03.980 --> 51:05.340
+il requisito
+
+51:05.340 --> 51:06.360
+qualora ci sia
+
+51:06.360 --> 51:06.920
+un problema
+
+51:06.920 --> 51:07.140
+no
+
+51:07.140 --> 51:07.960
+sollevato durante
+
+51:07.960 --> 51:08.700
+il test case
+
+51:08.700 --> 51:09.760
+cioè durante la fase
+
+51:09.760 --> 51:10.340
+di validazione
+
+51:10.340 --> 51:11.360
+tu sollevi un problema
+
+51:11.360 --> 51:13.540
+e lo puoi
+
+51:13.540 --> 51:14.260
+diciamo
+
+51:14.260 --> 51:15.320
+chiaramente qui
+
+51:15.320 --> 51:16.140
+è definito
+
+51:16.140 --> 51:16.780
+come incidente
+
+51:16.780 --> 51:16.940
+però
+
+51:16.940 --> 51:17.560
+lo
+
+51:17.560 --> 51:18.660
+apri
+
+51:18.660 --> 51:19.360
+tu
+
+51:19.360 --> 51:20.420
+un issue
+
+51:20.420 --> 51:21.840
+e chiaramente
+
+51:21.840 --> 51:22.440
+questa issue
+
+51:22.440 --> 51:23.460
+deve essere collegata
+
+51:23.460 --> 51:24.340
+al requisito
+
+51:24.340 --> 51:24.880
+sorgente
+
+51:24.880 --> 51:25.580
+cioè a chi
+
+51:25.580 --> 51:26.800
+a qual è il requisito
+
+51:26.800 --> 51:27.680
+che ti sta creando
+
+51:27.680 --> 51:28.260
+un problema
+
+51:28.260 --> 51:31.280
+il rischio invece
+
+51:31.280 --> 51:32.080
+viene sollevato
+
+51:32.080 --> 51:32.620
+qualora
+
+51:32.620 --> 51:33.840
+diciamo
+
+51:33.840 --> 51:36.160
+oltre al problema
+
+51:36.160 --> 51:37.160
+evidenziato
+
+51:37.160 --> 51:37.940
+durante la fase
+
+51:37.940 --> 51:38.580
+di test case
+
+51:38.580 --> 51:39.880
+questo tipo di problema
+
+51:39.880 --> 51:40.480
+potrebbe
+
+51:40.480 --> 51:41.700
+far emergere
+
+51:41.700 --> 51:42.140
+dei rischi
+
+51:42.140 --> 51:42.620
+a livello
+
+51:42.620 --> 51:43.140
+di
+
+51:43.140 --> 51:44.220
+si chiama
+
+51:44.220 --> 51:45.240
+risk management
+
+51:45.240 --> 51:47.760
+potrebbe far
+
+51:47.760 --> 51:48.100
+sollevare
+
+51:48.100 --> 51:48.580
+dei problemi
+
+51:48.580 --> 51:48.960
+a livello
+
+51:48.960 --> 51:50.960
+di delivery
+
+51:50.960 --> 51:53.680
+questo problema
+
+51:53.680 --> 51:54.220
+ad esempio
+
+51:54.220 --> 51:55.180
+ha un rischio
+
+51:55.180 --> 51:56.080
+sulla delivery
+
+51:56.080 --> 51:56.540
+nel senso
+
+51:56.540 --> 51:57.260
+che potrebbe
+
+51:57.260 --> 51:58.300
+farmi ritardare
+
+51:58.300 --> 51:58.860
+la delivery
+
+51:58.860 --> 51:59.700
+perché
+
+51:59.700 --> 52:00.980
+c'è un problema
+
+52:00.980 --> 52:01.720
+e questo problema
+
+52:01.720 --> 52:02.620
+deve essere risolto
+
+52:02.620 --> 52:03.500
+quindi quali sono
+
+52:03.500 --> 52:04.300
+i rischi
+
+52:04.300 --> 52:05.900
+che questo tipo
+
+52:05.900 --> 52:06.640
+di requisito
+
+52:06.640 --> 52:07.300
+che è stato scritto
+
+52:07.300 --> 52:07.940
+in questo modo
+
+52:07.940 --> 52:08.940
+magari errato
+
+52:08.940 --> 52:09.400
+oppure
+
+52:09.400 --> 52:12.840
+non è stato scritto
+
+52:12.840 --> 52:13.180
+bene
+
+52:13.180 --> 52:13.660
+non è stato
+
+52:13.660 --> 52:14.300
+inteso bene
+
+52:14.300 --> 52:14.940
+porta
+
+52:14.940 --> 52:16.160
+al progetto
+
+52:16.160 --> 52:16.740
+al ciclo vita
+
+52:16.740 --> 52:18.080
+del progetto
+
+52:18.960 --> 52:20.340
+ok
+
+52:20.340 --> 52:20.960
+chiaro
+
+52:20.960 --> 52:21.680
+ok
+
+52:21.680 --> 52:23.420
+l'incidente
+
+52:23.420 --> 52:24.100
+visto come
+
+52:24.100 --> 52:24.500
+ok
+
+52:24.500 --> 52:25.320
+è puntuale
+
+52:25.320 --> 52:25.460
+no
+
+52:25.460 --> 52:26.480
+qual è il problema
+
+52:26.480 --> 52:26.920
+che io
+
+52:26.920 --> 52:27.840
+ho
+
+52:27.840 --> 52:29.340
+evidenziato
+
+52:29.340 --> 52:29.900
+qual è il problema
+
+52:29.900 --> 52:30.200
+che io
+
+52:30.200 --> 52:31.000
+ho riscontrato
+
+52:31.000 --> 52:32.600
+e il rischio
+
+52:32.600 --> 52:33.340
+non è altro
+
+52:33.340 --> 52:33.640
+che
+
+52:33.640 --> 52:34.580
+quali sono
+
+52:34.580 --> 52:35.500
+gli impatti
+
+52:35.500 --> 52:37.220
+che il problema
+
+52:37.220 --> 52:37.660
+o
+
+52:37.660 --> 52:38.560
+un qualsiasi tipo
+
+52:38.560 --> 52:39.220
+di
+
+52:39.220 --> 52:44.200
+più che il problema
+
+52:44.200 --> 52:45.940
+oltre a essere
+
+52:45.940 --> 52:46.380
+il problema
+
+52:46.380 --> 52:47.100
+perché può essere
+
+52:47.100 --> 52:47.620
+collegato
+
+52:47.620 --> 52:48.220
+incidenti e rischio
+
+52:48.220 --> 52:49.160
+possono essere collegati
+
+52:49.160 --> 52:50.060
+o magari
+
+52:50.060 --> 52:50.740
+c'è un qualcosa
+
+52:50.740 --> 52:51.240
+che non va
+
+52:51.240 --> 52:52.400
+a livello di requisito
+
+52:52.400 --> 52:53.380
+che non è stato
+
+52:53.380 --> 52:54.520
+ancora evidenziato
+
+52:54.520 --> 52:54.880
+a livello
+
+52:54.880 --> 52:56.760
+con un issue
+
+52:56.760 --> 52:58.240
+qual è il rischio
+
+52:58.240 --> 52:59.280
+che potrebbe portare
+
+52:59.280 --> 52:59.960
+ad esempio
+
+52:59.960 --> 53:01.800
+ad un ritardo
+
+53:01.800 --> 53:03.300
+del rilascio
+
+53:03.300 --> 53:04.020
+del software
+
+53:04.020 --> 53:05.220
+o ad un ritardo
+
+53:05.220 --> 53:07.300
+delle altre attività
+
+53:07.300 --> 53:09.420
+che vengono dopo
+
+53:09.420 --> 53:12.280
+ok
+
+53:12.280 --> 53:13.660
+e questa tracciabilità
+
+53:13.660 --> 53:14.840
+ci permette
+
+53:14.840 --> 53:15.100
+ecco
+
+53:15.100 --> 53:15.920
+di risalire
+
+53:15.920 --> 53:19.900
+alla sorgente
+
+53:19.900 --> 53:20.840
+ed è proprio
+
+53:20.840 --> 53:22.360
+questa tracciabilità
+
+53:22.360 --> 53:23.120
+che è un punto
+
+53:23.120 --> 53:24.260
+veramente fondamentale
+
+53:24.260 --> 53:24.700
+poi
+
+53:24.700 --> 53:25.420
+per la parte
+
+53:25.420 --> 53:26.400
+di mantenimento
+
+53:26.400 --> 53:26.940
+e per la parte
+
+53:26.940 --> 53:27.920
+di change management
+
+53:27.920 --> 53:33.000
+ok
+
+53:33.000 --> 53:47.980
+poi
+
+53:47.980 --> 53:48.560
+diciamo
+
+53:48.560 --> 53:49.700
+c'è una delle ultime
+
+53:49.700 --> 53:50.160
+parti
+
+53:50.160 --> 53:50.860
+che è relativa
+
+53:50.860 --> 53:51.800
+alla verification
+
+53:51.800 --> 53:52.720
+and validation
+
+53:52.720 --> 53:55.560
+questo
+
+53:55.560 --> 53:56.480
+probabilmente
+
+53:56.480 --> 53:57.420
+voi siete già
+
+53:57.420 --> 53:58.080
+abbastanza
+
+53:58.080 --> 53:59.460
+più o meno
+
+53:59.460 --> 54:00.500
+sul pezzo
+
+54:00.500 --> 54:02.140
+ed una fase
+
+54:02.140 --> 54:02.640
+in cui
+
+54:02.640 --> 54:04.100
+diciamo
+
+54:04.100 --> 54:04.720
+il team
+
+54:04.720 --> 54:06.620
+il team
+
+54:06.620 --> 54:08.020
+di validazione
+
+54:08.020 --> 54:09.200
+e di verifica
+
+54:09.200 --> 54:10.280
+diciamo
+
+54:10.280 --> 54:11.500
+si attiva
+
+54:11.500 --> 54:12.960
+per poter
+
+54:12.960 --> 54:14.580
+diciamo
+
+54:14.580 --> 54:16.340
+completare
+
+54:16.340 --> 54:17.720
+e supportare
+
+54:17.720 --> 54:18.360
+qualora ci
+
+54:18.360 --> 54:19.180
+dovesse essere
+
+54:19.180 --> 54:20.400
+bisogno
+
+54:20.400 --> 54:23.860
+diciamo
+
+54:23.860 --> 54:24.380
+il
+
+54:24.380 --> 54:26.920
+il punto finale
+
+54:26.920 --> 54:27.400
+diciamo
+
+54:27.400 --> 54:28.060
+supportare
+
+54:28.060 --> 54:29.120
+alla definizione
+
+54:29.120 --> 54:30.120
+definitiva
+
+54:30.120 --> 54:32.120
+del requisito
+
+54:32.120 --> 54:32.840
+sia in termini
+
+54:32.840 --> 54:33.480
+di descrizione
+
+54:33.480 --> 54:34.220
+sia in termini
+
+54:34.220 --> 54:34.580
+di
+
+54:34.580 --> 54:36.060
+testabilità
+
+54:36.060 --> 54:36.800
+ecco
+
+54:36.800 --> 54:37.220
+quindi
+
+54:37.220 --> 54:38.060
+c'è una fase
+
+54:38.060 --> 54:39.460
+di review
+
+54:39.460 --> 54:40.580
+dei requisiti
+
+54:40.580 --> 54:41.920
+che avviene
+
+54:41.920 --> 54:42.860
+regolarmente
+
+54:42.860 --> 54:46.680
+quindi con una fase
+
+54:46.680 --> 54:47.140
+di
+
+54:47.140 --> 54:47.880
+quindi
+
+54:47.880 --> 54:49.320
+vengono esaminati
+
+54:49.320 --> 54:50.540
+i requisiti
+
+54:50.540 --> 54:52.240
+e poi
+
+54:52.240 --> 54:52.640
+chiaramente
+
+54:52.640 --> 54:53.200
+c'è la fase
+
+54:53.200 --> 54:54.020
+di testing
+
+54:54.020 --> 54:55.060
+quindi
+
+54:55.060 --> 54:56.120
+durante il ciclo vita
+
+54:56.120 --> 54:57.020
+di un requisito
+
+54:57.020 --> 54:58.800
+diciamo
+
+54:58.800 --> 54:59.720
+una delle fasi
+
+54:59.720 --> 55:00.220
+finali
+
+55:00.220 --> 55:01.240
+del requisito
+
+55:01.240 --> 55:01.940
+prima di essere
+
+55:01.940 --> 55:02.660
+definitivamente
+
+55:02.660 --> 55:03.220
+approvato
+
+55:03.220 --> 55:03.540
+è quella
+
+55:03.540 --> 55:03.880
+della
+
+55:03.880 --> 55:04.960
+review
+
+55:04.960 --> 55:05.760
+che viene
+
+55:05.760 --> 55:06.480
+fatta
+
+55:06.480 --> 55:08.040
+dal team
+
+55:08.040 --> 55:09.280
+di validazione
+
+55:09.280 --> 55:11.260
+che poi
+
+55:11.260 --> 55:12.000
+si occuperà
+
+55:12.000 --> 55:12.540
+della fase
+
+55:12.540 --> 55:13.560
+di testing
+
+55:13.560 --> 55:14.080
+una volta
+
+55:14.080 --> 55:14.540
+che ha
+
+55:14.540 --> 55:15.280
+approvato
+
+55:15.280 --> 55:16.440
+e ha validato
+
+55:16.440 --> 55:17.460
+il requisito
+
+55:17.460 --> 55:17.820
+e la sua
+
+55:17.820 --> 55:18.480
+testabilità
+
+55:18.480 --> 55:19.340
+a livello
+
+55:19.340 --> 55:20.500
+descrittivo
+
+55:20.500 --> 55:22.280
+si pone
+
+55:22.280 --> 55:23.440
+quindi
+
+55:23.440 --> 55:24.220
+si attiva
+
+55:24.220 --> 55:25.020
+per la fase
+
+55:25.020 --> 55:25.360
+di
+
+55:25.360 --> 55:26.320
+testing
+
+55:26.320 --> 55:34.240
+chiaramente
+
+55:34.240 --> 55:34.580
+la fase
+
+55:34.580 --> 55:35.000
+di review
+
+55:35.000 --> 55:35.760
+e di inspection
+
+55:35.760 --> 55:38.080
+rientra
+
+55:38.080 --> 55:38.580
+nella fase
+
+55:38.580 --> 55:39.460
+di requirement
+
+55:39.460 --> 55:40.420
+management plan
+
+55:40.420 --> 55:41.960
+mentre la fase
+
+55:41.960 --> 55:42.580
+di testing
+
+55:42.580 --> 55:43.200
+è più
+
+55:43.200 --> 55:44.040
+rivolta
+
+55:44.040 --> 55:44.600
+alla fase
+
+55:44.600 --> 55:44.980
+diciamo
+
+55:44.980 --> 55:46.280
+alla documentazione
+
+55:46.280 --> 55:46.760
+della
+
+55:46.760 --> 55:48.440
+parte di validazione
+
+55:48.440 --> 55:49.040
+quindi è più
+
+55:49.040 --> 55:50.660
+lato validazione
+
+55:50.660 --> 55:50.900
+ecco
+
+55:50.900 --> 55:51.380
+come
+
+55:51.380 --> 55:52.340
+gestire
+
+55:52.340 --> 55:52.820
+la fase
+
+55:52.820 --> 55:53.620
+di testing
+
+55:53.620 --> 55:54.220
+quali sono
+
+55:54.220 --> 55:54.780
+diciamo
+
+55:54.780 --> 55:55.920
+le regole
+
+55:55.920 --> 55:56.480
+quali sono
+
+55:56.480 --> 55:57.660
+le best
+
+55:57.660 --> 55:58.220
+practice
+
+55:58.220 --> 55:59.460
+per poter
+
+55:59.460 --> 56:01.640
+affrontare
+
+56:01.640 --> 56:02.000
+la fase
+
+56:02.000 --> 56:03.080
+di testing
+
+56:03.080 --> 56:11.920
+ci siamo
+
+56:11.920 --> 56:12.380
+ragazzi
+
+56:12.380 --> 56:15.000
+sì sì
+
+56:15.000 --> 56:17.120
+sì sì
+
+56:17.120 --> 56:18.300
+tutto chiaro
+
+56:18.300 --> 56:20.080
+tutto chiaro
+
+56:20.080 --> 56:21.700
+ok
+
+56:21.700 --> 56:23.000
+quindi
+
+56:23.000 --> 56:24.060
+l'ultima
+
+56:24.060 --> 56:24.580
+fase
+
+56:24.580 --> 56:25.700
+è la parte
+
+56:25.700 --> 56:25.900
+di
+
+56:25.900 --> 56:26.180
+change
+
+56:26.180 --> 56:26.760
+management
+
+56:26.760 --> 56:28.920
+però
+
+56:28.920 --> 56:29.620
+credo
+
+56:29.620 --> 56:29.800
+che
+
+56:29.800 --> 56:30.200
+l'abbiamo
+
+56:30.200 --> 56:30.920
+affrontata
+
+56:30.920 --> 56:33.100
+a sufficienza
+
+56:33.100 --> 56:37.380
+niente
+
+56:37.380 --> 56:37.780
+che dirvi
+
+56:37.780 --> 56:38.160
+la fase
+
+56:38.160 --> 56:38.580
+di change
+
+56:38.580 --> 56:39.140
+management
+
+56:39.140 --> 56:40.740
+non so
+
+56:40.740 --> 56:40.980
+se
+
+56:40.980 --> 56:41.440
+volete
+
+56:41.440 --> 56:41.740
+avere
+
+56:41.740 --> 56:42.100
+qualche
+
+56:42.100 --> 56:42.740
+altro
+
+56:42.740 --> 56:45.520
+qualche
+
+56:45.520 --> 56:45.840
+altro
+
+56:45.840 --> 56:46.620
+dettaglio
+
+56:46.620 --> 56:46.940
+però
+
+56:46.940 --> 56:48.660
+diciamo
+
+56:48.660 --> 56:49.460
+la fase
+
+56:49.460 --> 56:49.840
+di change
+
+56:49.840 --> 56:50.580
+management
+
+56:50.580 --> 56:52.040
+è
+
+56:52.040 --> 56:54.840
+molto
+
+56:54.840 --> 56:56.020
+diciamo
+
+56:56.020 --> 56:56.960
+è importante
+
+56:56.960 --> 56:57.360
+però
+
+56:57.360 --> 56:58.260
+viaggia
+
+56:58.260 --> 56:59.420
+a braccetto
+
+56:59.420 --> 57:00.580
+con tutto
+
+57:00.580 --> 57:01.000
+quello che
+
+57:01.000 --> 57:01.360
+abbiamo
+
+57:01.360 --> 57:02.060
+definito
+
+57:02.060 --> 57:02.460
+prima
+
+57:02.460 --> 57:03.520
+senza
+
+57:03.520 --> 57:04.300
+tutto
+
+57:04.300 --> 57:04.660
+quello che
+
+57:04.660 --> 57:04.880
+abbiamo
+
+57:04.880 --> 57:05.300
+definito
+
+57:05.300 --> 57:05.640
+prima
+
+57:05.640 --> 57:05.980
+la fase
+
+57:05.980 --> 57:06.360
+di change
+
+57:06.360 --> 57:06.820
+management
+
+57:06.820 --> 57:08.940
+non ha
+
+57:08.940 --> 57:09.800
+i suoi effetti
+
+57:09.800 --> 57:12.240
+perché
+
+57:12.240 --> 57:12.640
+diciamo
+
+57:12.640 --> 57:13.140
+senza
+
+57:13.140 --> 57:14.160
+una tracciabilità
+
+57:14.160 --> 57:14.640
+e senza
+
+57:14.640 --> 57:15.940
+una documentazione
+
+57:15.940 --> 57:17.520
+fatta
+
+57:17.520 --> 57:17.960
+diciamo
+
+57:17.960 --> 57:20.280
+con un
+
+57:20.280 --> 57:20.860
+criterio
+
+57:20.860 --> 57:23.380
+la fase
+
+57:23.380 --> 57:23.700
+di change
+
+57:23.700 --> 57:24.220
+management
+
+57:24.220 --> 57:26.720
+rischia
+
+57:26.720 --> 57:27.700
+di portare
+
+57:27.700 --> 57:28.480
+ulteriori
+
+57:28.480 --> 57:29.240
+disordini
+
+57:29.240 --> 57:29.820
+all'interno
+
+57:29.820 --> 57:30.440
+del processo
+
+57:30.440 --> 57:31.460
+perché la fase
+
+57:31.460 --> 57:31.700
+di change
+
+57:31.700 --> 57:32.080
+management
+
+57:32.080 --> 57:32.600
+porta
+
+57:32.600 --> 57:33.160
+disordini
+
+57:33.160 --> 57:33.880
+nel processo
+
+57:33.880 --> 57:35.680
+perché tu
+
+57:35.680 --> 57:36.260
+da un momento
+
+57:36.260 --> 57:36.660
+all'altro
+
+57:36.660 --> 57:38.000
+potresti
+
+57:38.000 --> 57:39.820
+essere in una fase
+
+57:39.820 --> 57:40.620
+in cui stai
+
+57:40.620 --> 57:41.340
+definendo
+
+57:41.340 --> 57:42.100
+il requisito
+
+57:42.100 --> 57:42.720
+ma nello stesso
+
+57:42.720 --> 57:43.120
+tempo
+
+57:43.120 --> 57:44.040
+dopo due giorni
+
+57:44.040 --> 57:44.880
+il cliente
+
+57:44.880 --> 57:45.300
+ha deciso
+
+57:45.300 --> 57:46.160
+di cambiare
+
+57:46.160 --> 57:46.940
+quel requisito
+
+57:46.940 --> 57:48.700
+quindi tu devi
+
+57:48.700 --> 57:49.340
+essere in grado
+
+57:49.340 --> 57:49.900
+di affrontare
+
+57:49.900 --> 57:50.780
+questo cambiamento
+
+57:50.780 --> 57:52.680
+e questo
+
+57:52.680 --> 57:53.160
+cambiamento
+
+57:53.160 --> 57:54.060
+lo puoi affrontare
+
+57:54.060 --> 57:54.400
+se
+
+57:54.400 --> 57:55.480
+quel requisito
+
+57:55.480 --> 57:55.920
+lo hai
+
+57:55.920 --> 57:56.840
+elicitato
+
+57:56.840 --> 57:57.300
+no vabbè
+
+57:57.300 --> 57:57.760
+è brutto dire
+
+57:57.760 --> 57:58.860
+se lo hai
+
+57:58.860 --> 57:59.580
+consolidato
+
+57:59.580 --> 57:59.960
+nella fase
+
+57:59.960 --> 58:00.680
+di licitation
+
+58:00.680 --> 58:01.860
+quindi se
+
+58:01.860 --> 58:02.260
+è tuo
+
+58:02.260 --> 58:02.620
+già
+
+58:02.620 --> 58:04.040
+se tu sei
+
+58:04.040 --> 58:04.420
+padrone
+
+58:04.420 --> 58:05.200
+di quel requisito
+
+58:05.200 --> 58:06.200
+puoi affrontare
+
+58:06.200 --> 58:07.020
+un cambiamento
+
+58:07.020 --> 58:08.500
+se tu lo hai
+
+58:08.500 --> 58:09.220
+documentato
+
+58:09.220 --> 58:09.720
+bene
+
+58:09.720 --> 58:10.880
+puoi affrontare
+
+58:10.880 --> 58:11.800
+un cambiamento
+
+58:11.800 --> 58:12.160
+perché
+
+58:12.160 --> 58:13.080
+è padrone
+
+58:13.080 --> 58:13.820
+di quel requisito
+
+58:13.820 --> 58:14.180
+e quindi
+
+58:14.180 --> 58:15.440
+sai
+
+58:15.440 --> 58:17.780
+sei in grado
+
+58:17.780 --> 58:18.480
+di leggere
+
+58:18.480 --> 58:19.320
+il cambiamento
+
+58:19.320 --> 58:19.880
+e di poterlo
+
+58:19.880 --> 58:20.540
+apportare
+
+58:20.540 --> 58:21.520
+poi
+
+58:21.520 --> 58:23.880
+sul requisito
+
+58:23.880 --> 58:26.240
+la tracciabilità
+
+58:26.240 --> 58:26.900
+è fondamentale
+
+58:26.900 --> 58:28.240
+perché tu riesci
+
+58:28.240 --> 58:29.080
+a
+
+58:29.080 --> 58:30.320
+diciamo
+
+58:30.320 --> 58:31.280
+ad informare
+
+58:31.280 --> 58:32.600
+anche gli altri
+
+58:32.600 --> 58:33.400
+domini
+
+58:33.400 --> 58:35.040
+guardate che
+
+58:35.040 --> 58:36.200
+io questo requisito
+
+58:36.200 --> 58:36.920
+lo sto cambiando
+
+58:36.920 --> 58:37.940
+quindi tu devi cambiare
+
+58:37.940 --> 58:38.940
+quest'altro requisito
+
+58:38.940 --> 58:39.500
+software
+
+58:39.500 --> 58:40.320
+ad esempio
+
+58:40.320 --> 58:41.480
+tu devi cambiare
+
+58:41.480 --> 58:42.460
+questo test case
+
+58:42.460 --> 58:43.580
+quindi
+
+58:43.580 --> 58:44.640
+la tracciabilità
+
+58:44.640 --> 58:45.320
+è fondamentale
+
+58:45.320 --> 58:46.000
+per poter
+
+58:46.000 --> 58:47.140
+diciamo
+
+58:47.140 --> 58:48.060
+informare
+
+58:48.060 --> 58:49.960
+anche gli altri
+
+58:49.960 --> 58:50.580
+domini
+
+58:50.580 --> 58:51.560
+nel caso
+
+58:51.560 --> 58:52.120
+diciamo
+
+58:52.120 --> 58:53.640
+l'esame
+
+58:53.640 --> 58:54.700
+la parte di validazione
+
+58:54.700 --> 58:55.980
+che siete più vicini
+
+58:55.980 --> 58:56.380
+voi
+
+58:56.380 --> 58:57.520
+quindi voi sapete
+
+58:57.520 --> 58:58.780
+qual è il test case
+
+58:58.780 --> 58:59.340
+da dover
+
+58:59.340 --> 59:00.980
+cambiare
+
+59:00.980 --> 59:04.160
+e quindi
+
+59:04.160 --> 59:05.040
+chiaramente
+
+59:05.040 --> 59:06.160
+validare
+
+59:06.160 --> 59:07.460
+il nuovo cambiamento
+
+59:07.460 --> 59:07.780
+quindi
+
+59:07.780 --> 59:09.100
+la parte di change management
+
+59:09.100 --> 59:10.060
+è fondamentale
+
+59:10.060 --> 59:10.380
+però
+
+59:10.380 --> 59:11.160
+diciamo
+
+59:11.160 --> 59:12.060
+è molto importante
+
+59:12.060 --> 59:12.360
+ma
+
+59:12.360 --> 59:14.300
+crea disordini
+
+59:14.300 --> 59:14.680
+però
+
+59:14.680 --> 59:15.600
+questo disordine
+
+59:15.600 --> 59:16.020
+può essere
+
+59:16.020 --> 59:16.800
+minimizzato
+
+59:16.800 --> 59:18.120
+con
+
+59:18.120 --> 59:20.880
+tutti gli
+
+59:20.880 --> 59:22.460
+step precedenti
+
+59:22.460 --> 59:23.400
+sono stati affrontati
+
+59:23.400 --> 59:23.880
+in maniera
+
+59:23.880 --> 59:26.300
+corretta
+
+59:26.300 --> 59:28.320
+ok
+
+59:28.320 --> 59:28.640
+quindi
+
+59:28.640 --> 59:28.900
+questo
+
+59:28.900 --> 59:29.480
+immagino
+
+59:29.480 --> 59:30.500
+questi cambiamenti
+
+59:30.500 --> 59:31.160
+sono possibili
+
+59:31.160 --> 59:31.700
+fino a quando
+
+59:31.700 --> 59:32.400
+non viene fatta
+
+59:32.400 --> 59:32.660
+diciamo
+
+59:32.660 --> 59:33.180
+la fase di
+
+59:33.180 --> 59:33.640
+freezing
+
+59:33.640 --> 59:34.780
+dei requisiti
+
+59:34.780 --> 59:35.280
+dove
+
+59:35.280 --> 59:35.700
+dopo
+
+59:35.700 --> 59:36.100
+immagino
+
+59:36.100 --> 59:36.540
+non si possono
+
+59:36.540 --> 59:37.540
+più modificare
+
+59:37.540 --> 59:39.040
+no
+
+59:39.040 --> 59:39.720
+diciamo
+
+59:39.720 --> 59:43.700
+hai usato
+
+59:43.700 --> 59:44.120
+una parola
+
+59:44.120 --> 59:45.160
+giusta
+
+59:45.160 --> 59:45.400
+che
+
+59:45.400 --> 59:45.940
+mi sono
+
+59:45.940 --> 59:46.500
+dimenticato
+
+59:46.500 --> 59:47.260
+io di dirla
+
+59:47.260 --> 59:47.580
+però
+
+59:47.580 --> 59:48.860
+la vorrei
+
+59:48.860 --> 59:49.520
+riprendere
+
+59:49.520 --> 59:50.760
+allora
+
+59:50.760 --> 59:51.520
+c'è una fase
+
+59:51.520 --> 59:51.800
+in cui
+
+59:51.800 --> 59:52.700
+il cliente
+
+59:52.700 --> 59:53.360
+fornisce
+
+59:53.360 --> 59:54.140
+dei requisiti
+
+59:54.140 --> 59:56.340
+e il cliente
+
+59:56.340 --> 59:56.720
+diciamo
+
+59:56.720 --> 59:57.640
+il fornitore
+
+59:57.640 --> 59:58.020
+deve
+
+59:58.020 --> 59:58.720
+chiedere
+
+59:58.720 --> 59:59.280
+al cliente
+
+59:59.280 --> 59:59.660
+guarda
+
+59:59.660 --> 01:00:00.040
+che tu
+
+01:00:00.040 --> 01:00:00.520
+mi devi dare
+
+01:00:00.520 --> 01:00:01.020
+una data
+
+01:00:01.020 --> 01:00:01.760
+entro la quale
+
+01:00:01.760 --> 01:00:02.500
+quei requisiti
+
+01:00:02.500 --> 01:00:03.180
+poi non devono
+
+01:00:03.180 --> 01:00:03.960
+più cambiare
+
+01:00:03.960 --> 01:00:06.440
+però
+
+01:00:06.440 --> 01:00:07.140
+una volta
+
+01:00:07.140 --> 01:00:07.980
+che il cliente
+
+01:00:07.980 --> 01:00:08.300
+ti dà
+
+01:00:08.300 --> 01:00:08.980
+una data
+
+01:00:08.980 --> 01:00:10.100
+tu hai
+
+01:00:10.100 --> 01:00:10.740
+questo pacchetto
+
+01:00:10.740 --> 01:00:11.400
+di requisiti
+
+01:00:11.400 --> 01:00:12.040
+ma non è detto
+
+01:00:12.040 --> 01:00:12.780
+che dopo
+
+01:00:12.780 --> 01:00:13.380
+quella data
+
+01:00:13.380 --> 01:00:13.980
+questi requisiti
+
+01:00:13.980 --> 01:00:14.420
+non possono
+
+01:00:14.420 --> 01:00:15.060
+cambiare
+
+01:00:15.060 --> 01:00:19.500
+è chiaro
+
+01:00:19.500 --> 01:00:19.820
+ok
+
+01:00:19.820 --> 01:00:21.220
+non troppo
+
+01:00:21.220 --> 01:00:22.060
+chiaro
+
+01:00:22.060 --> 01:00:22.480
+se
+
+01:00:22.480 --> 01:00:23.480
+non lo so
+
+01:00:23.480 --> 01:00:23.920
+me lo vorresti
+
+01:00:23.920 --> 01:00:24.500
+spiegare un po'
+
+01:00:24.560 --> 01:00:24.660
+meglio
+
+01:00:24.660 --> 01:00:25.240
+allora
+
+01:00:25.240 --> 01:00:25.520
+sì
+
+01:00:25.520 --> 01:00:26.500
+allora
+
+01:00:26.500 --> 01:00:27.260
+ti faccio
+
+01:00:27.260 --> 01:00:28.180
+un esempio
+
+01:00:28.180 --> 01:00:28.980
+fammi vedere
+
+01:00:28.980 --> 01:00:36.000
+allora
+
+01:00:36.000 --> 01:00:36.700
+tu hai
+
+01:00:36.700 --> 01:00:40.060
+tu hai
+
+01:00:40.060 --> 01:00:41.480
+una timeline
+
+01:00:41.480 --> 01:00:42.120
+no
+
+01:00:42.120 --> 01:00:43.240
+questo è il tempo
+
+01:00:43.240 --> 01:00:44.380
+quindi
+
+01:00:44.380 --> 01:00:46.600
+qua tu c'hai
+
+01:00:46.600 --> 01:00:48.540
+il software
+
+01:00:48.540 --> 01:00:49.340
+la delivery
+
+01:00:49.340 --> 01:00:49.960
+del software
+
+01:00:49.960 --> 01:00:51.440
+la prima versione
+
+01:00:51.440 --> 01:00:52.420
+quindi versione 1
+
+01:00:52.420 --> 01:00:53.720
+del software
+
+01:00:53.720 --> 01:00:56.060
+ok
+
+01:00:56.060 --> 01:00:57.380
+tu ricevi
+
+01:00:57.380 --> 01:00:57.800
+qua
+
+01:00:57.800 --> 01:01:00.480
+il primo pacchetto
+
+01:01:00.480 --> 01:01:02.020
+i documenti
+
+01:01:02.020 --> 01:01:02.260
+no
+
+01:01:02.260 --> 01:01:04.280
+qua tu ricevi
+
+01:01:04.280 --> 01:01:04.880
+i documenti
+
+01:01:04.880 --> 01:01:05.080
+quindi
+
+01:01:05.080 --> 01:01:05.780
+prima versione
+
+01:01:05.780 --> 01:01:07.080
+dei documenti
+
+01:01:07.080 --> 01:01:09.900
+chiaramente
+
+01:01:09.900 --> 01:01:10.580
+il cliente
+
+01:01:10.580 --> 01:01:11.020
+dice ok
+
+01:01:11.020 --> 01:01:11.960
+questa prima versione
+
+01:01:11.960 --> 01:01:12.620
+dei documenti
+
+01:01:12.620 --> 01:01:13.200
+io però
+
+01:01:13.200 --> 01:01:14.600
+posso modificarla
+
+01:01:14.600 --> 01:01:15.740
+e ti potrò dare
+
+01:01:15.740 --> 01:01:16.600
+tutti i requisiti
+
+01:01:16.600 --> 01:01:17.260
+congelati
+
+01:01:17.260 --> 01:01:17.600
+qui
+
+01:01:17.600 --> 01:01:19.420
+ok
+
+01:01:19.420 --> 01:01:22.120
+quindi facciamo
+
+01:01:22.120 --> 01:01:22.460
+che questa
+
+01:01:22.460 --> 01:01:23.400
+è la versione 0
+
+01:01:23.400 --> 01:01:26.220
+questa qua
+
+01:01:26.220 --> 01:01:27.080
+è la prima versione
+
+01:01:27.080 --> 01:01:27.640
+quindi tu
+
+01:01:27.640 --> 01:01:28.540
+la tua attività
+
+01:01:28.540 --> 01:01:29.060
+la devi
+
+01:01:29.060 --> 01:01:29.760
+la dovresti
+
+01:01:29.760 --> 01:01:30.100
+in teoria
+
+01:01:30.100 --> 01:01:30.660
+iniziare
+
+01:01:30.660 --> 01:01:31.120
+da qui
+
+01:01:31.120 --> 01:01:32.740
+perché io
+
+01:01:32.740 --> 01:01:33.220
+qui ho
+
+01:01:33.220 --> 01:01:34.140
+tutto il congelamento
+
+01:01:34.140 --> 01:01:35.260
+del primo pacchetto
+
+01:01:35.260 --> 01:01:35.980
+dei requisiti
+
+01:01:35.980 --> 01:01:36.920
+ok
+
+01:01:36.920 --> 01:01:37.540
+però dopo
+
+01:01:37.540 --> 01:01:38.140
+quella fase
+
+01:01:38.140 --> 01:01:38.440
+diciamo
+
+01:01:38.440 --> 01:01:38.960
+il cliente
+
+01:01:38.960 --> 01:01:39.600
+non può più
+
+01:01:39.600 --> 01:01:40.360
+intervenire
+
+01:01:40.360 --> 01:01:41.140
+sui requisiti
+
+01:01:41.140 --> 01:01:42.480
+no
+
+01:01:42.480 --> 01:01:43.580
+diciamo
+
+01:01:43.580 --> 01:01:44.000
+in teoria
+
+01:01:44.000 --> 01:01:45.380
+può intervenire
+
+01:01:45.380 --> 01:01:46.920
+creando
+
+01:01:46.920 --> 01:01:47.660
+una versione
+
+01:01:47.660 --> 01:01:48.360
+successiva
+
+01:01:48.360 --> 01:01:52.980
+ok
+
+01:01:52.980 --> 01:01:54.140
+cioè tu qua
+
+01:01:54.140 --> 01:01:54.960
+inizi a lavorare
+
+01:01:54.960 --> 01:01:55.380
+con tutti
+
+01:01:55.380 --> 01:01:56.200
+questi requisiti
+
+01:01:56.200 --> 01:01:59.260
+chiaramente
+
+01:01:59.260 --> 01:01:59.580
+però
+
+01:01:59.580 --> 01:02:00.620
+in base
+
+01:02:00.620 --> 01:02:01.740
+alle tempistiche
+
+01:02:01.740 --> 01:02:03.100
+si decide
+
+01:02:03.100 --> 01:02:03.480
+se
+
+01:02:03.480 --> 01:02:05.100
+il cambiamento
+
+01:02:05.100 --> 01:02:06.100
+che è avvenuto
+
+01:02:06.100 --> 01:02:08.100
+tra 1
+
+01:02:08.100 --> 01:02:08.720
+e 2
+
+01:02:08.720 --> 01:02:10.600
+può essere
+
+01:02:10.600 --> 01:02:12.440
+incluso
+
+01:02:12.440 --> 01:02:13.480
+nella versione 1
+
+01:02:13.480 --> 01:02:14.140
+del software
+
+01:02:14.140 --> 01:02:15.520
+magari lui dice
+
+01:02:15.520 --> 01:02:16.120
+guarda che io
+
+01:02:16.120 --> 01:02:16.800
+te li cambio
+
+01:02:16.800 --> 01:02:18.840
+in questa versione 2
+
+01:02:18.840 --> 01:02:19.140
+però
+
+01:02:19.140 --> 01:02:20.700
+tutto ciò che io
+
+01:02:20.700 --> 01:02:21.220
+ti ho cambiato
+
+01:02:21.220 --> 01:02:22.180
+in questa versione 2
+
+01:02:22.180 --> 01:02:23.440
+tu non me la devi mettere
+
+01:02:23.440 --> 01:02:24.180
+nella versione 1
+
+01:02:24.180 --> 01:02:24.820
+del software
+
+01:02:24.820 --> 01:02:25.680
+ma me la devi mettere
+
+01:02:25.680 --> 01:02:26.420
+nella versione 2
+
+01:02:26.420 --> 01:02:26.860
+magari
+
+01:02:26.860 --> 01:02:28.560
+ok
+
+01:02:28.560 --> 01:02:29.240
+è capito
+
+01:02:29.240 --> 01:02:32.880
+oppure lui dice
+
+01:02:32.880 --> 01:02:33.460
+guarda che c'è
+
+01:02:33.460 --> 01:02:34.280
+tanto tempo
+
+01:02:34.280 --> 01:02:35.040
+da qui
+
+01:02:35.040 --> 01:02:36.300
+dalla versione 2
+
+01:02:36.300 --> 01:02:37.040
+al rilascio
+
+01:02:37.040 --> 01:02:37.700
+del software
+
+01:02:37.700 --> 01:02:39.560
+quindi tu hai
+
+01:02:39.560 --> 01:02:40.960
+tempo per poter
+
+01:02:40.960 --> 01:02:42.120
+diciamo
+
+01:02:42.120 --> 01:02:42.840
+prendere i miei
+
+01:02:42.840 --> 01:02:43.620
+cambiamenti
+
+01:02:43.620 --> 01:02:44.760
+e metterli
+
+01:02:44.760 --> 01:02:45.760
+diciamo
+
+01:02:45.760 --> 01:02:47.180
+e implementarli
+
+01:02:47.180 --> 01:02:50.000
+ci sono delle date
+
+01:02:50.000 --> 01:02:50.860
+che sono definite
+
+01:02:50.860 --> 01:02:51.700
+come freeze
+
+01:02:51.700 --> 01:02:52.680
+freeze date
+
+01:02:52.680 --> 01:02:54.220
+cioè le date
+
+01:02:54.220 --> 01:02:55.180
+di congelamento
+
+01:02:55.180 --> 01:02:56.920
+in cui
+
+01:02:56.920 --> 01:02:57.380
+ti dice
+
+01:02:57.380 --> 01:02:57.840
+guarda che
+
+01:02:57.840 --> 01:02:58.720
+il pacchetto
+
+01:02:58.720 --> 01:02:59.260
+di requisiti
+
+01:02:59.260 --> 01:02:59.840
+è pronto
+
+01:02:59.840 --> 01:03:01.200
+quindi tu puoi iniziare
+
+01:03:01.200 --> 01:03:02.020
+la tua fase
+
+01:03:02.020 --> 01:03:02.840
+di elicitation
+
+01:03:02.840 --> 01:03:03.460
+puoi iniziare
+
+01:03:03.460 --> 01:03:03.920
+la tua fase
+
+01:03:03.920 --> 01:03:05.460
+di documentazione
+
+01:03:05.460 --> 01:03:06.500
+però
+
+01:03:06.500 --> 01:03:07.940
+durante questa fase
+
+01:03:07.940 --> 01:03:09.380
+ci potrebbero essere
+
+01:03:09.380 --> 01:03:10.020
+dei cambiamenti
+
+01:03:10.020 --> 01:03:10.360
+che però
+
+01:03:10.360 --> 01:03:11.380
+devono essere
+
+01:03:11.380 --> 01:03:11.900
+chiaramente
+
+01:03:11.900 --> 01:03:12.820
+definiti
+
+01:03:12.820 --> 01:03:14.620
+e concordati
+
+01:03:14.620 --> 01:03:16.260
+con il fornitore
+
+01:03:16.260 --> 01:03:16.780
+che
+
+01:03:16.780 --> 01:03:18.140
+in base alle tempistiche
+
+01:03:18.140 --> 01:03:18.460
+ti dice
+
+01:03:18.460 --> 01:03:19.320
+ok guarda
+
+01:03:19.320 --> 01:03:20.160
+il requisito
+
+01:03:20.160 --> 01:03:22.240
+qui
+
+01:03:22.240 --> 01:03:23.000
+non devi più
+
+01:03:23.000 --> 01:03:23.580
+prendere questo
+
+01:03:23.580 --> 01:03:24.180
+ma devi prendere
+
+01:03:24.180 --> 01:03:24.880
+questo qui
+
+01:03:25.180 --> 01:03:27.340
+perché
+
+01:03:27.340 --> 01:03:27.940
+siamo ancora
+
+01:03:27.940 --> 01:03:28.460
+in tempo
+
+01:03:28.460 --> 01:03:29.160
+per poter
+
+01:03:29.160 --> 01:03:30.780
+implementarlo
+
+01:03:30.780 --> 01:03:31.920
+ok
+
+01:03:31.920 --> 01:03:32.440
+oppure
+
+01:03:32.440 --> 01:03:33.140
+se ad esempio
+
+01:03:33.140 --> 01:03:33.460
+lui
+
+01:03:33.460 --> 01:03:34.380
+ti manda
+
+01:03:34.380 --> 01:03:35.220
+un'altra versione
+
+01:03:35.220 --> 01:03:35.580
+qua
+
+01:03:35.580 --> 01:03:36.960
+del documento
+
+01:03:36.960 --> 01:03:39.080
+è chiaro
+
+01:03:39.080 --> 01:03:39.560
+che tu qua
+
+01:03:39.560 --> 01:03:39.940
+non puoi
+
+01:03:39.940 --> 01:03:40.720
+non puoi più
+
+01:03:40.720 --> 01:03:41.920
+prenderti
+
+01:03:41.920 --> 01:03:43.240
+i cambiamenti
+
+01:03:43.240 --> 01:03:44.040
+e portarli
+
+01:03:44.040 --> 01:03:44.820
+nella versione 1
+
+01:03:44.820 --> 01:03:45.440
+del software
+
+01:03:45.440 --> 01:03:50.080
+ok
+
+01:03:50.080 --> 01:03:51.140
+e quindi
+
+01:03:51.140 --> 01:03:51.620
+entreranno
+
+01:03:51.620 --> 01:03:52.720
+poi nella versione 2
+
+01:03:52.720 --> 01:03:53.500
+ma
+
+01:03:53.500 --> 01:03:55.260
+nella versione 2
+
+01:03:55.260 --> 01:03:56.080
+nella versione 3
+
+01:03:56.080 --> 01:03:56.640
+poi questo
+
+01:03:56.640 --> 01:03:57.220
+verrà deciso
+
+01:03:57.220 --> 01:03:57.800
+come ti dicevo
+
+01:03:57.800 --> 01:03:58.400
+a cascata
+
+01:03:58.400 --> 01:03:58.700
+diciamo
+
+01:03:58.700 --> 01:04:00.120
+il project manager
+
+01:04:00.120 --> 01:04:00.660
+deciderà
+
+01:04:00.660 --> 01:04:01.180
+quando
+
+01:04:01.180 --> 01:04:02.380
+integrare
+
+01:04:02.380 --> 01:04:03.000
+quando includere
+
+01:04:03.000 --> 01:04:04.060
+questi cambiamenti
+
+01:04:04.060 --> 01:04:04.980
+e tu saprai
+
+01:04:04.980 --> 01:04:05.920
+che questo cambiamento
+
+01:04:05.920 --> 01:04:06.380
+lo dovrai
+
+01:04:06.380 --> 01:04:06.920
+prendere
+
+01:04:06.920 --> 01:04:08.280
+in carico
+
+01:04:08.280 --> 01:04:09.280
+per la versione 2
+
+01:04:09.280 --> 01:04:09.880
+del software
+
+01:04:09.880 --> 01:04:10.820
+quindi se stavi
+
+01:04:10.820 --> 01:04:11.460
+facendo ancora
+
+01:04:11.460 --> 01:04:12.060
+qualche attività
+
+01:04:12.060 --> 01:04:12.940
+per la versione 1
+
+01:04:12.940 --> 01:04:13.740
+questi cambiamenti
+
+01:04:13.740 --> 01:04:14.580
+a te non ti devono
+
+01:04:14.580 --> 01:04:15.680
+interessare
+
+01:04:15.680 --> 01:04:16.140
+al momento
+
+01:04:16.140 --> 01:04:17.080
+ok
+
+01:04:17.080 --> 01:04:18.380
+ma c'è un momento
+
+01:04:18.380 --> 01:04:19.620
+esiste un momento
+
+01:04:19.620 --> 01:04:20.620
+in cui il cliente
+
+01:04:20.620 --> 01:04:22.000
+non può più intervenire
+
+01:04:22.000 --> 01:04:23.000
+perché ormai
+
+01:04:23.000 --> 01:04:23.480
+il prodotto
+
+01:04:23.480 --> 01:04:23.900
+deve essere
+
+01:04:23.900 --> 01:04:24.800
+magari rilasciato
+
+01:04:24.800 --> 01:04:25.640
+nel commercio
+
+01:04:25.640 --> 01:04:26.740
+no
+
+01:04:26.740 --> 01:04:27.640
+diciamo che il cliente
+
+01:04:27.640 --> 01:04:28.160
+ha in mano
+
+01:04:28.160 --> 01:04:29.820
+il cliente è quello
+
+01:04:29.820 --> 01:04:31.200
+che chiede a te
+
+01:04:31.200 --> 01:04:31.780
+di sviluppare
+
+01:04:31.780 --> 01:04:32.560
+qualcosa per lui
+
+01:04:32.560 --> 01:04:33.660
+quindi lui decide
+
+01:04:33.660 --> 01:04:35.380
+se lui ha i soldi
+
+01:04:35.380 --> 01:04:36.660
+ogni cambiamento
+
+01:04:36.660 --> 01:04:37.860
+che lui chiede
+
+01:04:37.860 --> 01:04:39.460
+ti deve pagare
+
+01:04:39.460 --> 01:04:39.800
+ok
+
+01:04:39.800 --> 01:04:40.700
+lui ti può chiedere
+
+01:04:40.700 --> 01:04:41.540
+anche un cambiamento
+
+01:04:41.540 --> 01:04:42.900
+per l'ultimo giorno
+
+01:04:42.900 --> 01:04:43.160
+però
+
+01:04:43.160 --> 01:04:44.060
+diciamo è sua
+
+01:04:44.060 --> 01:04:45.100
+come si dice
+
+01:04:45.100 --> 01:04:47.060
+è responsabilità sua
+
+01:04:47.060 --> 01:04:47.900
+prima di tutto
+
+01:04:47.900 --> 01:04:49.740
+pagarti per questo cambiamento
+
+01:04:49.740 --> 01:04:50.860
+e nel secondo modo
+
+01:04:50.860 --> 01:04:51.840
+chiaramente
+
+01:04:51.840 --> 01:04:52.920
+subire dei ritardi
+
+01:04:52.920 --> 01:04:54.860
+sul rilascio
+
+01:04:54.860 --> 01:04:55.240
+ok
+
+01:04:55.240 --> 01:04:56.160
+chiarissimo
+
+01:04:56.160 --> 01:04:56.600
+grazie
+
+01:04:56.600 --> 01:04:57.000
+sì Mario
+
+01:04:57.000 --> 01:04:58.000
+volevo solo aggiungere
+
+01:04:58.000 --> 01:04:58.600
+una cosa
+
+01:04:58.600 --> 01:04:59.640
+Mario
+
+01:04:59.640 --> 01:05:00.320
+io avrei
+
+01:05:00.320 --> 01:05:00.840
+scusami
+
+01:05:00.840 --> 01:05:02.540
+sempre Pasquale
+
+01:05:02.540 --> 01:05:03.580
+voglio giusto dire una cosa
+
+01:05:03.580 --> 01:05:05.260
+e ti lascio parlare
+
+01:05:05.260 --> 01:05:07.080
+e meno male
+
+01:05:07.080 --> 01:05:08.520
+che te ne devi andare
+
+01:05:08.520 --> 01:05:10.480
+quando ci sono queste lezioni
+
+01:05:10.480 --> 01:05:11.340
+io ne approfitto
+
+01:05:11.340 --> 01:05:12.620
+io sono uno studente
+
+01:05:12.620 --> 01:05:13.280
+sempre
+
+01:05:13.280 --> 01:05:14.740
+quindi è interessantissima
+
+01:05:14.740 --> 01:05:15.400
+questa lezione
+
+01:05:15.400 --> 01:05:16.480
+sempre
+
+01:05:16.480 --> 01:05:17.000
+bravo
+
+01:05:17.000 --> 01:05:17.400
+no no
+
+01:05:17.400 --> 01:05:18.280
+volevo soltanto dire
+
+01:05:18.280 --> 01:05:19.200
+che sull'ambito
+
+01:05:19.200 --> 01:05:20.680
+quando abbiamo spiegato
+
+01:05:20.680 --> 01:05:21.740
+diciamo il cycle
+
+01:05:21.740 --> 01:05:22.700
+eccetera eccetera
+
+01:05:22.700 --> 01:05:24.340
+per dare un'idea di massima
+
+01:05:24.340 --> 01:05:26.460
+avevo preso una scheda progetto
+
+01:05:26.460 --> 01:05:27.300
+di un cliente
+
+01:05:27.300 --> 01:05:28.240
+dove effettivamente
+
+01:05:28.240 --> 01:05:29.060
+a un certo punto
+
+01:05:29.060 --> 01:05:29.860
+del progetto
+
+01:05:29.860 --> 01:05:31.000
+ovviamente i requisiti
+
+01:05:31.000 --> 01:05:32.120
+venivano frizzati
+
+01:05:32.120 --> 01:05:34.420
+per trasmettere l'idea
+
+01:05:34.420 --> 01:05:35.000
+che chiaramente
+
+01:05:35.000 --> 01:05:36.380
+il requisito
+
+01:05:36.380 --> 01:05:37.300
+viene scritto
+
+01:05:37.300 --> 01:05:38.100
+approvato
+
+01:05:38.100 --> 01:05:39.140
+come dicevi prima
+
+01:05:39.140 --> 01:05:40.480
+e poi si implementa
+
+01:05:40.480 --> 01:05:41.100
+si testa
+
+01:05:41.100 --> 01:05:41.760
+eccetera eccetera
+
+01:05:41.760 --> 01:05:42.600
+eccetera
+
+01:05:42.600 --> 01:05:44.680
+l'idea del change management
+
+01:05:44.680 --> 01:05:45.440
+il change request
+
+01:05:45.440 --> 01:05:46.040
+eccetera
+
+01:05:46.040 --> 01:05:47.220
+è proprio per gestire
+
+01:05:47.220 --> 01:05:48.460
+appunto
+
+01:05:48.460 --> 01:05:48.960
+non voglio dire
+
+01:05:48.960 --> 01:05:49.880
+questi fuori process
+
+01:05:49.880 --> 01:05:50.500
+perché comunque
+
+01:05:50.500 --> 01:05:51.580
+parte del processo
+
+01:05:51.580 --> 01:05:52.260
+però per dire
+
+01:05:52.260 --> 01:05:53.020
+se il cliente
+
+01:05:53.020 --> 01:05:54.200
+ti chiede dei cambiamenti
+
+01:05:54.200 --> 01:05:55.760
+fuori programma
+
+01:05:55.760 --> 01:05:57.680
+anche un contesto
+
+01:05:57.680 --> 01:05:58.560
+rispetto a quello che
+
+01:05:58.560 --> 01:05:59.560
+diciamo ci siamo
+
+01:05:59.560 --> 01:06:00.540
+ditti con i ragazzi
+
+01:06:00.540 --> 01:06:01.880
+informazione
+
+01:06:01.880 --> 01:06:02.560
+dove guardavamo
+
+01:06:02.560 --> 01:06:03.480
+questa scheda progetto
+
+01:06:03.480 --> 01:06:04.180
+e ci dicevamo
+
+01:06:04.180 --> 01:06:05.120
+ok a un certo punto
+
+01:06:05.120 --> 01:06:05.580
+i requisiti
+
+01:06:05.580 --> 01:06:06.460
+sono frizzati
+
+01:06:06.460 --> 01:06:08.520
+questo diciamo
+
+01:06:08.520 --> 01:06:09.300
+è per gestire
+
+01:06:09.300 --> 01:06:10.160
+i cambiamenti
+
+01:06:10.160 --> 01:06:10.960
+successivi
+
+01:06:10.960 --> 01:06:12.160
+anche eventualmente
+
+01:06:12.160 --> 01:06:12.840
+a quelle date
+
+01:06:12.840 --> 01:06:14.260
+di frizz
+
+01:06:14.260 --> 01:06:14.900
+ma giustamente
+
+01:06:14.900 --> 01:06:15.660
+fino a che ci stanno
+
+01:06:15.660 --> 01:06:16.300
+i soldi
+
+01:06:16.300 --> 01:06:17.240
+è il cliente
+
+01:06:17.240 --> 01:06:17.580
+che fa
+
+01:06:17.580 --> 01:06:17.820
+questo
+
+01:06:17.820 --> 01:06:20.620
+no ma infatti
+
+01:06:20.620 --> 01:06:21.240
+stavo pensando
+
+01:06:21.240 --> 01:06:21.980
+proprio a quella
+
+01:06:21.980 --> 01:06:22.920
+diciamo
+
+01:06:22.920 --> 01:06:23.300
+un processo
+
+01:06:23.300 --> 01:06:24.420
+che ci hai fatto vedere
+
+01:06:24.420 --> 01:06:26.060
+ma voi non vai in contatto
+
+01:06:26.060 --> 01:06:27.220
+diciamo che il change management
+
+01:06:27.220 --> 01:06:27.860
+chiaramente
+
+01:06:27.860 --> 01:06:28.940
+resta che tu
+
+01:06:28.940 --> 01:06:31.200
+definisci delle date
+
+01:06:31.200 --> 01:06:31.800
+e appunto
+
+01:06:31.800 --> 01:06:33.260
+degli accordi economici
+
+01:06:33.260 --> 01:06:34.020
+con chi ti deve
+
+01:06:34.020 --> 01:06:35.200
+implementare il software
+
+01:06:35.200 --> 01:06:35.760
+poi nel momento
+
+01:06:35.760 --> 01:06:36.480
+in cui tu decidi
+
+01:06:36.480 --> 01:06:37.160
+il tuo cliente
+
+01:06:37.160 --> 01:06:37.960
+decidi di fare
+
+01:06:37.960 --> 01:06:38.860
+delle modifiche
+
+01:06:38.860 --> 01:06:40.740
+e il fornitore
+
+01:06:40.740 --> 01:06:41.260
+ti dirà
+
+01:06:41.260 --> 01:06:41.700
+ok
+
+01:06:41.700 --> 01:06:42.640
+questo va fuori
+
+01:06:42.640 --> 01:06:43.980
+dal nostro contratto
+
+01:06:43.980 --> 01:06:44.520
+iniziale
+
+01:06:44.520 --> 01:06:45.160
+pagami
+
+01:06:45.160 --> 01:06:46.000
+se il cliente
+
+01:06:46.000 --> 01:06:46.840
+c'ha i soldi
+
+01:06:46.840 --> 01:06:47.740
+allora la modifica
+
+01:06:47.740 --> 01:06:48.540
+si fa sempre
+
+01:06:48.540 --> 01:06:49.480
+se no
+
+01:06:49.480 --> 01:06:49.920
+no
+
+01:06:49.920 --> 01:06:51.180
+quindi non va in contrasto
+
+01:06:51.180 --> 01:06:51.740
+rispetto a quello
+
+01:06:51.740 --> 01:06:52.540
+che ci siamo detti
+
+01:06:52.540 --> 01:06:53.680
+è un approfondimento
+
+01:06:53.680 --> 01:06:55.620
+estremamente interessante
+
+01:06:55.620 --> 01:06:55.920
+direi
+
+01:06:55.920 --> 01:06:56.740
+infatti Mario
+
+01:06:56.740 --> 01:06:57.340
+Gabriele
+
+01:06:57.340 --> 01:06:58.020
+appucerò
+
+01:06:58.020 --> 01:06:59.440
+fortemente
+
+01:06:59.440 --> 01:07:00.560
+di questa lezione
+
+01:07:00.560 --> 01:07:01.520
+per i prossimi
+
+01:07:01.520 --> 01:07:02.800
+programmi di formazione
+
+01:07:02.800 --> 01:07:06.360
+sì
+
+01:07:06.360 --> 01:07:06.640
+no
+
+01:07:06.640 --> 01:07:07.520
+diciamo che
+
+01:07:07.520 --> 01:07:08.220
+il change management
+
+01:07:08.220 --> 01:07:08.460
+è che
+
+01:07:08.460 --> 01:07:09.260
+non vedetelo
+
+01:07:09.260 --> 01:07:10.600
+come qualcosa
+
+01:07:10.600 --> 01:07:12.460
+che vi stravolgerà
+
+01:07:12.460 --> 01:07:12.940
+la vita
+
+01:07:12.940 --> 01:07:13.220
+ecco
+
+01:07:13.220 --> 01:07:13.480
+non
+
+01:07:13.480 --> 01:07:15.080
+non abbiate paura
+
+01:07:15.080 --> 01:07:16.060
+di questo change management
+
+01:07:16.060 --> 01:07:16.480
+che può
+
+01:07:16.480 --> 01:07:17.480
+sembrare un po'
+
+01:07:17.740 --> 01:07:20.220
+che disturba
+
+01:07:20.220 --> 01:07:20.500
+un po'
+
+01:07:20.540 --> 01:07:21.360
+la nostra attività
+
+01:07:21.360 --> 01:07:21.700
+però
+
+01:07:21.700 --> 01:07:22.840
+è chiaro
+
+01:07:22.840 --> 01:07:23.280
+che
+
+01:07:23.280 --> 01:07:24.240
+che bisogna
+
+01:07:24.240 --> 01:07:24.960
+essere pronti
+
+01:07:24.960 --> 01:07:25.660
+qualora ci dovesse
+
+01:07:25.660 --> 01:07:26.800
+essere dei cambiamenti
+
+01:07:26.800 --> 01:07:27.140
+però
+
+01:07:27.140 --> 01:07:27.680
+diciamo
+
+01:07:27.680 --> 01:07:28.620
+è tutto a cascata
+
+01:07:28.620 --> 01:07:29.120
+cioè nel senso
+
+01:07:29.120 --> 01:07:30.160
+tu non dovrai mai
+
+01:07:30.160 --> 01:07:31.720
+a meno che non diventi
+
+01:07:31.720 --> 01:07:32.780
+poi un project manager
+
+01:07:32.780 --> 01:07:33.400
+o quant'altro
+
+01:07:33.400 --> 01:07:34.240
+dover discutere
+
+01:07:34.240 --> 01:07:35.500
+su quando far entrare
+
+01:07:35.500 --> 01:07:36.120
+il cambiamento
+
+01:07:36.120 --> 01:07:37.380
+o meno
+
+01:07:37.380 --> 01:07:38.640
+sulla parte di budget
+
+01:07:38.640 --> 01:07:39.140
+e quant'altro
+
+01:07:39.140 --> 01:07:39.380
+però
+
+01:07:39.380 --> 01:07:40.980
+tu quello che ricevi
+
+01:07:40.980 --> 01:07:42.060
+è una richiesta
+
+01:07:42.060 --> 01:07:43.240
+di cambiamento
+
+01:07:43.240 --> 01:07:44.180
+di quel requisito
+
+01:07:44.180 --> 01:07:46.060
+nella versione
+
+01:07:46.060 --> 01:07:46.500
+X
+
+01:07:46.500 --> 01:07:47.640
+del software
+
+01:07:47.640 --> 01:07:49.380
+cioè
+
+01:07:49.380 --> 01:07:50.480
+se tu stai lavorando
+
+01:07:50.480 --> 01:07:51.160
+per la versione
+
+01:07:51.160 --> 01:07:52.180
+1 del software
+
+01:07:52.180 --> 01:07:53.780
+e dall'alto
+
+01:07:53.780 --> 01:07:54.740
+ti arriva una richiesta
+
+01:07:54.740 --> 01:07:55.460
+di cambiare
+
+01:07:55.460 --> 01:07:56.240
+il requisito
+
+01:07:56.240 --> 01:07:56.960
+nella versione 1
+
+01:07:56.960 --> 01:07:57.560
+del software
+
+01:07:57.560 --> 01:07:58.780
+lo farai
+
+01:07:58.780 --> 01:07:59.680
+con tranquillità
+
+01:07:59.680 --> 01:08:00.240
+non c'è
+
+01:08:00.240 --> 01:08:02.540
+nessuna difficoltà
+
+01:08:02.540 --> 01:08:02.860
+ecco
+
+01:08:02.860 --> 01:08:04.320
+però
+
+01:08:04.320 --> 01:08:05.300
+è una cosa
+
+01:08:05.300 --> 01:08:06.040
+che ci arriva
+
+01:08:06.040 --> 01:08:06.800
+e dobbiamo
+
+01:08:06.800 --> 01:08:08.660
+saperla affrontare
+
+01:08:08.660 --> 01:08:13.400
+i cambiamenti
+
+01:08:13.400 --> 01:08:14.180
+possono arrivare
+
+01:08:14.180 --> 01:08:15.060
+in qualsiasi
+
+01:08:15.060 --> 01:08:15.620
+in qualsiasi
+
+01:08:15.620 --> 01:08:15.940
+momento
+
+01:08:15.940 --> 01:08:16.220
+però
+
+01:08:16.220 --> 01:08:16.740
+diciamo
+
+01:08:16.740 --> 01:08:17.660
+nelle fasi iniziali
+
+01:08:17.660 --> 01:08:18.300
+del progetto
+
+01:08:18.300 --> 01:08:18.940
+si tenta
+
+01:08:18.940 --> 01:08:19.440
+si
+
+01:08:19.440 --> 01:08:20.700
+si
+
+01:08:20.700 --> 01:08:22.540
+si consolida
+
+01:08:22.540 --> 01:08:22.880
+prima
+
+01:08:22.880 --> 01:08:23.960
+tutta la parte
+
+01:08:23.960 --> 01:08:25.100
+di requisiti
+
+01:08:25.100 --> 01:08:26.340
+iniziale
+
+01:08:26.340 --> 01:08:27.480
+e poi si inizia
+
+01:08:27.480 --> 01:08:27.860
+con la fase
+
+01:08:27.860 --> 01:08:28.560
+di change management
+
+01:08:28.560 --> 01:08:29.520
+la fase di change management
+
+01:08:29.520 --> 01:08:30.400
+arriva
+
+01:08:30.400 --> 01:08:31.020
+bene o male
+
+01:08:31.020 --> 01:08:32.000
+a
+
+01:08:32.000 --> 01:08:32.600
+diciamo
+
+01:08:32.600 --> 01:08:33.520
+quando si è
+
+01:08:33.520 --> 01:08:33.920
+già
+
+01:08:33.920 --> 01:08:35.340
+ai due terzi
+
+01:08:35.340 --> 01:08:36.700
+della fase
+
+01:08:36.700 --> 01:08:37.080
+di vita
+
+01:08:37.080 --> 01:08:37.840
+del progetto
+
+01:08:37.840 --> 01:08:38.340
+diciamo
+
+01:08:38.340 --> 01:08:39.920
+dove il cliente
+
+01:08:39.920 --> 01:08:40.360
+magari
+
+01:08:40.360 --> 01:08:41.140
+dopo aver fatto
+
+01:08:41.140 --> 01:08:42.380
+i primi test
+
+01:08:42.380 --> 01:08:44.280
+e aver avuto
+
+01:08:44.280 --> 01:08:45.300
+i primi riscontri
+
+01:08:45.300 --> 01:08:45.960
+pratici
+
+01:08:45.960 --> 01:08:46.660
+sul campo
+
+01:08:46.660 --> 01:08:47.880
+capisce
+
+01:08:47.880 --> 01:08:48.180
+che
+
+01:08:48.180 --> 01:08:48.840
+ha necessità
+
+01:08:48.840 --> 01:08:49.720
+di cambiare qualcosa
+
+01:08:49.720 --> 01:08:50.180
+e quindi
+
+01:08:50.180 --> 01:08:51.300
+in quel momento
+
+01:08:51.300 --> 01:08:52.740
+potrebbero arrivare
+
+01:08:52.740 --> 01:08:53.520
+dei cambiamenti
+
+01:08:53.520 --> 01:08:58.200
+così come
+
+01:08:58.200 --> 01:08:58.600
+noi
+
+01:08:58.600 --> 01:08:59.100
+stesso
+
+01:08:59.100 --> 01:08:59.700
+i fornitori
+
+01:08:59.700 --> 01:09:00.800
+potrebbero suggerire
+
+01:09:00.800 --> 01:09:02.080
+dei cambiamenti
+
+01:09:02.080 --> 01:09:03.280
+al cliente
+
+01:09:03.280 --> 01:09:06.660
+mario
+
+01:09:06.660 --> 01:09:07.080
+io avrei
+
+01:09:07.080 --> 01:09:07.960
+una domanda
+
+01:09:07.960 --> 01:09:09.260
+di curiosità
+
+01:09:09.260 --> 01:09:10.560
+alessati
+
+01:09:10.560 --> 01:09:11.260
+chi sei
+
+01:09:11.260 --> 01:09:11.800
+alessandro
+
+01:09:11.800 --> 01:09:12.820
+alessandro
+
+01:09:12.820 --> 01:09:13.980
+allora
+
+01:09:13.980 --> 01:09:14.400
+sì
+
+01:09:14.400 --> 01:09:15.760
+volevo dire
+
+01:09:15.760 --> 01:09:16.320
+quando
+
+01:09:16.320 --> 01:09:17.280
+diciamo
+
+01:09:17.280 --> 01:09:18.020
+ad esempio
+
+01:09:18.020 --> 01:09:19.220
+certi requisiti
+
+01:09:19.220 --> 01:09:20.620
+che sono cambiati
+
+01:09:20.620 --> 01:09:21.360
+non riescono
+
+01:09:21.360 --> 01:09:23.340
+ad essere inclusi
+
+01:09:23.340 --> 01:09:23.960
+all'interno
+
+01:09:23.960 --> 01:09:25.080
+della versione 1
+
+01:09:25.080 --> 01:09:25.640
+ad esempio
+
+01:09:25.640 --> 01:09:26.680
+perché poi
+
+01:09:26.680 --> 01:09:27.540
+la versione 1
+
+01:09:27.540 --> 01:09:28.260
+si porta
+
+01:09:28.260 --> 01:09:28.860
+comunque
+
+01:09:28.860 --> 01:09:30.560
+a termine
+
+01:09:30.560 --> 01:09:31.560
+per magari
+
+01:09:31.560 --> 01:09:32.300
+testarla
+
+01:09:32.300 --> 01:09:33.420
+e verificare
+
+01:09:33.420 --> 01:09:34.960
+altri problemi
+
+01:09:34.960 --> 01:09:36.380
+incombere di altri
+
+01:09:36.380 --> 01:09:36.900
+problemi
+
+01:09:36.900 --> 01:09:37.180
+e poi
+
+01:09:37.180 --> 01:09:38.100
+risolvere
+
+01:09:38.100 --> 01:09:39.480
+no
+
+01:09:39.480 --> 01:09:40.200
+il fatto che
+
+01:09:40.200 --> 01:09:40.820
+diciamo
+
+01:09:40.820 --> 01:09:41.560
+un requisito
+
+01:09:41.560 --> 01:09:41.920
+può
+
+01:09:41.920 --> 01:09:42.880
+o non può
+
+01:09:42.880 --> 01:09:43.860
+entrare
+
+01:09:43.860 --> 01:09:44.660
+in una versione
+
+01:09:44.660 --> 01:09:45.940
+quello è deciso
+
+01:09:45.940 --> 01:09:47.900
+ad atti livelli
+
+01:09:47.900 --> 01:09:48.580
+diciamo
+
+01:09:48.580 --> 01:09:50.660
+tu non puoi mai
+
+01:09:50.660 --> 01:09:51.120
+decidere
+
+01:09:51.120 --> 01:09:52.020
+se quel requisito
+
+01:09:52.020 --> 01:09:52.760
+può o non può
+
+01:09:52.760 --> 01:09:53.640
+entrare in un software
+
+01:09:53.640 --> 01:09:53.960
+diciamo
+
+01:09:53.960 --> 01:09:54.380
+c'è
+
+01:09:54.380 --> 01:09:55.380
+c'è un accordo
+
+01:09:55.380 --> 01:09:56.020
+che viene fatto
+
+01:09:56.020 --> 01:09:56.940
+tra il cliente
+
+01:09:56.940 --> 01:09:57.660
+e il fornitore
+
+01:09:57.660 --> 01:09:59.600
+diciamo
+
+01:09:59.600 --> 01:10:01.160
+di solito
+
+01:10:01.160 --> 01:10:02.040
+come dicevo
+
+01:10:02.040 --> 01:10:04.040
+la timeline
+
+01:10:04.040 --> 01:10:04.880
+le tempistiche
+
+01:10:04.880 --> 01:10:05.580
+fanno sempre
+
+01:10:05.580 --> 01:10:06.120
+da padrone
+
+01:10:06.120 --> 01:10:06.380
+diciamo
+
+01:10:06.380 --> 01:10:06.820
+sono sempre
+
+01:10:06.820 --> 01:10:07.460
+la chiave
+
+01:10:07.460 --> 01:10:08.140
+per capire
+
+01:10:08.140 --> 01:10:08.800
+se un requisito
+
+01:10:08.800 --> 01:10:09.520
+può o non può
+
+01:10:09.520 --> 01:10:10.060
+entrare
+
+01:10:10.060 --> 01:10:11.140
+in un rilascio
+
+01:10:11.140 --> 01:10:11.520
+software
+
+01:10:11.520 --> 01:10:12.480
+però è deciso
+
+01:10:12.480 --> 01:10:12.800
+sempre
+
+01:10:12.800 --> 01:10:14.140
+dall'alto
+
+01:10:14.140 --> 01:10:14.440
+ecco
+
+01:10:14.440 --> 01:10:15.420
+se è veramente
+
+01:10:15.420 --> 01:10:16.280
+una richiesta
+
+01:10:16.280 --> 01:10:17.200
+di cambiamento
+
+01:10:17.200 --> 01:10:20.360
+importante
+
+01:10:20.360 --> 01:10:21.100
+allora
+
+01:10:21.100 --> 01:10:22.340
+credo che ci si
+
+01:10:22.340 --> 01:10:22.880
+accordi
+
+01:10:22.880 --> 01:10:23.260
+dicendo
+
+01:10:23.260 --> 01:10:23.680
+ok
+
+01:10:23.680 --> 01:10:24.700
+ritardiamo
+
+01:10:24.700 --> 01:10:25.240
+di 1
+
+01:10:25.240 --> 01:10:25.560
+2
+
+01:10:25.560 --> 01:10:26.440
+3 settimane
+
+01:10:26.440 --> 01:10:27.180
+il rilascio
+
+01:10:27.180 --> 01:10:27.440
+però
+
+01:10:27.440 --> 01:10:28.300
+io ho necessità
+
+01:10:28.300 --> 01:10:28.860
+di includere
+
+01:10:28.860 --> 01:10:29.620
+quel cambiamento
+
+01:10:29.620 --> 01:10:30.460
+nella prima versione
+
+01:10:30.460 --> 01:10:31.020
+del software
+
+01:10:31.020 --> 01:10:34.380
+quello che dicevo
+
+01:10:34.380 --> 01:10:34.820
+magari
+
+01:10:34.820 --> 01:10:36.260
+i nuovi requisiti
+
+01:10:36.260 --> 01:10:36.780
+entreranno
+
+01:10:36.780 --> 01:10:37.860
+nella versione 2
+
+01:10:37.860 --> 01:10:38.340
+ad esempio
+
+01:10:38.340 --> 01:10:40.300
+quello che volevo sapere
+
+01:10:40.300 --> 01:10:40.920
+perché poi
+
+01:10:40.920 --> 01:10:41.820
+la versione 1
+
+01:10:41.820 --> 01:10:42.480
+si porta comunque
+
+01:10:42.480 --> 01:10:43.040
+al termine
+
+01:10:43.040 --> 01:10:44.180
+per poi testarla
+
+01:10:44.180 --> 01:10:44.820
+comunque
+
+01:10:44.820 --> 01:10:45.360
+certo
+
+01:10:45.360 --> 01:10:46.580
+ogni versione
+
+01:10:46.580 --> 01:10:47.000
+del software
+
+01:10:47.000 --> 01:10:48.740
+ha il suo scopo
+
+01:10:48.740 --> 01:10:49.320
+ogni versione
+
+01:10:49.320 --> 01:10:49.820
+del software
+
+01:10:49.820 --> 01:10:50.700
+include
+
+01:10:50.700 --> 01:10:51.660
+al suo interno
+
+01:10:51.660 --> 01:10:53.420
+tanti contenuti
+
+01:10:53.420 --> 01:10:55.160
+si
+
+01:10:55.160 --> 01:10:55.660
+ad esempio
+
+01:10:55.660 --> 01:10:56.360
+nella prima parte
+
+01:10:56.360 --> 01:10:57.040
+del software
+
+01:10:57.040 --> 01:10:57.720
+magari
+
+01:10:57.720 --> 01:10:58.680
+viene introdotta
+
+01:10:58.680 --> 01:10:59.340
+tutta la parte
+
+01:10:59.340 --> 01:11:01.060
+di comunicazione
+
+01:11:01.060 --> 01:11:02.080
+che è un po'
+
+01:11:02.520 --> 01:11:02.940
+diciamo
+
+01:11:02.940 --> 01:11:04.960
+il perimetro
+
+01:11:04.960 --> 01:11:05.840
+di tutto ciò
+
+01:11:05.840 --> 01:11:06.580
+che c'è dentro
+
+01:11:06.580 --> 01:11:07.400
+quindi
+
+01:11:07.400 --> 01:11:08.700
+riattivano un po'
+
+01:11:08.800 --> 01:11:09.400
+tutta la parte
+
+01:11:09.400 --> 01:11:10.420
+di comunicazioni
+
+01:11:10.420 --> 01:11:11.060
+tutti
+
+01:11:11.060 --> 01:11:12.320
+i can transiver
+
+01:11:12.320 --> 01:11:12.880
+tutta la parte
+
+01:11:12.880 --> 01:11:13.680
+di gestione
+
+01:11:13.680 --> 01:11:14.520
+di comunicazione
+
+01:11:14.520 --> 01:11:14.820
+diciamo
+
+01:11:14.820 --> 01:11:15.560
+quella magari
+
+01:11:15.560 --> 01:11:15.900
+può essere
+
+01:11:15.900 --> 01:11:16.700
+una prima parte
+
+01:11:16.700 --> 01:11:18.640
+del software
+
+01:11:18.640 --> 01:11:19.000
+quindi
+
+01:11:19.000 --> 01:11:20.900
+della prima versione
+
+01:11:20.900 --> 01:11:22.120
+si andranno a testare
+
+01:11:22.120 --> 01:11:22.720
+tutta la parte
+
+01:11:22.720 --> 01:11:23.440
+di comunicazione
+
+01:11:23.440 --> 01:11:23.960
+ad esempio
+
+01:11:23.960 --> 01:11:25.940
+ogni versione
+
+01:11:25.940 --> 01:11:26.520
+ha un suo
+
+01:11:26.520 --> 01:11:28.120
+scopo
+
+01:11:28.120 --> 01:11:29.220
+ok
+
+01:11:29.220 --> 01:11:29.900
+grazie
+
+01:11:29.900 --> 01:11:40.120
+ok
+
+01:11:40.120 --> 01:11:42.840
+quindi
+
+01:11:42.840 --> 01:11:43.900
+ritornando
+
+01:11:43.900 --> 01:11:44.480
+un attimo
+
+01:11:44.480 --> 01:11:46.700
+quindi
+
+01:11:46.700 --> 01:11:47.340
+molto
+
+01:11:47.340 --> 01:11:48.160
+velocemente
+
+01:11:48.160 --> 01:11:48.800
+ecco
+
+01:11:48.800 --> 01:11:49.520
+chiaramente
+
+01:11:49.520 --> 01:11:52.120
+l'RMP
+
+01:11:52.120 --> 01:11:54.060
+viene
+
+01:11:54.060 --> 01:11:54.900
+chiaramente
+
+01:11:54.900 --> 01:11:55.440
+non è
+
+01:11:55.440 --> 01:11:56.560
+un documento
+
+01:11:56.560 --> 01:11:57.360
+che una volta
+
+01:11:57.360 --> 01:11:58.080
+che uno lo fa
+
+01:11:58.080 --> 01:11:59.600
+diciamo
+
+01:11:59.600 --> 01:12:00.160
+lo prende
+
+01:12:00.160 --> 01:12:00.400
+per
+
+01:12:00.400 --> 01:12:01.400
+deve prenderlo
+
+01:12:01.400 --> 01:12:01.660
+chiaramente
+
+01:12:01.660 --> 01:12:02.020
+per buono
+
+01:12:02.020 --> 01:12:02.280
+però
+
+01:12:02.280 --> 01:12:03.620
+possiamo
+
+01:12:03.620 --> 01:12:04.280
+migliorarlo
+
+01:12:04.280 --> 01:12:05.100
+di volta in volta
+
+01:12:05.100 --> 01:12:07.300
+il miglioramento
+
+01:12:07.300 --> 01:12:07.700
+può
+
+01:12:07.700 --> 01:12:08.880
+esserci
+
+01:12:08.880 --> 01:12:09.680
+diciamo
+
+01:12:09.680 --> 01:12:10.500
+perché
+
+01:12:10.500 --> 01:12:11.400
+ci sono dei feedback
+
+01:12:11.400 --> 01:12:12.580
+sia interni
+
+01:12:12.580 --> 01:12:13.260
+dovuti a
+
+01:12:13.260 --> 01:12:14.900
+delle revisioni
+
+01:12:14.900 --> 01:12:15.860
+continue
+
+01:12:15.860 --> 01:12:17.900
+del documento
+
+01:12:17.900 --> 01:12:18.640
+o chiaramente
+
+01:12:18.640 --> 01:12:19.960
+molto importanti
+
+01:12:19.960 --> 01:12:20.320
+sono anche
+
+01:12:20.320 --> 01:12:20.900
+i feedback
+
+01:12:20.900 --> 01:12:23.080
+da parte del cliente
+
+01:12:23.080 --> 01:12:25.320
+che può
+
+01:12:25.320 --> 01:12:26.820
+sollevare
+
+01:12:26.820 --> 01:12:27.600
+alcuni punti
+
+01:12:27.600 --> 01:12:28.180
+relativamente
+
+01:12:28.180 --> 01:12:29.140
+al nostro processo
+
+01:12:29.140 --> 01:12:30.460
+se è in linea
+
+01:12:30.460 --> 01:12:31.240
+con quanto loro
+
+01:12:31.240 --> 01:12:32.080
+si aspettano
+
+01:12:32.080 --> 01:12:34.300
+o con i loro processi
+
+01:12:34.300 --> 01:12:35.960
+sono molto fondamentali
+
+01:12:35.960 --> 01:12:37.400
+i feedback interni
+
+01:12:37.400 --> 01:12:38.460
+le review interne
+
+01:12:38.460 --> 01:12:39.820
+e con il cliente
+
+01:12:39.820 --> 01:12:40.340
+e chiaramente
+
+01:12:40.340 --> 01:12:40.720
+una volta
+
+01:12:40.720 --> 01:12:43.480
+raccolte informazioni
+
+01:12:43.480 --> 01:12:46.260
+e spunti
+
+01:12:46.260 --> 01:12:48.500
+è necessario
+
+01:12:48.500 --> 01:12:49.800
+implementare
+
+01:12:49.800 --> 01:12:50.240
+questa
+
+01:12:50.240 --> 01:12:51.300
+lesson learned
+
+01:12:51.300 --> 01:12:53.700
+sono due parole
+
+01:12:53.700 --> 01:12:54.000
+che
+
+01:12:54.000 --> 01:12:55.140
+probabilmente
+
+01:12:55.140 --> 01:12:55.860
+sentirete
+
+01:12:55.860 --> 01:12:57.920
+spero
+
+01:12:57.920 --> 01:12:58.480
+non tanto
+
+01:12:58.480 --> 01:12:58.800
+però
+
+01:12:58.800 --> 01:13:03.140
+le troverete
+
+01:13:03.140 --> 01:13:04.260
+le sentirete
+
+01:13:04.260 --> 01:13:04.460
+diciamo
+
+01:13:04.460 --> 01:13:05.060
+il lesson learned
+
+01:13:05.060 --> 01:13:05.480
+non è altro
+
+01:13:05.480 --> 01:13:06.120
+che una fase
+
+01:13:06.120 --> 01:13:08.020
+di documentazione
+
+01:13:08.020 --> 01:13:09.340
+dei problemi
+
+01:13:09.340 --> 01:13:10.220
+che ci sono stati
+
+01:13:10.220 --> 01:13:11.140
+durante il ciclo vita
+
+01:13:11.140 --> 01:13:11.980
+di un progetto
+
+01:13:11.980 --> 01:13:12.580
+che possono essere
+
+01:13:12.580 --> 01:13:13.460
+problemi
+
+01:13:13.460 --> 01:13:14.020
+in questo caso
+
+01:13:14.020 --> 01:13:15.340
+dell'RMP
+
+01:13:15.340 --> 01:13:16.740
+o problemi
+
+01:13:16.740 --> 01:13:17.660
+proprio relativi
+
+01:13:17.660 --> 01:13:18.720
+al codice
+
+01:13:18.720 --> 01:13:19.620
+o qualsiasi tipo
+
+01:13:19.620 --> 01:13:20.040
+di problema
+
+01:13:20.040 --> 01:13:21.320
+che ci possa essere stato
+
+01:13:21.320 --> 01:13:23.060
+e questo lesson learned
+
+01:13:23.060 --> 01:13:23.420
+è una fase
+
+01:13:23.420 --> 01:13:24.460
+di documentazione
+
+01:13:24.460 --> 01:13:26.200
+per poter poi
+
+01:13:26.200 --> 01:13:26.700
+evitare
+
+01:13:26.700 --> 01:13:27.880
+in futuro
+
+01:13:27.880 --> 01:13:29.480
+di dover affrontare
+
+01:13:29.480 --> 01:13:30.100
+gli stessi tipi
+
+01:13:30.100 --> 01:13:30.980
+di errori
+
+01:13:30.980 --> 01:13:31.600
+quindi è una sorta
+
+01:13:31.600 --> 01:13:32.280
+di ok
+
+01:13:32.280 --> 01:13:33.320
+abbiamo imparato
+
+01:13:33.320 --> 01:13:34.500
+dalla lezione
+
+01:13:34.500 --> 01:13:36.000
+dall'errore
+
+01:13:36.000 --> 01:13:36.800
+adesso
+
+01:13:36.800 --> 01:13:37.500
+cerchiamo
+
+01:13:37.500 --> 01:13:38.420
+di non commettere
+
+01:13:38.420 --> 01:13:39.000
+più l'errore
+
+01:13:39.000 --> 01:13:39.940
+che abbiamo fatto
+
+01:13:39.940 --> 01:13:40.940
+diciamo questo
+
+01:13:40.940 --> 01:13:41.440
+è un po'
+
+01:13:41.440 --> 01:13:42.240
+il lesson learned
+
+01:13:42.240 --> 01:13:46.360
+e quindi
+
+01:13:46.360 --> 01:13:46.820
+in questo caso
+
+01:13:46.820 --> 01:13:47.420
+il lesson learned
+
+01:13:47.420 --> 01:13:48.020
+diciamo
+
+01:13:48.020 --> 01:13:49.100
+ci permette
+
+01:13:49.100 --> 01:13:49.320
+ecco
+
+01:13:49.320 --> 01:13:51.420
+di documentare
+
+01:13:51.420 --> 01:13:52.380
+quali sono stati
+
+01:13:52.380 --> 01:13:53.100
+i punti
+
+01:13:53.100 --> 01:13:53.680
+sollevati
+
+01:13:53.680 --> 01:13:54.100
+feedback
+
+01:13:54.100 --> 01:13:54.620
+quant'altro
+
+01:13:54.620 --> 01:13:55.500
+e di migliorare
+
+01:13:55.500 --> 01:13:56.100
+il processo
+
+01:13:56.100 --> 01:13:58.300
+per i progetti
+
+01:13:58.300 --> 01:13:58.860
+futuri
+
+01:13:58.860 --> 01:13:59.100
+ecco
+
+01:13:59.100 --> 01:14:00.160
+per il futuro
+
+01:14:00.160 --> 01:14:03.340
+quindi
+
+01:14:03.340 --> 01:14:03.860
+diciamo
+
+01:14:03.860 --> 01:14:04.880
+le conclusioni
+
+01:14:04.880 --> 01:14:05.400
+brevemente
+
+01:14:05.400 --> 01:14:06.340
+vorrei semplicemente
+
+01:14:06.340 --> 01:14:07.120
+dire quanto
+
+01:14:07.120 --> 01:14:07.880
+ho riportato
+
+01:14:07.880 --> 01:14:08.980
+qui nella parte blu
+
+01:14:08.980 --> 01:14:10.140
+che racchiude un po'
+
+01:14:10.220 --> 01:14:11.360
+quindi diciamo
+
+01:14:11.360 --> 01:14:13.640
+è nell'insieme
+
+01:14:13.640 --> 01:14:14.740
+che noi possiamo
+
+01:14:14.740 --> 01:14:15.480
+migliorare
+
+01:14:15.480 --> 01:14:16.980
+il processo
+
+01:14:16.980 --> 01:14:18.220
+attraverso questo
+
+01:14:18.220 --> 01:14:19.560
+requirement management plan
+
+01:14:19.560 --> 01:14:20.660
+quindi attraverso questo
+
+01:14:20.660 --> 01:14:21.520
+requirement management plan
+
+01:14:21.520 --> 01:14:22.580
+possiamo migliorare
+
+01:14:22.580 --> 01:14:23.280
+notevolmente
+
+01:14:23.280 --> 01:14:24.600
+il processo
+
+01:14:24.600 --> 01:14:26.060
+di gestione
+
+01:14:26.060 --> 01:14:27.680
+dei requisiti
+
+01:14:27.680 --> 01:14:28.900
+o di gestione
+
+01:14:28.900 --> 01:14:30.200
+di qualsiasi tipo
+
+01:14:30.200 --> 01:14:31.680
+di attività
+
+01:14:31.680 --> 01:14:32.500
+che ci richieda
+
+01:14:32.500 --> 01:14:32.780
+di
+
+01:14:32.780 --> 01:14:33.620
+di dover
+
+01:14:33.620 --> 01:14:34.360
+tracciare
+
+01:14:34.360 --> 01:14:35.800
+di dover
+
+01:14:35.800 --> 01:14:36.740
+documentare
+
+01:14:36.740 --> 01:14:38.480
+appunto
+
+01:14:38.480 --> 01:14:39.560
+dei requisiti
+
+01:14:39.560 --> 01:14:40.520
+o dei test case
+
+01:14:40.520 --> 01:14:43.740
+qualcuno ha alzato
+
+01:14:43.740 --> 01:14:44.120
+la mano
+
+01:14:44.120 --> 01:14:45.820
+no
+
+01:14:45.820 --> 01:14:48.940
+ok
+
+01:14:48.940 --> 01:14:49.960
+e quindi
+
+01:14:49.960 --> 01:14:51.160
+come ultima slide
+
+01:14:51.160 --> 01:14:53.520
+grazie
+
+01:14:53.520 --> 01:14:58.180
+ok
+
+01:14:58.180 --> 01:14:59.580
+diciamo
+
+01:14:59.580 --> 01:15:00.240
+se non ci sono
+
+01:15:00.240 --> 01:15:01.080
+altre domande
+
+01:15:01.080 --> 01:15:03.640
+e ci sono
+
+01:15:03.640 --> 01:15:04.540
+benvengano
+
+01:15:04.540 --> 01:15:06.200
+io direi
+
+01:15:06.200 --> 01:15:06.820
+magari di fare
+
+01:15:06.820 --> 01:15:07.900
+dieci minuti
+
+01:15:07.900 --> 01:15:08.480
+di pausa
+
+01:15:08.480 --> 01:15:10.440
+e poi
+
+01:15:10.440 --> 01:15:11.900
+Gabriele
+
+01:15:11.900 --> 01:15:15.580
+può iniziare
+
+01:15:15.580 --> 01:15:16.280
+con la sua parte
+
+01:15:16.280 --> 01:15:19.500
+sta benissimo
+
+01:15:19.500 --> 01:15:20.640
+Mario ma dopo
+
+01:15:20.640 --> 01:15:21.640
+ci sarai anche tu
+
+01:15:21.640 --> 01:15:23.620
+ok ragazzi
+
+01:15:23.620 --> 01:15:25.880
+sì
+
+01:15:25.880 --> 01:15:29.860
+perché non mi vuoi
+
+01:15:29.860 --> 01:15:30.280
+no no no
+
+01:15:30.280 --> 01:15:31.080
+volevo fare poi
+
+01:15:31.080 --> 01:15:32.440
+un commento
+
+01:15:32.440 --> 01:15:33.120
+finale
+
+01:15:33.120 --> 01:15:34.300
+ma se ci sarai
+
+01:15:34.300 --> 01:15:34.740
+tu dopo
+
+01:15:34.740 --> 01:15:35.200
+lo faccio
+
+01:15:35.200 --> 01:15:36.200
+quando termina
+
+01:15:36.200 --> 01:15:36.940
+anche Gabriele
+
+01:15:36.940 --> 01:15:37.620
+dai a posto
+
+01:15:37.620 --> 01:15:41.500
+io potrei
+
+01:15:41.500 --> 01:15:42.460
+staccarmi al volo
+
+01:15:42.460 --> 01:15:43.340
+perché nel frattempo
+
+01:15:43.340 --> 01:15:44.320
+abbiamo una
+
+01:15:44.320 --> 01:15:45.120
+una riunione
+
+01:15:45.120 --> 01:15:46.440
+con il cliente
+
+01:15:46.440 --> 01:15:47.940
+workshop con il cliente
+
+01:15:47.940 --> 01:15:49.060
+online
+
+01:15:49.060 --> 01:15:49.480
+diciamo
+
+01:15:49.480 --> 01:15:50.440
+sto aspettando
+
+01:15:50.440 --> 01:15:51.000
+che mi chiamino
+
+01:15:51.000 --> 01:15:51.720
+per presentare
+
+01:15:51.720 --> 01:15:51.960
+quindi
+
+01:15:51.960 --> 01:15:53.180
+qualora dovessi
+
+01:15:53.180 --> 01:15:54.140
+assentarmi un po'
+
+01:15:54.660 --> 01:15:55.060
+perché
+
+01:15:55.060 --> 01:15:56.600
+l'ho saltato
+
+01:15:56.600 --> 01:15:57.160
+nell'altra
+
+01:15:57.160 --> 01:15:58.280
+nell'altro meeting
+
+01:15:58.280 --> 01:15:59.020
+ok
+
+01:15:59.020 --> 01:16:01.680
+va bene
+
+01:16:01.680 --> 01:16:02.060
+ci vediamo
+
+01:16:02.060 --> 01:16:02.700
+tra dieci minuti
+
+01:16:02.700 --> 01:16:03.140
+allora
+
+01:16:03.140 --> 01:16:05.540
+grazie ragazzi
+
+01:16:05.540 --> 01:16:06.320
+a dopo
+
+01:16:06.320 --> 01:16:06.720
+ragazzi
+
+01:16:06.720 --> 01:16:07.560
+11 e 30
+
+01:16:07.560 --> 01:16:07.800
+allora
+
+01:16:07.800 --> 01:16:10.060
+a dopo
+
+01:16:10.060 --> 01:16:12.020
+ciao grazie
+
+01:16:15.120 --> 01:16:26.440
+ciao
+
+01:16:26.440 --> 01:16:26.860
+ciao
+
+01:16:26.860 --> 01:16:56.840
+Grazie a tutti.
+
+01:16:56.860 --> 01:17:26.840
+Grazie a tutti.
+
+01:17:26.860 --> 01:17:56.840
+Grazie a tutti.
+
+01:17:56.860 --> 01:18:26.840
+Grazie a tutti.
+
+01:18:26.860 --> 01:18:56.840
+Grazie a tutti.
+
+01:18:56.860 --> 01:19:26.840
+Grazie a tutti.
+
+01:19:26.860 --> 01:19:56.840
+Grazie a tutti.
+
+01:19:56.860 --> 01:20:26.840
+Grazie a tutti.
+
+01:20:26.860 --> 01:20:56.840
+Grazie a tutti.
+
+01:20:56.860 --> 01:21:26.840
+Grazie a tutti.
+
+01:21:26.860 --> 01:21:56.840
+Grazie a tutti.
+
+01:21:56.860 --> 01:22:26.840
+Grazie a tutti.
+
+01:22:26.860 --> 01:22:56.840
+Grazie a tutti.
+
+01:22:56.860 --> 01:23:26.840
+Grazie a tutti.
+
+01:23:26.860 --> 01:23:56.840
+Grazie a tutti.
+
+01:23:56.860 --> 01:24:26.840
+Grazie a tutti.
+
+01:24:26.860 --> 01:24:56.840
+Grazie a tutti.
+
+01:24:56.860 --> 01:25:26.840
+Grazie a tutti.
+
+01:25:26.860 --> 01:25:56.840
+Grazie a tutti.
+
+01:25:56.860 --> 01:26:26.840
+Grazie a tutti.
+
+01:26:26.840 --> 01:26:56.820
+Grazie a tutti.
+
+01:26:56.840 --> 01:26:58.840
+Una...
+
+01:26:58.840 --> 01:27:28.820
+Grazie a tutti.
+
+01:27:28.840 --> 01:27:58.820
+Grazie a tutti.
+
+01:27:58.840 --> 01:28:28.820
+Grazie a tutti.
+
+01:28:28.840 --> 01:28:58.820
+Grazie a tutti.
+
+01:28:58.840 --> 01:29:00.840
+Ok.
+
+01:29:28.840 --> 01:29:58.820
+Grazie a tutti.
+
+01:29:58.840 --> 01:30:28.820
+Grazie a tutti.
+
+01:30:28.840 --> 01:30:58.820
+Grazie a tutti.
+
+01:30:58.840 --> 01:31:28.820
+Grazie a tutti.
+
+01:31:28.840 --> 01:31:58.820
+Grazie a tutti.
+
+01:31:58.840 --> 01:32:28.820
+Grazie a tutti.
+
+01:32:28.840 --> 01:32:58.820
+Grazie a tutti.
+
+01:32:58.840 --> 01:33:28.820
+Grazie a tutti.
+
+01:33:28.840 --> 01:33:58.820
+Grazie a tutti.
+
+01:33:58.840 --> 01:34:28.820
+Grazie a tutti.
+
+01:34:28.840 --> 01:34:58.820
+Grazie a tutti.
+
+01:34:58.840 --> 01:35:28.820
+Grazie a tutti.
+
+01:35:28.840 --> 01:35:58.820
+Grazie a tutti.
+
+01:35:58.840 --> 01:36:28.820
+Grazie a tutti.
+
+01:36:28.840 --> 01:36:58.820
+Grazie a tutti.
+
+01:36:58.840 --> 01:37:28.820
+Grazie a tutti.
+
+01:37:28.840 --> 01:37:58.820
+Grazie a tutti.
+
+01:37:58.840 --> 01:38:28.820
+Grazie a tutti.
+
+01:38:28.840 --> 01:38:58.820
+Grazie a tutti.
+
+01:38:58.840 --> 01:39:28.820
+Grazie a tutti.
+
+01:39:28.840 --> 01:39:58.820
+Grazie a tutti.
+
+01:39:58.840 --> 01:40:28.820
+Grazie a tutti.
+
+01:40:28.840 --> 01:40:58.820
+Grazie a tutti.
+
+01:40:58.840 --> 01:41:28.820
+Grazie a tutti.
+
+01:41:28.840 --> 01:41:58.820
+Grazie a tutti.
+
+01:41:58.840 --> 01:42:28.820
+Grazie a tutti.
+
+01:42:28.840 --> 01:42:58.820
+Grazie a tutti.
+
+01:42:58.840 --> 01:43:28.820
+Grazie a tutti.
+
+01:43:28.840 --> 01:43:58.820
+Grazie a tutti.
+
+01:43:58.840 --> 01:44:28.820
+Grazie a tutti.
+
+01:44:28.840 --> 01:44:58.820
+Grazie a tutti.
+
+01:44:58.840 --> 01:45:00.840
+Grazie a tutti.
+
+01:45:28.840 --> 01:45:58.820
+Grazie a tutti.
+
+01:45:58.840 --> 01:46:28.820
+Grazie a tutti.
+
+01:46:28.840 --> 01:46:58.820
+Grazie a tutti.
+
+01:46:58.840 --> 01:47:28.820
+Grazie a tutti.
+
+01:47:28.840 --> 01:47:58.820
+Grazie a tutti.
+
+01:47:58.840 --> 01:48:28.820
+Grazie a tutti.
+
+01:48:28.840 --> 01:48:58.820
+Grazie a tutti.
+
+01:48:58.840 --> 01:49:28.820
+Grazie a tutti.
+
+01:49:28.840 --> 01:49:58.820
+Grazie a tutti.
+
+01:49:58.840 --> 01:50:28.820
+Grazie a tutti.
+
+01:50:28.840 --> 01:50:58.820
+Grazie a tutti.
+
+01:50:58.840 --> 01:51:28.820
+Grazie a tutti.
+
+01:51:28.840 --> 01:51:58.820
+Grazie a tutti.
+
+01:51:58.840 --> 01:52:28.820
+Grazie a tutti.
+
+01:52:28.840 --> 01:52:58.820
+Grazie a tutti.
+
+01:52:58.840 --> 01:53:28.820
+Grazie a tutti.
+
+01:53:28.840 --> 01:53:58.820
+Grazie a tutti.
+
+01:53:58.840 --> 01:54:28.820
+Grazie a tutti.
+

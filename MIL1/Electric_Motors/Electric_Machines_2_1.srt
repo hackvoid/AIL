@@ -1,0 +1,344 @@
+1
+00:00:00,000 --> 00:00:07,000
+In this session we will see how the electric motors are used in the automotive field.
+
+2
+00:00:07,000 --> 00:00:13,000
+We will see particular configuration and examples of car.
+
+3
+00:00:18,000 --> 00:00:24,000
+Just a reminder to the classification of hybrid vehicle, we can have
+
+4
+00:00:24,000 --> 00:00:32,000
+Milled hybrid electric vehicle, also known as MHEV.
+
+5
+00:00:32,000 --> 00:00:39,000
+The vehicle is driven by a combustion engine powered by a compact electric motor.
+
+6
+00:00:39,000 --> 00:00:44,000
+It can have the electric motor in different positions.
+
+7
+00:00:44,000 --> 00:00:51,000
+Full hybrid electric vehicle, also known as FHEV.
+
+8
+00:00:51,000 --> 00:00:56,000
+It has both combustion and electric engines.
+
+9
+00:00:56,000 --> 00:01:02,000
+At low speed and short distances, a fully electric propulsion is possible.
+
+10
+00:01:02,000 --> 00:01:08,000
+The engine hybrid electric vehicle, also known as PHEV.
+
+11
+00:01:08,000 --> 00:01:14,000
+It reaches higher speeds and longer distances, unlike full hybrid.
+
+12
+00:01:14,000 --> 00:01:26,000
+They can only be charged from external points and can have a larger battery pack than the FHEV.
+
+13
+00:01:26,000 --> 00:01:32,000
+Because the size is not limited to the stored kinetic energy.
+
+14
+00:01:32,000 --> 00:01:40,000
+On the right of this slide, you can see all the position of the engines in an hybrid vehicle's architecture.
+
+15
+00:01:40,000 --> 00:01:49,000
+Hybrid vehicles uses an internal combustion engine and at least one electric motor.
+
+16
+00:01:49,000 --> 00:01:59,000
+In hybrid electric vehicles, we can find many abbreviations as P0, P1, P2, P3, P4 and P5.
+
+17
+00:01:59,000 --> 00:02:05,000
+Each abbreviation depends on the position of the electric motor in the hybrid powertrain.
+
+18
+00:02:05,000 --> 00:02:18,000
+In some way, the number identifies the distance between the electric motor and the wheels, which decreases from P0 to P5.
+
+19
+00:02:18,000 --> 00:02:28,000
+In the P0 configuration, the electric motor can be mounted in place of the alternator and then connected to the engine with a belt.
+
+20
+00:02:28,000 --> 00:02:35,000
+These are belt driven starter generators, which also act as a starter motor and generator.
+
+21
+00:02:35,000 --> 00:02:42,000
+In the P1 configuration, the electric motor is inserted on the motor shaft.
+
+22
+00:02:42,000 --> 00:02:49,000
+It runs at the same speed as the crankshaft and requires some more modifications.
+
+23
+00:02:49,000 --> 00:02:57,000
+In this slide, we can see an example of P0 configuration in Audi system.
+
+24
+00:02:57,000 --> 00:03:08,000
+This car is the Audi A8 48 voltage M HEP.
+
+25
+00:03:08,000 --> 00:03:14,000
+We can see a DC DC converter to pass from 12 to 48 voltages.
+
+26
+00:03:14,000 --> 00:03:21,000
+We can see a 12 voltage battery and the 48 volt battery.
+
+27
+00:03:21,000 --> 00:03:31,000
+The battery is needed for the integrated BSG, a motor in P0 configuration right here.
+
+28
+00:03:31,000 --> 00:03:36,000
+And this is the internal combustion engine.
+
+29
+00:03:36,000 --> 00:03:46,000
+In P2 configuration, the electric motor is placed between the engine and the transmission, directly on the shaft or through a gearbox.
+
+30
+00:03:46,000 --> 00:03:54,000
+The engine insertion system implies a clutch that disconnects the internal combustion engine.
+
+31
+00:03:54,000 --> 00:04:02,000
+So it is possible to drive in full electric by the opening of the clutch.
+
+32
+00:04:02,000 --> 00:04:06,000
+We can have two configurations to put the P2 motor.
+
+33
+00:04:06,000 --> 00:04:14,000
+We can have the integrated electric motor configuration or the side electric motor configuration.
+
+34
+00:04:14,000 --> 00:04:20,000
+In this slide, we can see an example of P2 configuration in Porsche Panamera system.
+
+35
+00:04:20,000 --> 00:04:33,000
+We can see the internal combustion engine, the electric motor in P2 configuration, the ZF transmission and the battery pack in the posterior part of the car.
+
+36
+00:04:33,000 --> 00:04:39,000
+Here we can see the P2.5 configuration.
+
+37
+00:04:39,000 --> 00:04:44,000
+This configuration is possible only with dual clutch transmission.
+
+38
+00:04:44,000 --> 00:04:52,000
+The electric motor is placed inside the transmission on one of the two concentric transmission shafts.
+
+39
+00:04:52,000 --> 00:05:05,000
+So that one shaft is completely driven by the internal combustion engine while the other one is driven also by electric machine.
+
+40
+00:05:05,000 --> 00:05:18,000
+Electric creeping or drive is possible by moving just even gear shafts, but also combined combustion and electric power mode is possible.
+
+41
+00:05:18,000 --> 00:05:28,000
+In P3 configuration, this configuration moves the engine downstream of the gearbox.
+
+42
+00:05:28,000 --> 00:05:37,000
+In this way, losses are minimized since the electric motor only drives the final part of transmission.
+
+43
+00:05:37,000 --> 00:05:47,000
+In the P4 configuration, the electric motor acts exclusively on the axis not connected to the internal combustion engine.
+
+44
+00:05:47,000 --> 00:05:55,000
+In this way, it's possible to have an all-wheel drive without mechanical connection with the thermal engine.
+
+45
+00:05:55,000 --> 00:06:02,000
+Even the pure electric mode is easily obtainable by disconnecting the main transmission.
+
+46
+00:06:02,000 --> 00:06:10,000
+In this slide, we can see an example of P4 configuration in Toyota Prius system.
+
+47
+00:06:10,000 --> 00:06:17,000
+We can find the internal combustion engine, the battery pack, one induction electric motor and the inverter.
+
+48
+00:06:17,000 --> 00:06:23,000
+In this slide, we can find the P5 configuration.
+
+49
+00:06:23,000 --> 00:06:35,000
+For hybrid and full electric vehicle, there is the Cronimus P5, which indicates the motors in the wheels, a solution that eliminates the distance.
+
+50
+00:06:35,000 --> 00:06:44,000
+This configuration, unlike P0, P1, P2, P3 and P4, has a still limited application in production cars.
+
+51
+00:06:44,000 --> 00:07:00,000
+P2 to P4 configuration, as I said, have the electric motors placed after the clutch, connected to the driveline side, and that can improve overall electrical performances.
+
+52
+00:07:00,000 --> 00:07:13,000
+Another electric motor, a P1, can be added to the engine side, enlarging hybrid strategies in terms of load shift, torque assist, regeneration, etc.
+
+53
+00:07:13,000 --> 00:07:26,000
+On the other hand, complexity and costs increase exponentially due to the addiction of another motor that should work together all the other components.
+
+54
+00:07:26,000 --> 00:07:34,000
+This configuration essentially combines both benefits and disadvantages of P1, P2 and P4.
+
+55
+00:07:34,000 --> 00:07:40,000
+Battery electric vehicle, also known as BEV.
+
+56
+00:07:40,000 --> 00:07:48,000
+The power train of an electric vehicle powered by battery is the simplest one among all vehicles.
+
+57
+00:07:48,000 --> 00:07:59,000
+It must include an onboard battery charger, OBC, and there are several solutions for its configuration.
+
+58
+00:07:59,000 --> 00:08:09,000
+Here we can see a fuel cell electric vehicle, also known as FCEV.
+
+59
+00:08:09,000 --> 00:08:15,000
+The electrical power train is the same as for the BEV.
+
+60
+00:08:15,000 --> 00:08:21,000
+The difference comes from the energy source that in this case is the fuel cell.
+
+61
+00:08:21,000 --> 00:08:26,000
+We can see in the picture the system used by Toyota Mirai.
+
+62
+00:08:26,000 --> 00:08:38,000
+In this slide you can find the pros and cons of the P0 configuration.
+
+63
+00:08:38,000 --> 00:08:59,000
+In this slide you can find a list of pros and cons of P1 configuration.
+
+64
+00:08:59,000 --> 00:09:17,000
+In this slide you can find a list of pros and cons of the P2 configuration and P5 configuration.
+
+65
+00:09:29,000 --> 00:09:39,000
+In this slide we can find the pros and cons of induction motor.
+
+66
+00:09:39,000 --> 00:09:43,000
+The advantages of induction motor we have railability.
+
+67
+00:09:43,000 --> 00:09:54,000
+Induction motors are robust and railable with low maintenance requirements, making them a good choice for applications that require long life.
+
+68
+00:09:54,000 --> 00:10:06,000
+We have low cost because induction motors are widely available and relatively inexpensive compared to other types of electric motors.
+
+69
+00:10:06,000 --> 00:10:10,000
+Like efficiency at low to medium speeds.
+
+70
+00:10:10,000 --> 00:10:28,000
+The disadvantages we have efficiency because induction motors are less efficient than PMSM motors due to the need for separate excitation sources and the losses associated with them.
+
+71
+00:10:28,000 --> 00:10:46,000
+We have torque speed curves present, an induction high speed region which begins at the motor critical speed beyond which if the motor is operated at maximum current the motor will stall.
+
+72
+00:10:46,000 --> 00:11:03,000
+Tesla made a significant change to its electric motor strategy with the introduction of the Model 3, switching from an AC induction motor to a permanent magnet motor.
+
+73
+00:11:03,000 --> 00:11:11,000
+Here we can find the pros and cons about PMSM motor.
+
+74
+00:11:11,000 --> 00:11:20,000
+In pros we can find the high power to weight ratio which makes them a good choice for applications where weight is a concern.
+
+75
+00:11:20,000 --> 00:11:23,000
+BLDC is better than PMSM.
+
+76
+00:11:23,000 --> 00:11:39,000
+We have high efficiency because PM motors have high efficiency because of their design which use permanent magnet to produce a magnetic field and eliminate the need for a separate excitation source.
+
+77
+00:11:39,000 --> 00:11:44,000
+In this PMSM is better than BLDC.
+
+78
+00:11:44,000 --> 00:12:01,000
+Responsiveness because PM motors are highly responsive allowing precise control of speed and torque making them well suited for applications that require precise control.
+
+79
+00:12:01,000 --> 00:12:11,000
+In the cons we have high costs due to permanent magnet and the need for complex control electronics.
+
+80
+00:12:11,000 --> 00:12:16,000
+This makes them less accessible for some applications.
+
+81
+00:12:16,000 --> 00:12:25,000
+We can find a list of pros and cons of SWOXSetrack-reluctance model.
+
+82
+00:12:25,000 --> 00:12:36,000
+All of these slices of theCK sensitize
+
+83
+00:12:36,000 --> 00:12:49,680
+In the next four slides you can find a list of advantages and disadvantages of different
+
+84
+00:12:49,680 --> 00:12:52,460
+types of hybrid vehicles.
+
+85
+00:13:06,000 --> 00:13:35,980
+For more information visit www.fema.org
+
+86
+00:13:36,000 --> 00:14:05,980
+For more information visit www.fema.org
+

@@ -1,0 +1,1745 @@
+WEBVTT
+
+00:00.000 --> 00:10.940
+Okay, guys, I'm starting to share also my screen.
+
+00:10.940 --> 00:17.000
+Now I think you've seen already Canalizer, right?
+
+00:17.000 --> 00:20.000
+Yes, correct.
+
+00:20.000 --> 00:24.500
+Canoo is an extension of Canalizer.
+
+00:24.500 --> 00:36.500
+It's more regarding simulating environment and the capability of Canoo is also to manage Vector Simulator.
+
+00:36.500 --> 00:42.500
+So here are the slides present on the course.
+
+00:42.500 --> 00:48.500
+Here is this card, how to create a new configuration from scratch.
+
+00:48.500 --> 00:56.500
+And yes, this will be the base to start doing things with Canoo.
+
+00:56.500 --> 01:02.500
+Let's go through this and meanwhile we are going to create the configuration as it is.
+
+01:02.500 --> 01:08.500
+If you have any question, please raise your hand and ask it.
+
+01:08.500 --> 01:24.500
+Okay, so while with Canalizer you were in series with the network, with Canoo you can simulate different issues.
+
+01:24.500 --> 01:35.500
+So the main thing we have to do is to create a new configuration and to start understanding what's the difference between measurement setup and simulation setup.
+
+01:35.500 --> 01:39.500
+Let's go and let's just start doing this.
+
+01:39.500 --> 01:44.500
+So we are going to create a new empty configuration.
+
+01:44.500 --> 01:50.500
+We start from a default one which is completely empty and we create it.
+
+01:50.500 --> 01:58.500
+Then we have to configure our buses.
+
+01:58.500 --> 02:07.500
+So we go into hardware configuration, define number of channels, the boot rate and the hardware channel associated with it.
+
+02:07.500 --> 02:12.500
+Then we are going to set number of Can and Lin that we want in our configuration.
+
+02:12.500 --> 02:19.500
+At the moment I have a VN1630A, a simple can case which has four channels.
+
+02:19.500 --> 02:23.500
+I don't know exactly which transceivers are on that.
+
+02:23.500 --> 02:35.500
+So I will set just for easy way of doing it, two Can channels and no Can, no Lin channels.
+
+02:35.500 --> 02:41.500
+So we are going to create, two channels are already created.
+
+02:41.500 --> 02:44.500
+We are going to go to channel usage.
+
+02:44.500 --> 02:45.500
+Okay.
+
+02:45.500 --> 02:50.500
+Here we can set as many Can network we want.
+
+02:50.500 --> 02:53.500
+From hardware, channel usage.
+
+02:53.500 --> 02:56.500
+We go and select how many Can we want.
+
+02:56.500 --> 03:02.500
+And then here we can set the boot rate of each channel.
+
+03:02.500 --> 03:08.500
+And if we want to have an online simulation or an offline simulation.
+
+03:08.500 --> 03:11.500
+We'll see later what is the difference between them.
+
+03:11.500 --> 03:21.500
+Now, once we have created these two channels, let's try to create three channels just to show you what's changing.
+
+03:21.500 --> 03:23.500
+Here it's not changing anything.
+
+03:23.500 --> 03:29.500
+But if we go into simulation setup, you can see that here we have Can network.
+
+03:29.500 --> 03:38.500
+We can add different Can network.
+
+03:38.500 --> 03:46.500
+And if we add the fourth Can network, it is saying that you cannot assign a network to it.
+
+03:46.500 --> 03:51.500
+So we have to increase number of channels in the Canva system.
+
+03:51.500 --> 04:00.500
+So, here we have created our three Can network.
+
+04:00.500 --> 04:08.500
+Here you can see that this is the channel mapping, which is the same thing you see in Canalizer basically.
+
+04:08.500 --> 04:14.500
+And here also the configuration of the boot rate and stuff like this is the same as you were looking at Canalizer.
+
+04:14.500 --> 04:21.500
+This is the newest part, the simulation setup, which you were already seeing here.
+
+04:21.500 --> 04:26.500
+So let's go there and let's map our channel.
+
+04:26.500 --> 04:33.500
+Here we have VN1630 channel 1, VN1630 channel 2.
+
+04:33.500 --> 04:37.500
+And here we can have a WitterCAM bus for now.
+
+04:37.500 --> 04:38.500
+Okay.
+
+04:38.500 --> 04:46.500
+Now, the next step to do is to associate a database to these Can networks.
+
+04:46.500 --> 04:47.500
+How do we do that?
+
+04:47.500 --> 04:49.500
+Just give me a second.
+
+04:49.500 --> 04:50.500
+Okay.
+
+04:50.500 --> 05:02.500
+Then we're going to add network databases here.
+
+05:02.500 --> 05:09.500
+Just simply doing right click on databases and press add.
+
+05:09.500 --> 05:15.500
+So now I have a couple of, this is the one you are using for your exercises.
+
+05:15.500 --> 05:17.500
+So I'll upload this one.
+
+05:17.500 --> 05:21.500
+And so now we have our database uploaded here.
+
+05:21.500 --> 05:22.500
+What do we do with that?
+
+05:22.500 --> 05:25.500
+Let's go through the simulation here.
+
+05:25.500 --> 05:27.500
+Here it says how to add the Can network.
+
+05:27.500 --> 05:29.500
+We have already seen that.
+
+05:29.500 --> 05:35.500
+Here it's just to understand what you need to import from the database.
+
+05:35.500 --> 05:39.500
+And here is if you want to simulate different nodes.
+
+05:39.500 --> 05:43.500
+So let's go there and let's start simulating just one node.
+
+05:43.500 --> 05:46.500
+Let's enlarge this one.
+
+05:46.500 --> 05:48.500
+Insert network node.
+
+05:48.500 --> 05:53.500
+And this one is saying that you have put an ECU on that.
+
+05:53.500 --> 05:55.500
+Here is the node panel.
+
+05:55.500 --> 06:02.500
+The node panel, once you have configured it, it is going to allow you to edit the different frames,
+
+06:02.500 --> 06:05.500
+which are present on the network, the different signals.
+
+06:05.500 --> 06:07.500
+How to configure this?
+
+06:07.500 --> 06:10.500
+Right click on it and press configuration.
+
+06:10.500 --> 06:14.500
+It is going to say, how do you want to call it?
+
+06:14.500 --> 06:18.500
+In this case, we have only one issue, which is the EMS.
+
+06:18.500 --> 06:21.500
+Let's put it here.
+
+06:21.500 --> 06:23.500
+And which is the state?
+
+06:23.500 --> 06:25.500
+If it's simulated or it's off?
+
+06:25.500 --> 06:26.500
+Which is the difference?
+
+06:26.500 --> 06:29.500
+Simulated is going to run a simulation on it.
+
+06:29.500 --> 06:34.500
+Off is going to mute basically this node on the network.
+
+06:34.500 --> 06:37.500
+So let's start with an off state.
+
+06:37.500 --> 06:38.500
+Okay.
+
+06:38.500 --> 06:41.500
+And this one is a node specification.
+
+06:41.500 --> 06:45.500
+If you have a DLL, you want to simulate it, you can do that.
+
+06:45.500 --> 06:46.500
+Okay.
+
+06:46.500 --> 06:50.500
+And here it's saying on which bus it's available this node.
+
+06:50.500 --> 06:51.500
+Okay.
+
+06:51.500 --> 06:56.500
+Let's not care about that.
+
+06:56.500 --> 07:03.500
+Now you can see that here, some frames are present on this.
+
+07:03.500 --> 07:05.500
+How do we enable them?
+
+07:05.500 --> 07:08.500
+We need to enable the simulation of this one.
+
+07:08.500 --> 07:17.500
+You can do like this and go back to configuration and press simulated,
+
+07:17.500 --> 07:20.500
+or you can simply press a space bar on it.
+
+07:20.500 --> 07:23.500
+And it's going to enable the node.
+
+07:23.500 --> 07:29.500
+Here you have the node panel and you can change the value of the signals
+
+07:29.500 --> 07:31.500
+and send them out.
+
+07:31.500 --> 07:34.500
+Once you send them out, they're going to keep the same value
+
+07:34.500 --> 07:38.500
+until you don't switch off the simulation from here.
+
+07:38.500 --> 07:43.500
+You start to stop the simulation and then it's going to change the values.
+
+07:43.500 --> 07:45.500
+Is it clear until now?
+
+07:45.500 --> 07:50.500
+Yes, it is.
+
+07:50.500 --> 07:51.500
+Yes.
+
+07:51.500 --> 07:52.500
+Okay.
+
+07:52.500 --> 07:53.500
+Perfect.
+
+07:53.500 --> 07:55.500
+Another thing you can do is to add other issues.
+
+07:55.500 --> 08:01.500
+Let's move to another network and let's upload another database,
+
+08:01.500 --> 08:04.500
+which hopefully is containing more issues.
+
+08:04.500 --> 08:08.500
+Give me one second.
+
+08:08.500 --> 08:09.500
+Mask and downloads.
+
+08:09.500 --> 08:10.500
+This one.
+
+08:10.500 --> 08:11.500
+This one.
+
+08:11.500 --> 08:12.500
+This one.
+
+08:12.500 --> 08:13.500
+Okay.
+
+08:13.500 --> 08:14.500
+Okay.
+
+08:14.500 --> 08:17.500
+Here they are different.
+
+08:17.500 --> 08:18.500
+Okay.
+
+08:18.500 --> 08:19.500
+Okay.
+
+08:19.500 --> 08:22.500
+Here they are different.
+
+08:22.500 --> 08:23.500
+Okay.
+
+08:23.500 --> 08:25.500
+Here they are different.
+
+08:25.500 --> 08:26.500
+This one.
+
+08:26.500 --> 08:27.500
+Okay.
+
+08:27.500 --> 08:28.500
+Come on.
+
+08:28.500 --> 08:29.500
+And there is another one.
+
+08:29.500 --> 08:30.500
+Okay.
+
+08:30.500 --> 08:31.500
+Now you can see that we put two nodes on the network.
+
+08:31.500 --> 08:48.500
+What it means is that if we connect this to a real network,
+
+08:48.500 --> 08:53.500
+we will have those two nodes plus the other part of the network,
+
+08:53.500 --> 08:54.500
+which is here.
+
+08:54.500 --> 08:55.500
+Okay.
+
+08:55.500 --> 09:03.500
+We are simulating those two nodes and keeping real the other part of the network.
+
+09:03.500 --> 09:07.500
+How do we change those kind of signals?
+
+09:07.500 --> 09:08.500
+Always in the same way.
+
+09:08.500 --> 09:11.500
+Node panel and we will have the messages for it.
+
+09:11.500 --> 09:14.500
+Node panel, we will have the messages for it.
+
+09:14.500 --> 09:15.500
+Okay.
+
+09:15.500 --> 09:16.500
+What is the power of Kanoe?
+
+09:16.500 --> 09:27.500
+If we open here, we can create a .can file, which you should already know that it's a
+
+09:27.500 --> 09:29.500
+couple file, basically.
+
+09:29.500 --> 09:41.500
+And we call it EMS underscore the underscore EDS, EBC.
+
+09:44.500 --> 09:45.500
+Okay.
+
+09:45.500 --> 09:46.500
+Okay.
+
+09:46.500 --> 09:47.500
+Yeah.
+
+09:47.500 --> 09:48.500
+We will post it.
+
+09:48.500 --> 09:53.500
+It's going to open the couple browser and we can create a live simulation of this node.
+
+09:53.500 --> 10:02.500
+So basically it would be like we are going to simulate a real issue on a, on a, we simulate
+
+10:02.500 --> 10:04.500
+a real issue on a real environment.
+
+10:04.500 --> 10:05.500
+Okay.
+
+10:05.500 --> 10:06.500
+Okay.
+
+10:06.500 --> 10:11.500
+But we can simulate different issues in a real environment.
+
+10:11.500 --> 10:19.500
+While in, in, in canalizer, we were just being in series with the, with the node.
+
+10:19.500 --> 10:22.500
+We were going to simulate.
+
+10:22.500 --> 10:23.500
+Okay.
+
+10:23.500 --> 10:33.500
+Now, here it's a seal with the simulation setup.
+
+10:33.500 --> 10:34.500
+Okay.
+
+10:34.500 --> 10:35.500
+Okay.
+
+10:35.500 --> 10:43.500
+So here you can change the blocks to simulation or real time mode by doing this way.
+
+10:43.500 --> 10:49.500
+Right click on the network and you can switch your blocks to simulation, real time mode,
+
+10:49.500 --> 10:51.500
+this network simulation or real time mode.
+
+10:51.500 --> 10:59.500
+So you can even simulate the entire network or you can measure it real time.
+
+10:59.500 --> 11:03.500
+If you press it, it's going to be simulated.
+
+11:03.500 --> 11:07.500
+I don't think we can start it because we don't have any channel assigned.
+
+11:07.500 --> 11:15.500
+Let's go back to our channel.
+
+11:15.500 --> 11:19.500
+Let's delete this one.
+
+11:19.500 --> 11:23.500
+Let's see if it's going to start.
+
+11:23.500 --> 11:37.500
+Yeah, there are BLDCs, so we cannot start.
+
+11:37.500 --> 11:50.500
+Anyway, in case you're connected to a real environment, you are going to just measure it.
+
+11:50.500 --> 11:57.500
+So if we would have connected to a CAN network, here on the trace, we would have seen some signals.
+
+11:57.500 --> 11:59.500
+Okay?
+
+11:59.500 --> 12:03.500
+Then we are going to move even to the measurement setup.
+
+12:03.500 --> 12:06.500
+You're quite familiar with this, isn't it?
+
+12:06.500 --> 12:11.500
+This is something you've already done in Canalizer.
+
+12:11.500 --> 12:13.500
+So here is the block for logging.
+
+12:13.500 --> 12:15.500
+Here you can create another desktop.
+
+12:15.500 --> 12:18.500
+That can be...
+
+12:18.500 --> 12:22.500
+Analysis is already there, so let's open this one.
+
+12:22.500 --> 12:27.500
+Here you can put trace windows, graphic windows, data windows, say sticker and statics.
+
+12:27.500 --> 12:30.500
+Okay?
+
+12:30.500 --> 12:31.500
+Then...
+
+12:31.500 --> 12:36.500
+Let's move over.
+
+12:36.500 --> 12:47.500
+Here it's saying the same, you were saying before, that you can open a node panel and set a different value to different signals.
+
+12:47.500 --> 12:51.500
+And broadcast it by pressing this icon here.
+
+12:51.500 --> 13:01.500
+And here you can have a graphic windows for the entire can statistics, for the different signals you want to measure.
+
+13:01.500 --> 13:13.500
+And here, the difference is that you cannot type the program node or interactive generator blocks, because you will do everything from here.
+
+13:13.500 --> 13:24.500
+So, network node, think about it as a program node, while a can interactive generator block, you have to add frames from databases.
+
+13:24.500 --> 13:27.500
+And so you can add as many frames as you wish.
+
+13:27.500 --> 13:33.500
+And you will have the same can ichi, which is present on Canalizer, for example.
+
+13:33.500 --> 13:36.500
+Then, what other things you can add?
+
+13:36.500 --> 13:42.500
+You can add an XML test module, a .NET test module, or a replay block can.
+
+13:42.500 --> 13:52.500
+With the replay block can, you can add a source file here, which can be any kind of login file.
+
+13:52.500 --> 14:01.500
+So it can be an ASCII, a BLF, an MF4, just to say the most known one.
+
+14:01.500 --> 14:17.500
+And you can put it here, you can map the channels of this, so that you don't have to replay this only on one network, but you will have different sources and different targets.
+
+14:17.500 --> 14:22.500
+So you can put even whatever is coming from CAN2, put it on CAN1.
+
+14:22.500 --> 14:23.500
+Okay?
+
+14:23.500 --> 14:31.500
+And you can simulate what is your acquisition, your log, and you can replay it on the real network.
+
+14:31.500 --> 14:38.500
+So it's even good to have this, because think about an order-in-the-loop environment.
+
+14:38.500 --> 14:40.500
+A CAN2 order-in-the-loop environment.
+
+14:40.500 --> 14:46.500
+You have a measurement from the car, and you want to reproduce it on the hill.
+
+14:46.500 --> 15:00.500
+You will just have to insert a replay block, map correctly the CAN networks, and just press play, and you will have a simulation of the real environment.
+
+15:00.500 --> 15:01.500
+Clear until now.
+
+15:01.500 --> 15:05.500
+I will ask if it's clear every frame, it's great, more or less.
+
+15:05.500 --> 15:09.500
+Ah, okay, it's easy, it's clear.
+
+15:09.500 --> 15:10.500
+Guys?
+
+15:10.500 --> 15:11.500
+Yes, it's clear.
+
+15:11.500 --> 15:13.500
+Okay, perfect.
+
+15:13.500 --> 15:33.500
+Then here is basically the same you have seen with the canalizer, that you can add graphic windows, where you can add signals from the databases, or variables in case you have an XCP simulation,
+
+15:33.500 --> 15:38.500
+or different system variables to be measured.
+
+15:38.500 --> 15:41.500
+We'll talk about system variables maybe later.
+
+15:41.500 --> 15:47.500
+You would have seen or read them in the lesson on Cample.
+
+15:47.500 --> 15:50.500
+But, yeah, we'll see how we can use them here.
+
+15:50.500 --> 15:52.500
+Hopefully.
+
+15:52.500 --> 16:02.500
+Then, here, it's all the different views you can have, if you want to change the different displays.
+
+16:02.500 --> 16:06.500
+For the samples and stuff like this.
+
+16:06.500 --> 16:15.500
+Here is how to split the axis, the Y axis, to have each signal on a different axis.
+
+16:15.500 --> 16:25.500
+You can do it by pressing CTRL and comma, and in order to have a cursor difference.
+
+16:25.500 --> 16:32.500
+If you want to have this single cursor, you will have to press CTRL plus the dot.
+
+16:32.500 --> 16:37.500
+Then, here, it's saying about the replay block.
+
+16:37.500 --> 16:49.500
+You can add filters on that, in order to not filter the ECU that, for example, is your device under test at the moment on the simulator.
+
+16:49.500 --> 16:53.500
+And, let's see how to do that.
+
+16:53.500 --> 16:58.500
+You will add the replay block, and you will insert a filter here.
+
+16:58.500 --> 17:12.500
+The filter is going to filter whatever is coming from this database, affected node messages, the received messages.
+
+17:12.500 --> 17:15.500
+But, received and transmitted, and you apply it.
+
+17:15.500 --> 17:20.500
+So, it's going to filter everything, which is coming from there.
+
+17:20.500 --> 17:24.500
+In every direction, transmitted and received.
+
+17:24.500 --> 17:32.500
+And, you can filter out even messages only.
+
+17:32.500 --> 17:38.500
+So, you can put those five messages.
+
+17:38.500 --> 17:47.500
+And, you can filter only if they are received, for example.
+
+17:47.500 --> 17:48.500
+Okay.
+
+17:48.500 --> 17:52.500
+Then, last slide, and then we are going to do something.
+
+17:52.500 --> 17:55.500
+You can insert network nodes in the simulation setup.
+
+17:55.500 --> 18:02.500
+And, this allows you, as we have seen, to insert couple scripts to simulate the different ECUs.
+
+18:02.500 --> 18:08.500
+Network nodes are used also to control BT systems.
+
+18:08.500 --> 18:13.500
+And, there are couple test modules.
+
+18:13.500 --> 18:16.500
+What is a couple test module?
+
+18:16.500 --> 18:19.500
+Let's try to do that.
+
+18:19.500 --> 18:25.500
+This couple test module is a test which is run in real time while reading the CAN network.
+
+18:25.500 --> 18:28.500
+And, executing operation real time.
+
+18:41.500 --> 18:43.500
+Let's see how it works.
+
+18:43.500 --> 18:45.500
+I should do some examples already.
+
+18:45.500 --> 18:48.500
+Let me just check if we can find them.
+
+18:49.500 --> 18:58.500
+Thank you.
+
+18:58.500 --> 19:00.500
+Here, let's see.
+
+19:00.500 --> 19:23.500
+okay let's try to open this one
+
+19:23.500 --> 19:34.500
+it's going to report a lot of errors but it is what we want to see
+
+19:34.500 --> 20:02.500
+okay so do not think about the definition of the variables and includes one
+
+20:02.500 --> 20:17.500
+you're going to create a void function which is now called mean test you can assign the title of to a test module and a description
+
+20:17.500 --> 20:25.500
+then you're going to call test cases you see this one is the name of this test case
+
+20:25.500 --> 20:34.500
+what's the difference between this and for example with the studio that for this one you don't need an extra license with the studio
+
+20:34.500 --> 20:41.500
+but you can you will have to write the code manually basically
+
+20:41.500 --> 20:49.500
+so here is how you call system variables with the
+
+20:49.500 --> 20:53.500
+the at the beginning and you will have different values
+
+20:53.500 --> 20:59.500
+i think that this couple is written for dp system
+
+20:59.500 --> 21:08.500
+so this is the core tool connections as you would have another simulator you would call them in a different way
+
+21:08.500 --> 21:17.500
+but the good thing is that you can change the name of this variable as you wish by creating different system variables
+
+21:17.500 --> 21:20.500
+i'll show you how to do that you go into environment
+
+21:20.500 --> 21:27.500
+see you go to system variables and you can create other system variables
+
+21:27.500 --> 21:31.500
+i don't need some of the office that's going to get started at all
+
+21:31.500 --> 21:37.500
+but essentially lead them
+
+21:37.500 --> 21:45.500
+you don't give it the initial power let's define it as a 32 bit
+
+21:45.500 --> 22:10.500
+okay here you have created a namespace which is the block they are belonging to
+
+22:10.500 --> 22:13.500
+so we would have called them for example
+
+22:13.500 --> 22:19.500
+yield let's copy from here the connections
+
+22:19.500 --> 22:23.500
+okay
+
+22:23.500 --> 22:41.500
+so now if you press here
+
+22:41.500 --> 22:48.500
+yield connections it's going to recognize it and it's going to recognize also shanty one
+
+22:48.500 --> 22:51.500
+okay
+
+22:51.500 --> 22:56.500
+so in this way it's going to change this value
+
+22:56.500 --> 23:00.500
+to this one and you can do the same even with the database because here
+
+23:00.500 --> 23:04.500
+we already have our now a symbols
+
+23:04.500 --> 23:07.500
+we are going to have our signals
+
+23:07.500 --> 23:11.500
+the signals which are present inside the database
+
+23:11.500 --> 23:13.500
+okay
+
+23:13.500 --> 23:15.500
+furthermore
+
+23:15.500 --> 23:18.500
+and then we will see
+
+23:18.500 --> 23:21.500
+here it's filtering for network symbols
+
+23:21.500 --> 23:23.500
+we can filter also for variables
+
+23:23.500 --> 23:27.500
+and here we'll have all the system variables we have defined
+
+23:27.500 --> 23:28.500
+okay
+
+23:28.500 --> 23:29.500
+now
+
+23:29.500 --> 23:34.500
+for example let's suppose you want to simulate the press of the start button
+
+23:34.500 --> 23:35.500
+okay
+
+23:35.500 --> 23:38.500
+we are going to define in a system variable
+
+23:38.500 --> 23:48.500
+always in this connection or for example we put a new one called vehicle as a container let's say
+
+23:48.500 --> 23:50.500
+and this one is the start button
+
+23:50.500 --> 23:51.500
+okay
+
+23:51.500 --> 23:53.500
+the initial value is zero the minimum is zero the maximum is one because it's a press and press
+
+23:53.500 --> 23:55.500
+and we create it okay
+
+23:55.500 --> 24:10.500
+now we go here just in that in couple usually you should put on start for example
+
+24:10.500 --> 24:12.500
+right
+
+24:12.500 --> 24:15.500
+have you done the lessons on couple
+
+24:15.500 --> 24:19.500
+yes
+
+24:19.500 --> 24:21.500
+okay
+
+24:21.500 --> 24:27.500
+so here the difference is that you don't want to have an on start
+
+24:27.500 --> 24:33.500
+it's saying that this is not allowed in test model the event handler
+
+24:33.500 --> 24:45.500
+you will always have a test case and inside the test case you are going to do a sequence of operation
+
+24:45.500 --> 24:50.500
+so you will never have an on event in this one
+
+24:50.500 --> 24:51.500
+okay
+
+24:51.500 --> 24:55.500
+you can even define system variables
+
+24:55.500 --> 25:11.500
+for these
+
+25:11.500 --> 25:13.500
+you
+
+25:13.500 --> 25:15.500
+you
+
+25:15.500 --> 25:17.620
+the
+
+25:18.500 --> 25:20.500
+you
+
+25:20.500 --> 25:21.400
+you
+
+25:22.500 --> 25:23.500
+you
+
+25:23.500 --> 25:25.500
+you
+
+25:25.500 --> 25:53.500
+And this system variable can be called inside it.
+
+25:55.500 --> 26:24.500
+So, let's suppose that you define those two test cases, okay?
+
+26:24.500 --> 26:33.500
+And here you pass them a variable, enable, here and there.
+
+26:33.500 --> 26:41.500
+You can change the value of this system variable from outside in order to enable or disable a different test case.
+
+26:41.500 --> 26:42.500
+Okay?
+
+26:42.500 --> 26:52.500
+So, this one is running live inside the simulation.
+
+26:52.500 --> 26:54.500
+So, it's always running.
+
+26:54.500 --> 26:57.500
+When you press play, it's always going to run.
+
+26:57.500 --> 27:04.500
+If you want to rerun it, it's going to rerun every single test which is present inside here.
+
+27:04.500 --> 27:11.500
+With this thing, you're going to check or uncheck if you want enable or disable it.
+
+27:11.500 --> 27:13.500
+How do you do that?
+
+27:13.500 --> 27:20.500
+And here you can create panels.
+
+27:20.500 --> 27:21.500
+Hello.
+
+27:21.500 --> 27:30.500
+Yes, we can give you.
+
+27:30.500 --> 27:33.500
+Thank you.
+
+27:33.500 --> 27:41.500
+This is a useful thing if you have to simulate a lot of things and you want to have under control a lot of things.
+
+27:41.500 --> 27:48.500
+Because, in this case, you can put some checklists, where they are.
+
+27:48.500 --> 28:00.500
+For example, you can put radio buttons here.
+
+28:00.500 --> 28:07.500
+And from the properties, what you can do is call it in a different way.
+
+28:07.500 --> 28:16.500
+So, this one will be this one.
+
+28:16.500 --> 28:27.500
+And this one will be this other one.
+
+28:27.500 --> 28:31.500
+And you can associate this with a symbol.
+
+28:39.500 --> 28:40.500
+Okay?
+
+28:40.500 --> 28:43.500
+Here, I don't know why you have all the...
+
+28:43.500 --> 28:45.500
+Ah, symbol filter is signal.
+
+28:45.500 --> 28:47.500
+Instead, we want a variable.
+
+28:47.500 --> 28:52.500
+And we will enable this one.
+
+28:52.500 --> 28:58.500
+And we're going to associate the other one to the other.
+
+29:02.500 --> 29:03.500
+Okay?
+
+29:03.500 --> 29:04.500
+Yes.
+
+29:04.500 --> 29:05.500
+You save it.
+
+29:05.500 --> 29:07.500
+I am presenting the screen.
+
+29:07.500 --> 29:08.500
+Can you see my screen?
+
+29:08.500 --> 29:09.500
+Another one.
+
+29:09.500 --> 29:10.500
+Okay.
+
+29:10.500 --> 29:11.500
+Okay.
+
+29:11.500 --> 29:16.500
+You can change, for example, here, the background color.
+
+29:16.500 --> 29:17.500
+You can put...
+
+29:17.500 --> 29:18.500
+Start in color.
+
+29:18.500 --> 29:19.500
+Ah.
+
+29:19.500 --> 29:20.500
+Yes.
+
+29:20.500 --> 29:21.500
+Which is the need.
+
+29:21.500 --> 29:22.500
+That's the need.
+
+29:22.500 --> 29:23.500
+That's the need.
+
+29:23.500 --> 29:24.500
+Start coming from the...
+
+29:24.500 --> 29:25.500
+Check box.
+
+29:25.500 --> 29:26.500
+Group button.
+
+29:26.500 --> 29:27.500
+Yes.
+
+29:27.500 --> 29:28.500
+There's a container.
+
+29:28.500 --> 29:29.500
+And stuff like this.
+
+29:29.500 --> 29:42.500
+So, what I wanted to say to you is that...
+
+29:42.500 --> 29:45.500
+I think that you're going to write...
+
+29:45.500 --> 29:48.500
+Just a check of this case.
+
+29:48.500 --> 29:54.500
+Just give me a second, please.
+
+29:54.500 --> 29:55.640
+Okay.
+
+29:59.500 --> 30:12.500
+Are you getting a lot of noise from here?
+
+30:12.500 --> 30:13.500
+Yes.
+
+30:13.500 --> 30:14.500
+I think so.
+
+30:14.500 --> 30:15.500
+Okay.
+
+30:15.500 --> 30:18.500
+If you do not understand, please, guys, tell me.
+
+30:18.500 --> 30:20.500
+I'll try to fix it.
+
+30:20.500 --> 30:21.500
+I don't know how.
+
+30:21.500 --> 30:22.500
+But, yeah.
+
+30:22.500 --> 30:23.500
+Think about...
+
+30:23.500 --> 30:24.500
+You are doing...
+
+30:24.500 --> 30:31.500
+You're writing some kind of check for...
+
+30:31.500 --> 30:32.500
+Without changing anything.
+
+30:32.500 --> 30:34.500
+Just checking signals.
+
+30:34.500 --> 30:42.500
+For example, that the speed is reaching 100 kph while driving in 50 gear and the accelerator
+
+30:42.500 --> 30:43.500
+is full-pressed.
+
+30:43.500 --> 30:44.500
+Stupid example.
+
+30:44.500 --> 30:53.500
+You can put here a test case and you can allow it to run real-time while you are measuring
+
+30:53.500 --> 30:54.500
+variables.
+
+30:54.500 --> 30:55.500
+Okay.
+
+30:55.500 --> 31:04.500
+And, in this case, you will have a check directly on the car of what you need to test.
+
+31:04.500 --> 31:05.500
+Okay.
+
+31:05.500 --> 31:10.500
+Meanwhile, you can enable or disable the control of this test case.
+
+31:10.500 --> 31:15.500
+Here, you can open the different panels you have.
+
+31:15.500 --> 31:17.500
+For example, view panel one.
+
+31:17.500 --> 31:19.500
+Here, you can enable and disable the test case.
+
+31:19.500 --> 31:22.500
+I don't know why it's not the same thing in case.
+
+31:22.500 --> 31:24.500
+But, yes, because it's a radio button.
+
+31:24.500 --> 31:25.500
+No, no, no.
+
+31:25.500 --> 31:29.500
+Let's check button, for example.
+
+31:29.500 --> 31:31.500
+The second is 25.
+
+31:31.500 --> 31:32.500
+Yes, exactly.
+
+31:32.500 --> 31:37.500
+They have different...
+
+31:37.500 --> 31:55.500
+The configuration is basically the same.
+
+31:55.500 --> 32:00.500
+It's just that this one can be activated and deactivated, the other one is not.
+
+32:07.500 --> 32:25.500
+It's going to update directly, and it's going to be activated and deactivated.
+
+32:25.500 --> 32:29.500
+In this way, you can activate and deactivate it in real-time.
+
+32:29.500 --> 32:37.500
+Furthermore, it's using this kind of functions.
+
+32:37.500 --> 32:48.500
+It's going to create a report that you can analyze after the measurement.
+
+32:48.500 --> 32:49.500
+Okay?
+
+32:49.500 --> 32:50.500
+Yes.
+
+32:50.500 --> 32:55.500
+So, here, for example, there are functions.
+
+32:55.500 --> 33:07.500
+While you, with the couple, you're writing something like onSignalChange, onSysVar or onSignal,
+
+33:07.500 --> 33:20.500
+here, you can write test wait for signal in range, match outside range or available.
+
+33:20.500 --> 33:27.500
+So, for example, test wait for signal available is the first time it says wait for the availability
+
+33:27.500 --> 33:29.500
+of all signal of a send node.
+
+33:29.500 --> 33:38.500
+And, here, you have to set... to pass it, a Db node and a maximum waiting time.
+
+33:38.500 --> 33:43.500
+So, in case the maximum waiting time has passed and the signal...
+
+33:43.500 --> 33:49.500
+or all the signal are not yet received, it's going to report a test phase,
+
+33:49.500 --> 33:55.500
+because it was waiting more than expected to achieve that condition.
+
+33:55.500 --> 33:58.500
+Clear?
+
+33:59.500 --> 34:00.500
+Yes.
+
+34:00.500 --> 34:01.500
+Perfect.
+
+34:01.500 --> 34:17.500
+So, the last thing I want to show you was...
+
+34:17.500 --> 34:23.500
+Here, once you've created the tests, you can recall them from here.
+
+34:23.500 --> 34:26.500
+In the window test, there is test modules.
+
+34:26.500 --> 34:35.500
+Furthermore, you can create a test environment, where you insert double test modules, and you
+
+34:35.500 --> 34:40.500
+can run outside the simulation setup.
+
+34:40.500 --> 34:41.500
+Okay.
+
+34:41.500 --> 34:49.500
+In this way, you can double click on it.
+
+34:49.500 --> 34:55.500
+You can configure it to say on and off, to start immediately, or to start an environment variable,
+
+34:55.500 --> 35:01.500
+on a system variable, on key, furthermore, and the state of the test module.
+
+35:01.500 --> 35:05.500
+You can map it to a system variable.
+
+35:05.500 --> 35:15.500
+Then, if you want a report or not, which components are useful for it, and on which bus it is done.
+
+35:15.500 --> 35:17.500
+Here, you can edit test module.
+
+35:17.500 --> 35:30.500
+As we did before, it's going to open a .cam file.
+
+35:30.500 --> 35:32.500
+Here, inside, there is the debug.
+
+35:32.500 --> 35:33.500
+Never used it.
+
+35:33.500 --> 35:34.500
+You will not use it.
+
+35:34.500 --> 35:35.500
+Don't worry.
+
+35:35.500 --> 35:45.500
+And here, is if we want to reset the verdict, assign a failed result.
+
+35:45.500 --> 35:48.500
+Once you've run the test, you can open the report directly from here.
+
+35:48.500 --> 35:49.500
+Okay.
+
+35:49.500 --> 35:56.500
+And you will have them here, that you can run directly from here.
+
+35:56.500 --> 36:07.500
+The test setup, instead, it's going to take test units from VT system, from VT Studio, sorry.
+
+36:07.500 --> 36:11.500
+So you're going to create a test configuration, but you need test units.
+
+36:11.500 --> 36:16.500
+And it's going to look for vector test units.
+
+36:16.500 --> 36:23.500
+Here, you can add the diagnostics device.
+
+36:23.500 --> 36:28.500
+The diagnostic device, I don't know if you have seen it on, on Canalizer.
+
+36:28.500 --> 36:29.500
+I think so.
+
+36:29.500 --> 36:35.500
+It's basically the same as you were looking at the analyzer or stuff like this.
+
+36:35.500 --> 36:40.500
+You can say here, on this scan, we have a diagnostic description.
+
+36:40.500 --> 36:45.500
+So we have a diagnostic device, a tester, basically.
+
+36:45.500 --> 36:50.500
+You need the CDPDX or MDX file.
+
+36:50.500 --> 36:52.500
+Let me see if I have one.
+
+36:52.500 --> 36:54.500
+Sorry.
+
+36:54.500 --> 36:55.500
+I need to check on the, UI CDD somewhere on the, on the lessons, right?
+
+36:55.500 --> 37:21.500
+I need to check on the, UI CDD somewhere on the, on the lessons, right?
+
+37:21.500 --> 37:23.500
+Analysis and as well.
+
+37:23.500 --> 37:24.500
+Yes.
+
+37:24.500 --> 37:25.500
+Yes.
+
+37:25.500 --> 37:28.500
+This should be one.
+
+37:28.500 --> 37:30.500
+Okay.
+
+37:30.500 --> 37:35.500
+Okay.
+
+37:35.500 --> 37:38.500
+Okay.
+
+37:38.500 --> 37:43.500
+Okay.
+
+37:43.500 --> 37:44.500
+Okay.
+
+37:44.500 --> 37:45.500
+Okay.
+
+37:45.500 --> 37:47.500
+Okay.
+
+37:47.500 --> 37:49.500
+Okay.
+
+37:49.500 --> 37:51.480
+Okay.
+
+37:51.500 --> 37:57.800
+We're going to see which is the protocol, Diagnostic N,
+
+37:57.800 --> 38:01.260
+the target group, which are all the services,
+
+38:01.260 --> 38:04.500
+and it's a physical request instead of a functional group request.
+
+38:04.500 --> 38:07.500
+Do you know the difference between physical and functional?
+
+38:13.860 --> 38:14.860
+No.
+
+38:16.200 --> 38:20.500
+Okay, physical, it's targeting to a specific node.
+
+38:21.500 --> 38:27.500
+So, for example, I'm asking to the engine control module something.
+
+38:27.500 --> 38:40.500
+So, I have a direct request with a specific token ID addressing to the ECU 60,
+
+38:40.500 --> 38:44.500
+for example, in this case, while the tester is F1.
+
+38:44.500 --> 38:58.500
+I expect a response with this ID from the specific ECU to the tester.
+
+38:58.500 --> 39:04.500
+The functional is I'm asking to powertrain different information.
+
+39:04.500 --> 39:10.500
+You see that the KNIT is different, but even the ECUs are different,
+
+39:10.500 --> 39:13.500
+and this is part of the group, of a specific group.
+
+39:13.500 --> 39:18.500
+This is useful for OBD specification.
+
+39:18.500 --> 39:26.500
+Basically, when you need to check all the powertrain units,
+
+39:26.500 --> 39:30.500
+all the braking system and stuff like this, you will have functional addressing.
+
+39:30.500 --> 39:38.500
+While the physical addressing is specific to the single ECU,
+
+39:38.500 --> 39:43.500
+which can be the body, which can be the transmission, the engine, the DSP,
+
+39:43.500 --> 39:48.500
+the, I don't know, the seat modules, and stuff like this.
+
+39:48.500 --> 39:50.500
+Here, you don't have to configure anything,
+
+39:50.500 --> 39:54.500
+because it's everything configured inside the CDD.
+
+39:54.500 --> 39:58.500
+The only thing you could do is to add the DLL for the CDD key.
+
+39:59.500 --> 40:01.500
+Have you seen what is the CDD key?
+
+40:07.500 --> 40:08.500
+This one?
+
+40:10.500 --> 40:12.500
+The security access.
+
+40:12.500 --> 40:14.500
+Do you know where it is?
+
+40:16.500 --> 40:21.500
+Basically, this is the first, basically the first interspace board, let me say.
+
+40:21.500 --> 40:24.500
+So the original interspace board, as it is.
+
+40:24.500 --> 40:25.500
+And now, as well.
+
+40:25.500 --> 40:26.500
+Okay, I don't think so.
+
+40:26.500 --> 40:31.500
+So the security access is the way to unlock the unit,
+
+40:31.500 --> 40:36.500
+especially for production unit, not the development issues.
+
+40:36.500 --> 40:41.500
+You need to unlock the security access.
+
+40:41.500 --> 40:45.500
+It's done by an end shaking between the tester and the unit.
+
+40:45.500 --> 40:50.500
+Basically, you are requesting a seed and you are sending a key to the unit,
+
+40:50.500 --> 40:53.500
+according to the seed you have received.
+
+40:53.500 --> 40:58.500
+And this way, the issue is kind of unblocked.
+
+40:59.500 --> 41:03.500
+And this allows you to run routines, to change parameters inside,
+
+41:03.500 --> 41:05.500
+directly from the diagnostic.
+
+41:05.500 --> 41:11.500
+Furthermore, it's allowing you to enter programming session,
+
+41:11.500 --> 41:15.500
+and to download a software on the unit.
+
+41:15.500 --> 41:22.500
+So this is important, but it's something the owner of the software needs to provide.
+
+41:23.500 --> 41:30.500
+So once we have created this, we are going to have these two windows,
+
+41:30.500 --> 41:36.500
+but I prefer to use this one, which is a diagnostic console.
+
+41:36.500 --> 41:41.500
+And here you can see a session control, to go into default session, programming session,
+
+41:41.500 --> 41:45.500
+extended session, or end of line session.
+
+41:45.500 --> 41:48.500
+Then you have this, you are the reset and stuff like this,
+
+41:48.500 --> 41:52.500
+and you will have all the routines, all the IO control,
+
+41:52.500 --> 41:58.500
+and everything which is present in the CDD,
+
+41:58.500 --> 42:03.500
+it's going to be present on it.
+
+42:03.500 --> 42:07.500
+So you can do all the diagnostics directly from here.
+
+42:07.500 --> 42:09.500
+You have a tool which you can do.
+
+42:10.500 --> 42:12.500
+Then what other things can be done?
+
+42:12.500 --> 42:21.500
+We don't have this license, but anyway, it's possible to do even XCP.
+
+42:21.500 --> 42:24.500
+We'll see next week with the Canapé.
+
+42:24.500 --> 42:25.500
+What is the CP?
+
+42:25.500 --> 42:28.500
+You have already done a lesson of Inca, right?
+
+42:28.500 --> 42:30.500
+Please reply, guys.
+
+42:30.500 --> 42:31.500
+Yes.
+
+42:31.500 --> 42:32.500
+Yes.
+
+42:32.500 --> 42:33.500
+Yes.
+
+42:33.500 --> 42:34.500
+Yes.
+
+42:34.500 --> 42:35.500
+Okay.
+
+42:35.500 --> 42:38.500
+Canapé is the brother of Inca.
+
+42:38.500 --> 42:42.500
+But while Inca is made from ITAS,
+
+42:42.500 --> 42:49.500
+and it's more used from a German manufacturer for the power chain side,
+
+42:49.500 --> 42:55.500
+Canapé is made by Vector, and it's used for almost every issue.
+
+42:55.500 --> 43:04.500
+So while engine developers are more confident with Inca,
+
+43:04.500 --> 43:08.500
+because the major part of the issues are made by Bosch,
+
+43:08.500 --> 43:10.500
+and Bosch made also the basic software,
+
+43:10.500 --> 43:16.500
+when they want a measurement, they want it in a format
+
+43:16.500 --> 43:18.500
+which can be compatible with Inca.
+
+43:18.500 --> 43:23.500
+So they want to adopt that file instead of an MDF or an MFO file.
+
+43:23.500 --> 43:30.500
+But yeah, we are going to use a lot of Canapé in validation activities,
+
+43:30.500 --> 43:35.500
+because it allows to do the same exact things of Inca,
+
+43:35.500 --> 43:37.500
+and it's maybe even easier to use,
+
+43:37.500 --> 43:43.500
+and more compatible with all other tools that we use in validation activities.
+
+43:43.500 --> 43:46.500
+With Cano, you can measure XEP.
+
+43:46.500 --> 43:48.500
+It's a little bit...
+
+43:48.500 --> 43:53.500
+Cano is not meant for doing calibration.
+
+43:53.500 --> 43:59.500
+It's more used to do simulations of a network and acquisition.
+
+44:00.500 --> 44:07.500
+Furthermore, Cano can also measure variables on internet, on LIM, and stuff like this.
+
+44:07.500 --> 44:11.500
+For now, we have only seen how to configure a Cannetwork,
+
+44:11.500 --> 44:19.500
+but it's possible to measure internet networks, LIM networks,
+
+44:19.500 --> 44:25.500
+flex-ray networks, and whatever networks you think about.
+
+44:25.500 --> 44:31.500
+And with specific licenses, it's possible even to access the standard decalibration protocol,
+
+44:31.500 --> 44:34.500
+which is the XEP or the CCP,
+
+44:34.500 --> 44:39.500
+with another window here in the diagnostics.
+
+44:39.500 --> 44:44.500
+Then I think we have seen everything in this,
+
+44:44.500 --> 44:51.500
+because this analysis window is the same as it is for Canalyzer, basically.
+
+44:52.500 --> 44:57.500
+So, yeah, that's it, I think for now.
+
+44:57.500 --> 45:02.500
+Please, ten minutes, you have questions to ask?
+
+45:05.500 --> 45:07.500
+Yes, as for now, yes.
+
+45:09.500 --> 45:24.500
+No, Roberto, personally, for me, it's clear.
+
+45:24.500 --> 45:30.500
+I have to read the slides, and I'm checking if something is not clear.
+
+45:30.500 --> 45:36.500
+Roberto, are we going to have the lesson recorded?
+
+45:36.500 --> 45:38.500
+Yeah, I recorded it.
+
+45:38.500 --> 45:39.500
+Yeah, I recorded it.
+
+45:39.500 --> 45:40.500
+Okay, yeah, nice.
+
+45:40.500 --> 45:41.500
+Thank you.
+
+45:41.500 --> 45:45.500
+No questions for me, so far.
+
+45:45.500 --> 45:46.500
+All good.
+
+45:46.500 --> 46:05.500
+Okay, guys, if everything is clear, well, I would suggest you to read again the slides.
+
+46:05.500 --> 46:10.500
+There is less than what we said.
+
+46:10.500 --> 46:12.500
+We need to be updated, let's say.
+
+46:12.500 --> 46:14.500
+I will talk to Andrea to do that.
+
+46:14.500 --> 46:18.500
+And if you have any doubts, please send me an email.
+
+46:18.500 --> 46:25.500
+And I think that next week, between Thursday and Friday, we will have a lesson on Canapé.
+
+46:25.500 --> 46:26.500
+Okay.
+
+46:26.500 --> 46:30.500
+And for now, we're also taking consideration of the requests.
+
+46:30.500 --> 46:31.500
+Yeah.
+
+46:31.500 --> 46:32.500
+That's it from my side.
+
+46:32.500 --> 46:35.500
+If you don't have any questions, I think you can talk to me.
+
+46:35.500 --> 46:36.500
+Thank you.
+
+46:37.500 --> 46:38.500
+All right.
+
+46:38.500 --> 46:39.500
+Thank you, Robbie.
+
+46:39.500 --> 46:40.500
+Ci vediamo.
+
+46:40.500 --> 46:41.500
+Thank you.
+
+46:41.500 --> 46:42.500
+Bye.
+
+46:42.500 --> 46:43.500
+Bye.
+
+46:43.500 --> 46:44.500
+Bye.
+
+46:44.500 --> 46:45.500
+Bye.
+
+46:45.500 --> 46:46.500
+Bye.
+
+47:08.500 --> 47:09.500
+Bye.
+
