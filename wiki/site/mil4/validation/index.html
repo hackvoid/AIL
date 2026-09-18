@@ -1,0 +1,5022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Bootcamp knowledge base for automotive E/E engineering">
+      
+      
+      
+      
+        <link rel="prev" href="../verification/">
+      
+      
+        <link rel="next" href="../diagnosis-process/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Vehicle Validation - Kineton Academy Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vehicle-validation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Kineton Academy Wiki" class="md-header__button md-logo" aria-label="Kineton Academy Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kineton Academy Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Vehicle Validation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kineton Academy Wiki" class="md-nav__button md-logo" aria-label="Kineton Academy Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Kineton Academy Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIL1 — Vehicle Fundamentals
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MIL1 — Vehicle Fundamentals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/can-lin/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAN LIN
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAN LIN
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/ee-architecture/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EE Architecture
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EE Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/electric-motors/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Electric Motors
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Electric Motors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/hev-architecture-bev/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HEV Architecture BEV
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HEV Architecture BEV
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/hev-architecture-hybrid/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HEV Architecture Hybrid
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HEV Architecture Hybrid
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/ice/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ICE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ICE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/sensors/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensors
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Sensors
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/v-cycle/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    V Cycle
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    V Cycle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil1/vehicle-subsystems/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicle Subsystems
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vehicle Subsystems
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIL2 — Tools & Testing Basics
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MIL2 — Tools & Testing Basics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/canalyzer/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANalyzer
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CANalyzer
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/canalyzer/canalyzer-exercise/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANalyzer Exercise
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CANalyzer Exercise
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-ig/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANalyzer Exercise IG
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CANalyzer Exercise IG
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-igtrace/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANalyzer Exercise IGTrace
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CANalyzer Exercise IGTrace
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAPL
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAPL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/capl-exercise/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAPL Exercise
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAPL Exercise
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/capl-exercise/capl-exercise/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAPL Exercise
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAPL Exercise
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/capl-exercise/capl-exercise8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAPL Exercise8
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAPL Exercise8
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/capl-exercise/capl-exercise-gateway/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAPL Exercise Gateway
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAPL Exercise Gateway
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/capl-other/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CAPL Other
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CAPL Other
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/capl/capl-other/wip/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WIP
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    WIP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/canoe/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANoe
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CANoe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/canoe/canoe-exercises/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CANoe Exercises
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CANoe Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/diagnosis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnosis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diagnosis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/diagnosis/diagnosis-exercises/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnosis Exercises
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diagnosis Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/diagnosis/diagnosis-exercises/exercise-diagnosi-1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise Diagnosi 1
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercise Diagnosi 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RDI Testing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RDI Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/rdi-testing/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RDI Testing
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RDI Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/rdi-testing/exercise-7-diagnostic-exercise/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise 7 - Diagnostic exercise
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercise 7 - Diagnostic exercise
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/rdi-testing/exercise-diagnosi-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise Diagnosi 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercise Diagnosi 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/rdi-testing/exercise-diagnosi-3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise Diagnosi 3
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercise Diagnosi 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/rdi-testing/exercise-missing-message/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercise Missing Message
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercise Missing Message
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/rdi-testing/rdi-testing/uds-exercise/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UDS Exercise
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_6_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UDS Exercise
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/diagnostic-tools/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostic Tools
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diagnostic Tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil2/testautomation/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TestAutomation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TestAutomation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIL3 — Requirements, HIL & Calibration
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MIL3 — Requirements, HIL & Calibration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/requirements/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Requirements
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Requirements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/vf/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VF
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VF
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/testcases/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TestCases
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TestCases
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/hil-users/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HIL Users
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    HIL Users
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/inca/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCA
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    INCA
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/inca/inca-exercises/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCA Exercises
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    INCA Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../mil3/inca-2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    INCA 2
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    INCA 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIL4 — Verification & Validation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MIL4 — Verification & Validation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../verification/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Verification
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Verification
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Validation
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Validation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../diagnosis-process/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnosis Process
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diagnosis Process
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../troubleshooting/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../first-level-analysis/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Level Analysis
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    First Level Analysis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../glossary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Glossary
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/calibration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/diagnostics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diagnostics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/ecu-topology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ECU Topology
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/files-formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files & Formats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/protocols/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Protocols
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/scripting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scripting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/signals-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Signals & Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/test-methods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Methods
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/vector-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vector Tools
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-validate-in-a-vehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why validate in a vehicle?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-validation-sits-in-the-v-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where validation sits in the V-model
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-validation-documentation-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The validation documentation set
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The validation documentation set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#from-requirement-to-test-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        From requirement to test case
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#worked-example-ecm-speed-limiter-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Worked example: ECM Speed Limiter validation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Worked example: ECM Speed Limiter validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The function
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-software-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The software structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-overspeed-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The overspeed test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-real-nok-interaction-with-start-stop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A real NOK: interaction with Start &amp; Stop
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting-and-issue-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Troubleshooting and issue tracking
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-the-vehicle-still-wins-the-cam-backup-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why the vehicle still wins: the cam-backup story
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hands-on-in-vehicle-validation-on-a-bev-prototype-maserati-m182" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hands-on: in-vehicle validation on a BEV prototype (Maserati M182)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hands-on: in-vehicle validation on a BEV prototype (Maserati M182)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-oriented-in-the-car" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting oriented in the car
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wiring-the-can-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wiring the CAN case
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-with-canalyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monitoring with CANalyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flashing-and-diagnostics-with-cda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flashing and diagnostics with CDA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safety-the-two-mushrooms-and-the-hvil" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Safety: the two mushrooms and the HVIL
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fault-injection-with-the-bob" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fault injection with the BOB
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inserting-a-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inserting a gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#power-management-note" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Power-management note
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-material" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source material
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="vehicle-validation">Vehicle Validation<a class="headerlink" href="#vehicle-validation" title="Permanent link">&para;</a></h1>
+<p>Validation answers a simple question: <strong>does the software we built behave the way
+the original concept said it should?</strong> Verification checks that the code was
+written correctly against its design; validation checks that the <em>implemented</em>
+control logic, running on the real system, actually produces the response the
+requirements promised.</p>
+<p>This article covers <strong>Vehicle Integrated Functionality (VIF) validation</strong> — the
+final, highest-fidelity test stage, performed on a real vehicle — and then walks
+through the practical side of working on a prototype car: connecting to its
+networks, flashing and diagnosing ECUs, and injecting faults safely.</p>
+<h2 id="why-validate-in-a-vehicle">Why validate in a vehicle?<a class="headerlink" href="#why-validate-in-a-vehicle" title="Permanent link">&para;</a></h2>
+<p>By the time a function reaches vehicle validation, it has already been exercised
+in simulated environments (MiL, SiL, HiL). The vehicle adds something none of
+those can fully reproduce:</p>
+<ul>
+<li><strong>Real dynamics and disturbances.</strong> The controlled system answers a stimulus
+  with all its physical complexity — friction, inertia, thermal behavior,
+  tolerances — none of which a model captures perfectly.</li>
+<li><strong>Real interactions between ECUs.</strong> On the bench, non-involved nodes are
+  simulated or absent; in the car, every ECU is live and interacting.</li>
+<li><strong>Proof of the simulation itself.</strong> A successful vehicle test confirms that
+  the results obtained in the simulated environment were trustworthy.</li>
+</ul>
+<p>The price you pay is <strong>controllability</strong>. In a HiL rig you can force any input
+to any value at any moment. In a vehicle, sensors are real physical entities, so
+to reach a specific system state you must perform an actual <strong>maneuver</strong> — for
+example, if a function only activates with a warm engine, you have to drive the
+car until the coolant reaches temperature. Designing maneuvers that reliably
+push the system into the required state is a core skill of the validator.</p>
+<h2 id="where-validation-sits-in-the-v-model">Where validation sits in the V-model<a class="headerlink" href="#where-validation-sits-in-the-v-model" title="Permanent link">&para;</a></h2>
+<p><img alt="VIF position in the V-cycle" src="img/v-cycle-vif.webp" /></p>
+<p>Vehicle validation is the <strong>last step of the software development V-cycle</strong>: it
+closes the right-hand branch after functional test and system test. The workflow
+is driven by documentation coming from the left-hand branch:</p>
+<ol>
+<li>Requirements and functional specifications are translated into <strong>test cases</strong>
+   (CheckList / DVP — Design Validation Plan).</li>
+<li>The validator executes the maneuvers in the vehicle, measures and analyzes
+   the system behavior.</li>
+<li>Results go into a <strong>report</strong> that is fed back to the development teams
+   (function developers, calibrators, suppliers), closing the loop with bug-fix
+   suggestions and software modifications — this is the troubleshooting feedback
+   path in the diagram.</li>
+<li>When the result is positive, the software content is <strong>frozen</strong> together with
+   its calibration set.</li>
+</ol>
+<pre class="mermaid"><code>flowchart TD
+    A["Start-up: flash latest SW,&lt;br/&gt;update nodes to production intent,&lt;br/&gt;collect documentation"] --&gt; B["Function analysis:&lt;br/&gt;study SW manual &amp; spec requirements"]
+    B --&gt; C["Test case preparation&lt;br/&gt;(CheckList / DVP)"]
+    C --&gt; D["In-vehicle test execution&lt;br/&gt;with I/O monitoring"]
+    D --&gt; E{"Result OK?"}
+    E --&gt;|Yes| F["SW content freezing&lt;br/&gt;+ calibration set collection"]
+    E --&gt;|No| G["Report compiling + DVPM point&lt;br/&gt;(confirmed by project supervisor)"]
+    G --&gt; H["Issue state monitoring&lt;br/&gt;until fix is released"]
+    H --&gt; D</code></pre>
+<h2 id="the-validation-documentation-set">The validation documentation set<a class="headerlink" href="#the-validation-documentation-set" title="Permanent link">&para;</a></h2>
+<p>Stellantis validation activities revolve around a standard document set:</p>
+<table>
+<thead>
+<tr>
+<th>Document</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>VF</strong> (Vehicle Function)</td>
+<td>Requirement description for a single application/function</td>
+</tr>
+<tr>
+<td><strong>CFTS</strong> (Component Functional Technical Specification)</td>
+<td>Functional characteristics (e.g. speed limiter minimum set point) and the functional structure of the controls, valid per architecture</td>
+</tr>
+<tr>
+<td><strong>PTMS</strong></td>
+<td>Specifications of the vehicle interface functions for the engine control system; high-level description of the main ECM functionalities and their interaction</td>
+</tr>
+<tr>
+<td><strong>CheckList</strong></td>
+<td>The output test document: a list of maneuvers, each with the expected (or explicitly negated) system behavior, derived from the requirements</td>
+</tr>
+<tr>
+<td><strong>General Report</strong></td>
+<td>Collects all test results and procedure notes</td>
+</tr>
+<tr>
+<td><strong>DVPM</strong> (Design Validation Plan &amp; Results)</td>
+<td>Tracks NOK points and anomalies to be fixed; a macro computes the progress state of the whole activity</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>CheckList layout</strong> maps directly onto requirements: each row identifies
+the functionality, the specific feature under test, the <strong>condition</strong> (the
+maneuver to perform) and the <strong>verification</strong> (the expected system behavior,
+quoting the requirement). A checklist is usually unique per <em>architecture</em> — all
+projects on the same architecture support the same features, which are then
+enabled, disabled or calibrated per application.</p>
+<h3 id="from-requirement-to-test-case">From requirement to test case<a class="headerlink" href="#from-requirement-to-test-case" title="Permanent link">&para;</a></h3>
+<p>The translation from spec to maneuver must preserve the requirement's intent
+while being executable in the real environment. Example: the requirement says
+the thermostatic coolant valve must stay closed during the first phase of engine
+warm-up, and the ECM must command opening once the coolant temperature
+approaches the target idling temperature. The corresponding test case:</p>
+<blockquote>
+<p>Turn on the engine and wait until the coolant temperature is regulated between
+80 °C and 90 °C (depending on the engine's thermal characteristics). Check
+that the sensed valve position stays fully closed for 10 seconds after engine
+start, and that it is partially/fully opened once the temperature has been
+regulated.</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The variables named in the requirement do not necessarily match the labels
+you read in the measurement tool (INCA). Part of the function analysis is
+mapping requirement entities to the real SW labels before you go testing.</p>
+</div>
+<h2 id="worked-example-ecm-speed-limiter-validation">Worked example: ECM Speed Limiter validation<a class="headerlink" href="#worked-example-ecm-speed-limiter-validation" title="Permanent link">&para;</a></h2>
+<h3 id="the-function">The function<a class="headerlink" href="#the-function" title="Permanent link">&para;</a></h3>
+<p>The speed limiter caps vehicle speed at a driver-selected threshold. On the
+PowerNet architecture (Jeep Wrangler) it involves three ECUs: <strong>SCCM</strong> (steering
+column control, reads the driver commands), <strong>IPC</strong> (instrument cluster,
+displays the setpoint) and <strong>ECM</strong>, which does the real work — this is why it is
+called <strong>whole ECM speed limiter</strong>: the ECM computes the speed setpoint from the
+steering-wheel buttons and, in coordination with ESP, actuates the torque
+limitation that tracks it.</p>
+<h3 id="the-software-structure">The software structure<a class="headerlink" href="#the-software-structure" title="Permanent link">&para;</a></h3>
+<p>The control is a <em>wrappered</em> function with two main blocks:</p>
+<ul>
+<li><strong>SLCM</strong> (Stellantis implementation) — elaborates the target speed requested
+  by the driver through the steering commands (e.g. SL On → Set+ → Res).</li>
+<li><strong>Llim</strong> (Bosch implementation) — actuates the speed control, built from three
+  subfunctions:<ul>
+<li><strong>Llim_Stm</strong> — the status machine: recognizes the operational driving
+  condition from monitored inputs and outputs the control state.</li>
+<li><strong>Llim_CalcLim</strong> — computes the output control torque from the state.</li>
+<li><strong>Llim_ShOff</strong> — handles shut-off/inhibition of the control under the
+  conditions defined by the status machine.</li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    DRV["Driver buttons&lt;br/&gt;(CAN commands)"] --&gt; SLCM["SLCM&lt;br/&gt;target speed"]
+    SLCM --&gt; subgraph LLIM["Llim (Bosch)"]
+        STM["Llim_Stm&lt;br/&gt;status machine"] --&gt; CALC["Llim_CalcLim&lt;br/&gt;torque computation"]
+        SHOFF["Llim_ShOff&lt;br/&gt;inhibition"] --&gt; STM
+    end
+    CALC --&gt; TRQ["SL torque reduction request"]</code></pre>
+<h3 id="the-overspeed-test">The overspeed test<a class="headerlink" href="#the-overspeed-test" title="Permanent link">&para;</a></h3>
+<p>The <strong>overspeed state</strong> is entered when the vehicle runs faster than the
+setpoint with the limiter engaged, for longer than a defined time. The
+requirement regulates how the system must react; the checklist condenses it into
+a maneuver that forces the overspeed (condition) plus the compliant reaction to
+check (verification).</p>
+<p>During execution you monitor, as I/O of the function under test:</p>
+<ul>
+<li>the relevant sensed values — vehicle speed and the internal <strong>timer/speed
+  thresholds</strong> that gate the state transition (threshold values are INCA
+  calibration data),</li>
+<li>the system reaction — the <strong>state machine evolution</strong> and the resulting torque
+  limitation request.</li>
+</ul>
+<p><img alt="Measurement analysis of the overspeed test" src="img/sl-overspeed-measure.webp" /></p>
+<p>In the measurement above you can read the whole story: the driver's SL
+activation command, the vehicle speed deviating above the target, the state
+machine transition into the overspeed state once the timer expires, and the SL
+torque limitation request that brings the speed back. If all of this matches the
+spec, the test is OK and goes into the report; otherwise it is a NOK.</p>
+<h3 id="a-real-nok-interaction-with-start-stop">A real NOK: interaction with Start &amp; Stop<a class="headerlink" href="#a-real-nok-interaction-with-start-stop" title="Permanent link">&para;</a></h3>
+<p>Some of the most valuable tests target the <strong>interaction between functions</strong>.
+In this case the scenario was the speed limiter's behavior after a Start &amp; Stop
+re-crank. The measurement showed the requirement being violated: after the
+autostop maneuver, the SL was wrongly turned off — the limitation setpoint
+collapsed to 0 km/h.</p>
+<p>Root cause: the SL internal model was mishandling a <strong>state machine transition</strong>
+during the re-crank. Because the fault lives inside the state machine logic with
+no calibration involved, this is a <strong>software bug</strong> (hardcoded behavior), not
+something a calibrator can fix by changing data.</p>
+<h2 id="troubleshooting-and-issue-tracking">Troubleshooting and issue tracking<a class="headerlink" href="#troubleshooting-and-issue-tracking" title="Permanent link">&para;</a></h2>
+<p>Every NOK result enters a formal loop:</p>
+<pre class="mermaid"><code>flowchart TD
+    A["NOK test result report&lt;br/&gt;+ root cause detection"] --&gt; B["DVPM point opening"]
+    B --&gt; C["Issue classification&lt;br/&gt;(SW bug / calibration)"]
+    C --&gt; D["SW or Cal fixing content released"]
+    D --&gt; E{"Fix re-test OK?"}
+    E --&gt;|Yes| F["Point closed"]
+    E --&gt;|No| A</code></pre>
+<p>Key rules of the loop:</p>
+<ul>
+<li>A DVPM point is opened only when the negative behavior is <strong>confirmed by the
+  project supervisor</strong>.</li>
+<li>The DVPM document (with an embedded macro) keeps the trace of NOK tests and
+  anomalies, giving the global progress state of the activity.</li>
+<li>Distinguishing <em>SW issue</em> from <em>calibration issue</em> matters: a calibration
+  problem is fixed with new data; a SW bug requires a code change and a new
+  release, then a full re-test of the function.</li>
+</ul>
+<h2 id="why-the-vehicle-still-wins-the-cam-backup-story">Why the vehicle still wins: the cam-backup story<a class="headerlink" href="#why-the-vehicle-still-wins-the-cam-backup-story" title="Permanent link">&para;</a></h2>
+<p>The <strong>crankshaft tone wheel backup strategy</strong> is a good example of a test whose
+significance changes with the environment. Engine position is essential —
+injection control, variable valve actuation, gear management and fuel pressure
+all descend from it. The requirement (engine speed calculation) says, in
+essence:</p>
+<ul>
+<li>RPM is computed from crank sensor tooth periods; once the crank position is
+  locked and two top-dead-center positions have been traversed, it is computed
+  from the two TDCs.</li>
+<li>If the crank sensor fails but the cam sensor is still valid, engine speed must
+  be computed — and reported on CAN in <code>ECM_A1.EngRPM</code> — from the <strong>camshaft</strong>
+  signal instead (up to 8160 RPM, ramped to 0 when the active sensor unlocks).</li>
+</ul>
+<p>The backup logic: if teeth are systematically missing, the ECM waits
+<strong>7 crankshaft revolutions</strong> (counted via the camshaft signal, since crank and
+cam positions are strictly related) before declaring the crank source faulty —
+the debounce time is calibratable — then applies the cam-backup strategy and
+sets a diagnostic fault. If the speed computed from the camshaft is above a
+fixed threshold (e.g. 500 RPM), the ECM pilots injection to hold idle; below it,
+the engine is shut down.</p>
+<p>Testing this means performing a <strong>crankshaft loss-of-signal</strong> in idle
+conditions. The result differed sharply by environment:</p>
+<table>
+<thead>
+<tr>
+<th>Environment</th>
+<th>Successful idle recoveries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HiL</td>
+<td>8 out of 10</td>
+</tr>
+<tr>
+<td>Vehicle</td>
+<td>about 5 out of 10</td>
+</tr>
+</tbody>
+</table>
+<p>The gap comes from real engine physics — friction losses, mechanical inertia —
+that the model did not reproduce reliably. The lesson: <strong>test significance
+depends on the environment</strong>, and some behaviors can only be judged in the
+vehicle.</p>
+<div class="admonition note">
+<p class="admonition-title">Appendix: calibration, ETK and CCP/XCP</p>
+<ul>
+<li><strong>Calibration</strong> is what lets one software application run on different
+  engine/vehicle variants (e.g. a 1.6 L 120 hp manual and a 2.0 L 180 hp
+  automatic on the same ECU hardware): the control logic is common, the
+  data tunes it to the application.</li>
+<li><strong>ETK</strong> (Emulator-Tastkopf, emulator test probe) is the ETAS development
+  interface fitted in development ECUs. It connects in parallel to the
+  processor bus lines and can replace program and/or calibration data,
+  allowing online parameter changes; its dual-port RAM streams measured
+  internal values to tools like INCA.</li>
+<li><strong>CCP/XCP</strong> (CAN Calibration Protocol / eXtended Calibration Protocol)
+  provide runtime read/write access to ECU variables and memory through
+  standard interfaces instead of an ETK: CCP over CAN; XCP also over
+  FlexRay, Ethernet or USB (and supports flashing).</li>
+</ul>
+</div>
+<h2 id="hands-on-in-vehicle-validation-on-a-bev-prototype-maserati-m182">Hands-on: in-vehicle validation on a BEV prototype (Maserati M182)<a class="headerlink" href="#hands-on-in-vehicle-validation-on-a-bev-prototype-maserati-m182" title="Permanent link">&para;</a></h2>
+<p>This section is the practical playbook used on the M182 BEV prototype. The main
+actors on the high-voltage side: the <strong>EDM</strong> (Electric Drive Machine = motor +
+inverter, 400 V / up to 1 kA), <strong>OBCM</strong> (on-board charger), <strong>EVSE</strong> (supply
+equipment), <strong>ECH/BCH</strong> (coolant heaters), plus the control modules <strong>SGW</strong>
+(secure gateway), <strong>VDCM</strong> (vehicle domain control module), <strong>BPCM</strong> (battery
+pack control module), <strong>MCPA/MCPB</strong> (front/rear motor control processors),
+<strong>IPC</strong> and <strong>CADM</strong>.</p>
+<h3 id="getting-oriented-in-the-car">Getting oriented in the car<a class="headerlink" href="#getting-oriented-in-the-car" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The <strong>12 V battery</strong> sits in the front hood. Its negative-pole cable has a
+  button that releases it without tools — handy because disconnecting the 12 V
+  is a routine step.</li>
+<li><strong>OBD sockets</strong> — driver side, lower left: the <strong>FD-CAN6</strong> socket (the
+  diagnostic CAN, the one service also uses) and next to it the <strong>FD-CAN11</strong>
+  socket. Passenger side: three more sockets carrying <strong>FD-CAN 5, 14 and 3</strong>.
+  Every cable carries a label with its connection info — always work from those
+  labels.</li>
+<li>Trick: you can close the "door closed" switch by hand to keep the door open
+  without the acoustic warning.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">After a 12 V reconnect</p>
+<p>Two things bite you if you forget them:
+- After detaching/reattaching the 12 V battery you must press the door-open
+  button on the key, otherwise the vehicle will not go into charge.
+- The vehicle must be <strong>re-proxied</strong> (proxi alignment, see below) or several
+  functions misbehave.</p>
+</div>
+<h3 id="wiring-the-can-case">Wiring the CAN case<a class="headerlink" href="#wiring-the-can-case" title="Permanent link">&para;</a></h3>
+<p>The cable labels follow the scheme <code>FDx: location pins connector (channel on CAN
+case)</code> — for example <code>FD3: Psngr LH 2-10 ept (channel 2 on CAN case)</code> means:
+passenger side, cable marked "LH", use the breakout lead ("briglia") identified
+as 2-10, land it on CAN case channel 2. Each breakout must go to its own CAN or
+nothing is read. The standard channel mapping:</p>
+<table>
+<thead>
+<tr>
+<th>CAN case channel</th>
+<th>Bus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>LIN (reserved)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FD-CAN 3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>FD-CAN 6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>FD-CAN 11</td>
+</tr>
+</tbody>
+</table>
+<p>FD-CAN 5 and 14 are used in specific cases only; to sniff them use any free
+channel except channel 1. The pin numbers in the labels (e.g. <code>Driver 6-14</code>)
+refer to the OBD output pins, which are in continuity with pins 2 and 7 of the
+DB-9 connector that plugs into the CAN case. Termination: the <strong>120 Ω resistor
+is needed on the vehicle side only</strong>, not on the VDCM side.</p>
+<h3 id="monitoring-with-canalyzer">Monitoring with CANalyzer<a class="headerlink" href="#monitoring-with-canalyzer" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Load a pre-built configuration (File → last used). For the M182 activity:
+   <strong>configuration 3</strong> monitors the CANs; configurations 1 and 2 are the
+   <strong>gateway</strong> setups (FD-CAN3 and FD-CAN 11+5) that contain the CAPL code used
+   to modify signals on those buses.</li>
+<li>Load the DBCs into the channels (database management) <em>before</em> starting.</li>
+<li>Start the measurement — with logging (click the square icon next to the
+   "Trace Complete" folder, then Start) or <em>Start without logging</em> for live
+   viewing only. To sniff in the vehicle you must be <strong>Online</strong>.</li>
+<li>At start, the <strong>channel mapping</strong> window appears: the upper section lists the
+   application channels (with their DBCs), the Hardware section lists the
+   physical CAN case channels. Align them, click <em>deactivate unmapped</em>, then OK
+   — the trace now shows decoded traffic.</li>
+<li>To acquire <strong>all</strong> the buses you need <strong>two CAN cases</strong>: connect the first,
+   wait until it appears in the application channel mapping, <em>then</em> connect the
+   second.</li>
+</ol>
+<p>Practical habits from the field:</p>
+<ul>
+<li>If a CAN does not go to sleep, the first message to check is the <strong>NM
+  (network management)</strong> message — it tells you which ECU is requesting to stay
+  awake.</li>
+<li>Always keep the <strong>contactor status signal</strong> on screen: before disconnecting
+  the HV battery, do key-off, watch the contactors open in CANalyzer, <em>then</em>
+  disconnect.</li>
+<li>Watch the <strong>12 V battery voltage</strong> signal: it must never drop below
+  <strong>11.5 V</strong>, or the battery is dying and must be charged. During a flash the
+  12 V is not being recharged — if it dies mid-flash it is as if the battery had
+  been disconnected, so verify its charge first.</li>
+<li>Right-click → <em>Create Common Axis</em> groups several signals into one named
+  graphic section.</li>
+</ul>
+<h3 id="flashing-and-diagnostics-with-cda">Flashing and diagnostics with CDA<a class="headerlink" href="#flashing-and-diagnostics-with-cda" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Software flashing goes through the <strong>FD-CAN6</strong> (diagnostic CAN) with the
+  <strong>CDA</strong> tool. CANalyzer must be in <strong>Stop</strong> while CDA is active.</li>
+<li>In CDA: <em>vehicle mode</em> → <em>vehicle</em>, select the channel (e.g. channel 3 for CAN
+  6) and tick the FD-CAN entry, pick model year and vehicle, then <strong>unlock the
+  ECU</strong>. From CDA you can read DTCs from all ECUs (<em>Vehicle Wide DTCs</em>), not
+  just the VDCM.</li>
+<li><strong>Proxi alignment</strong> (needed after a 12 V reconnect) — two methods:<ol>
+<li><em>Vehicle alignment</em> in CDA: tick the required items, press the green
+   arrow, do a key cycle, then <em>refresh</em>.</li>
+<li>Manual: read the proxi code from the <strong>BCM</strong> with the PID editor
+   (read command <code>22 20 24</code>), copy the returned string (starting from byte
+   <code>30</code>; the <code>62</code> prefix = <code>22 + 40</code> is just the positive response), and
+   write it to the <strong>VDCM</strong> (write command <code>2E 20 23</code>).</li>
+</ol>
+</li>
+<li>Quick check that the vehicle is proxied: switch drive mode from Normal to
+  Sport and see if the car lowers (in Offroad it must raise).</li>
+</ul>
+<h3 id="safety-the-two-mushrooms-and-the-hvil">Safety: the two mushrooms and the HVIL<a class="headerlink" href="#safety-the-two-mushrooms-and-the-hvil" title="Permanent link">&para;</a></h3>
+<p>The prototype carries two safety mushroom buttons:</p>
+<ul>
+<li><strong>Red mushroom</strong> (normally up) — commands <strong>zero torque</strong>. Push it only when
+  there is an unintended acceleration.</li>
+<li><strong>Yellow mushroom</strong> (normally down) — part of the <strong>HVIL</strong> (High Voltage
+  Interlock Loop). Raising it opens the loop.</li>
+</ul>
+<p>The HVIL is a wire that loops in and out of every high-voltage connector. If any
+contact is lost, <strong>VDCM and BPCM open the contactors</strong> and discharge the HV bus:
+VDCM first ramps the current down, then BPCM commands the opening — this order
+protects the contactors from burning under high current.</p>
+<h3 id="fault-injection-with-the-bob">Fault injection with the BOB<a class="headerlink" href="#fault-injection-with-the-bob" title="Permanent link">&para;</a></h3>
+<p><img alt="BOB hardware setup between vehicle and ECU" src="img/bob-hw-setup.webp" /></p>
+<p>The <strong>BOB</strong> (breakout box) replicates the VDCM pinout and sits between the
+vehicle harness and the ECU — each pin has two posts: one toward the vehicle,
+one toward the VDCM. (On this project only side <strong>K/B</strong> matters.) To tell which
+post is which, disconnect the BOB from the vehicle-side cable and check
+continuity between the BOB pin and the corresponding pin on the cable.</p>
+<p>With the BOB you can create the classic faults, using the wiring harness pin
+list (e.g. <code>FD11 (B72, B88)</code> = CAN-high on B72, CAN-low on B88; the second
+parenthesized pair is just a duplicate and can be ignored):</p>
+<ul>
+<li><strong>Open circuit</strong> — simply remove one of the two pins.</li>
+<li><strong>Short to ground</strong> — bridge the pin (e.g. B72) to a vehicle ground pin
+  (B2, B4 or B6).</li>
+<li><strong>Short to battery</strong> — first make an open, then apply battery voltage
+  (<strong>pin B1</strong>) to the <strong>ECU-side</strong> post only.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Short-to-battery discipline</p>
+<p>Always inject the short to battery on the <strong>ECU side</strong>. Doing it on the
+vehicle side would apply battery voltage to sensors and actuators designed
+for a lower supply and can damage them. Use a cable with an <strong>inline fuse</strong>
+for these shorts.</p>
+</div>
+<h3 id="inserting-a-gateway">Inserting a gateway<a class="headerlink" href="#inserting-a-gateway" title="Permanent link">&para;</a></h3>
+<p>"Doing a gateway" means <strong>modifying signals on the fly</strong> between the vehicle and
+the VDCM using CAPL in CANalyzer. You need the CAN case and <strong>two breakout
+leads</strong> (one vehicle side, one VDCM side) with three output pins for CAN/LIN:</p>
+<ol>
+<li>Vehicle-side lead: pin <strong>7 → CAN-high</strong>, pin <strong>2 → CAN-low</strong> (for LIN: pins
+   <strong>7 and 3</strong>), e.g. onto B72/B88 vehicle side. This branch goes to the CAN
+   case <strong>with a 120 Ω termination in parallel</strong> — the CAN case has no internal
+   termination, and the vehicle branch is no longer closed by the ECU.</li>
+<li>VDCM-side lead: pin 7 → ECU-side high, pin 2 → ECU-side low, DB-9 to the CAN
+   case <strong>without</strong> the resistor (the ECU's internal termination closes this
+   branch).</li>
+<li>In CANalyzer, one channel carries all messages <em>received from</em> the VDCM and
+   the other the messages <em>transmitted to</em> it — the ones you modify with CAPL.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Network entry sequence</p>
+<p>Because you are physically breaking into the network, you must <strong>disconnect
+the 12 V battery first</strong>, then start the gateway (Start in CANalyzer), then
+reconnect the battery. Only this sequence lets the gateway join the network
+cleanly.</p>
+</div>
+<h3 id="power-management-note">Power-management note<a class="headerlink" href="#power-management-note" title="Permanent link">&para;</a></h3>
+<p>Since the car is a prototype, disconnect the 12 V battery when tests are done.
+If you leave it connected, the vehicle goes to sleep to protect the battery, and
+the <strong>APM</strong> monitors the 12 V state during sleep: if it detects discharge, it
+wakes up and recharges the 12 V battery from the 400 V HV battery — so with a
+healthy vehicle, the 12 V battery should never die on its own.</p>
+<div class="admonition success">
+<p class="admonition-title">Key takeaways</p>
+<ul>
+<li>Validation checks the implemented SW against the original requirements;
+  <strong>VIF validation in the vehicle</strong> is the last V-cycle step and the only
+  environment with real dynamics and real ECU interactions.</li>
+<li>Requirements are turned into maneuvers (CheckList/DVP): each test has a
+  <strong>condition</strong> to realize and a <strong>verification</strong> to check; results feed the
+  report and, when NOK, a <strong>DVPM point</strong> and the troubleshooting loop.</li>
+<li>The speed limiter example shows the full chain: requirement → checklist →
+  I/O monitoring of thresholds and state machine → measure analysis → bug
+  found in a state transition (SW bug, not calibration).</li>
+<li>Environment matters: the cam-backup strategy passed 8/10 on HiL but only
+  ~5/10 in the vehicle because of unmodeled physics.</li>
+<li>On the M182 BEV prototype: know your OBD sockets and CAN case channels,
+  never flash with a weak 12 V battery, re-proxy after a battery reconnect,
+  respect the HVIL/mushroom safety logic, and use the BOB for disciplined
+  fault injection (shorts to battery on the ECU side only, fused cable).</li>
+</ul>
+</div>
+<hr />
+<h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
+<p>This article was distilled from the academy lesson materials:</p>
+<ul>
+<li>:material-file-pdf-box: <a href="../../assets/mil4/31_Validation/31_Validazione_BEV.pdf">Validazione BEV</a> — PDF, 3.7 MB</li>
+<li>:material-file-pdf-box: <a href="../../assets/mil4/31_Validation/31_Validazione_VF.pdf">Validazione VF</a> — PDF, 2.5 MB</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../verification/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Software Verification">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Software Verification
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../diagnosis-process/" class="md-footer__link md-footer__link--next" aria-label="Next: Diagnosis Process Validation">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Diagnosis Process Validation
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

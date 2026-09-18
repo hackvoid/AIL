@@ -1,0 +1,26 @@
+You
+You
+The creation of a top folder is the first step to connect linka with an issue.
+Click the right mouse button that is object and select the top folder.
+Import a software linka, point the folder and click on the right mouse button to choose.
+Add this new project and then follow the instruction to associate a dual index file.
+Now the user has to create our workspace.
+Point mouse on the created folder, click the right mouse button and choose our workspace.
+Double click to activate it.
+In the same way, we can add those on experiment and associate experiment and project.
+Select the bottom folder experimental project to import or export from database object and then click with the right mouse button.
+And select the import or export.
+The first step is the selection of the source.
+The user has to choose also the comparing data set, click with the right mouse button in comparing destination and select a data set or from file.
+We can choose in action the operation, compare copy or list and format to save the comparison data.
+You can start to compare in HTML format, click with the right mouse button and select add or add only.
+We can select equal or different to see equal or different variables between the two data set.
+Now we can choose the destination folder.
+Now we can analyze the comparison file in HTML format.
+Finally, allows the post-processing analysis the user can check the variable acquired in Inca.
+Open the program and choose new configuration and then click add to choose the file acquired in Inca in that format.
+The user can choose the variable to display in variable explorer and the display mode.
+Drag and drop the shield scope and then the variable or calibration to analyze.
+To display the selected variables more clearly, the user can elite them and click the right mouse button and choose move to individual strip and then zoom to fit.
+Now click show icon to analyze the log.
+Now we can see the signal values and the difference between two points.

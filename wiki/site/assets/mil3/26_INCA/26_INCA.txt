@@ -1,0 +1,473 @@
+Okay, great. I will start to share my screen.
+It's a second.
+So, anybody knows what is Inca and what is used for?
+Do you know anything about it?
+Yes, a little bit.
+Okay, Hamza, you know, just leave your colleagues to know.
+Okay, I'll just watch.
+Andrea.
+I'm learning it with Inca, basically.
+What is it used for?
+Yeah, basically, yeah.
+I'm learning that just to see the signals to monitor in them, to set the calibration also.
+And to flash the software, the software maybe.
+Okay, I don't know what else to say.
+Okay, I'm going to explain the most important function for Inca and what is used for.
+Inca is used mainly to interface with the internal signal of the echo,
+which can be the CPU, BPCM, whatever echo which has access to its software, the hardware,
+which is through to ethos or cable build.
+The ethos should be like this.
+It's this hardware which permits you the communication between the physical echo and the software to be able to read the internal signal of the echo.
+Okay, so.
+The echo in the vehicle is in this picture.
+It's a VDCM of Maserati, which is a.
+Excused X-CityK cable, high speed communication.
+As you can see, it's a development echo and it has its.
+X-CityK module that coming out of it.
+There are two differences between the echoes.
+One is production.
+The one you have in your vehicle at home when you have your vehicle.
+If you open it, you don't have this port of X-CityK module because it's a closed echo.
+And the coast is around like 50 to 100 euros for the production one.
+For the development one, it can reach 15,000 euros for only development echo.
+It depends on the complexity of the hardware and the microcontroller.
+So the communication with the ethos is coming on through a cable which called X-CityK.
+If we want to communicate only with one echo, then no need for the ethos.
+I will have a cable which is called X-CityK host.
+You should go directly from the echo to your PC directly.
+Other than that, if you want to connect other cans or connect more than echo,
+you should adapt the modulators, as you can see in this picture.
+It's 891, where you have the first port, for example, the host, which goes to your PC.
+Those two ports can be connected to other two echoes.
+And the others, as you can see, they are scan FD and lean to.
+It depends on the needs of your implementation and what you are testing,
+what you need to have in your data or ink.
+That's why it depends on the goal and the target that you want to achieve by the log that you have.
+If I want to have everything in the same log with scan signals, lean signals,
+and the Bose echoes, then I need to adapt an ethos complex like this,
+and it costs a lot of money.
+Other than that, I just need to see the internal signals of the AVCU.
+There is no need for that.
+And for the can logs, you can just log by the encase normally through the OBD on Kanalyzer.
+So, let's go in Inka and check what we need.
+As you can see, this is the main page of Inka.
+I have a version 7.2, which is limited for if you are going to work in cell-length side.
+For AVCU2, it's not supported, so I recommend you on your PCs to upgrade it to the 7.3,
+at least, to be able to open the software AVCU2 offline.
+And we're going to check this right now.
+So, the main thing about Inka is you have a database.
+In this case, I'm working on different projects.
+I have Lukato, HTT, smart car, cell, and you have different modules.
+So, first thing, just create a top folder.
+Just to have everything inside it.
+And then inside this, you can add your software.
+You can add your DBCs and so on.
+So, let's say you want to add your software.
+What you should do, just right-click on it, add and go to A2L.
+Then go to check where I downloaded the software or go to the folder directly.
+The first thing you're going to add is A2L, which is the base of the software.
+Then just copy.
+So, you have the poster post.
+And then it will ask you, what is the hex file?
+Then I will go there, paste the same.
+And then I don't have hex file, I have S19, which is equal to the hex file.
+It's the calibration file.
+In this case, there is two.
+That's it.
+If I'm working on vehicle on a development echo, and I need, and I don't have the MMO code association on my vehicle,
+I'm talking first to learn the sport.
+But in this case, we have the mobilizer function on on a dataset, which is the association between the body and AVCU has already done.
+I need to flash the MMO code, which is the S191.
+Other than that, you will flash the MMO, which is the new development echo.
+You just put it on this vehicle to do your stuff and testing and so on.
+So, you just need to flash the MMO off, because you don't have the association between body and AVCU.
+Or other main echo, which is EDCM, HTTP, and so on.
+Okay, once you click on it, it's going to take a while to build your software and ink.
+But once it's built, you can see that you have the software here.
+Then you have its name and the hex oil is here.
+Okay.
+So, a recommendation, just copy the first part and paste it here.
+Okay.
+Why?
+This is the main dataset built.
+And if I want to change something, I will change it on this one gray one.
+But if I don't want to change anything, I will just right click and freeze it.
+This will freeze my calibration on this dataset.
+So, I know that this one.
+But let's say I want to add another one.
+I want to change something.
+Then I will rename it and move the equation to.
+Okay.
+Then you have the same dataset here.
+To change it, you need to go to calibration data manager to change it.
+Other than that, you can change it even on the working page.
+Okay.
+Got my point?
+Any questions?
+Okay.
+Now questions.
+Okay.
+So, I will go to add a workspace here.
+Let's say, oil.
+And add the data software that I just inserted here.
+And so on.
+So, he's telling me, okay, he created a new workspace.
+And you inserted a software.
+What hardware you are using.
+And he's giving you all the options for it.
+Okay.
+But since I'm using, you know, in my vehicle.
+And I will pick this choice.
+Which is the one that I'm adapting.
+Other than that, you can choose another module.
+As the one I showed you before.
+Which is the eight.
+As for example, eight, nine, one or eight, nine, two.
+It's depend on the most used one.
+The one you have on your vehicle or on your simulator.
+Okay.
+So, I will use this one.
+This is the second.
+Okay.
+Beside that the hardware and the software.
+There is an experiment here in the workspace.
+Okay.
+So, just to repeat the workspace, you can add it here.
+Add workspace and you have your own workspace.
+Okay.
+If you want to add on this workspace an experiment.
+A new one.
+Just add experiment.
+Okay.
+And go and insert it here.
+But if let's say one of my team or a calibrator or anybody that asked me to do a certain test
+on the vehicle or the simulator told me can you insert those variables or can you use this
+experiment while you are working.
+So, I will just go to the folder that you want to import it and go import the file or the
+experiment.
+Okay.
+So, I have one here.
+Okay.
+There is like one for the base software testing or other things that I had before.
+So, let's say take this one.
+And then as you can see it's point EXP.
+The extension for the experiments.
+Okay.
+Then open this window.
+Just tell you, okay, imported, positive.
+And you have the version here.
+And let's say, okay, I will change this.
+I want the new one that I uploaded.
+Okay.
+I will take this one here.
+Now, let's check the first thing harder.
+Let's go here.
+Okay.
+As you can see, this is the main window to align with your echo in Inca.
+If you don't find your heard or you have to search it by this lens and depend on your interface,
+what you are connecting with your echo, if you are connected via Ethernet or USB or whatever else,
+you will just try to search for it.
+But since I'm on offline here, I will just show you everything offline.
+And I'm using the one in the vehicle, which is a city chaos.
+So, let's say if you have a lot of echoes and a lot of stuff, there is a bar called name here.
+And I want to name it AVCU1.
+Apply.
+What will have it?
+I will have it here.
+Look, it's called AVC1.
+So, let's give you an indication of what echo you are connected to if it's aligned or not and so on.
+When you have more than one echo.
+Another thing for the automatic connection and the alignment of the echo.
+Inca should be aligned with the software clashed on the echo.
+So, there is a working page where you change your calibration.
+There is a reference page where you have the freeze calibration that you cannot change it.
+And then you have the one in the echo.
+So, the alignment between the echo and what is in the working and reference page should be here.
+And if I go to this two arrows, it will start the initialization.
+Let's say, okay, I'm not connected.
+I don't see anything.
+But the only thing I see is this software, 24b, 20c, 0, 3a, 0, which is for x to 15, with you, which is opened here.
+Okay.
+So, if I'm connected to a real vehicle, I will have or everything is red because I'm not aligned to the actual echo and vehicle.
+Other than that, I will have like a misalignment only for the working page or something like this.
+I have the same software. I will have everything aligned between the reference, the working and the code page.
+Okay.
+So, my recommendation is to set this retry always.
+Initialize automatically.
+If you are working with a lot of calibrations in the working page and need to maintain it,
+then you can adapt this option of download to the working page.
+And after you set your settings, click on apply to save it and maintain it.
+Other than that, for to maintain this option of the working page, I would suggest to go here, auto-star behavior, always working page, just to maintain it.
+Okay. And then don't forget the hit Apply.
+Okay. Let's say we aligned, we are on vehicle, and we want to flash.
+For the alignment, first of all, you need to hit always F3.
+If you are using your laptop, there is FN function, so hit on FN, the plus F3.
+Other than that, you can hit here, initialize hardware, and it will initialize by its own.
+But since we don't see the hardware here because we are offline, this is not visible for the moment.
+So, let's say I want to flash, this is the window, those two arrows.
+I will go to Enhance it, flash programming, code and data.
+I will flash from the reference page, which is I set as read only to the echo flash.
+Here is the name of the dataset that I am flashing.
+This is the working page that has changed the reference page, and then you hit do it.
+What is this window? This window is saying that I need a file, which is a translation for the software, to be able to flash this software.
+This file is, for the London site, is present and the release note.
+I will show it to you later.
+But you have to use this file, which is for this software.
+If they change the streamline or they change the software 24b to 23d,
+and they are choosing a different profile, we need to edit here.
+As you can see, I have in this link three different profiles,
+1 for M189, 1 for M182, and 1 for VF and Ducato.
+How to configure it? You just have to have your file and the PC, install it, and go to the file, select the file, which contains the profile,
+and then it will be installed so easily.
+Here you just set normal, and you have the options to flash.
+Go to all the software, which has code and data and calibration.
+Calibrations only, but I recommend to flash all the packets together.
+Nowadays, because it should be associated together, other than that, in all the implementation,
+and the software mainly didn't change for a while, so they only changed data set calibration,
+so you can flash the data set.
+But nowadays, in the London site, you have a release every week, not every day.
+It depends on the project and the agency.
+For the bootloader, it's the one written in the release node for the London site,
+and it's a hex file, which can be flashed by file,
+just the first time that it's changed it for the release node.
+If it doesn't change and you flashed already the same bootloader, you don't need to flash it every time, just the first time.
+If you lost communication with your Echo, and you are not able to communicate it with your Echo VSCDA or Bianca,
+maybe you should flash your bootloader in order to try to refresh again the proper software,
+maybe mistaken and flash the wrong software, this is a way to recover it.
+In this case, we want to flash the whole software, we use all code and that and calibration option.
+Then hit OK and say OK, you are offline and so on.
+But since we are offline, there is no need to proceed,
+because you would just have another window, which is called assertreset,
+and then you have to choose it, reset Echo and the flag will start,
+and then a window will open, tells you when the flash is going, if it's failed or it's successful.
+Once you've finished, it will start the automatic alignment, other than that you can align by hand.
+This option, we can use the data set for the working page that we changed it or,
+and the moment we didn't change anything, we just said that.
+OK, then to open the experiment, you can open it from this icon or from the hardware inside the one selected here.
+Any questions for the moment? I think it's clear, easy.
+Any doubts?
+Nothing? OK.
+Wait, I can't hear you. Can you repeat?
+I was saying so far, so good.
+OK, thank you. Let's go.
+So, let's open the experiment and say, OK, since I'm offline, I will go and hit now,
+but if you are in vehicle on a simulator, just try to hit yes in this condition.
+So, it can align with the hardware and goes through the actual Echo software.
+So, this is the experiment in ink, as you can see.
+I had already configured an experiment, which was with the signals that I need.
+If I don't know what signals needed, I have to look at my test case and understand what I'm testing, what I need to do.
+If I'm going to do it on vehicle, I should have a window with all the main signals for the power modding or at least the signals to give you the feedback of the cities of the vehicle just to understand.
+If you are in KON, if you have contact or closed, if you are on drive ready, if the feedback from the VPCM is coming correctly and conductors are actually closed, the park lock is engaged, if we be is engaged and so on.
+All of these basic signals need to be in front of you just to give you a feedback about your testing or simulator or the vehicle doesn't change anything.
+You need to understand that through ink, you need to see what is going on in the vehicle without watching the vehicle too.
+So, in front of you, I want you to focus on the actual cities of the park lock, what is happening or what is the sock, what is the p-lock position and so on.
+So, not only can signals, I want you to get even the internal signals for this variable, maybe there is a misalignment between can signals and internal signals.
+So, be aware of what you are testing, try to have the dedicated signals for the test you are adapting and the correct ring that contains all the information for the test.
+You can even log it in the background without opening the experiment.
+So, first of all, if I want to open a new experiment, there is this button, but if I want to open a different one, I will hit this button.
+This one is for saving, graphic interface, this is the hardware button, this just to go to the main window of Inca and here what you need it for the variable selection.
+So, this is your main window where you can pick the signals.
+Let's say I want the signal for the key, command the ignition STS, and you have it here.
+I have the can signal, I have the base of it, so let's say I don't remember actually the signal, I will put a lot of stars and then you are going to have it here.
+So, stars give you the option to search for your signal correctly and get the accurate signals that you want.
+Let's say I want the one coming from the can or and the one coming from the base of it and so you can select them.
+Okay, once you selected your signals, I have to adapt at the roster.
+What is the roster is? It's an sampling time of your signals.
+So, let's say your echo has the ability to give you the signals that you need to monitor on certain frequency.
+So, let's say if I'm adapting an option of 50 milliseconds, then I'm expecting a sample of every signal H 50 milliseconds.
+Okay, so every 50 milliseconds, I will get a sample for the command ignition STS.
+If I'm adapting a foster roster, which is the 25 milliseconds, then I have two samples in 50 milliseconds and so on.
+It's the maximum speed that you have for in this condition is 25 milliseconds.
+There is another option here as you can see three points in 125 milliseconds and so on.
+But the 25 for sure is the main and fastest one in this situation.
+There is a 10 milliseconds and one milliseconds in different echoes and projects depends on the implementation.
+This is a VCO one. It's different than other projects. Okay, so depend on the actual speed of the ring that is going on in the VCO model.
+You need to adapt the correct speed over faster one to get the evolution of the signal in front of you.
+Other than that, if I'm if I'm watching the signal in 100 milliseconds, but the actual signal evolves at every 25 milliseconds, I lost three frames.
+Okay, so I lost three samples of the same signal. Maybe it's picked to 400 and came back to zero and I didn't see anything because I'm not watching with the right roster in this condition.
+Okay, the raster is so important to see what's happening to your data.
+You hit okay and play to start seeing the actual signals.
+But since I'm offline, I don't see anything. Let's say you had this window and you forget about the measure rate.
+So you click here, I click go to measure rate and then you can change it directly after picking it.
+Okay, as you can see here is selected for 50 milliseconds.
+Okay, beside than that, you can choose calibrations.
+Let's say and I will choose only calls as you can see you can pick whatever calibration you want and hit enter.
+Okay, but as you can see, I'm not able to change any calibration in this condition.
+Why? Because I'm in working in reference page. I'm not in the working page.
+So, first of all, this is your indication of the situation with the echo.
+Here, he lost communication. I'm not communicating with the echo. So he said, okay, echo off, no access.
+If I'm aligned and everything is okay, I will just see this equal to zero where I don't have any calibration modified in the working page and I don't have any issues with the communication.
+If I have a difference between working page, a reference page can tell me, okay, there is a check sum error and it's going to be visible in this condition and you need to align in all conditions.
+So, to be able to change calibrations, just hit the working page other than that align and then go back to working page.
+For the calibration, you can hit increment F7, decrement F6 or use the buttons here to change it and to remove all the changes, control you.
+Okay, as you can reset to reference page value. Okay, as you can see, there are a lot of shortcuts here that you can adopt.
+If I'm changing the size of the window, I can click alt plus and then it will come back to this optimal size for the window for the column alto and so on.
+It depends on what you need to do with your ink.
+I recommend you to use it offline to start exercising with your ink offline before going to the vehicle or just to how to pick and create a window with the proper signals and calibration needed for your activity.
+Okay, then let's check other windows. Let's say, okay, I got my signals, I'm play, I'm in play, I'm in simulator and I want to lock them and over as I want.
+I will go just hit the red button, which is lock. As you can see, the cursor start time started for the recording time.
+If you have space enough space on your PC in your database, it will give you the maximum time for your log.
+It depends on the your PC and the space on it. It depends on the database and a lot of variables, but as you can see, if you have a strong PC, you can have a lot of time.
+Because we are offline, I'm not logging any data, so the data is actually empty because we are offline. So as you can see, it's giving you the maximum time, which is seven hours.
+But if you are in vehicle, maybe you can tell you one or two hours, depending on your PC.
+And you can change the calibration while you are doing testing and so on.
+But let's say in your log, I want to log even the calibration.
+How you can do that? Okay, first of all, you have to do it before starting the log.
+So to save the log, you just have to play and then it will start saving and give you another window, which is this one.
+Where in this window, you have the actual path, the file.
+And the name and all the details about the software, the reference page and working page, just keep it on.
+It's going to be useful once you open offline the data.
+For my recommendation, just at least use always the date at the beginning, the program, the name and the facility that you are using.
+Then after that, try the software and the test you were doing.
+Okay, and if it's okay or not, okay, write the number of the tests after you load the software.
+Okay, if I want this acquisition, I will hit save and I will have it in the past.
+Other than that, I can discard it and say, okay, I don't want it just so that I will be lost. Yes, I didn't log anything.
+I will put back my calibration, control you and I don't have anything to change.
+Just have the alignment here. Okay, let's say I want to configure this window.
+You will hit this button while you are in stop and then you can configure your path from here and change the name of the log here.
+Let's say be 64 and say, okay, 24b, underscore 24, zero, three, eight, zero.
+This is a software that we are adapting right now.
+But this information is the name of the log.
+Why I am telling you to set your log in this way?
+Because once you send the log to a calibrator or a function owner, you need to understand when you did this on what project?
+Because it's not working only on your project.
+On what facility? So it's in vehicle.
+It has more meaning that one is doing it on the hill because he doesn't know if on the simulator, everything is connected properly or not.
+And the software used, so he is updated on which software and which calibration release.
+Okay, so then the name of the test was the number and the result.
+As you can see, okay, not okay, depends on you.
+And you can use the time format or you can sit it before and the beginning and I will just remove like this.
+As you can see, it's updated automatically if you set this option.
+If you are doing a checklist and you don't want to change the name, want to maintain it.
+So say, okay, test one.
+And then I will hit the auto increase by one.
+I will just get one here.
+And it's going to increase test one, test two, test three and then you can check the result of line.
+Whatever you want, you can do, write your name, company project and vehicle and so on.
+Or the recording here, there is other tasks that's not needed.
+The triggers is needed only if you have something happening on event.
+So let's say I need to understand when I am having a reset on my software or.
+I wanted acceleration or only when a DTC is set in my memory start to the acquisition 30 minutes before and 30 minutes after.
+Here where you're going to set your trigger and you can put it manual or automatic and depends on you what you want to do.
+So you're going to insert all your condition.
+There is the logic ports to add to your signal.
+So you adhere the actual signals that you need to monitor and you set all the conditions to start the trigger.
+Then it's at the time that you want to log before and after the event.
+But since we want to log by hand on the current simulator, we just give it off.
+This is just for automatic stuff or on event stuff that you want.
+Don't want to lose all the memory of the PC for all this log or you don't need all the data to be so huge.
+So you set a trigger to log it in a specific condition.
+This is a window for MDA which gives the measurement that analysis program which opened the Inca log files.
+Here I recommend to remove this sign always the chicken box because it's generate other XDA files based on the layers.
+Just remove it and it okay.
+Then remember always to save your file.
+So let's say we want to log the calibration.
+I am in the layer number level three and I want to add.
+I want to log the calibration.
+So I will just hit on it and as you can see.
+There is the poor calibration here and you can hit them here.
+Then once you added this to the filter recorder, you can hit okay and those are locked in the log that you have.
+Any questions or concerns anything that you can understand.
+You have things clear?
+Okay.
+Let's say a calibrator sent you a file which contains different calibrations to modify just to try a test or to check if it solves the issue that you are facing.
+Then there is a DCM file or CSV file is going to be sent with all the calibration.
+I am going to go to stop then that is it variables read all calibrations from file and then I will just pick the file which has the calibration in this condition CSV this one or DCM.
+Once you open it, it's going to align and you will have the difference here between the reference page and working page.
+Okay, directly in your income.
+Then you can do your log and send the data to the calibrator or analyze it offline by yourself.
+Okay.
+In this window, you can see all the echoes connected.
+We have only one echo which is ABC one.
+As you can see here is this window where you have your echo but if I have a multiple echo, I will have another parts here down which give me the status of both echoes like let's say I'm working if you're working on a hybrid project.
+You're going to need to log the HCP and HCP and sometimes you need to log even the ECM.
+So you have three echoes in front of you and you understand that all of them are aligned or not.
+In this condition, you will see the software here and the status for everyone down here.
+Other than that, you can select them from this window.
+Okay, let's go next.
+Everything in anchor is clear.
+Okay.
+Let's go to another important part which is the calibration that the manager when I want to change calibration or a generator file or a line.
+A data set to different calibrations, I will go and hit this option to be able to play with calibrations.
+So in this case, you will have the main part comparison source which is let's say the software that I have.
+Let's take the calibration modification.
+I remove this one. I remove everything.
+And then I will just add the variables I need.
+Okay, and then once you add here, let's say,
+and let's say I will have this one for example, change.
+Okay, as you can see this calibration on this data set is zero.
+So I will open it, go to hit and change it to one.
+Okay, so now I change the calibration to one.
+So I want to compare it with a file.
+So I will add a data set which is the main one that I didn't change and compare here.
+Okay, and as you can see, there is a difference between them.
+Okay, you can change between the main difference and the data set by this button.
+And you can see which is the main one on the main difference is zero on the second one.
+It's not zero. It's different than zero.
+Okay.
+Now, if you want to compare highlighted,
+you will just need say, okay, DCM,
+Prova,
+and I will put it in partition X.
+Compare highlighted. It's going to generate a file.
+Let's go and check the file on here.
+Okay, as you can see, the file is HTML and it's open like this.
+And it's give you the master data set
+and the compared one.
+And here is the calibration that I picked and I choose, as you can see,
+on the main data set you have it on zero and on the modification one you have it on one.
+Got it?
+So this is how you can create a Cal compare between two different data set
+and how to modify your calibration with calibration data manager.
+Once you change your calibration,
+you just need to close the window and save it.
+Then you have your software this one changed.
+But let's say, okay, I changed a calibration different than this one
+and I don't want to change this data set anymore.
+I will freeze it again by setting it only.
+Other than that, you can modify the same data set again
+with the calibration data manager or on working page.
+Okay.
+Any questions, concerns?
+Nice.
+Can you share the software maybe so that we can try to use
+to try to do some experiment like playing with a game?
+Sure.
+Okay.
+We are working on M182, right?
+Yeah.
+Yeah.
+But it's just a little bit to be...
+Yeah.
+How are you doing with you?
+I'm sure no problem.
+I can send you myself.
+But I will suggest you to use the A to L and X file from M182
+and it's just be the same.
+At least you have the variables and signals of your project
+and you can directly try to train on the signals needed for yourself or your vehicle.
+But I can share my stuff.
+No problem if you want.
+Okay.
+Fantastic.
+Thank you.
+No problem.
+I mean, everything is clear.
+You have any clarification or something?
+No, thank you.
+It's obvious.
+Okay.
+Okay.
+Hamza.
+All good.
+Thanks, Kalibis.
+No problem.
+Okay.
+We can close it out here.
+Guys, I have a nice day.
+Bye guys.
+Bye-bye.
+Thank you.
+Thank you.
+Thank you.
+Bye.

@@ -1,0 +1,104 @@
+1
+00:00:00,000 --> 00:00:02,000
+You
+
+2
+00:00:30,000 --> 00:00:32,000
+You
+
+3
+00:01:00,000 --> 00:01:12,000
+The creation of a top folder is the first step to connect linka with an issue.
+
+4
+00:01:12,000 --> 00:01:20,000
+Click the right mouse button that is object and select the top folder.
+
+5
+00:01:20,000 --> 00:01:30,000
+Import a software linka, point the folder and click on the right mouse button to choose.
+
+6
+00:01:30,000 --> 00:01:44,000
+Add this new project and then follow the instruction to associate a dual index file.
+
+7
+00:01:44,000 --> 00:01:50,000
+Now the user has to create our workspace.
+
+8
+00:01:50,000 --> 00:01:58,000
+Point mouse on the created folder, click the right mouse button and choose our workspace.
+
+9
+00:01:58,000 --> 00:02:02,000
+Double click to activate it.
+
+10
+00:02:02,000 --> 00:02:28,000
+In the same way, we can add those on experiment and associate experiment and project.
+
+11
+00:02:32,000 --> 00:03:00,000
+Select the bottom folder experimental project to import or export from database object and then click with the right mouse button.
+
+12
+00:03:00,000 --> 00:03:12,000
+And select the import or export.
+
+13
+00:03:12,000 --> 00:03:36,000
+The first step is the selection of the source.
+
+14
+00:03:36,000 --> 00:03:56,000
+The user has to choose also the comparing data set, click with the right mouse button in comparing destination and select a data set or from file.
+
+15
+00:03:56,000 --> 00:04:14,000
+We can choose in action the operation, compare copy or list and format to save the comparison data.
+
+16
+00:04:14,000 --> 00:04:28,000
+You can start to compare in HTML format, click with the right mouse button and select add or add only.
+
+17
+00:04:28,000 --> 00:04:40,000
+We can select equal or different to see equal or different variables between the two data set.
+
+18
+00:04:40,000 --> 00:04:52,000
+Now we can choose the destination folder.
+
+19
+00:04:52,000 --> 00:05:18,000
+Now we can analyze the comparison file in HTML format.
+
+20
+00:05:18,000 --> 00:05:40,000
+Finally, allows the post-processing analysis the user can check the variable acquired in Inca.
+
+21
+00:05:40,000 --> 00:05:54,000
+Open the program and choose new configuration and then click add to choose the file acquired in Inca in that format.
+
+22
+00:05:54,000 --> 00:06:04,000
+The user can choose the variable to display in variable explorer and the display mode.
+
+23
+00:06:04,000 --> 00:06:24,000
+Drag and drop the shield scope and then the variable or calibration to analyze.
+
+24
+00:06:24,000 --> 00:06:48,000
+To display the selected variables more clearly, the user can elite them and click the right mouse button and choose move to individual strip and then zoom to fit.
+
+25
+00:06:48,000 --> 00:07:12,000
+Now click show icon to analyze the log.
+
+26
+00:07:12,000 --> 00:07:28,000
+Now we can see the signal values and the difference between two points.
+

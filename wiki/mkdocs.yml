@@ -1,0 +1,160 @@
+site_name: Kineton Academy Wiki
+site_description: Bootcamp knowledge base for automotive E/E engineering
+docs_dir: docs
+edit_uri: ""
+use_directory_urls: true
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+exclude_docs: |
+  *.mp3
+nav:
+- Home: index.md
+- MIL1 — Vehicle Fundamentals:
+  - mil1/index.md
+  - CAN LIN:
+    - mil1/can-lin/index.md
+  - EE Architecture:
+    - mil1/ee-architecture/index.md
+  - Electric Motors:
+    - mil1/electric-motors/index.md
+  - HEV Architecture BEV:
+    - mil1/hev-architecture-bev/index.md
+  - HEV Architecture Hybrid:
+    - mil1/hev-architecture-hybrid/index.md
+  - ICE:
+    - mil1/ice/index.md
+  - Sensors:
+    - mil1/sensors/index.md
+  - V Cycle:
+    - mil1/v-cycle/index.md
+  - Vehicle Subsystems:
+    - mil1/vehicle-subsystems/index.md
+- MIL2 — Tools & Testing Basics:
+  - mil2/index.md
+  - CANalyzer:
+    - mil2/canalyzer/index.md
+    - CANalyzer Exercise:
+      - mil2/canalyzer/canalyzer-exercise/index.md
+      - CANalyzer Exercise IG:
+        - mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-ig/index.md
+      - CANalyzer Exercise IGTrace:
+        - mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-igtrace/index.md
+  - CAPL:
+    - mil2/capl/index.md
+    - CAPL Exercise:
+      - mil2/capl/capl-exercise/index.md
+      - CAPL Exercise:
+        - mil2/capl/capl-exercise/capl-exercise/index.md
+      - CAPL Exercise8:
+        - mil2/capl/capl-exercise/capl-exercise8/index.md
+      - CAPL Exercise Gateway:
+        - mil2/capl/capl-exercise/capl-exercise-gateway/index.md
+    - CAPL Other:
+      - mil2/capl/capl-other/index.md
+      - WIP:
+        - mil2/capl/capl-other/wip/index.md
+  - CANoe:
+    - mil2/canoe/index.md
+    - CANoe Exercises:
+      - mil2/canoe/canoe-exercises/index.md
+  - Diagnosis:
+    - mil2/diagnosis/index.md
+    - Diagnosis Exercises:
+      - mil2/diagnosis/diagnosis-exercises/index.md
+      - Exercise Diagnosi 1:
+        - mil2/diagnosis/diagnosis-exercises/exercise-diagnosi-1/index.md
+  - RDI Testing:
+    - mil2/rdi-testing/index.md
+    - RDI Testing:
+      - mil2/rdi-testing/rdi-testing/index.md
+      - Exercise 7 - Diagnostic exercise:
+        - mil2/rdi-testing/rdi-testing/exercise-7-diagnostic-exercise/index.md
+      - Exercise Diagnosi 2:
+        - mil2/rdi-testing/rdi-testing/exercise-diagnosi-2/index.md
+      - Exercise Diagnosi 3:
+        - mil2/rdi-testing/rdi-testing/exercise-diagnosi-3/index.md
+      - Exercise Missing Message:
+        - mil2/rdi-testing/rdi-testing/exercise-missing-message/index.md
+      - UDS Exercise:
+        - mil2/rdi-testing/rdi-testing/uds-exercise/index.md
+  - Diagnostic Tools:
+    - mil2/diagnostic-tools/index.md
+  - TestAutomation:
+    - mil2/testautomation/index.md
+- MIL3 — Requirements, HIL & Calibration:
+  - mil3/index.md
+  - Requirements:
+    - mil3/requirements/index.md
+  - VF:
+    - mil3/vf/index.md
+  - TestCases:
+    - mil3/testcases/index.md
+  - HIL Users:
+    - mil3/hil-users/index.md
+  - INCA:
+    - mil3/inca/index.md
+    - INCA Exercises:
+      - mil3/inca/inca-exercises/index.md
+  - INCA 2:
+    - mil3/inca-2/index.md
+- MIL4 — Verification & Validation:
+  - mil4/index.md
+  - Verification:
+    - mil4/verification/index.md
+  - Validation:
+    - mil4/validation/index.md
+  - Diagnosis Process:
+    - mil4/diagnosis-process/index.md
+  - Troubleshooting:
+    - mil4/troubleshooting/index.md
+  - First Level Analysis:
+    - mil4/first-level-analysis/index.md
+- Glossary:
+  - Overview: glossary/index.md
+  - Calibration: glossary/calibration.md
+  - Diagnostics: glossary/diagnostics.md
+  - ECU Topology: glossary/ecu-topology.md
+  - Files & Formats: glossary/files-formats.md
+  - Protocols: glossary/protocols.md
+  - Scripting: glossary/scripting.md
+  - Signals & Troubleshooting: glossary/signals-troubleshooting.md
+  - Test Methods: glossary/test-methods.md
+  - Vector Tools: glossary/vector-tools.md
+- Resources: resources.md

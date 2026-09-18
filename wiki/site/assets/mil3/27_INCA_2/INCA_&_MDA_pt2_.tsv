@@ -1,0 +1,27 @@
+start	end	text
+0	2000	You
+30000	32000	You
+60000	72000	The creation of a top folder is the first step to connect linka with an issue.
+72000	80000	Click the right mouse button that is object and select the top folder.
+80000	90000	Import a software linka, point the folder and click on the right mouse button to choose.
+90000	104000	Add this new project and then follow the instruction to associate a dual index file.
+104000	110000	Now the user has to create our workspace.
+110000	118000	Point mouse on the created folder, click the right mouse button and choose our workspace.
+118000	122000	Double click to activate it.
+122000	148000	In the same way, we can add those on experiment and associate experiment and project.
+152000	180000	Select the bottom folder experimental project to import or export from database object and then click with the right mouse button.
+180000	192000	And select the import or export.
+192000	216000	The first step is the selection of the source.
+216000	236000	The user has to choose also the comparing data set, click with the right mouse button in comparing destination and select a data set or from file.
+236000	254000	We can choose in action the operation, compare copy or list and format to save the comparison data.
+254000	268000	You can start to compare in HTML format, click with the right mouse button and select add or add only.
+268000	280000	We can select equal or different to see equal or different variables between the two data set.
+280000	292000	Now we can choose the destination folder.
+292000	318000	Now we can analyze the comparison file in HTML format.
+318000	340000	Finally, allows the post-processing analysis the user can check the variable acquired in Inca.
+340000	354000	Open the program and choose new configuration and then click add to choose the file acquired in Inca in that format.
+354000	364000	The user can choose the variable to display in variable explorer and the display mode.
+364000	384000	Drag and drop the shield scope and then the variable or calibration to analyze.
+384000	408000	To display the selected variables more clearly, the user can elite them and click the right mouse button and choose move to individual strip and then zoom to fit.
+408000	432000	Now click show icon to analyze the log.
+432000	448000	Now we can see the signal values and the difference between two points.

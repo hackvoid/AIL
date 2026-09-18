@@ -1,0 +1,1892 @@
+1
+00:00:00,000 --> 00:00:07,000
+Okay, great. I will start to share my screen.
+
+2
+00:00:07,000 --> 00:00:12,000
+It's a second.
+
+3
+00:00:12,000 --> 00:00:23,000
+So, anybody knows what is Inca and what is used for?
+
+4
+00:00:23,000 --> 00:00:27,000
+Do you know anything about it?
+
+5
+00:00:27,000 --> 00:00:30,000
+Yes, a little bit.
+
+6
+00:00:30,000 --> 00:00:35,000
+Okay, Hamza, you know, just leave your colleagues to know.
+
+7
+00:00:35,000 --> 00:00:40,000
+Okay, I'll just watch.
+
+8
+00:00:40,000 --> 00:00:43,000
+Andrea.
+
+9
+00:00:43,000 --> 00:00:48,000
+I'm learning it with Inca, basically.
+
+10
+00:00:48,000 --> 00:00:52,000
+What is it used for?
+
+11
+00:00:52,000 --> 00:00:55,000
+Yeah, basically, yeah.
+
+12
+00:00:55,000 --> 00:01:07,000
+I'm learning that just to see the signals to monitor in them, to set the calibration also.
+
+13
+00:01:07,000 --> 00:01:12,000
+And to flash the software, the software maybe.
+
+14
+00:01:12,000 --> 00:01:16,000
+Okay, I don't know what else to say.
+
+15
+00:01:16,000 --> 00:01:23,000
+Okay, I'm going to explain the most important function for Inca and what is used for.
+
+16
+00:01:23,000 --> 00:01:30,000
+Inca is used mainly to interface with the internal signal of the echo,
+
+17
+00:01:30,000 --> 00:01:39,000
+which can be the CPU, BPCM, whatever echo which has access to its software, the hardware,
+
+18
+00:01:39,000 --> 00:01:47,000
+which is through to ethos or cable build.
+
+19
+00:01:47,000 --> 00:01:51,000
+The ethos should be like this.
+
+20
+00:01:51,000 --> 00:02:05,000
+It's this hardware which permits you the communication between the physical echo and the software to be able to read the internal signal of the echo.
+
+21
+00:02:05,000 --> 00:02:09,000
+Okay, so.
+
+22
+00:02:09,000 --> 00:02:13,000
+The echo in the vehicle is in this picture.
+
+23
+00:02:13,000 --> 00:02:20,000
+It's a VDCM of Maserati, which is a.
+
+24
+00:02:20,000 --> 00:02:25,000
+Excused X-CityK cable, high speed communication.
+
+25
+00:02:25,000 --> 00:02:30,000
+As you can see, it's a development echo and it has its.
+
+26
+00:02:30,000 --> 00:02:33,000
+X-CityK module that coming out of it.
+
+27
+00:02:33,000 --> 00:02:36,000
+There are two differences between the echoes.
+
+28
+00:02:36,000 --> 00:02:37,000
+One is production.
+
+29
+00:02:37,000 --> 00:02:42,000
+The one you have in your vehicle at home when you have your vehicle.
+
+30
+00:02:42,000 --> 00:02:48,000
+If you open it, you don't have this port of X-CityK module because it's a closed echo.
+
+31
+00:02:48,000 --> 00:02:54,000
+And the coast is around like 50 to 100 euros for the production one.
+
+32
+00:02:54,000 --> 00:03:00,000
+For the development one, it can reach 15,000 euros for only development echo.
+
+33
+00:03:00,000 --> 00:03:10,000
+It depends on the complexity of the hardware and the microcontroller.
+
+34
+00:03:10,000 --> 00:03:17,000
+So the communication with the ethos is coming on through a cable which called X-CityK.
+
+35
+00:03:17,000 --> 00:03:24,000
+If we want to communicate only with one echo, then no need for the ethos.
+
+36
+00:03:24,000 --> 00:03:28,000
+I will have a cable which is called X-CityK host.
+
+37
+00:03:28,000 --> 00:03:33,000
+You should go directly from the echo to your PC directly.
+
+38
+00:03:33,000 --> 00:03:39,000
+Other than that, if you want to connect other cans or connect more than echo,
+
+39
+00:03:39,000 --> 00:03:45,000
+you should adapt the modulators, as you can see in this picture.
+
+40
+00:03:45,000 --> 00:03:51,000
+It's 891, where you have the first port, for example, the host, which goes to your PC.
+
+41
+00:03:52,000 --> 00:03:56,000
+Those two ports can be connected to other two echoes.
+
+42
+00:03:56,000 --> 00:04:01,000
+And the others, as you can see, they are scan FD and lean to.
+
+43
+00:04:01,000 --> 00:04:07,000
+It depends on the needs of your implementation and what you are testing,
+
+44
+00:04:07,000 --> 00:04:11,000
+what you need to have in your data or ink.
+
+45
+00:04:11,000 --> 00:04:20,000
+That's why it depends on the goal and the target that you want to achieve by the log that you have.
+
+46
+00:04:20,000 --> 00:04:25,000
+If I want to have everything in the same log with scan signals, lean signals,
+
+47
+00:04:25,000 --> 00:04:30,000
+and the Bose echoes, then I need to adapt an ethos complex like this,
+
+48
+00:04:30,000 --> 00:04:32,000
+and it costs a lot of money.
+
+49
+00:04:32,000 --> 00:04:36,000
+Other than that, I just need to see the internal signals of the AVCU.
+
+50
+00:04:36,000 --> 00:04:38,000
+There is no need for that.
+
+51
+00:04:38,000 --> 00:04:49,000
+And for the can logs, you can just log by the encase normally through the OBD on Kanalyzer.
+
+52
+00:04:49,000 --> 00:04:55,000
+So, let's go in Inka and check what we need.
+
+53
+00:04:55,000 --> 00:04:58,000
+As you can see, this is the main page of Inka.
+
+54
+00:04:58,000 --> 00:05:06,000
+I have a version 7.2, which is limited for if you are going to work in cell-length side.
+
+55
+00:05:06,000 --> 00:05:16,000
+For AVCU2, it's not supported, so I recommend you on your PCs to upgrade it to the 7.3,
+
+56
+00:05:16,000 --> 00:05:25,000
+at least, to be able to open the software AVCU2 offline.
+
+57
+00:05:25,000 --> 00:05:28,000
+And we're going to check this right now.
+
+58
+00:05:28,000 --> 00:05:34,000
+So, the main thing about Inka is you have a database.
+
+59
+00:05:34,000 --> 00:05:37,000
+In this case, I'm working on different projects.
+
+60
+00:05:37,000 --> 00:05:44,000
+I have Lukato, HTT, smart car, cell, and you have different modules.
+
+61
+00:05:44,000 --> 00:05:52,000
+So, first thing, just create a top folder.
+
+62
+00:05:52,000 --> 00:05:55,000
+Just to have everything inside it.
+
+63
+00:05:55,000 --> 00:05:59,000
+And then inside this, you can add your software.
+
+64
+00:05:59,000 --> 00:06:06,000
+You can add your DBCs and so on.
+
+65
+00:06:06,000 --> 00:06:09,000
+So, let's say you want to add your software.
+
+66
+00:06:09,000 --> 00:06:16,000
+What you should do, just right-click on it, add and go to A2L.
+
+67
+00:06:16,000 --> 00:06:34,000
+Then go to check where I downloaded the software or go to the folder directly.
+
+68
+00:06:35,000 --> 00:06:40,000
+The first thing you're going to add is A2L, which is the base of the software.
+
+69
+00:06:40,000 --> 00:06:42,000
+Then just copy.
+
+70
+00:06:42,000 --> 00:06:45,000
+So, you have the poster post.
+
+71
+00:06:45,000 --> 00:06:48,000
+And then it will ask you, what is the hex file?
+
+72
+00:06:48,000 --> 00:06:52,000
+Then I will go there, paste the same.
+
+73
+00:06:52,000 --> 00:06:58,000
+And then I don't have hex file, I have S19, which is equal to the hex file.
+
+74
+00:06:58,000 --> 00:07:01,000
+It's the calibration file.
+
+75
+00:07:01,000 --> 00:07:04,000
+In this case, there is two.
+
+76
+00:07:04,000 --> 00:07:06,000
+That's it.
+
+77
+00:07:06,000 --> 00:07:14,000
+If I'm working on vehicle on a development echo, and I need, and I don't have the MMO code association on my vehicle,
+
+78
+00:07:14,000 --> 00:07:16,000
+I'm talking first to learn the sport.
+
+79
+00:07:16,000 --> 00:07:28,000
+But in this case, we have the mobilizer function on on a dataset, which is the association between the body and AVCU has already done.
+
+80
+00:07:28,000 --> 00:07:32,000
+I need to flash the MMO code, which is the S191.
+
+81
+00:07:32,000 --> 00:07:38,000
+Other than that, you will flash the MMO, which is the new development echo.
+
+82
+00:07:38,000 --> 00:07:44,000
+You just put it on this vehicle to do your stuff and testing and so on.
+
+83
+00:07:44,000 --> 00:07:52,000
+So, you just need to flash the MMO off, because you don't have the association between body and AVCU.
+
+84
+00:07:52,000 --> 00:08:00,000
+Or other main echo, which is EDCM, HTTP, and so on.
+
+85
+00:08:00,000 --> 00:08:10,000
+Okay, once you click on it, it's going to take a while to build your software and ink.
+
+86
+00:08:10,000 --> 00:08:17,000
+But once it's built, you can see that you have the software here.
+
+87
+00:08:17,000 --> 00:08:24,000
+Then you have its name and the hex oil is here.
+
+88
+00:08:24,000 --> 00:08:26,000
+Okay.
+
+89
+00:08:26,000 --> 00:08:33,000
+So, a recommendation, just copy the first part and paste it here.
+
+90
+00:08:33,000 --> 00:08:35,000
+Okay.
+
+91
+00:08:35,000 --> 00:08:36,000
+Why?
+
+92
+00:08:36,000 --> 00:08:39,000
+This is the main dataset built.
+
+93
+00:08:39,000 --> 00:08:45,000
+And if I want to change something, I will change it on this one gray one.
+
+94
+00:08:45,000 --> 00:08:52,000
+But if I don't want to change anything, I will just right click and freeze it.
+
+95
+00:08:52,000 --> 00:08:57,000
+This will freeze my calibration on this dataset.
+
+96
+00:08:57,000 --> 00:08:59,000
+So, I know that this one.
+
+97
+00:08:59,000 --> 00:09:05,000
+But let's say I want to add another one.
+
+98
+00:09:05,000 --> 00:09:06,000
+I want to change something.
+
+99
+00:09:06,000 --> 00:09:14,000
+Then I will rename it and move the equation to.
+
+100
+00:09:14,000 --> 00:09:15,000
+Okay.
+
+101
+00:09:15,000 --> 00:09:18,000
+Then you have the same dataset here.
+
+102
+00:09:18,000 --> 00:09:25,000
+To change it, you need to go to calibration data manager to change it.
+
+103
+00:09:25,000 --> 00:09:30,000
+Other than that, you can change it even on the working page.
+
+104
+00:09:30,000 --> 00:09:33,000
+Okay.
+
+105
+00:09:33,000 --> 00:09:36,000
+Got my point?
+
+106
+00:09:36,000 --> 00:09:39,000
+Any questions?
+
+107
+00:09:39,000 --> 00:09:40,000
+Okay.
+
+108
+00:09:40,000 --> 00:09:42,000
+Now questions.
+
+109
+00:09:42,000 --> 00:09:43,000
+Okay.
+
+110
+00:09:43,000 --> 00:09:46,000
+So, I will go to add a workspace here.
+
+111
+00:09:46,000 --> 00:09:50,000
+Let's say, oil.
+
+112
+00:09:50,000 --> 00:10:00,000
+And add the data software that I just inserted here.
+
+113
+00:10:00,000 --> 00:10:03,000
+And so on.
+
+114
+00:10:03,000 --> 00:10:08,000
+So, he's telling me, okay, he created a new workspace.
+
+115
+00:10:08,000 --> 00:10:13,000
+And you inserted a software.
+
+116
+00:10:13,000 --> 00:10:16,000
+What hardware you are using.
+
+117
+00:10:16,000 --> 00:10:19,000
+And he's giving you all the options for it.
+
+118
+00:10:19,000 --> 00:10:20,000
+Okay.
+
+119
+00:10:20,000 --> 00:10:23,000
+But since I'm using, you know, in my vehicle.
+
+120
+00:10:23,000 --> 00:10:28,000
+And I will pick this choice.
+
+121
+00:10:28,000 --> 00:10:30,000
+Which is the one that I'm adapting.
+
+122
+00:10:30,000 --> 00:10:33,000
+Other than that, you can choose another module.
+
+123
+00:10:33,000 --> 00:10:35,000
+As the one I showed you before.
+
+124
+00:10:35,000 --> 00:10:38,000
+Which is the eight.
+
+125
+00:10:38,000 --> 00:10:42,000
+As for example, eight, nine, one or eight, nine, two.
+
+126
+00:10:42,000 --> 00:10:44,000
+It's depend on the most used one.
+
+127
+00:10:44,000 --> 00:10:48,000
+The one you have on your vehicle or on your simulator.
+
+128
+00:10:48,000 --> 00:10:49,000
+Okay.
+
+129
+00:10:49,000 --> 00:10:55,000
+So, I will use this one.
+
+130
+00:10:55,000 --> 00:11:02,000
+This is the second.
+
+131
+00:11:02,000 --> 00:11:03,000
+Okay.
+
+132
+00:11:03,000 --> 00:11:06,000
+Beside that the hardware and the software.
+
+133
+00:11:06,000 --> 00:11:11,000
+There is an experiment here in the workspace.
+
+134
+00:11:11,000 --> 00:11:12,000
+Okay.
+
+135
+00:11:12,000 --> 00:11:15,000
+So, just to repeat the workspace, you can add it here.
+
+136
+00:11:15,000 --> 00:11:18,000
+Add workspace and you have your own workspace.
+
+137
+00:11:18,000 --> 00:11:19,000
+Okay.
+
+138
+00:11:19,000 --> 00:11:25,000
+If you want to add on this workspace an experiment.
+
+139
+00:11:25,000 --> 00:11:26,000
+A new one.
+
+140
+00:11:26,000 --> 00:11:29,000
+Just add experiment.
+
+141
+00:11:29,000 --> 00:11:31,000
+Okay.
+
+142
+00:11:31,000 --> 00:11:35,000
+And go and insert it here.
+
+143
+00:11:35,000 --> 00:11:44,000
+But if let's say one of my team or a calibrator or anybody that asked me to do a certain test
+
+144
+00:11:44,000 --> 00:11:51,000
+on the vehicle or the simulator told me can you insert those variables or can you use this
+
+145
+00:11:51,000 --> 00:11:53,000
+experiment while you are working.
+
+146
+00:11:53,000 --> 00:12:05,000
+So, I will just go to the folder that you want to import it and go import the file or the
+
+147
+00:12:05,000 --> 00:12:08,000
+experiment.
+
+148
+00:12:08,000 --> 00:12:09,000
+Okay.
+
+149
+00:12:09,000 --> 00:12:10,000
+So, I have one here.
+
+150
+00:12:10,000 --> 00:12:11,000
+Okay.
+
+151
+00:12:11,000 --> 00:12:19,000
+There is like one for the base software testing or other things that I had before.
+
+152
+00:12:19,000 --> 00:12:21,000
+So, let's say take this one.
+
+153
+00:12:21,000 --> 00:12:25,000
+And then as you can see it's point EXP.
+
+154
+00:12:25,000 --> 00:12:30,000
+The extension for the experiments.
+
+155
+00:12:30,000 --> 00:12:37,000
+Okay.
+
+156
+00:12:38,000 --> 00:12:40,000
+Then open this window.
+
+157
+00:12:40,000 --> 00:12:44,000
+Just tell you, okay, imported, positive.
+
+158
+00:12:44,000 --> 00:12:49,000
+And you have the version here.
+
+159
+00:12:49,000 --> 00:12:51,000
+And let's say, okay, I will change this.
+
+160
+00:12:51,000 --> 00:12:53,000
+I want the new one that I uploaded.
+
+161
+00:12:53,000 --> 00:12:54,000
+Okay.
+
+162
+00:12:54,000 --> 00:12:56,000
+I will take this one here.
+
+163
+00:12:56,000 --> 00:12:59,000
+Now, let's check the first thing harder.
+
+164
+00:12:59,000 --> 00:13:02,000
+Let's go here.
+
+165
+00:13:02,000 --> 00:13:03,000
+Okay.
+
+166
+00:13:04,000 --> 00:13:12,000
+As you can see, this is the main window to align with your echo in Inca.
+
+167
+00:13:12,000 --> 00:13:18,000
+If you don't find your heard or you have to search it by this lens and depend on your interface,
+
+168
+00:13:18,000 --> 00:13:25,000
+what you are connecting with your echo, if you are connected via Ethernet or USB or whatever else,
+
+169
+00:13:25,000 --> 00:13:28,000
+you will just try to search for it.
+
+170
+00:13:28,000 --> 00:13:32,000
+But since I'm on offline here, I will just show you everything offline.
+
+171
+00:13:32,000 --> 00:13:37,000
+And I'm using the one in the vehicle, which is a city chaos.
+
+172
+00:13:37,000 --> 00:13:45,000
+So, let's say if you have a lot of echoes and a lot of stuff, there is a bar called name here.
+
+173
+00:13:45,000 --> 00:13:49,000
+And I want to name it AVCU1.
+
+174
+00:13:49,000 --> 00:13:50,000
+Apply.
+
+175
+00:13:50,000 --> 00:13:51,000
+What will have it?
+
+176
+00:13:51,000 --> 00:13:52,000
+I will have it here.
+
+177
+00:13:52,000 --> 00:13:55,000
+Look, it's called AVC1.
+
+178
+00:13:55,000 --> 00:14:03,000
+So, let's give you an indication of what echo you are connected to if it's aligned or not and so on.
+
+179
+00:14:03,000 --> 00:14:06,000
+When you have more than one echo.
+
+180
+00:14:06,000 --> 00:14:13,000
+Another thing for the automatic connection and the alignment of the echo.
+
+181
+00:14:13,000 --> 00:14:20,000
+Inca should be aligned with the software clashed on the echo.
+
+182
+00:14:21,000 --> 00:14:26,000
+So, there is a working page where you change your calibration.
+
+183
+00:14:26,000 --> 00:14:34,000
+There is a reference page where you have the freeze calibration that you cannot change it.
+
+184
+00:14:34,000 --> 00:14:37,000
+And then you have the one in the echo.
+
+185
+00:14:37,000 --> 00:14:45,000
+So, the alignment between the echo and what is in the working and reference page should be here.
+
+186
+00:14:45,000 --> 00:14:50,000
+And if I go to this two arrows, it will start the initialization.
+
+187
+00:14:50,000 --> 00:14:52,000
+Let's say, okay, I'm not connected.
+
+188
+00:14:52,000 --> 00:14:54,000
+I don't see anything.
+
+189
+00:14:54,000 --> 00:15:06,000
+But the only thing I see is this software, 24b, 20c, 0, 3a, 0, which is for x to 15, with you, which is opened here.
+
+190
+00:15:06,000 --> 00:15:09,000
+Okay.
+
+191
+00:15:09,000 --> 00:15:23,000
+So, if I'm connected to a real vehicle, I will have or everything is red because I'm not aligned to the actual echo and vehicle.
+
+192
+00:15:23,000 --> 00:15:29,000
+Other than that, I will have like a misalignment only for the working page or something like this.
+
+193
+00:15:29,000 --> 00:15:36,000
+I have the same software. I will have everything aligned between the reference, the working and the code page.
+
+194
+00:15:36,000 --> 00:15:38,000
+Okay.
+
+195
+00:15:38,000 --> 00:15:44,000
+So, my recommendation is to set this retry always.
+
+196
+00:15:44,000 --> 00:15:46,000
+Initialize automatically.
+
+197
+00:15:46,000 --> 00:15:53,000
+If you are working with a lot of calibrations in the working page and need to maintain it,
+
+198
+00:15:53,000 --> 00:15:59,000
+then you can adapt this option of download to the working page.
+
+199
+00:15:59,000 --> 00:16:06,000
+And after you set your settings, click on apply to save it and maintain it.
+
+200
+00:16:06,000 --> 00:16:17,000
+Other than that, for to maintain this option of the working page, I would suggest to go here, auto-star behavior, always working page, just to maintain it.
+
+201
+00:16:17,000 --> 00:16:21,000
+Okay. And then don't forget the hit Apply.
+
+202
+00:16:21,000 --> 00:16:31,000
+Okay. Let's say we aligned, we are on vehicle, and we want to flash.
+
+203
+00:16:31,000 --> 00:16:37,000
+For the alignment, first of all, you need to hit always F3.
+
+204
+00:16:37,000 --> 00:16:43,000
+If you are using your laptop, there is FN function, so hit on FN, the plus F3.
+
+205
+00:16:43,000 --> 00:16:49,000
+Other than that, you can hit here, initialize hardware, and it will initialize by its own.
+
+206
+00:16:49,000 --> 00:16:56,000
+But since we don't see the hardware here because we are offline, this is not visible for the moment.
+
+207
+00:16:56,000 --> 00:17:01,000
+So, let's say I want to flash, this is the window, those two arrows.
+
+208
+00:17:01,000 --> 00:17:06,000
+I will go to Enhance it, flash programming, code and data.
+
+209
+00:17:06,000 --> 00:17:14,000
+I will flash from the reference page, which is I set as read only to the echo flash.
+
+210
+00:17:14,000 --> 00:17:19,000
+Here is the name of the dataset that I am flashing.
+
+211
+00:17:19,000 --> 00:17:29,000
+This is the working page that has changed the reference page, and then you hit do it.
+
+212
+00:17:29,000 --> 00:17:41,000
+What is this window? This window is saying that I need a file, which is a translation for the software, to be able to flash this software.
+
+213
+00:17:41,000 --> 00:17:49,000
+This file is, for the London site, is present and the release note.
+
+214
+00:17:49,000 --> 00:17:53,000
+I will show it to you later.
+
+215
+00:17:53,000 --> 00:17:59,000
+But you have to use this file, which is for this software.
+
+216
+00:17:59,000 --> 00:18:05,000
+If they change the streamline or they change the software 24b to 23d,
+
+217
+00:18:05,000 --> 00:18:11,000
+and they are choosing a different profile, we need to edit here.
+
+218
+00:18:11,000 --> 00:18:15,000
+As you can see, I have in this link three different profiles,
+
+219
+00:18:15,000 --> 00:18:23,000
+1 for M189, 1 for M182, and 1 for VF and Ducato.
+
+220
+00:18:23,000 --> 00:18:32,000
+How to configure it? You just have to have your file and the PC, install it, and go to the file, select the file, which contains the profile,
+
+221
+00:18:32,000 --> 00:18:38,000
+and then it will be installed so easily.
+
+222
+00:18:38,000 --> 00:18:43,000
+Here you just set normal, and you have the options to flash.
+
+223
+00:18:43,000 --> 00:18:49,000
+Go to all the software, which has code and data and calibration.
+
+224
+00:18:49,000 --> 00:18:55,000
+Calibrations only, but I recommend to flash all the packets together.
+
+225
+00:18:55,000 --> 00:19:02,000
+Nowadays, because it should be associated together, other than that, in all the implementation,
+
+226
+00:19:02,000 --> 00:19:08,000
+and the software mainly didn't change for a while, so they only changed data set calibration,
+
+227
+00:19:08,000 --> 00:19:12,000
+so you can flash the data set.
+
+228
+00:19:12,000 --> 00:19:18,000
+But nowadays, in the London site, you have a release every week, not every day.
+
+229
+00:19:18,000 --> 00:19:21,000
+It depends on the project and the agency.
+
+230
+00:19:21,000 --> 00:19:27,000
+For the bootloader, it's the one written in the release node for the London site,
+
+231
+00:19:27,000 --> 00:19:34,000
+and it's a hex file, which can be flashed by file,
+
+232
+00:19:34,000 --> 00:19:40,000
+just the first time that it's changed it for the release node.
+
+233
+00:19:40,000 --> 00:19:46,000
+If it doesn't change and you flashed already the same bootloader, you don't need to flash it every time, just the first time.
+
+234
+00:19:47,000 --> 00:19:56,000
+If you lost communication with your Echo, and you are not able to communicate it with your Echo VSCDA or Bianca,
+
+235
+00:19:56,000 --> 00:20:07,000
+maybe you should flash your bootloader in order to try to refresh again the proper software,
+
+236
+00:20:07,000 --> 00:20:12,000
+maybe mistaken and flash the wrong software, this is a way to recover it.
+
+237
+00:20:12,000 --> 00:20:21,000
+In this case, we want to flash the whole software, we use all code and that and calibration option.
+
+238
+00:20:21,000 --> 00:20:25,000
+Then hit OK and say OK, you are offline and so on.
+
+239
+00:20:25,000 --> 00:20:29,000
+But since we are offline, there is no need to proceed,
+
+240
+00:20:29,000 --> 00:20:33,000
+because you would just have another window, which is called assertreset,
+
+241
+00:20:33,000 --> 00:20:38,000
+and then you have to choose it, reset Echo and the flag will start,
+
+242
+00:20:38,000 --> 00:20:47,000
+and then a window will open, tells you when the flash is going, if it's failed or it's successful.
+
+243
+00:20:47,000 --> 00:20:56,000
+Once you've finished, it will start the automatic alignment, other than that you can align by hand.
+
+244
+00:20:56,000 --> 00:21:09,000
+This option, we can use the data set for the working page that we changed it or,
+
+245
+00:21:09,000 --> 00:21:13,000
+and the moment we didn't change anything, we just said that.
+
+246
+00:21:13,000 --> 00:21:23,000
+OK, then to open the experiment, you can open it from this icon or from the hardware inside the one selected here.
+
+247
+00:21:23,000 --> 00:21:29,000
+Any questions for the moment? I think it's clear, easy.
+
+248
+00:21:29,000 --> 00:21:34,000
+Any doubts?
+
+249
+00:21:34,000 --> 00:21:38,000
+Nothing? OK.
+
+250
+00:21:38,000 --> 00:21:43,000
+Wait, I can't hear you. Can you repeat?
+
+251
+00:21:43,000 --> 00:21:46,000
+I was saying so far, so good.
+
+252
+00:21:46,000 --> 00:21:49,000
+OK, thank you. Let's go.
+
+253
+00:21:49,000 --> 00:21:57,000
+So, let's open the experiment and say, OK, since I'm offline, I will go and hit now,
+
+254
+00:21:57,000 --> 00:22:03,000
+but if you are in vehicle on a simulator, just try to hit yes in this condition.
+
+255
+00:22:03,000 --> 00:22:13,000
+So, it can align with the hardware and goes through the actual Echo software.
+
+256
+00:22:13,000 --> 00:22:18,000
+So, this is the experiment in ink, as you can see.
+
+257
+00:22:18,000 --> 00:22:29,000
+I had already configured an experiment, which was with the signals that I need.
+
+258
+00:22:29,000 --> 00:22:39,000
+If I don't know what signals needed, I have to look at my test case and understand what I'm testing, what I need to do.
+
+259
+00:22:39,000 --> 00:22:57,000
+If I'm going to do it on vehicle, I should have a window with all the main signals for the power modding or at least the signals to give you the feedback of the cities of the vehicle just to understand.
+
+260
+00:22:57,000 --> 00:23:14,000
+If you are in KON, if you have contact or closed, if you are on drive ready, if the feedback from the VPCM is coming correctly and conductors are actually closed, the park lock is engaged, if we be is engaged and so on.
+
+261
+00:23:14,000 --> 00:23:25,000
+All of these basic signals need to be in front of you just to give you a feedback about your testing or simulator or the vehicle doesn't change anything.
+
+262
+00:23:25,000 --> 00:23:33,000
+You need to understand that through ink, you need to see what is going on in the vehicle without watching the vehicle too.
+
+263
+00:23:33,000 --> 00:23:48,000
+So, in front of you, I want you to focus on the actual cities of the park lock, what is happening or what is the sock, what is the p-lock position and so on.
+
+264
+00:23:48,000 --> 00:23:59,000
+So, not only can signals, I want you to get even the internal signals for this variable, maybe there is a misalignment between can signals and internal signals.
+
+265
+00:23:59,000 --> 00:24:15,000
+So, be aware of what you are testing, try to have the dedicated signals for the test you are adapting and the correct ring that contains all the information for the test.
+
+266
+00:24:15,000 --> 00:24:20,000
+You can even log it in the background without opening the experiment.
+
+267
+00:24:20,000 --> 00:24:30,000
+So, first of all, if I want to open a new experiment, there is this button, but if I want to open a different one, I will hit this button.
+
+268
+00:24:30,000 --> 00:24:44,000
+This one is for saving, graphic interface, this is the hardware button, this just to go to the main window of Inca and here what you need it for the variable selection.
+
+269
+00:24:45,000 --> 00:24:50,000
+So, this is your main window where you can pick the signals.
+
+270
+00:24:50,000 --> 00:24:59,000
+Let's say I want the signal for the key, command the ignition STS, and you have it here.
+
+271
+00:24:59,000 --> 00:25:12,000
+I have the can signal, I have the base of it, so let's say I don't remember actually the signal, I will put a lot of stars and then you are going to have it here.
+
+272
+00:25:13,000 --> 00:25:24,000
+So, stars give you the option to search for your signal correctly and get the accurate signals that you want.
+
+273
+00:25:24,000 --> 00:25:33,000
+Let's say I want the one coming from the can or and the one coming from the base of it and so you can select them.
+
+274
+00:25:33,000 --> 00:25:39,000
+Okay, once you selected your signals, I have to adapt at the roster.
+
+275
+00:25:39,000 --> 00:25:44,000
+What is the roster is? It's an sampling time of your signals.
+
+276
+00:25:44,000 --> 00:26:01,000
+So, let's say your echo has the ability to give you the signals that you need to monitor on certain frequency.
+
+277
+00:26:01,000 --> 00:26:15,000
+So, let's say if I'm adapting an option of 50 milliseconds, then I'm expecting a sample of every signal H 50 milliseconds.
+
+278
+00:26:15,000 --> 00:26:25,000
+Okay, so every 50 milliseconds, I will get a sample for the command ignition STS.
+
+279
+00:26:26,000 --> 00:26:37,000
+If I'm adapting a foster roster, which is the 25 milliseconds, then I have two samples in 50 milliseconds and so on.
+
+280
+00:26:37,000 --> 00:26:42,000
+It's the maximum speed that you have for in this condition is 25 milliseconds.
+
+281
+00:26:42,000 --> 00:26:48,000
+There is another option here as you can see three points in 125 milliseconds and so on.
+
+282
+00:26:48,000 --> 00:26:54,000
+But the 25 for sure is the main and fastest one in this situation.
+
+283
+00:26:54,000 --> 00:27:03,000
+There is a 10 milliseconds and one milliseconds in different echoes and projects depends on the implementation.
+
+284
+00:27:03,000 --> 00:27:16,000
+This is a VCO one. It's different than other projects. Okay, so depend on the actual speed of the ring that is going on in the VCO model.
+
+285
+00:27:16,000 --> 00:27:26,000
+You need to adapt the correct speed over faster one to get the evolution of the signal in front of you.
+
+286
+00:27:26,000 --> 00:27:38,000
+Other than that, if I'm if I'm watching the signal in 100 milliseconds, but the actual signal evolves at every 25 milliseconds, I lost three frames.
+
+287
+00:27:38,000 --> 00:27:51,000
+Okay, so I lost three samples of the same signal. Maybe it's picked to 400 and came back to zero and I didn't see anything because I'm not watching with the right roster in this condition.
+
+288
+00:27:51,000 --> 00:27:59,000
+Okay, the raster is so important to see what's happening to your data.
+
+289
+00:27:59,000 --> 00:28:08,000
+You hit okay and play to start seeing the actual signals.
+
+290
+00:28:08,000 --> 00:28:16,000
+But since I'm offline, I don't see anything. Let's say you had this window and you forget about the measure rate.
+
+291
+00:28:16,000 --> 00:28:25,000
+So you click here, I click go to measure rate and then you can change it directly after picking it.
+
+292
+00:28:25,000 --> 00:28:30,000
+Okay, as you can see here is selected for 50 milliseconds.
+
+293
+00:28:30,000 --> 00:28:39,000
+Okay, beside than that, you can choose calibrations.
+
+294
+00:28:39,000 --> 00:28:56,000
+Let's say and I will choose only calls as you can see you can pick whatever calibration you want and hit enter.
+
+295
+00:28:56,000 --> 00:29:02,000
+Okay, but as you can see, I'm not able to change any calibration in this condition.
+
+296
+00:29:02,000 --> 00:29:07,000
+Why? Because I'm in working in reference page. I'm not in the working page.
+
+297
+00:29:07,000 --> 00:29:15,000
+So, first of all, this is your indication of the situation with the echo.
+
+298
+00:29:15,000 --> 00:29:22,000
+Here, he lost communication. I'm not communicating with the echo. So he said, okay, echo off, no access.
+
+299
+00:29:22,000 --> 00:29:36,000
+If I'm aligned and everything is okay, I will just see this equal to zero where I don't have any calibration modified in the working page and I don't have any issues with the communication.
+
+300
+00:29:36,000 --> 00:29:49,000
+If I have a difference between working page, a reference page can tell me, okay, there is a check sum error and it's going to be visible in this condition and you need to align in all conditions.
+
+301
+00:29:49,000 --> 00:30:00,000
+So, to be able to change calibrations, just hit the working page other than that align and then go back to working page.
+
+302
+00:30:00,000 --> 00:30:17,000
+For the calibration, you can hit increment F7, decrement F6 or use the buttons here to change it and to remove all the changes, control you.
+
+303
+00:30:17,000 --> 00:30:25,000
+Okay, as you can reset to reference page value. Okay, as you can see, there are a lot of shortcuts here that you can adopt.
+
+304
+00:30:25,000 --> 00:30:40,000
+If I'm changing the size of the window, I can click alt plus and then it will come back to this optimal size for the window for the column alto and so on.
+
+305
+00:30:40,000 --> 00:30:44,000
+It depends on what you need to do with your ink.
+
+306
+00:30:44,000 --> 00:31:08,000
+I recommend you to use it offline to start exercising with your ink offline before going to the vehicle or just to how to pick and create a window with the proper signals and calibration needed for your activity.
+
+307
+00:31:08,000 --> 00:31:21,000
+Okay, then let's check other windows. Let's say, okay, I got my signals, I'm play, I'm in play, I'm in simulator and I want to lock them and over as I want.
+
+308
+00:31:21,000 --> 00:31:32,000
+I will go just hit the red button, which is lock. As you can see, the cursor start time started for the recording time.
+
+309
+00:31:32,000 --> 00:31:42,000
+If you have space enough space on your PC in your database, it will give you the maximum time for your log.
+
+310
+00:31:42,000 --> 00:31:59,000
+It depends on the your PC and the space on it. It depends on the database and a lot of variables, but as you can see, if you have a strong PC, you can have a lot of time.
+
+311
+00:31:59,000 --> 00:32:11,000
+Because we are offline, I'm not logging any data, so the data is actually empty because we are offline. So as you can see, it's giving you the maximum time, which is seven hours.
+
+312
+00:32:11,000 --> 00:32:17,000
+But if you are in vehicle, maybe you can tell you one or two hours, depending on your PC.
+
+313
+00:32:17,000 --> 00:32:23,000
+And you can change the calibration while you are doing testing and so on.
+
+314
+00:32:23,000 --> 00:32:29,000
+But let's say in your log, I want to log even the calibration.
+
+315
+00:32:29,000 --> 00:32:34,000
+How you can do that? Okay, first of all, you have to do it before starting the log.
+
+316
+00:32:34,000 --> 00:32:44,000
+So to save the log, you just have to play and then it will start saving and give you another window, which is this one.
+
+317
+00:32:44,000 --> 00:32:51,000
+Where in this window, you have the actual path, the file.
+
+318
+00:32:51,000 --> 00:33:01,000
+And the name and all the details about the software, the reference page and working page, just keep it on.
+
+319
+00:33:01,000 --> 00:33:06,000
+It's going to be useful once you open offline the data.
+
+320
+00:33:06,000 --> 00:33:22,000
+For my recommendation, just at least use always the date at the beginning, the program, the name and the facility that you are using.
+
+321
+00:33:22,000 --> 00:33:28,000
+Then after that, try the software and the test you were doing.
+
+322
+00:33:28,000 --> 00:33:35,000
+Okay, and if it's okay or not, okay, write the number of the tests after you load the software.
+
+323
+00:33:35,000 --> 00:33:40,000
+Okay, if I want this acquisition, I will hit save and I will have it in the past.
+
+324
+00:33:40,000 --> 00:33:49,000
+Other than that, I can discard it and say, okay, I don't want it just so that I will be lost. Yes, I didn't log anything.
+
+325
+00:33:49,000 --> 00:33:55,000
+I will put back my calibration, control you and I don't have anything to change.
+
+326
+00:33:55,000 --> 00:34:03,000
+Just have the alignment here. Okay, let's say I want to configure this window.
+
+327
+00:34:03,000 --> 00:34:11,000
+You will hit this button while you are in stop and then you can configure your path from here and change the name of the log here.
+
+328
+00:34:11,000 --> 00:34:24,000
+Let's say be 64 and say, okay, 24b, underscore 24, zero, three, eight, zero.
+
+329
+00:34:24,000 --> 00:34:27,000
+This is a software that we are adapting right now.
+
+330
+00:34:27,000 --> 00:34:32,000
+But this information is the name of the log.
+
+331
+00:34:32,000 --> 00:34:37,000
+Why I am telling you to set your log in this way?
+
+332
+00:34:37,000 --> 00:34:46,000
+Because once you send the log to a calibrator or a function owner, you need to understand when you did this on what project?
+
+333
+00:34:46,000 --> 00:34:49,000
+Because it's not working only on your project.
+
+334
+00:34:49,000 --> 00:34:51,000
+On what facility? So it's in vehicle.
+
+335
+00:34:51,000 --> 00:35:01,000
+It has more meaning that one is doing it on the hill because he doesn't know if on the simulator, everything is connected properly or not.
+
+336
+00:35:02,000 --> 00:35:09,000
+And the software used, so he is updated on which software and which calibration release.
+
+337
+00:35:09,000 --> 00:35:16,000
+Okay, so then the name of the test was the number and the result.
+
+338
+00:35:16,000 --> 00:35:19,000
+As you can see, okay, not okay, depends on you.
+
+339
+00:35:19,000 --> 00:35:28,000
+And you can use the time format or you can sit it before and the beginning and I will just remove like this.
+
+340
+00:35:28,000 --> 00:35:33,000
+As you can see, it's updated automatically if you set this option.
+
+341
+00:35:33,000 --> 00:35:39,000
+If you are doing a checklist and you don't want to change the name, want to maintain it.
+
+342
+00:35:39,000 --> 00:35:43,000
+So say, okay, test one.
+
+343
+00:35:43,000 --> 00:35:46,000
+And then I will hit the auto increase by one.
+
+344
+00:35:46,000 --> 00:35:50,000
+I will just get one here.
+
+345
+00:35:50,000 --> 00:35:56,000
+And it's going to increase test one, test two, test three and then you can check the result of line.
+
+346
+00:35:56,000 --> 00:36:02,000
+Whatever you want, you can do, write your name, company project and vehicle and so on.
+
+347
+00:36:02,000 --> 00:36:07,000
+Or the recording here, there is other tasks that's not needed.
+
+348
+00:36:07,000 --> 00:36:15,000
+The triggers is needed only if you have something happening on event.
+
+349
+00:36:15,000 --> 00:36:23,000
+So let's say I need to understand when I am having a reset on my software or.
+
+350
+00:36:23,000 --> 00:36:32,000
+I wanted acceleration or only when a DTC is set in my memory start to the acquisition 30 minutes before and 30 minutes after.
+
+351
+00:36:32,000 --> 00:36:41,000
+Here where you're going to set your trigger and you can put it manual or automatic and depends on you what you want to do.
+
+352
+00:36:41,000 --> 00:36:44,000
+So you're going to insert all your condition.
+
+353
+00:36:44,000 --> 00:36:49,000
+There is the logic ports to add to your signal.
+
+354
+00:36:49,000 --> 00:36:58,000
+So you adhere the actual signals that you need to monitor and you set all the conditions to start the trigger.
+
+355
+00:36:58,000 --> 00:37:05,000
+Then it's at the time that you want to log before and after the event.
+
+356
+00:37:05,000 --> 00:37:11,000
+But since we want to log by hand on the current simulator, we just give it off.
+
+357
+00:37:11,000 --> 00:37:15,000
+This is just for automatic stuff or on event stuff that you want.
+
+358
+00:37:15,000 --> 00:37:23,000
+Don't want to lose all the memory of the PC for all this log or you don't need all the data to be so huge.
+
+359
+00:37:23,000 --> 00:37:30,000
+So you set a trigger to log it in a specific condition.
+
+360
+00:37:30,000 --> 00:37:42,000
+This is a window for MDA which gives the measurement that analysis program which opened the Inca log files.
+
+361
+00:37:42,000 --> 00:37:53,000
+Here I recommend to remove this sign always the chicken box because it's generate other XDA files based on the layers.
+
+362
+00:37:53,000 --> 00:37:57,000
+Just remove it and it okay.
+
+363
+00:37:57,000 --> 00:38:02,000
+Then remember always to save your file.
+
+364
+00:38:02,000 --> 00:38:06,000
+So let's say we want to log the calibration.
+
+365
+00:38:06,000 --> 00:38:15,000
+I am in the layer number level three and I want to add.
+
+366
+00:38:15,000 --> 00:38:17,000
+I want to log the calibration.
+
+367
+00:38:17,000 --> 00:38:25,000
+So I will just hit on it and as you can see.
+
+368
+00:38:25,000 --> 00:38:33,000
+There is the poor calibration here and you can hit them here.
+
+369
+00:38:33,000 --> 00:38:45,000
+Then once you added this to the filter recorder, you can hit okay and those are locked in the log that you have.
+
+370
+00:38:45,000 --> 00:38:58,000
+Any questions or concerns anything that you can understand.
+
+371
+00:38:58,000 --> 00:39:01,000
+You have things clear?
+
+372
+00:39:01,000 --> 00:39:03,000
+Okay.
+
+373
+00:39:03,000 --> 00:39:16,000
+Let's say a calibrator sent you a file which contains different calibrations to modify just to try a test or to check if it solves the issue that you are facing.
+
+374
+00:39:16,000 --> 00:39:24,000
+Then there is a DCM file or CSV file is going to be sent with all the calibration.
+
+375
+00:39:24,000 --> 00:39:40,000
+I am going to go to stop then that is it variables read all calibrations from file and then I will just pick the file which has the calibration in this condition CSV this one or DCM.
+
+376
+00:39:40,000 --> 00:39:49,000
+Once you open it, it's going to align and you will have the difference here between the reference page and working page.
+
+377
+00:39:49,000 --> 00:39:52,000
+Okay, directly in your income.
+
+378
+00:39:52,000 --> 00:40:00,000
+Then you can do your log and send the data to the calibrator or analyze it offline by yourself.
+
+379
+00:40:00,000 --> 00:40:01,000
+Okay.
+
+380
+00:40:01,000 --> 00:40:05,000
+In this window, you can see all the echoes connected.
+
+381
+00:40:05,000 --> 00:40:08,000
+We have only one echo which is ABC one.
+
+382
+00:40:08,000 --> 00:40:25,000
+As you can see here is this window where you have your echo but if I have a multiple echo, I will have another parts here down which give me the status of both echoes like let's say I'm working if you're working on a hybrid project.
+
+383
+00:40:25,000 --> 00:40:32,000
+You're going to need to log the HCP and HCP and sometimes you need to log even the ECM.
+
+384
+00:40:32,000 --> 00:40:39,000
+So you have three echoes in front of you and you understand that all of them are aligned or not.
+
+385
+00:40:39,000 --> 00:40:45,000
+In this condition, you will see the software here and the status for everyone down here.
+
+386
+00:40:45,000 --> 00:40:51,000
+Other than that, you can select them from this window.
+
+387
+00:40:51,000 --> 00:40:54,000
+Okay, let's go next.
+
+388
+00:40:54,000 --> 00:41:01,000
+Everything in anchor is clear.
+
+389
+00:41:01,000 --> 00:41:05,000
+Okay.
+
+390
+00:41:05,000 --> 00:41:18,000
+Let's go to another important part which is the calibration that the manager when I want to change calibration or a generator file or a line.
+
+391
+00:41:18,000 --> 00:41:26,000
+A data set to different calibrations, I will go and hit this option to be able to play with calibrations.
+
+392
+00:41:26,000 --> 00:41:43,000
+So in this case, you will have the main part comparison source which is let's say the software that I have.
+
+393
+00:41:43,000 --> 00:41:49,000
+Let's take the calibration modification.
+
+394
+00:41:49,000 --> 00:41:53,000
+I remove this one. I remove everything.
+
+395
+00:41:53,000 --> 00:41:58,000
+And then I will just add the variables I need.
+
+396
+00:41:58,000 --> 00:42:03,000
+Okay, and then once you add here, let's say,
+
+397
+00:42:03,000 --> 00:42:10,000
+and let's say I will have this one for example, change.
+
+398
+00:42:10,000 --> 00:42:14,000
+Okay, as you can see this calibration on this data set is zero.
+
+399
+00:42:14,000 --> 00:42:18,000
+So I will open it, go to hit and change it to one.
+
+400
+00:42:18,000 --> 00:42:23,000
+Okay, so now I change the calibration to one.
+
+401
+00:42:23,000 --> 00:42:27,000
+So I want to compare it with a file.
+
+402
+00:42:27,000 --> 00:42:33,000
+So I will add a data set which is the main one that I didn't change and compare here.
+
+403
+00:42:33,000 --> 00:42:36,000
+Okay, and as you can see, there is a difference between them.
+
+404
+00:42:36,000 --> 00:42:43,000
+Okay, you can change between the main difference and the data set by this button.
+
+405
+00:42:43,000 --> 00:42:49,000
+And you can see which is the main one on the main difference is zero on the second one.
+
+406
+00:42:49,000 --> 00:42:52,000
+It's not zero. It's different than zero.
+
+407
+00:42:52,000 --> 00:42:55,000
+Okay.
+
+408
+00:42:55,000 --> 00:42:58,000
+Now, if you want to compare highlighted,
+
+409
+00:42:58,000 --> 00:43:03,000
+you will just need say, okay, DCM,
+
+410
+00:43:03,000 --> 00:43:06,000
+Prova,
+
+411
+00:43:06,000 --> 00:43:12,000
+and I will put it in partition X.
+
+412
+00:43:12,000 --> 00:43:15,000
+Compare highlighted. It's going to generate a file.
+
+413
+00:43:15,000 --> 00:43:21,000
+Let's go and check the file on here.
+
+414
+00:43:21,000 --> 00:43:28,000
+Okay, as you can see, the file is HTML and it's open like this.
+
+415
+00:43:28,000 --> 00:43:33,000
+And it's give you the master data set
+
+416
+00:43:33,000 --> 00:43:36,000
+and the compared one.
+
+417
+00:43:36,000 --> 00:43:41,000
+And here is the calibration that I picked and I choose, as you can see,
+
+418
+00:43:41,000 --> 00:43:48,000
+on the main data set you have it on zero and on the modification one you have it on one.
+
+419
+00:43:48,000 --> 00:43:50,000
+Got it?
+
+420
+00:43:50,000 --> 00:43:56,000
+So this is how you can create a Cal compare between two different data set
+
+421
+00:43:56,000 --> 00:44:01,000
+and how to modify your calibration with calibration data manager.
+
+422
+00:44:01,000 --> 00:44:05,000
+Once you change your calibration,
+
+423
+00:44:05,000 --> 00:44:10,000
+you just need to close the window and save it.
+
+424
+00:44:10,000 --> 00:44:17,000
+Then you have your software this one changed.
+
+425
+00:44:17,000 --> 00:44:21,000
+But let's say, okay, I changed a calibration different than this one
+
+426
+00:44:21,000 --> 00:44:24,000
+and I don't want to change this data set anymore.
+
+427
+00:44:24,000 --> 00:44:30,000
+I will freeze it again by setting it only.
+
+428
+00:44:30,000 --> 00:44:34,000
+Other than that, you can modify the same data set again
+
+429
+00:44:34,000 --> 00:44:41,000
+with the calibration data manager or on working page.
+
+430
+00:44:41,000 --> 00:44:46,000
+Okay.
+
+431
+00:44:46,000 --> 00:44:59,000
+Any questions, concerns?
+
+432
+00:44:59,000 --> 00:45:07,000
+Nice.
+
+433
+00:45:07,000 --> 00:45:15,000
+Can you share the software maybe so that we can try to use
+
+434
+00:45:15,000 --> 00:45:22,000
+to try to do some experiment like playing with a game?
+
+435
+00:45:22,000 --> 00:45:23,000
+Sure.
+
+436
+00:45:23,000 --> 00:45:24,000
+Okay.
+
+437
+00:45:24,000 --> 00:45:26,000
+We are working on M182, right?
+
+438
+00:45:26,000 --> 00:45:27,000
+Yeah.
+
+439
+00:45:27,000 --> 00:45:28,000
+Yeah.
+
+440
+00:45:28,000 --> 00:45:31,000
+But it's just a little bit to be...
+
+441
+00:45:31,000 --> 00:45:32,000
+Yeah.
+
+442
+00:45:32,000 --> 00:45:33,000
+How are you doing with you?
+
+443
+00:45:33,000 --> 00:45:34,000
+I'm sure no problem.
+
+444
+00:45:34,000 --> 00:45:35,000
+I can send you myself.
+
+445
+00:45:35,000 --> 00:45:41,000
+But I will suggest you to use the A to L and X file from M182
+
+446
+00:45:41,000 --> 00:45:43,000
+and it's just be the same.
+
+447
+00:45:43,000 --> 00:45:47,000
+At least you have the variables and signals of your project
+
+448
+00:45:47,000 --> 00:45:55,000
+and you can directly try to train on the signals needed for yourself or your vehicle.
+
+449
+00:45:55,000 --> 00:45:57,000
+But I can share my stuff.
+
+450
+00:45:57,000 --> 00:45:59,000
+No problem if you want.
+
+451
+00:45:59,000 --> 00:46:00,000
+Okay.
+
+452
+00:46:00,000 --> 00:46:01,000
+Fantastic.
+
+453
+00:46:01,000 --> 00:46:02,000
+Thank you.
+
+454
+00:46:02,000 --> 00:46:03,000
+No problem.
+
+455
+00:46:03,000 --> 00:46:05,000
+I mean, everything is clear.
+
+456
+00:46:05,000 --> 00:46:07,000
+You have any clarification or something?
+
+457
+00:46:07,000 --> 00:46:08,000
+No, thank you.
+
+458
+00:46:08,000 --> 00:46:09,000
+It's obvious.
+
+459
+00:46:09,000 --> 00:46:10,000
+Okay.
+
+460
+00:46:10,000 --> 00:46:11,000
+Okay.
+
+461
+00:46:11,000 --> 00:46:12,000
+Hamza.
+
+462
+00:46:12,000 --> 00:46:13,000
+All good.
+
+463
+00:46:13,000 --> 00:46:14,000
+Thanks, Kalibis.
+
+464
+00:46:14,000 --> 00:46:15,000
+No problem.
+
+465
+00:46:15,000 --> 00:46:16,000
+Okay.
+
+466
+00:46:16,000 --> 00:46:17,000
+We can close it out here.
+
+467
+00:46:17,000 --> 00:46:26,000
+Guys, I have a nice day.
+
+468
+00:46:27,000 --> 00:46:28,000
+Bye guys.
+
+469
+00:46:28,000 --> 00:46:29,000
+Bye-bye.
+
+470
+00:46:29,000 --> 00:46:30,000
+Thank you.
+
+471
+00:46:30,000 --> 00:46:31,000
+Thank you.
+
+472
+00:46:31,000 --> 00:46:32,000
+Thank you.
+
+473
+00:46:32,000 --> 00:46:33,000
+Bye.
+

@@ -1,0 +1,1112 @@
+{
+ "mil1/can-lin": {
+  "title": "CAN LIN",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/CAN_LIN",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/can-lin/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/CAN_LIN/Academy_Kineton_Format___Network_CAN_LIN.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/academy-kineton-format-network-can-lin-87fb5bf6.json",
+    "title": "CAN-LIN-Ethernet",
+    "pages": 49,
+    "img_dir": "academy-kineton-format-network-can-lin-87fb5bf6"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/CAN_LIN/Ethernet_old_version.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/ethernet-old-version-6dacc021.json",
+    "title": "Academy",
+    "pages": 34,
+    "img_dir": "ethernet-old-version-6dacc021"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/CAN_LIN/eth_pres_rev1.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/eth-pres-rev1-a3cb7ce5.json",
+    "title": "Academy Ethernet",
+    "pages": 34,
+    "img_dir": "eth-pres-rev1-a3cb7ce5"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/ee-architecture": {
+  "title": "EE Architecture",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/EE_Architecture",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/ee-architecture/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/EE_Architecture/EE_Architecture.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/ee-architecture-a6ea572d.json",
+    "title": "Vehicle",
+    "pages": 27,
+    "img_dir": "ee-architecture-a6ea572d"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/electric-motors": {
+  "title": "Electric Motors",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/electric-motors/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/CORRUPT_BATTSBEVHEV.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/corrupt-battsbevhev-927e57d5.json",
+    "title": "BATTERIES AND INTRO TO BEV/HEV Batteries",
+    "pages": 28,
+    "img_dir": "corrupt-battsbevhev-927e57d5"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/EM_DC_Motor.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/em-dc-motor-d892fc6e.json",
+    "title": "Electric Machines",
+    "pages": 36,
+    "img_dir": "em-dc-motor-d892fc6e"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/EM_Induction_Motor.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/em-induction-motor-83774986.json",
+    "title": "Induction machine",
+    "pages": 32,
+    "img_dir": "em-induction-motor-83774986"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/EM_PMSM.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/em-pmsm-839c0f29.json",
+    "title": "Permanent Magnet Brushless Machine",
+    "pages": 28,
+    "img_dir": "em-pmsm-839c0f29"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/EM_Power_Converters.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/em-power-converters-c2eb2d26.json",
+    "title": "Power converters for DC Machine",
+    "pages": 28,
+    "img_dir": "em-power-converters-c2eb2d26"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/Electric_Machines_1.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/electric-machines-1-67ac5bbb.json",
+    "title": "Electric Machines",
+    "pages": 67,
+    "img_dir": "electric-machines-1-67ac5bbb"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Electric_Motors/Electric_Machines_2.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/electric-machines-2-015850b1.json",
+    "title": "Electric Machines",
+    "pages": 46,
+    "img_dir": "electric-machines-2-015850b1"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/hev-architecture-bev": {
+  "title": "HEV Architecture BEV",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/HEV_Architecture_BEV",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/hev-architecture-bev/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/HEV_Architecture_BEV/HEV_Architecture_BEV.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/hev-architecture-bev-a79af0fa.json",
+    "title": "BEV Induction",
+    "pages": 18,
+    "img_dir": "hev-architecture-bev-a79af0fa"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/hev-architecture-hybrid": {
+  "title": "HEV Architecture Hybrid",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/HEV_Architecture_Hybrid",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/hev-architecture-hybrid/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/HEV_Architecture_Hybrid/HEV_Architecture_Hybrid.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/hev-architecture-hybrid-da22c31d.json",
+    "title": "HEV",
+    "pages": 25,
+    "img_dir": "hev-architecture-hybrid-da22c31d"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/ice": {
+  "title": "ICE",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/ICE",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/ice/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/ICE/MCI_1.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/mci-1-bb6662c7.json",
+    "title": "MOTORI A COMBUSTIONE INTERNA",
+    "pages": 24,
+    "img_dir": "mci-1-bb6662c7"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/ICE/MCI_2.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/mci-2-87562fb5.json",
+    "title": "MOTORI A COMBUSTIONE INTERNA - 2",
+    "pages": 18,
+    "img_dir": "mci-2-87562fb5"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/ICE/MCI_Animation.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/mci-animation-2c2d8650.json",
+    "title": "https://www.stefanelli.eng.br/en/download-automotive-animations/",
+    "pages": 1,
+    "img_dir": "mci-animation-2c2d8650"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/sensors": {
+  "title": "Sensors",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Sensors",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/sensors/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Sensors/520_eAWD_EMEA_sch_eng_1.3_GSE_T4_20180611.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/eawd-emea-sch-eng-1-3-gse-t4-20180611-a9949533.json",
+    "title": "eAWD EMEA sch eng 1.3 GSE T4 20180611",
+    "pages": 1,
+    "img_dir": "eawd-emea-sch-eng-1-3-gse-t4-20180611-a9949533"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Sensors/520_eAWD_EMEA_sch_veh_1.3_GSE_T4_20180611.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/eawd-emea-sch-veh-1-3-gse-t4-20180611-9508c71c.json",
+    "title": "eAWD EMEA sch veh 1.3 GSE T4 20180611",
+    "pages": 1,
+    "img_dir": "eawd-emea-sch-veh-1-3-gse-t4-20180611-9508c71c"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Sensors/Sensors.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/sensors-c833996d.json",
+    "title": "Sensors& Actuators",
+    "pages": 28,
+    "img_dir": "sensors-c833996d"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Sensors/Sensors_Question.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/sensors-question-754e3cde.json",
+    "title": "Sensors and Actuators",
+    "pages": 1,
+    "img_dir": "sensors-question-754e3cde"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil1/v-cycle": {
+  "title": "V Cycle",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/V_Cycle",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/v-cycle/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/V_Cycle/V_Cycle.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/v-cycle-bdaef6fb.json",
+    "title": "V - Cycle Model",
+    "pages": 34,
+    "img_dir": "v-cycle-bdaef6fb"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/V_Cycle/V_Cycle_p1_Excercises.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/v-cycle-p1-excercises-3f8c427f.json",
+    "title": "VPE_0 2 – V - Cycle part 1",
+    "pages": 1,
+    "img_dir": "v-cycle-p1-excercises-3f8c427f"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/V_Cycle/V_Cycle_p2_Excercises.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/v-cycle-p2-excercises-f307c310.json",
+    "title": "Exercise V - Cycle - 1",
+    "pages": 2,
+    "img_dir": "v-cycle-p2-excercises-f307c310"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/V_Cycle/MP3converter.ps1"
+  ]
+ },
+ "mil1/vehicle-subsystems": {
+  "title": "Vehicle Subsystems",
+  "module": "MIL1",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Vehicle_Subsystems",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil1/vehicle-subsystems/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil1",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL1/Vehicle_Subsystems/Vehicle_Subsystems.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil1/vehicle-subsystems-74c81ccf.json",
+    "title": "Vehicle Subsystems",
+    "pages": 41,
+    "img_dir": "vehicle-subsystems-74c81ccf"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/canalyzer": {
+  "title": "CANalyzer",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/canalyzer/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-2141b29d.json",
+    "title": "CANalyzer",
+    "pages": 35,
+    "img_dir": "canalyzer-2141b29d"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/Wiring_Document_IPC.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/wiring-document-ipc-7919c62a.json",
+    "title": "ECU Used/Not Used Pin ECU IPC Used 1 IPC Used 2 IPC Used 3 IPC Used 4 IPC Used 5 IPC Used 6 IPC Not Used 7 IPC Not Used ",
+    "pages": 5,
+    "img_dir": "wiring-document-ipc-7919c62a"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Multiframe.png"
+  ]
+ },
+ "mil2/canalyzer/canalyzer-exercise": {
+  "title": "CANalyzer Exercise",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/canalyzer/canalyzer-exercise/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_DiagnosticSim.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-exercise-diagnosticsim-f8a3d1bb.json",
+    "title": "Exercise 7 - Diagnostic Exercise",
+    "pages": 1,
+    "img_dir": "canalyzer-exercise-diagnosticsim-f8a3d1bb"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IPC.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-exercise-ipc-5df904f4.json",
+    "title": "Esercizio CANalyzer 1 – Configurazione IPC Exercise CANalyzer 1 – IPC Configuration [English vers ion ]",
+    "pages": 1,
+    "img_dir": "canalyzer-exercise-ipc-5df904f4"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_LogAnalysis(BOA).pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-exercise-loganalysis-boa-f7b46c6a.json",
+    "title": "Exercise 2 – CANalyzer [English version]",
+    "pages": 1,
+    "img_dir": "canalyzer-exercise-loganalysis-boa-f7b46c6a"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/ISO14229_1_2020.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/iso14229-1-2020-4e2e4991.json",
+    "title": "Copyright International Organization for Standardization Provided by Accuris under license with AENOR Licensee=FCA/59915",
+    "pages": 480,
+    "img_dir": "iso14229-1-2020-4e2e4991"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-ig": {
+  "title": "CANalyzer Exercise IG",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IG",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-ig/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IG/CANalyzer_Exercise_IG.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-exercise-ig-896aecbd.json",
+    "title": "Exercise 3 - CANalyzer/IG",
+    "pages": 1,
+    "img_dir": "canalyzer-exercise-ig-896aecbd"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IG/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IG/P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc"
+  ]
+ },
+ "mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-igtrace": {
+  "title": "CANalyzer Exercise IGTrace",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/canalyzer/canalyzer-exercise/canalyzer-exercise-igtrace/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/CANalyzer_Exercise_IGTrace.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-exercise-igtrace-7b25320e.json",
+    "title": "Exercise 5 – C analyzer/ Cluster 1. 2. 3. 4. 5. 6. 7. 8. 9.",
+    "pages": 1,
+    "img_dir": "canalyzer-exercise-igtrace-7b25320e"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc"
+  ]
+ },
+ "mil2/capl": {
+  "title": "CAPL",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-f2981e94.json",
+    "title": "CAN Access Programming Language",
+    "pages": 33,
+    "img_dir": "capl-f2981e94"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_IGBlock.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-igblock-06c83dca.json",
+    "title": "IG BLOCK and CAPL",
+    "pages": 22,
+    "img_dir": "capl-igblock-06c83dca"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Introduction.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-introduction-8d49538e.json",
+    "title": "CAPL Basic Guide",
+    "pages": 41,
+    "img_dir": "capl-introduction-8d49538e"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_PanelEditor.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-paneleditor-9ce01889.json",
+    "title": "CAPL",
+    "pages": 19,
+    "img_dir": "capl-paneleditor-9ce01889"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/capl/capl-exercise": {
+  "title": "CAPL Exercise",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/capl-exercise/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/capl/capl-exercise/capl-exercise": {
+  "title": "CAPL Exercise",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/capl-exercise/capl-exercise/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise/CAPL_Exercise.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-exercise-c9a9f5b6.json",
+    "title": "CAPL Exercise",
+    "pages": 1,
+    "img_dir": "capl-exercise-c9a9f5b6"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc"
+  ]
+ },
+ "mil2/capl/capl-exercise/capl-exercise8": {
+  "title": "CAPL Exercise8",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise8",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/capl-exercise/capl-exercise8/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise8/CAPL_Exercise8.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-exercise8-95fc7100.json",
+    "title": "Exercise 8 - CAPL",
+    "pages": 1,
+    "img_dir": "capl-exercise8-95fc7100"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise8/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888_(1).dbc",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise8/P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc"
+  ]
+ },
+ "mil2/capl/capl-exercise/capl-exercise-gateway": {
+  "title": "CAPL Exercise Gateway",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise_Gateway",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/capl-exercise/capl-exercise-gateway/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise_Gateway/CAPL_Excercise_Gateway.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/capl-excercise-gateway-a3afc861.json",
+    "title": "CAN GATEWAY",
+    "pages": 1,
+    "img_dir": "capl-excercise-gateway-a3afc861"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise_Gateway/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888_(1).dbc",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Exercise/CAPL_Exercise_Gateway/P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc"
+  ]
+ },
+ "mil2/capl/capl-other": {
+  "title": "CAPL Other",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Other",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/capl-other/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Other/ORC.zip"
+  ]
+ },
+ "mil2/capl/capl-other/wip": {
+  "title": "WIP",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Other/WIP",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/capl/capl-other/wip/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Other/WIP/Academy_Kineton_CAPL2_22_04_21.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/academy-kineton-capl2-22-04-21-3063534c.json",
+    "title": "CAPL-2 Agenda",
+    "pages": 36,
+    "img_dir": "academy-kineton-capl2-22-04-21-3063534c"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/14_CAPL/CAPL_Other/WIP/Academy_Kineton_CAPL_20_04_21.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/academy-kineton-capl-20-04-21-fdd2c9b3.json",
+    "title": "CAPL",
+    "pages": 58,
+    "img_dir": "academy-kineton-capl-20-04-21-fdd2c9b3"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/canoe": {
+  "title": "CANoe",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/16_CANoe",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/canoe/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/16_CANoe/CANoe.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canoe-e0ce08ec.json",
+    "title": "CANoe",
+    "pages": 18,
+    "img_dir": "canoe-e0ce08ec"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/canoe/canoe-exercises": {
+  "title": "CANoe Exercises",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/16_CANoe/CANoe_Exercises",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/canoe/canoe-exercises/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/16_CANoe/CANoe_Exercises/CANoe_Exercise_VF_understanding.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canoe-exercise-vf-understanding-af6c44cd.json",
+    "title": "Exercise 4 – VF understanding",
+    "pages": 1,
+    "img_dir": "canoe-exercise-vf-understanding-af6c44cd"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/16_CANoe/CANoe_Exercises/VF179_ParkingAssistanceSystem_Exercise.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/vf179-parkingassistancesystem-exercise-2f85c57a.json",
+    "title": "Author Title Description Angellotti test case 1 VF179 Parking assistance system - Pam status set in OFF",
+    "pages": 20,
+    "img_dir": "vf179-parkingassistancesystem-exercise-2f85c57a"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/diagnosis": {
+  "title": "Diagnosis",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/17_Diagnosis",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/diagnosis/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/17_Diagnosis/17_Diagnosis.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/diagnosis-85a3c681.json",
+    "title": "Diagnosis",
+    "pages": 78,
+    "img_dir": "diagnosis-85a3c681"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/diagnosis/diagnosis-exercises": {
+  "title": "Diagnosis Exercises",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/17_Diagnosis/17_Diagnosis_Exercises",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/diagnosis/diagnosis-exercises/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/diagnosis/diagnosis-exercises/exercise-diagnosi-1": {
+  "title": "Exercise Diagnosi 1",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/17_Diagnosis/17_Diagnosis_Exercises/Exercise_Diagnosi_1",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/diagnosis/diagnosis-exercises/exercise-diagnosi-1/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/17_Diagnosis/17_Diagnosis_Exercises/Exercise_Diagnosi_1/Esercizio_diagnosi_1.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/esercizio-diagnosi-1-89b703bd.json",
+    "title": "Exercise 1",
+    "pages": 3,
+    "img_dir": "esercizio-diagnosi-1-89b703bd"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/rdi-testing": {
+  "title": "RDI Testing",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/RDI_Testing.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/rdi-testing-f6031f11.json",
+    "title": "Francesca Abagnale RDI Testing",
+    "pages": 16,
+    "img_dir": "rdi-testing-f6031f11"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/rdi-testing/rdi-testing": {
+  "title": "RDI Testing",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/rdi-testing/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/VF179_V1_R3_P332BEV_Per_Academy.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/vf179-v1-r3-p332bev-per-academy-3c2f34a1.json",
+    "title": "VF179_V1_R3_P332BEV Functional Description 332BEV",
+    "pages": 34,
+    "img_dir": "vf179-v1-r3-p332bev-per-academy-3c2f34a1"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/VF179_V1_R3_P332BEV_Per_Academy.doc"
+  ]
+ },
+ "mil2/rdi-testing/rdi-testing/exercise-7-diagnostic-exercise": {
+  "title": "Exercise 7 - Diagnostic exercise",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_7___Diagnostic_exercise",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/rdi-testing/exercise-7-diagnostic-exercise/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_7___Diagnostic_exercise/D2956_IPC_E2A_R10_332BEV.cdd"
+  ]
+ },
+ "mil2/rdi-testing/rdi-testing/exercise-diagnosi-2": {
+  "title": "Exercise Diagnosi 2",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Diagnosi_2",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/rdi-testing/exercise-diagnosi-2/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Diagnosi_2/Esercizio_diagnosi_2.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/esercizio-diagnosi-2-ea572465.json",
+    "title": "Esercizio 2 – Diagnosi ITALIAN VERSION:",
+    "pages": 3,
+    "img_dir": "esercizio-diagnosi-2-ea572465"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Diagnosi_2/D2956_IPC_E2A_R10_332BEV.cdd"
+  ]
+ },
+ "mil2/rdi-testing/rdi-testing/exercise-diagnosi-3": {
+  "title": "Exercise Diagnosi 3",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Diagnosi_3",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/rdi-testing/exercise-diagnosi-3/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Diagnosi_3/Esercizio_diagnosi_3_Ioli_Routine.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/esercizio-diagnosi-3-ioli-routine-528f803d.json",
+    "title": "Esercizio 3 – Diagnosi ITALIAN VERSION",
+    "pages": 3,
+    "img_dir": "esercizio-diagnosi-3-ioli-routine-528f803d"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Diagnosi_3/D2956_IPC_E2A_R10_332BEV.cdd"
+  ]
+ },
+ "mil2/rdi-testing/rdi-testing/exercise-missing-message": {
+  "title": "Exercise Missing Message",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Missing_Message",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/rdi-testing/exercise-missing-message/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Missing_Message/Missing_Message.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/missing-message-00d6e678.json",
+    "title": "Missing Message",
+    "pages": 1,
+    "img_dir": "missing-message-00d6e678"
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/Exercise_Missing_Message/D2956_IPC_E2A_R10_332BEV.cdd"
+  ]
+ },
+ "mil2/rdi-testing/rdi-testing/uds-exercise": {
+  "title": "UDS Exercise",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/rdi-testing/rdi-testing/uds-exercise/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise/UDS_Exercise.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/canalyzer-exercise-uds-78f9ae46.json",
+    "title": "UDS Exercise",
+    "pages": null,
+    "img_dir": null
+   }
+  ],
+  "transcripts": [],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise/D2956_IPC_E2A_R10_332BEV.cdd"
+  ]
+ },
+ "mil2/diagnostic-tools": {
+  "title": "Diagnostic Tools",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/19_Diagnostic_Tools",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/diagnostic-tools/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/19_Diagnostic_Tools/Academy_Kineton_Format___CDA.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/academy-kineton-format-cda-33146e06.json",
+    "title": "Diagnosis CDA",
+    "pages": 17,
+    "img_dir": "academy-kineton-format-cda-33146e06"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/19_Diagnostic_Tools/Academy_Kineton_Format___DIAnalyzer.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/academy-kineton-format-dianalyzer-f4225774.json",
+    "title": "DIAnalyzer",
+    "pages": 19,
+    "img_dir": "academy-kineton-format-dianalyzer-f4225774"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/19_Diagnostic_Tools/Academy_Kineton_Format___DTS_Monaco.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/academy-kineton-format-dts-monaco-60798b70.json",
+    "title": "DTS Monaco",
+    "pages": 25,
+    "img_dir": "academy-kineton-format-dts-monaco-60798b70"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil2/testautomation": {
+  "title": "TestAutomation",
+  "module": "MIL2",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/40_TestAutomation",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil2/testautomation/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil2",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/40_TestAutomation/Test_Automation_slides_ENG.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/test-automation-slides-eng-9e0a8f2b.json",
+    "title": "NI HIL",
+    "pages": 20,
+    "img_dir": "test-automation-slides-eng-9e0a8f2b"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/40_TestAutomation/Test_automation.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/test-automation-108fd852.json",
+    "title": "TEST AUTOMATION",
+    "pages": 37,
+    "img_dir": "test-automation-108fd852"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL2/40_TestAutomation/vTestStudio.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil2/vteststudio-00defbd2.json",
+    "title": "vTestStudio",
+    "pages": 34,
+    "img_dir": "vteststudio-00defbd2"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil3/requirements": {
+  "title": "Requirements",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/21_Requirements",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/requirements/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/21_Requirements/21_Requirements_management.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/requirements-management-b96d5054.json",
+    "title": "Requirements’ management",
+    "pages": 20,
+    "img_dir": "requirements-management-b96d5054"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil3/vf": {
+  "title": "VF",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/23_VF",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/vf/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/23_VF/Presentation_Functional_specification.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/presentation-functional-specification-f3356756.json",
+    "title": "Functional Specifications",
+    "pages": 21,
+    "img_dir": "presentation-functional-specification-f3356756"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/23_VF/VF_example.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/vf-example-d899f131.json",
+    "title": "VF200_V5_ R4 R3 _P250FL14 Functional Description 250FL14",
+    "pages": 24,
+    "img_dir": "vf-example-d899f131"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil3/testcases": {
+  "title": "TestCases",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/24_TestCases",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/testcases/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/24_TestCases/Checklist.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/checklist-2f8ffed3.json",
+    "title": "Paragraph number Title of the paragraph VFXXX_VX_RY.TC001 Verbose description of the test (in →key on, engine on conditi",
+    "pages": 2,
+    "img_dir": "checklist-2f8ffed3"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/24_TestCases/Functional_Specification.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/functional-specification-62a19032.json",
+    "title": "Functional Specifications",
+    "pages": 21,
+    "img_dir": "functional-specification-62a19032"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/24_TestCases/Procedure_for_drafting_Test_Cases.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/procedure-for-drafting-test-cases-787efd9b.json",
+    "title": "Procedure for drafting Test Case",
+    "pages": 20,
+    "img_dir": "procedure-for-drafting-test-cases-787efd9b"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/24_TestCases/Test_cases_creation.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/test-cases-creation-b21e96e8.json",
+    "title": "Test Case Creation",
+    "pages": 17,
+    "img_dir": "test-cases-creation-b21e96e8"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/24_TestCases/VFxxx.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/vfxxx-bbf33c28.json",
+    "title": "VFXXX _V5_ R4 R3 _ BATMOBILE FL14 Functional Description 250FL14",
+    "pages": 24,
+    "img_dir": "vfxxx-bbf33c28"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil3/hil-users": {
+  "title": "HIL Users",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/25_HIL_Users",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/hil-users/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/25_HIL_Users/25_Control_Desk.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/control-desk-625b2c38.json",
+    "title": "Control Desk Introduction",
+    "pages": 19,
+    "img_dir": "control-desk-625b2c38"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/25_HIL_Users/25_Control_desk_Presentazione_Veronica.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/control-desk-presentazione-veronica-23830269.json",
+    "title": "Control desk Presentazione Veronica",
+    "pages": 21,
+    "img_dir": "control-desk-presentazione-veronica-23830269"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/25_HIL_Users/25_HIL_User.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/hil-user-9257625e.json",
+    "title": "Introduction",
+    "pages": 18,
+    "img_dir": "hil-user-9257625e"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil3/inca": {
+  "title": "INCA",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/inca/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/ETAS_manual.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/etas-manual-73594832.json",
+    "title": "ETAS manual",
+    "pages": 192,
+    "img_dir": "etas-manual-73594832"
+   }
+  ],
+  "transcripts": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA.txt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_MDA.txt"
+  ],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA.json",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA.srt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA.tsv",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA.vtt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_MDA.json",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_MDA.srt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_MDA.tsv",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_MDA.vtt"
+  ]
+ },
+ "mil3/inca/inca-exercises": {
+  "title": "INCA Exercises",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_Exercises",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/inca/inca-exercises/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/26_INCA/26_INCA_Exercises/1_INCA_questionnaire.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/inca-questionnaire-ab980b14.json",
+    "title": "Exercise 1",
+    "pages": 1,
+    "img_dir": "inca-questionnaire-ab980b14"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil3/inca-2": {
+  "title": "INCA 2",
+  "module": "MIL3",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil3/inca-2/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil3",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/Academy_Kineton_Format___INCA_MDA.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil3/academy-kineton-format-inca-mda-8457d57d.json",
+    "title": "INCA - MDA",
+    "pages": 44,
+    "img_dir": "academy-kineton-format-inca-mda-8457d57d"
+   }
+  ],
+  "transcripts": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_&_MDA_pt2_.txt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_(2024_05_14_11_04_GMT+2).txt"
+  ],
+  "other_files": [
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_&_MDA_pt2_.json",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_&_MDA_pt2_.srt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_&_MDA_pt2_.tsv",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_&_MDA_pt2_.vtt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_(2024_05_14_11_04_GMT+2).json",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_(2024_05_14_11_04_GMT+2).srt",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_(2024_05_14_11_04_GMT+2).tsv",
+   "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL3/27_INCA_2/INCA_(2024_05_14_11_04_GMT+2).vtt"
+  ]
+ },
+ "mil4/verification": {
+  "title": "Verification",
+  "module": "MIL4",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/28_Verification",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil4/verification/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil4",
+  "decks": [],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil4/validation": {
+  "title": "Validation",
+  "module": "MIL4",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/31_Validation",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil4/validation/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil4",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/31_Validation/31_Validazione_BEV.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/validazione-bev-e0a18e9a.json",
+    "title": "M 182 BEV Validazione In Vettura",
+    "pages": 34,
+    "img_dir": "validazione-bev-e0a18e9a"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/31_Validation/31_Validazione_VF.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/validazione-vf-a5c7368e.json",
+    "title": "Validation",
+    "pages": 39,
+    "img_dir": "validazione-vf-a5c7368e"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil4/diagnosis-process": {
+  "title": "Diagnosis Process",
+  "module": "MIL4",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/32_Diagnosis_Process",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil4/diagnosis-process/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil4",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/32_Diagnosis_Process/32_Diagnosis_Process.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/diagnosis-process-b5baa494.json",
+    "title": "Diagnosis Process Validation",
+    "pages": 33,
+    "img_dir": "diagnosis-process-b5baa494"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil4/troubleshooting": {
+  "title": "Troubleshooting",
+  "module": "MIL4",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/34_Troubleshooting",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil4/troubleshooting/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil4",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/34_Troubleshooting/34_Troubleshooting.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/troubleshooting-a497b22a.json",
+    "title": "Troubleshooting Principles",
+    "pages": 21,
+    "img_dir": "troubleshooting-a497b22a"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ },
+ "mil4/first-level-analysis": {
+  "title": "First Level Analysis",
+  "module": "MIL4",
+  "source_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/35_First_Level_Analysis",
+  "article_path": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/articles/mil4/first-level-analysis/index.md",
+  "slide_images_dir": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/img/mil4",
+  "decks": [
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/35_First_Level_Analysis/35_FLA_analysis.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/fla-analysis-0f705643.json",
+    "title": "Private and Confidential © Copyright Kineton, 2022- www.kineton.it FLA First Level Analysis March, 2024 Kineton Presenta",
+    "pages": 12,
+    "img_dir": "fla-analysis-0f705643"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/35_First_Level_Analysis/35_First_Level_Analysis.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/first-level-analysis-909442e2.json",
+    "title": "FLA",
+    "pages": 35,
+    "img_dir": "first-level-analysis-909442e2"
+   },
+   {
+    "pdf": "/home/t14_user0/Documents/AkademiaInovacioniLale/MIL4/35_First_Level_Analysis/35_TRAINING_IN_VETTURA.pdf",
+    "cache_json": "/home/t14_user0/Documents/AkademiaInovacioniLale/wiki/.cache/decks/mil4/training-in-vettura-f110dad0.json",
+    "title": "TRAINING IN THE VEHICLE",
+    "pages": 11,
+    "img_dir": "training-in-vettura-f110dad0"
+   }
+  ],
+  "transcripts": [],
+  "other_files": []
+ }
+}
