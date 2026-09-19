@@ -335,16 +335,26 @@ def build_resources():
 
 
 def build_home(stats):
-    md = f"""# Kineton Academy Wiki
+    md = f"""<div class="kx-hero" markdown>
+<span class="kx-hero__badge">Kineton Academy · Onboarding Platform</span>
 
-The knowledge base for the Academy bootcamp in automotive E/E engineering.
-Every article is **written for reading on the web** — distilled from the
-academy's slide decks and lecture recordings, with diagrams, key takeaways and
-links to the original files at the bottom of each page.
+# Your orbit starts here
 
-**{stats['topics']} topics · {stats['articles']} articles · {stats['pdfs']} source decks**,
-organized into the four bootcamp modules below. Use the search bar to jump to
-any concept.
+<p class="kx-hero__sub" markdown>
+Welcome, engineer. This is the knowledge base for the Academy bootcamp in
+automotive E/E engineering — every lesson rewritten as a readable article, with
+diagrams, real-bench exercises and the original files one click away. Work
+through the modules in order, or jump straight to what you need.
+</p>
+
+<div class="kx-hero__stats" markdown>
+<span>{stats['topics']} topics</span>
+<span>{stats['articles']} articles</span>
+<span>{stats['pdfs']} source decks</span>
+<span>4 modules</span>
+</div>
+
+</div>
 
 <div class="grid cards" markdown>
 
@@ -399,13 +409,15 @@ any concept.
 
 </div>
 
-!!! tip "How to use this wiki during the bootcamp"
-    - Follow the modules in order — each module page is the curriculum.
-    - Articles are self-contained study notes; the **Source material** and
-      **Downloads** sections at the bottom link the original PDFs, DBC/CDD
-      databases and lecture transcripts.
-    - Diagrams are drawn with Mermaid or cropped from the original slides where
-      a figure was worth keeping.
+!!! tip "New here? Your first week"
+    1. Read [CAN, LIN & Automotive Ethernet](mil1/can-lin/index.md) — everything
+       else builds on it.
+    2. Skim the [V-Cycle](mil1/v-cycle/index.md) article to see how your work
+       fits the development process.
+    3. Open the **✦ AI Assistant** panel on the right whenever you feel lost —
+       it will guide you once connected (currently in preview).
+    4. Keep the [Glossary](glossary/index.md) open in a tab — automotive loves
+       acronyms.
 """
     (DOCS / "index.md").write_text(md, encoding="utf-8")
 
@@ -418,19 +430,9 @@ edit_uri: ""
 use_directory_urls: true
 theme:
   name: material
+  custom_dir: theme/overrides
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    - scheme: slate
   features:
     - navigation.sections
     - navigation.indexes
@@ -439,6 +441,12 @@ theme:
     - toc.follow
     - search.highlight
     - search.suggest
+extra_css:
+  - assets/theme/kineton.css
+extra_javascript:
+  - assets/theme/mermaid.min.js
+  - assets/theme/kineton-chat.js
+  - assets/theme/kineton-mermaid.js
 plugins:
   - search
 markdown_extensions:
@@ -451,13 +459,29 @@ markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid
+          class: kx-mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
 exclude_docs: |
   *.mp3
 """
+
+
+def copy_theme_assets():
+    """Theme source (wiki/theme/assets) -> docs/assets/theme, so custom CSS/JS
+    survive every regeneration of docs/."""
+    src = WIKI / "theme" / "assets"
+    dest = DOCS / "assets" / "theme"
+    if not src.is_dir():
+        return
+    if dest.exists():
+        shutil.rmtree(dest)
+    dest.parent.mkdir(exist_ok=True)
+    shutil.copytree(src, dest)
 
 
 def write_mkdocs(nav_modules, glossary_entries):
@@ -543,6 +567,7 @@ def main():
     nav_modules, stats = build_tree()
     build_home(stats)
     build_resources()
+    copy_theme_assets()
     glossary_entries = build_glossary_nav()
     write_mkdocs(nav_modules, glossary_entries)
     print(f"wiki assembled: {stats['topics']} topics, {stats['articles']} articles, "

@@ -1,35 +1,51 @@
-# CAPL Exercise — Simulating the IPC Environment
+# CAPL Exercise — Simulating the IPC's World
 
-In this exercise you play the role of the surrounding vehicle network for the
-**IPC** (Instrument Panel Cluster) ECU on the P332 BEV BH-CAN bus. Instead of
-connecting the real cluster, you write a CAPL program in CANoe/CANalyzer that
-generates the traffic the IPC expects, sends a configuration request on a key
-press, and checks whether the IPC's reply agrees with what was requested.
+Time to put everything from the [CAPL lessons](../../index.md) into practice.
+In this exercise you stop being a *user* of the vehicle network and start being
+part of it: you will write a small CAPL (Communication Access Programming
+Language) program that plays the role of the ECUs surrounding the **IPC**
+(Instrument Panel Cluster) — the display behind the steering wheel — on the
+P332 BEV's body bus (BH-CAN).
 
-The exercise ties together every CAPL construct from the
-[CAPL lessons](../../index.md): cyclic timers, keyboard events, message event
-handlers, bus-off handling, and measurement-end reporting.
+Why would you ever do this? Because on a real test bench the cluster often
+arrives before the rest of the car exists. If you want to see whether it reacts
+correctly to a configuration request, *someone* has to generate the traffic it
+expects — and that someone is your simulated node. This "restbus simulation"
+is one of the most common daily tasks of an E/E test engineer, and CAPL is the
+language you do it in.
+
+By the end of this exercise you will be able to:
+
+- create a CANoe/CANalyzer configuration bound to a DBC (Database CAN) file,
+- transmit a message cyclically at exactly the period the database demands,
+- react to a key press by sending a specific signal value,
+- judge incoming frames against what you asked for and keep score,
+- survive a bus-off gracefully and report results when the measurement ends.
+
+Don't worry if that sounds like a lot — each piece maps to exactly one CAPL
+event handler, and we'll build them one at a time.
 
 ## Goal
 
-Write one CAPL program node that, for the whole measurement:
+Write **one** CAPL program node that, for the whole measurement:
 
 1. sends the `STATUS_UBSS_BH` message cyclically with the period defined in
-   the DBC;
+   the DBC (spoiler: 500 ms);
 2. sends `TELEMATIC_VEHICLE_SETUP2` with `PowerLevelReq = 0x3` when the `2`
    key is pressed;
-3. counts how often the `PowerLevel` signal reported back by the IPC does
-   **not** match the requested value;
+3. increases a counter `Count1` each time the `PowerLevel` signal reported
+   back by the IPC does **not** match what you requested — and decreases it on
+   a match, without ever going below zero;
 4. stops transmitting if a bus-off condition occurs;
-5. prints the final mismatch count to the Write window when the measurement
-   stops.
+5. prints the final count to the Write window when the measurement stops.
 
 ## Setup
 
 You need:
 
-- **CANoe** (or CANalyzer) with a CAN channel — real hardware or virtual,
-- the network database `P332BEV_BH-CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc`
+- **CANoe** (or CANalyzer) with a CAN channel — real hardware or virtual both
+  work fine,
+- the network database `P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc`
   from the exercise folder.
 
 Create a new configuration, assign the DBC to CAN channel 1
@@ -43,17 +59,18 @@ lessons.
 ### The messages involved
 
 Everything below comes from the DBC — always check it rather than guessing
-IDs, periods or signal positions:
+IDs, periods or signal positions. Getting into this habit now will save you
+hours of "why isn't my node reacting?" later:
 
 | Message | ID (dec/hex) | DLC | Sender | Timing |
 |---|---|---|---|---|
-| `STATUS_UBSS_BH` | 1206 / 0x4B6 | 4 | BCM | cyclic, `GenMsgCycleTime` = **500 ms** |
-| `TELEMATIC_VEHICLE_SETUP2` | 162 / 0xA2 | 8 | ETM | event-driven (no cycle time) |
+| `STATUS_UBSS_BH` | 1206 / 0x4B6 | 4 | BCM (Body Control Module) | cyclic, `GenMsgCycleTime` = **500 ms** |
+| `TELEMATIC_VEHICLE_SETUP2` | 162 / 0xA2 | 8 | ETM (telematics module) | event-driven (no cycle time) |
 | `IPC_VEHICLE_SETUP2` | 1486 / 0x5CE | 8 | IPC | cyclic, 1000 ms |
 
 The two signals that matter:
 
-- `PowerLevelReq` — the request, 3 bits at start bit 42 of
+- `PowerLevelReq` — the request you send, 3 bits at start bit 42 of
   `TELEMATIC_VEHICLE_SETUP2`;
 - `PowerLevel` — the IPC's feedback, 3 bits at start bit 43 of
   `IPC_VEHICLE_SETUP2`.
@@ -62,13 +79,15 @@ The two signals that matter:
     The exercise sheet says to watch the `PowerLevel` signal "in
     `IPC_VEHICLE_SETUP`", but in this DBC that signal actually lives in
     **`IPC_VEHICLE_SETUP2`** (the plain `IPC_VEHICLE_SETUP` has no
-    `PowerLevel`). The DBC is the source of truth — attach your message event
-    handler to the message that really carries the signal.
+    `PowerLevel`). This is a classic real-world trap: documentation drifts,
+    databases don't. Attach your message event handler to the message that
+    really carries the signal.
 
 ## How the program fits together
 
-CAPL is event-driven: there is no main loop, just procedures that run when
-something happens. This exercise needs one handler per event type:
+CAPL is event-driven: there is no main loop, just small procedures that run
+when something happens. Once you accept that mental model, this exercise is
+simply one handler per event type:
 
 ```mermaid
 flowchart TD
@@ -87,7 +106,8 @@ flowchart TD
 
 In the `variables` block declare a timer, message objects for the two messages
 you transmit, the counter, the last requested value, and a flag for the bus
-state:
+state. Note how each variable corresponds to one requirement from the goal
+list — that's not a coincidence, it's how you decompose any CAPL task:
 
 ```c
 variables
@@ -105,9 +125,9 @@ variables
 ### 2. Start the cyclic transmission
 
 `on start` runs once when the measurement begins. Arm the timer there; the
-timer handler outputs the message and re-arms itself, which gives the 500 ms
-cycle "for the entire measurement duration". The `busOk` check makes the
-handler go silent after a bus-off without any further bookkeeping:
+timer handler outputs the message and re-arms itself, which gives you the
+500 ms cycle "for the entire measurement duration". The `busOk` check makes
+the handler go silent after a bus-off without any further bookkeeping:
 
 ```c
 on start
@@ -128,7 +148,7 @@ on timer tUbss
 !!! tip
     In CANoe you can also use `setTimerCyclic(tUbss, UBSS_CYCLE_MS)` and drop
     the re-arm line. The manual re-arm version works everywhere and makes the
-    period explicit.
+    period explicit — a good habit while you're learning.
 
 ### 3. Send the request on key press
 
@@ -143,6 +163,10 @@ on key '2'
   output(msgSetup);
 }
 ```
+
+Because the node has the DBC attached, assigning `msgSetup.PowerLevelReq`
+automatically places the 3-bit value at start bit 42 — you never touch raw
+bytes.
 
 ### 4. Judge the IPC's answer
 
@@ -192,7 +216,8 @@ With the measurement running you should see in the Trace window:
 - `STATUS_UBSS_BH` (0x4B6) appearing every 500 ms from your node;
 - one `TELEMATIC_VEHICLE_SETUP2` (0xA2) each time you press `2`, with
   `PowerLevelReq = 3` in the decoded signals;
-- incoming `IPC_VEHICLE_SETUP2` frames (real or simulated by a second node).
+- incoming `IPC_VEHICLE_SETUP2` frames (from a real cluster, or simulated by
+  a second node if you're practising on virtual channels).
 
 When you stop the measurement, the Write window shows a line like:
 
@@ -201,6 +226,9 @@ PowerLevel signal value has been different from PowerLevelReq one 12 times
 ```
 
 ## Common mistakes
+
+Everyone trips on at least one of these the first time — check here before you
+debug for an hour:
 
 - **Forgetting to re-arm the timer.** `setTimer` fires once; without the
   second `setTimer` call inside `on timer`, `STATUS_UBSS_BH` is sent exactly
@@ -222,12 +250,15 @@ PowerLevel signal value has been different from PowerLevelReq one 12 times
   inactive.
 
 !!! success "Key takeaways"
-    - CAPL programs are pure event handlers: `on start`, `on timer`, `on key`,
-      `on message`, `on busOff`, `on stopMeasurement` — no main loop.
+    - You just built your first restbus simulation — the bread-and-butter
+      technique of E/E testing. Same pattern, every project.
+    - CAPL programs are pure event handlers: `on start`, `on timer`,
+      `on key`, `on message`, `on busOff`, `on stopMeasurement` — no main
+      loop, one handler per requirement.
     - Cyclic transmission = `setTimer` in `on start` + output and re-arm in
       `on timer`; the period comes from the DBC's `GenMsgCycleTime`
       (500 ms here).
     - Keep the "requested" value in a variable so received feedback can be
       compared against it; protect counters from going negative.
-    - React to bus-off by stopping transmissions, and use `on stopMeasurement`
-      plus `write()` for end-of-run reporting.
+    - The DBC is the source of truth — when docs and databases disagree,
+      trust the database.

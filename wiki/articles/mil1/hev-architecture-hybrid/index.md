@@ -1,26 +1,28 @@
 # Hybrid Vehicle Architectures
 
-Driven by the need to cut CO₂ emissions — especially in large cities — every
-major automotive group has restructured its product plans around hybrid and
-electric propulsion. Each manufacturer answered the challenge differently,
-which is why today's market offers a whole family of electrified layouts. This
-article gives you the map: how the electric machine can be placed in the
-powertrain (the **P0–P4 positions**), how vehicles are classified by
-electrification level (**micro, mild, full, plug-in hybrid, and BEV**), and how
-a real **P1P4 plug-in hybrid** switches between its operating modes.
+Welcome to your first look at how electrified vehicles are actually put
+together. Almost every project you will touch during the bootcamp — and later
+on the job — involves some mix of combustion engine and electric motor, so
+being able to "read" a hybrid architecture is a daily skill for an E/E
+engineer: it tells you which control units exist, what energy flows where, and
+which operating modes a vehicle can physically perform. By the end of this
+article you will be able to decode any architecture name like **P1P4**,
+classify a vehicle on the electrification ladder (micro → mild → full →
+plug-in → electric), and explain how a real plug-in hybrid switches between
+its driving modes.
 
 !!! note "What 'hybrid' means here"
-    In this lesson *hybrid* always means a vehicle where **one of the two
-    power sources is an electric motor** and the other is an internal
-    combustion engine (ICE). Other combinations (e.g. hydraulic hybrids) exist
-    but are out of scope.
+    In this lesson *hybrid* always means a vehicle with **two power sources**:
+    an electric motor and an **internal combustion engine (ICE)** — the
+    technical name for a conventional petrol or diesel engine. Other
+    combinations (e.g. hydraulic hybrids) exist but are out of scope.
 
 ## Motor positions: the P0–P4 nomenclature
 
 Hybrid architectures are named after **where the electric machine sits** in
-the driveline. The position determines what the motor can do: a belt-driven
-motor can only assist the engine, while a motor on its own axle can drive the
-car alone.
+the driveline — and this is the single most useful mental model in the whole
+topic. The position determines what the motor can do: a belt-driven motor can
+only assist the engine, while a motor on its own axle can drive the car alone.
 
 ![Electric motor positions P0 to P4 in the driveline](img/motor-positions-p0-p4.webp)
 
@@ -32,24 +34,26 @@ car alone.
 | **P2.5** | Integrated *inside* the transmission | Assists the engine and covers torque during gearshifts |
 | **PS** (power split) | Inside a dedicated planetary/CVT transmission | Blends ICE and electric torque continuously (Toyota-style) |
 | **P3** | Transmission output, before the final drive | Electric drive at the primary axle, off-axis from the ICE |
-| **P4** | Directly on the secondary axle (own final drive) | Independent electric axle — enables electric AWD |
+| **P4** | Directly on the secondary axle (own final drive) | Independent electric axle — enables electric **all-wheel drive (AWD)** |
 
 The bottom half of the figure shows the same idea on a real layout: the ICE
-drives the **primary axle** through P1r/P2/P3 options and the transmission,
-while a **P4** machine with its own final drive powers the **secondary
-axle** — the arrangement used by most Stellantis hybrids and BEVs you will
-work on.
+drives the **primary axle** through the P1r/P2/P3 options and the
+transmission, while a **P4** machine with its own final drive powers the
+**secondary axle** — the arrangement used by most Stellantis hybrids and
+battery-electric vehicles you will work on.
 
 !!! tip "Reading architecture names"
     A name like **P1P4** is simply the list of positions in use: a P1 machine
     coupled to the engine plus a P4 machine on the rear axle. When you meet an
-    unfamiliar hybrid, decode its P-code first — it tells you immediately which
-    operating modes are physically possible.
+    unfamiliar hybrid, decode its P-code first — it tells you immediately
+    which operating modes are physically possible, before you have seen a
+    single schematic.
 
 ## The electrification ladder
 
-The market categories differ mainly in battery size, motor power, and whether
-the car can move on electricity alone.
+Market categories differ mainly in battery size, motor power, and whether the
+car can move on electricity alone. Think of them as rungs on a ladder — each
+step adds more electric capability.
 
 | Category | Electric machine | Battery | Electric-only driving | Example |
 |---|---|---|---|---|
@@ -57,15 +61,17 @@ the car can move on electricity alone.
 | **MHEV** (mild hybrid) | Various positions, e.g. P2.5 | 48 V | A few meters, below ~10 km/h | Audi Q3 SB 1.5 TFSIe MHEV |
 | **FHEV** (full hybrid) | One or more machines, various positions | ~6 kWh | Some kilometres, at OEM-defined speeds | Toyota Prius |
 | **PHEV** (plug-in hybrid) | Same layouts as FHEV | Larger than FHEV, externally chargeable | Tens of kilometres | Jeep Compass / Renegade 4xe |
-| **BEV** (battery electric) | P4 traction motor only | Large HV pack, e.g. 400 V | The only propulsion source | New Fiat 500e |
+| **BEV** (battery electric vehicle) | P4 traction motor only | Large high-voltage (HV) pack, e.g. 400 V | The only propulsion source | New Fiat 500e |
+
+(Power figures in **cv** are metric horsepower; 1 cv ≈ 0.74 kW.)
 
 ### Micro hybrid
 
 The entry level of electrification: an electric motor on the belt drive with a
-secondary 12 V battery, delivering less than 1 cv. It supports the thermal
-engine briefly in the moments when the engine would run far from its
-stoichiometric point, but it **cannot move the vehicle by itself** — it is an
-efficiency add-on, not a second powertrain.
+secondary 12 V battery, delivering less than 1 cv. It supports the engine
+briefly in the moments when the engine would run inefficiently, but it
+**cannot move the vehicle by itself** — it is an efficiency add-on, not a
+second powertrain.
 
 ### Mild hybrid (MHEV)
 
@@ -90,27 +96,30 @@ A PHEV keeps the full-hybrid architecture and removes its two limits: the
 battery **can be charged from an external charging point**, and it can be
 **larger**, because its size is no longer constrained by what kinetic
 recuperation can store. The Jeep Compass and Renegade **4xe** are the
-Stellantis examples of this layout — currently the most publicized hybrid
-technology on the market.
+Stellantis examples of this layout — and the ones you are most likely to meet
+first in your project work.
 
 ## BEV architecture and torque control
 
-In a **BEV** all propulsion comes from the electric motor. The motor connects
-to the front axle through a **single fixed gear ratio** — an electric machine's
-torque curve makes a multi-gear transmission unnecessary — so the motor is
-effectively a **P4**. The new Fiat 500e is the reference example: a
-**70 kW / 95 cv** motor fed by a **400 V** battery, delivering up to
-**200 Nm** of torque with an expected range of about **320 km**.
+In a **battery electric vehicle (BEV)** all propulsion comes from the electric
+motor. The motor connects to the axle through a **single fixed gear ratio** —
+an electric machine's torque curve makes a multi-gear transmission
+unnecessary — so the motor is effectively a **P4**. The new Fiat 500e is the
+reference example: a **70 kW / 95 cv** motor fed by a **400 V** battery,
+delivering up to **200 Nm** of torque with an expected range of about
+**320 km**.
 
 ### The powertrain controllers
 
-A Stellantis BEV splits powertrain control across four main modules:
+A Stellantis BEV splits powertrain control across four main modules. You will
+see these acronyms in network traces and diagnostic sessions throughout your
+career, so it is worth learning them now:
 
 | Module | Responsibility |
 |---|---|
 | **BPCM** (battery pack control module) | HV battery supervisor: estimates voltage and power limits, drives the contactors, commands battery heating and cooling |
-| **IDCM** (integrated DC-charge module) | Split in two subsystems: **OBCM** interfaces with the external charger (EVSE) to charge the HV battery; **APM** controls the DC/DC converter that keeps the 12 V battery charged |
-| **EVCU** (electric vehicle control unit) | The powertrain brain: from vehicle status and driver inputs it computes the **torque demand** for the motor and hosts standard vehicle functions — Cruise Control, Speed Limiter, One Pedal Drive |
+| **IDCM** (integrated DC-charge module) | Split in two subsystems: the **OBCM** (on-board charger module) interfaces with the external charging station (**EVSE**, electric vehicle supply equipment) to charge the HV battery; the **APM** (auxiliary power module) controls the DC/DC converter that keeps the 12 V battery charged |
+| **EVCU** (electric vehicle control unit) | The powertrain brain: from vehicle status and driver inputs it computes the **torque demand** for the motor and hosts standard vehicle functions — Cruise Control (CC), Speed Limiter (SL), One Pedal Drive (OPD) |
 | **EDM** (electric drive module) | Turns the EVCU's torque demand into electrical actuation — phase currents and voltages that physically drive the motor |
 
 ```mermaid
@@ -126,7 +135,9 @@ flowchart LR
 
 The torque path is strictly layered: the EVCU decides *how much* torque is
 wanted (and the BPCM tells it how much power the battery can give or accept),
-the EDM decides *how* to produce it electrically, and the motor executes.
+the EDM decides *how* to produce it electrically, and the motor executes. This
+separation of "decide" and "actuate" is a pattern you will recognize in many
+other automotive control systems.
 
 ### Negative torque: regenerating energy
 
@@ -147,22 +158,22 @@ battery and extending range. Two everyday scenarios exploit this:
 
 ## REEV — the range extender
 
-A **Range Extended Electric Vehicle** is a hybrid where the ICE **never drives
-the wheels**: it exists only to recharge the HV battery and extend range. In
-mode terms, a REEV is a **series-only** hybrid.
+A **Range Extended Electric Vehicle (REEV)** is a hybrid where the ICE
+**never drives the wheels**: it exists only to recharge the HV battery and
+extend range. In mode terms, a REEV is a **series-only** hybrid.
 
-The typical topology pairs a **P4 traction motor** (exactly as on a BEV, acting
-on the demanded torque) with an ICE coupled to a second, smaller machine in
-**P0 or P1** position. That machine works purely as a **generator**: it
-converts the engine's torque into electrical energy for the battery. The
-driver always experiences electric drive; the engine runs (at its most
-efficient point) only when the battery needs support.
+The typical topology pairs a **P4 traction motor** (exactly as on a BEV,
+acting on the demanded torque) with an ICE coupled to a second, smaller
+machine in **P0 or P1** position. That machine works purely as a
+**generator**: it converts the engine's torque into electrical energy for the
+battery. The driver always experiences electric drive; the engine runs (at its
+most efficient point) only when the battery needs support.
 
 ## P1P4 plug-in hybrid: the operating modes
 
-The P1P4 layout — used, for example, on the Jeep 4xe models — combines a
-**P1f machine on the engine** with a **P4 machine on the rear axle**, giving
-the energy manager three ways to move the car:
+Now let's put it all together. The P1P4 layout — used, for example, on the
+Jeep 4xe models — combines a **P1f machine on the engine** with a **P4 machine
+on the rear axle**, giving the energy manager three ways to move the car:
 
 ```mermaid
 flowchart TD
@@ -204,20 +215,18 @@ The categories are not rivals but trade-offs along three axes:
   favour highway efficiency while series paths favour urban stop-and-go.
 
 !!! success "Key takeaways"
-    - Motor **position** (P0–P4) defines what a hybrid can do; architecture
-      names like P1P4 are just the list of positions in use.
+    - You can now decode any P-code: motor **position** (P0–P4) defines what a
+      hybrid can do, and names like P1P4 just list the positions in use.
     - The ladder runs micro (12 V belt assist) → mild (48 V, P2.5) → full
-      (~6 kWh, kinetic-only charging, Toyota 1997) → plug-in (external
-      charging, bigger battery) → BEV (single-ratio P4, e.g. 500e: 70 kW,
-      400 V, 200 Nm, ~320 km).
-    - On a BEV, the EVCU computes torque demand, the EDM actuates it as phase
-      currents, the BPCM guards the HV battery, and the IDCM (OBCM + APM)
-      handles charging and the DC/DC converter.
-    - Electric machines give negative torque too: regenerative braking, One
-      Pedal Drive, and downhill speed-holding all recharge the battery.
-    - A REEV is a series-only hybrid (ICE → P0/P1 generator); a P1P4 PHEV
-      runs EV, series, and parallel modes, recuperating through P4 (and P1f)
-      in all of them.
+      (~6 kWh, kinetic-only charging) → plug-in (external charging, bigger
+      battery) → BEV (single-ratio P4, e.g. 500e: 70 kW, 400 V, 200 Nm,
+      ~320 km).
+    - On a BEV, four modules share the work: EVCU decides torque, EDM actuates
+      it, BPCM guards the HV battery, IDCM (OBCM + APM) handles charging.
+    - Electric machines brake too: regenerative braking, One Pedal Drive and
+      downhill speed-holding all put energy back into the battery.
+    - A REEV is a series-only hybrid; a P1P4 PHEV runs EV, series and
+      parallel modes — and recuperates through P4 (and P1f) in all of them.
 
 !!! tip "Where this leads"
     The BEV layout and its controllers are treated in more depth in

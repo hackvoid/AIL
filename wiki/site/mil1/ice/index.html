@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4511,29 +4499,42 @@
 
 
 <h1 id="internal-combustion-engines-ice">Internal Combustion Engines (ICE)<a class="headerlink" href="#internal-combustion-engines-ice" title="Permanent link">&para;</a></h1>
-<p>Even in an electrification-focused bootcamp, most vehicles you will calibrate,
-test and diagnose still burn fuel. These two lessons build the foundation: how a
-4-stroke engine works, how gasoline (spark ignition) and Diesel engines differ,
-how the engine control module (ECM) meters air and fuel, and how modern engines
-use turbocharging, EGR, variable valve actuation and exhaust aftertreatment to
-meet Euro 6 emission limits.</p>
+<p>Welcome to your first deep dive into the hardware you will spend much of the
+bootcamp talking to. Even in an electrification-focused program, most vehicles
+you will calibrate, test and diagnose still burn fuel — and almost everything
+you will do as an E/E engineer (reading sensors, driving actuators, flashing
+software, chasing faults) happens <em>around</em> the engine. These two lessons build
+the foundation you need: how a 4-stroke engine works, how gasoline (spark
+ignition) and Diesel engines differ, how the engine control module meters air
+and fuel, and how modern engines use turbocharging, exhaust gas recirculation,
+variable valve actuation and exhaust aftertreatment to meet Euro 6 emission
+limits. By the end, you will be able to look at any engine control schematic
+and recognize every sensor, actuator and control loop on it.</p>
+<p>Don't worry if some terms are new — every acronym is explained the first time
+it appears, and you will meet all of them again in the hands-on modules.</p>
 <h2 id="anatomy-of-a-4-stroke-engine">Anatomy of a 4-stroke engine<a class="headerlink" href="#anatomy-of-a-4-stroke-engine" title="Permanent link">&para;</a></h2>
 <p>A piston slides inside a <strong>cylinder</strong> and is linked by a <strong>connecting rod</strong> to
-the <strong>crankshaft</strong>, which converts the piston's linear motion into rotation. The
-<strong>cylinder head</strong> closes the top of the cylinder and hosts the <strong>poppet valves</strong>
-(intake and exhaust) and, in gasoline engines, the spark plug. The valves are
-driven by the <strong>camshaft</strong> (through cam followers or rockers), timed to the
-crankshaft. The <strong>intake manifold</strong> feeds fresh air (or air-fuel mixture) to the
-cylinders; the <strong>exhaust manifold</strong> collects the burned gases. The <strong>oil pan</strong>
-(sump) at the bottom holds the lubricating oil.</p>
+the <strong>crankshaft</strong>, which converts the piston's up-and-down motion into the
+rotation that ultimately drives the wheels. The <strong>cylinder head</strong> closes the
+top of the cylinder and hosts the <strong>poppet valves</strong> (intake and exhaust) and,
+in gasoline engines, the spark plug. The valves are driven by the <strong>camshaft</strong>
+(through cam followers or rockers), timed to the crankshaft. The <strong>intake
+manifold</strong> feeds fresh air (or air-fuel mixture) to the cylinders; the
+<strong>exhaust manifold</strong> collects the burned gases. The <strong>oil pan</strong> (sump) at the
+bottom holds the lubricating oil.</p>
 <p><img alt="Labeled cross-section of a 4-stroke engine" src="img/engine-anatomy.webp" /></p>
-<p>The piston moves between two limit positions:</p>
+<p>The piston moves between two limit positions you will hear about constantly:</p>
 <ul>
 <li><strong>TDC</strong> — top dead center, minimum chamber volume</li>
 <li><strong>BDC</strong> — bottom dead center, maximum chamber volume</li>
 </ul>
 <h3 id="the-four-strokes">The four strokes<a class="headerlink" href="#the-four-strokes" title="Permanent link">&para;</a></h3>
 <p>One full working cycle takes <strong>two crankshaft revolutions</strong> (720°):</p>
+<pre class="kx-mermaid"><code>flowchart LR
+    I["1. Intake&lt;br/&gt;piston TDC → BDC,&lt;br/&gt;intake valve open"] --&gt; C["2. Compression&lt;br/&gt;piston BDC → TDC,&lt;br/&gt;valves closed"]
+    C --&gt; P["3. Expansion&lt;br/&gt;piston TDC → BDC,&lt;br/&gt;the power stroke"]
+    P --&gt; X["4. Exhaust&lt;br/&gt;piston BDC → TDC,&lt;br/&gt;exhaust valve open"]
+    X -.-&gt;|"next cycle"| I</code></pre>
 <ol>
 <li><strong>Intake</strong> — piston moves TDC → BDC, intake valve open: the cylinder fills
    with fresh charge.</li>
@@ -4545,6 +4546,8 @@ cylinders; the <strong>exhaust manifold</strong> collects the burned gases. The 
    pushed out.</li>
 </ol>
 <h3 id="key-engine-parameters">Key engine parameters<a class="headerlink" href="#key-engine-parameters" title="Permanent link">&para;</a></h3>
+<p>These are the numbers that define any engine — you will see them in specs,
+data sheets and calibration tools:</p>
 <table>
 <thead>
 <tr>
@@ -4567,12 +4570,12 @@ cylinders; the <strong>exhaust manifold</strong> collects the burned gases. The 
 <tr>
 <td>Displacement</td>
 <td><code>s · π·B²/4 · N_cyl</code></td>
-<td>Total swept volume of all cylinders</td>
+<td>Total swept volume of all cylinders (the "2.0 L" in an engine name)</td>
 </tr>
 <tr>
-<td>Compression ratio CR</td>
+<td>Compression ratio (CR)</td>
 <td>volume at BDC ÷ volume at TDC</td>
-<td>SI ≈ 10–12, Diesel ≈ 15–20</td>
+<td>Gasoline ≈ 10–12, Diesel ≈ 15–20</td>
 </tr>
 <tr>
 <td>Stroke ratio</td>
@@ -4580,7 +4583,7 @@ cylinders; the <strong>exhaust manifold</strong> collects the burned gases. The 
 <td>"Oversquare" (B &gt; s) engines rev higher</td>
 </tr>
 <tr>
-<td>Air-fuel ratio AFR</td>
+<td>Air-fuel ratio (AFR)</td>
 <td><code>m_air / m_fuel</code> (mass or mass-flow ratio)</td>
 <td>Stoichiometric ≈ 14.7 for gasoline</td>
 </tr>
@@ -4592,14 +4595,16 @@ cylinders; the <strong>exhaust manifold</strong> collects the burned gases. The 
 </tbody>
 </table>
 <h2 id="spark-ignition-si-engines">Spark ignition (SI) engines<a class="headerlink" href="#spark-ignition-si-engines" title="Permanent link">&para;</a></h2>
-<p>In a gasoline engine the air-fuel mixture is <strong>premixed</strong> (the fuel vaporizes
-into the intake air before combustion) and combustion is triggered by the spark
-plug. Crucially, the mixture is kept <strong>stoichiometric and constant</strong> — so power
-is regulated by modulating the <em>airflow</em>, not the mixture. Roughly:</p>
+<p>In a gasoline — <strong>spark ignition (SI)</strong> — engine the air-fuel mixture is
+<strong>premixed</strong> (the fuel vaporizes into the intake air before combustion) and
+combustion is triggered by the spark plug. Crucially, the mixture is kept
+<strong>stoichiometric and constant</strong> — so power is regulated by modulating the
+<em>airflow</em>, not the mixture. Roughly:</p>
 <div class="highlight"><pre><span></span><code>P = η(T_e, rpm) · ṁ_fuel · H_i = η(T_e, rpm) · ṁ_air · H_i / AFR
 </code></pre></div>
-<p>with <code>AFR ≈ 14.7</code> essentially constant, power scales directly with the air mass
-flow the engine breathes.</p>
+<p>with <code>AFR ≈ 14.7</code> essentially constant, power scales directly with the air
+mass flow the engine breathes. This one idea — <em>control the air, keep the
+mixture fixed</em> — explains most of the gasoline engine's control hardware.</p>
 <h3 id="why-stoichiometric-matters">Why stoichiometric matters<a class="headerlink" href="#why-stoichiometric-matters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4613,7 +4618,7 @@ flow the engine breathes.</p>
 <tr>
 <td>Rich</td>
 <td>&lt; 14.7</td>
-<td>Engine runs apparently normally if not excessively rich, but partial fuel oxidation produces HC, CO and soot; fuel is wasted</td>
+<td>Engine runs apparently normally if not excessively rich, but partial fuel oxidation produces unburned hydrocarbons (HC), carbon monoxide (CO) and soot; fuel is wasted</td>
 </tr>
 <tr>
 <td>Stoichiometric</td>
@@ -4630,41 +4635,45 @@ flow the engine breathes.</p>
 <div class="admonition note">
 <p class="admonition-title">The three-way catalyst is the real reason</p>
 <p>Stoichiometric operation is not just about clean combustion — the exhaust
-three-way catalyst only converts CO, HC <strong>and</strong> NOx efficiently at AFR ≈
-14.7. This is why the ECM works so hard to hold the mixture there (see the
-lambda feedback loop below).</p>
+three-way catalyst only converts CO, HC <strong>and</strong> nitrogen oxides (NOx)
+efficiently at AFR ≈ 14.7. This is why the engine control module (ECM)
+works so hard to hold the mixture there (see the lambda feedback loop
+below).</p>
 </div>
 <h3 id="spark-advance-and-compression-ratio">Spark advance and compression ratio<a class="headerlink" href="#spark-advance-and-compression-ratio" title="Permanent link">&para;</a></h3>
-<p>Combustion does not start instantly when the plug fires — the flame needs time
-to propagate — so the spark is fired <strong>before TDC</strong> (typical advance
-<strong>15°–25° BTDC</strong>).</p>
+<p>Combustion does not start instantly when the plug fires — the flame needs
+time to propagate — so the spark is fired <strong>before top dead center (BTDC)</strong>,
+typically <strong>15°–25° BTDC</strong>.</p>
 <ul>
 <li>More advance → higher peak pressure and temperature → more power and
   efficiency, but higher mechanical/thermal stress and risk of <strong>knock</strong>.</li>
 <li>Higher compression ratio → higher efficiency, same knock/pre-ignition risk.</li>
-<li>Knock resistance is a <em>fuel</em> property: the <strong>octane number</strong> (typically 95–100
-  for gasoline, &gt;120 for methane) defines how much advance/CR the engine can
-  tolerate. If knock appears, the ECM must retard the spark — losing efficiency.</li>
+<li>Knock resistance is a <em>fuel</em> property: the <strong>octane number</strong> (typically
+  95–100 for gasoline, &gt;120 for methane) defines how much advance/CR the
+  engine can tolerate. If knock appears, the ECM must retard the spark —
+  losing efficiency.</li>
 <li>Turbocharged SI engines therefore use <strong>lower compression ratios</strong> than
   naturally aspirated ones.</li>
 </ul>
-<p>Three abnormal combustion events to recognize:</p>
+<p>Four abnormal combustion events to recognize (you will meet these names again
+in the diagnosis modules):</p>
 <ul>
 <li><strong>Misfire</strong> — mixture too diluted (too lean); combustion cannot start.
   Unburned fuel goes straight to the exhaust.</li>
-<li><strong>Choke</strong> — mixture too rich; same result, unburned fuel out of the tailpipe.</li>
+<li><strong>Choke</strong> — mixture too rich; same result, unburned fuel out of the
+  tailpipe.</li>
 <li><strong>Knock</strong> — after the spark has started combustion, a hot spot (e.g. the
   exhaust valve) ignites the end-gas; the colliding flame fronts produce the
   characteristic metallic pressure oscillation.</li>
-<li><strong>Pre-ignition</strong> — a hot spot ignites the mixture <em>before</em> the spark, usually
-  from overheating or an excessive compression ratio. Far more destructive than
-  knock.</li>
+<li><strong>Pre-ignition</strong> — a hot spot ignites the mixture <em>before</em> the spark,
+  usually from overheating or an excessive compression ratio. Far more
+  destructive than knock.</li>
 </ul>
 <h3 id="torque-control-the-throttle">Torque control: the throttle<a class="headerlink" href="#torque-control-the-throttle" title="Permanent link">&para;</a></h3>
 <p>The accelerator pedal commands the <strong>throttle body</strong>, which chokes the intake
-flow. At constant volumetric flow (set by displacement and rpm), choking reduces
-the <strong>density</strong> of the air downstream of the throttle, hence the air <em>mass</em> per
-cycle:</p>
+flow. At constant volumetric flow (set by displacement and rpm), choking
+reduces the <strong>density</strong> of the air downstream of the throttle, hence the air
+<em>mass</em> per cycle:</p>
 <div class="highlight"><pre><span></span><code>ṁ_air = ρ_intake · V̇ ≈ ρ_intake · (rpm/2) · displacement / 60
 </code></pre></div>
 <table>
@@ -4704,12 +4713,14 @@ downsized turbocharged engines.</p>
 <h3 id="fuel-metering-measuring-air-dosing-fuel">Fuel metering: measuring air, dosing fuel<a class="headerlink" href="#fuel-metering-measuring-air-dosing-fuel" title="Permanent link">&para;</a></h3>
 <p>Because AFR must stay at 14.7, the injected fuel mass must track the air mass
 exactly. In <strong>port injection</strong>, low-pressure injectors (3–5 bar) sit in the
-intake manifold downstream of the throttle; since gasoline is volatile (and LPG/
-methane are already gaseous), the fuel dissolves into the intake flow.</p>
+intake manifold downstream of the throttle; since gasoline is volatile (and
+liquefied petroleum gas (LPG)/methane are already gaseous), the fuel dissolves
+into the intake flow.</p>
 <p>The problem: the exact instantaneous air mass flow cannot be predicted —
 transients, fluid dynamics, thermal effects and fuel vaporization all disturb
-it. The solution is a two-layer control:</p>
-<pre class="mermaid"><code>flowchart LR
+it. The solution is a two-layer control loop, and it is the first closed-loop
+system you will learn to read:</p>
+<pre class="kx-mermaid"><code>flowchart LR
     P["Accelerator pedal"] --&gt; T["Throttle body"]
     T --&gt; M["MAF sensor"]
     M --&gt;|"measured intake air mass flow"| E["ECM"]
@@ -4718,15 +4729,17 @@ it. The solution is a two-layer control:</p>
     C --&gt; L["Lambda probe&lt;br/&gt;(exhaust manifold)"]
     L --&gt;|"residual O₂ feedback"| E</code></pre>
 <ul>
-<li><strong>Feed-forward</strong>: a <strong>MAF (mass air flow) sensor</strong> measures the intake air
-  flow and the ECM computes the base injection time. MAF sensors are expensive,
-  can disturb the flow, and perform poorly above ~7500 rpm.</li>
+<li><strong>Feed-forward</strong>: a <strong>mass air flow (MAF) sensor</strong> measures the intake air
+  flow and the ECM computes the base injection time. MAF sensors are
+  expensive, can disturb the flow, and perform poorly above ~7500 rpm.</li>
 <li><strong>Feedback</strong>: a <strong>lambda probe (λ sensor)</strong> in the exhaust manifold detects
-  excess oxygen (lean mixture) or its absence (rich mixture), and the ECM trims
-  the injected fuel dynamically to hold λ = 1 (λ = AFR/AFR_stoichiometric).</li>
+  excess oxygen (lean mixture) or its absence (rich mixture), and the ECM
+  trims the injected fuel dynamically to hold λ = 1 (λ = AFR ÷ AFR
+  stoichiometric).</li>
 </ul>
 <h2 id="diesel-engines">Diesel engines<a class="headerlink" href="#diesel-engines" title="Permanent link">&para;</a></h2>
-<p>Diesel (compression ignition) engines flip most SI assumptions:</p>
+<p>Diesel (compression ignition) engines flip most SI assumptions. This table is
+worth remembering — it explains nearly every hardware difference you will see:</p>
 <table>
 <thead>
 <tr>
@@ -4778,46 +4791,54 @@ it. The solution is a two-layer control:</p>
 </tr>
 </tbody>
 </table>
-<p>Fuel quality is expressed by the <strong>cetane number</strong> (typically 51–60): the higher
-the cetane, the shorter the <strong>ignition delay</strong> between injection and combustion
-start, and the higher the usable engine speed. The ignition delay is extremely
-temperature-sensitive — a 200 K difference can change it by a factor of 20 —
-which is why <strong>glow plugs</strong> create a local hot spot for cold starts. Advancing
-the injection (the Diesel counterpart of spark advance) raises peak pressure and
-efficiency but also mechanical stress and combustion noise.</p>
+<p>Fuel quality is expressed by the <strong>cetane number</strong> (typically 51–60): the
+higher the cetane, the shorter the <strong>ignition delay</strong> between injection and
+combustion start, and the higher the usable engine speed. The ignition delay
+is extremely temperature-sensitive — a 200 K difference can change it by a
+factor of 20 — which is why <strong>glow plugs</strong> create a local hot spot for cold
+starts. Advancing the injection (the Diesel counterpart of spark advance)
+raises peak pressure and efficiency but also mechanical stress and combustion
+noise.</p>
 <h3 id="diesel-pollutants-soot-and-nox">Diesel pollutants: soot and NOx<a class="headerlink" href="#diesel-pollutants-soot-and-nox" title="Permanent link">&para;</a></h3>
+<p>Diesels are more efficient, but that efficiency comes with a specific
+emissions bill:</p>
 <ul>
 <li><strong>Soot</strong> is essentially unburned fuel — its presence means lost efficiency.
   It forms when oxygen is locally or globally scarce, mixing is poor (low
   turbulence), droplets are too large to vaporize completely, or the droplet
   surface carbonizes at extreme temperatures before evaporating. Smaller
-  droplets (higher injection pressure) vaporize more completely and limit soot.</li>
-<li><strong>NOx</strong> (NO and NO₂) forms because air is ~79% N₂ and ~21% O₂: at Diesel
-  combustion temperatures, and with long residence times and abundant excess
-  oxygen, molecular nitrogen splits and oxidizes. NOx is therefore the price of
-  the Diesel's efficiency — high temperature, high pressure, no throttling.</li>
+  droplets (higher injection pressure) vaporize more completely and limit
+  soot.</li>
+<li><strong>NOx</strong> (nitrogen oxides, NO and NO₂) forms because air is ~79% N₂ and ~21%
+  O₂: at Diesel combustion temperatures, and with long residence times and
+  abundant excess oxygen, molecular nitrogen splits and oxidizes. NOx is
+  therefore the price of the Diesel's efficiency — high temperature, high
+  pressure, no throttling.</li>
 </ul>
 <h3 id="injection-hardware-evolution">Injection hardware evolution<a class="headerlink" href="#injection-hardware-evolution" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Indirect injection (IDI)</strong> — fuel is injected into a small <strong>pre-chamber</strong>
   where combustion starts easily and rapidly (short ignition delay). The
   pre-chamber's connecting hole generates turbulence that improves mixing and
-  slows the heat-release/pressure peak, cutting noise and mechanical stress and
-  relaxing injection-timing precision. The cost: larger hot surfaces and the
-  pressure drop through the hole reduce efficiency.</li>
+  slows the heat-release/pressure peak, cutting noise and mechanical stress
+  and relaxing injection-timing precision. The cost: larger hot surfaces and
+  the pressure drop through the hole reduce efficiency.</li>
 <li><strong>Direct injection (DI)</strong> — fuel goes straight into the cylinder. Better
   efficiency, but requires careful fluid-dynamic design (turbulence) and high
   fuel pressure to force the (originally mechanical) injector open.</li>
-<li><strong>Electronic direct injection</strong> — electronically controlled unit injectors or
-  pump-injectors make timing and quantity programmable.</li>
+<li><strong>Electronic direct injection</strong> — electronically controlled unit injectors
+  or pump-injectors make timing and quantity programmable.</li>
 <li><strong>Common rail</strong> — a shared high-pressure <strong>rail</strong> acts as a hydraulic
-  accumulator, decoupling the available fuel pressure from the injection pump.
-  Fuel is always available at ECM-controlled rail pressure, so electronic
-  injectors can fire <strong>multiple injections within 1–2 ms</strong>.</li>
+  accumulator, decoupling the available fuel pressure from the injection
+  pump. Fuel is always available at ECM-controlled rail pressure, so
+  electronic injectors can fire <strong>multiple injections within 1–2 ms</strong>. This
+  is the technology behind the names you will see everywhere (MultiJet, TDI,
+  HDi, CDI).</li>
 </ul>
 <h3 id="multiple-injection-phases">Multiple injection phases<a class="headerlink" href="#multiple-injection-phases" title="Permanent link">&para;</a></h3>
 <p><img alt="Injector lift vs. crank angle for a multi-injection common-rail event" src="img/injection-phases.webp" /></p>
-<p>A single combustion cycle can combine up to five injection events:</p>
+<p>A single combustion cycle can combine up to five injection events — this is
+where calibration engineers spend a lot of their time:</p>
 <table>
 <thead>
 <tr>
@@ -4855,37 +4876,40 @@ efficiency but also mechanical stress and combustion noise.</p>
 </tbody>
 </table>
 <h2 id="turbocharging-and-the-air-path">Turbocharging and the air path<a class="headerlink" href="#turbocharging-and-the-air-path" title="Permanent link">&para;</a></h2>
-<p>Engine power can be raised in three ways: more displacement, higher maximum rpm,
-or higher in-cylinder peak pressure. <strong>Turbocharging</strong> takes the third route
-indirectly: a compressor raises the intake-manifold pressure, so more air (more
-oxygen) enters the cylinder and more fuel can be burned.</p>
-<p>The trick is that the compressor sits on the same shaft as a <strong>turbine</strong> driven
-by the hot, still-pressurized exhaust gases — energy that would otherwise be
-wasted. Boost is therefore (almost) free.</p>
+<p>Engine power can be raised in three ways: more displacement, higher maximum
+rpm, or higher in-cylinder peak pressure. <strong>Turbocharging</strong> takes the third
+route indirectly: a compressor raises the intake-manifold pressure, so more
+air (more oxygen) enters the cylinder and more fuel can be burned.</p>
+<p>The trick is that the compressor sits on the same shaft as a <strong>turbine</strong>
+driven by the hot, still-pressurized exhaust gases — energy that would
+otherwise be wasted. Boost is therefore (almost) free.</p>
 <p><img alt="Turbocharged engine air path: intercooler, EGR, VGT + wastegate, MAP/MAF/EBP sensors" src="img/turbo-overview.webp" /></p>
+<p>Take a moment with this figure — nearly every component on it is a sensor or
+actuator you will one day measure or drive from a test bench.</p>
 <p><strong>Pros</strong></p>
 <ul>
 <li>More torque and power from a smaller engine (downsizing).</li>
-<li>In Diesels, peak power and overall efficiency <em>always</em> improve (waste-energy
-  recovery); in SI engines, gains materialize when the turbo's best-efficiency
-  zone is matched to the engine's poor-efficiency zone on the BSFC map.</li>
-<li>At medium-high load the compressor pushes air in, reducing the intake pumping
-  work.</li>
+<li>In Diesels, peak power and overall efficiency <em>always</em> improve
+  (waste-energy recovery); in SI engines, gains materialize when the turbo's
+  best-efficiency zone is matched to the engine's poor-efficiency zone on the
+  BSFC map.</li>
+<li>At medium-high load the compressor pushes air in, reducing the intake
+  pumping work.</li>
 </ul>
 <p><strong>Cons</strong></p>
 <ul>
 <li>Higher complexity and cost; extra degrees of freedom to control.</li>
 <li>Compressed air heats up — an <strong>intercooler</strong> (charge air cooler) is needed,
   otherwise the cycle's low temperature rises and efficiency drops.</li>
-<li>Turbine/compressor inertia causes <strong>turbo lag</strong> — delayed boost after a sudden
-  load request.</li>
+<li>Turbine/compressor inertia causes <strong>turbo lag</strong> — delayed boost after a
+  sudden load request.</li>
 </ul>
 <h3 id="boost-control-wastegate-and-vgt">Boost control: wastegate and VGT<a class="headerlink" href="#boost-control-wastegate-and-vgt" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Wastegate (WG)</strong> — a valve that bypasses part of the exhaust around the
   turbine. The ECM modulates it to limit turbine speed (turbines spin up to
-  ~250,000 rpm) and boost pressure, using the <strong>EBP</strong> (exhaust back-pressure)
-  and <strong>MAP</strong> (manifold absolute pressure) sensors.</li>
+  ~250,000 rpm) and boost pressure, using the <strong>exhaust back-pressure (EBP)</strong>
+  and <strong>manifold absolute pressure (MAP)</strong> sensors.</li>
 <li><strong>Variable geometry turbine (VGT)</strong> — adjustable vanes change the turbine's
   flow conditions. Opening the vanes mimics the wastegate (which then becomes
   unnecessary); closing them speeds the turbine up at low exhaust flow. VGT
@@ -4893,14 +4917,16 @@ wasted. Boost is therefore (almost) free.</p>
   lag, and gives the ECM an extra actuator for emission-control strategies.</li>
 </ul>
 <h3 id="exhaust-gas-recirculation-egr">Exhaust gas recirculation (EGR)<a class="headerlink" href="#exhaust-gas-recirculation-egr" title="Permanent link">&para;</a></h3>
-<p>The <strong>EGR valve</strong> (ECM-controlled) routes a fraction of the exhaust back into
-the intake. Recirculated exhaust is inert in the chamber: it lowers the
-combustion temperature and the oxygen availability, and since NOx formation is
-temperature-driven, NOx drops. The recirculated gas must first pass through a
-dedicated heat exchanger — the <strong>EGR cooler</strong>.</p>
+<p>The <strong>exhaust gas recirculation (EGR) valve</strong> (ECM-controlled) routes a
+fraction of the exhaust back into the intake. Recirculated exhaust is inert
+in the chamber: it lowers the combustion temperature and the oxygen
+availability, and since NOx formation is temperature-driven, NOx drops. The
+recirculated gas must first pass through a dedicated heat exchanger — the
+<strong>EGR cooler</strong>.</p>
 <p>Soot in the EGR stream is a design trade-off: with careful calibration, small
-particles can be re-burned, or particles can grow — easier to trap in the DPF
-but worse for fouling of the EGR valve, cooler and intake manifold.</p>
+particles can be re-burned, or particles can grow — easier to trap in the
+particulate filter but worse for fouling of the EGR valve, cooler and intake
+manifold.</p>
 <h2 id="breathing-and-mixture-strategies">Breathing and mixture strategies<a class="headerlink" href="#breathing-and-mixture-strategies" title="Permanent link">&para;</a></h2>
 <h3 id="gasoline-direct-injection-gdi">Gasoline direct injection (GDI)<a class="headerlink" href="#gasoline-direct-injection-gdi" title="Permanent link">&para;</a></h3>
 <p>Injecting gasoline directly into the cylinder enables <strong>stratified charge</strong>
@@ -4908,8 +4934,8 @@ operation at low load:</p>
 <ul>
 <li>A stoichiometric-to-slightly-rich cloud forms near the spark plug (so it
   ignites reliably) while the rest of the chamber runs lean to very lean.</li>
-<li>The throttle can stay wide open in stratified mode — pumping losses drop and
-  higher compression ratios become possible.</li>
+<li>The throttle can stay wide open in stratified mode — pumping losses drop
+  and higher compression ratios become possible.</li>
 <li>At medium/high load the ECM switches to <strong>homogeneous</strong> mode (AFR ≈ 14.7
   everywhere, like port injection); some engines keep a traditional port
   injector for exactly this.</li>
@@ -4920,76 +4946,84 @@ operation at low load:</p>
 </ul>
 <h3 id="variable-valve-lift-and-timing-vvlvvt">Variable valve lift and timing (VVL/VVT)<a class="headerlink" href="#variable-valve-lift-and-timing-vvlvvt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Variable valve lift</strong> can regulate intake airflow through the valves
-  themselves, potentially eliminating the throttle body and its pumping losses.</li>
-<li><strong>Variable valve timing</strong> optimizes valve opening/closing instants for better
-  cylinder filling (exploiting manifold dynamic effects), giving a favorable
-  torque curve at both low and high rpm — impossible with fixed cam timing.</li>
-<li>Valve timing can also realize <strong>internal EGR</strong> (sucking exhaust gas back into
-  the cylinder without an EGR loop) and reduce pumping losses by advancing
-  intake-valve closing and exhaust-valve opening.</li>
+<li><strong>Variable valve lift (VVL)</strong> can regulate intake airflow through the
+  valves themselves, potentially eliminating the throttle body and its
+  pumping losses.</li>
+<li><strong>Variable valve timing (VVT)</strong> optimizes valve opening/closing instants
+  for better cylinder filling (exploiting manifold dynamic effects), giving a
+  favorable torque curve at both low and high rpm — impossible with fixed cam
+  timing.</li>
+<li>Valve timing can also realize <strong>internal EGR</strong> (sucking exhaust gas back
+  into the cylinder without an EGR loop) and reduce pumping losses by
+  advancing intake-valve closing and exhaust-valve opening.</li>
 <li>Systems can be continuously variable (BMW Valvetronic) or discrete (Honda
   VTEC, two timings). Nearly every manufacturer has a proprietary scheme —
   BMW Valvetronic, Porsche VarioCam, Honda VTEC, <strong>FCA MultiAir</strong>.</li>
 </ul>
 <h3 id="fca-multiair-in-one-paragraph">FCA MultiAir in one paragraph<a class="headerlink" href="#fca-multiair-in-one-paragraph" title="Permanent link">&para;</a></h3>
-<p>One camshaft serves both valve rows: exhaust valves are actuated conventionally,
-while the intake cam drives a small <strong>hydraulic pump</strong> (like a syringe) through
-a rocker. The pump feeds pressurized engine oil to hydraulic pistons above the
-intake valves via an <strong>electronically controlled solenoid valve</strong>. By opening or
-closing the solenoid, the ECM decouples intake-valve motion from the camshaft —
-full software control of intake lift and timing using the engine's own oil as
-the working fluid.</p>
+<p>One camshaft serves both valve rows: exhaust valves are actuated
+conventionally, while the intake cam drives a small <strong>hydraulic pump</strong> (like
+a syringe) through a rocker. The pump feeds pressurized engine oil to
+hydraulic pistons above the intake valves via an <strong>electronically controlled
+solenoid valve</strong>. By opening or closing the solenoid, the ECM decouples
+intake-valve motion from the camshaft — full software control of intake lift
+and timing using the engine's own oil as the working fluid. It is a great
+example of how much "mechanical" behavior is now actually software.</p>
 <h2 id="exhaust-aftertreatment">Exhaust aftertreatment<a class="headerlink" href="#exhaust-aftertreatment" title="Permanent link">&para;</a></h2>
 <h3 id="oxidation-and-three-way-catalysts">Oxidation and three-way catalysts<a class="headerlink" href="#oxidation-and-three-way-catalysts" title="Permanent link">&para;</a></h3>
 <ul>
-<li>A first catalyst <strong>oxidizes</strong> incomplete combustion products (CO and HC); it
-  works in stoichiometric-to-lean exhaust, so it fits both SI and Diesel. In
-  Diesels it is called <strong>DOC</strong> (Diesel oxidation catalyst) and operates above
-  ~200 °C; SI catalysts are platinum/palladium-based and work above 600–700 °C.</li>
+<li>A first catalyst <strong>oxidizes</strong> incomplete combustion products (CO and HC);
+  it works in stoichiometric-to-lean exhaust, so it fits both SI and Diesel.
+  In Diesels it is called the <strong>Diesel oxidation catalyst (DOC)</strong> and
+  operates above ~200 °C; SI catalysts are platinum/palladium-based and work
+  above 600–700 °C.</li>
 <li>A second, rhodium-based catalyst <strong>reduces</strong> NOx — but only in
-  rich-to-stoichiometric exhaust, so it cannot be used on Diesels (always lean).</li>
+  rich-to-stoichiometric exhaust, so it cannot be used on Diesels (always
+  lean).</li>
 <li>Best overall conversion requires AFR ≈ stoichiometric — one more reason for
-  the lambda closed loop.</li>
+  the lambda closed loop you saw above.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Catalyst diagnostics</p>
 <p>Catalyst health is monitored with <strong>two lambda probes</strong>, one upstream and
-one downstream. As long as the two see different oxygen concentrations the
-catalyst is storing/releasing oxygen correctly; when the two signals become
-too similar, the ECM flags catalyst degradation.</p>
+one downstream. As long as the two see different oxygen concentrations
+the catalyst is storing/releasing oxygen correctly; when the two signals
+become too similar, the ECM flags catalyst degradation. You will use
+exactly this signal pair when diagnosing aftertreatment faults.</p>
 </div>
 <h3 id="particulate-filters-dpf-and-gpf">Particulate filters: DPF and GPF<a class="headerlink" href="#particulate-filters-dpf-and-gpf" title="Permanent link">&para;</a></h3>
-<p>A <strong>DPF</strong> (Diesel particulate filter) is a ceramic or metal matrix that
+<p>A <strong>Diesel particulate filter (DPF)</strong> is a ceramic or metal matrix that
 mechanically traps soot; a catalytic coating lowers the soot-oxidation
 temperature. During low-load driving (traffic, high EGR, cold exhaust) soot
-accumulates, and a <strong>differential pressure sensor</strong> across the filter tracks the
-build-up. Past a threshold, the ECM triggers <strong>regeneration</strong>:</p>
+accumulates, and a <strong>differential pressure sensor</strong> across the filter tracks
+the build-up. Past a threshold, the ECM triggers <strong>regeneration</strong>:</p>
 <ul>
-<li><strong>post injection</strong> of fuel to raise exhaust temperature above 450–500 °C, and</li>
+<li><strong>post injection</strong> of fuel to raise exhaust temperature above 450–500 °C,
+  and</li>
 <li>a dedicated <strong>low-EGR</strong> strategy to increase exhaust oxygen.</li>
 </ul>
-<p>The <strong>GPF</strong> is the gasoline counterpart, needed mainly for GDI engines (the only
-SI engines with significant soot). SI exhaust is hotter, so no extra fuel is
-burned; regeneration runs during deceleration cut-offs and/or by increasing
-airflow (throttle or VVL) while retarding spark advance (within knock limits).</p>
+<p>The <strong>gasoline particulate filter (GPF)</strong> is the gasoline counterpart, needed
+mainly for GDI engines (the only SI engines with significant soot). SI
+exhaust is hotter, so no extra fuel is burned; regeneration runs during
+deceleration cut-offs and/or by increasing airflow (throttle or VVL) while
+retarding spark advance (within knock limits).</p>
 <h3 id="scr-urea-based-nox-reduction">SCR: urea-based NOx reduction<a class="headerlink" href="#scr-urea-based-nox-reduction" title="Permanent link">&para;</a></h3>
-<p>Diesels cannot use a NOx-reduction catalyst, so NOx is chemically reduced in an
-<strong>SCR</strong> (selective catalytic reduction) reactor:</p>
+<p>Diesels cannot use a NOx-reduction catalyst, so NOx is chemically reduced in
+a <strong>selective catalytic reduction (SCR)</strong> reactor:</p>
 <ol>
-<li>An aqueous urea solution (<strong>AdBlue</strong>) is injected upstream of the reactor and
-   decomposes into <strong>ammonia</strong>, the actual reactant. (Ammonia itself is
+<li>An aqueous urea solution (<strong>AdBlue</strong>) is injected upstream of the reactor
+   and decomposes into <strong>ammonia</strong>, the actual reactant. (Ammonia itself is
    flammable, toxic and volatile — urea is the safe carrier.)</li>
 <li>In the reactor's channels the exhaust-ammonia mix passes over a
    vanadium-based catalyst, where ammonia reduces NOx to N₂ and H₂O.</li>
-<li>NOx concentration in exhaust is only ~1%, so dwell time must be long enough
-   for good conversion. Dosing more ammonia improves NOx reduction but risks
-   <strong>ammonia slip</strong> out of the tailpipe.</li>
-<li>A second stage — the <strong>ASC</strong> (ammonia slip catalyst) — absorbs slipped
+<li>NOx concentration in exhaust is only ~1%, so dwell time must be long
+   enough for good conversion. Dosing more ammonia improves NOx reduction but
+   risks <strong>ammonia slip</strong> out of the tailpipe.</li>
+<li>A second stage — the <strong>ammonia slip catalyst (ASC)</strong> — absorbs slipped
    ammonia and releases it when NOx production rises, acting as an ammonia
    buffer.</li>
 </ol>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     E["Engine exhaust"] --&gt; D["DOC&lt;br/&gt;oxidize CO + HC"]
     D --&gt; F["DPF / SCRoF&lt;br/&gt;trap soot (+ SCR coating)"]
     F --&gt; S["SCR / SCRuF&lt;br/&gt;urea dosing, NOx → N₂"]
@@ -4997,71 +5031,78 @@ airflow (throttle or VVL) while retarding spark advance (within knock limits).</
     A --&gt; T["Tailpipe"]</code></pre>
 <h2 id="case-study-22-l-multijet-euro-6d">Case study: 2.2 L MultiJet Euro 6d<a class="headerlink" href="#case-study-22-l-multijet-euro-6d" title="Permanent link">&para;</a></h2>
 <p>The second lesson closes with a real Euro 6d diesel (2.2 L, 180–200 hp class,
-Jeep Cherokee / Ducato family) showing what all of the above means in hardware:</p>
+Jeep Cherokee / Ducato family) showing what all of the above means in
+hardware. Read this list as a preview of your future workplace: almost every
+item is a sensor you will log or an actuator you will command.</p>
 <ul>
-<li><strong>Air path</strong>: MAF meter with integrated temperature/humidity/pressure sensors
-  (connected over <a href="../can-lin/">LIN</a>), MAP + manifold temperature
-  sensors, compressor-outlet and intercooler-outlet temperature sensors, an
-  electrical <strong>VGT</strong> valve with position feedback, an <strong>H-bridge throttle
-  actuator</strong>, and smart swirl control.</li>
+<li><strong>Air path</strong>: MAF meter with integrated temperature/humidity/pressure
+  sensors (connected over <a href="../can-lin/">LIN</a>), MAP + manifold
+  temperature sensors, compressor-outlet and intercooler-outlet temperature
+  sensors, an electrical <strong>VGT</strong> valve with position feedback, an <strong>H-bridge
+  throttle actuator</strong>, and smart swirl control.</li>
 <li><strong>Fuel path</strong>: high-pressure pump with metering unit, common rail with
-  pressure sensor and DRV regulator, four CRI 2.20 injectors, plus LP fuel pump
-  control, water-in-fuel sensor and fuel heater.</li>
-<li><strong>EGR</strong>: both <strong>HP-EGR</strong> and <strong>LP-EGR</strong> valves (H-bridge driven, with position
-  sensors), EGR temperature sensors and an EGR cooler bypass.</li>
+  pressure sensor and DRV (pressure regulator valve), four CRI 2.20 injectors,
+  plus LP fuel pump control, water-in-fuel sensor and fuel heater.</li>
+<li><strong>EGR</strong>: both high-pressure (<strong>HP-EGR</strong>) and low-pressure (<strong>LP-EGR</strong>)
+  valves (H-bridge driven, with position sensors), EGR temperature sensors
+  and an EGR cooler bypass.</li>
 <li><strong>Cold start</strong>: glow plug control unit (GCU3) with four glow plugs.</li>
-<li><strong>Aftertreatment</strong>: the ATS uses <strong>SCRoF + SCRuF with double urea dosing</strong> —
-  a DOC, then an SCR-coated DPF with its own dosing module, then an underfloor
-  SCR with a second dosing module, supervised by a dedicated <strong>SCR control unit
-  (SCU)</strong>, multiple NOx sensors (DOC inlet, SCRoF outlet, SCRuF outlet), a soot
-  sensor, temperature sensors at every stage, and a urea tank assembly with
-  level, quality and temperature sensing plus heated lines.</li>
+<li><strong>Aftertreatment</strong>: the aftertreatment system (ATS) uses <strong>SCRoF + SCRuF
+  with double urea dosing</strong> — a DOC, then an SCR-coated DPF with its own
+  dosing module, then an underfloor SCR with a second dosing module,
+  supervised by a dedicated <strong>SCR control unit (SCU)</strong>, multiple NOx sensors
+  (DOC inlet, SCRoF outlet, SCRuF outlet), a soot sensor, temperature sensors
+  at every stage, and a urea tank assembly with level, quality and
+  temperature sensing plus heated lines.</li>
 </ul>
 <p>Moving from Euro 6d-Temp to full Euro 6d on this engine meant, among other
-things: a new ECU generation, a second urea injector with its own controller,
-improved underfloor SCR, a third NOx sensor, a second 80 W water pump, cooled
-LP-EGR, new injector nozzles, and durability upgrades (steel pistons, new
-cylinder head, oil pump and cooler).</p>
+things: a new electronic control unit (ECU) generation, a second urea
+injector with its own controller, improved underfloor SCR, a third NOx
+sensor, a second 80 W water pump, cooled LP-EGR, new injector nozzles, and
+durability upgrades (steel pistons, new cylinder head, oil pump and cooler).</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
-<ul>
-<li>A 4-stroke cycle = intake, compression, expansion, exhaust over two
-  crankshaft revolutions; CR, displacement and AFR are the numbers that
-  define an engine.</li>
-<li>SI engines hold AFR ≈ 14.7 and control torque with the throttle; the ECM
-  meters fuel via MAF feed-forward plus lambda-probe feedback.</li>
-<li>Knock, pre-ignition and misfire bound spark advance and compression ratio;
-  octane (SI) and cetane (Diesel) numbers grade fuel quality.</li>
-<li>Diesels run unthrottled with excess air, control torque via injected fuel
-  quantity, ignite by compression (CR 15–20, injection up to 2000 bar) and
-  pay for their efficiency with soot and NOx.</li>
-<li>Common-rail injection chains pilot/pre/main/after/post events within 1–2
-  ms to trade noise, NOx, soot and DPF regeneration.</li>
-<li>Turbocharging recovers exhaust energy (wastegate/VGT control, up to
-  ~250,000 rpm turbine speed), the intercooler protects efficiency, and EGR
-  cools combustion to cut NOx.</li>
-<li>Aftertreatment is a chain: oxidation catalyst/DOC, DPF/GPF with
+<p>You now have the mental map every engine-related task in this bootcamp
+builds on:
+- A 4-stroke cycle = intake, compression, expansion, exhaust over two
+  crankshaft revolutions; compression ratio, displacement and AFR are the
+  numbers that define an engine.
+- Gasoline (SI) engines hold AFR ≈ 14.7 and control torque with the
+  throttle; the ECM meters fuel via MAF feed-forward plus lambda-probe
+  feedback — your first closed control loop.
+- Knock, pre-ignition and misfire bound spark advance and compression
+  ratio; octane (SI) and cetane (Diesel) numbers grade fuel quality.
+- Diesels run unthrottled with excess air, control torque via injected
+  fuel quantity, ignite by compression (CR 15–20, injection up to
+  2000 bar) and pay for their efficiency with soot and NOx.
+- Common-rail injection chains pilot/pre/main/after/post events within
+  1–2 ms to trade noise, NOx, soot and DPF regeneration.
+- Turbocharging recovers exhaust energy (wastegate/VGT control, up to
+  ~250,000 rpm turbine speed), the intercooler protects efficiency, and
+  EGR cools combustion to cut NOx.
+- Aftertreatment is a chain: oxidation catalyst/DOC, DPF/GPF with
   pressure-sensor-triggered regeneration, SCR with AdBlue dosing plus an
   ammonia slip catalyst — all monitored by lambda, NOx, temperature and
   differential-pressure sensors that you will meet again in the diagnosis
-  and calibration modules.</li>
-</ul>
+  and calibration modules.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Where this leads</p>
 <p>The sensors and actuators listed here (MAF, MAP, lambda, EGR and VGT
-position, rail pressure) are exactly what you will measure and stimulate in
-the <a href="../../mil3/hil-users/">HIL</a> and <a href="../../mil3/inca/">INCA</a>
-lessons, and the communication between ECM and smart auxiliaries rides on
-the <a href="../can-lin/">CAN and LIN</a> buses.</p>
+position, rail pressure) are exactly what you will measure and stimulate
+in the <a href="../../mil3/hil-users/">HIL</a> and
+<a href="../../mil3/inca/">INCA</a> lessons, and the communication between
+the ECM and smart auxiliaries rides on the
+<a href="../can-lin/">CAN and LIN</a> buses. Everything on this page comes
+back — now with a multimeter and a CAN trace in your hands.</p>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/ICE/MCI_1.pdf">MCI 1</a> — PDF, 2.1 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/ICE/MCI_2.pdf">MCI 2</a> — PDF, 1.9 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/ICE/MCI_Animation.pdf">MCI Animation</a> — PDF, 14.0 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/ICE/MCI_1.pdf">MCI 1</a> — PDF, 2.1 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/ICE/MCI_2.pdf">MCI 2</a> — PDF, 1.9 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/ICE/MCI_Animation.pdf">MCI Animation</a> — PDF, 14.0 KB</li>
 </ul>
 
 
@@ -5091,6 +5132,7 @@ the <a href="../can-lin/">CAN and LIN</a> buses.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -5149,6 +5191,41 @@ the <a href="../can-lin/">CAN and LIN</a> buses.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -5161,8 +5238,21 @@ the <a href="../can-lin/">CAN and LIN</a> buses.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

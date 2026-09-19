@@ -1,49 +1,64 @@
-# RDI Testing — The VF179 Rear Parking Assistance Specification
+# RDI Testing — Reading the VF179 Rear Parking Assistance Specification
 
-This article walks through a real **Vehicle Function (VF) specification** —
-VF179, *Rear Parking Assistance* for the P332 BEV platform (Ed. 2 Rev. A) — and
-shows how a tester uses it. In the RDI Testing lessons this document is the
-*reference* against which every diagnostic exercise is written: the missing
-message, plausibility and UDS exercises all start from a requirement in VF179
-and end in a stimulus/observation pair on the bench.
+Welcome to one of the most practical skills in this bootcamp: turning a
+requirements document into real tests. In this article you'll work with a
+genuine **Vehicle Function (VF) specification** — VF179, *Rear Parking
+Assistance* for the P332 battery-electric platform (Edition 2, Revision A) —
+the same document the RDI Testing lessons use as their reference. Every
+diagnostic exercise you'll meet later (missing messages, plausibility checks,
+Unified Diagnostic Services) starts from a requirement in VF179 and ends as a
+stimulus you apply on the bench and a behavior you observe.
 
-Reading a VF document fluently is a core skill here: it is where you find the
-signals to stimulate, the states to observe, the timing parameters to respect
-and the DTCs to expect.
+By the end of this article you'll be able to:
+
+- navigate a VF document and know exactly which section answers which testing
+  question,
+- find the signals to stimulate, the states to observe, the timing parameters
+  to respect, and the diagnostic trouble codes (DTCs) to expect,
+- read the PAM state machine fluently enough to design your own test cases.
+
+Don't worry about memorizing everything — the goal is to learn *where to
+look*, so the document becomes your ally rather than a wall of text.
 
 ## What a VF document contains
 
-A VF (Vehicle Function) document describes one vehicle feature end to end,
-across all ECUs that cooperate to deliver it. VF179 follows the standard
-Stellantis template:
+A VF document describes one vehicle feature end to end, across all the
+electronic control units (ECUs) that cooperate to deliver it. VF179 follows
+the standard Stellantis template, and each section answers a question you will
+actually ask on the job:
 
-| Section | Content | Why a tester cares |
+| Section | Content | Question it answers for you |
 |---|---|---|
-| Vehicle Function Data | Area (Driving Assistance), owner, revision notes | Traceability — which CR/RAR changed which requirement |
-| Functional Diagram | Block diagram of ECUs, devices and signals | Test setup: what to wire/simulate |
-| External Interfaces / I/O / Signal | Every input/output, grouped by physical channel (hardwire, LIN, B/BH-CAN, C-CAN) | The exact message/signal names for CANoe/CANalyzer |
-| Indication | Telltales and messages shown to the driver | What to check on the cluster |
-| Working Conditions | Ignition states in which the function is active | Preconditions of each test case |
-| Functional Requirements | The algorithm: variables, state machine, per-ECU rules | The expected behavior to verify |
-| Diagnosis and Recovery | Diagnosis table + fault-by-fault recovery rules | Fault-injection test cases and expected DTCs |
-| Configuration Parameters | Named tunable values with default, range, resolution, unit | Concrete thresholds and debounce times |
+| Vehicle Function Data | Area (Driving Assistance), owner, revision notes | "Which change request altered which requirement?" |
+| Functional Diagram | Block diagram of ECUs, devices and signals | "What do I wire up or simulate on the bench?" |
+| External Interfaces / I/O / Signal | Every input and output, grouped by physical channel (hardwire, LIN, B/BH-CAN, C-CAN) | "What are the exact message and signal names for CANoe/CANalyzer?" |
+| Indication | Telltales and messages shown to the driver | "What should I check on the cluster?" |
+| Working Conditions | Ignition states in which the function is active | "What are the preconditions of my test case?" |
+| Functional Requirements | The algorithm: variables, state machine, per-ECU rules | "What behavior do I verify?" |
+| Diagnosis and Recovery | Diagnosis table + fault-by-fault recovery rules | "Which faults do I inject, and which DTCs should appear?" |
+| Configuration Parameters | Named tunable values with default, range, resolution, unit | "What are the concrete thresholds and debounce times?" |
 
-Everything in VF179 revolves around four ECUs:
+## Meet the four ECUs
 
-- **PAM** (Park Assist Module) — owns the algorithm and the three rear bumper
-  ultrasonic sensors (left, central, right).
-- **BCM** (Body Control Module) — gateway; forwards the PAM button press over
-  LIN and drives the button LED (day/night variants).
-- **IPC** (Instrument Panel Cluster) — shows the car graphic with distance
-  arcs and plays the acoustic chimes.
+Everything in VF179 revolves around four control units. Get friendly with
+them now — you'll be stimulating and observing them constantly:
+
+- **PAM** (Park Assist Module) — the brain. It owns the algorithm and the
+  three ultrasonic sensors in the rear bumper (left, central, right).
+- **BCM** (Body Control Module) — the gateway. It forwards the PAM button
+  press over LIN (Local Interconnect Network) and drives the button LED, with
+  day and night variants.
+- **IPC** (Instrument Panel Cluster) — the driver's display. It shows the car
+  graphic with distance arcs and plays the acoustic chimes.
 - **LSS** — acquires the physical Park Assist on/off switch.
 
 ## System purpose and signal flow
 
-The system warns the driver about obstacles behind the vehicle while parking,
-including obstacles outside the driver's field of view, through **visual
-signals** (arcs on the cluster display) and **acoustic signals** (chimes whose
-pulse rate depends on distance).
+The system's job is simple to state: warn the driver about obstacles behind
+the vehicle while parking — including obstacles outside the driver's field of
+view — through **visual signals** (arcs on the cluster display) and
+**acoustic signals** (chimes whose pulse rate depends on distance). Here's how
+the information flows:
 
 ```mermaid
 flowchart LR
@@ -62,7 +77,8 @@ flowchart LR
     PAM -->|"PAM_LedControlSts"| BCM -->|"LedControlSts.Req"| LED
 ```
 
-Key interfaces, grouped by channel as in the document:
+Notice how the document groups interfaces by channel — this is exactly how
+you'll set up your tools:
 
 | Channel | Signals | Direction |
 |---|---|---|
@@ -71,16 +87,17 @@ Key interfaces, grouped by channel as in the document:
 | B/BH-CAN | `PARK_INFO.*` (arcs, chime requests, display activation), `STATUS_PAM.*` (system status, fault, LED request), `BH_IGW1.PamAlertMode`, `STATUS_TELEMATIC.AudioSts_Telematic` | PAM → IPC/BCM |
 | C-CAN | `BRAKE1.VehicleSpeedVSOSig` (+`FailSts`), `BRAKE4.VehicleStandStillSts`, `TRANSM2.ShiftLeverPosition` | vehicle → PAM |
 
-Two **PROXI parameters** gate whole branches of the logic: `CAN node 24 (PAM)`
-must be `Present` for the BCM/IPC requirements to apply at all, and
+One more thing to know before diving into the logic: two **PROXI parameters**
+(the vehicle's configuration bytes) gate entire branches of it. `CAN node 24
+(PAM)` must be `Present` for the BCM/IPC requirements to apply at all, and
 `Gear_Box_Type` different from `MTX` enables the gear-lever-based reverse
 detection. Other PROXI parameters (`PAM_Configuration`, `PAM_Tuning_Set`,
 `Vehicle_Line_Configuration`) select the parameter set for the vehicle model.
 
 ## Preconditions: the PAM internal variables
 
-Before the state machine, the document defines the variables everything else
-depends on:
+Before the state machine makes sense, you need the handful of variables
+everything else depends on. Think of these as the vocabulary of the document:
 
 - **Reverse Condition** — true when `Gear_Box_Type ≠ MTX` and
   `TRANSM2.ShiftLeverPosition` stays equal to `"R"` for longer than
@@ -89,14 +106,16 @@ depends on:
 - **KEY ON / KEY OFF** — buckets of ignition states: KEY ON covers
   `Ignition_ON`, `Ignition_Start`, `Ignition_ON_Engine_ON`; KEY OFF covers
   `Ignition_OFF` and `Initialization`.
-- **MODE_PAM** — last user-selected activation state (`ON`/`OFF`), stored in
-  non-volatile memory at every change of state; power-on default is `OFF`.
-- **PAMFault** — latched failure flag (`TRUE`/`FALSE`), also stored in NVM at
-  every change.
+- **MODE_PAM** — the last user-selected activation state (`ON`/`OFF`), stored
+  in non-volatile memory (NVM) at every change; the power-on default is `OFF`.
+- **PAMFault** — a latched failure flag (`TRUE`/`FALSE`), also stored in NVM
+  at every change.
 
 ## The PAM state machine
 
-This is the heart of the document — and the richest source of test cases.
+This is the heart of the document — and, for you, the richest single source of
+test cases. Take your time with it; every arrow here is a scenario waiting to
+be verified:
 
 ```mermaid
 stateDiagram-v2
@@ -121,7 +140,8 @@ stateDiagram-v2
     }
 ```
 
-Entry behavior you can observe on the bus:
+What makes this testable is that each state announces itself on the bus.
+Here's what you can actually observe:
 
 - Entering **KEY ON**, PAM initializes, resets all `STATUS_PAM`/`PARK_INFO`
   signals to defaults except `STATUS_PAM.PAMSystemSts = "ON_Inactive"`, and
@@ -137,27 +157,27 @@ Entry behavior you can observe on the bus:
   while in reverse.
 - **OFF**: `PAMSystemSts = "OFF"`, LED on (continuous).
 
-Two transitions deserve attention when testing:
+Two transitions deserve special attention when you design tests:
 
 1. **Overspeed** — in `ON_Enable`, if `BRAKE1.VehicleSpeedVSOSig` exceeds
    **SPEED_LIMIT (11 km/h)** while the Reverse Condition holds, PAM moves to
    `Disable`. Dropping back below the limit (with no fault) returns it to
-   `ON_Enable`.
+   `ON_Enable`. That boundary at 11 km/h is a classic test point.
 2. **Button in Disable with an active fault** — PAM stays in `Disable` and
    the LED blinks for `PAM_LED_BLINK_TIME`, then goes back to continuous
-   light. With no fault, the same press moves PAM to `OFF`.
+   light. With no fault, the same press moves PAM to `OFF`. Same stimulus,
+   two different expected behaviors — a great test case.
 
 !!! note "Why NVM persistence matters for testing"
     Because `MODE_PAM` and `PAMFault` are stored in non-volatile memory at
-    every change of state, a key cycle is itself a test stimulus: e.g. induce
-    a fault, switch KEY OFF/ON, and verify PAM powers up directly in
-    `Disable`. A correct ECU must not "forget" the fault across ignition
-    cycles.
+    every change of state, a key cycle is itself a test stimulus: induce a
+    fault, switch KEY OFF/ON, and verify PAM powers up directly in `Disable`.
+    A correct ECU must not "forget" the fault across ignition cycles.
 
 ## Alerts: arcs, chimes and special cases
 
 In `ON_Active`, PAM requests acoustic feedback per zone through the two rear
-speakers:
+speakers. The logic is refreshingly simple:
 
 | Obstacle zone | `ChimeActivation_LHR` | `ChimeActivation_RHR` |
 |---|---|---|
@@ -166,16 +186,17 @@ speakers:
 | Rear right | Not Active | Active |
 
 The chime repetition rate varies **linearly with obstacle distance**, between
-`REP_MIN_DURATION` (0 ms) and `REP_MAX_DURATION` (375 ms); a value of 0 means
-**continuous tone** — you are against the obstacle. `ChimeType_Rear` is fixed
-to `"Type4"`.
+`REP_MIN_DURATION` (0 ms) and `REP_MAX_DURATION` (375 ms). A value of 0 means
+a **continuous tone** — you're against the obstacle, so stop! `ChimeType_Rear`
+is fixed to `"Type4"`.
 
-Special cases:
+The special cases are where sloppy systems misbehave — and where sharp testers
+shine:
 
 - **Wall detection** — if both outer sensors report a wall-shaped obstacle
   continuously for more than `Tpamwalldet` (**3 s**), the acoustic feedback is
-  deactivated while the obstacle persists (a wall along the whole rear would
-  otherwise chime non-stop).
+  deactivated while the obstacle persists. Otherwise reversing along a wall
+  would chime non-stop.
 - **Multiple obstacles, same zone** — only the nearest one is signalled.
 - **Multiple obstacles, different zones** — the nearest one overall is
   signalled.
@@ -190,9 +211,10 @@ at `PAM_LED_BLINK_DUTY` (**50 %**) and `PAM_LED_BLINK_FREQ` (**2 Hz**).
 
 ## Diagnosis and recovery
 
-The diagnosis table has **20 entries (IDs 1.0–20.0)**, each binding a fault to
-the ECU that detects it, the enabling ignition condition, and the fault signal
-it sets. All of them are active only with ignition `ON` or engine running.
+Now for the section you'll use most in the exercises. The diagnosis table has
+**20 entries (IDs 1.0–20.0)**, each binding a fault to the ECU that detects
+it, the enabling ignition condition, and the fault signal it sets. All of them
+are active only with ignition `ON` or engine running.
 
 ### Faults detected by PAM
 
@@ -222,8 +244,10 @@ it sets. All of them are active only with ignition `ON` or engine running.
 
 ### The common fault-handling pattern
 
-Nearly every PAM diagnosis follows the same detect → react → heal script,
-which is exactly the structure a test case should mirror:
+Here's the good news: nearly every PAM diagnosis follows the same
+detect → react → heal script. Learn this one pattern and you've understood
+most of the table — and it's exactly the structure your test cases should
+mirror:
 
 ```mermaid
 flowchart TD
@@ -237,26 +261,29 @@ flowchart TD
     G --> H["Heal DTC<br/>PAMSystemFault = False<br/>move to ON_Enable"]
 ```
 
-Details that distinguish a good test from a sloppy one:
+The details below are what distinguish a good test from a sloppy one — keep
+them close:
 
 - **Debounce** — PAM waits `Tign` (**200 ms** default, tunable to 3000 ms)
   after initialization before evaluating any CAN-message fault. Stimulating a
   missing message earlier than that proves nothing.
 - **Fault classification** — `PAMSystemFault` is set to `"System_Failure"` for
   internal/sensor/configuration faults and `"External_Failure"` for faults in
-  incoming signals and messages. Check the exact enumeration, not just
-  "fault present".
+  incoming signals and messages. Check the exact enumeration, not just "fault
+  present".
 - **Freeze frame** — on fault detection PAM stores the vehicle speed from
   `VehicleSpeedVSOSig` among the environmental data; if the speed signal
   itself is failed (`FailSts = "Fail Present"`), a default value is stored.
 - **Trailer hook** — an engineering parameter flags trailer-hook presence;
-  with `Trailer.Info = "Present"` PAM disables itself deliberately — this is
-  expected behavior, not a fault, and must not set a DTC.
+  with `Trailer.Info = "Present"` PAM disables itself deliberately. This is
+  expected behavior, not a fault, and must not set a DTC. Injecting it and
+  checking that *no* DTC appears is a perfectly valid test.
 
 ## Configuration parameters
 
-The document's parameter table is the tester's cheat sheet for timings and
-thresholds (default = "first trial value"):
+The parameter table is your cheat sheet for timings and thresholds (the
+default column is the "first trial value"). You'll come back to this table
+every time you write a test:
 
 | Parameter | Default | Range | Res. | Unit | Owner |
 |---|---|---|---|---|---|
@@ -281,7 +308,9 @@ thresholds (default = "first trial value"):
 
 ## From document to test cases
 
-A practical workflow for testing this function on a bench or HIL:
+Time to put it all together. Here's a practical workflow for testing this
+function on a bench or HIL (Hardware-in-the-Loop) rig — notice how each step
+maps directly back to a section of the document:
 
 1. **Nominal activation** — KEY ON, simulate `TRANSM2.ShiftLeverPosition =
    "R"` for more than 400 ms, expect `PAMSystemSts = "ON_Active"` and
@@ -290,9 +319,10 @@ A practical workflow for testing this function on a bench or HIL:
    the `Disable` / `ON_Enable` transitions and the `PAMAboveSpeed` flag; hold
    the lever in "R" for just under and just over `TReverseGear`.
 3. **Fault injection, one per diagnosis ID** — cut a message (missing
-   message), send `SNA` (plausibility), open/short a sensor line, hold the
-   button "Pressed" beyond 15 s. For each, verify: debounce respected, DTC
-   set, `PAMSystemFault` enumeration correct, state moves to `Disable`.
+   message), send SNA — the "signal not available" value — (plausibility),
+   open or short a sensor line, hold the button "Pressed" beyond 15 s. For
+   each, verify: debounce respected, DTC set, `PAMSystemFault` enumeration
+   correct, state moves to `Disable`.
 4. **Recovery** — remove the fault and verify DTC healing and the return to
    `ON_Enable`. Then key-cycle and confirm `PAMFault` persisted in NVM until
    healed.
@@ -319,14 +349,15 @@ A practical workflow for testing this function on a bench or HIL:
 !!! success "Key takeaways"
     - VF179 specifies the Rear Parking Assistance function across four ECUs:
       PAM (algorithm + sensors), BCM (button/LED gateway), IPC (arcs + chime),
-      LSS (switch acquisition).
+      LSS (switch acquisition) — and you now know what each one does.
     - The PAM state machine — KEY OFF / KEY ON / ON_Enable (ON_Inactive,
       ON_Active) / Disable / OFF — is driven by the Reverse Condition, the PAM
       button, vehicle speed, trailer presence and the latched `PAMFault`.
-    - 20 diagnosis entries follow one pattern: debounce → DTC + `PAMFault` in
-      NVM → disable → heal and return to `ON_Enable`.
-    - Concrete numbers to remember: `TReverseGear` 400 ms, `SPEED_LIMIT`
-      11 km/h, `PAM_STUCK_TIMEOUT` 15 s, `Tign` 200 ms, chime period 0–375 ms,
-      wall detection after 3 s.
-    - Every requirement in the document maps to a stimulus/observation pair —
-      that mapping is the essence of requirement-based diagnostic testing.
+    - 20 diagnosis entries follow one learnable pattern: debounce → DTC +
+      `PAMFault` in NVM → disable → heal and return to `ON_Enable`.
+    - Numbers worth remembering: `TReverseGear` 400 ms, `SPEED_LIMIT` 11 km/h,
+      `PAM_STUCK_TIMEOUT` 15 s, `Tign` 200 ms, chime period 0–375 ms, wall
+      detection after 3 s.
+    - Every requirement maps to a stimulus/observation pair — you can now read
+      a VF document like a tester, which is the essence of requirement-based
+      diagnostic testing.

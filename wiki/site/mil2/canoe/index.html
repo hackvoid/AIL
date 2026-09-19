@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4366,34 +4354,42 @@
 
 
 <h1 id="canoe-configuring-a-simulation-environment">CANoe — Configuring a Simulation Environment<a class="headerlink" href="#canoe-configuring-a-simulation-environment" title="Permanent link">&para;</a></h1>
-<p><a href="../canalyzer/">CANalyzer</a> lets you <em>observe</em> a bus. <strong>CANoe</strong> goes one
-step further: it lets you <em>build</em> the bus. On top of the same measurement and
-analysis windows, CANoe adds a simulation layer — network nodes generated from
-the communication database that transmit their messages as if the real ECUs were
-on the bench. This makes it the standard tool for <strong>rest-of-bus simulation</strong>:
-you connect one real ECU and CANoe plays the role of all the others.</p>
-<p>This article walks through a complete CANoe configuration, in the order you
-would actually build it: hardware channels, networks, database import, node
-simulation, and then the analysis and replay features you use while testing.</p>
+<p>Welcome to the tool you will probably live in for the rest of the bootcamp.
+<a href="../canalyzer/">CANalyzer</a> lets you <em>watch</em> a bus; <strong>CANoe</strong> lets you
+<em>build</em> one. On top of the same measurement and analysis windows, CANoe adds a
+simulation layer — network nodes generated from the communication database
+that transmit their messages as if the real Electronic Control Units (ECUs)
+were on your bench. This is called <strong>rest-of-bus simulation</strong>: you connect one
+real ECU, and CANoe plays the role of all the others.</p>
+<p>Why does this matter? Because you will rarely have a whole vehicle at your
+desk. Day to day, you will use CANoe to test ECUs that would otherwise sit
+silent on a bench, waiting for messages only their missing neighbors could
+send. By the end of this article you will be able to build a complete CANoe
+configuration from scratch — hardware channels, databases, simulated nodes —
+and use it to test a real ECU stand-alone.</p>
 <h2 id="canoe-vs-canalyzer">CANoe vs. CANalyzer<a class="headerlink" href="#canoe-vs-canalyzer" title="Permanent link">&para;</a></h2>
-<p>Everything you know from CANalyzer — Trace window, Graphics window, measurement
-setup with analysis and logging blocks — works the same way in CANoe. The
-differences:</p>
+<p>Everything you already know from CANalyzer — Trace window, Graphics window,
+the measurement setup with its analysis and logging blocks — works exactly the
+same way in CANoe. That familiarity is a gift: you are not learning a new
+tool, you are unlocking a new superpower in one you know. The differences:</p>
 <ul>
-<li><strong>CANoe is built around databases.</strong> Where CANalyzer is mostly used to look at
-  an existing bus, a CANoe configuration typically starts by importing the DBC
-  files that describe the network, because the simulation is generated from
-  them.</li>
+<li><strong>CANoe is built around databases.</strong> Where CANalyzer mostly looks at an
+  existing bus, a CANoe configuration typically starts by importing the DBC
+  (Database CAN) files that describe the network, because the simulation is
+  generated from them.</li>
 <li><strong>Simulation blocks live in the Simulation Setup</strong>, not in the Measurement
-  Setup. Program nodes (CAPL), interactive generators (IG) and replay blocks are
-  inserted on the network diagram, next to the simulated ECUs.</li>
+  Setup. Program nodes (CAPL), Interactive Generators (IG) and replay blocks
+  are inserted on the network diagram, right next to the simulated ECUs.</li>
 <li><strong>CANoe can simulate ECUs.</strong> It reproduces the <em>CAN messaging</em> of each node
-  defined in the database — periodic frames, default signal values — but not the
-  ECU's internal logic, unless you add that logic yourself in
-  <a href="../capl/">CAPL</a>.</li>
+  defined in the database — periodic frames, default signal values — but not
+  the ECU's internal logic, unless you add that logic yourself in
+  <a href="../capl/">CAPL</a> (Communication Access Programming Language,
+  Vector's C-like scripting language).</li>
 </ul>
 <h2 id="building-a-configuration-step-by-step">Building a configuration step by step<a class="headerlink" href="#building-a-configuration-step-by-step" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>flowchart TD
+<p>Here is the whole workflow at a glance, in the order you would actually build
+it. Don't worry about memorizing it now — each step is explained below.</p>
+<pre class="kx-mermaid"><code>flowchart TD
     A["New configuration (Default template)"] --&gt; B["Channel Usage:&lt;br/&gt;number of CAN/LIN channels"]
     B --&gt; C["Channel Mapping:&lt;br/&gt;application channel ↔ VN hardware"]
     C --&gt; D["Network Hardware:&lt;br/&gt;baud rate per network"]
@@ -4406,7 +4402,8 @@ differences:</p>
 empty configuration (a <code>.cfg</code> file) that you fill in through the ribbon tabs.</p>
 <h3 id="2-hardware-configuration">2. Hardware configuration<a class="headerlink" href="#2-hardware-configuration" title="Permanent link">&para;</a></h3>
 <p>Three dialogs under the <strong>Hardware</strong> ribbon define how CANoe talks to the
-physical bus through the Vector hardware (VN16xx interfaces and similar):</p>
+physical bus through the Vector hardware (VN — Vector Network — interfaces
+such as the VN16xx family):</p>
 <table>
 <thead>
 <tr>
@@ -4429,12 +4426,14 @@ physical bus through the Vector hardware (VN16xx interfaces and similar):</p>
 </tr>
 </tbody>
 </table>
-<p>The channel mapping step matters because CANoe always works with <em>logical</em>
-channels: your configuration says "CAN 1", and the mapping decides which real
-transceiver on the VN box that is.</p>
+<p>The channel mapping step matters more than it looks. CANoe always works with
+<em>logical</em> channels: your configuration says "CAN 1", and the mapping decides
+which real transceiver on the VN box that is. This is what lets you move a
+configuration between a bench box and a laptop without rewriting anything —
+you just remap the channels.</p>
 <h3 id="3-baud-rates">3. Baud rates<a class="headerlink" href="#3-baud-rates" title="Permanent link">&para;</a></h3>
-<p>Under <strong>Hardware → Network Hardware</strong> you set the bit rate per network. For the
-typical vehicle buses used in the course:</p>
+<p>Under <strong>Hardware → Network Hardware</strong> you set the bit rate per network. For
+the typical vehicle buses used in the course:</p>
 <table>
 <thead>
 <tr>
@@ -4460,8 +4459,9 @@ typical vehicle buses used in the course:</p>
 <div class="admonition warning">
 <p class="admonition-title">Baud rate mismatch = silent bus</p>
 <p>If the configured baud rate does not match the real bus, you will see no
-valid frames (or only error frames). Always confirm the rate from the
-network specification before blaming the wiring.</p>
+valid frames (or only error frames) — and no obvious error message telling
+you why. This is one of the most common beginner traps: always confirm the
+rate from the network specification <em>before</em> blaming the wiring.</p>
 </div>
 <h3 id="4-add-networks-in-the-simulation-setup">4. Add networks in the Simulation Setup<a class="headerlink" href="#4-add-networks-in-the-simulation-setup" title="Permanent link">&para;</a></h3>
 <p>Open <strong>Simulation → Simulation Setup</strong> — the heart of a CANoe configuration.
@@ -4472,43 +4472,55 @@ This is a graphical view of the simulated bus topology:</p>
 </ul>
 <p>You can create <strong>more networks than you have hardware channels</strong>. A network
 with no mapped channel simply runs as pure simulation; unmapped channels are
-disabled in the Channel Mapping dialog. This lets you build the complete
-vehicle network on a laptop and only attach hardware to the buses you actually
-need.</p>
+disabled in the Channel Mapping dialog. This is a quietly powerful feature: it
+lets you build the <em>complete</em> vehicle network on a laptop and attach hardware
+only to the buses you actually need.</p>
 <h3 id="5-import-the-databases">5. Import the databases<a class="headerlink" href="#5-import-the-databases" title="Permanent link">&para;</a></h3>
-<p>Each network needs its communication database (DBC for CAN, LDF for LIN).
-CANoe's <strong>Import Wizard</strong> loads the database and attaches it to the network.
-From that moment CANoe knows every ECU, message and signal on that bus — the
-same decoding you get in CANalyzer, plus the ability to <em>simulate</em> the senders.</p>
+<p>Each network needs its communication database (DBC for CAN, LDF — LIN
+Description File — for LIN). CANoe's <strong>Import Wizard</strong> loads the database and
+attaches it to the network. From that moment CANoe knows every ECU, message
+and signal on that bus — the same decoding you get in CANalyzer, plus the
+ability to <em>simulate</em> the senders.</p>
 <h2 id="rest-of-bus-simulation">Rest-of-bus simulation<a class="headerlink" href="#rest-of-bus-simulation" title="Permanent link">&para;</a></h2>
 <p>After the import, the Simulation Setup shows one block per ECU defined in the
 database, connected to the bus line:</p>
 <p><img alt="Simulation Setup with simulated ECU nodes after DBC import" src="img/simulation-setup-nodes.webp" /></p>
 <p>Each of those blocks is a <strong>simulated node</strong>: when the measurement starts,
 CANoe transmits the node's messages automatically, with the signal default
-values taken from the database. Two things to keep in mind:</p>
+values taken from the database. Put one real ECU on the bus instead of its
+simulated counterpart, and the device genuinely cannot tell it left the car:</p>
+<pre class="kx-mermaid"><code>flowchart LR
+    subgraph CANoe["CANoe (rest-of-bus simulation)"]
+        N1["Simulated node:&lt;br/&gt;Engine ECU"]
+        N2["Simulated node:&lt;br/&gt;Body ECU"]
+        N3["Simulated node:&lt;br/&gt;ABS ECU"]
+    end
+    N1 &amp; N2 &amp; N3 --&gt; BUS(("CAN bus"))
+    DUT["Real ECU under test&lt;br/&gt;(e.g. instrument cluster)"] &lt;--&gt; BUS</code></pre>
+<p>Two things to keep in mind:</p>
 <ul>
 <li>Only the <em>messaging</em> is simulated — not the ECU's software. A simulated body
   control module sends its cyclic frames, but it will not "react" to anything
   unless you write CAPL code for it.</li>
 <li>You control each node individually: <strong>select the node and click the switch
-  (sweeper) bar</strong> on its block to deactivate it. A deactivated node goes silent
-  on the bus.</li>
+  (sweeper) bar</strong> on its block to deactivate it. A deactivated node goes
+  silent on the bus.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Working in the real vehicle</p>
 <p>When you connect CANoe to a <em>real</em> bus, you do not want simulated nodes
 injecting duplicate traffic. Right-click the bus line and choose <strong>Switch
 All Blocks to Real-Time Mode</strong> to silence every simulation block in one
-shot. Do the opposite (<strong>Switch All Blocks to Simulation</strong>) when you go back
-to bench testing.</p>
+shot. Do the opposite (<strong>Switch All Blocks to Simulation</strong>) when you go
+back to bench testing.</p>
 </div>
 <h3 id="changing-signal-values-on-a-simulated-node">Changing signal values on a simulated node<a class="headerlink" href="#changing-signal-values-on-a-simulated-node" title="Permanent link">&para;</a></h3>
 <p>Simulated messages go out with default values. To change a signal at runtime,
 open the <strong>Node Panel</strong> of the simulated ECU, edit the signal value, and reload
-the message so the new value is transmitted. This is how you feed stimulus to a
-real device under test — for example, driving a vehicle-speed signal to see how
-an instrument cluster reacts.</p>
+the message so the new value is transmitted. This is how you feed stimulus to
+a real device under test — for example, driving a vehicle-speed signal to see
+how an instrument cluster reacts. It feels like magic the first time: the
+cluster has no idea the "car" is a laptop.</p>
 <h2 id="measurement-setup">Measurement Setup<a class="headerlink" href="#measurement-setup" title="Permanent link">&para;</a></h2>
 <p>The <strong>Measurement Setup</strong> tab is essentially the same data-flow diagram you
 know from CANalyzer: measurement start, analysis windows, filters and logging
@@ -4516,10 +4528,16 @@ blocks in series. The practical difference is <em>where</em> stimulus blocks liv
 <ul>
 <li>In CANalyzer you insert an IG (Interactive Generator) in the measurement
   chain.</li>
-<li>In CANoe, <strong>program nodes (CAPL), test modules and generator blocks are added
-  in the Simulation Setup</strong>, attached to the network they act on — see the
-  insert menu in the replay-block figure below.</li>
+<li>In CANoe, <strong>program nodes (CAPL), test modules and generator blocks are
+  added in the Simulation Setup</strong>, attached to the network they act on — see
+  the insert menu in the replay-block figure below.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">A simple rule of thumb</p>
+<p>Measurement Setup = <em>watching</em> the traffic. Simulation Setup = <em>creating</em>
+traffic. If a block produces messages or runs tests, it belongs on the
+network diagram.</p>
+</div>
 <h2 id="signal-analysis-in-the-graphics-window">Signal analysis in the Graphics window<a class="headerlink" href="#signal-analysis-in-the-graphics-window" title="Permanent link">&para;</a></h2>
 <p>Once the measurement is running, analysis works exactly as in CANalyzer. The
 two options you will use most:</p>
@@ -4530,15 +4548,16 @@ two options you will use most:</p>
    data point is marked instead of just the interpolated curve.</li>
 </ol>
 <p><img alt="Graphics window with signal samples and the time-difference measurement" src="img/graphics-measure.webp" /></p>
-<p>With the <strong>measurement cursor / time-difference button</strong> in the toolbar (marked
-"1" in the figure) you can measure the time between two samples — the classic
-example from the lesson being the delay between the <strong>ACC activation button
-press</strong> and the <strong>response of the ACC system status signal</strong>. This is how you
-verify reaction-time requirements directly on the trace.</p>
+<p>With the <strong>measurement cursor / time-difference button</strong> in the toolbar
+(marked "1" in the figure) you can measure the time between two samples. The
+classic example from the lesson: the delay between the <strong>Adaptive Cruise
+Control (ACC) activation button press</strong> and the <strong>response of the ACC system
+status signal</strong>. This is how you verify reaction-time requirements directly on
+the trace — no stopwatch, no guesswork, just the bus telling you the truth.</p>
 <h2 id="replay-blocks-testing-one-ecu-stand-alone">Replay blocks: testing one ECU stand-alone<a class="headerlink" href="#replay-blocks-testing-one-ecu-stand-alone" title="Permanent link">&para;</a></h2>
-<p>A common bench scenario: you captured a log in the car (<code>.asc</code>/<code>.blf</code>), and now
-you want one ECU on the bench to behave as if it were still in the vehicle.</p>
-<p>The recipe:</p>
+<p>A scenario you will meet constantly: you captured a log in the car
+(<code>.asc</code>/<code>.blf</code>), and now you want one ECU on the bench to behave as if it were
+still in the vehicle. The recipe:</p>
 <ol>
 <li>In the Simulation Setup, right-click the network and <strong>Insert Replay Block
    CAN</strong>.</li>
@@ -4547,9 +4566,10 @@ you want one ECU on the bench to behave as if it were still in the vehicle.</p>
 <li><strong>Add a filter that blocks the messages of the ECU you are testing.</strong> Those
    messages exist in the log, but on the bench they must come from the <em>real</em>
    ECU, not from the replay — otherwise the device sees its own messages
-   duplicated.</li>
+   duplicated. Forgetting this filter is a rite of passage; now you can skip
+   it.</li>
 </ol>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     subgraph CANoe
         LOG["Log file&lt;br/&gt;(recorded in car)"] --&gt; RB["Replay Block CAN"]
         FLT["Filter: block messages&lt;br/&gt;of ECU under test"] --&gt; RB
@@ -4565,29 +4585,28 @@ runs tests attaches here, on the network it belongs to.</p>
 <p class="admonition-title">Replay vs. simulation nodes</p>
 <p>A replay block plays back <em>recorded</em> traffic exactly as it happened;
 simulated nodes generate traffic <em>from the database</em> with values you
-control. Use replay to reproduce a real scenario, and simulation nodes when
-you need to vary the stimulus.</p>
+control. Use replay to reproduce a real scenario, and simulation nodes
+when you need to vary the stimulus.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>CANoe = CANalyzer + simulation. Program nodes, generators and replay
-  blocks are configured in the <strong>Simulation Setup</strong>, not the Measurement
-  Setup.</li>
-<li>Configuration order: <strong>Channel Usage</strong> (how many channels) → <strong>Channel
-  Mapping</strong> (logical ↔ physical) → <strong>Network Hardware</strong> (baud rate:
-  B-CAN 50, BH-CAN 125, C-CAN 500 kBaud) → add networks → <strong>Import Wizard</strong>
-  for the DBC.</li>
-<li>You can define more networks than hardware channels; unmapped networks
-  run as pure simulation.</li>
-<li>DBC import creates one simulated node per ECU; CANoe sends its messages
-  with default values, editable via the Node Panel. Toggle nodes with the
-  switch bar, or silence everything with <strong>Switch All Blocks to Real-Time
-  Mode</strong> before connecting to a real vehicle.</li>
-<li>In the Graphics window, enable <strong>Show Samples</strong> and use the
-  time-difference cursor to measure signal-to-response delays.</li>
-<li>For stand-alone ECU tests, replay an in-vehicle log and <strong>filter out the
-  DUT's own messages</strong> so they are not transmitted twice.</li>
+<li>You can do this: CANoe is CANalyzer plus simulation, and the simulation
+  is generated for you from the DBC import.</li>
+<li>Stimulus lives in the <strong>Simulation Setup</strong>, analysis in the Measurement
+  Setup — that one distinction answers most "where do I put this block?"
+  questions.</li>
+<li>Configuration order: <strong>Channel Usage</strong> → <strong>Channel Mapping</strong> (logical ↔
+  physical) → <strong>Network Hardware</strong> (B-CAN 50, BH-CAN 125, C-CAN 500
+  kBaud) → add networks → <strong>Import Wizard</strong> for the DBC.</li>
+<li>DBC import gives you one simulated node per ECU, sending default values
+  you can edit live in the Node Panel. Silence everything with <strong>Switch
+  All Blocks to Real-Time Mode</strong> before touching a real vehicle.</li>
+<li>Two classic pitfalls, now avoided: wrong baud rate (silent bus) and a
+  replay block without a filter on the DUT's own messages (duplicated
+  traffic).</li>
+<li>With rest-of-bus simulation and a log file, you can test any ECU on your
+  bench as if the whole car were around it.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4605,7 +4624,7 @@ configurations (frames, arbitration, DBC files, vehicle bus speeds) are in
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil2/16_CANoe/CANoe.pdf">CANoe</a> — PDF, 3.2 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil2/16_CANoe/CANoe.pdf">CANoe</a> — PDF, 3.2 MB</li>
 </ul>
 
 
@@ -4635,6 +4654,7 @@ configurations (frames, arbitration, DBC files, vehicle bus speeds) are in
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4693,6 +4713,41 @@ configurations (frames, arbitration, DBC files, vehicle bus speeds) are in
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4705,8 +4760,21 @@ configurations (frames, arbitration, DBC files, vehicle bus speeds) are in
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

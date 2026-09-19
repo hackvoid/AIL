@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4279,24 +4267,39 @@
 
 
 <h1 id="canoe-exercises-vf179-pam-state-machine-test-cases">CANoe Exercises — VF179 PAM State Machine &amp; Test Cases<a class="headerlink" href="#canoe-exercises-vf179-pam-state-machine-test-cases" title="Permanent link">&para;</a></h1>
-<p>This hands-on exercise closes the <a href="../">CANoe</a> lesson: you take a real
-functional specification — <strong>VF179</strong>, the Parking Assistance System (PAM)
-requirements for the 332 BEV platform — and turn it into executable test cases.
-It is the same requirement-to-test workflow you will use later in
+<p>Welcome to the capstone exercise of the <a href="../">CANoe</a> lesson. Up to now
+you have learned how CANoe shows you live bus traffic; this time <em>you</em> drive
+the bus. You will take a real functional specification — <strong>VF179</strong>, the Vehicle
+Function document for the Parking Assistance Module (PAM) on the 332 BEV
+(Battery Electric Vehicle) platform — and turn its requirements into test cases
+that actually run against the Electronic Control Unit (ECU) in CANoe.</p>
+<p>This is not busywork: the requirement → state machine → test case workflow is
+exactly what you will do for a living as an E/E (Electrical/Electronic)
+verification engineer, and it comes back in
 <a href="../../../mil3/vf/">VF analysis</a> and
-<a href="../../../mil3/testcases/">Test Cases</a>, but here everything is driven
-and observed on the CAN/LIN buses from within CANoe.</p>
-<p>The exercise has two parts:</p>
+<a href="../../../mil3/testcases/">Test Cases</a>. Here you just get to do it
+hands-on, on real CAN and LIN (Local Interconnect Network) signals.</p>
+<p><strong>By the end of this exercise you will be able to:</strong></p>
+<ul>
+<li>read "shall"-style requirements and draw the state machine they describe,</li>
+<li>derive test cases that cover <em>every</em> state and transition — not just the
+  happy path,</li>
+<li>stimulate inputs and check expected signal values in CANoe, and</li>
+<li>write test steps with timing and signal values precise enough that anyone
+  can reproduce your verdict.</li>
+</ul>
+<p>The exercise has two parts, straight from the assignment sheet:</p>
 <ol>
 <li><strong>Draw the PAM state machine</strong> described in VF179 chapter 1.11.1.1.2.</li>
 <li><strong>Complete the test case file</strong> <code>VF179_ParkingAssistanceSystem</code> so that every
    state and every transition of that state machine is covered.</li>
 </ol>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>Learn to read a functional requirement written as "shall" statements, convert
-it into a state diagram, and derive from it a set of test cases that can be run
-against the real (or restbus-simulated) ECU in CANoe — with each test case
-traceable back to its requirement.</p>
+<p>Practice the full verification loop on one well-defined feature: specification
+in, executable tests out, each test traceable back to its requirement — with
+the ECU's real bus behavior as the judge.</p>
+<p><strong>What you'll practice:</strong> requirement reading, state modeling, coverage
+thinking, precise expected results, and disciplined test reporting.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -4319,7 +4322,7 @@ traceable back to its requirement.</p>
 <td>The document to fill in — one worked example (test case 1) is provided</td>
 </tr>
 <tr>
-<td>Network databases (DBC/LDF) mapping <code>TRANSM2</code>, <code>STATUS_PAM</code>, <code>PARK_INFO</code>, <code>LIN_BCM_IGW1</code>, <code>BRAKE1</code>, <code>BRAKE4</code></td>
+<td>Network databases (DBC — Database CAN, and LDF — LIN Description File) mapping <code>TRANSM2</code>, <code>STATUS_PAM</code>, <code>PARK_INFO</code>, <code>LIN_BCM_IGW1</code>, <code>BRAKE1</code>, <code>BRAKE4</code></td>
 <td>To stimulate inputs and check outputs by signal name instead of raw bytes</td>
 </tr>
 </tbody>
@@ -4327,7 +4330,7 @@ traceable back to its requirement.</p>
 <h2 id="background-the-pam-state-machine">Background: the PAM state machine<a class="headerlink" href="#background-the-pam-state-machine" title="Permanent link">&para;</a></h2>
 <p>The Parking Assistance Module decides what to do based on a state machine with
 five top-level states. Before drawing it, collect the variables the spec
-defines in chapter 1.11.1.1.1:</p>
+defines in chapter 1.11.1.1.1 — these are the <em>conditions</em> on your arrows:</p>
 <table>
 <thead>
 <tr>
@@ -4346,7 +4349,7 @@ defines in chapter 1.11.1.1.1:</p>
 </tr>
 <tr>
 <td><strong>Reverse Condition</strong></td>
-<td>Gearbox is not manual (<code>Gear_Box_Type ≠ "MTX"</code>) <strong>and</strong> <code>TRANSM2.ShiftLeverPosition = "R"</code> for longer than <code>TReverseGear</code></td>
+<td>Gearbox is not manual (<code>Gear_Box_Type ≠ "MTX"</code>) <strong>and</strong> <code>TRANSM2.ShiftLeverPosition = "R"</code> held for longer than <code>TReverseGear</code></td>
 </tr>
 <tr>
 <td><strong>Standstill Condition</strong></td>
@@ -4354,7 +4357,7 @@ defines in chapter 1.11.1.1.1:</p>
 </tr>
 <tr>
 <td><strong>MODE_PAM</strong></td>
-<td>Internal, stored in non-volatile memory: last activation state (<code>ON</code>/<code>OFF</code>) before KEY OFF; initial value at power-on is <code>OFF</code></td>
+<td>Internal, stored in NVM (non-volatile memory): the last activation state (<code>ON</code>/<code>OFF</code>) before KEY OFF; initial value at power-on is <code>OFF</code></td>
 </tr>
 <tr>
 <td><strong>PAMFault</strong></td>
@@ -4362,8 +4365,9 @@ defines in chapter 1.11.1.1.1:</p>
 </tr>
 </tbody>
 </table>
-<p>The behavior specified in chapter 1.11.1.1.2 then becomes:</p>
-<pre class="mermaid"><code>stateDiagram-v2
+<p>Translated from spec language into a diagram, chapter 1.11.1.1.2 looks like
+this:</p>
+<pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; KEY_OFF
     KEY_OFF --&gt; KEY_ON: ignition ON / START / ON+engine ON
     KEY_ON --&gt; KEY_OFF: ignition OFF or Initialization
@@ -4382,7 +4386,8 @@ defines in chapter 1.11.1.1.1:</p>
     Disable --&gt; OFF: PAM button pressed, PAMFault = FALSE
     OFF --&gt; ON_Enable: PAM button pressed, PAMFault = FALSE
     OFF --&gt; Disable: PAM button pressed while PAMFault = TRUE</code></pre>
-<p>State entry actions that matter for your expected results:</p>
+<p>State entry actions are what make your expected results concrete — these are
+the signal values you will assert:</p>
 <ul>
 <li><strong>KEY ON</strong> — PAM initializes; all <code>STATUS_PAM</code> and <code>PARK_INFO</code> signals go to
   their default values, except <code>STATUS_PAM.PAMSystemSts</code> which initializes to
@@ -4402,8 +4407,9 @@ defines in chapter 1.11.1.1.1:</p>
 <li><strong>OFF</strong> — <code>PAMSystemSts = OFF</code>, <code>RearSensorSts = Active</code>,
   <code>PAM_LedControlSts = Continuous light</code>, <code>MODE_PAM = OFF</code> stored in NVM.</li>
 </ul>
-<p>Configuration parameters referenced by the state machine (chapter 1.13.1,
-first-trial values):</p>
+<p>The state machine also leans on a handful of configuration parameters (chapter
+1.13.1, first-trial values) — treat them as part of the requirements, because
+your test timing depends on them:</p>
 <table>
 <thead>
 <tr>
@@ -4479,7 +4485,8 @@ state machine — and both behaviors are requirements.</p>
 </ol>
 <h2 id="worked-example-test-case-1-pam-status-set-in-off">Worked example — test case 1: "PAM status set in OFF"<a class="headerlink" href="#worked-example-test-case-1-pam-status-set-in-off" title="Permanent link">&para;</a></h2>
 <p>The provided example verifies the path <em>KEY ON → OFF → ON_Enable (via
-ON_Inactive)</em> with no fault and the gear lever in Park:</p>
+ON_Inactive)</em> with no fault and the gear lever in Park. Study its shape — your
+own test cases should look exactly like this:</p>
 <table>
 <thead>
 <tr>
@@ -4531,25 +4538,26 @@ KEY OFF transitions that exercise the NVM restore on the next key-on.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>VF179 §1.11.1.1.2 defines a five-state PAM machine (KEY OFF, KEY ON,
-  ON_Enable with ON_Inactive/ON_Active substates, Disable, OFF) driven by
-  ignition, gear, PAM button, speed, trailer and the <code>PAMFault</code> flag.</li>
+<li>You can now turn VF179 §1.11.1.1.2 into a five-state machine (KEY OFF,
+  KEY ON, ON_Enable with ON_Inactive/ON_Active substates, Disable, OFF)
+  driven by ignition, gear, PAM button, speed, trailer and the <code>PAMFault</code>
+  flag.</li>
 <li>State after key-on is restored from NVM via <code>MODE_PAM</code>, and gear input is
-  filtered for <code>TFilter</code> — both must show up in your test steps.</li>
+  filtered for <code>TFilter</code> — you know both must show up in your test steps.</li>
 <li>A good test case is written in measurable signal values, waits for
-  specified filter times, and links back to its requirement ID.</li>
+  specified filter times, and links back to its requirement ID — and you
+  have a worked example to copy the pattern from.</li>
 <li>Full coverage = every state <em>and</em> every transition, including fault
-  paths; the provided test case 1 (OFF → button → ON_Inactive) is the
-  pattern to follow.</li>
+  paths. You just did real requirement-to-test verification work.</li>
 </ul>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/16_CANoe/CANoe_Exercises/CANoe_Exercise_VF_understanding.pdf">CANoe Exercise VF understanding</a> — PDF, 83.5 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/16_CANoe/CANoe_Exercises/VF179_ParkingAssistanceSystem_Exercise.pdf">VF179 ParkingAssistanceSystem Exercise</a> — PDF, 970.5 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/16_CANoe/CANoe_Exercises/VF179_V1_R3_P332BEV_Per_Academy.pdf">VF179 V1 R3 P332BEV Per Academy</a> — PDF, 996.9 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/16_CANoe/CANoe_Exercises/CANoe_Exercise_VF_understanding.pdf">CANoe Exercise VF understanding</a> — PDF, 83.5 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/16_CANoe/CANoe_Exercises/VF179_ParkingAssistanceSystem_Exercise.pdf">VF179 ParkingAssistanceSystem Exercise</a> — PDF, 970.5 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/16_CANoe/CANoe_Exercises/VF179_V1_R3_P332BEV_Per_Academy.pdf">VF179 V1 R3 P332BEV Per Academy</a> — PDF, 996.9 KB</li>
 </ul>
 
 
@@ -4579,6 +4587,7 @@ KEY OFF transitions that exercise the NVM restore on the next key-on.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4637,6 +4646,41 @@ KEY OFF transitions that exercise the NVM restore on the next key-on.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4649,8 +4693,21 @@ KEY OFF transitions that exercise the NVM restore on the next key-on.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

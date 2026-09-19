@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4325,22 +4313,31 @@
 
 
 <h1 id="canalyzer-exercise-trace-filters-ig-stimulation-cluster">CANalyzer Exercise — Trace Filters &amp; IG Stimulation (Cluster)<a class="headerlink" href="#canalyzer-exercise-trace-filters-ig-stimulation-cluster" title="Permanent link">&para;</a></h1>
-<p>This exercise puts the whole CANalyzer analysis chain to work on the instrument
-cluster (IPC) of the P332 BEV platform. You will build a two-channel measurement
-setup, filter the traffic per channel, stimulate the network with the
-Interactive Generator (IG) block, and verify that the cluster reacts to the
-stimulated failure states exactly as the network specification says it should.</p>
+<p>Time to get your hands on the bus. In this exercise you will put the whole
+CANalyzer analysis chain to work on the <strong>instrument panel cluster (IPC)</strong> of
+the P332 battery electric vehicle (BEV) platform — the ECU that drives the
+warning lamps behind your steering wheel.</p>
+<p>By the end, you'll be able to build a two-channel measurement setup, filter a
+busy bus down to just the messages you care about, impersonate other ECUs with
+the Interactive Generator (IG) block, and <em>prove</em> — with timestamps and
+screenshots — that the cluster reacts to failure states exactly as the network
+specification says it should. This is the day-to-day workflow of every E/E
+test engineer, so the skills transfer directly to your first real project.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>By the end of the exercise you should be able to:</p>
+<p>Work through six steps and come out able to:</p>
 <ul>
-<li>configure <strong>one Trace window per CAN channel</strong> and apply channel-specific
+<li>configure <strong>one Trace window per CAN channel</strong> with channel-specific
   pass/stop filters,</li>
 <li><strong>stimulate signals</strong> with the IG block and confirm them in a Graphic window,</li>
 <li>verify <strong>closed-loop behavior</strong>: a stimulated input signal must produce the
   expected output signal from the IPC,</li>
-<li><strong>log selected traffic</strong> and replay it in offline mode to measure time deltas,</li>
-<li>document the work in a report with screenshots of every step.</li>
+<li><strong>log selected traffic</strong> and replay it in offline mode to measure time
+  deltas,</li>
+<li>document your work in a report with screenshots of every step.</li>
 </ul>
+<p><strong>What you'll practice:</strong> filtering, stimulation, stimulus–response
+verification, logging, and offline time analysis — the five core moves of
+bus-level testing.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -4372,28 +4369,28 @@ stimulated failure states exactly as the network specification says it should.</
 </tr>
 </tbody>
 </table>
-<p>The two DBC files describe the same vehicle platform on two different CAN
-channels — assign each database to its channel so message names, signals and
-value tables decode correctly in the trace.</p>
+<p>The two <strong>DBC (Database CAN)</strong> files describe the same vehicle platform on two
+different CAN channels. Assign each database to its own channel so that message
+names, signals and value tables decode correctly in the trace — with no
+database attached, a trace is just raw identifiers and hex bytes.</p>
 <div class="admonition tip">
 <p class="admonition-title">Screenshot everything</p>
-<p>The exercise is graded on evidence: after each step, copy a screenshot of
-the relevant window into your report document. Do this as you go, not at
-the end.</p>
+<p>This exercise is graded on evidence: after each step, paste a screenshot of
+the relevant window into your report document. Do it as you go — hunting
+for proof at the end always costs more time than it saves.</p>
 </div>
 <h2 id="step-1-per-channel-trace-windows-and-filters">Step 1 — Per-channel Trace windows and filters<a class="headerlink" href="#step-1-per-channel-trace-windows-and-filters" title="Permanent link">&para;</a></h2>
 <p>Create <strong>two Trace blocks</strong> in the measurement setup, one per channel, and name
-them <code>Trace BH</code> and <code>Trace C1</code>. Then apply a different filter policy to each:</p>
+them <code>Trace BH</code> and <code>Trace C1</code>. Then give each one a different filter policy:</p>
 <ul>
-<li><strong>Trace BH → pass filter for IPC.</strong> Insert a pass filter so the window shows
-  <em>only</em> messages transmitted or received by the IPC node. This is the classic
-  "watch one ECU" setup you will use constantly when debugging a single
-  controller on a busy bus.</li>
-<li><strong>Trace C1 → stop filter for BSM.</strong> Insert a stop filter that <em>drops</em> all
-  messages transmitted by the BSM node, leaving everything else visible. This
-  is how you silence a chatty node that would otherwise flood the trace.</li>
+<li><strong>Trace BH → pass filter for IPC.</strong> Show <em>only</em> messages transmitted or
+  received by the IPC node. This is the classic "watch one ECU" setup you will
+  reach for constantly when debugging a single controller on a busy bus.</li>
+<li><strong>Trace C1 → stop filter for BSM.</strong> <em>Drop</em> all messages transmitted by the
+  BSM node and leave everything else visible — the standard trick for silencing
+  a chatty node that would otherwise flood your trace.</li>
 </ul>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     subgraph BH["CAN channel BH"]
         BHBUS[("BH bus")] --&gt; F1{"Pass filter:&lt;br&gt;only IPC Tx/Rx"}
         F1 --&gt; T1[Trace BH window]
@@ -4407,11 +4404,12 @@ them <code>Trace BH</code> and <code>Trace C1</code>. Then apply a different fil
 <p>A <strong>pass filter</strong> is a whitelist: only matching messages get through. A
 <strong>stop filter</strong> is a blacklist: matching messages are discarded and all
 others pass. Swapping the two is the most common reason a trace shows
-"nothing" or "everything".</p>
+"nothing" or "everything" — if your window looks wrong, check the filter
+type first.</p>
 </div>
 <h2 id="step-2-stimulate-signals-with-the-ig-block">Step 2 — Stimulate signals with the IG block<a class="headerlink" href="#step-2-stimulate-signals-with-the-ig-block" title="Permanent link">&para;</a></h2>
-<p>Add an <strong>IG block</strong> to the measurement setup and configure it to transmit the
-following signals with these values:</p>
+<p>Add an <strong>IG block</strong> to the measurement setup and configure it to transmit these
+four signals:</p>
 <table>
 <thead>
 <tr>
@@ -4448,21 +4446,25 @@ following signals with these values:</p>
 </tr>
 </tbody>
 </table>
-<p>Note the pattern: you are building a <strong>plausible vehicle state</strong> — ignition on,
-powertrain active, vehicle moving at 40 km/h — and then injecting an airbag
-failure on top. ECUs like the IPC often gate their behavior on the ignition and
-speed signals, so all four are needed for a realistic test.</p>
+<p>Notice the pattern: you are building a <strong>plausible vehicle state</strong> — ignition
+on, powertrain active, vehicle rolling at 40 km/h — and then injecting an
+airbag failure on top. This is not arbitrary: ECUs like the IPC often gate
+their behavior on the ignition and speed signals, so a "failure" injected into
+a car that looks switched off will simply be ignored.</p>
 <h2 id="step-3-verify-the-stimulation-in-a-graphic-window">Step 3 — Verify the stimulation in a Graphic window<a class="headerlink" href="#step-3-verify-the-stimulation-in-a-graphic-window" title="Permanent link">&para;</a></h2>
-<p>Open a <strong>Graphic window</strong>, drag in the four signals above, and check that each
-trace settles on the value you set in the IG block (<code>AirBagFailSts = 1</code>,
-speed at 40 km/h, <code>CmdIgnSts = RUN</code>, <code>PowertrainPrplsnActv = 1</code>).</p>
+<p>Before trusting any response, trust your stimulus. Open a <strong>Graphic window</strong>,
+drag in the four signals above, and check that each trace settles on the value
+you set in the IG block: <code>AirBagFailSts = 1</code>, speed at 40 km/h,
+<code>CmdIgnSts = RUN</code>, <code>PowertrainPrplsnActv = 1</code>.</p>
 <p>This confirms the IG block is actually transmitting and the DBC decodes the
-frames as expected — always verify your stimulus before trusting the system's
-response to it.</p>
+frames as expected. Experienced engineers <em>always</em> verify the stimulus before
+judging the system's reaction to it — it saves you from debugging a fault that
+lives in your test setup, not in the ECU.</p>
 <h2 id="step-4-closed-loop-checks-how-the-ipc-reacts">Step 4 — Closed-loop checks: how the IPC reacts<a class="headerlink" href="#step-4-closed-loop-checks-how-the-ipc-reacts" title="Permanent link">&para;</a></h2>
-<p>Now the real test. The IPC listens to the failure-status signals and drives its
-lamp-status signals in the <code>CLUSTER2</code> message accordingly. Stimulate each input
-with the IG block and verify the IPC's response in a Graphic window:</p>
+<p>Now the real test. The IPC listens to failure-status signals from other ECUs
+and drives its lamp-status signals in the <code>CLUSTER2</code> message accordingly.
+Stimulate each input with the IG block and watch the IPC answer in a Graphic
+window:</p>
 <table>
 <thead>
 <tr>
@@ -4485,7 +4487,7 @@ with the IG block and verify the IPC's response in a Graphic window:</p>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>sequenceDiagram
+<pre class="kx-mermaid"><code>sequenceDiagram
     participant IG as IG block (tester)
     participant IPC as IPC ECU
     participant GW as Graphic window
@@ -4495,46 +4497,48 @@ with the IG block and verify the IPC's response in a Graphic window:</p>
     IPC--&gt;&gt;GW: CLUSTER2.ABSLamp_FailSts = 2</code></pre>
 <p>This is the essence of <strong>stimulus–response testing</strong>: you impersonate one ECU
 (the airbag or brake controller) and check that another ECU (the cluster)
-translates the failure status into the correct lamp command. The encoded values
-(<code>0</code>, <code>2</code>, <code>3</code>) come from the value tables in the DBC — e.g. <code>3</code> for the airbag
-lamp typically means "lamp flashing" rather than a simple on/off.</p>
+translates the failure status into the correct lamp command. The encoded
+values (<code>0</code>, <code>2</code>, <code>3</code>) come from the value tables in the DBC — e.g. <code>3</code> for
+the airbag lamp means "lamp flashing" rather than a simple on/off, which is
+why a raw on/off expectation would mislead you.</p>
 <h2 id="step-5-logging-and-offline-time-analysis">Step 5 — Logging and offline time analysis<a class="headerlink" href="#step-5-logging-and-offline-time-analysis" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Pick <strong>10 signals</strong>, each from a <em>different</em> message, and configure a
-   <strong>logging block</strong> so only those signals/messages are recorded (reuse a pass
-   filter to restrict the log).</li>
-<li>Start the measurement and the log, then <strong>change the signals one at a time</strong>
-   in the IG block while logging.</li>
+   <strong>logging block</strong> so only those signals are recorded (reuse a pass filter
+   to restrict the log).</li>
+<li>Start the measurement and the log, then <strong>change the signals one at a
+   time</strong> in the IG block while logging.</li>
 <li>Stop, switch CANalyzer to <strong>offline mode</strong>, and load the log file as the
    source. Step through the trace and read the timestamps of your edits.</li>
 <li>Measure the delta times between signal changes:</li>
 <li>first change → third change: expected <strong>Δt ≈ 4.35 s</strong>,</li>
 <li>first change → last change: expected <strong>Δt ≈ 9.16 s</strong>.</li>
 </ol>
-<p>The exact deltas depend on how fast you clicked, but they should be in this
-ballpark — the point of the step is learning to read absolute and relative
-timestamps in an offline trace, a skill you will use for every real log
-analysis.</p>
+<p>Your exact deltas depend on how fast you clicked, so don't chase the numbers —
+landing in this ballpark means you did it right. The real goal of this step is
+learning to read absolute and relative timestamps in an offline trace, a skill
+you will use in every real log analysis from here on.</p>
 <h2 id="step-6-report">Step 6 — Report<a class="headerlink" href="#step-6-report" title="Permanent link">&para;</a></h2>
-<p>Assemble a single report containing, for every step above, the screenshot
-evidence and the measured values: the two filtered traces, the IG
-configuration, the Graphic-window verifications, the logged file, and the two
-delta-time measurements.</p>
+<p>Assemble a single report with the screenshot evidence and measured values for
+every step: the two filtered traces, the IG configuration, the Graphic-window
+verifications, the logged file, and the two delta-time measurements. Treat it
+as a rehearsal for real test documentation — "it worked on my screen" is not
+evidence.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Wrong filter type</strong> — using a stop filter where a pass filter is needed
   (or vice versa) in Step 1; the trace then shows everything or nothing.</li>
-<li><strong>DBC on the wrong channel</strong> — BH and C1 databases swapped, so signals decode
-  to garbage or not at all.</li>
+<li><strong>DBC on the wrong channel</strong> — BH and C1 databases swapped, so signals
+  decode to garbage or not at all.</li>
 <li><strong>Trusting the IG without checking</strong> — skipping the Graphic-window
   verification in Step 3, then wondering why the IPC does not react (the IG
   generator may not even be started).</li>
 <li><strong>Unrealistic vehicle state</strong> — forgetting <code>CmdIgnSts = RUN</code>; many ECUs
   ignore failure inputs when the ignition is off.</li>
-<li><strong>Logging the whole bus</strong> — the exercise asks for a log containing <em>only</em>
-  the 10 chosen signals; without a filter the offline analysis is needle-in-a-
-  haystack.</li>
-<li><strong>Reading absolute time instead of delta</strong> — Steps 7–8 want the <em>difference</em>
+<li><strong>Logging the whole bus</strong> — the exercise wants a log containing <em>only</em> the
+  10 chosen signals; without a filter, offline analysis becomes a
+  needle-in-a-haystack search.</li>
+<li><strong>Reading absolute time instead of delta</strong> — Step 5 wants the <em>difference</em>
   between timestamps, not the timestamps themselves.</li>
 </ul>
 <div class="admonition success">
@@ -4542,26 +4546,30 @@ delta-time measurements.</p>
 <ul>
 <li>One Trace window per channel keeps multi-bus analysis readable; pass
   filters whitelist, stop filters blacklist.</li>
-<li>The IG block impersonates ECUs: stimulate a realistic vehicle state
-  (ignition RUN, speed 40 km/h) plus the failure you want to test.</li>
-<li>Always verify the stimulus (Graphic window) before judging the response.</li>
-<li>Closed-loop check: <code>AirBagFailSts = 1</code> must produce
-  <code>CLUSTER2.AirBagLamp_FailSts = 3</code>; <code>ABSFailSts = 1</code> must produce
-  <code>CLUSTER2.ABSLamp_FailSts = 2</code>.</li>
+<li>The IG block lets you impersonate ECUs: stimulate a realistic vehicle
+  state (ignition RUN, speed 40 km/h) plus the failure you want to test.</li>
+<li>Always verify the stimulus in a Graphic window before judging the
+  response — you've now got the habit that separates fast debuggers from
+  frustrated ones.</li>
+<li>Closed-loop check passed? <code>AirBagFailSts = 1</code> →
+  <code>CLUSTER2.AirBagLamp_FailSts = 3</code> and <code>ABSFailSts = 1</code> →
+  <code>CLUSTER2.ABSLamp_FailSts = 2</code> mean you just ran a real
+  stimulus–response test.</li>
 <li>Log only what you need, then use offline mode to measure delta times
-  (≈ 4.35 s and ≈ 9.16 s between your edits).</li>
+  (≈ 4.35 s and ≈ 9.16 s between your edits) — you're ready for real log
+  analysis.</li>
 </ul>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/CANalyzer_Exercise_IGTrace.pdf">CANalyzer Exercise IGTrace</a> — PDF, 103.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/CANalyzer_Exercise_IGTrace.pdf">CANalyzer Exercise IGTrace</a> — PDF, 103.8 KB</li>
 </ul>
 <h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">&para;</a></h2>
 <ul>
-<li>:material-file: <a href="../../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc">P332BEV BH CAN R1 20200902 E2A plus CR14698 14830 14888</a> — 457.8 KB</li>
-<li>:material-file: <a href="../../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc">P332BEV C1 CAN R1 20200902 E2A plus CR14698 14830 14888</a> — 388.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc">P332BEV BH CAN R1 20200902 E2A plus CR14698 14830 14888</a> — 457.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IGTrace/P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc">P332BEV C1 CAN R1 20200902 E2A plus CR14698 14830 14888</a> — 388.8 KB</li>
 </ul>
 
 
@@ -4591,6 +4599,7 @@ delta-time measurements.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4598,7 +4607,7 @@ delta-time measurements.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../canalyzer-exercise-ig/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CANalyzer Exercise: Trace Filters &amp;amp; the Interactive Generator (IG)">
+          <a href="../canalyzer-exercise-ig/" class="md-footer__link md-footer__link--prev" aria-label="Previous: CANalyzer Exercise: Trace Filters &amp;amp; the Interactive Generator">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4608,7 +4617,7 @@ delta-time measurements.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                CANalyzer Exercise: Trace Filters &amp; the Interactive Generator (IG)
+                CANalyzer Exercise: Trace Filters &amp; the Interactive Generator
               </div>
             </div>
           </a>
@@ -4649,6 +4658,41 @@ delta-time measurements.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4661,8 +4705,21 @@ delta-time measurements.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

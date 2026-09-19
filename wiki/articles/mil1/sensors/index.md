@@ -1,11 +1,15 @@
 # Sensors & Actuators
 
-Every electronic control unit (ECU) in a vehicle does the same three things:
-it **senses** a physical quantity, **processes** the measurement, and **acts**
-on the system to change its behavior. This article covers the two ends of that
+Welcome to one of the most hands-on topics of the bootcamp. Every electronic
+control unit (ECU) in a vehicle does the same three things: it **senses** a
+physical quantity, **processes** the measurement, and **acts** on the system
+to change its behavior. This article walks you through the two ends of that
 chain — the sensors that feed information in and the actuators that turn the
 ECU's decisions back into physical action — plus the vocabulary you need to
-read an automotive wiring schematic and classify what you find on it.
+read an automotive wiring schematic and classify what you find on it. By the
+end, you will be able to pick up a real engine schematic and label every
+component on it as sensor or actuator, active or passive, analog or digital —
+a skill you will use from your very first week on a project.
 
 ## Sensors
 
@@ -28,11 +32,14 @@ signal in response to a specific measurand — so **a transducer is always a
 sensor, but a sensor is not necessarily a transducer** (a sensor may need a
 separate transduction stage before anything electrical appears).
 
+Keep the whole chain in mind — this is the path every measurement takes from
+the physical world into the software you will write and test:
+
 ```mermaid
 flowchart LR
     M["Physical quantity<br/>(measurand)"] --> S["Sensor /<br/>Transducer"]
     S --> C["Signal<br/>conditioning"]
-    C --> E["ECU input stage<br/>(A/D conversion)"]
+    C --> E["ECU input stage<br/>(analog-to-digital conversion)"]
     E --> P["Control software"]
     P --> D["Output driver"]
     D --> A["Actuator"]
@@ -60,9 +67,10 @@ Sensors are grouped along several independent axes:
   in response to the measurand — it cannot generate energy by itself.
   Examples: strain gauges and magnetic sensors.
 
-This distinction has a direct practical consequence: a passive sensor needs an
-external excitation (a supply voltage or current) before it produces anything
-readable, while an active one generates its signal on its own.
+This distinction has a direct practical consequence you will feel in the lab:
+a passive sensor needs an external excitation (a supply voltage or current)
+before it produces anything readable, while an active one generates its signal
+on its own. If a passive sensor reads a flat zero, check its supply pin first.
 
 ### Conditioning circuits
 
@@ -83,7 +91,9 @@ type:
 ### Static characteristics
 
 Static characteristics describe how a sensor behaves when the measurand
-changes slowly enough that dynamics do not matter.
+changes slowly enough that dynamics do not matter. Do not try to memorize
+every term now — treat this as the reference you will come back to whenever a
+datasheet or a test report uses one of these words.
 
 **Input side:**
 
@@ -91,19 +101,14 @@ changes slowly enough that dynamics do not matter.
 - **Measurement principle** — the physical principle the output generation is
   based on.
 - **Range** — the upper and lower limits within which the measurand may vary.
-- **Significant properties** — type of sensitive element, construction, and
-  internal circuitry.
 
 **Output side:**
 
-- **Species** — the nature of the output quantity (voltage, current,
-  resistance, …).
 - **Normal operating range (output range)** — the span of output values
   produced while the input sweeps the full input range.
 - **Deliverable power** — the maximum power the sensor can supply to the
   downstream system; for current outputs the **load impedance** is specified
   instead.
-- **Output impedance** — matters for matching to the ECU input stage.
 - **Output uncertainty** — the width of the band that contains, with a stated
   confidence level, all the values the output may take for a given operating
   condition.
@@ -111,12 +116,10 @@ changes slowly enough that dynamics do not matter.
 **Calibration and conversion:**
 
 - **Conversion function** — the function that maps the input value to the
-  output value (what a DBC-style scaling factor + offset encodes for a bus
-  signal).
+  output value. This is exactly what a scaling factor + offset encodes for a
+  bus signal in a DBC (Database CAN) file — you will meet those in MIL2.
 - **Calibration constant** — the slope of the calibration curve, when the
   curve is linear.
-- **Calibration uncertainty** — the width of the band of possible calibration
-  values.
 - **Sensitivity** — the slope of the conversion curve at a given operating
   point; for a linear sensor it is the inverse of the slope of the
   calibration curve.
@@ -155,13 +158,16 @@ When the measurand changes quickly, the sensor's own speed matters:
   **time constant**, and the **settling time** (how long the output needs to
   enter and stay within its final error band after a step input).
 
-A knock sensor needs bandwidth in the kilohertz range; a coolant temperature
-sensor can be a hundred times slower without anyone noticing.
+A concrete way to feel this: a knock sensor needs bandwidth in the kilohertz
+range to catch combustion vibrations, while a coolant temperature sensor can
+be a hundred times slower without anyone noticing. Matching sensor speed to
+the job is a design decision you will see documented in every sensor spec.
 
 ### Common physical effects and sensor examples
 
-The table below collects the classic transduction effects — it is a practical
-lookup when you need to guess how an unknown sensor on a schematic works.
+The table below collects the transduction effects you will actually meet on
+vehicle schematics — it is a practical lookup when you need to guess how an
+unknown sensor works.
 
 | Physical effect | What happens | Typical devices | Measures | Output |
 |---|---|---|---|---|
@@ -169,11 +175,8 @@ lookup when you need to guess how an unknown sensor on a schematic works.
 | Piezoelectric | Stress on the element generates electric charge | Force sensors, piezo microphone, piezo temperature sensor | Vibration, force, ultrasonic waves, temperature | Voltage or charge |
 | Pyroelectric | Element generates charge in response to heat flow | Heat flowmeter, pyroelectric sensor | Temperature change | Voltage |
 | Thermoelectric | Temperature difference between two junctions of different metals generates a potential | Thermocouples, thermopiles, infrared pyrometer | Temperature difference | Voltage |
-| Ionization | The measurand ionizes the sensing element | Electrolytic sensor, vacuum gauges, chemical ionizer | Conductivity, pH, pressure, atomic radiation | Current |
 | Photoresistive | Optical radiation changes the element's resistance | Photoresistor, photodiode, phototransistor, photofet | Light, position, motion, sound flow, force | Change in resistance |
 | Photovoltaic | Radiation makes the element generate a potential | Flame photometer, light detector, pyrometer | Light intensity, position, motion, temperature | Voltage |
-| Acousto-optic | An optical wave interacting with an acoustic wave produces a new optical wave | Acousto-optic deflector, Bragg cell | Physical vibration | Phase-modulated voltage |
-| Doppler | Wave frequency shifts with relative motion between source and observer | Doppler radar, laser Doppler velocimeter | Relative velocity | Frequency |
 | Thermal radiation | Objects emit radiation whose intensity depends on temperature | Pyrometer | Temperature | Voltage |
 
 ## Actuators
@@ -190,10 +193,9 @@ another domain: mechanical, hydraulic, thermal, and so on.
 Actuators are classified two ways:
 
 - **By the physical quantity the command is transduced into** — the most
-  common families are *mechanical*, *hydraulic* ("plumbers" in the deck's
-  translation), and *electrical*.
+  common families are *mechanical*, *hydraulic*, and *electrical*.
 - **By the type of electric actuation command** — **digital** (on/off) or
-  **analog** (in practice almost always **PWM**).
+  **analog** (in practice almost always **PWM**, explained below).
 
 ### The relay — the basic digital actuator
 
@@ -223,15 +225,16 @@ current (a fuel pump, a starter solenoid, a fan).
     Pin labels like `CANISTER PURGE PWM (HSD)` or
     `HIGH PRESS GDI FUEL PMP LSD` on a wiring diagram tell you immediately
     which side the ECU driver switches — essential when you probe the circuit
-    with a multimeter or scope.
+    with a multimeter or scope. Once you spot this pattern, half of any
+    actuator wiring becomes readable at a glance.
 
 ### PWM — the analog-style command
 
-To get an *analog* effect from a digital output, ECUs use **PWM (Pulse Width
-Modulation)**: the pin switches fully on and fully off at a fixed frequency,
-and the **duty cycle** (the fraction of the period spent "on") encodes the
-commanded value. An inductive or thermal load — a valve, a heater, a lamp —
-averages the pulses, so 50 % duty behaves like half power.
+To get an *analog* effect from a digital output, ECUs use **Pulse Width
+Modulation (PWM)**: the pin switches fully on and fully off at a fixed
+frequency, and the **duty cycle** (the fraction of the period spent "on")
+encodes the commanded value. An inductive or thermal load — a valve, a
+heater, a lamp — averages the pulses, so 50 % duty behaves like half power.
 
 ![PWM generation: comparing a reference sine with a sawtooth carrier produces a pulse train whose duty cycle tracks the reference](img/pwm-generation.webp)
 
@@ -287,7 +290,7 @@ matter:
 
 - **Port injection (no GDI)** — fuel pressure is a few bar; the injector is a
   simple low-voltage solenoid, driven on/off.
-- **GDI (Gasoline Direct Injection)** — fuel pressure is tens to hundreds of
+- **Gasoline Direct Injection (GDI)** — fuel pressure is tens to hundreds of
   bar, so opening the needle takes much more energy. The driver uses a
   **peak-and-hold** current profile and, as the schematics show, **both an HSD
   and an LSD** line (`HIGH PRESS GDI FUEL PMP HSD/LSD`) so the ECU can control
@@ -295,8 +298,12 @@ matter:
 
 ## Hands-on: classify the sensors and actuators on a real engine schematic
 
-The lesson exercise gives you two real wiring schematics from the **520 eAWD
-with the 1.3 GSE T4 engine** (ECU: Continental GPEC4 LM):
+**What you'll practice:** reading two real wiring schematics and classifying
+every component on them — the exact routine you will repeat on real projects.
+
+The lesson exercise gives you two wiring schematics from the **520 eAWD
+(electric All-Wheel Drive) with the 1.3 GSE T4 engine** (ECU: Continental
+GPEC4 LM):
 
 - `520_eAWD_EMEA_sch_eng_1.3_GSE_T4_20180611.pdf` — the **engine-side**
   schematic (engine harness, ECU engine connector, sensors and actuators on
@@ -322,32 +329,35 @@ wire labels (`TIP sensor signal`, `Linear lambda sensor … HS HTR command`,
    injectors, valves, motors, relays).
 3. Classify each sensor active or passive from its physical principle —
    e.g. a thermocouple/piezo element generates its own signal (active), an
-   NTC/strain element needs excitation (passive).
+   NTC (Negative Temperature Coefficient) thermistor or strain element needs
+   excitation (passive).
 4. Classify each interface analog or digital — continuous voltage signals
    (pressure, temperature, pedal position) are analog; switches and PWM/HSD/
    LSD-driven loads are digital commands.
 5. Repeat on the vehicle sheet for body-side components.
 
-**Expected result (orientation):** the engine sheet alone contains, among
-others —
+**Expected result (orientation):** do not worry if your first pass misses a
+few — the engine sheet alone contains, among others —
 
 - *Sensors:* knock sensors 1–2, engine speed (crankshaft) sensor, engine phase
   (camshaft) sensor, GDI fuel rail pressure sensor, coolant temperature
-  sensor, oil gallery sensor, intake P&T / TMAP sensor, inlet throttle (TIP)
-  pressure and temperature sensors, linear lambda sensor in front of the
-  catalyst, VVA oil temperature sensor, throttle position sensors TPS1/TPS2.
+  sensor, oil gallery sensor, intake P&T / Temperature and Manifold Absolute
+  Pressure (TMAP) sensor, throttle inlet pressure and temperature (TIP)
+  sensors, linear lambda sensor in front of the catalyst, Variable Valve
+  Actuation (VVA) oil temperature sensor, throttle position sensors TPS1/TPS2.
 - *Actuators:* ignition coils for cylinders 1–4, GDI injectors for cylinders
   1–4, VVA actuators 1–4, variable-displacement oil pump electrovalve (VDOP),
   dump valve, waste-gate valve, rail pressure regulator/control valve,
   electric thermostat actuator, throttle actuator, canister purge valve
-  (PWM, HSD), high-pressure GDI fuel pump (HSD + LSD), starter, WCAC pump.
+  (PWM, HSD), high-pressure GDI fuel pump (HSD + LSD), starter, water-cooled
+  charge air cooler (WCAC) pump.
 
 The vehicle sheet adds the accelerator pedal position sensor, stop-lamp
-switch, fuel level and fuel tank pressure sensors, GPF temperature and
-differential pressure sensors, plus the fuel pump relay, cranking-disable
-relay, engine control module relay and fuel-lid latch.
+switch, fuel level and fuel tank pressure sensors, Gasoline Particulate Filter
+(GPF) temperature and differential pressure sensors, plus the fuel pump relay,
+cranking-disable relay, engine control module relay and fuel-lid latch.
 
-**Common mistakes:**
+**Common mistakes** (everyone makes at least one of these the first time):
 
 - Calling a knock sensor *passive* — it is piezoelectric, so it **generates**
   charge (active). Temperature NTCs and pressure cells that need a `sensor
@@ -361,22 +371,21 @@ relay, engine control module relay and fuel-lid latch.
   (FRB/RB designators on the vehicle sheet) and are driven *by* the ECU.
 
 !!! success "Key takeaways"
-    - Sensor → transducer → transmitter is a chain of increasing refinement:
-      sense the quantity, convert it to an electrical signal, normalize it.
-    - Active sensors generate their own energy (thermocouple, piezo);
-      passive ones only change impedance and need an excitation circuit.
-    - Know the static vocabulary: range, sensitivity, calibration, linearity,
-      resolution/threshold, repeatability, hysteresis — and the dynamic one:
-      bandwidth, rise/fall time, settling time.
+    - You now own the chain: **sense → condition → process → drive → act** —
+      sensor, transducer and transmitter are just increasing refinement of the
+      sensing end.
+    - Active sensors make their own energy (thermocouple, piezo); passive ones
+      only change impedance and need excitation — check the supply pin first
+      when a passive sensor reads dead.
+    - You can speak datasheet: range, sensitivity, calibration, linearity,
+      resolution, repeatability, hysteresis, bandwidth, settling time.
     - Actuators close the loop: relays for on/off loads (HSD switches the high
       side, LSD the low side), PWM for proportional control, H-bridges for
-      bidirectional motors.
-    - Ignition coils and GDI injectors show why actuators need dedicated power
-      stages: transformers for kilovolts, peak-and-hold dual-side drivers for
-      high-pressure fuel.
-    - On a wiring schematic, component names plus ECU pin labels are enough to
-      classify every element as sensor/actuator, active/passive,
-      analog/digital.
+      bidirectional motors — and power stages like coil transformers and
+      peak-and-hold injector drivers for the heavy lifting.
+    - Best of all: with component names plus ECU pin labels, you can now
+      classify every element on a real schematic — sensor/actuator,
+      active/passive, analog/digital. That is a genuine engineer skill.
 
 !!! tip "Where this leads"
     The signals these sensors produce travel to other ECUs over the vehicle

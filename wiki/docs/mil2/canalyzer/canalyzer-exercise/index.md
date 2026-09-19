@@ -1,16 +1,29 @@
 # CANalyzer Exercises — Bench, Log Analysis and Diagnostics
 
-These three hands-on exercises take you from "I know what CANalyzer is" to
-using it the way a test engineer does: wiring a real ECU on the bench,
-keeping it alive with simulated bus traffic, mining a recorded log for a
-driving anomaly, and running a full UDS diagnostic session. Work through them
-in order — each one assumes the skills of the previous one.
+Welcome to your first day as a test engineer. Everything you learned about
+CAN (Controller Area Network) frames, DBC (Database CAN) files and
+measurement windows now leaves the slides and meets real hardware. These
+three exercises walk you through the three jobs you will do again and again
+in this career: waking an electronic control unit (ECU) up on a bench,
+reading a story out of a recorded drive, and running a proper diagnostic
+session. By the end you will be able to:
+
+- wire an instrument cluster to **CANalyzer** and make it behave as if it
+  were installed in a real car,
+- reconstruct what a driver and a vehicle were doing from a recorded bus
+  log — and argue, with evidence, where something went wrong,
+- read data, write data and manage faults on an ECU over **UDS** (Unified
+  Diagnostic Services) like someone who does this for a living.
+
+Work through them in order: each exercise quietly assumes the reflexes you
+built in the one before. Take your time with the first one — the bench habits
+you form there pay off everywhere else.
 
 !!! tip "Prerequisites"
-    Make sure you are comfortable with the CANalyzer measurement windows,
-    databases and replay blocks from the
-    [CANalyzer](../index.md) topic, and with CAN frame/DBC basics from
-    [CAN, LIN & Automotive Ethernet](../../../mil1/can-lin/index.md).
+    Be comfortable with CANalyzer's measurement windows, databases and
+    replay blocks from the [CANalyzer](../index.md) topic, and with CAN
+    frame/DBC basics from [CAN, LIN & Automotive Ethernet](../../../mil1/can-lin/index.md).
+    If either feels shaky, review it now rather than fighting the tool later.
 
 ## Setup
 
@@ -18,9 +31,9 @@ in order — each one assumes the skills of the previous one.
 
 | Equipment | Role |
 |---|---|
-| IPC (Instrument Panel Cluster) ECU | Device under test — the academy ECU available in the Napoli and Torino offices |
-| CANcaseXL (CAN case) | USB CAN interface between the laptop and the ECU |
-| LV power supply | Powers the cluster at battery voltage (12 V) |
+| IPC (Instrument Panel Cluster) ECU | Your device under test — the academy ECU kept in the Napoli and Torino offices |
+| CANcaseXL ("CAN case") | The USB-to-CAN interface between your laptop and the ECU |
+| LV (low-voltage) power supply | Feeds the cluster at battery voltage (12 V) |
 
 ```mermaid
 flowchart LR
@@ -29,75 +42,90 @@ flowchart LR
     Laptop["Laptop<br/>(CANalyzer)"] <-->|USB| CANcase
 ```
 
+The wiring is deliberately simple: power and ground to the cluster, CAN-H and
+CAN-L to the interface, USB to the laptop. If a bench is already wired when
+you arrive, trace every cable with your own eyes before switching anything
+on — knowing exactly where each wire goes is a skill, not a formality.
+
 ### Software and files
 
-- **CANalyzer** with the vehicle **DBC database** for the cluster
+- **CANalyzer** with the vehicle **DBC database** for the cluster — this is
+  what turns raw hex into named, scaled signals
 - **Dianalyzer** and **CANdelaStudio** (Exercise 3) — the diagnostic tester
-  and the diagnostic-database authoring tool
-- `Acquisizione_BOA.7z` (Exercise 2) — a recorded bus acquisition from a real
-  vehicle drive
-- The **ISO 14229 (UDS)** specification as reference for diagnostic services
-  and DTC status bits (Exercise 3)
+  and the tool for authoring its diagnostic database
+- `Acquisizione_BOA.7z` (Exercise 2) — a bus acquisition recorded during a
+  real vehicle drive; *acquisizione* is Italian for "recording"
+- The **ISO 14229 (UDS)** specification as your reference for diagnostic
+  services and fault status bits (Exercise 3)
 
 ---
 
 ## Exercise 1 — IPC configuration and rest-bus simulation
 
 **Goal.** Connect the cluster to CANalyzer, bring the communication up, and
-make the instrument panel behave as if it were installed in a real vehicle.
+make the instrument panel behave as if it were living in a real vehicle.
 
-### Procedure
+**What you'll practice:** the full bench bring-up routine — wiring,
+configuring the tool, and faking the rest of the car well enough that the
+ECU never notices it is alone.
 
-1. **Wire the bench.** Connect the LV power supply to the ECU's battery and
-   ground pins, and the CANcaseXL channel to the ECU's CAN-H/CAN-L pins.
-   If the wiring is already done, identify and describe every cable before
-   switching anything on.
-2. **Configure CANalyzer.** Create a new configuration, assign the real
-   CAN channel to the CANcaseXL hardware, set the correct **baud rate** for
-   the cluster's bus, and attach the provided **DBC** so raw frames are
-   decoded into named signals.
-3. **Verify communication.** Start the measurement and confirm in the Trace
-   window that the cluster is transmitting (e.g. its cyclic status frames).
-4. **Answer the termination question.** The bench setup needs a **120 Ω
-   termination resistor** between CAN-H and CAN-L. On a vehicle the two 120 Ω
-   resistors sit at the ends of the bus; on a short bench harness the
-   resistor still prevents signal reflections and defines the recessive bus
-   level, so without it communication can be unreliable or absent.
+### Steps
+
+1. **Wire the bench.** Connect the LV supply to the ECU's battery and ground
+   pins, and the CANcaseXL channel to its CAN-H/CAN-L pins. If it is already
+   wired, identify and describe every cable before powering up.
+2. **Configure CANalyzer.** Create a new configuration, assign the real CAN
+   channel to the CANcaseXL hardware, set the correct **baud rate** for the
+   cluster's bus, and attach the provided DBC so frames decode into signals.
+3. **Verify communication.** Start the measurement and watch the Trace
+   window: you should see the cluster transmitting its cyclic status frames.
+   An empty trace at this point means wiring, baud rate or termination — in
+   that order of likelihood.
+4. **Answer the termination question.** Yes, you need a **120 Ω resistor**
+   between CAN-H and CAN-L. On a vehicle, two 120 Ω resistors sit at the two
+   ends of the bus; on a short bench harness the resistor still matters,
+   because it prevents signal reflections and defines the recessive bus
+   level. Without it, communication can be unreliable — or simply absent.
 5. **Simulate the rest of the bus.** The cluster expects to *receive* frames
-   from other ECUs (vehicle speed, engine state, tell-tale requests, …).
-   Use CANalyzer generator blocks / Interactive Generator (IG) blocks to
-   transmit every frame the IPC subscribes to, with plausible cycle times.
-6. **Explain why step 5 is needed.** A single ECU alone on the bus misses
-   its expected inputs: it raises communication DTCs, lights warning lamps,
-   and may go into a degraded state or stop communicating. Simulating the
-   rest of the network (a *rest-bus simulation*) keeps it in a normal
-   operating state — this is exactly what CANoe/CANalyzer do in every HIL
-   setup.
-7. **Turn off the warning lamps.** With the cluster powered but no valid
-   data, several tell-tales are lit. Analyze the DBC, find the signals that
-   command each lamp, and drive them to their "lamp off" values until the
-   cluster face is clean.
-8. **Build a plausible driving scenario.** Simulate a coherent set of
-   values — a state of charge, a vehicle speed, gear **D (drive)** and any
-   other information visible on the cluster — and check that the display
-   shows them consistently.
-9. **Write the report.** Document the wiring, the configuration steps,
-   answers to the questions above and the results, with screenshots.
+   from the ECUs it lives with: vehicle speed, engine state, tell-tale
+   requests, and more. Use CANalyzer's generator blocks / **IG** (Interactive
+   Generator) blocks to transmit every frame the IPC subscribes to, with
+   plausible cycle times.
+6. **Explain why step 5 is needed.** Put the reason in your own words in
+   the report: an ECU that misses its expected inputs raises communication
+   **DTCs** (Diagnostic Trouble Codes), lights warning lamps, and may drop
+   into a degraded state or stop talking altogether. Feeding it the traffic
+   it expects — a *rest-bus simulation* — keeps it in its normal operating
+   state. This exact trick is what CANoe/CANalyzer do inside every **HIL**
+   (hardware-in-the-loop) rig in the industry, so you are learning the real
+   thing, not a classroom shortcut.
+7. **Turn off the warning lamps.** Powered with no valid data, the cluster
+   face lights up like a Christmas tree. Hunt through the DBC for the
+   signals that command each lamp and drive them to their "lamp off" values,
+   one by one, until the panel is clean.
+8. **Build a plausible driving scenario.** Now the fun part: simulate a
+   coherent set of values — a state of charge, a vehicle speed, gear **D**
+   (drive) and anything else visible on the cluster — and check that the
+   display tells one consistent story.
+9. **Write the report.** Document the wiring, every configuration step,
+   your answers to the questions above, and the results, with screenshots.
 
 ### Expected result
 
-A cluster that powers up cleanly, communicates on the trace, shows **no
-warning lamps**, and displays your simulated speed/state-of-charge/gear
-scenario like a vehicle in normal driving.
+A cluster that powers up cleanly, shows traffic in the trace, displays **no
+warning lamps**, and presents your simulated speed/state-of-charge/gear
+scenario like a car out on a normal drive.
 
 !!! warning "Common mistakes"
     - **Missing 120 Ω termination** — intermittent or no communication.
     - **Wrong baud rate** — the trace stays empty or fills with error frames.
-    - **No DBC attached** — you stare at raw hex instead of signal names.
+    - **No DBC attached** — you end up staring at raw hex instead of signal
+      names.
     - Sending frames with **stale counter/checksum signals** — many ECUs
-      reject frames whose rolling counter or CRC doesn't advance correctly.
-    - Forgetting a frame the ECU expects — one missing message is enough to
-      keep a lamp on or log a communication DTC.
+      reject frames whose rolling counter or **CRC** (cyclic redundancy
+      check) doesn't advance correctly.
+    - Forgetting one frame the ECU expects — a single missing message is
+      enough to keep a lamp on or log a communication DTC.
 
 ---
 
@@ -105,49 +133,59 @@ scenario like a vehicle in normal driving.
 
 **Goal.** Analyze a real vehicle acquisition (`Acquisizione_BOA.7z`) offline
 in CANalyzer and reconstruct what the driver and the vehicle were doing —
-including spotting a potential problem in the recorded manoeuvre.
+including spotting a potential problem hidden in the recorded manoeuvre.
 
-### Procedure
+**What you'll practice:** the analyst's craft — choosing the few signals
+that matter, reading them against each other in time, and building an
+argument out of measured values instead of guesses.
+
+### Steps
 
 1. **Load the log** with a Replay Block (offline mode) and attach the
-   matching DBC so signals decode.
-2. **Graph the engine RPM** alone first: create a Graphics window containing
-   only the RPM signal and observe its profile over the whole drive.
+   matching DBC so the signals decode.
+2. **Graph the engine RPM** (revolutions per minute) alone first: a
+   Graphics window with only the RPM signal, so you can absorb the shape of
+   the whole drive without distractions.
 3. **Build a "vehicle story" graph.** Add only the signals that explain the
-   dynamic state of the vehicle and the driver's actions — typically vehicle
+   vehicle's dynamic state and the driver's actions — typically vehicle
    speed, accelerator pedal position, brake switch/pressure, gear, steering
-   angle. Resist the temptation to plot everything: a readable graph with
-   4–6 meaningful signals beats a rainbow of 20.
-4. **Hunt for the anomaly.** Correlate the signals in time and identify the
-   potential issue hidden in the manoeuvre (look for contradictions: pedal
-   vs. RPM vs. speed, implausible transitions, flat-lined or frozen signals).
+   angle. Resist the urge to plot everything: a readable graph with 4–6
+   meaningful signals beats a rainbow of twenty.
+4. **Hunt for the anomaly.** Correlate the signals in time and find the
+   potential issue in the manoeuvre. Look for contradictions: pedal versus
+   RPM versus speed, implausible transitions, signals that flat-line or
+   freeze when they shouldn't.
 5. **Write the report** describing the activity and the issue you found,
-   with screenshots of the decisive graph section.
+   with screenshots of the decisive section of the graph.
 
 ### Expected result
 
-A small set of graphs from which you can narrate the drive ("acceleration,
-cruise, braking…") and a clearly argued identification of the suspicious
+A small set of graphs from which you can narrate the drive — "acceleration,
+cruise, braking…" — and a clearly argued identification of the suspicious
 behaviour in the log.
 
 !!! note "Analysis technique"
     Use cursors/measurement markers in the Graphics window to read exact
-    values and time deltas at the moment the signals disagree — "signal X
-    was at value Y for Z seconds while signal W…" is the kind of evidence a
-    good report is built on.
+    values and time deltas at the moment the signals disagree. "Signal X
+    held value Y for Z seconds while signal W did this…" is the kind of
+    sentence a strong report is built from — measured evidence, not vibes.
 
 ---
 
 ## Exercise 3 — Diagnostic session on the IPC
 
-**Goal.** Connect to the IPC and work through a complete UDS diagnostic
+**Goal.** Connect to the IPC and work through a complete UDS (ISO 14229)
 workflow using **Dianalyzer**, **CANalyzer** and **CANdelaStudio**: explore
 the diagnostic database, read and write data by identifier, and manage DTCs.
 
+**What you'll practice:** the create–read–verify–clear loop that diagnostic
+engineers run every day, and the discipline of decoding hexadecimal
+responses byte by byte against a specification.
+
 ### The main diagnostic services
 
-The exercise asks you to identify the main UDS (ISO 14229) services. The
-ones you will actually use here:
+The exercise asks you to identify the main UDS services. These are the ones
+you will actually use here — learn to recognize their IDs on sight:
 
 | Service | ID | Purpose in this exercise |
 |---|---|---|
@@ -173,44 +211,46 @@ sequenceDiagram
     E-->>T: 54 (positive response)
 ```
 
-### Procedure
+### Steps
 
 1. **Explore the database.** Open the diagnostic database in CANdelaStudio
-   and extract: the list of all **RDIs** (readable data identifiers), the
-   list of all **DTCs** with the DTC table, the list of all **I/Os**, and
-   the list of all **routines**. These four inventories tell you everything
-   the ECU allows a tester to do.
+   and extract four inventories: the list of all **RDIs** (readable data
+   identifiers), all **DTCs** with their DTC table, all **I/Os**, and all
+   **routines**. Together these tell you everything the ECU allows a tester
+   to do — your map of the territory before you start walking it.
 2. **Read an RDI.** Request one RDI and interpret the raw **hexadecimal
    response** byte by byte against its specification.
 3. **Make the value move.** Put the IPC into the vehicle conditions that
-   modify the selected RDI — i.e. simulate the relevant bus signals as in
-   Exercise 1. Simulate a speed of **60 km/h**, request the associated RDI
-   and analyze the response; repeat with **150 km/h**, **250 km/h** and
-   **600 km/h** and compare.
+   change the selected RDI — i.e. simulate the relevant bus signals, exactly
+   as in Exercise 1. Simulate a speed of **60 km/h**, request the associated
+   RDI and analyze the response; repeat at **150 km/h**, **250 km/h** and
+   **600 km/h** and compare. Yes, 600 km/h — pushing a value past any
+   plausible range is a classic way to learn how an ECU encodes, saturates
+   or rejects data.
 4. **Write 3 RDIs.** Use WriteDataByIdentifier (`0x2E`) to write the
-   contents of three RDIs, then verify each value by reading it back from
-   the ECU (`0x22`).
-5. **Work the DTCs.** Create a fault condition (e.g. by interrupting an
-   expected signal), then:
+   contents of three RDIs, then verify each one by reading it back from the
+   ECU (`0x22`). Never trust a write you haven't read back.
+5. **Work the DTCs.** Create a fault condition — interrupting an expected
+   signal works well — then:
    - evaluate the DTC **status byte**;
    - perform and describe the operations needed to set **bit 0 = 1**
-     (*testFailed* — the fault is currently present) and **bit 2 = 0**
+     (*testFailed* — the fault is present right now) and **bit 2 = 0**
      (*pendingDTC* cleared);
-   - **clear the error memory** with ClearDiagnosticInformation;
+   - **clear the error memory** with ClearDiagnosticInformation (`0x14`);
    - identify the **snapshot** (freeze frame) stored with the error and
      request the snapshot(s) via ReadDTCInformation.
 
 ### Expected result
 
-Hex responses you can decode by hand, three RDIs written and read back
-successfully, and a fault created, qualified via its status byte, snapshotted
-and cleared — the complete create-read-verify-clear diagnostic loop.
+Hex responses you can decode by hand, three RDIs written and successfully
+read back, and a fault that you created, qualified through its status byte,
+snapshotted and cleared — the complete diagnostic loop, start to finish.
 
 !!! tip "DTC status byte cheat sheet"
     Bit 0 *testFailed* = fault present **right now**; bit 2 *pendingDTC* =
     fault seen but not yet confirmed; bit 3 *confirmedDTC* = fault confirmed
-    and stored. A fault heals in stages: fix the cause and bit 0 goes to 0
-    first, while confirmed/pending bits clear only after enough passing
+    and stored. A fault heals in stages: fix the cause and bit 0 falls to 0
+    first, while the confirmed/pending bits clear only after enough passing
     cycles or an explicit `0x14` clear request.
 
 !!! warning "Common mistakes"
@@ -224,15 +264,19 @@ and cleared — the complete create-read-verify-clear diagnostic loop.
       they come straight back.
 
 !!! success "Key takeaways"
-    - A bench ECU needs **12 V, 120 Ω termination, the right baud rate, and
-      a rest-bus simulation** to behave normally.
-    - Warning lamps are just signals — find them in the DBC and drive them
-      off with the IG.
-    - Offline log analysis = replay + a few well-chosen signals + cursor
-      evidence, not plotting everything.
-    - Diagnostics is a loop: explore the CDD (`RDIs/DTCs/IOs/routines`),
-      read (`0x22`), write (`0x2E`), fault-manage (`0x19`/`0x14`) — and
-      always keep the session alive.
+    - A bench ECU needs four things to act normal: **12 V, 120 Ω
+      termination, the right baud rate, and a rest-bus simulation** — you can
+      now provide all four.
+    - Warning lamps are just signals: find them in the DBC, drive them off
+      with the IG, and the panel goes quiet.
+    - Good log analysis is restraint — replay, a handful of well-chosen
+      signals, and cursor-backed evidence, never a twenty-signal rainbow.
+    - Diagnostics is a loop you now own end to end: explore the CDD
+      (RDIs/DTCs/IOs/routines), read (`0x22`), write (`0x2E`), manage faults
+      (`0x19`/`0x14`) — and keep the session alive with `0x3E`.
+    - If your bench cluster shows a clean face, your report argues from
+      measured values, and your fault clears because you fixed the cause —
+      you're not practicing anymore, you're doing the job.
 
 ## Sub-sections
 

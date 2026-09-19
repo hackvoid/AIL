@@ -1,43 +1,50 @@
 # INCA — Measurement, Calibration and Flashing
 
-**INCA** (INtegrated Calibration and Acquisition system) is ETAS's measurement
-and calibration environment — the tool you will use in the bootcamp whenever you
-need to look *inside* an ECU. Where CANalyzer shows you the traffic on the
-vehicle buses, INCA shows you the ECU's **internal variables**: intermediate
-software values that never appear on CAN. Its three core jobs are:
+Welcome to the tool where ECUs stop being black boxes. **INCA** (INtegrated
+Calibration and Acquisition system) is ETAS's measurement and calibration
+environment, and it is the single most hands-on tool in this part of the
+bootcamp. Up to now you have watched traffic *between* ECUs on the bus; INCA
+lets you look *inside* one — at intermediate software values that never appear
+on CAN at all.
 
-- **Measurement** — read internal ECU signals (lambda, temperatures, state
+By the end of this lesson you will be able to:
+
+- **Measure** — read internal ECU signals (lambda, temperatures, state
   machines, contactor feedback, …) live while the ECU is running.
-- **Calibration** — change parameters of the ECU software (scalars, curves,
-  maps) on the fly and observe the effect immediately.
-- **Flashing** — program new software and dataset versions into the ECU flash.
+- **Calibrate** — change parameters of the ECU software (scalars, curves,
+  maps) on the fly and watch the effect immediately.
+- **Flash** — program new software and dataset versions into the ECU's flash
+  memory — safely, and knowing how to recover when something goes wrong.
 
-This article follows the INCA V7.1 "Getting Started" manual and the bootcamp
-demo session, which walked through the full workflow on a real project:
-building a database from the ECU software delivery, wiring up the hardware,
-measuring with the right raster, recording logs, flashing, and comparing
-calibration datasets.
+The walkthrough follows the INCA V7.1 "Getting Started" manual and the
+bootcamp demo session, which ran the full workflow on a real project: building
+a database from the software delivery, wiring up the hardware, measuring with
+the right raster, recording logs, flashing, and comparing calibration
+datasets. Don't worry if the vocabulary feels dense at first — every term is
+explained where you first need it.
 
 !!! tip "Practice offline first"
     INCA works perfectly well without a connected ECU (offline mode). Get
-    comfortable creating workspaces, picking variables and building experiments
-    offline on your own PC before you sit in a vehicle or at a HIL rig — a
-    mistake in the office costs nothing, a mistake on a running powertrain can.
+    comfortable creating workspaces, picking variables and building
+    experiments offline on your own PC *before* you sit in a vehicle or at a
+    HIL rig — a mistake in the office costs nothing; a mistake on a running
+    powertrain can.
 
 ## Calibration basics: what a calibration system actually does
 
 An ECU's control algorithms are full of adjustable values — a throttle
 characteristic curve, a temperature threshold, a gain factor. During
 development these **calibration variables** are tuned iteratively: measure the
-system's behavior, adjust the values, measure again. To do this, the
-calibration system must answer three questions for every variable:
+system's behavior, adjust the values, measure again. For that loop to work,
+the calibration system must answer three questions about every variable:
 
 1. **Where** is the value in the ECU's memory? (its address)
-2. **How** is the raw memory content converted to a physical value? (the
-   hex → physical conversion rule, e.g. `speed_kmh = raw * 0.01`)
+2. **How** does raw memory content become a physical value? (the hex →
+   physical conversion rule, e.g. `speed_kmh = raw * 0.01`)
 3. **How** does the PC talk to the ECU? (interface, protocol, baud rate)
 
-All of this is delivered together with the ECU software in two files:
+Nobody expects you to figure these out by hand. They are delivered together
+with the ECU software, in two files you will see constantly:
 
 | File | Contents |
 |---|---|
@@ -45,15 +52,16 @@ All of this is delivered together with the ECU software in two files:
 | `*.hex` / `*.s19` (program file, Intel HEX or Motorola S-record) | The actual ECU program: code **and** data (the default values of all calibrations) |
 
 !!! note "A2L + HEX always travel together"
-    Every software delivery includes at least one A2L and one HEX/S19 file, and
-    they must match. If the A2L describes addresses from a different build than
-    the HEX file you loaded, INCA will read and write the *wrong memory
+    Every software delivery includes at least one A2L and one HEX/S19 file,
+    and they must match. If the A2L describes addresses from a different build
+    than the HEX file you loaded, INCA will read and write the *wrong memory
     locations* — the classic source of "my calibration change did nothing" or
-    corrupted ECUs.
+    of corrupted ECUs.
 
-The file formats and interfaces are standardized by **ASAM-MCD** (Association
-for Standardization of Automation and Measuring Systems — Measurement,
-Calibration and Diagnosis), so tools from different vendors can interoperate:
+These formats and interfaces are standardized by **ASAM-MCD** (Association for
+Standardization of Automation and Measuring Systems — Measurement, Calibration
+and Diagnosis), which is why tools from different vendors can interoperate.
+The four standards worth recognizing by name:
 
 | Standard | Role |
 |---|---|
@@ -64,7 +72,8 @@ Calibration and Diagnosis), so tools from different vendors can interoperate:
 
 ## Connecting to the ECU: parallel (ETK) vs. serial access
 
-There are two fundamentally different ways to get at the ECU's memory.
+There are two fundamentally different ways to reach an ECU's memory, and
+knowing which one you have in front of you shapes your whole session.
 
 ### ETK — the parallel emulator probe
 
@@ -77,25 +86,27 @@ system, and the extra computing load is negligible.
 
 ![ETK hardware hookup: PC over Ethernet to an ES590 interface, which connects to the ETK board inside the ECU](img/etk-hookup.webp)
 
-Key properties of the ETK approach:
+What the ETK buys you:
 
 - The ETK carries its own **RAM and flash** (plus dual-port RAM for
-  simultaneous access by the microcontroller and the calibration tool), so
-  calibrations can be edited in RAM **while the engine is running**, and you
-  can switch between data versions instantly to compare the engine's response.
+  simultaneous access by the microcontroller and the calibration tool), so you
+  can edit calibrations in RAM **while the engine is running**, and switch
+  between data versions instantly to compare the engine's response.
 - Measured data can be acquired in **several measurement rasters (loops)
   simultaneously**, speed-synchronous if needed.
 - The ETK board is **microcontroller-specific** (bus width, clock, memory size
-  …) and is connected to the ECU via adapters — everything else (PC software,
-  calibration device, cables) is identical across projects.
+  …) and connects to the ECU via adapters — everything else (PC software,
+  calibration device, cables) is identical across projects, so once you learn
+  the setup it transfers to the next program.
 - The ETK has its own flash for storing calibrated data, so the ECU can start
   immediately without a download. Do not confuse it with the ECU's own flash.
 
-This is why a **development ECU** (open housing, ETK connector on the board)
-costs orders of magnitude more than a **production ECU** — in the bootcamp
-demo the instructor quoted roughly **50–100 € for a production unit versus up
-to ~15 000 € for a development ECU**, depending on the microcontroller's
-complexity. A production ECU is closed: no ETK port, no memory emulation.
+This power is also why a **development ECU** (open housing, ETK connector on
+the board) costs orders of magnitude more than a **production ECU** — in the
+bootcamp demo the instructor quoted roughly **50–100 € for a production unit
+versus up to ~15 000 € for a development ECU**, depending on the
+microcontroller's complexity. The production ECU in your own car is closed: no
+ETK port, no memory emulation.
 
 ### Serial calibration: CCP/XCP over CAN, K-Line
 
@@ -132,7 +143,7 @@ flowchart LR
   Manager**, configured once with the **ETAS Network Manager** (Windows Start
   menu → ETAS). If INCA cannot find Ethernet hardware, check that APIPA is
   enabled and that the firewall allows outgoing TCP connections to the ETAS
-  network on **ports 18001–18020**.
+  network on **ports 18001–18020** — a surprisingly common first-day problem.
 
 ## How INCA organizes data: database, project, datasets, workspace, experiment
 
@@ -152,7 +163,8 @@ performance. The DBM stores these object types:
 
 ![Relationships between INCA database objects: projects and datasets belong to an ECU, workspaces capture the hardware configuration of a vehicle or bench, and experiments can be shared between workspaces](img/database-objects.webp)
 
-Two design ideas are worth internalizing:
+Two design ideas are worth internalizing early — they explain most of INCA's
+menus:
 
 - **Experiments are reusable across projects and workspaces.** The same
   "Idle Control" experiment can run on the test bench and in the vehicle, as
@@ -165,12 +177,14 @@ Two design ideas are worth internalizing:
 ### Working page vs. reference page
 
 At the heart of calibration is a two-page concept, mirrored both in INCA and
-in the ECU's emulation memory:
+in the ECU's emulation memory. Once this clicks, calibration stops feeling
+risky:
 
 ![Working page and reference page in INCA and in the ECU](img/working-reference-pages.webp)
 
 - All your edits go to the **working page** only. The **reference page** holds
-  the original, unmodified data version and cannot be edited directly.
+  the original, unmodified data version and cannot be edited directly — so
+  there is always a safe baseline to fall back to.
 - You can **switch between the two pages while the process is running** — the
   fastest possible A/B comparison of how the engine or gearbox responds to the
   old and the new data.
@@ -185,7 +199,8 @@ in the ECU's emulation memory:
 
 ## Setting up a project step by step
 
-This is the exact sequence demonstrated in the bootcamp session:
+This is the exact sequence demonstrated in the bootcamp session. Follow it
+once and the folder structure will feel natural:
 
 1. **Create a top folder** in the DBM (right-click → new folder) to keep
    everything for your project together. INCA can host several projects and
@@ -193,7 +208,7 @@ This is the exact sequence demonstrated in the bootcamp session:
 2. **Add the software**: right-click the folder → *Add* → **A2L file first**,
    then the matching **HEX or S19 file** when asked (an S19 is just the
    Motorola flavor of a HEX file — the calibration/program image). INCA takes
-   a while to build the project.
+   a while to build the project; that is normal.
 3. **Protect the original**: rename the resulting dataset meaningfully, then
    right-click → **freeze** (set read-only). This frozen master dataset is
    your known-good baseline. To try changes, create a *copy* with a new name
@@ -229,8 +244,10 @@ and the physical hardware:
 
 ## Flashing the ECU
 
-Flash programming is started from the hardware window (the *flash programming*
-action). Practical points from the demo:
+Flashing is the moment new engineers tend to hold their breath — and rightly
+so, but with a few habits it is routine. Flash programming is started from the
+hardware window (the *flash programming* action). Practical points from the
+demo:
 
 - **Flash from the reference page** (which you keep read-only) into the ECU
   flash, so you always program a known, frozen data version — not your
@@ -244,9 +261,9 @@ action). Practical points from the demo:
   vehicle variant changes, edit the profile selection accordingly — one file
   can carry profiles for several vehicle lines.
 - The **bootloader** (a HEX file named in the release notes) only needs to be
-  flashed when it actually changed. If you ever lose communication with an
-  ECU completely — e.g. after flashing a wrong software — flashing the
-  bootloader again is the recovery path.
+  flashed when it actually changed. If you ever lose communication with an ECU
+  completely — e.g. after flashing a wrong software — flashing the bootloader
+  again is the recovery path. Good to know before you need it.
 - After OK, INCA resets the ECU and shows the flash progress and result; when
   it finishes, it starts the **automatic alignment** of working and reference
   pages.
@@ -259,8 +276,8 @@ action). Practical points from the demo:
 
 ## The Experiment Environment
 
-The experiment is where measurement and calibration happen. Its main building
-blocks:
+The experiment is where measurement and calibration happen — the screen you
+will live in during a test session. Its main building blocks:
 
 ### Selecting variables
 
@@ -274,7 +291,8 @@ variable of the project. Practical tips:
   drive-ready, contactor states, park-lock position — plus the *internal* ECU
   variables relevant to the feature under test, not only the CAN signals. A
   mismatch between a CAN signal and the internal variable that produced it is
-  exactly the kind of finding you are looking for.
+  exactly the kind of finding you are looking for — it is where INCA earns its
+  place next to CANalyzer.
 - Variables can be set **inactive**: they stay in the experiment but are
   neither displayed nor recorded.
 
@@ -314,11 +332,12 @@ calibrations.
   path, filename pattern, and metadata such as user, company, project and
   vehicle (available as variables like `&[USER]`, `&[PROJECT]`).
 - **Filename discipline** (from the demo, worth adopting verbatim): start with
-  the **date**, then **project/vehicle**, **facility** (vehicle vs. HIL/simulator
-  — it changes how much the log is worth), **software version**, **test
-  number** and **result** (OK/NOK). Anyone receiving your log months later can
-  reconstruct exactly what was tested, where, and on which software. Use the
-  **auto-increment** option for checklist-style test runs (test1, test2, …).
+  the **date**, then **project/vehicle**, **facility** (vehicle vs.
+  HIL/simulator — it changes how much the log is worth), **software version**,
+  **test number** and **result** (OK/NOK). Anyone receiving your log months
+  later can reconstruct exactly what was tested, where, and on which software.
+  Use the **auto-increment** option for checklist-style test runs (test1,
+  test2, …).
 - **Triggers** let you record only around interesting events instead of
   logging hours of nothing: define a condition (e.g. a DTC is set, a reset
   occurs, a threshold crossing) with the signal logic, plus how much
@@ -349,7 +368,9 @@ calibrations.
 
 ### Comparing datasets with the Calibration Data Manager (CDM)
 
-The **CDM** is the offline workbench for datasets:
+The **CDM** is the offline workbench for datasets — the answer to "what
+exactly did we change between calibration release A and B", without diffing
+HEX files by hand:
 
 1. Choose a **source dataset** and one or more **comparison datasets** (from
    the database or from file).
@@ -361,9 +382,6 @@ The **CDM** is the offline workbench for datasets:
    calibration with its value in the master dataset and in the compared one
    (output formats include `*.txt`, `*.htm`, `*.pdf`, `*.csv`, `*.dcm`,
    `*.cdfx`, `*.xml`).
-
-This is how you document "what exactly did we change between calibration
-release A and B" without diffing HEX files by hand.
 
 ## Offline analysis with MDA
 

@@ -1,11 +1,19 @@
 # CAPL — CAN Access Programming Language
 
-**CAPL** (CAN Access Programming Language) is a C-like, event-driven scripting
-language built into Vector's **CANalyzer** and **CANoe**. It exists to support
-the daily work of a CAN developer and test engineer: with a few lines of CAPL
-you can react to bus traffic, generate messages, manipulate signals and build
-complete node simulations — the limit is essentially your imagination, the PC's
-speed and the available communication hardware.
+Welcome to your first scripting tool of the bootcamp. **CAPL** (CAN Access
+Programming Language) is a C-like, event-driven language built into Vector's
+**CANalyzer** and **CANoe** — and it is the tool that turns you from a passive
+observer of bus traffic into someone who can *shape* it. With a few lines of
+CAPL you can react to messages as they arrive, transmit your own, simulate
+missing Electronic Control Units (ECUs), and deliberately inject faults to see
+how the vehicle reacts.
+
+Why does this matter to you? In daily E/E verification work you rarely have the
+full vehicle: an ECU is missing, a maneuver is too dangerous to perform on the
+road, or a fault simply never happens on its own. CAPL closes that gap. After
+reading this article you will be able to write a working CAPL script — react to
+messages, send signals with correct physical values, drive timers — and choose
+the right tool (CAPL gateway or IG Block) for a fault-injection test.
 
 Typical things CAPL is used for:
 
@@ -22,10 +30,11 @@ Typical things CAPL is used for:
 
 ## The event-driven model
 
-CAPL is **procedural but event-controlled**: there is no `main()` loop. You
-write *event procedures* — blocks of code that run only when their trigger
-occurs — plus global variables and user-defined functions. The three classes of
-triggers are:
+Here is the one mental shift CAPL asks of you: **there is no `main()` loop.**
+CAPL is procedural but *event-controlled* — you write **event procedures**,
+blocks of code that sit idle until their trigger occurs, plus global variables
+and user-defined functions. Think of it as answering calls rather than running
+an assembly line. The three classes of triggers are:
 
 - **CAN events** — a message is received, an error frame appears, the
   controller changes state;
@@ -42,6 +51,8 @@ flowchart LR
     EV["Event procedure runs"] --> ACT["Send messages, set variables,<br/>write to trace window"]
 ```
 
+The measurement itself has a lifecycle, and your scripts hook into it:
+
 ```mermaid
 stateDiagram-v2
     [*] --> PreStart: GO button
@@ -51,7 +62,9 @@ stateDiagram-v2
     Stopped --> [*]
 ```
 
-The measurement lifecycle matters because each phase allows different actions:
+The lifecycle matters because each phase allows different actions — getting
+this wrong is a classic beginner stumble (e.g. trying to send a message in
+`preStart` silently does nothing):
 
 | Event | Fired when | Typical use | Restrictions |
 |---|---|---|---|
@@ -63,11 +76,12 @@ Each of these can appear **only once** in a script.
 
 ## The CAPL Browser
 
-Scripts are written and compiled in the **CAPL Browser**, opened from
+You write and compile scripts in the **CAPL Browser**, opened from
 CANalyzer/CANoe via the *Tools* menu or by double-clicking a program node in
 the measurement configuration. It organizes the code in a tree so every event
-procedure has a well-defined place, and it lets you drag functions, events and
-database symbols (messages/signals) directly into the editor.
+procedure has a well-defined place — and, helpfully for newcomers, it lets you
+**drag functions, events and database symbols** (messages/signals) directly
+into the editor instead of typing names from memory.
 
 ![CAPL Browser tree structure: includes, variables, system events, value objects, CAN events and user functions](img/capl-browser-tree.webp)
 
@@ -80,10 +94,12 @@ A CAPL source file has three parts:
 
 ## Language basics
 
-CAPL syntax is C: blocks in `{ … }`, `if`/`else`, `switch/case/default`,
-`for`/`while`/`do-while`, `continue`, `break`, `return`, and the usual
-arithmetic, logical and assignment operators (`+ - * / %`, `++ --`, `+= &= |= ^=`,
-`! && ||`). Arrays are declared as in C.
+If you have seen any C, you already know the syntax: blocks in `{ … }`,
+`if`/`else`, `switch/case/default`, `for`/`while`/`do-while`, `continue`,
+`break`, `return`, and the usual arithmetic, logical and assignment operators
+(`+ - * / %`, `++ --`, `+= &= |= ^=`, `! && ||`). Arrays are declared as in C.
+If you have *not* seen C — don't worry, the examples below are enough to start
+from, and the exercises build up gently.
 
 ### Data types
 
@@ -106,9 +122,9 @@ with `setTimer()` before use.
 
 ### The `this` keyword
 
-Inside an event procedure, `this` refers to the object that triggered the
-event — the received message, the changed variable, the error frame. It is how
-you read what just happened:
+`this` is CAPL's most useful little word. Inside an event procedure it refers
+to *the object that triggered the event* — the received message, the changed
+variable, the error frame. It is how you read what just happened:
 
 ```c
 on message 0x555
@@ -129,9 +145,10 @@ read `this.errorCountTX` / `this.errorCountRX`.
 
 ### Declaring message objects
 
-If a **DBC database** is linked to the configuration, ID, DLC and signals are
-imported automatically and you can use the symbolic name; otherwise declare by
-ID and set every property yourself:
+If a **DBC (Database CAN)** file — the network description that maps raw frame
+bytes to named, scaled signals — is linked to the configuration, ID, DLC and
+signals are imported automatically and you can use the symbolic name; otherwise
+declare by ID and set every property yourself:
 
 ```c
 variables
@@ -150,8 +167,10 @@ on start
 
 ### Signals: raw vs. physical values
 
-Assigning a signal name writes the **raw** value; appending `.phys` lets CAPL
-apply the DBC scaling (`physical = raw * factor + offset`) for you:
+Assigning a signal name writes the **raw** value — the bare integer that
+travels on the bus. Appending `.phys` lets CAPL apply the DBC scaling
+(`physical = raw * factor + offset`) for you, so you can think in engineering
+units:
 
 ```c
 message EngData EDMsg;
@@ -170,7 +189,8 @@ msgSTS_BCM.RechargeSts = @sysvar::BCM::Set_RechargeSts;
 
 ### Transmitting: `output()`
 
-Nothing goes on the bus until you call `output()`:
+Here is a rule worth memorizing early: **nothing goes on the bus until you call
+`output()`**. Setting signals only prepares the message in memory:
 
 ```c
 TX_STATUS_BCM()
@@ -183,8 +203,9 @@ TX_STATUS_BCM()
 
 ## Reacting to CAN traffic
 
-`on message` is the workhorse event. The filter can be an ID (decimal or hex),
-a DBC name, a channel qualifier, a range, or everything:
+`on message` is the workhorse event — most of your scripts will start here. The
+filter can be an ID (decimal or hex), a DBC name, a channel qualifier, a range,
+or everything:
 
 ```c
 on message STATUS_SDM            { /* one DBC message */ }
@@ -195,7 +216,8 @@ on message 100-200               { /* ID range */ }
 on message *                     { /* every message, all buses */ }
 ```
 
-A common pattern in gateway scripts is to ignore the node's own transmissions:
+A common pattern in gateway scripts is to ignore the node's own transmissions —
+forgetting this is an easy way to create an infinite forwarding loop:
 
 ```c
 on message CAN2.*
@@ -231,7 +253,9 @@ output(errorframe);   // you can also *generate* an error frame
 
 ## Keyboard events
 
-`on key` turns the keyboard into a test console during a running measurement:
+`on key` turns your keyboard into a test console during a running measurement —
+surprisingly handy when you want to trigger something by hand at exactly the
+right moment:
 
 ```c
 on key 'a'        { ... }   // lowercase a
@@ -248,8 +272,9 @@ e.g. `write("A total of %d messages 0x1A1 counted", counter);`.
 
 ## Timers
 
-Timers are programmable clocks for periodic or delayed actions. Three steps:
-declare, set, handle.
+Timers are programmable clocks for periodic or delayed actions — the backbone
+of any node simulation, since real ECUs send most of their messages cyclically.
+Three steps: declare, set, handle.
 
 ```c
 variables
@@ -276,18 +301,20 @@ periodic transmission. Remember the ranges: `timer` counts seconds (max 1799),
 
 ## CAPL gateways and the IG Block
 
-A large part of the lesson is about **manipulating live vehicle traffic during
-V&V**. Some maneuvers cannot be reproduced physically — they would endanger the
-driver, damage sensors/actuators/wiring, or require conditions the vehicle
-cannot easily reach. Instead, you modify the CAN traffic itself: change signal
-values, simulate **Loss of Communication (LoC)**, or inject **implausible data**
-(message counter / CRC errors) to check that receiving ECUs set the right DTCs.
+Now for the part you will use most during Verification & Validation (V&V):
+**manipulating live vehicle traffic**. Some maneuvers cannot be reproduced
+physically — they would endanger the driver, damage sensors/actuators/wiring,
+or require conditions the vehicle cannot easily reach. Instead, you modify the
+CAN traffic itself: change signal values, simulate **Loss of Communication
+(LoC)**, or inject **implausible data** (message counter / CRC errors) to check
+that receiving ECUs set the right Diagnostic Trouble Codes (DTCs).
 
-Two tools cover this, chosen according to the frame type:
+Two tools cover this, chosen according to the frame type — the decision is
+simpler than it first looks:
 
 ### IG Block — for on-event messages
 
-The **Interactive Generator Block (IG)** sends **on-event messages only**. It
+The **Interactive Generator (IG) Block** sends **on-event messages only**. It
 is wired in **parallel** with the bus (a T-connection) — the bus is not
 interrupted.
 
@@ -297,7 +324,7 @@ Everything is configured interactively in a dialog, **online during a running
 measurement**: pick the messages from the project's DBC (ID and DLC are shown),
 set the trigger condition that decides when each frame is sent, and edit the
 payload either as raw hex in the data field or per-signal in raw/physical
-values in the signal list.
+values in the signal list. No coding required — this is the fast path.
 
 ### CAPL — for cyclic and cyclic-on-event messages
 
@@ -329,14 +356,16 @@ Common applications:
 
 - change a signal of a cyclic or cyclic-on-event message;
 - create LoC between two ECUs (simply stop forwarding);
-- inject implausible data — corrupt the **CRC**, the **message counter (MC)**,
-  set **SNA** or a validity bit;
+- inject implausible data — corrupt the **CRC (Cyclic Redundancy Check)**, the
+  **message counter (MC)**, set **SNA (Signal Not Available)** or a validity
+  bit;
 - change several signals of one bus at the same instant;
 - bridge two different buses (e.g. C-CAN and ePT-CAN) — a **double gateway**.
 
 !!! example "What a fault-injection test looks like"
     Goal: make the hybrid control processor (HCP) set
-    **U0401 — Implausible Data Received From ECM/PCM "A"**.
+    **U0401 — Implausible Data Received From ECM/PCM "A"** (the Engine Control
+    Module / Powertrain Control Module).
     The CAPL gateway forwards the engine message `ENGINE_HYBD_FD_3` but forces
     its CRC signal to 0 (or adds an offset such as +10 to the computed CRC), or
     disturbs the rolling message counter. The receiving ECU detects the
@@ -348,7 +377,7 @@ Common applications:
 | | IG Block | CAPL |
 |---|---|---|
 | Frame types | On-event only | Any: cyclic, cyclic-on-event, on-event |
-| Wiring | Parallel tap (T-connection), bus intact | Bus physically cut (S-connection), BoB needed, 120 Ω per stub |
+| Wiring | Parallel tap (T-connection), bus intact | Bus physically cut (S-connection), Breakout Box needed, 120 Ω per stub |
 | Effort | Fast, dialog-based, no coding | Requires writing (C-like) code |
 | Flexibility | Limited to configured messages/triggers | Limited only by your coding skills; can span two buses at once |
 
@@ -365,7 +394,8 @@ switches, LEDs, sliders, meters and bitmaps — built in the **Panel Designer**
 (*Tools → Panel Designer* in CANalyzer; CANoe ships a stand-alone **Panel
 Editor**). From the Toolbox you drop elements onto the panel, then in each
 element's properties you bind it to a **system variable, environment variable
-or signal** (*Symbol* section) and style it (*Appearance* section).
+or signal** (*Symbol* section) and style it (*Appearance* section). Panels are
+what make a simulation feel like a real dashboard instead of a wall of code.
 
 How panels connect to CAPL:
 
@@ -397,9 +427,10 @@ the taskbar and is needed by CAPL functions such as `putValueToControl()`.
 
 ## A complete mini-example
 
-Emulating part of a body control module: enable steering-wheel button handling
-only when the ignition state (received in `BCM_COMMAND`) says the vehicle is
-awake, and forward button presses from environment variables onto the bus:
+Let's put it all together. This script emulates part of a **Body Control
+Module (BCM)**: it enables steering-wheel button handling only when the
+ignition state (received in `BCM_COMMAND`) says the vehicle is awake, and
+forwards button presses from environment variables onto the bus:
 
 ```c
 variables
@@ -428,6 +459,9 @@ on envVar Command_11Sts_env   // OK button pressed on the panel
 }
 ```
 
+Notice how the whole behavior is just two small event procedures — that is the
+CAPL mindset: small reactions, wired to the right triggers.
+
 !!! success "Key takeaways"
     - CAPL is C-like and **event-driven**: code lives in `on …` procedures
       (message, key, timer, system, error), not in a main loop.
@@ -443,6 +477,8 @@ on envVar Command_11Sts_env   // OK button pressed on the panel
       injection such as DTC U0401 scenarios.
     - Panels turn simulations into dashboards: controls write variables CAPL
       reacts to, displays visualize what CAPL publishes.
+    - You now have everything you need to write your first working script —
+      the exercises will make it stick.
 
 !!! tip "Where to go next"
     Practice these concepts in the [CAPL exercises](capl-exercise/index.md),

@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4236,10 +4224,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#procedure" class="md-nav__link">
+  <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Procedure
+        Steps
       
     </span>
   </a>
@@ -4275,10 +4263,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#procedure_1" class="md-nav__link">
+  <a href="#steps_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Procedure
+        Steps
       
     </span>
   </a>
@@ -4325,10 +4313,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#procedure_2" class="md-nav__link">
+  <a href="#steps_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Procedure
+        Steps
       
     </span>
   </a>
@@ -4391,17 +4379,30 @@
 
 
 <h1 id="canalyzer-exercises-bench-log-analysis-and-diagnostics">CANalyzer Exercises — Bench, Log Analysis and Diagnostics<a class="headerlink" href="#canalyzer-exercises-bench-log-analysis-and-diagnostics" title="Permanent link">&para;</a></h1>
-<p>These three hands-on exercises take you from "I know what CANalyzer is" to
-using it the way a test engineer does: wiring a real ECU on the bench,
-keeping it alive with simulated bus traffic, mining a recorded log for a
-driving anomaly, and running a full UDS diagnostic session. Work through them
-in order — each one assumes the skills of the previous one.</p>
+<p>Welcome to your first day as a test engineer. Everything you learned about
+CAN (Controller Area Network) frames, DBC (Database CAN) files and
+measurement windows now leaves the slides and meets real hardware. These
+three exercises walk you through the three jobs you will do again and again
+in this career: waking an electronic control unit (ECU) up on a bench,
+reading a story out of a recorded drive, and running a proper diagnostic
+session. By the end you will be able to:</p>
+<ul>
+<li>wire an instrument cluster to <strong>CANalyzer</strong> and make it behave as if it
+  were installed in a real car,</li>
+<li>reconstruct what a driver and a vehicle were doing from a recorded bus
+  log — and argue, with evidence, where something went wrong,</li>
+<li>read data, write data and manage faults on an ECU over <strong>UDS</strong> (Unified
+  Diagnostic Services) like someone who does this for a living.</li>
+</ul>
+<p>Work through them in order: each exercise quietly assumes the reflexes you
+built in the one before. Take your time with the first one — the bench habits
+you form there pay off everywhere else.</p>
 <div class="admonition tip">
 <p class="admonition-title">Prerequisites</p>
-<p>Make sure you are comfortable with the CANalyzer measurement windows,
-databases and replay blocks from the
-<a href="../">CANalyzer</a> topic, and with CAN frame/DBC basics from
-<a href="../../../mil1/can-lin/">CAN, LIN &amp; Automotive Ethernet</a>.</p>
+<p>Be comfortable with CANalyzer's measurement windows, databases and
+replay blocks from the <a href="../">CANalyzer</a> topic, and with CAN
+frame/DBC basics from <a href="../../../mil1/can-lin/">CAN, LIN &amp; Automotive Ethernet</a>.
+If either feels shaky, review it now rather than fighting the tool later.</p>
 </div>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <h3 id="hardware">Hardware<a class="headerlink" href="#hardware" title="Permanent link">&para;</a></h3>
@@ -4415,131 +4416,152 @@ databases and replay blocks from the
 <tbody>
 <tr>
 <td>IPC (Instrument Panel Cluster) ECU</td>
-<td>Device under test — the academy ECU available in the Napoli and Torino offices</td>
+<td>Your device under test — the academy ECU kept in the Napoli and Torino offices</td>
 </tr>
 <tr>
-<td>CANcaseXL (CAN case)</td>
-<td>USB CAN interface between the laptop and the ECU</td>
+<td>CANcaseXL ("CAN case")</td>
+<td>The USB-to-CAN interface between your laptop and the ECU</td>
 </tr>
 <tr>
-<td>LV power supply</td>
-<td>Powers the cluster at battery voltage (12 V)</td>
+<td>LV (low-voltage) power supply</td>
+<td>Feeds the cluster at battery voltage (12 V)</td>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     PSU["LV power supply&lt;br/&gt;12 V"] --&gt;|"Vbat + GND"| IPC["IPC ECU"]
     CANcase["CANcaseXL"] &lt;--&gt;|"CAN-H / CAN-L"| IPC
     Laptop["Laptop&lt;br/&gt;(CANalyzer)"] &lt;--&gt;|USB| CANcase</code></pre>
+<p>The wiring is deliberately simple: power and ground to the cluster, CAN-H and
+CAN-L to the interface, USB to the laptop. If a bench is already wired when
+you arrive, trace every cable with your own eyes before switching anything
+on — knowing exactly where each wire goes is a skill, not a formality.</p>
 <h3 id="software-and-files">Software and files<a class="headerlink" href="#software-and-files" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>CANalyzer</strong> with the vehicle <strong>DBC database</strong> for the cluster</li>
+<li><strong>CANalyzer</strong> with the vehicle <strong>DBC database</strong> for the cluster — this is
+  what turns raw hex into named, scaled signals</li>
 <li><strong>Dianalyzer</strong> and <strong>CANdelaStudio</strong> (Exercise 3) — the diagnostic tester
-  and the diagnostic-database authoring tool</li>
-<li><code>Acquisizione_BOA.7z</code> (Exercise 2) — a recorded bus acquisition from a real
-  vehicle drive</li>
-<li>The <strong>ISO 14229 (UDS)</strong> specification as reference for diagnostic services
-  and DTC status bits (Exercise 3)</li>
+  and the tool for authoring its diagnostic database</li>
+<li><code>Acquisizione_BOA.7z</code> (Exercise 2) — a bus acquisition recorded during a
+  real vehicle drive; <em>acquisizione</em> is Italian for "recording"</li>
+<li>The <strong>ISO 14229 (UDS)</strong> specification as your reference for diagnostic
+  services and fault status bits (Exercise 3)</li>
 </ul>
 <hr />
 <h2 id="exercise-1-ipc-configuration-and-rest-bus-simulation">Exercise 1 — IPC configuration and rest-bus simulation<a class="headerlink" href="#exercise-1-ipc-configuration-and-rest-bus-simulation" title="Permanent link">&para;</a></h2>
 <p><strong>Goal.</strong> Connect the cluster to CANalyzer, bring the communication up, and
-make the instrument panel behave as if it were installed in a real vehicle.</p>
-<h3 id="procedure">Procedure<a class="headerlink" href="#procedure" title="Permanent link">&para;</a></h3>
+make the instrument panel behave as if it were living in a real vehicle.</p>
+<p><strong>What you'll practice:</strong> the full bench bring-up routine — wiring,
+configuring the tool, and faking the rest of the car well enough that the
+ECU never notices it is alone.</p>
+<h3 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
 <ol>
-<li><strong>Wire the bench.</strong> Connect the LV power supply to the ECU's battery and
-   ground pins, and the CANcaseXL channel to the ECU's CAN-H/CAN-L pins.
-   If the wiring is already done, identify and describe every cable before
-   switching anything on.</li>
-<li><strong>Configure CANalyzer.</strong> Create a new configuration, assign the real
-   CAN channel to the CANcaseXL hardware, set the correct <strong>baud rate</strong> for
-   the cluster's bus, and attach the provided <strong>DBC</strong> so raw frames are
-   decoded into named signals.</li>
-<li><strong>Verify communication.</strong> Start the measurement and confirm in the Trace
-   window that the cluster is transmitting (e.g. its cyclic status frames).</li>
-<li><strong>Answer the termination question.</strong> The bench setup needs a <strong>120 Ω
-   termination resistor</strong> between CAN-H and CAN-L. On a vehicle the two 120 Ω
-   resistors sit at the ends of the bus; on a short bench harness the
-   resistor still prevents signal reflections and defines the recessive bus
-   level, so without it communication can be unreliable or absent.</li>
+<li><strong>Wire the bench.</strong> Connect the LV supply to the ECU's battery and ground
+   pins, and the CANcaseXL channel to its CAN-H/CAN-L pins. If it is already
+   wired, identify and describe every cable before powering up.</li>
+<li><strong>Configure CANalyzer.</strong> Create a new configuration, assign the real CAN
+   channel to the CANcaseXL hardware, set the correct <strong>baud rate</strong> for the
+   cluster's bus, and attach the provided DBC so frames decode into signals.</li>
+<li><strong>Verify communication.</strong> Start the measurement and watch the Trace
+   window: you should see the cluster transmitting its cyclic status frames.
+   An empty trace at this point means wiring, baud rate or termination — in
+   that order of likelihood.</li>
+<li><strong>Answer the termination question.</strong> Yes, you need a <strong>120 Ω resistor</strong>
+   between CAN-H and CAN-L. On a vehicle, two 120 Ω resistors sit at the two
+   ends of the bus; on a short bench harness the resistor still matters,
+   because it prevents signal reflections and defines the recessive bus
+   level. Without it, communication can be unreliable — or simply absent.</li>
 <li><strong>Simulate the rest of the bus.</strong> The cluster expects to <em>receive</em> frames
-   from other ECUs (vehicle speed, engine state, tell-tale requests, …).
-   Use CANalyzer generator blocks / Interactive Generator (IG) blocks to
-   transmit every frame the IPC subscribes to, with plausible cycle times.</li>
-<li><strong>Explain why step 5 is needed.</strong> A single ECU alone on the bus misses
-   its expected inputs: it raises communication DTCs, lights warning lamps,
-   and may go into a degraded state or stop communicating. Simulating the
-   rest of the network (a <em>rest-bus simulation</em>) keeps it in a normal
-   operating state — this is exactly what CANoe/CANalyzer do in every HIL
-   setup.</li>
-<li><strong>Turn off the warning lamps.</strong> With the cluster powered but no valid
-   data, several tell-tales are lit. Analyze the DBC, find the signals that
-   command each lamp, and drive them to their "lamp off" values until the
-   cluster face is clean.</li>
-<li><strong>Build a plausible driving scenario.</strong> Simulate a coherent set of
-   values — a state of charge, a vehicle speed, gear <strong>D (drive)</strong> and any
-   other information visible on the cluster — and check that the display
-   shows them consistently.</li>
-<li><strong>Write the report.</strong> Document the wiring, the configuration steps,
-   answers to the questions above and the results, with screenshots.</li>
+   from the ECUs it lives with: vehicle speed, engine state, tell-tale
+   requests, and more. Use CANalyzer's generator blocks / <strong>IG</strong> (Interactive
+   Generator) blocks to transmit every frame the IPC subscribes to, with
+   plausible cycle times.</li>
+<li><strong>Explain why step 5 is needed.</strong> Put the reason in your own words in
+   the report: an ECU that misses its expected inputs raises communication
+   <strong>DTCs</strong> (Diagnostic Trouble Codes), lights warning lamps, and may drop
+   into a degraded state or stop talking altogether. Feeding it the traffic
+   it expects — a <em>rest-bus simulation</em> — keeps it in its normal operating
+   state. This exact trick is what CANoe/CANalyzer do inside every <strong>HIL</strong>
+   (hardware-in-the-loop) rig in the industry, so you are learning the real
+   thing, not a classroom shortcut.</li>
+<li><strong>Turn off the warning lamps.</strong> Powered with no valid data, the cluster
+   face lights up like a Christmas tree. Hunt through the DBC for the
+   signals that command each lamp and drive them to their "lamp off" values,
+   one by one, until the panel is clean.</li>
+<li><strong>Build a plausible driving scenario.</strong> Now the fun part: simulate a
+   coherent set of values — a state of charge, a vehicle speed, gear <strong>D</strong>
+   (drive) and anything else visible on the cluster — and check that the
+   display tells one consistent story.</li>
+<li><strong>Write the report.</strong> Document the wiring, every configuration step,
+   your answers to the questions above, and the results, with screenshots.</li>
 </ol>
 <h3 id="expected-result">Expected result<a class="headerlink" href="#expected-result" title="Permanent link">&para;</a></h3>
-<p>A cluster that powers up cleanly, communicates on the trace, shows <strong>no
-warning lamps</strong>, and displays your simulated speed/state-of-charge/gear
-scenario like a vehicle in normal driving.</p>
+<p>A cluster that powers up cleanly, shows traffic in the trace, displays <strong>no
+warning lamps</strong>, and presents your simulated speed/state-of-charge/gear
+scenario like a car out on a normal drive.</p>
 <div class="admonition warning">
 <p class="admonition-title">Common mistakes</p>
 <ul>
 <li><strong>Missing 120 Ω termination</strong> — intermittent or no communication.</li>
 <li><strong>Wrong baud rate</strong> — the trace stays empty or fills with error frames.</li>
-<li><strong>No DBC attached</strong> — you stare at raw hex instead of signal names.</li>
+<li><strong>No DBC attached</strong> — you end up staring at raw hex instead of signal
+  names.</li>
 <li>Sending frames with <strong>stale counter/checksum signals</strong> — many ECUs
-  reject frames whose rolling counter or CRC doesn't advance correctly.</li>
-<li>Forgetting a frame the ECU expects — one missing message is enough to
-  keep a lamp on or log a communication DTC.</li>
+  reject frames whose rolling counter or <strong>CRC</strong> (cyclic redundancy
+  check) doesn't advance correctly.</li>
+<li>Forgetting one frame the ECU expects — a single missing message is
+  enough to keep a lamp on or log a communication DTC.</li>
 </ul>
 </div>
 <hr />
 <h2 id="exercise-2-log-analysis-offline-replay">Exercise 2 — Log analysis (offline replay)<a class="headerlink" href="#exercise-2-log-analysis-offline-replay" title="Permanent link">&para;</a></h2>
 <p><strong>Goal.</strong> Analyze a real vehicle acquisition (<code>Acquisizione_BOA.7z</code>) offline
 in CANalyzer and reconstruct what the driver and the vehicle were doing —
-including spotting a potential problem in the recorded manoeuvre.</p>
-<h3 id="procedure_1">Procedure<a class="headerlink" href="#procedure_1" title="Permanent link">&para;</a></h3>
+including spotting a potential problem hidden in the recorded manoeuvre.</p>
+<p><strong>What you'll practice:</strong> the analyst's craft — choosing the few signals
+that matter, reading them against each other in time, and building an
+argument out of measured values instead of guesses.</p>
+<h3 id="steps_1">Steps<a class="headerlink" href="#steps_1" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Load the log</strong> with a Replay Block (offline mode) and attach the
-   matching DBC so signals decode.</li>
-<li><strong>Graph the engine RPM</strong> alone first: create a Graphics window containing
-   only the RPM signal and observe its profile over the whole drive.</li>
+   matching DBC so the signals decode.</li>
+<li><strong>Graph the engine RPM</strong> (revolutions per minute) alone first: a
+   Graphics window with only the RPM signal, so you can absorb the shape of
+   the whole drive without distractions.</li>
 <li><strong>Build a "vehicle story" graph.</strong> Add only the signals that explain the
-   dynamic state of the vehicle and the driver's actions — typically vehicle
+   vehicle's dynamic state and the driver's actions — typically vehicle
    speed, accelerator pedal position, brake switch/pressure, gear, steering
-   angle. Resist the temptation to plot everything: a readable graph with
-   4–6 meaningful signals beats a rainbow of 20.</li>
-<li><strong>Hunt for the anomaly.</strong> Correlate the signals in time and identify the
-   potential issue hidden in the manoeuvre (look for contradictions: pedal
-   vs. RPM vs. speed, implausible transitions, flat-lined or frozen signals).</li>
+   angle. Resist the urge to plot everything: a readable graph with 4–6
+   meaningful signals beats a rainbow of twenty.</li>
+<li><strong>Hunt for the anomaly.</strong> Correlate the signals in time and find the
+   potential issue in the manoeuvre. Look for contradictions: pedal versus
+   RPM versus speed, implausible transitions, signals that flat-line or
+   freeze when they shouldn't.</li>
 <li><strong>Write the report</strong> describing the activity and the issue you found,
-   with screenshots of the decisive graph section.</li>
+   with screenshots of the decisive section of the graph.</li>
 </ol>
 <h3 id="expected-result_1">Expected result<a class="headerlink" href="#expected-result_1" title="Permanent link">&para;</a></h3>
-<p>A small set of graphs from which you can narrate the drive ("acceleration,
-cruise, braking…") and a clearly argued identification of the suspicious
+<p>A small set of graphs from which you can narrate the drive — "acceleration,
+cruise, braking…" — and a clearly argued identification of the suspicious
 behaviour in the log.</p>
 <div class="admonition note">
 <p class="admonition-title">Analysis technique</p>
 <p>Use cursors/measurement markers in the Graphics window to read exact
-values and time deltas at the moment the signals disagree — "signal X
-was at value Y for Z seconds while signal W…" is the kind of evidence a
-good report is built on.</p>
+values and time deltas at the moment the signals disagree. "Signal X
+held value Y for Z seconds while signal W did this…" is the kind of
+sentence a strong report is built from — measured evidence, not vibes.</p>
 </div>
 <hr />
 <h2 id="exercise-3-diagnostic-session-on-the-ipc">Exercise 3 — Diagnostic session on the IPC<a class="headerlink" href="#exercise-3-diagnostic-session-on-the-ipc" title="Permanent link">&para;</a></h2>
-<p><strong>Goal.</strong> Connect to the IPC and work through a complete UDS diagnostic
+<p><strong>Goal.</strong> Connect to the IPC and work through a complete UDS (ISO 14229)
 workflow using <strong>Dianalyzer</strong>, <strong>CANalyzer</strong> and <strong>CANdelaStudio</strong>: explore
 the diagnostic database, read and write data by identifier, and manage DTCs.</p>
+<p><strong>What you'll practice:</strong> the create–read–verify–clear loop that diagnostic
+engineers run every day, and the discipline of decoding hexadecimal
+responses byte by byte against a specification.</p>
 <h3 id="the-main-diagnostic-services">The main diagnostic services<a class="headerlink" href="#the-main-diagnostic-services" title="Permanent link">&para;</a></h3>
-<p>The exercise asks you to identify the main UDS (ISO 14229) services. The
-ones you will actually use here:</p>
+<p>The exercise asks you to identify the main UDS services. These are the ones
+you will actually use here — learn to recognize their IDs on sight:</p>
 <table>
 <thead>
 <tr>
@@ -4586,7 +4608,7 @@ ones you will actually use here:</p>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>sequenceDiagram
+<pre class="kx-mermaid"><code>sequenceDiagram
     participant T as Tester (Dianalyzer)
     participant E as IPC (ECU)
     T-&gt;&gt;E: 10 03 (extended session)
@@ -4597,43 +4619,45 @@ ones you will actually use here:</p>
     E--&gt;&gt;T: 59 02 FF + DTC list
     T-&gt;&gt;E: 14 FF FF FF (clear all DTCs)
     E--&gt;&gt;T: 54 (positive response)</code></pre>
-<h3 id="procedure_2">Procedure<a class="headerlink" href="#procedure_2" title="Permanent link">&para;</a></h3>
+<h3 id="steps_2">Steps<a class="headerlink" href="#steps_2" title="Permanent link">&para;</a></h3>
 <ol>
 <li><strong>Explore the database.</strong> Open the diagnostic database in CANdelaStudio
-   and extract: the list of all <strong>RDIs</strong> (readable data identifiers), the
-   list of all <strong>DTCs</strong> with the DTC table, the list of all <strong>I/Os</strong>, and
-   the list of all <strong>routines</strong>. These four inventories tell you everything
-   the ECU allows a tester to do.</li>
+   and extract four inventories: the list of all <strong>RDIs</strong> (readable data
+   identifiers), all <strong>DTCs</strong> with their DTC table, all <strong>I/Os</strong>, and all
+   <strong>routines</strong>. Together these tell you everything the ECU allows a tester
+   to do — your map of the territory before you start walking it.</li>
 <li><strong>Read an RDI.</strong> Request one RDI and interpret the raw <strong>hexadecimal
    response</strong> byte by byte against its specification.</li>
 <li><strong>Make the value move.</strong> Put the IPC into the vehicle conditions that
-   modify the selected RDI — i.e. simulate the relevant bus signals as in
-   Exercise 1. Simulate a speed of <strong>60 km/h</strong>, request the associated RDI
-   and analyze the response; repeat with <strong>150 km/h</strong>, <strong>250 km/h</strong> and
-   <strong>600 km/h</strong> and compare.</li>
+   change the selected RDI — i.e. simulate the relevant bus signals, exactly
+   as in Exercise 1. Simulate a speed of <strong>60 km/h</strong>, request the associated
+   RDI and analyze the response; repeat at <strong>150 km/h</strong>, <strong>250 km/h</strong> and
+   <strong>600 km/h</strong> and compare. Yes, 600 km/h — pushing a value past any
+   plausible range is a classic way to learn how an ECU encodes, saturates
+   or rejects data.</li>
 <li><strong>Write 3 RDIs.</strong> Use WriteDataByIdentifier (<code>0x2E</code>) to write the
-   contents of three RDIs, then verify each value by reading it back from
-   the ECU (<code>0x22</code>).</li>
-<li><strong>Work the DTCs.</strong> Create a fault condition (e.g. by interrupting an
-   expected signal), then:</li>
+   contents of three RDIs, then verify each one by reading it back from the
+   ECU (<code>0x22</code>). Never trust a write you haven't read back.</li>
+<li><strong>Work the DTCs.</strong> Create a fault condition — interrupting an expected
+   signal works well — then:</li>
 <li>evaluate the DTC <strong>status byte</strong>;</li>
 <li>perform and describe the operations needed to set <strong>bit 0 = 1</strong>
-     (<em>testFailed</em> — the fault is currently present) and <strong>bit 2 = 0</strong>
+     (<em>testFailed</em> — the fault is present right now) and <strong>bit 2 = 0</strong>
      (<em>pendingDTC</em> cleared);</li>
-<li><strong>clear the error memory</strong> with ClearDiagnosticInformation;</li>
+<li><strong>clear the error memory</strong> with ClearDiagnosticInformation (<code>0x14</code>);</li>
 <li>identify the <strong>snapshot</strong> (freeze frame) stored with the error and
      request the snapshot(s) via ReadDTCInformation.</li>
 </ol>
 <h3 id="expected-result_2">Expected result<a class="headerlink" href="#expected-result_2" title="Permanent link">&para;</a></h3>
-<p>Hex responses you can decode by hand, three RDIs written and read back
-successfully, and a fault created, qualified via its status byte, snapshotted
-and cleared — the complete create-read-verify-clear diagnostic loop.</p>
+<p>Hex responses you can decode by hand, three RDIs written and successfully
+read back, and a fault that you created, qualified through its status byte,
+snapshotted and cleared — the complete diagnostic loop, start to finish.</p>
 <div class="admonition tip">
 <p class="admonition-title">DTC status byte cheat sheet</p>
 <p>Bit 0 <em>testFailed</em> = fault present <strong>right now</strong>; bit 2 <em>pendingDTC</em> =
 fault seen but not yet confirmed; bit 3 <em>confirmedDTC</em> = fault confirmed
-and stored. A fault heals in stages: fix the cause and bit 0 goes to 0
-first, while confirmed/pending bits clear only after enough passing
+and stored. A fault heals in stages: fix the cause and bit 0 falls to 0
+first, while the confirmed/pending bits clear only after enough passing
 cycles or an explicit <code>0x14</code> clear request.</p>
 </div>
 <div class="admonition warning">
@@ -4652,15 +4676,19 @@ cycles or an explicit <code>0x14</code> clear request.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>A bench ECU needs <strong>12 V, 120 Ω termination, the right baud rate, and
-  a rest-bus simulation</strong> to behave normally.</li>
-<li>Warning lamps are just signals — find them in the DBC and drive them
-  off with the IG.</li>
-<li>Offline log analysis = replay + a few well-chosen signals + cursor
-  evidence, not plotting everything.</li>
-<li>Diagnostics is a loop: explore the CDD (<code>RDIs/DTCs/IOs/routines</code>),
-  read (<code>0x22</code>), write (<code>0x2E</code>), fault-manage (<code>0x19</code>/<code>0x14</code>) — and
-  always keep the session alive.</li>
+<li>A bench ECU needs four things to act normal: <strong>12 V, 120 Ω
+  termination, the right baud rate, and a rest-bus simulation</strong> — you can
+  now provide all four.</li>
+<li>Warning lamps are just signals: find them in the DBC, drive them off
+  with the IG, and the panel goes quiet.</li>
+<li>Good log analysis is restraint — replay, a handful of well-chosen
+  signals, and cursor-backed evidence, never a twenty-signal rainbow.</li>
+<li>Diagnostics is a loop you now own end to end: explore the CDD
+  (RDIs/DTCs/IOs/routines), read (<code>0x22</code>), write (<code>0x2E</code>), manage faults
+  (<code>0x19</code>/<code>0x14</code>) — and keep the session alive with <code>0x3E</code>.</li>
+<li>If your bench cluster shows a clean face, your report argues from
+  measured values, and your fault clears because you fixed the cause —
+  you're not practicing anymore, you're doing the job.</li>
 </ul>
 </div>
 <h2 id="sub-sections">Sub-sections<a class="headerlink" href="#sub-sections" title="Permanent link">&para;</a></h2>
@@ -4672,11 +4700,11 @@ cycles or an explicit <code>0x14</code> clear request.</p>
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_DiagnosticSim.pdf">CANalyzer Exercise DiagnosticSim</a> — PDF, 21.1 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IPC.pdf">CANalyzer Exercise IPC</a> — PDF, 173.6 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_LogAnalysis%28BOA%29.pdf">CANalyzer Exercise LogAnalysis(BOA)</a> — PDF, 88.0 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_UDS.pdf">CANalyzer Exercise UDS</a> — PDF, 104.6 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/ISO14229_1_2020.pdf">ISO14229 1 2020</a> — PDF, 7.2 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_DiagnosticSim.pdf">CANalyzer Exercise DiagnosticSim</a> — PDF, 21.1 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_IPC.pdf">CANalyzer Exercise IPC</a> — PDF, 173.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_LogAnalysis%28BOA%29.pdf">CANalyzer Exercise LogAnalysis(BOA)</a> — PDF, 88.0 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/CANalyzer_Exercise_UDS.pdf">CANalyzer Exercise UDS</a> — PDF, 104.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil2/12_CANalyzer/CANalyzer_Exercise/ISO14229_1_2020.pdf">ISO14229 1 2020</a> — PDF, 7.2 MB</li>
 </ul>
 
 
@@ -4706,6 +4734,7 @@ cycles or an explicit <code>0x14</code> clear request.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4730,13 +4759,13 @@ cycles or an explicit <code>0x14</code> clear request.</p>
         
         
           
-          <a href="canalyzer-exercise-ig/" class="md-footer__link md-footer__link--next" aria-label="Next: CANalyzer Exercise: Trace Filters &amp;amp; the Interactive Generator (IG)">
+          <a href="canalyzer-exercise-ig/" class="md-footer__link md-footer__link--next" aria-label="Next: CANalyzer Exercise: Trace Filters &amp;amp; the Interactive Generator">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                CANalyzer Exercise: Trace Filters &amp; the Interactive Generator (IG)
+                CANalyzer Exercise: Trace Filters &amp; the Interactive Generator
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4764,6 +4793,41 @@ cycles or an explicit <code>0x14</code> clear request.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4776,8 +4840,21 @@ cycles or an explicit <code>0x14</code> clear request.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

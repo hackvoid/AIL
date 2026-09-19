@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4355,26 +4343,28 @@
 
 
 <h1 id="hybrid-vehicle-architectures">Hybrid Vehicle Architectures<a class="headerlink" href="#hybrid-vehicle-architectures" title="Permanent link">&para;</a></h1>
-<p>Driven by the need to cut CO₂ emissions — especially in large cities — every
-major automotive group has restructured its product plans around hybrid and
-electric propulsion. Each manufacturer answered the challenge differently,
-which is why today's market offers a whole family of electrified layouts. This
-article gives you the map: how the electric machine can be placed in the
-powertrain (the <strong>P0–P4 positions</strong>), how vehicles are classified by
-electrification level (<strong>micro, mild, full, plug-in hybrid, and BEV</strong>), and how
-a real <strong>P1P4 plug-in hybrid</strong> switches between its operating modes.</p>
+<p>Welcome to your first look at how electrified vehicles are actually put
+together. Almost every project you will touch during the bootcamp — and later
+on the job — involves some mix of combustion engine and electric motor, so
+being able to "read" a hybrid architecture is a daily skill for an E/E
+engineer: it tells you which control units exist, what energy flows where, and
+which operating modes a vehicle can physically perform. By the end of this
+article you will be able to decode any architecture name like <strong>P1P4</strong>,
+classify a vehicle on the electrification ladder (micro → mild → full →
+plug-in → electric), and explain how a real plug-in hybrid switches between
+its driving modes.</p>
 <div class="admonition note">
 <p class="admonition-title">What 'hybrid' means here</p>
-<p>In this lesson <em>hybrid</em> always means a vehicle where <strong>one of the two
-power sources is an electric motor</strong> and the other is an internal
-combustion engine (ICE). Other combinations (e.g. hydraulic hybrids) exist
-but are out of scope.</p>
+<p>In this lesson <em>hybrid</em> always means a vehicle with <strong>two power sources</strong>:
+an electric motor and an <strong>internal combustion engine (ICE)</strong> — the
+technical name for a conventional petrol or diesel engine. Other
+combinations (e.g. hydraulic hybrids) exist but are out of scope.</p>
 </div>
 <h2 id="motor-positions-the-p0p4-nomenclature">Motor positions: the P0–P4 nomenclature<a class="headerlink" href="#motor-positions-the-p0p4-nomenclature" title="Permanent link">&para;</a></h2>
 <p>Hybrid architectures are named after <strong>where the electric machine sits</strong> in
-the driveline. The position determines what the motor can do: a belt-driven
-motor can only assist the engine, while a motor on its own axle can drive the
-car alone.</p>
+the driveline — and this is the single most useful mental model in the whole
+topic. The position determines what the motor can do: a belt-driven motor can
+only assist the engine, while a motor on its own axle can drive the car alone.</p>
 <p><img alt="Electric motor positions P0 to P4 in the driveline" src="img/motor-positions-p0-p4.webp" /></p>
 <table>
 <thead>
@@ -4418,25 +4408,27 @@ car alone.</p>
 <tr>
 <td><strong>P4</strong></td>
 <td>Directly on the secondary axle (own final drive)</td>
-<td>Independent electric axle — enables electric AWD</td>
+<td>Independent electric axle — enables electric <strong>all-wheel drive (AWD)</strong></td>
 </tr>
 </tbody>
 </table>
 <p>The bottom half of the figure shows the same idea on a real layout: the ICE
-drives the <strong>primary axle</strong> through P1r/P2/P3 options and the transmission,
-while a <strong>P4</strong> machine with its own final drive powers the <strong>secondary
-axle</strong> — the arrangement used by most Stellantis hybrids and BEVs you will
-work on.</p>
+drives the <strong>primary axle</strong> through the P1r/P2/P3 options and the
+transmission, while a <strong>P4</strong> machine with its own final drive powers the
+<strong>secondary axle</strong> — the arrangement used by most Stellantis hybrids and
+battery-electric vehicles you will work on.</p>
 <div class="admonition tip">
 <p class="admonition-title">Reading architecture names</p>
 <p>A name like <strong>P1P4</strong> is simply the list of positions in use: a P1 machine
 coupled to the engine plus a P4 machine on the rear axle. When you meet an
-unfamiliar hybrid, decode its P-code first — it tells you immediately which
-operating modes are physically possible.</p>
+unfamiliar hybrid, decode its P-code first — it tells you immediately
+which operating modes are physically possible, before you have seen a
+single schematic.</p>
 </div>
 <h2 id="the-electrification-ladder">The electrification ladder<a class="headerlink" href="#the-electrification-ladder" title="Permanent link">&para;</a></h2>
-<p>The market categories differ mainly in battery size, motor power, and whether
-the car can move on electricity alone.</p>
+<p>Market categories differ mainly in battery size, motor power, and whether the
+car can move on electricity alone. Think of them as rungs on a ladder — each
+step adds more electric capability.</p>
 <table>
 <thead>
 <tr>
@@ -4477,20 +4469,21 @@ the car can move on electricity alone.</p>
 <td>Jeep Compass / Renegade 4xe</td>
 </tr>
 <tr>
-<td><strong>BEV</strong> (battery electric)</td>
+<td><strong>BEV</strong> (battery electric vehicle)</td>
 <td>P4 traction motor only</td>
-<td>Large HV pack, e.g. 400 V</td>
+<td>Large high-voltage (HV) pack, e.g. 400 V</td>
 <td>The only propulsion source</td>
 <td>New Fiat 500e</td>
 </tr>
 </tbody>
 </table>
+<p>(Power figures in <strong>cv</strong> are metric horsepower; 1 cv ≈ 0.74 kW.)</p>
 <h3 id="micro-hybrid">Micro hybrid<a class="headerlink" href="#micro-hybrid" title="Permanent link">&para;</a></h3>
 <p>The entry level of electrification: an electric motor on the belt drive with a
-secondary 12 V battery, delivering less than 1 cv. It supports the thermal
-engine briefly in the moments when the engine would run far from its
-stoichiometric point, but it <strong>cannot move the vehicle by itself</strong> — it is an
-efficiency add-on, not a second powertrain.</p>
+secondary 12 V battery, delivering less than 1 cv. It supports the engine
+briefly in the moments when the engine would run inefficiently, but it
+<strong>cannot move the vehicle by itself</strong> — it is an efficiency add-on, not a
+second powertrain.</p>
 <h3 id="mild-hybrid-mhev">Mild hybrid (MHEV)<a class="headerlink" href="#mild-hybrid-mhev" title="Permanent link">&para;</a></h3>
 <p>Mild hybrids place the machine where it can do real work — a common choice is
 <strong>P2.5 inside the transmission</strong>, where the motor can fill in torque while the
@@ -4509,17 +4502,20 @@ much energy braking and coasting can put back.</p>
 battery <strong>can be charged from an external charging point</strong>, and it can be
 <strong>larger</strong>, because its size is no longer constrained by what kinetic
 recuperation can store. The Jeep Compass and Renegade <strong>4xe</strong> are the
-Stellantis examples of this layout — currently the most publicized hybrid
-technology on the market.</p>
+Stellantis examples of this layout — and the ones you are most likely to meet
+first in your project work.</p>
 <h2 id="bev-architecture-and-torque-control">BEV architecture and torque control<a class="headerlink" href="#bev-architecture-and-torque-control" title="Permanent link">&para;</a></h2>
-<p>In a <strong>BEV</strong> all propulsion comes from the electric motor. The motor connects
-to the front axle through a <strong>single fixed gear ratio</strong> — an electric machine's
-torque curve makes a multi-gear transmission unnecessary — so the motor is
-effectively a <strong>P4</strong>. The new Fiat 500e is the reference example: a
-<strong>70 kW / 95 cv</strong> motor fed by a <strong>400 V</strong> battery, delivering up to
-<strong>200 Nm</strong> of torque with an expected range of about <strong>320 km</strong>.</p>
+<p>In a <strong>battery electric vehicle (BEV)</strong> all propulsion comes from the electric
+motor. The motor connects to the axle through a <strong>single fixed gear ratio</strong> —
+an electric machine's torque curve makes a multi-gear transmission
+unnecessary — so the motor is effectively a <strong>P4</strong>. The new Fiat 500e is the
+reference example: a <strong>70 kW / 95 cv</strong> motor fed by a <strong>400 V</strong> battery,
+delivering up to <strong>200 Nm</strong> of torque with an expected range of about
+<strong>320 km</strong>.</p>
 <h3 id="the-powertrain-controllers">The powertrain controllers<a class="headerlink" href="#the-powertrain-controllers" title="Permanent link">&para;</a></h3>
-<p>A Stellantis BEV splits powertrain control across four main modules:</p>
+<p>A Stellantis BEV splits powertrain control across four main modules. You will
+see these acronyms in network traces and diagnostic sessions throughout your
+career, so it is worth learning them now:</p>
 <table>
 <thead>
 <tr>
@@ -4534,11 +4530,11 @@ effectively a <strong>P4</strong>. The new Fiat 500e is the reference example: a
 </tr>
 <tr>
 <td><strong>IDCM</strong> (integrated DC-charge module)</td>
-<td>Split in two subsystems: <strong>OBCM</strong> interfaces with the external charger (EVSE) to charge the HV battery; <strong>APM</strong> controls the DC/DC converter that keeps the 12 V battery charged</td>
+<td>Split in two subsystems: the <strong>OBCM</strong> (on-board charger module) interfaces with the external charging station (<strong>EVSE</strong>, electric vehicle supply equipment) to charge the HV battery; the <strong>APM</strong> (auxiliary power module) controls the DC/DC converter that keeps the 12 V battery charged</td>
 </tr>
 <tr>
 <td><strong>EVCU</strong> (electric vehicle control unit)</td>
-<td>The powertrain brain: from vehicle status and driver inputs it computes the <strong>torque demand</strong> for the motor and hosts standard vehicle functions — Cruise Control, Speed Limiter, One Pedal Drive</td>
+<td>The powertrain brain: from vehicle status and driver inputs it computes the <strong>torque demand</strong> for the motor and hosts standard vehicle functions — Cruise Control (CC), Speed Limiter (SL), One Pedal Drive (OPD)</td>
 </tr>
 <tr>
 <td><strong>EDM</strong> (electric drive module)</td>
@@ -4546,7 +4542,7 @@ effectively a <strong>P4</strong>. The new Fiat 500e is the reference example: a
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     DRV["Driver inputs&lt;br/&gt;(pedal, CC, SL, OPD)"] --&gt; EVCU
     EVCU["EVCU&lt;br/&gt;torque demand"] --&gt;|torque request| EDM["EDM&lt;br/&gt;inverter"]
     EDM --&gt;|phase currents| MOT["P4 e-motor"]
@@ -4556,7 +4552,9 @@ effectively a <strong>P4</strong>. The new Fiat 500e is the reference example: a
     EVSE["External charger (EVSE)"] --&gt; OBCM["IDCM: OBCM + APM"] --&gt; BATT</code></pre>
 <p>The torque path is strictly layered: the EVCU decides <em>how much</em> torque is
 wanted (and the BPCM tells it how much power the battery can give or accept),
-the EDM decides <em>how</em> to produce it electrically, and the motor executes.</p>
+the EDM decides <em>how</em> to produce it electrically, and the motor executes. This
+separation of "decide" and "actuate" is a pattern you will recognize in many
+other automotive control systems.</p>
 <h3 id="negative-torque-regenerating-energy">Negative torque: regenerating energy<a class="headerlink" href="#negative-torque-regenerating-energy" title="Permanent link">&para;</a></h3>
 <p>The electric machine works in both directions — it can deliver <strong>positive
 power</strong> (traction) or <strong>negative power</strong> (generation), recharging the HV
@@ -4574,20 +4572,20 @@ battery and extending range. Two everyday scenarios exploit this:</p>
   harvested into the battery instead of being wasted as heat.</li>
 </ul>
 <h2 id="reev-the-range-extender">REEV — the range extender<a class="headerlink" href="#reev-the-range-extender" title="Permanent link">&para;</a></h2>
-<p>A <strong>Range Extended Electric Vehicle</strong> is a hybrid where the ICE <strong>never drives
-the wheels</strong>: it exists only to recharge the HV battery and extend range. In
-mode terms, a REEV is a <strong>series-only</strong> hybrid.</p>
-<p>The typical topology pairs a <strong>P4 traction motor</strong> (exactly as on a BEV, acting
-on the demanded torque) with an ICE coupled to a second, smaller machine in
-<strong>P0 or P1</strong> position. That machine works purely as a <strong>generator</strong>: it
-converts the engine's torque into electrical energy for the battery. The
-driver always experiences electric drive; the engine runs (at its most
-efficient point) only when the battery needs support.</p>
+<p>A <strong>Range Extended Electric Vehicle (REEV)</strong> is a hybrid where the ICE
+<strong>never drives the wheels</strong>: it exists only to recharge the HV battery and
+extend range. In mode terms, a REEV is a <strong>series-only</strong> hybrid.</p>
+<p>The typical topology pairs a <strong>P4 traction motor</strong> (exactly as on a BEV,
+acting on the demanded torque) with an ICE coupled to a second, smaller
+machine in <strong>P0 or P1</strong> position. That machine works purely as a
+<strong>generator</strong>: it converts the engine's torque into electrical energy for the
+battery. The driver always experiences electric drive; the engine runs (at its
+most efficient point) only when the battery needs support.</p>
 <h2 id="p1p4-plug-in-hybrid-the-operating-modes">P1P4 plug-in hybrid: the operating modes<a class="headerlink" href="#p1p4-plug-in-hybrid-the-operating-modes" title="Permanent link">&para;</a></h2>
-<p>The P1P4 layout — used, for example, on the Jeep 4xe models — combines a
-<strong>P1f machine on the engine</strong> with a <strong>P4 machine on the rear axle</strong>, giving
-the energy manager three ways to move the car:</p>
-<pre class="mermaid"><code>flowchart TD
+<p>Now let's put it all together. The P1P4 layout — used, for example, on the
+Jeep 4xe models — combines a <strong>P1f machine on the engine</strong> with a <strong>P4 machine
+on the rear axle</strong>, giving the energy manager three ways to move the car:</p>
+<pre class="kx-mermaid"><code>flowchart TD
     ICE["ICE"] &lt;--&gt;|mechanical| P1["P1f motor/generator"]
     P1 &lt;--&gt;|electrical| BATT["HV battery"]
     BATT &lt;--&gt;|electrical| P4["P4 traction motor"]
@@ -4655,20 +4653,18 @@ brakes.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>Motor <strong>position</strong> (P0–P4) defines what a hybrid can do; architecture
-  names like P1P4 are just the list of positions in use.</li>
+<li>You can now decode any P-code: motor <strong>position</strong> (P0–P4) defines what a
+  hybrid can do, and names like P1P4 just list the positions in use.</li>
 <li>The ladder runs micro (12 V belt assist) → mild (48 V, P2.5) → full
-  (~6 kWh, kinetic-only charging, Toyota 1997) → plug-in (external
-  charging, bigger battery) → BEV (single-ratio P4, e.g. 500e: 70 kW,
-  400 V, 200 Nm, ~320 km).</li>
-<li>On a BEV, the EVCU computes torque demand, the EDM actuates it as phase
-  currents, the BPCM guards the HV battery, and the IDCM (OBCM + APM)
-  handles charging and the DC/DC converter.</li>
-<li>Electric machines give negative torque too: regenerative braking, One
-  Pedal Drive, and downhill speed-holding all recharge the battery.</li>
-<li>A REEV is a series-only hybrid (ICE → P0/P1 generator); a P1P4 PHEV
-  runs EV, series, and parallel modes, recuperating through P4 (and P1f)
-  in all of them.</li>
+  (~6 kWh, kinetic-only charging) → plug-in (external charging, bigger
+  battery) → BEV (single-ratio P4, e.g. 500e: 70 kW, 400 V, 200 Nm,
+  ~320 km).</li>
+<li>On a BEV, four modules share the work: EVCU decides torque, EDM actuates
+  it, BPCM guards the HV battery, IDCM (OBCM + APM) handles charging.</li>
+<li>Electric machines brake too: regenerative braking, One Pedal Drive and
+  downhill speed-holding all put energy back into the battery.</li>
+<li>A REEV is a series-only hybrid; a P1P4 PHEV runs EV, series and
+  parallel modes — and recuperates through P4 (and P1f) in all of them.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4683,7 +4679,7 @@ in <a href="../can-lin/">CAN, LIN &amp; Automotive Ethernet</a>.</p>
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/HEV_Architecture_Hybrid/HEV_Architecture_Hybrid.pdf">HEV Architecture Hybrid</a> — PDF, 237.1 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/HEV_Architecture_Hybrid/HEV_Architecture_Hybrid.pdf">HEV Architecture Hybrid</a> — PDF, 237.1 KB</li>
 </ul>
 
 
@@ -4713,6 +4709,7 @@ in <a href="../can-lin/">CAN, LIN &amp; Automotive Ethernet</a>.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4771,6 +4768,41 @@ in <a href="../can-lin/">CAN, LIN &amp; Automotive Ethernet</a>.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4783,8 +4815,21 @@ in <a href="../can-lin/">CAN, LIN &amp; Automotive Ethernet</a>.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4355,23 +4343,35 @@
 
 
 <h1 id="diagnosis-process-validation">Diagnosis Process Validation<a class="headerlink" href="#diagnosis-process-validation" title="Permanent link">&para;</a></h1>
-<p>Before an ECU software release can be approved, its <strong>diagnostic content</strong> must
-be validated: every trouble code, every readable parameter, and every
-tester-activated procedure has to behave exactly as the project specification
-says. This article describes how that validation is organized — which documents
-feed it, which tools and benches are used, and the concrete test procedures for
-the four kinds of diagnostic element: <strong>DTCs, IOLIs, Routines and RDIs</strong>.</p>
-<p>The techniques here build directly on the UDS diagnostic concepts from
-<a href="../../mil2/diagnosis/">Diagnosis</a> (services, sessions, status bytes)
-and on the measurement/calibration workflow from
-<a href="../../mil3/inca/">INCA</a>.</p>
+<p>Welcome to the part of the job where you stop trusting documents and start
+proving things. Before the software of an electronic control unit (ECU) can be
+released, someone has to check that its <strong>diagnostic content</strong> actually behaves
+the way the specification promises — every trouble code, every readable
+parameter, every tester-activated procedure. That someone is you.</p>
+<p>By the end of this article you will be able to:</p>
+<ul>
+<li>explain which specification documents feed diagnostic validation and check
+  them against each other for contradictions;</li>
+<li>set up a fault on a Hardware-in-the-Loop (HIL) bench and walk a trouble code
+  through its complete life cycle, watching the status byte evolve step by step;</li>
+<li>validate the four diagnostic object types — <strong>DTCs, IOLIs, Routines and
+  RDIs</strong> — with a repeatable procedure;</li>
+<li>document your findings so they can be reproduced, discussed and closed.</li>
+</ul>
+<p>The techniques here build directly on the Unified Diagnostic Services (UDS)
+concepts from <a href="../../mil2/diagnosis/">Diagnosis</a> (services, sessions,
+status bytes) and on the measurement/calibration workflow from
+<a href="../../mil3/inca/">INCA</a>. If those are still fuzzy, skim them first —
+everything else here is hands-on.</p>
 <h2 id="the-validation-process-at-a-glance">The validation process at a glance<a class="headerlink" href="#the-validation-process-at-a-glance" title="Permanent link">&para;</a></h2>
-<p>Diagnostic validation is a <strong>document-driven coherence check</strong>. The same
-diagnostic feature is described in several specification documents, and the
-first job of the validator is to verify that all of them agree with each other;
-the second job is to verify that the ECU software actually behaves as written.</p>
+<p>Diagnostic validation is, at heart, a <strong>document-driven coherence check</strong>. The
+same diagnostic feature is described in several specification documents written
+by different teams at different times. Your first job is to verify that all of
+them agree with each other; your second job is to verify that the ECU software
+actually behaves as written. Most defects you will find are simple mismatches —
+and finding them on the bench is exactly why the process exists.</p>
 <p><img alt="Inputs and output of the diagnostic validation process" src="img/validation-process-inputs.webp" /></p>
-<p>The input documents you will work with:</p>
+<p>The input documents you will work with every day:</p>
 <table>
 <thead>
 <tr>
@@ -4413,10 +4413,13 @@ the second job is to verify that the ECU software actually behaves as written.</
 </tr>
 </tbody>
 </table>
+<p>Don't worry about memorizing the acronyms now — you will meet them so often
+that they become second nature within a week.</p>
 <p>The elements under test are the four diagnostic object types: <strong>DTC</strong>
-(trouble codes), <strong>RDI</strong> (engineering parameters, read/written by data
-identifier), <strong>IOLI</strong> and <strong>Routine</strong> (procedures used by the plant and by
-service, e.g. actuator tests and resets of learned values).</p>
+(Diagnostic Trouble Code — a stored fault), <strong>RDI</strong> (engineering parameters,
+read and written by data identifier), <strong>IOLI</strong> (Input/Output Line Interface
+procedures) and <strong>Routine</strong> (tester-activated procedures used by the plant and
+by service, e.g. actuator tests and resets of learned values).</p>
 <p>The applicable <strong>reference norms</strong> for the project are 7.Z0059, 7.Z0059/01,
 CS.00051, CS.00052 and CS.00053 — they define the general diagnostic behavior
 (status byte evolution, error memory management, timing) that every DTC must
@@ -4425,7 +4428,7 @@ follow.</p>
 run, their results, and the names of the acquisitions that prove them. Anything
 found out of spec is tracked for discussion in the <strong>DVPM</strong> meeting and opened
 as a point in the <strong>OPL</strong> (Open Points List) management system.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     subgraph Inputs["Input documents"]
         DSM["DSM"]
         CM["DTC Table / Criteria Matrix"]
@@ -4442,9 +4445,9 @@ as a point in the <strong>OPL</strong> (Open Points List) management system.</p>
     Inputs --&gt; CHK --&gt; TEST --&gt; REP
     TEST --&gt;|out of spec| OPL</code></pre>
 <h2 id="the-test-environment">The test environment<a class="headerlink" href="#the-test-environment" title="Permanent link">&para;</a></h2>
-<p>Validation tests run on a <strong>HIL (Hardware-in-the-Loop) bench</strong> equipped with
-the real ECUs — typically the ECM (engine control), HCP (hybrid control) and
-TCM (transmission control) — plus their real actuators. Faults and maneuvers
+<p>Validation tests run on a <strong>HIL bench</strong> equipped with the real ECUs — typically
+the ECM (engine control module), HCP (hybrid control processor) and TCM
+(transmission control module) — plus their real actuators. Faults and maneuvers
 are reproduced in the different vehicle conditions the specification requires:</p>
 <ul>
 <li><strong>Power On</strong> — key on, engine off,</li>
@@ -4479,64 +4482,71 @@ are reproduced in the different vehicle conditions the specification requires:</
 </tr>
 </tbody>
 </table>
-<p>New diagnostic tests are first executed <strong>manually</strong>; the maneuvers that work
-are collected and shared so they can be <strong>automated in the VST test platform</strong>,
-which then runs the already-automated diagnosis cases. Manual exploration and
-automated regression complement each other.</p>
+<p>New diagnostic tests are always executed <strong>manually first</strong>; the maneuvers that
+work are collected and shared so they can be <strong>automated in the VST test
+platform</strong>, which then re-runs the already-automated diagnosis cases. Think of
+it as explore by hand, then lock in as regression — the two modes complement
+each other, and you will do both.</p>
 <h2 id="checks-common-to-every-element">Checks common to every element<a class="headerlink" href="#checks-common-to-every-element" title="Permanent link">&para;</a></h2>
-<p>Whatever the element type, three families of checks always apply:</p>
+<p>Whatever the element type, three families of checks always apply. Learn these
+once and reuse them everywhere:</p>
 <ol>
 <li><strong>Coherence between documents.</strong> The element must exist with the same
    definition in the D&amp;C, in the CDD/DDT and (for DTCs) in the Criteria
    Matrix. Every diagnostic session listed in the D&amp;C must also be active in
    the CDD, with matching descriptions.</li>
 <li><strong>Enabling and healing conditions.</strong> Each condition is removed one at a
-   time and the effect on the element's behavior is observed — a condition that
-   has no effect is a specification or software error.</li>
+   time and the effect on the element's behavior is observed — a condition
+   that has no effect when removed is a specification or software error.</li>
 <li><strong>Sessions and addressing.</strong> Requests are sent in <em>all</em> diagnostic sessions
    and with both <strong>physical addressing</strong> (one specific ECU answers,
    <code>Addr = none</code> in the tester) and <strong>functional addressing</strong> (the request is
    broadcast, <code>Addr = ALL</code>, and every ECU that supports the service answers).
    In functional addressing, if no ECU answers at all, the tester reports an
-   <strong>Rx Timeout</strong>.</li>
+   <strong>Rx Timeout</strong> — that's expected, not a tool failure.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Positive and negative responses are equally important</p>
 <p>A diagnostic feature is not validated when it works — it is validated when
 it works <em>and</em> fails the way the CDD says it should. Every negative
-response code listed in the CDD must be provoked and checked.</p>
+response code listed in the CDD must be provoked and checked. Beginners
+often only test the happy path; experienced validators spend most of their
+time on the unhappy ones.</p>
 </div>
 <h2 id="dtc-validation">DTC validation<a class="headerlink" href="#dtc-validation" title="Permanent link">&para;</a></h2>
 <h3 id="collecting-the-dtcs-details">Collecting the DTC's details<a class="headerlink" href="#collecting-the-dtcs-details" title="Permanent link">&para;</a></h3>
 <p>For each Diagnostic Trouble Code, the Criteria Matrix (checked against the DSM
-and the DDT for coherence) gives you the full test plan:</p>
+and the DDT for coherence) hands you the full test plan:</p>
 <ul>
 <li>the <strong>MIL class</strong> — whether this fault must light the malfunction indicator
-  lamp (MIL) or not;</li>
+  lamp (MIL, the dashboard "check engine" light) or not;</li>
 <li>the <strong>maturation time</strong> — how long the fault condition must persist before
   the DTC is stored — and the <strong>de-maturation time</strong>;</li>
 <li>the <strong>enabling conditions</strong> (when the monitor is allowed to run) and the
   <strong>healing conditions</strong> (how the DTC returns to a clean state).</li>
 </ul>
-<p>Two project rules are checked before any bench work:</p>
+<p>Two project rules are checked before any bench work — they save you from
+testing something that cannot possibly pass:</p>
 <ul>
 <li>every RDI referenced by the Criteria Matrix must actually be <strong>active in the
   dataset</strong> flashed on the ECU;</li>
 <li>the <strong>MIL status</strong> of the DTC must be identical across all documents.</li>
 </ul>
 <h3 id="a-worked-example-p065b">A worked example: P065B<a class="headerlink" href="#a-worked-example-p065b" title="Permanent link">&para;</a></h3>
-<p>The deck walks through DTC <strong>P065B</strong> — "Intelligent Alternator Module
+<p>Let's walk through a real case: DTC <strong>P065B</strong> — "Intelligent Alternator Module
 (functional test) general electrical failure (circuit short to battery or
-open)", internally the DFC <code>DFC_SAMElecFault</code>. The maturation criterion is that
-the signal <code>IAM_ECM_FEEDBACK.ElectricalFault</code> equals 1, and the DTC Table
-requires the warning indicator to stay <strong>OFF</strong> for this fault.</p>
-<p>The fault is simulated while the engine is running (forcing the internal signal
-in INCA), and after the maturation time elapses the DTC is stored in the error
-memory with <strong>status byte <code>8F</code></strong>.</p>
+open)", internally the DFC (Diagnostic Fault Code) <code>DFC_SAMElecFault</code>. The
+maturation criterion is that the signal <code>IAM_ECM_FEEDBACK.ElectricalFault</code>
+equals 1, and the DTC Table requires the warning indicator to stay <strong>OFF</strong> for
+this fault.</p>
+<p>You simulate the fault while the engine is running (forcing the internal
+signal in INCA), and after the maturation time elapses the DTC is stored in
+the error memory with <strong>status byte <code>8F</code></strong>.</p>
 <p><img alt="DIAnalyzer and INCA while DTC P065B matures: the error memory shows status byte 8F" src="img/dtc-stored-error-memory.webp" /></p>
 <p>In this particular test the MIL actually turned <strong>ON</strong> — contradicting the DTC
 Table. That is exactly the kind of finding the process exists for: an OPL point
-is opened asking for clarification.</p>
+is opened asking for clarification. Notice that <em>nobody recalibrated anything</em>;
+the mismatch itself is the deliverable.</p>
 <div class="admonition warning">
 <p class="admonition-title">Approval rule</p>
 <p>For final approval, the maneuvers must simulate <strong>all input conditions</strong>
@@ -4546,8 +4556,9 @@ calibrated, you do not recalibrate it to make it pass.</p>
 </div>
 <h3 id="following-the-status-byte-across-key-cycles">Following the status byte across key cycles<a class="headerlink" href="#following-the-status-byte-across-key-cycles" title="Permanent link">&para;</a></h3>
 <p>Most of a DTC test is a careful walk through key on/off cycles, watching the
-<strong>DTC status byte</strong> (ISO 14229) evolve exactly as the norms require. The bits
-that matter here:</p>
+<strong>DTC status byte</strong> (ISO 14229) evolve exactly as the norms require. This is
+the heart of the whole procedure — once you can read the status byte, you can
+read the ECU's mind. The bits that matter here:</p>
 <table>
 <thead>
 <tr>
@@ -4582,7 +4593,8 @@ that matter here:</p>
 </tr>
 </tbody>
 </table>
-<p>The validation sequence for one DTC looks like this:</p>
+<p>The validation sequence for one DTC looks like this — follow the byte column
+and the pattern will click:</p>
 <table>
 <thead>
 <tr>
@@ -4637,7 +4649,7 @@ that matter here:</p>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>stateDiagram-v2
+<pre class="kx-mermaid"><code>stateDiagram-v2
     direction LR
     s8F: "8F fault matures"
     s8E: "8E healed, same cycle"
@@ -4654,16 +4666,17 @@ that matter here:</p>
 <p>Two practical rules from the bench:</p>
 <ul>
 <li><strong>Alternate</strong> waiting and not waiting for the power latch time between key
-  cycles — this covers more software initialization paths and exposes DTCs that
-  behave differently depending on whether the ECU fully shut down.</li>
+  cycles — this covers more software initialization paths and exposes DTCs
+  that behave differently depending on whether the ECU fully shut down.</li>
 <li>DTC storage must always follow the status byte evolution required by the
   project norms; any jump or missing step is an OPL point.</li>
 </ul>
 <h3 id="checking-snapshots-with-service-19">Checking snapshots with service $19<a class="headerlink" href="#checking-snapshots-with-service-19" title="Permanent link">&para;</a></h3>
 <p>When a DTC is stored, the ECU also freezes a <strong>snapshot</strong> (freeze frame) of
-environmental parameters. You verify it with UDS service <code>0x19</code> subfunction
-<code>0x04</code> (reportDTCSnapshotRecordByDTCNumber). For P065B, whose 3-byte DTC number
-is <code>06 5B 00</code>:</p>
+environmental parameters — a photograph of the vehicle state at the moment of
+failure. You verify it with UDS service <code>0x19</code> subfunction <code>0x04</code>
+(reportDTCSnapshotRecordByDTCNumber). For P065B, whose 3-byte DTC number is
+<code>06 5B 00</code>:</p>
 <div class="highlight"><pre><span></span><code>19 04 06 5B 00 00   → snapshot record 0 must be POPULATED  (first storage)
 19 04 06 5B 00 01   → snapshot record 1 must be VOID       (never stored twice yet)
 </code></pre></div>
@@ -4671,9 +4684,8 @@ is <code>06 5B 00</code>:</p>
 <ul>
 <li>on the <strong>first</strong> storage there must be exactly <strong>one</strong> snapshot — a second
   record while the fault was never healed and never re-detected is an error;</li>
-<li>after healing the fault, re-setting it and cycling the key (steps 12/13 of
-  the walkthrough), a <strong>second</strong> snapshot must appear — and its content must be
-  checked for coherence too;</li>
+<li>after healing the fault, re-setting it and cycling the key, a <strong>second</strong>
+  snapshot must appear — and its content must be checked for coherence too;</li>
 <li>the environmental parameters in the snapshot must match the same parameters
   read live in INCA, and must <strong>not contain unknown RDIs</strong>.</li>
 </ul>
@@ -4681,9 +4693,9 @@ is <code>06 5B 00</code>:</p>
 Table) and that <strong>unwanted recoveries are not active</strong> (the DTC must not clear
 itself through a path the specification does not allow).</p>
 <h2 id="ioli-and-routine-validation">IOLI and Routine validation<a class="headerlink" href="#ioli-and-routine-validation" title="Permanent link">&para;</a></h2>
-<p>IOLIs (Input/Output Line Interface procedures) and Routines are
-<strong>tester-activated procedures</strong> — actuator commands, resets of learned values,
-self-tests. They share one procedure, with a few routine-specific steps.</p>
+<p>IOLIs and Routines are <strong>tester-activated procedures</strong> — actuator commands,
+resets of learned values, self-tests. They share one procedure, with a few
+routine-specific steps.</p>
 <p>For both element types:</p>
 <ol>
 <li><strong>Coherence</strong>: the D&amp;C and the CDD/DDT must list the same sessions, the same
@@ -4725,7 +4737,8 @@ for content, access and — most subtly — <strong>conversion</strong>.</p>
    comparing the tester against the ECU's internal representation.</li>
 </ol>
 <h3 id="the-two-conversion-formulas">The two conversion formulas<a class="headerlink" href="#the-two-conversion-formulas" title="Permanent link">&para;</a></h3>
-<p>There are two distinct conversions, and mixing them up is the classic mistake:</p>
+<p>There are two distinct conversions, and mixing them up is the classic beginner
+mistake — keep them straight and you'll save yourself hours of confusion.</p>
 <p><strong>The ECU-internal formula</strong> (from the software manual) converts between the
 internal integer and the physical value as the software sees it:</p>
 <div class="highlight"><pre><span></span><code>phys = fac_sw × int + offset_sw
@@ -4777,7 +4790,7 @@ tracked, discussed at the DVPM and closed individually.</p>
 <ul>
 <li>Diagnostic validation is a coherence exercise: DSM, DTC Table/Criteria
   Matrix, D&amp;C, CDD/DDT and the dataset must all agree — and then the ECU
-  must behave as written.</li>
+  must behave as written. You can do this.</li>
 <li>Tests run on the HIL bench (real ECM/HCP/TCM + actuators) with
   ControlDesk, INCA, DIAnalyzer and CDA, across all vehicle conditions;
   proven maneuvers are automated in VST.</li>
@@ -4806,7 +4819,7 @@ are applied to real vehicle problems in
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil4/32_Diagnosis_Process/32_Diagnosis_Process.pdf">Diagnosis Process</a> — PDF, 4.4 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil4/32_Diagnosis_Process/32_Diagnosis_Process.pdf">Diagnosis Process</a> — PDF, 4.4 MB</li>
 </ul>
 
 
@@ -4836,6 +4849,7 @@ are applied to real vehicle problems in
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4894,6 +4908,41 @@ are applied to real vehicle problems in
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4906,8 +4955,21 @@ are applied to real vehicle problems in
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

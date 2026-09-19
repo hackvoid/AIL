@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4460,52 +4448,59 @@
 
 
 <h1 id="functional-specifications-vf">Functional Specifications (VF)<a class="headerlink" href="#functional-specifications-vf" title="Permanent link">&para;</a></h1>
-<p>Every function in a modern vehicle — from the climate control to the gearbox
-indicator on the dashboard — is described, before a single line of software is
-written, in a <strong>functional specification</strong>. In the FCA/Stellantis world this
-document is called a <strong>VF (Vehicle Function)</strong>. It is written by a dedicated
-professional figure, the <strong>functionalist</strong>, and it is the reference you will
-constantly open when writing test cases, setting up a HIL bench, or chasing a
-bug: if the car behaves differently from what the VF says, either the software
-or the document is wrong.</p>
-<p>This article explains what a VF contains, how it is structured, and then walks
-through a real example — VF200, the <em>Gearbox Status Management</em> function of a
-BEV project — so you can recognize every section when you meet one at work.</p>
+<p>Welcome to the document you will open more than any other in your career as an
+automotive E/E engineer. Before a single line of software is written, every
+vehicle function — from climate control to the gear letter on the dashboard —
+is described in a <strong>functional specification</strong>. In the FCA/Stellantis world
+this document is called a <strong>VF (Vehicle Function)</strong>, written by a dedicated
+professional figure: the <strong>functionalist</strong>.</p>
+<p>Why should you care? Because whenever the car does something unexpected, the
+VF is the referee. If the behavior differs from what the VF says, either the
+software or the document is wrong — and your job, often, is to find out which.</p>
+<p>By the end of this article you will be able to:</p>
+<ul>
+<li>explain what a VF contains and where it sits in the development process,</li>
+<li>decode a VF identifier like <code>VF200_V5_R4R3_P250FL14</code>,</li>
+<li>walk through a real VF — VF200, <em>Gearbox Status Management</em> for a battery
+  electric vehicle (BEV) — and recognize every section when you meet one at
+  work.</li>
+</ul>
 <h2 id="what-a-vf-is-and-is-not">What a VF is (and is not)<a class="headerlink" href="#what-a-vf-is-and-is-not" title="Permanent link">&para;</a></h2>
 <p>A VF gives a <strong>complete view of the behavior of one function</strong>:</p>
 <ul>
-<li>the list of features the function offers,</li>
-<li>the vehicle <strong>nodes (ECUs)</strong> involved and the signals they exchange,</li>
-<li>the expected behavior under the different vehicle operating conditions
-  (key-on, key-off, cranking, low battery, …),</li>
-<li>the <strong>diagnosis</strong> strategy and the <strong>recovery</strong> behavior adopted when
-  something fails,</li>
+<li>the features the function offers,</li>
+<li>the electronic control units (<strong>ECUs</strong>, called <em>nodes</em>) involved and the
+  signals they exchange,</li>
+<li>the expected behavior under each vehicle operating condition (key-on,
+  key-off, cranking, low battery, …),</li>
+<li>the <strong>diagnosis</strong> strategy and the <strong>recovery</strong> behavior when something
+  fails,</li>
 <li>a history of the changes made with respect to previous versions.</li>
 </ul>
-<p>Two properties are worth stressing:</p>
+<p>Two properties are worth memorizing on day one:</p>
 <ul>
 <li><strong>A VF is not tied to the component structure.</strong> It describes <em>what</em> the
-  function must do, not <em>how</em> a specific ECU is built. The same function may be
-  re-allocated to different hardware across projects without changing the VF's
-  logic.</li>
-<li><strong>The software is written starting from the VF.</strong> Downstream, requirements
-  and test cases are derived from it — which is why a vague VF produces vague
-  software.</li>
+  function must do, not <em>how</em> a specific ECU is built. The same function may
+  be re-allocated to different hardware across projects without changing the
+  VF's logic.</li>
+<li><strong>The software is written starting from the VF.</strong> Requirements and test
+  cases are derived from it downstream — which is why a vague VF produces
+  vague software, and why you should never be shy about challenging one.</li>
 </ul>
 <h3 id="position-in-the-v-model">Position in the V-model<a class="headerlink" href="#position-in-the-v-model" title="Permanent link">&para;</a></h3>
 <p><img alt="Position of functional specifications in the V-model" src="img/vf-v-model.webp" /></p>
 <p>The VF sits on the <strong>left branch of the V-model</strong>, just below the requirements
 specifications: requirements say <em>what the vehicle must do</em>, the VF says <em>how
-each function behaves to achieve it</em>. On the right branch, the VF is mirrored by
+each function behaves to achieve it</em>. On the right branch it is mirrored by
 the <strong>integration and system test</strong> phases — the tests that verify the
-implemented function against the specification. This is why you, as a test
-engineer, will read VFs even if you never write one.</p>
+implemented function against the specification. That mirroring is exactly why
+you, as a test engineer, will read VFs even if you never write one.</p>
 <div class="admonition note">
 <p class="admonition-title">One function, many VFs</p>
-<p>A car-level feature area (car access, theft protection, climate, braking,
-lighting, infotainment, vehicle dynamics, energy management, …) is usually
-covered by <strong>several VFs</strong>, one per function. The VF set of a vehicle
-program together describes its entire E/E functional behavior.</p>
+<p>A car-level feature area (car access, climate, braking, lighting,
+infotainment, energy management, …) is usually covered by <strong>several VFs</strong>,
+one per function. Together, a vehicle program's VF set describes its
+entire E/E functional behavior.</p>
 </div>
 <h2 id="naming-and-versioning">Naming and versioning<a class="headerlink" href="#naming-and-versioning" title="Permanent link">&para;</a></h2>
 <p>A VF is identified by the function name followed by an alphanumeric code:</p>
@@ -4513,49 +4508,48 @@ program together describes its entire E/E functional behavior.</p>
 </code></pre></div>
 <ul>
 <li><strong>VF number</strong> — identifies the function itself (e.g. VF200).</li>
-<li><strong>V — Version</strong> — versions the functionality according to the vehicle set-up
-  (different architectures or configurations may need different versions).</li>
-<li><strong>R — Release</strong> — tracks the evolutions of the same VF over time (bug fixes,
-  adaptations when porting the function to a new project).</li>
+<li><strong>V — Version</strong> — versions the functionality according to the vehicle
+  set-up (different architectures or configurations may need different
+  versions).</li>
+<li><strong>R — Release</strong> — tracks the evolutions of the same VF over time (bug
+  fixes, adaptations when porting the function to a new project).</li>
 </ul>
-<p>So <code>VF200_V5_R4R3_P250FL14</code> reads as: function 200, version 5 (releases R3 and
-R4 merged), ported to project 250FL14.</p>
+<p>So <code>VF200_V5_R4R3_P250FL14</code> reads as: function 200, version 5 (releases R3
+and R4 merged), ported to project 250FL14.</p>
 <div class="admonition tip">
 <p class="admonition-title">Always quote the full identifier</p>
 <p>When you reference a VF in a test report or a defect, write the complete
 <code>VF_V_R</code> string plus the project code. "The gearbox VF" is ambiguous —
 release R3 and R4 of the same version can specify different behavior, as
-the example below shows.</p>
+the case study below shows.</p>
 </div>
 <h2 id="anatomy-of-a-vf">Anatomy of a VF<a class="headerlink" href="#anatomy-of-a-vf" title="Permanent link">&para;</a></h2>
-<p>Although layouts vary slightly between OEM templates, a VF contains the same
-logical sections.</p>
+<p>Layouts vary slightly between manufacturers' templates, but every VF contains
+the same logical sections. Here is the tour.</p>
 <h3 id="revision-notes">Revision notes<a class="headerlink" href="#revision-notes" title="Permanent link">&para;</a></h3>
-<p>The document opens with a <strong>revision table</strong>: for every release, the date, the
-author (the VF <em>owner</em>), and the list of changes — usually referencing a change
-request number (CR). If the VF was <strong>ported</strong> from another project, the origin
-project is declared here. This table is the first thing to check when a test
-fails "against the spec": you may be reading an outdated release.</p>
+<p>The document opens with a <strong>revision table</strong>: for every release, the date,
+the author (the VF <em>owner</em>), and the list of changes — usually referencing a
+change request (CR) number. If the VF was <strong>ported</strong> from another project,
+the origin is declared here. Make this table your first stop when a test
+fails "against the spec": you may simply be reading an outdated release.</p>
 <h3 id="functional-diagram">Functional diagram<a class="headerlink" href="#functional-diagram" title="Permanent link">&para;</a></h3>
 <p>The <strong>functional diagram</strong> is a graphical map of the function: every involved
-node, every connection between nodes, and the <strong>CAN/LIN messages and signals</strong>
-exchanged on each branch.</p>
-<p>Reading conventions you will find in these diagrams:</p>
+node, every connection, and the <strong>CAN/LIN messages and signals</strong> exchanged on
+each branch. Reading conventions you will find:</p>
 <ul>
-<li>Different <strong>colors</strong> identify the different networks (C1CAN, C2CAN, C3CAN,
-  BHCAN, PCAN, LIN, …).</li>
-<li>On each connection branch, the <strong>message name</strong> and the transmitted/received
-  <strong>signal names</strong> are annotated.</li>
-<li>Nodes drawn with <strong>two colors act as gateways</strong> (direct or indirect) between
-  networks.</li>
-<li><strong>Numbers inside the node blocks</strong> reference the VFs from which signals come
-  or to which they go — this is how you navigate from one VF to another.</li>
-<li>Node outputs are not necessarily bus messages: they can also be <strong>acoustic or
-  visual signals</strong> perceived directly by the user, e.g. an LED or a buzzer.</li>
+<li>different <strong>colors</strong> identify the different networks (C1CAN, C2CAN, C3CAN,
+  BHCAN, PCAN, LIN, …);</li>
+<li>each branch is annotated with the <strong>message name</strong> and the
+  transmitted/received <strong>signal names</strong>;</li>
+<li>nodes drawn with <strong>two colors act as gateways</strong> between networks;</li>
+<li><strong>numbers inside the node blocks</strong> reference other VFs that signals come
+  from or go to — this is how you navigate from one VF to the next;</li>
+<li>node outputs are not always bus messages: they can also be <strong>acoustic or
+  visual signals</strong> perceived directly by the driver, like an LED or a buzzer.</li>
 </ul>
 <h3 id="working-conditions">Working conditions<a class="headerlink" href="#working-conditions" title="Permanent link">&para;</a></h3>
-<p>The <strong>working conditions table</strong> states under which vehicle states the function
-is operational. Typical rows:</p>
+<p>The <strong>working conditions table</strong> states under which vehicle states the
+function is operational. Typical rows:</p>
 <table>
 <thead>
 <tr>
@@ -4586,82 +4580,84 @@ is operational. Typical rows:</p>
 </tr>
 </tbody>
 </table>
-<p>Each row is marked Yes/No, with remarks for the timing (in minutes) or the
-exclusion mode (SW or HW). A simple function may live only at key-on; a body
+<p>Each row is marked Yes/No, with remarks for timing (in minutes) or exclusion
+mode (software or hardware). A simple function may live only at key-on; a body
 function often needs key-off and timed operation too.</p>
 <h3 id="function-description-the-heart-of-the-vf">Function description — the heart of the VF<a class="headerlink" href="#function-description-the-heart-of-the-vf" title="Permanent link">&para;</a></h3>
-<p>This is the core section, and the longest. It starts by listing the <strong>nodes
-involved</strong>, distinguishing those that <em>"make logic"</em> (implement the algorithm)
-from those that merely forward or display information, with their input/output
-signals. Then it describes the behavior in detail, typically as:</p>
+<p>The core section, and the longest. It starts by listing the <strong>nodes
+involved</strong>, distinguishing those that <em>"make logic"</em> (implement the
+algorithm) from those that merely forward or display information, with their
+input/output signals. Then it describes the behavior in detail, typically as:</p>
 <ul>
-<li><strong>structured requirements</strong> — <code>If … then … else …</code> rules, often written in
+<li><strong>structured requirements</strong> — <code>If … then … else …</code> rules, often in
   shall-style ("the MTA shall send …"),</li>
 <li><strong>truth tables</strong> mapping input combinations to outputs,</li>
 <li><strong>state machines</strong> for operating conditions,</li>
-<li><strong>timeouts and thresholds</strong> expressed as named calibration parameters
-  (never hardcoded numbers in the logic itself).</li>
+<li><strong>timeouts and thresholds</strong> expressed as named calibration parameters —
+  never hardcoded numbers in the logic itself.</li>
 </ul>
 <p>The behavior is usually split per key condition (<code>@KeyStatus = keyon</code>,
 <code>@KeyStatus = keyoff</code>, …), because most functions behave differently when the
 vehicle is asleep.</p>
 <h3 id="working-characteristics-parameters">Working characteristics (parameters)<a class="headerlink" href="#working-characteristics-parameters" title="Permanent link">&para;</a></h3>
 <p>All tunable values — thresholds, timeouts, debounce times — are collected as
-<strong>configuration parameters</strong>, each with a description, the node that owns it,
-and where the value is implemented (PROXI, end-of-line programming, part
-number, or to be defined with the supplier). Test engineers care about these a
-lot: changing a parameter is a calibration change, not a software change, and
-tests must often be repeated per parameter set.</p>
+<strong>configuration parameters</strong>, each with a description, the owning node, and
+where the value is implemented (PROXI configuration, end-of-line programming,
+part number, or to be defined with the supplier). You will care about these a
+lot: changing a parameter is a <em>calibration</em> change, not a software change,
+and tests must often be repeated per parameter set.</p>
 <h3 id="can-wake-up">CAN wake-up<a class="headerlink" href="#can-wake-up" title="Permanent link">&para;</a></h3>
 <p>A short section states whether activating the function can <strong>wake the CAN
-network</strong> up (e.g. a door handle pull waking the body CAN), with a table of the
-triggering events per node. This matters for power management tests.</p>
+network</strong> (think of a door-handle pull waking the body CAN), with a table of
+the triggering events per node. This matters for power-management tests.</p>
 <h3 id="diagnosis-and-recovery">Diagnosis and recovery<a class="headerlink" href="#diagnosis-and-recovery" title="Permanent link">&para;</a></h3>
-<p>The last functional section describes, for every input the function depends on,
-what happens when it fails:</p>
+<p>The last functional section describes, for every input the function depends
+on, what happens when it fails:</p>
 <ul>
 <li>the <strong>diagnosis type</strong> (electrical fault, plausibility fault, missing
   message, CRC/message-counter failure),</li>
-<li>which ECU <strong>stores the DTC</strong> and with which detection time (UDM),</li>
+<li>which ECU <strong>stores the diagnostic trouble code (DTC)</strong> and with which
+  detection time,</li>
 <li>the <strong>recovery strategy</strong>: the default/fallback values the function uses
   while the fault is active.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">The CDD has the full diagnosis detail</p>
 <p>The VF only sketches the diagnosis strategy. The complete description of
-DTCs, validation/invalidation conditions and fault debouncing lives in the
-<strong>CDD (CANdela Diagnostic Description)</strong> of each ECU — you will work with
-CDD files in the diagnosis lessons.</p>
+DTCs, validation/invalidation conditions and fault debouncing lives in
+each ECU's <strong>CDD (CANdela Diagnostic Description)</strong> file — you will work
+with CDDs in the diagnosis lessons.</p>
 </div>
 <h3 id="companion-files-dbc-and-lin-files">Companion files: DBC and LIN files<a class="headerlink" href="#companion-files-dbc-and-lin-files" title="Permanent link">&para;</a></h3>
-<p>A VF never stands alone. The network-level truth about messages and signals is
-kept in two companion databases:</p>
+<p>A VF never stands alone. The network-level truth about messages and signals
+is kept in two companion databases:</p>
 <ul>
-<li>the <strong>DBC file</strong>, one per CAN network (e.g. BHCAN), mapping every message,
-  signal, scaling and node;</li>
-<li>the <strong>LIN description file</strong>, doing the same for the LIN sub-networks (e.g.
-  the wiping functionality).</li>
+<li>the <strong>DBC (Database CAN) file</strong>, one per CAN network (e.g. BHCAN), mapping
+  every message, signal, scaling and node;</li>
+<li>the <strong>LIN description file (LDF)</strong>, doing the same for the LIN sub-networks
+  (e.g. the wiping functionality).</li>
 </ul>
-<p>When a VF says "the MTA shall send <code>STATUS_C_TCM_MTA_DCTM.GearIndicationSts</code>",
-the DBC tells you the message ID, cycle time, start bit, length and value table
-of that signal. You will read and edit DBC files constantly in CANalyzer/CANoe.</p>
+<p>When a VF says "the MTA shall send
+<code>STATUS_C_TCM_MTA_DCTM.GearIndicationSts</code>", the DBC tells you the message ID,
+cycle time, start bit, length and value table of that signal. You will read
+and edit DBC files constantly in CANalyzer/CANoe.</p>
 <h2 id="case-study-vf200-gearbox-status-management-bev">Case study: VF200 — Gearbox Status Management (BEV)<a class="headerlink" href="#case-study-vf200-gearbox-status-management-bev" title="Permanent link">&para;</a></h2>
-<p>The best way to understand the structure is a real document. The example VF is
-<strong>VF200_V5_R4R3</strong>, <em>Gearbox Status Management – BEV</em>, for FCA project
-<strong>250FL14</strong> (Vehicle Function Area: <em>Powertrain Management</em>, Group: <em>GearBox</em>).
-The function manages <strong>everything the driver sees and hears about the
-transmission</strong>: the gear indication on the instrument panel, the blinking of
-that indication, the warning messages, the buzzer, the drive-mode (Eco/Power)
-management, and the vehicle-hold / parking-brake requests.</p>
-<p>The revision notes alone teach a lesson: across releases, a parameter
-(<code>T_SHOW_OFF_BCM</code>) was deleted as unnecessary, signal names were corrected
+<p>Theory is nice; a real document is better. Our example is <strong>VF200_V5_R4R3</strong>,
+<em>Gearbox Status Management – BEV</em>, for FCA project <strong>250FL14</strong> (Vehicle
+Function Area: <em>Powertrain Management</em>, Group: <em>GearBox</em>). The function
+manages <strong>everything the driver sees and hears about the transmission</strong>: the
+gear indication on the instrument panel, its blinking, the warning messages,
+the buzzer, the drive-mode (Eco/Power) management, and the vehicle-hold /
+parking-brake requests.</p>
+<p>Even the revision notes teach a lesson: across releases, an unnecessary
+parameter (<code>T_SHOW_OFF_BCM</code>) was deleted, signal names were corrected
 (<code>Power_Eco.Req</code> → <code>EcoPower.Req</code>), diagnosis timers were aligned
-(<code>MissingMsg_Fast_Time</code> → <code>MissingMsg_Default_Time</code>), and the driver-exit logic
-was changed from AND to OR between seat belt and door status — exactly the kind
-of detail that flips a test result.</p>
+(<code>MissingMsg_Fast_Time</code> → <code>MissingMsg_Default_Time</code>), and the driver-exit
+logic was changed from AND to OR between seat-belt and door status — exactly
+the kind of detail that flips a test result.</p>
 <h3 id="nodes-and-signal-flow">Nodes and signal flow<a class="headerlink" href="#nodes-and-signal-flow" title="Permanent link">&para;</a></h3>
 <p><img alt="VF200 functional diagram — nodes and signals" src="img/vf200-functional-diagram.webp" /></p>
-<p>The nodes that <em>make logic</em> are three:</p>
+<p>Three nodes <em>make logic</em>:</p>
 <table>
 <thead>
 <tr>
@@ -4696,7 +4692,7 @@ of detail that flips a test result.</p>
 <tbody>
 <tr>
 <td><code>ShiftLeverPosition.Info</code></td>
-<td>SLU (lever unit)</td>
+<td>SLU (shift lever unit)</td>
 <td>Requested lever position; the ESM lever has 3 stable positions R–N–D</td>
 </tr>
 <tr>
@@ -4716,7 +4712,7 @@ of detail that flips a test result.</p>
 </tr>
 <tr>
 <td><code>STATUS_B_CAN2.SBR1RowDriverSeatSts</code></td>
-<td>SDM via BCM gateway</td>
+<td>SDM (airbag module) via BCM gateway</td>
 <td>Seat belt fastened</td>
 </tr>
 <tr>
@@ -4731,7 +4727,7 @@ of detail that flips a test result.</p>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     SLU["SLU lever unit"] --&gt;|ShiftLeverPosition| MTA
     PWR["Power_Eco button"] --&gt;|Power_Eco_Switch.Req| MTA
     V419["VF419 signals&lt;br/&gt;brake / key / speed"] --&gt; MTA
@@ -4746,25 +4742,24 @@ of detail that flips a test result.</p>
 gear-change request, power-eco management, …) are active at <strong>key-on (+15)</strong>,
 some remain active in a <strong>timed window after key-off</strong> (the IPC must keep
 showing indications for <code>T_SHOW_OFF_IPC</code>), and some are <strong>excluded during
-cranking</strong> or with <strong>low battery</strong>. A function's behavior is always qualified
-by which of these conditions is active — in the requirement text you will see
-guards like <code>@KeyStatus.info = Keyon_EngineOff:</code> before every rule.</p>
+cranking</strong> or with <strong>low battery</strong>. In the requirement text you will see
+guards like <code>@KeyStatus.info = Keyon_EngineOff:</code> before every rule — behavior
+is always qualified by which condition is active.</p>
 <h3 id="gear-change-request-logic">Gear-change request logic<a class="headerlink" href="#gear-change-request-logic" title="Permanent link">&para;</a></h3>
-<p>The core algorithm decides whether a lever movement is <em>accepted</em>. The pattern
-repeats for N, R and D:</p>
+<p>The core algorithm decides whether a lever movement is <em>accepted</em>. The
+pattern repeats for N, R and D:</p>
 <ul>
-<li>At <strong>key-on, engine off</strong>: the gear is accepted only if the <strong>brake pedal is
-  pressed</strong> at the moment of the lever transition; otherwise the MTA emits
+<li>At <strong>key-on, engine off</strong>: the gear is accepted only if the <strong>brake pedal
+  is pressed</strong> at the moment of the lever transition; otherwise the MTA emits
   <code>RoboticTransmissionWarnings = Press_Brake_Pedal_Repeat_Warning</code> for a
   <code>Tmessage</code> time.</li>
-<li>At <strong>key-on, engine on</strong>, engaging <strong>R</strong>: if coming from D, the vehicle speed
-  must be ≤ <code>Rthreshold</code>; if coming from N, the brake must also be pressed. If
-  the speed is too high, the MTA sends
-  <code>Vehicle_Speed_Too_High_to_Shift_R</code> <strong>and forces N</strong> — but as soon as speed
-  drops below the threshold (lever still in R), it stops the warning and
-  engages R.</li>
-<li>Engaging <strong>D</strong> mirrors this with <code>Forwardthreshold</code> (a <em>negative</em> first-trial
-  value of −3 km/h — the car may still be rolling slightly backwards).</li>
+<li>At <strong>key-on, engine on</strong>, engaging <strong>R</strong>: coming from D, the vehicle speed
+  must be ≤ <code>Rthreshold</code>; coming from N, the brake must also be pressed. If
+  the speed is too high, the MTA sends <code>Vehicle_Speed_Too_High_to_Shift_R</code>
+  <strong>and forces N</strong> — but as soon as speed drops below the threshold (lever
+  still in R), it stops the warning and engages R.</li>
+<li>Engaging <strong>D</strong> mirrors this with <code>Forwardthreshold</code> (a <em>negative</em> first
+  trial value of −3 km/h — the car may still be rolling slightly backwards).</li>
 </ul>
 <p><strong>Mismatch detection</strong>: the MTA continuously compares the lever position with
 the actually engaged gear (and the park-brake status). If a mismatch persists
@@ -4774,11 +4769,11 @@ that is the blinking gear letter and the beep you hear when the gearbox could
 not do what you asked.</p>
 <h3 id="drive-mode-power_eco-management">Drive-mode (Power_Eco) management<a class="headerlink" href="#drive-mode-power_eco-management" title="Permanent link">&para;</a></h3>
 <p>The Power_Eco button cycles the drive mode. The sequence is
-<strong>Normal → Eco → Power → Eco → …</strong> — note Normal is only the <em>predominant
-mode</em> at startup; after that the button toggles between Eco and Power. Each
-press is debounced (<code>Tdebounce</code>, first trial 60 ms) and mapped onto
-<code>DriveModeSts</code>:</p>
-<pre class="mermaid"><code>stateDiagram-v2
+<strong>Normal → Eco → Power → Eco → …</strong> — note that Normal is only the
+<em>predominant mode</em> at startup; after that, the button toggles between Eco and
+Power. Each press is debounced (<code>Tdebounce</code>, first trial 60 ms) and mapped
+onto <code>DriveModeSts</code>:</p>
+<pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; Normal: startup (DriveModeSts = No_program_Selected)
     Normal --&gt; Eco: button press (after Tdebounce)
     Eco --&gt; Power: button press
@@ -4787,25 +4782,25 @@ press is debounced (<code>Tdebounce</code>, first trial 60 ms) and mapped onto
 <code>DriveModeSts = No_program_Selected</code> for the <code>T_SHOW_OFF_MTA</code> window.</p>
 <h3 id="vehicle-hold-transmission-parking-brake-scenarios">Vehicle-hold (transmission parking brake) scenarios<a class="headerlink" href="#vehicle-hold-transmission-parking-brake-scenarios" title="Permanent link">&para;</a></h3>
 <p>The trickiest part of VF200 is <code>MOT5.Vehicle_Hold_Rq</code> — when the MTA asks to
-hold the vehicle. The VF enumerates <strong>seven scenarios</strong>, with explicit priority
-rules (e.g. the driver-exit scenarios override normal operation). Two of them
+hold the vehicle. The VF enumerates <strong>seven scenarios</strong>, with explicit
+priority rules (driver-exit scenarios override normal operation). Two of them
 show the safety thinking:</p>
 <ul>
 <li><strong>Switch-off</strong>: at key-on→key-off, if the last known speed was below
   <code>TPBM_threshold</code> the MTA requests hold; otherwise it warns
   <code>Vehicle_In_Neutral</code>.</li>
 <li><strong>Driver exit in D/R (7th scenario)</strong>: at key-on engine-on, if the driver
-  opens the door <strong>and</strong> unfastens the seat belt while in D or R, and the speed
-  is below the threshold, the MTA <strong>autonomously shifts to N</strong> and requests
-  hold. Exit conditions require the driver to be back (door closed / belt
-  fastened) and a fresh, brake-pressed lever movement.</li>
+  opens the door <strong>and</strong> unfastens the seat belt while in D or R, and the
+  speed is below the threshold, the MTA <strong>autonomously shifts to N</strong> and
+  requests hold. Exit conditions require the driver to be back (door closed /
+  belt fastened) and a fresh, brake-pressed lever movement.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">OR vs AND is a safety decision</p>
 <p>The 6th scenario (driver exit in N) triggers with door open <strong>or</strong> belt
-unfastened; the 7th requires <strong>both</strong>. This OR was introduced by a change
+unfastened; the 7th requires <strong>both</strong>. That OR was introduced by a change
 request — a reminder that these logical operators are deliberate safety
-choices, and that tests must cover each side of them.</p>
+choices, and that your tests must cover each side of them.</p>
 </div>
 <h3 id="indications-on-the-cluster">Indications on the cluster<a class="headerlink" href="#indications-on-the-cluster" title="Permanent link">&para;</a></h3>
 <p>The IPC translates each MTA signal into something the driver perceives. The
@@ -4849,12 +4844,12 @@ mapping is one-to-one and fully testable:</p>
 </tbody>
 </table>
 <p>The IPC also runs its own internal logic: it activates
-<code>GearInsertNAndPressBrakeToStart.Req</code> whenever the lever is not in N <strong>or</strong> the
-brake is not pressed (shown at key-on engine-off as "GEAR RT BEFORE CRANKING"),
-and derives <code>EcoPower.Req</code> from the received <code>DriveModeSts</code>.</p>
+<code>GearInsertNAndPressBrakeToStart.Req</code> whenever the lever is not in N <strong>or</strong>
+the brake is not pressed (shown at key-on engine-off as "GEAR RT BEFORE
+CRANKING"), and derives <code>EcoPower.Req</code> from the received <code>DriveModeSts</code>.</p>
 <h3 id="diagnosis-and-recovery-in-vf200">Diagnosis and recovery in VF200<a class="headerlink" href="#diagnosis-and-recovery-in-vf200" title="Permanent link">&para;</a></h3>
-<p>The diagnosis table lists every input, the fault type, and the storing ECU. The
-recovery rules show the standard patterns you will meet everywhere:</p>
+<p>The diagnosis table lists every input, the fault type, and the storing ECU.
+The recovery rules show the standard patterns you will meet everywhere:</p>
 <table>
 <thead>
 <tr>
@@ -4901,11 +4896,12 @@ recovery rules show the standard patterns you will meet everywhere:</p>
 </tr>
 </tbody>
 </table>
-<p>Note the philosophy: <strong>fallback values are chosen on the safe side</strong> — assume
-the door is closed and the belt fastened (so no spurious hold request), declare
-the engine running, and neutralize driver-visible requests.</p>
+<p>Notice the philosophy: <strong>fallback values are chosen on the safe side</strong> —
+assume the door is closed and the belt fastened (so no spurious hold
+request), declare the engine running, and neutralize driver-visible requests.</p>
 <h3 id="configuration-parameters">Configuration parameters<a class="headerlink" href="#configuration-parameters" title="Permanent link">&para;</a></h3>
-<p>VF200 closes with its calibration table — the knobs a test engineer can turn:</p>
+<p>VF200 closes with its calibration table — the knobs you can turn as a test
+engineer:</p>
 <table>
 <thead>
 <tr>
@@ -4970,37 +4966,38 @@ the engine running, and neutralize driver-visible requests.</p>
 <div class="admonition tip">
 <p class="admonition-title">For your test cases</p>
 <p>Every <code>If … then</code> rule, every truth-table row, every scenario number and
-every parameter in a VF is a candidate test case. When you move to the
-test-design lessons, a VF like VF200 is exactly the document you will be
-asked to derive cases from — boundary values around <code>Rthreshold</code>,
+every parameter in a VF is a candidate test case. In the test-design
+lessons, a VF like VF200 is exactly the document you will be asked to
+derive cases from — boundary values around <code>Rthreshold</code>,
 <code>TPBM_threshold</code> and the mismatch timer are the obvious targets.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>A VF (Vehicle Function) is the functionalist's document describing the
-  complete behavior of one vehicle function; software and tests are
+<li>You can now read a VF: the functionalist's document describing the
+  complete behavior of one vehicle function — software and tests are
   derived from it, and it is independent of the component structure.</li>
-<li>Naming: <code>Function [VFn_Vx_Ry]</code> — Version tracks the set-up, Release
-  tracks evolutions; always reference the full identifier.</li>
-<li>Fixed structure: revision notes, functional diagram (nodes, gateways,
-  CAN/LIN messages per network), working conditions, function description,
-  parameters, CAN wake-up, diagnosis &amp; recovery, plus DBC/LIN companion
-  files (and the CDD for full diagnosis detail).</li>
-<li>Requirements are written per key condition with named calibration
-  parameters — never hardcoded values.</li>
-<li>The VF200 example shows it all: lever/gear mismatch → blinking + buzzer,
-  speed-thresholded gear engagement with forced-N fallback, seven
-  prioritized vehicle-hold scenarios, one-to-one IPC indication mapping,
-  and safe-side recovery defaults for every failed input.</li>
+<li>You can decode any identifier: <code>Function [VFn_Vx_Ry]</code> — Version tracks
+  the set-up, Release tracks evolutions. Always quote the full string.</li>
+<li>You know the fixed sections: revision notes, functional diagram,
+  working conditions, function description, parameters, CAN wake-up,
+  diagnosis &amp; recovery — plus DBC/LIN companion files and the CDD for
+  full diagnosis detail.</li>
+<li>You have seen real logic: requirements written per key condition with
+  named calibration parameters, never hardcoded values.</li>
+<li>VF200 is your reference example: lever/gear mismatch → blinking +
+  buzzer, speed-thresholded engagement with forced-N fallback, seven
+  prioritized vehicle-hold scenarios, one-to-one IPC mapping, and
+  safe-side recovery defaults for every failed input. Next time someone
+  says "check the VF", you will know exactly where to look.</li>
 </ul>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/23_VF/Presentation_Functional_specification.pdf">Presentation Functional specification</a> — PDF, 1.6 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/23_VF/VF_example.pdf">VF example</a> — PDF, 220.2 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/23_VF/Presentation_Functional_specification.pdf">Presentation Functional specification</a> — PDF, 1.6 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/23_VF/VF_example.pdf">VF example</a> — PDF, 220.2 KB</li>
 </ul>
 
 
@@ -5030,6 +5027,7 @@ asked to derive cases from — boundary values around <code>Rthreshold</code>,
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -5088,6 +5086,41 @@ asked to derive cases from — boundary values around <code>Rthreshold</code>,
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -5100,8 +5133,21 @@ asked to derive cases from — boundary values around <code>Rthreshold</code>,
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4275,7 +4263,7 @@
   <a href="#soc-related-drive-modes-driver-independent" class="md-nav__link">
     <span class="md-ellipsis">
       
-        SOC-related drive modes (driver-independent)
+        SoC-related drive modes (driver-independent)
       
     </span>
   </a>
@@ -4327,26 +4315,34 @@
 
 
 <h1 id="battery-electric-vehicle-bev-architecture">Battery Electric Vehicle (BEV) Architecture<a class="headerlink" href="#battery-electric-vehicle-bev-architecture" title="Permanent link">&para;</a></h1>
-<p>A <strong>Battery Electric Vehicle</strong> is a <em>pure</em> electric vehicle: the only traction
+<p>Welcome to your first deep dive into the electric powertrain. A <strong>Battery
+Electric Vehicle (BEV)</strong> is a <em>pure</em> electric vehicle: the only traction
 device is the electric motor, and the only energy source on board is the
 chemical energy stored in rechargeable battery packs. There is no combustion
 engine to fall back on — every aspect of propulsion, braking energy recovery
 and charging is handled electrically.</p>
+<p>Why should you care as a new E/E engineer? Because nearly everything you will
+do in this bootcamp — reading CAN traces, calibrating drive styles, diagnosing
+control units — revolves around the handful of components in this article.
+By the end, you will be able to name every major BEV component, explain how
+energy flows from grid to wheels and back, and read a real vehicle's drive
+mode logic without breaking a sweat.</p>
 <p>Every BEV is built around four main component groups:</p>
 <ol>
 <li><strong>Electric machine</strong> — the traction motor (which also works as a generator)</li>
-<li><strong>Battery packs</strong> — the high-voltage traction battery plus a conventional
-   low-voltage auxiliary battery</li>
+<li><strong>Battery packs</strong> — the <strong>high-voltage (HV)</strong> traction battery plus a
+   conventional <strong>low-voltage (LV)</strong> auxiliary battery</li>
 <li><strong>Power managing units</strong> — the power electronics between battery and motor</li>
-<li><strong>Digital control system</strong> — the control units that coordinate everything</li>
+<li><strong>Digital control system</strong> — the <strong>Electronic Control Units (ECUs)</strong> that
+   coordinate everything</li>
 </ol>
-<p>This article walks through each group and closes with a real case study: the
-Fiat 500-based <strong>332 City BEV</strong> and its sporty derivative, the <strong>595e Abarth
-BEV</strong>.</p>
+<p>We will walk through each group in turn and close with a real case study you
+will meet again later in the course: the Fiat 500-based <strong>332 City BEV</strong> and
+its sporty derivative, the <strong>595e Abarth BEV</strong>.</p>
 <h2 id="the-electric-machine-why-a-bev-needs-no-gearbox">The electric machine: why a BEV needs no gearbox<a class="headerlink" href="#the-electric-machine-why-a-bev-needs-no-gearbox" title="Permanent link">&para;</a></h2>
 <p>An electric motor delivers its full drive torque from standstill and can spin
 beyond <strong>10,000 rpm</strong>. That single fact eliminates most of the transmission
-hardware an ICE vehicle needs:</p>
+hardware an <strong>Internal Combustion Engine (ICE)</strong> vehicle needs:</p>
 <ul>
 <li><strong>No multi-gear transmission</strong> — the torque/speed characteristic of the
   motor covers the whole vehicle speed range with a single fixed ratio.</li>
@@ -4360,28 +4356,29 @@ commands: the <strong>accelerator pedal</strong> and the <strong>brake pedal</st
 <p class="admonition-title">Bidirectional machine</p>
 <p>The same electric machine works in both directions of energy flow: as a
 <strong>motor</strong> (electric energy → mechanical torque) and as an <strong>alternator</strong>
-(mechanical rotation → electric current). Exploiting this bidirectionality
-is the key to energy efficiency in a BEV.</p>
+(mechanical rotation → electric current). Exploiting this
+bidirectionality is the key to energy efficiency in a BEV — keep this
+mental model; you will use it constantly.</p>
 </div>
 <h2 id="regenerative-braking-and-one-pedal-driving">Regenerative braking and one-pedal driving<a class="headerlink" href="#regenerative-braking-and-one-pedal-driving" title="Permanent link">&para;</a></h2>
 <p>In a conventional vehicle, braking means pressing pads against discs: kinetic
 energy turns into friction heat and is lost to the environment. A BEV instead
 <strong>recovers</strong> part of that energy: the traction motor reverses its operation,
 acts as an alternator driven by the wheels, and converts kinetic energy back
-into electric current that recharges the high-voltage battery.</p>
+into electric current that recharges the HV battery.</p>
 <p>Regeneration happens in two situations:</p>
 <ol>
 <li><strong>Brake pedal applied</strong> — classic <em>regenerative braking</em>. The braking
    torque requested by the driver is split between the electric machine
    (regeneration) and the friction brakes.</li>
 <li><strong>Accelerator pedal released (coasting)</strong> — the <em>E-Pedal</em>, also called
-   <strong>One-Pedal Drive</strong>. Releasing the accelerator actively decelerates the
-   vehicle through the motor instead of letting it coast freely.</li>
+   <strong>One-Pedal Drive (OPD)</strong>. Releasing the accelerator actively decelerates
+   the vehicle through the motor instead of letting it coast freely.</li>
 </ol>
 <p>The amount of energy recovered is proportional to the braking force — the
 stronger the deceleration, the greater the generated current — and ultimately
 depends on the vehicle's speed and the duration of the brake application.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     DRV[Driver input] --&gt; DEC{Pedal?}
     DEC --&gt;|"accelerator pressed"| MOT["Motor mode:&lt;br/&gt;battery → wheels"]
     DEC --&gt;|"accelerator released"| REG["E-Pedal regen:&lt;br/&gt;wheels → battery"]
@@ -4397,10 +4394,13 @@ becomes necessary only for emergency stops or very strong deceleration.</p>
 <p>Regeneration is not a gadget — it directly extends the usable charge of
 the HV battery. Calibrating <em>how much</em> deceleration the motor provides on
 pedal release is one of the main levers the vehicle control unit uses to
-differentiate drive styles (see the case study below).</p>
+differentiate drive styles (see the case study below). When you later
+work on calibration in INCA, this is exactly the kind of parameter you
+will touch.</p>
 </div>
 <h2 id="the-battery-system">The battery system<a class="headerlink" href="#the-battery-system" title="Permanent link">&para;</a></h2>
-<p>Every BEV actually carries <strong>two</strong> batteries:</p>
+<p>Every BEV actually carries <strong>two</strong> batteries — newcomers often find this
+surprising:</p>
 <table>
 <thead>
 <tr>
@@ -4423,8 +4423,9 @@ differentiate drive styles (see the case study below).</p>
 </tbody>
 </table>
 <p>Only the HV battery is connected to the charging grid. The 12 V battery is
-maintained by the HV side — there is no alternator belt-driven by an engine
-as in a conventional car.</p>
+maintained by the HV side through a <strong>DC-DC converter</strong> (a converter that
+steps direct current from one voltage level down to another) — there is no
+alternator belt-driven by an engine as in a conventional car.</p>
 <p>Modern all-electric cars span a wide capacity range: from <strong>6.0 kWh</strong> (2012
 Renault Twizy) up to <strong>100 kWh</strong> (2012 Tesla Model S / 2015 Tesla Model X).</p>
 <h2 id="power-electronics-the-power-managing-units">Power electronics: the power managing units<a class="headerlink" href="#power-electronics-the-power-managing-units" title="Permanent link">&para;</a></h2>
@@ -4432,16 +4433,19 @@ Renault Twizy) up to <strong>100 kWh</strong> (2012 Tesla Model S / 2015 Tesla M
 electric motor that regulates energy flow according to the instantaneous
 demand. The three main components are:</p>
 <ul>
-<li><strong>Inverter</strong> — a high-power DC→AC converter that feeds the battery's direct
-  current to the three-phase traction motor. It is the most critical of the
-  three: it operates at the highest power and directly enables traction.</li>
+<li><strong>Inverter</strong> — a high-power DC→AC converter that turns the battery's
+  <strong>direct current (DC)</strong> into the three-phase <strong>alternating current (AC)</strong>
+  the traction motor needs. It is the most critical of the three: it operates
+  at the highest power and directly enables traction.</li>
 <li><strong>Onboard charger</strong> — an AC→DC rectifier that converts grid power into DC
   to charge the HV battery.</li>
 <li><strong>DC-DC converter</strong> — steps the high traction voltage down to the low
   voltage needed by the 12 V battery, ECUs and auxiliary loads.</li>
 </ul>
 <p><img alt="Typical power ranges of electric car power electronics devices" src="img/power-electronics-ranges.webp" /></p>
-<p>The power levels differ by roughly two orders of magnitude:</p>
+<p>The power levels differ by roughly two orders of magnitude — a fact worth
+remembering when you think about which device dominates the thermal and
+diagnostic load:</p>
 <table>
 <thead>
 <tr>
@@ -4465,7 +4469,9 @@ demand. The three main components are:</p>
 </tbody>
 </table>
 <h2 id="the-digital-control-system">The digital control system<a class="headerlink" href="#the-digital-control-system" title="Permanent link">&para;</a></h2>
-<p>A BEV concentrates its propulsion intelligence in a few typical control units:</p>
+<p>A BEV concentrates its propulsion intelligence in a few typical control
+units. Learn these acronyms now — they appear in wiring diagrams, diagnostic
+tools and requirements documents throughout the bootcamp:</p>
 <ul>
 <li><strong>PIM — Power Inverter Module.</strong> The high-power DC→AC converter for the
   traction motor. It hosts two controllers:<ul>
@@ -4482,11 +4488,13 @@ demand. The three main components are:</p>
   (AC→DC, from the grid) and the DC-DC converter (HV → 12 V for the auxiliary
   battery and all control units) in a single unit.</li>
 <li><strong>BPCM — Battery Pack Control Module.</strong> Supervises the critical battery
-  functions: voltage, temperature and current monitoring, <strong>state of charge
+  functions: voltage, temperature and current monitoring, <strong>State of Charge
   (SoC)</strong> estimation and <strong>cell balancing</strong> of the lithium-ion cells.</li>
 </ul>
 <p><img alt="BEV component and control unit architecture" src="img/bev-architecture.webp" /></p>
-<pre class="mermaid"><code>flowchart TD
+<p>This diagram ties the whole energy story together — grid to battery, battery
+to wheels, wheels back to battery:</p>
+<pre class="kx-mermaid"><code>flowchart TD
     GRID["Charging grid (AC)"] --&gt; OBC["Onboard charger&lt;br/&gt;(in IDCM)"]
     OBC --&gt; HV[("HV battery pack&lt;br/&gt;(supervised by BPCM)")]
     HV --&gt; DCDC["DC-DC converter&lt;br/&gt;(in IDCM)"] --&gt; LV[("12 V battery")] --&gt; ECUS["ECUs &amp; auxiliaries"]
@@ -4495,11 +4503,11 @@ demand. The three main components are:</p>
     EM --&gt;|"traction torque"| W(["Wheels"])
     W --&gt;|"regenerative braking"| EM</code></pre>
 <h2 id="case-study-332-city-bev-vs-595e-abarth-bev">Case study: 332 City BEV vs 595e Abarth BEV<a class="headerlink" href="#case-study-332-city-bev-vs-595e-abarth-bev" title="Permanent link">&para;</a></h2>
-<p>The <strong>332 City BEV</strong> (the electric Fiat 500) was the first fully electric car
-from Fiat Chrysler Automobiles, unveiled in March 2020. Its sporty derivative,
-the <strong>595e Abarth BEV</strong>, followed in March 2023 — same electric motor, but
-with different regulation, firmer suspensions and more advanced stability
-control systems.</p>
+<p>Theory lands best on real hardware. The <strong>332 City BEV</strong> (the electric Fiat
+500) was the first fully electric car from Fiat Chrysler Automobiles,
+unveiled in March 2020. Its sporty derivative, the <strong>595e Abarth BEV</strong>,
+followed in March 2023 — same electric motor, but with different regulation,
+firmer suspensions and more advanced stability control systems.</p>
 <h3 id="technical-comparison">Technical comparison<a class="headerlink" href="#technical-comparison" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4522,7 +4530,7 @@ control systems.</p>
 </tr>
 <tr>
 <td>Max power</td>
-<td>87 kW (118 CV)</td>
+<td>87 kW (118 CV, metric horsepower)</td>
 <td>120 kW (180 CV)</td>
 </tr>
 <tr>
@@ -4542,9 +4550,13 @@ control systems.</p>
 </tr>
 </tbody>
 </table>
+<p><em>WLTP</em> is the <strong>Worldwide harmonised Light vehicles Test Procedure</strong>, the
+standardized driving cycle used to rate range — treat its numbers as
+"officially comparable", not "guaranteed in the real world".</p>
 <p>The Abarth extracts more power and torque from the same hardware at the price
 of range (225 km vs 320 km on the same 42 kWh pack) — a classic
-performance-vs-efficiency calibration trade-off.</p>
+performance-vs-efficiency calibration trade-off, and a perfect example of how
+much of a car's character lives in software rather than hardware.</p>
 <h3 id="driver-selectable-drive-styles">Driver-selectable drive styles<a class="headerlink" href="#driver-selectable-drive-styles" title="Permanent link">&para;</a></h3>
 <p>The 332 was designed as a city car — fun but not sporty — so the driver
 selects among three styles with a selector device:</p>
@@ -4588,11 +4600,11 @@ selects among three styles with a selector device:</p>
 <p class="admonition-title">Drive style on the CAN bus</p>
 <p>The selected drive style is broadcast as the signal
 <code>C1 BODY7.DriveStyleSts</code>, with values such as <em>Normal (0)</em>, <em>City (1)</em>,
-<em>Sport Fun (2)</em> and <em>Eco (4)</em>. When you trace vehicle behavior in CANoe or
-CANalyzer later in the bootcamp, this is the kind of signal you will
+<em>Sport Fun (2)</em> and <em>Eco (4)</em>. When you trace vehicle behavior in CANoe
+or CANalyzer later in the bootcamp, this is the kind of signal you will
 monitor to correlate driver selection with powertrain response.</p>
 </div>
-<h3 id="soc-related-drive-modes-driver-independent">SOC-related drive modes (driver-independent)<a class="headerlink" href="#soc-related-drive-modes-driver-independent" title="Permanent link">&para;</a></h3>
+<h3 id="soc-related-drive-modes-driver-independent">SoC-related drive modes (driver-independent)<a class="headerlink" href="#soc-related-drive-modes-driver-independent" title="Permanent link">&para;</a></h3>
 <p>Independently of what the driver selects, the vehicle protects its battery
 when the estimated range runs low. Both vehicles apply progressive
 limitations ("turtle" modes) based on the estimated remaining range:</p>
@@ -4622,7 +4634,7 @@ limitations ("turtle" modes) based on the estimated remaining range:</p>
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>stateDiagram-v2
+<pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; Normal: estimated range &gt; 24 km
     Normal --&gt; Turtle1: 16-24 km
     Turtle1 --&gt; Turtle2: 8-16 km
@@ -4638,25 +4650,24 @@ style).</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>A BEV has four pillars: electric machine, battery packs, power managing
-  units, and the digital control system.</li>
-<li>The electric machine's torque-from-zero and &gt;10,000 rpm capability
-  removes the gearbox, clutch and reverse gear; reverse is just a phase
-  swap.</li>
+<li>You now know the four pillars of every BEV: electric machine, battery
+  packs, power electronics and the digital control system.</li>
+<li>Torque from zero rpm and a &gt;10,000 rpm ceiling mean no gearbox, no
+  clutch, no reverse gear — reverse is just a phase swap.</li>
 <li>Regenerative braking and One-Pedal Drive turn the motor into an
-  alternator on brake application or throttle release, recharging the HV
-  battery — recovered energy scales with braking force, speed and
-  duration.</li>
-<li>Every BEV has two batteries: the HV traction pack (charged from the
-  grid via the onboard charger) and a 12 V auxiliary battery (charged
-  from HV via the DC-DC converter).</li>
-<li>Key control units: PIM (with EVCU + MCP), IDCM (charger + DC-DC) and
-  BPCM (battery monitoring, SoC, cell balancing).</li>
-<li>Drive styles (Normal / Range / Sherpa vs Turismo / Sport Street / Sport
-  Track) are calibrations of pedal map, speed limit and One-Pedal Drive —
-  broadcast on CAN as <code>BODY7.DriveStyleSts</code> — and SOC-based turtle modes
+  alternator, feeding energy back to the HV battery; the recovered
+  energy scales with braking force, speed and duration.</li>
+<li>Every BEV carries two batteries: the HV traction pack (charged from the
+  grid via the onboard charger) and a 12 V auxiliary battery (fed from HV
+  via the DC-DC converter).</li>
+<li>The key ECUs are PIM (EVCU + MCP), IDCM (charger + DC-DC) and BPCM
+  (battery monitoring, SoC, cell balancing).</li>
+<li>Drive styles are pure calibration — pedal map, speed limit and OPD,
+  broadcast on CAN as <code>BODY7.DriveStyleSts</code> — and SoC-based turtle modes
   override them to protect a nearly empty battery.</li>
 </ul>
+<p>You have just built the mental model that every later module — hybrids,
+CAN tooling, calibration, diagnostics — hangs off. Well done.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Where this leads</p>
@@ -4669,7 +4680,7 @@ motor technology itself in <a href="../electric-motors/">Electric Motors</a>.</p
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/HEV_Architecture_BEV/HEV_Architecture_BEV.pdf">HEV Architecture BEV</a> — PDF, 761.7 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/HEV_Architecture_BEV/HEV_Architecture_BEV.pdf">HEV Architecture BEV</a> — PDF, 761.7 KB</li>
 </ul>
 
 
@@ -4699,6 +4710,7 @@ motor technology itself in <a href="../electric-motors/">Electric Motors</a>.</p
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4757,6 +4769,41 @@ motor technology itself in <a href="../electric-motors/">Electric Motors</a>.</p
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4769,8 +4816,21 @@ motor technology itself in <a href="../electric-motors/">Electric Motors</a>.</p
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

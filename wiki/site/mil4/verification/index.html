@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4183,10 +4171,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#verification-vs-validation" class="md-nav__link">
+  <a href="#verification-vs-validation-the-classic-trap" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verification vs. validation
+        Verification vs. validation: the classic trap
       
     </span>
   </a>
@@ -4205,10 +4193,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-deliverables-of-a-verification-cycle" class="md-nav__link">
+  <a href="#what-a-verification-cycle-must-deliver" class="md-nav__link">
     <span class="md-ellipsis">
       
-        The deliverables of a verification cycle
+        What a verification cycle must deliver
       
     </span>
   </a>
@@ -4233,14 +4221,19 @@
 
 
 <h1 id="software-verification">Software Verification<a class="headerlink" href="#software-verification" title="Permanent link">&para;</a></h1>
-<p>Verification answers one question: <strong>"did we build the product right?"</strong> — does
-the software, as implemented, actually do what its specification says? This is
-the opening lesson of the MIL4 module, where everything you practiced earlier
-(requirements, test cases, HIL rigs, diagnostic tools) comes together into the
-discipline of proving that an ECU behaves as specified before it ever reaches a
-vehicle.</p>
-<h2 id="verification-vs-validation">Verification vs. validation<a class="headerlink" href="#verification-vs-validation" title="Permanent link">&para;</a></h2>
-<p>The two words are often confused; keep them separate:</p>
+<p>Welcome to MIL4 — the module where all your earlier work pays off. The
+requirements you wrote, the test cases you designed, the HIL (Hardware-in-the-Loop)
+rigs you learned to drive: they all exist to serve one discipline —
+<strong>verification</strong>. By the end of this lesson you'll be able to explain what
+verification actually proves, tell it apart from validation without hesitation,
+and name the deliverables a professional verification cycle must produce.</p>
+<p>Verification answers one question: <strong>"did we build the product right?"</strong> Does
+the software, as implemented, actually do what its specification says? Before
+an electronic control unit (ECU) ever reaches a vehicle, someone has to prove
+that — and in this module, that someone is you.</p>
+<h2 id="verification-vs-validation-the-classic-trap">Verification vs. validation: the classic trap<a class="headerlink" href="#verification-vs-validation-the-classic-trap" title="Permanent link">&para;</a></h2>
+<p>Every new engineer mixes these two up at least once, so let's settle it now.
+They sound similar, but they answer different questions:</p>
 <table>
 <thead>
 <tr>
@@ -4272,41 +4265,52 @@ vehicle.</p>
 </tr>
 </tbody>
 </table>
-<p>Both feed the two arms of the <a href="../../mil1/v-cycle/">V-model</a>: the left
-arm decomposes requirements into design, the right arm climbs back up through
-verification levels — unit, integration, system — each one traced to the
-requirements level that produced it.</p>
+<p>Think of it this way: verification checks the software against the paperwork;
+validation checks the product against reality. Both feed the two arms of the
+<a href="../../mil1/v-cycle/">V-model</a>: the left arm decomposes requirements
+into design, and the right arm climbs back up through verification levels —
+unit, integration, system — each one traced to the requirements level that
+produced it.</p>
 <h2 id="what-gets-verified-and-at-which-level">What gets verified, and at which level<a class="headerlink" href="#what-gets-verified-and-at-which-level" title="Permanent link">&para;</a></h2>
-<p>Software verification is not one activity but a ladder:</p>
-<pre class="mermaid"><code>flowchart LR
+<p>Verification is not one big test at the end — it's a ladder you climb, level by
+level:</p>
+<pre class="kx-mermaid"><code>flowchart LR
     A["Unit / module test"] --&gt; B["SW integration test"]
     B --&gt; C["SW/HW integration (HIL)"]
     C --&gt; D["System test"]
     D --&gt; E["Vehicle-level validation"]</code></pre>
+<p>Along that ladder you'll use two complementary techniques:</p>
 <ul>
-<li><strong>Static verification</strong> — reviews, coding-standard checks (e.g. MISRA),
-  static analysis. Finds defects without executing the code.</li>
-<li><strong>Dynamic verification</strong> — executing the software against test cases and
-  comparing actual vs. expected outputs: on the PC (MiL/SiL), on the target
-  processor (PiL), and on real hardware in the loop (<a href="../../mil3/hil-users/">HIL</a>).</li>
+<li><strong>Static verification</strong> — reviews, coding-standard checks (e.g. MISRA, the
+  C/C++ safety guidelines used across the automotive industry), and static
+  analysis. This finds defects <em>without executing the code</em> — cheap, fast, and
+  your first line of defense.</li>
+<li><strong>Dynamic verification</strong> — actually running the software against test cases
+  and comparing actual vs. expected outputs: on the PC (Model-in-the-Loop and
+  Software-in-the-Loop), on the target processor (Processor-in-the-Loop), and
+  on real hardware in the loop (<a href="../../mil3/hil-users/">HIL</a>).</li>
 </ul>
-<p>Every dynamic test rests on the artifacts you built in MIL3: the
-<a href="../../mil3/requirements/">requirements</a> define <em>what</em> must hold, and
-the <a href="../../mil3/testcases/">test cases</a> define <em>how</em> each requirement
-is stimulated and checked. A verification activity without requirement
-traceability proves nothing — an untraceable pass is just an observation.</p>
-<h2 id="the-deliverables-of-a-verification-cycle">The deliverables of a verification cycle<a class="headerlink" href="#the-deliverables-of-a-verification-cycle" title="Permanent link">&para;</a></h2>
-<p>A professional verification cycle produces:</p>
+<p>Here's the mindset rule to internalize early: every dynamic test rests on the
+artifacts you built in MIL3. The <a href="../../mil3/requirements/">requirements</a>
+define <em>what</em> must hold, and the <a href="../../mil3/testcases/">test cases</a>
+define <em>how</em> each requirement is stimulated and checked. A verification
+activity without requirement traceability proves nothing — an untraceable pass
+is just an observation, not evidence.</p>
+<h2 id="what-a-verification-cycle-must-deliver">What a verification cycle must deliver<a class="headerlink" href="#what-a-verification-cycle-must-deliver" title="Permanent link">&para;</a></h2>
+<p>When you run a professional verification cycle, you don't come back with "looks
+good to me." You come back with four concrete artifacts:</p>
 <ol>
 <li>a <strong>test specification</strong> linked requirement-by-requirement,</li>
-<li>an <strong>executable test environment</strong> (automation, not manual poking),</li>
+<li>an <strong>executable test environment</strong> — automation, not manual poking at a
+   bench,</li>
 <li>a <strong>test report</strong> with pass/fail verdicts and coverage,</li>
 <li><strong>defect reports</strong> for every deviation, fed back to development.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Why this matters downstream</p>
-<p>When a defect escapes verification, it resurfaces later as a field problem.
-The remaining MIL4 lessons — <a href="../validation/">Validation</a>,
+<p>When a defect escapes verification, it resurfaces later as a field problem
+— expensive, embarrassing, and suddenly everyone's problem. The remaining
+MIL4 lessons — <a href="../validation/">Validation</a>,
 <a href="../diagnosis-process/">Diagnosis Process</a>,
 <a href="../troubleshooting/">Troubleshooting</a> and
 <a href="../first-level-analysis/">First Level Analysis</a> — are about
@@ -4324,11 +4328,12 @@ doesn't" workflow you will use daily on HIL rigs and test vehicles.</p>
 <p class="admonition-title">Key takeaways</p>
 <ul>
 <li>Verification = conformance to specification; validation = fitness for
-  real use. Never mix them up.</li>
-<li>Verification happens at every V-model level, from static checks to HIL
-  system tests, always traced back to requirements.</li>
-<li>The output of verification is evidence: specifications, automated runs,
-  reports and defects — not opinions.</li>
+  real use. You can now tell them apart — many engineers can't.</li>
+<li>Verification climbs the V-model ladder: static checks first, then
+  dynamic tests from MiL/SiL up to HIL, always traced back to requirements.</li>
+<li>No traceability, no proof — an untraceable pass is just an observation.</li>
+<li>Your job is to produce evidence: test specs, automated runs, reports and
+  defect tickets — never opinions.</li>
 </ul>
 </div>
 
@@ -4359,6 +4364,7 @@ doesn't" workflow you will use daily on HIL rigs and test vehicles.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4417,6 +4423,41 @@ doesn't" workflow you will use daily on HIL rigs and test vehicles.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4429,8 +4470,21 @@ doesn't" workflow you will use daily on HIL rigs and test vehicles.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

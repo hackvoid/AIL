@@ -1,66 +1,72 @@
 # Troubleshooting Principles
 
-Everything you have done so far in the bootcamp — reading CAN traces, flashing
-and diagnosing ECUs, running HIL test cases — eventually feeds into one
-practical activity: a vehicle or a rig misbehaves, and someone has to figure
-out *why*. That activity is **troubleshooting**, and it is a discipline of its
-own, with a method you can learn rather than a talent you are born with.
+Welcome to the part of the bootcamp where everything comes together. Reading CAN
+traces, flashing ECUs, running HIL test cases — all of those skills exist for
+one moment: a vehicle or a rig misbehaves, and *you* are the person who has to
+figure out why. That moment is **troubleshooting**, and the good news is that it
+is a learnable method, not a talent you're born with.
 
-This article covers the general troubleshooting method taught in the academy,
-then walks through two real case studies from the course (a parasitic battery
-drain and a torque-security DTC on a P1P4 hybrid prototype) and finishes with
-the two warm-up exercises from the lesson.
+By the end of this article you'll be able to:
 
-## What troubleshooting is (and is not)
+- explain what separates real troubleshooting from guessing (and why guessing
+  *feels* so productive),
+- run the six-step troubleshooting loop on any defect, electrical or software,
+- hunt down a parasitic battery drain with a multimeter and a fuse box,
+- read a real fault investigation — a torque-security DTC on a hybrid
+  prototype — and see the method hiding inside it,
+- practice on two classic warm-up problems before you ever touch a car.
 
-Troubleshooting is a form of problem solving, usually applied to something
-that has suddenly stopped working. Three properties define it:
+## What troubleshooting actually is
+
+Troubleshooting is problem solving applied to something that *was* working and
+suddenly stopped. Three properties define it:
 
 - It is a **logical, systematic search for the root cause** — not a search for
   a plausible-sounding fix.
-- Finding the most likely cause is a **process of elimination**: you remove
-  candidate causes one by one with tests, rather than arguing for your
+- Finding the most likely cause is a **process of elimination**: you knock out
+  candidate causes one by one with tests, instead of arguing for your
   favorite.
-- It is **not finished until you have confirmed** that the solution actually
-  restores the product or process to its working state.
+- It is **not finished until you have confirmed** that the fix actually
+  restores the system to its working state.
 
 !!! note "Think first, act later"
     The lesson opens with Einstein's remark: given one hour to solve a
     problem, spend 55 minutes thinking about the problem and 5 minutes
-    thinking about solutions. An incorrect assessment of *what* the problem is
-    will poison every activity that follows.
+    thinking about solutions. Get the problem statement wrong and every
+    activity that follows is poisoned — no matter how fast you work.
 
-## The mindset: critical thinking, not magical thinking
+## Think like an engineer, not a magician
 
-The first instinct when a system fails is to blame whatever changed most
-recently. That instinct is useful as a starting point, but **correlation does
-not imply causality**: two events that happen together, or that resemble each
-other, are not necessarily linked by cause and effect. Attributing causality
-to coincidence or similarity is what anthropologists call *magical thinking* —
-and it is the single most common failure mode of inexperienced
-troubleshooters.
+When a system fails, your first instinct is to blame whatever changed most
+recently. That's a fine *starting point* — but remember the principle that
+**correlation does not imply causality**. Two events happening together, or
+resembling each other, does not make one the cause of the other. Jumping from
+coincidence to causation is what the lesson calls *magical thinking*, and it is
+the single most common failure mode of inexperienced troubleshooters.
 
-**Critical thinking** is the opposite: the analysis of facts to form a
-judgement. Concretely it means:
+The opposite habit is **critical thinking** — analyzing facts to form a
+judgement. On the bench, that means:
 
-- base your theory of the cause on **facts** as much as possible;
-- a theory is good if you can **test it** — even if it turns out to be wrong,
-  a falsifiable theory moves the investigation forward;
-- don't be afraid of being wrong. Being wrong is a normal step of the process:
-  discard the theory and build the next one.
+- base your theory of the cause on **facts**, as much as you can gather;
+- a theory is good if you can **test it** — even a wrong-but-testable theory
+  moves the investigation forward;
+- don't be afraid of being wrong. Being wrong is a normal step: discard the
+  theory, build the next one.
 
-### Occam's razor
+### Occam's razor: simplest first
 
-Start from the **simplest and most probable** explanations first. The
-principle attributed to William of Ockham — "entities should not be multiplied
-without necessity" — translates into workshop language as: *the simplest
-solution is most likely the right one*. Before suspecting a rare software race
-condition, check the fuse, the connector, the power supply and the ground.
+Start from the **simplest and most probable** explanations. The old
+problem-solving principle known as Occam's razor — "entities should not be
+multiplied without necessity" — translates into workshop language as: *the
+simplest solution is most likely the right one*. Before you suspect a rare
+software race condition, check the fuse, the connector, the power supply and
+the ground. You will be amazed how often the answer lives there.
 
-### Descartes' method, applied to a defect
+### Defining the problem: Descartes at the bench
 
-The deck frames problem definition with Descartes' four rules, which map
-remarkably well onto engineering work:
+Getting step 1 right — *defining the issue* — is where most investigations are
+won or lost. The lesson borrows Descartes' four rules, and they map remarkably
+well onto engineering work:
 
 | Rule | What it means at the bench |
 |---|---|
@@ -86,32 +92,37 @@ flowchart TD
 
 Two points deserve emphasis:
 
-- **Step 1 is where most investigations go wrong.** A wrong problem statement
-  ("the battery is dead" instead of "the battery is being drained overnight by
-  an unknown consumer") sends every later step in the wrong direction.
+- **Step 1 is where most investigations go wrong.** "The battery is dead" and
+  "the battery is being drained overnight by an unknown consumer" lead to
+  completely different investigations. Write the problem statement carefully.
 - **Step 6 is what separates repair from engineering.** Fixing the instance in
-  front of you is necessary; adding a preventive measure (a design change, a
-  new test case, a diagnostic check) is what stops the issue from coming back.
+  front of you is necessary; adding a preventive measure — a design change, a
+  new test case, a diagnostic check — is what stops the issue from coming back
+  on the next vehicle.
 
-## Working rules that save time
+## Habits that make you faster
 
-Beyond the formal method, the lesson collects practical advice:
+Beyond the formal method, the lesson collects advice from people who do this
+every day:
 
-- **Share your ideas** with everyone involved in the issue. If you cannot get
-  to the solution yourself, help someone else get it — what matters is the
+- **Share your ideas** with everyone involved in the issue. If you can't get
+  to the solution yourself, help someone else get there — what matters is a
   solution in a reasonable time, not who finds it.
 - If someone else found the solution, make sure you **fully understand how it
   works**. Ask questions; there are no silly questions.
 - **Carefully examine the data you already have.** Don't wait for "perfect"
-  data — the answer is often already in the first log you received; it is a
-  matter of being able to read it.
+  data — the answer is often already sitting in the first log you received.
+  It's a matter of learning to read it.
 - When an issue requires testing at **HIL or on the vehicle, be present during
   the test** whenever possible, to be sure it is executed correctly. You need
   to trust your data.
-- **Know the system architecture.** If you don't know how it works, it is
-  unlikely you will know how to fix it.
+- **Know the system architecture.** If you don't know how it works, it's
+  unlikely you'll know how to fix it.
+- And one from the heart of the lesson: troubleshooting is serious work, but
+  it can also be **fun** — you get the best results when you let yourself get
+  genuinely involved and interested in the problem.
 
-!!! tip "Structuring the cause hunt"
+!!! tip "Structuring the cause hunt: the fishbone"
     When a problem has many possible causes, an **Ishikawa (fishbone)
     diagram** helps you enumerate them systematically instead of fixating on
     the first one: the effect sits at the head, and the bones group candidate
@@ -120,13 +131,14 @@ Beyond the formal method, the lesson collects practical advice:
 
     ![Ishikawa cause-and-effect diagram](img/ishikawa-diagram.webp)
 
-    As Sherlock Holmes put it (A. C. Doyle): *"When you have eliminated the
-    impossible, whatever remains, however improbable, must be the truth."*
+    As Sherlock Holmes put it: *"When you have eliminated the impossible,
+    whatever remains, however improbable, must be the truth."*
 
-## Case study 1 — a repeatedly discharged battery
+## Case study 1 — a battery that keeps dying
 
-A battery that goes flat once is an inconvenience; a battery that keeps going
-flat is a symptom. The major candidate causes are:
+A battery that goes flat once is an inconvenience. A battery that keeps going
+flat is a **symptom** — and a perfect first troubleshooting case, because the
+candidate causes are few and concrete:
 
 - **battery wear** (the battery itself no longer holds charge);
 - a **mismatch of the charge/discharge ratio** when charging from the
@@ -136,7 +148,7 @@ flat is a symptom. The major candidate causes are:
 - **external leakage currents** — something on the vehicle draws current while
   it is parked.
 
-The vehicle's power distribution hardware you will be probing looks like this:
+Here's the power distribution hardware you'll be probing:
 
 ![Battery, fuse box and front power distribution center in the vehicle](img/battery-power-layout.webp)
 
@@ -144,9 +156,14 @@ The vehicle's power distribution hardware you will be probing looks like this:
 2. Battery fuse box
 3. Battery
 
-### Measuring the leakage (parasitic) current
+### Goal
 
-Preparation first:
+Measure the leakage (parasitic) current and isolate the circuit that is
+draining the battery while the vehicle is parked.
+
+### Setup
+
+Preparation first — skip this and you can lock yourself out of the car:
 
 1. Open the hood and **switch off all consumers** — radio, exterior and
    interior lights.
@@ -165,12 +182,12 @@ Equipment:
 !!! tip "Clamp meters"
     A DC-capable clamp meter is more convenient — nothing to disconnect, just
     clamp it around the cable. Two caveats: it must measure **DC** current
-    (most cheap clamp meters are AC-only and the DC-capable ones cost more),
+    (most cheap clamp meters are AC-only, and the DC-capable ones cost more),
     and it is less precise and can pick up parasitic coupling. Zero it with
     the "Zero" button before reading. Clamp around either the positive or the
     negative battery cable, including any extra wires bolted to the terminal.
 
-### Isolating the offending circuit: the fuse-pull method
+### Steps: the fuse-pull method
 
 Fuse and relay boxes live under the hood, but additional boxes may sit near
 the dashboard, under the rear seat, or in the boot. To find the excess
@@ -191,12 +208,13 @@ tested theory, and the search space shrinks circuit by circuit.
 
 ## Case study 2 — torque security check fail (DTC P061B)
 
-The second case is a software/safety issue on a **P1P4 hybrid prototype**
-observed at the Melfi plant with the vehicle on dynamometer rolls.
+Now for a software/safety issue — the kind you'll spend much of your career
+on. This one happened on a **P1P4 hybrid prototype** at the Melfi plant, with
+the vehicle on dynamometer rolls.
 
 **Symptom and customer impact:**
 
-- DTC **P061B** — internal torque calculation error detected by the PIM
+- DTC **P061B** — an internal torque calculation error detected by the PIM
   (Powertrain Interface Module);
 - the **contactor opens and the vehicle shuts down**; it can be restarted
   after a key cycle.
@@ -212,12 +230,12 @@ security monitor trips.
 The logged data shows:
 
 - vehicle moving on rolls at around **20 km/h** in **hybrid mode**;
-- the failure is attributed to the **MtrB (P4 axle motor) torque**;
+- the failure attributed to the **MtrB (P4 axle motor) torque**;
 - it occurs **during the gear selection transition from D to N**.
 
 ### Second analysis
 
-Digging into the wheel speeds reveals the trigger: the front and rear wheels
+Digging into the wheel speeds reveals the real trigger: front and rear wheels
 report a **speed delta of 12 km/h** (front ≈ 30 km/h, rear ≈ 18 km/h) with
 **ESC intervening**, exactly while the D → N change happens. That combination
 drives the MtrB torque up, and the resulting **output torque estimate
@@ -229,26 +247,31 @@ repeatedly and the controller behavior captured precisely.
 
 !!! warning "Read this case as the method, not just the facts"
     Notice the shape of the investigation: the first theory ("MtrB torque
-    fails") was refined, not accepted — the team went back to the data,
+    fails") was *refined*, not accepted — the team went back to the data,
     correlated wheel speeds, ESC activity and the gear transition, and only
     then formed a testable reproduction plan. That is the
-    identify → theory → test loop from the six-step method applied to a real
-    DTC. Reproducing a fault at HIL before touching the fix is exactly the
-    kind of work you practiced in the [HIL Users](../../mil3/hil-users/index.md)
-    lessons.
+    identify → theory → test loop applied to a real DTC. Reproducing a fault
+    at HIL before touching the fix is exactly the kind of work you practiced
+    in the [HIL Users](../../mil3/hil-users/index.md) lessons.
 
-## Practice exercises
+## Try it yourself
 
-These are the two starter exercises from the lesson. Treat them as thinking
-drills before you look at any answer: write down the checks *in the order you
-would perform them* — simplest and most probable first.
+These are the two starter exercises from the lesson — thinking drills to
+sharpen your method before you look at any answer. For each one, write down
+the checks **in the order you would perform them** — simplest and most
+probable first.
 
 ### Exercise 1 — the starter does not crank
+
+**Goal:** diagnose a no-crank condition using electrical checks only.
+
+**What you'll practice:** working from source to load, and preferring
+voltage-drop measurements under load over visual inspection.
 
 > Trying to start the engine, the starter does not start. What electrical
 > checks do you do?
 
-Work from the source toward the load:
+A solid answer works from the source toward the load:
 
 1. **Battery**: open-circuit voltage, then voltage under cranking load (a
    healthy battery that collapses under load is worn out — see Case 1).
@@ -265,16 +288,22 @@ Work from the source toward the load:
 
 ### Exercise 2 — ECM absent on the C-CAN
 
+**Goal:** find out why the ECM (Engine Control Module) is silent on the
+C-CAN powertrain bus.
+
+**What you'll practice:** applying Occam's razor to a network problem — power
+and ground before bus physics, bus physics before suspecting the ECU.
+
 > In key-on conditions, the ECM does not communicate on C1 (C-CAN). What do
 > you check?
 
 1. **Is the ECU alive at all?** Power supplies (permanent +12 V, ignition
-   +15), grounds, and the ECU's fuses. A node that has no power cannot
-   transmit — apply Occam's razor before suspecting the bus.
+   +15), grounds, and the ECU's fuses. A node with no power cannot transmit —
+   apply Occam's razor before suspecting the bus.
 2. **The bus wiring to the node**: continuity of CAN-H and CAN-L from the ECM
-   connector to the bus, and the **termination** — the C-CAN expects
-   120 Ω at each end, i.e. about **60 Ω measured between CAN-H and CAN-L**
-   with power off. A missing termination or an open branch isolates nodes.
+   connector to the bus, and the **termination** — the C-CAN expects 120 Ω at
+   each end, i.e. about **60 Ω measured between CAN-H and CAN-L** with power
+   off. A missing termination or an open branch isolates nodes.
 3. **Bus health with a tool**: connect CANalyzer/CANoe (or an oscilloscope on
    CAN-H/CAN-L) and look for *any* traffic and for error frames. Other nodes
    present and error-free while the ECM is silent points back to the ECM or
@@ -288,9 +317,9 @@ Work from the source toward the load:
 !!! success "Key takeaways"
     - Troubleshooting = systematic elimination of candidate causes, ending
       only when the fix is **verified** and, where possible, a **preventive
-      measure** is in place.
-    - Correlation is not causation: test theories, don't marry them. Wrong
-      theories are progress as long as each one is falsifiable.
+      measure** is in place. You can do this — it's a method, not magic.
+    - Correlation is not causation: test theories, don't marry them. A wrong
+      theory is still progress, as long as it's falsifiable.
     - Simplest first (Occam): fuse → connector → power/ground before software.
     - Descartes' four rules — doubt, simplification, focus, completeness —
       turn "define the issue" into a concrete checklist.
@@ -299,14 +328,14 @@ Work from the source toward the load:
     - Parasitic drain is found by measuring leakage current (multimeter,
       ≥ 10 A DC range, or a DC clamp meter) and pulling fuses one by one;
       remember the unfused suspects: alternator and starter.
-    - Real failures are cross-domain: DTC P061B on the P1P4 prototype came
-      from the *interaction* of wheel-speed mismatch, ESC intervention and a
-      D→N transition — and the fix starts with reproducing it at HIL.
+    - Real failures are cross-domain: DTC P061B came from the *interaction* of
+      wheel-speed mismatch, ESC intervention and a D→N transition — and the
+      fix starts with reproducing it at HIL.
 
 !!! tip "Where this leads"
     Troubleshooting feeds directly into
-    [First Level Analysis](../first-level-analysis/index.md), where you
-    triage fleet and plant issues under time pressure, and builds on the
+    [First Level Analysis](../first-level-analysis/index.md), where you triage
+    fleet and plant issues under time pressure, and builds on the
     [Diagnosis Process](../diagnosis-process/index.md) for how faults are
     detected, stored and validated in the ECU.
 

@@ -5,19 +5,9 @@ edit_uri: ""
 use_directory_urls: true
 theme:
   name: material
+  custom_dir: theme/overrides
   palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    - scheme: slate
   features:
     - navigation.sections
     - navigation.indexes
@@ -26,6 +16,12 @@ theme:
     - toc.follow
     - search.highlight
     - search.suggest
+extra_css:
+  - assets/theme/kineton.css
+extra_javascript:
+  - assets/theme/mermaid.min.js
+  - assets/theme/kineton-chat.js
+  - assets/theme/kineton-mermaid.js
 plugins:
   - search
 markdown_extensions:
@@ -38,8 +34,11 @@ markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid
+          class: kx-mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
 exclude_docs: |

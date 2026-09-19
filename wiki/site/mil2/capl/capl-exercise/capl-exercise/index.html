@@ -25,7 +25,7 @@
     
     
       
-        <title>CAPL Exercise — Simulating the IPC Environment - Kineton Academy Wiki</title>
+        <title>CAPL Exercise — Simulating the IPC's World - Kineton Academy Wiki</title>
       
     
     
@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#capl-exercise-simulating-the-ipc-environment" class="md-skip">
+        <a href="#capl-exercise-simulating-the-ipcs-world" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CAPL Exercise — Simulating the IPC Environment
+              CAPL Exercise — Simulating the IPC's World
             
           </span>
         </div>
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4369,33 +4357,48 @@
 
 
 
-<h1 id="capl-exercise-simulating-the-ipc-environment">CAPL Exercise — Simulating the IPC Environment<a class="headerlink" href="#capl-exercise-simulating-the-ipc-environment" title="Permanent link">&para;</a></h1>
-<p>In this exercise you play the role of the surrounding vehicle network for the
-<strong>IPC</strong> (Instrument Panel Cluster) ECU on the P332 BEV BH-CAN bus. Instead of
-connecting the real cluster, you write a CAPL program in CANoe/CANalyzer that
-generates the traffic the IPC expects, sends a configuration request on a key
-press, and checks whether the IPC's reply agrees with what was requested.</p>
-<p>The exercise ties together every CAPL construct from the
-<a href="../../">CAPL lessons</a>: cyclic timers, keyboard events, message event
-handlers, bus-off handling, and measurement-end reporting.</p>
+<h1 id="capl-exercise-simulating-the-ipcs-world">CAPL Exercise — Simulating the IPC's World<a class="headerlink" href="#capl-exercise-simulating-the-ipcs-world" title="Permanent link">&para;</a></h1>
+<p>Time to put everything from the <a href="../../">CAPL lessons</a> into practice.
+In this exercise you stop being a <em>user</em> of the vehicle network and start being
+part of it: you will write a small CAPL (Communication Access Programming
+Language) program that plays the role of the ECUs surrounding the <strong>IPC</strong>
+(Instrument Panel Cluster) — the display behind the steering wheel — on the
+P332 BEV's body bus (BH-CAN).</p>
+<p>Why would you ever do this? Because on a real test bench the cluster often
+arrives before the rest of the car exists. If you want to see whether it reacts
+correctly to a configuration request, <em>someone</em> has to generate the traffic it
+expects — and that someone is your simulated node. This "restbus simulation"
+is one of the most common daily tasks of an E/E test engineer, and CAPL is the
+language you do it in.</p>
+<p>By the end of this exercise you will be able to:</p>
+<ul>
+<li>create a CANoe/CANalyzer configuration bound to a DBC (Database CAN) file,</li>
+<li>transmit a message cyclically at exactly the period the database demands,</li>
+<li>react to a key press by sending a specific signal value,</li>
+<li>judge incoming frames against what you asked for and keep score,</li>
+<li>survive a bus-off gracefully and report results when the measurement ends.</li>
+</ul>
+<p>Don't worry if that sounds like a lot — each piece maps to exactly one CAPL
+event handler, and we'll build them one at a time.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>Write one CAPL program node that, for the whole measurement:</p>
+<p>Write <strong>one</strong> CAPL program node that, for the whole measurement:</p>
 <ol>
 <li>sends the <code>STATUS_UBSS_BH</code> message cyclically with the period defined in
-   the DBC;</li>
+   the DBC (spoiler: 500 ms);</li>
 <li>sends <code>TELEMATIC_VEHICLE_SETUP2</code> with <code>PowerLevelReq = 0x3</code> when the <code>2</code>
    key is pressed;</li>
-<li>counts how often the <code>PowerLevel</code> signal reported back by the IPC does
-   <strong>not</strong> match the requested value;</li>
+<li>increases a counter <code>Count1</code> each time the <code>PowerLevel</code> signal reported
+   back by the IPC does <strong>not</strong> match what you requested — and decreases it on
+   a match, without ever going below zero;</li>
 <li>stops transmitting if a bus-off condition occurs;</li>
-<li>prints the final mismatch count to the Write window when the measurement
-   stops.</li>
+<li>prints the final count to the Write window when the measurement stops.</li>
 </ol>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <p>You need:</p>
 <ul>
-<li><strong>CANoe</strong> (or CANalyzer) with a CAN channel — real hardware or virtual,</li>
-<li>the network database <code>P332BEV_BH-CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc</code>
+<li><strong>CANoe</strong> (or CANalyzer) with a CAN channel — real hardware or virtual both
+  work fine,</li>
+<li>the network database <code>P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc</code>
   from the exercise folder.</li>
 </ul>
 <p>Create a new configuration, assign the DBC to CAN channel 1
@@ -4407,7 +4410,8 @@ open its CAPL editor. If you need a refresher on the tool workflow, see the
 lessons.</p>
 <h3 id="the-messages-involved">The messages involved<a class="headerlink" href="#the-messages-involved" title="Permanent link">&para;</a></h3>
 <p>Everything below comes from the DBC — always check it rather than guessing
-IDs, periods or signal positions:</p>
+IDs, periods or signal positions. Getting into this habit now will save you
+hours of "why isn't my node reacting?" later:</p>
 <table>
 <thead>
 <tr>
@@ -4423,14 +4427,14 @@ IDs, periods or signal positions:</p>
 <td><code>STATUS_UBSS_BH</code></td>
 <td>1206 / 0x4B6</td>
 <td>4</td>
-<td>BCM</td>
+<td>BCM (Body Control Module)</td>
 <td>cyclic, <code>GenMsgCycleTime</code> = <strong>500 ms</strong></td>
 </tr>
 <tr>
 <td><code>TELEMATIC_VEHICLE_SETUP2</code></td>
 <td>162 / 0xA2</td>
 <td>8</td>
-<td>ETM</td>
+<td>ETM (telematics module)</td>
 <td>event-driven (no cycle time)</td>
 </tr>
 <tr>
@@ -4444,7 +4448,7 @@ IDs, periods or signal positions:</p>
 </table>
 <p>The two signals that matter:</p>
 <ul>
-<li><code>PowerLevelReq</code> — the request, 3 bits at start bit 42 of
+<li><code>PowerLevelReq</code> — the request you send, 3 bits at start bit 42 of
   <code>TELEMATIC_VEHICLE_SETUP2</code>;</li>
 <li><code>PowerLevel</code> — the IPC's feedback, 3 bits at start bit 43 of
   <code>IPC_VEHICLE_SETUP2</code>.</li>
@@ -4454,13 +4458,15 @@ IDs, periods or signal positions:</p>
 <p>The exercise sheet says to watch the <code>PowerLevel</code> signal "in
 <code>IPC_VEHICLE_SETUP</code>", but in this DBC that signal actually lives in
 <strong><code>IPC_VEHICLE_SETUP2</code></strong> (the plain <code>IPC_VEHICLE_SETUP</code> has no
-<code>PowerLevel</code>). The DBC is the source of truth — attach your message event
-handler to the message that really carries the signal.</p>
+<code>PowerLevel</code>). This is a classic real-world trap: documentation drifts,
+databases don't. Attach your message event handler to the message that
+really carries the signal.</p>
 </div>
 <h2 id="how-the-program-fits-together">How the program fits together<a class="headerlink" href="#how-the-program-fits-together" title="Permanent link">&para;</a></h2>
-<p>CAPL is event-driven: there is no main loop, just procedures that run when
-something happens. This exercise needs one handler per event type:</p>
-<pre class="mermaid"><code>flowchart TD
+<p>CAPL is event-driven: there is no main loop, just small procedures that run
+when something happens. Once you accept that mental model, this exercise is
+simply one handler per event type:</p>
+<pre class="kx-mermaid"><code>flowchart TD
     S["on start"] --&gt;|"arm 500 ms timer"| T["on timer: output STATUS_UBSS_BH, re-arm"]
     K["on key '2'"] --&gt;|"set PowerLevelReq = 0x3"| O["output TELEMATIC_VEHICLE_SETUP2"]
     M["on message IPC_VEHICLE_SETUP2"] --&gt; C{"PowerLevel == requested?"}
@@ -4472,7 +4478,8 @@ something happens. This exercise needs one handler per event type:</p>
 <h3 id="1-declare-the-state">1. Declare the state<a class="headerlink" href="#1-declare-the-state" title="Permanent link">&para;</a></h3>
 <p>In the <code>variables</code> block declare a timer, message objects for the two messages
 you transmit, the counter, the last requested value, and a flag for the bus
-state:</p>
+state. Note how each variable corresponds to one requirement from the goal
+list — that's not a coincidence, it's how you decompose any CAPL task:</p>
 <div class="highlight"><pre><span></span><code><span class="n">variables</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="n">msTimer</span><span class="w"> </span><span class="n">tUbss</span><span class="p">;</span><span class="w">                            </span><span class="c1">// drives STATUS_UBSS_BH</span>
@@ -4486,9 +4493,9 @@ state:</p>
 </code></pre></div>
 <h3 id="2-start-the-cyclic-transmission">2. Start the cyclic transmission<a class="headerlink" href="#2-start-the-cyclic-transmission" title="Permanent link">&para;</a></h3>
 <p><code>on start</code> runs once when the measurement begins. Arm the timer there; the
-timer handler outputs the message and re-arms itself, which gives the 500 ms
-cycle "for the entire measurement duration". The <code>busOk</code> check makes the
-handler go silent after a bus-off without any further bookkeeping:</p>
+timer handler outputs the message and re-arms itself, which gives you the
+500 ms cycle "for the entire measurement duration". The <code>busOk</code> check makes
+the handler go silent after a bus-off without any further bookkeeping:</p>
 <div class="highlight"><pre><span></span><code><span class="n">on</span><span class="w"> </span><span class="n">start</span>
 <span class="p">{</span>
 <span class="w">  </span><span class="n">setTimer</span><span class="p">(</span><span class="n">tUbss</span><span class="p">,</span><span class="w"> </span><span class="n">UBSS_CYCLE_MS</span><span class="p">);</span>
@@ -4507,7 +4514,7 @@ handler go silent after a bus-off without any further bookkeeping:</p>
 <p class="admonition-title">Tip</p>
 <p>In CANoe you can also use <code>setTimerCyclic(tUbss, UBSS_CYCLE_MS)</code> and drop
 the re-arm line. The manual re-arm version works everywhere and makes the
-period explicit.</p>
+period explicit — a good habit while you're learning.</p>
 </div>
 <h3 id="3-send-the-request-on-key-press">3. Send the request on key press<a class="headerlink" href="#3-send-the-request-on-key-press" title="Permanent link">&para;</a></h3>
 <p><code>on key '2'</code> fires when the user presses <code>2</code> during the measurement. Set the
@@ -4519,6 +4526,9 @@ signal, remember what you requested, and put the message on the bus:</p>
 <span class="w">  </span><span class="n">output</span><span class="p">(</span><span class="n">msgSetup</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Because the node has the DBC attached, assigning <code>msgSetup.PowerLevelReq</code>
+automatically places the 3-bit value at start bit 42 — you never touch raw
+bytes.</p>
 <h3 id="4-judge-the-ipcs-answer">4. Judge the IPC's answer<a class="headerlink" href="#4-judge-the-ipcs-answer" title="Permanent link">&para;</a></h3>
 <p>Every time the IPC's feedback message arrives, compare its <code>PowerLevel</code> with
 the value you requested. The counter goes up on a mismatch and down on a
@@ -4558,12 +4568,15 @@ the error-confinement state machine in
 <li><code>STATUS_UBSS_BH</code> (0x4B6) appearing every 500 ms from your node;</li>
 <li>one <code>TELEMATIC_VEHICLE_SETUP2</code> (0xA2) each time you press <code>2</code>, with
   <code>PowerLevelReq = 3</code> in the decoded signals;</li>
-<li>incoming <code>IPC_VEHICLE_SETUP2</code> frames (real or simulated by a second node).</li>
+<li>incoming <code>IPC_VEHICLE_SETUP2</code> frames (from a real cluster, or simulated by
+  a second node if you're practising on virtual channels).</li>
 </ul>
 <p>When you stop the measurement, the Write window shows a line like:</p>
 <div class="highlight"><pre><span></span><code>PowerLevel signal value has been different from PowerLevelReq one 12 times
 </code></pre></div>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<p>Everyone trips on at least one of these the first time — check here before you
+debug for an hour:</p>
 <ul>
 <li><strong>Forgetting to re-arm the timer.</strong> <code>setTimer</code> fires once; without the
   second <code>setTimer</code> call inside <code>on timer</code>, <code>STATUS_UBSS_BH</code> is sent exactly
@@ -4587,26 +4600,29 @@ the error-confinement state machine in
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>CAPL programs are pure event handlers: <code>on start</code>, <code>on timer</code>, <code>on key</code>,
-  <code>on message</code>, <code>on busOff</code>, <code>on stopMeasurement</code> — no main loop.</li>
+<li>You just built your first restbus simulation — the bread-and-butter
+  technique of E/E testing. Same pattern, every project.</li>
+<li>CAPL programs are pure event handlers: <code>on start</code>, <code>on timer</code>,
+  <code>on key</code>, <code>on message</code>, <code>on busOff</code>, <code>on stopMeasurement</code> — no main
+  loop, one handler per requirement.</li>
 <li>Cyclic transmission = <code>setTimer</code> in <code>on start</code> + output and re-arm in
   <code>on timer</code>; the period comes from the DBC's <code>GenMsgCycleTime</code>
   (500 ms here).</li>
 <li>Keep the "requested" value in a variable so received feedback can be
   compared against it; protect counters from going negative.</li>
-<li>React to bus-off by stopping transmissions, and use <code>on stopMeasurement</code>
-  plus <code>write()</code> for end-of-run reporting.</li>
+<li>The DBC is the source of truth — when docs and databases disagree,
+  trust the database.</li>
 </ul>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../../assets/mil2/14_CAPL/CAPL_Exercise/CAPL_Exercise/CAPL_Exercise.pdf">CAPL Exercise</a> — PDF, 667.3 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../../assets/mil2/14_CAPL/CAPL_Exercise/CAPL_Exercise/CAPL_Exercise.pdf">CAPL Exercise</a> — PDF, 667.3 KB</li>
 </ul>
 <h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">&para;</a></h2>
 <ul>
-<li>:material-file: <a href="../../../../assets/mil2/14_CAPL/CAPL_Exercise/CAPL_Exercise/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc">P332BEV BH CAN R1 20200902 E2A plus CR14698 14830 14888</a> — 457.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../../../assets/mil2/14_CAPL/CAPL_Exercise/CAPL_Exercise/P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc">P332BEV BH CAN R1 20200902 E2A plus CR14698 14830 14888</a> — 457.8 KB</li>
 </ul>
 
 
@@ -4636,6 +4652,7 @@ the error-confinement state machine in
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4643,7 +4660,7 @@ the error-confinement state machine in
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: CAPL Exercises">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: CAPL Exercises — Your Hands-On Lab Series">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4653,20 +4670,20 @@ the error-confinement state machine in
                 Previous
               </span>
               <div class="md-ellipsis">
-                CAPL Exercises
+                CAPL Exercises — Your Hands-On Lab Series
               </div>
             </div>
           </a>
         
         
           
-          <a href="../capl-exercise8/" class="md-footer__link md-footer__link--next" aria-label="Next: CAPL Exercise 8 — Logging, Graphics and a First CAPL Node">
+          <a href="../capl-exercise8/" class="md-footer__link md-footer__link--next" aria-label="Next: CAPL Exercise 8 — Logging, Graphics and Your First CAPL Node">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                CAPL Exercise 8 — Logging, Graphics and a First CAPL Node
+                CAPL Exercise 8 — Logging, Graphics and Your First CAPL Node
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4694,6 +4711,41 @@ the error-confinement state machine in
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4706,8 +4758,21 @@ the error-confinement state machine in
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

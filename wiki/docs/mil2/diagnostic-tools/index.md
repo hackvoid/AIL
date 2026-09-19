@@ -1,23 +1,35 @@
 # Diagnostic Tools: DIAnalyzer, CDA & DTS Monaco
 
-The [Diagnosis](../diagnosis/index.md) lessons introduced the UDS services and
-the theory of ECU diagnostics. This article covers the **off-board diagnostic
-testers** you actually use at the bench and in the car: PC applications that
-talk to the ECUs through a hardware interface (VCI — Vehicle Communication
-Interface) and turn raw hex exchanges into readable DTCs, parameters and
+Welcome to one of the most hands-on topics of the bootcamp. In the
+[Diagnosis](../diagnosis/index.md) lessons you learned the theory of ECU
+(Electronic Control Unit — one of the small computers inside the vehicle)
+diagnostics and the UDS (Unified Diagnostic Services) protocol behind it. Now
+you get to meet the tools that put that theory into your hands: the
+**off-board diagnostic testers**, the PC applications you will run at the
+bench and in the car to talk to real ECUs every day. After reading this
+article you will be able to connect a tester to a vehicle, read and clear
+fault codes, read live parameters, drive actuators, and flash ECU software
+with confidence.
+
+A diagnostic tester does the boring part for you: it sends UDS requests
+through a hardware interface called a **VCI (Vehicle Communication
+Interface)** — the box that bridges your laptop and the vehicle buses — and
+turns the raw hex exchanges into readable fault codes, parameters and guided
 procedures.
 
-Three tools are covered, one per lesson deck:
+Three tools are covered here, one per lesson deck:
 
-- **DIAnalyzer** — the diagnostic application used by FCA (current version 4.x)
+- **DIAnalyzer** — the diagnostic application used by FCA (Fiat Chrysler
+  Automobiles, now part of Stellantis), current version 4.x
 - **CDA (Chrysler Diagnostic Application)** — the Chrysler equivalent, nearly
   identical in functionality to DIAnalyzer
-- **DTS Monaco** — Softing's engineering diagnostic tool, used across the whole
-  lifecycle from ECU testing to vehicle release
+- **DTS Monaco** — Softing's engineering diagnostic tool, used across the
+  whole vehicle lifecycle from ECU testing to vehicle release
 
-All three share the same basic architecture: a PC application connects to a
-VCI, the VCI connects to the vehicle buses, and the tester speaks UDS to the
-selected ECU.
+The good news: all three share the same basic architecture, so everything you
+learn with one transfers to the others. A PC application connects to a VCI,
+the VCI connects to the vehicle buses, and the tester speaks UDS to whichever
+ECU you select.
 
 ```mermaid
 flowchart LR
@@ -35,7 +47,8 @@ flowchart LR
 ## What every diagnostic tester can do
 
 Regardless of the brand, a diagnostic tester exposes the same families of
-functions, which map directly onto the UDS services:
+functions, and each one maps directly onto a UDS service — so you already
+know the theory behind every button you will click.
 
 | Function | What it does | UDS service behind it |
 |---|---|---|
@@ -48,13 +61,41 @@ functions, which map directly onto the UDS services:
 | Software download (flash) | Reprograms the ECU application software | 0x34/0x36/0x37 sequence |
 | Raw request editor | Sends any raw service bytes and shows the raw response | any |
 
+A few of those acronyms will follow you everywhere, so let us pin them down
+once:
+
+- **DTC (Diagnostic Trouble Code)** — a standardized fault code an ECU stores
+  when it detects a problem, together with *snapshot* and *extended* data
+  describing the conditions when the fault appeared.
+- **RDI (Readable Data Identifier)**, read via **RDBI (Read Data By
+  Identifier)** — the "engineering parameters" of an ECU: sensor values,
+  counters, configuration. Writing an RDI stores data in the ECU's
+  **EEPROM** (Electrically Erasable Programmable Read-Only Memory — the
+  non-volatile memory that survives key-off).
+- **IOCBI (Input Output Control By Identifier)** — the service that lets you
+  command an actuator (a fan, a relay, a valve) directly from the tester to
+  verify it physically works.
+
+A typical first session with any of these tools looks like this:
+
+```mermaid
+flowchart LR
+    A["Connect VCI &<br/>select hardware"] --> B["Open vehicle<br/>project"]
+    B --> C["Pick the ECU<br/>on its bus"]
+    C --> D["Read identifications<br/>& DTCs"]
+    D --> E["Read parameters /<br/>run active diagnosis"]
+    E --> F["Clear DTCs &<br/>verify"]
+```
+
 The differences between tools are about workflow, licensing, hardware and how
-each function is presented on screen.
+each function is presented on screen — not about the protocol.
 
 !!! warning "KeyOn vs. Engine Running"
-    Several operations are only allowed with ignition on but the engine off.
-    Clearing the DTC memory and running the PROXI configuration procedure are
-    both possible only in **KeyOn**, never with the engine running.
+    Several operations are only allowed with the ignition on but the engine
+    off. Clearing the DTC memory and running the PROXI configuration
+    procedure are both possible only in **KeyOn**, never with the engine
+    running. Get into this habit early — it will save you a lot of confusing
+    error messages.
 
 ## DIAnalyzer (FCA)
 
@@ -67,8 +108,9 @@ specific authorization as well.
 
 1. **Select the hardware** — `Options → Hardware` opens the hardware settings
    for each CAN bus. Pick the interface and the channel; the settings depend
-   on both the hardware and the bus. Example from the lesson: the ECM
-   communicates through a **Vector CANcaseXL on channel 2, high-speed**.
+   on both the hardware and the bus. Example from the lesson: the ECM (Engine
+   Control Module) communicates through a **Vector CANcaseXL on channel 2,
+   high-speed**.
 2. **Open the vehicle project** — each FCA vehicle/project is described by a
    **`.car` configuration file**: `File → Open →` select the `.car` in the
    `Config` folder of DIAnalyzer.
@@ -79,7 +121,8 @@ specific authorization as well.
    (Transmission Control Module, present on every vehicle without a manual
    gearbox). The main screen shows the live trace with the tester's Tx frames
    and the ECU's Rx responses, including communication timing and sender/
-   receiver for each frame.
+   receiver for each frame. This trace view is your best friend while
+   learning: you can watch every UDS exchange as it happens.
 
 ### The .PAR file: decoding raw data
 
@@ -91,7 +134,8 @@ scaled values (DTC descriptions, RDI decoding, identifications). The
 !!! warning "Wrong .PAR = wrong decoding"
     The `.par` file is the *only* thing that makes the displayed data
     meaningful. If you load the wrong one, DTC descriptions and RDI values are
-    decoded incorrectly while everything still *looks* like it works.
+    decoded incorrectly while everything still *looks* like it works. Always
+    double-check you have the `.PAR` that matches your project.
 
 ### The nine screens
 
@@ -115,8 +159,9 @@ between the *Default* and *Extended* diagnostic sessions.
 
 ### Raw requests (Screen 1)
 
-Screen 1 doubles as a raw service console. A typical example: requesting all
-stored DTCs by hand —
+Screen 1 doubles as a raw service console — a great way to practice what you
+learned in the Diagnosis lessons. A typical example: requesting all stored
+DTCs by hand —
 
 - request: `19 02 FF` (ReadDTCInformation, report DTC by status mask, all)
 - positive response: `59 02 FF …` (service 0x19 + 0x40, echoed sub-function,
@@ -143,20 +188,24 @@ extensions** in the same folder: `.idx`, `.prm` and `.bin`.
 
 !!! tip
     The `.idx` file is plain text — open it in an editor to check exactly what
-    the flash package contains before you download it.
+    the flash package contains before you download it. Thirty seconds of
+    checking can save you a bricked ECU.
 
 ### PROXI: the End-of-Line personalization procedure
 
-FCA requires its suppliers to deliver **one general-purpose software** per ECU
-that can manage every functionality variant (engine, transmission, optionals).
-The vehicle-specific activation is done later, on the production line, with the
-**PROXI procedure** — a configuration write that enables/disables features such
-as Stop&Start, manual vs. automatic climate control, gear ratio and so on.
+PROXI is one of those procedures you will run constantly, so it is worth
+understanding the idea behind it. FCA requires its suppliers to deliver **one
+general-purpose software** per ECU that can manage every functionality variant
+(engine, transmission, optionals). The vehicle-specific activation happens
+later, on the production line, with the **PROXI procedure** — a configuration
+write that enables or disables features such as Stop&Start, manual vs.
+automatic climate control, gear ratio and so on.
 
 Key facts:
 
-- The vehicle configuration file is stored in the **BCM** (Body Control
-  Module), with a backup copy in the **IPC** (Instrument Panel Cluster).
+- The vehicle configuration file is stored in the **BCM (Body Control
+  Module)**, with a backup copy in the **IPC (Instrument Panel Cluster — the
+  dashboard)**.
 - The procedure runs only in **KeyOn** (never engine running) and only for
   **qualified users**.
 - Access it from the PROXI icon in the **Car** screen.
@@ -175,14 +224,15 @@ with **Change Proxi**.
 
 !!! tip
     Save every modified `.byt` under a *new* name so the original
-    configuration and each variant stay distinguishable.
+    configuration and each variant stay distinguishable. Your future self —
+    and your colleagues — will thank you.
 
 ## CDA (Chrysler Diagnostic Application)
 
-CDA is Chrysler's diagnostic tool, still used on some FCA projects; it is
-essentially equivalent to DIAnalyzer. Every user needs a **specifically enabled
-ID** to log in; a **Work Offline** mode exists but is gated by a user
-privilege.
+CDA is Chrysler's diagnostic tool, still used on some FCA projects; if you
+have just read the DIAnalyzer section, you already know 90% of it — it is
+essentially equivalent. Every user needs a **specifically enabled ID** to log
+in; a **Work Offline** mode exists but is gated by a user privilege.
 
 ### Connecting to an ECU
 
@@ -224,21 +274,22 @@ Highlights of each section:
 The **lightning icon** opens the download window: **Select Flash File**, then
 **Start Flash**. The application software must be provided as an **`.efd`
 file**. CDA notifies you when the download finishes — but note the quirk
-below.
+below, because it confuses everyone the first time.
 
 !!! warning "The 99% stall is normal"
-    The download bar typically locks at **99%**. The flash only completes
-    after a **KeyOff → KeyOn** cycle, which lets the ECU reboot into the new
-    software.
+    The download bar typically locks at **99%**. Do not panic and do not
+    unplug anything: the flash only completes after a **KeyOff → KeyOn**
+    cycle, which lets the ECU reboot into the new software.
 
 ### PROXI in CDA
 
 The PROXI procedure in CDA runs **only in Vehicle mode — never on a HiL
-bench**. You import the **`.byt`** configuration file with the Import button,
-see the configurable parameters (raw or decoded), and execute the write.
-Editing the `.byt` file itself needs a specific user privilege. The same
-result can be achieved with raw requests in the **PID Editor**. Between the
-two tools, the PROXI workflow is considerably simpler in DIAnalyzer.
+(Hardware-in-the-Loop) bench**. You import the **`.byt`** configuration file
+with the Import button, see the configurable parameters (raw or decoded), and
+execute the write. Editing the `.byt` file itself needs a specific user
+privilege. The same result can be achieved with raw requests in the **PID
+Editor**. Between the two tools, the PROXI workflow is considerably simpler in
+DIAnalyzer.
 
 ## DTS Monaco (Softing)
 
@@ -256,9 +307,9 @@ flexible, configurable interfaces.
 - analysis of returns and Quality Assurance
 
 Because it covers the functionality of several previously separate tools (OBD
-scan tool, data logger, bus monitor), it reduces cost and familiarization
-time; preconfigured templates give fast results, and all communication data
-and test results can be fully documented.
+— On-Board Diagnostics — scan tool, data logger, bus monitor), it reduces cost
+and familiarization time; preconfigured templates give fast results, and all
+communication data and test results can be fully documented.
 
 ### The VIN|ING 2000 VCI
 
@@ -280,6 +331,10 @@ DTS Monaco works with Softing's **VIN|ING 2000** interface:
   and the **Split Connector**.
 
 ### From power-on to the first ECU
+
+DTS Monaco communicates with modern vehicles over **DoIP (Diagnostics over
+Internet Protocol)** — UDS carried over Ethernet instead of CAN. The startup
+sequence is always the same, so learn it once and it becomes muscle memory:
 
 ```mermaid
 flowchart TD
@@ -310,7 +365,7 @@ project) and a set of docked windows:
 
 On top of the generic layout, DTS Monaco ships **preconfigured task
 workspaces** — each one pairs the relevant trace window with the bus trace
-and the ECU tab menu:
+and the ECU tab menu, so you can jump straight into the job at hand:
 
 - **Fault memory read** — read the DTC memory of an ECU
 - **Clear & Read DTC** — clear then re-read to verify what returns
@@ -331,21 +386,23 @@ and the ECU tab menu:
 | PROXI on a HiL bench | yes (via Open EOL File `.byt`) | **no** — vehicle only | n/a |
 | Scope | vehicle diagnostics | vehicle diagnostics | engineering, testing, manufacturing, service |
 
+In practice you rarely choose: the project tells you which tool to use. What
+matters is that the underlying concepts — sessions, DTCs, RDIs, routines,
+flashing — are identical everywhere.
+
 !!! success "Key takeaways"
-    - All three testers implement the same UDS function families:
-      identification, DTC read/clear, RDI read/write, IOCBI active diagnosis,
-      routines and software download — they differ in workflow, not in
-      protocol.
-    - The decoding database is critical: DIAnalyzer's `.PAR` file is what
-      turns raw hex into meaningful DTCs and parameters.
-    - DIAnalyzer flashing needs `.idx` + `.prm` + `.bin`; CDA needs an `.efd`
-      and finishes only after a KeyOff/KeyOn cycle (the 99% bar is normal).
-    - PROXI personalizes one general-purpose ECU software per vehicle variant
-      at End of Line; the configuration lives in the BCM (backup in the IPC),
-      is stored as `.byt`, and in CDA works only on a real vehicle.
-    - DTS Monaco with the VIN|ING 2000 adds DoIP over Ethernet: activate
-      Ethernet, broadcast, verify the ECU list — then work in task-oriented
-      workspaces with full trace documentation.
+    - One mental model, three tools: every tester speaks UDS through a VCI —
+      learn the concepts once, reuse them everywhere.
+    - The decoding database makes or breaks you: with the wrong `.PAR` file,
+      everything looks fine but means nothing.
+    - Respect the states: Extended session for active diagnosis, KeyOn for
+      clearing DTCs and PROXI, KeyOff → KeyOn to finish a CDA flash.
+    - Keep your files straight: `.car` + `.PAR` to open a project,
+      `.idx`/`.prm`/`.bin` (or `.efd`) to flash, `.byt` to personalize with
+      PROXI.
+    - You are ready: you can now connect a tester, read a fault memory, watch
+      live parameters, drive an actuator and flash an ECU — the daily bread
+      of an E/E engineer.
 
 !!! tip "Where this leads"
     You will apply these testers' concepts — DTCs, snapshots, RDI — in the

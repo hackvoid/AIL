@@ -1,13 +1,23 @@
-# Kineton Academy Wiki
+<div class="kx-hero" markdown>
+<span class="kx-hero__badge">Kineton Academy · Onboarding Platform</span>
 
-The knowledge base for the Academy bootcamp in automotive E/E engineering.
-Every article is **written for reading on the web** — distilled from the
-academy's slide decks and lecture recordings, with diagrams, key takeaways and
-links to the original files at the bottom of each page.
+# Your orbit starts here
 
-**27 topics · 46 articles · 87 source decks**,
-organized into the four bootcamp modules below. Use the search bar to jump to
-any concept.
+<p class="kx-hero__sub" markdown>
+Welcome, engineer. This is the knowledge base for the Academy bootcamp in
+automotive E/E engineering — every lesson rewritten as a readable article, with
+diagrams, real-bench exercises and the original files one click away. Work
+through the modules in order, or jump straight to what you need.
+</p>
+
+<div class="kx-hero__stats" markdown>
+<span>27 topics</span>
+<span>46 articles</span>
+<span>87 source decks</span>
+<span>4 modules</span>
+</div>
+
+</div>
 
 <div class="grid cards" markdown>
 
@@ -62,10 +72,12 @@ any concept.
 
 </div>
 
-!!! tip "How to use this wiki during the bootcamp"
-    - Follow the modules in order — each module page is the curriculum.
-    - Articles are self-contained study notes; the **Source material** and
-      **Downloads** sections at the bottom link the original PDFs, DBC/CDD
-      databases and lecture transcripts.
-    - Diagrams are drawn with Mermaid or cropped from the original slides where
-      a figure was worth keeping.
+!!! tip "New here? Your first week"
+    1. Read [CAN, LIN & Automotive Ethernet](mil1/can-lin/index.md) — everything
+       else builds on it.
+    2. Skim the [V-Cycle](mil1/v-cycle/index.md) article to see how your work
+       fits the development process.
+    3. Open the **✦ AI Assistant** panel on the right whenever you feel lost —
+       it will guide you once connected (currently in preview).
+    4. Keep the [Glossary](glossary/index.md) open in a tab — automotive loves
+       acronyms.

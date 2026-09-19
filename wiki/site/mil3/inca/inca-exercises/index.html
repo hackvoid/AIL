@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4207,6 +4195,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-questions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4362,17 +4361,24 @@
 
 
 <h1 id="inca-exercises-knowledge-questionnaire">INCA Exercises — Knowledge Questionnaire<a class="headerlink" href="#inca-exercises-knowledge-questionnaire" title="Permanent link">&para;</a></h1>
-<p>The first INCA exercise is not a bench task but a <strong>15-question
-questionnaire</strong> that checks whether you understood the
-<a href="../">INCA lecture</a> before you start touching real calibration data.
-You answer in writing, from memory or from the lecture notes, and the answers
-are then discussed with the instructor. This page reproduces the exercise in a
-self-study format: the questions grouped by theme, what a good answer must
-contain, and a model answer for each.</p>
+<p>Welcome to your first INCA exercise — and here's the good news: no bench, no
+hardware, no license required. Before anyone lets you touch real calibration
+data, this <strong>15-question questionnaire</strong> makes sure the
+<a href="../">INCA lecture</a> actually stuck. You answer in writing, from memory
+or from your notes, and then discuss the answers with the instructor.</p>
+<p><strong>What you'll practice:</strong> explaining what INCA (INtegrated Calibration and
+Acquisition system) is, how measurement, calibration and flashing fit into one
+workflow, how INCA talks to an electronic control unit (ECU), and how it keeps
+calibration data safe. Think of it less as an exam and more as a rehearsal for
+the questions every calibration engineer gets asked in their first week on the
+job.</p>
+<p>This page turns the exercise into a self-study guide: the questions grouped by
+theme, what a good answer must contain, and a model answer for each. Work the
+questions first, then check yourself against the answer key.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>Demonstrate that you can explain, in your own words:</p>
+<p>By the end of this exercise you'll be able to explain, in your own words:</p>
 <ul>
-<li>what INCA is and why calibration engineers use it,</li>
+<li>what INCA is and why calibration engineers rely on it,</li>
 <li>how measurement, calibration and flashing fit together in one workflow,</li>
 <li>which interfaces and protocols connect INCA to an ECU,</li>
 <li>how INCA protects calibration data and fits into a company's tool chain.</li>
@@ -4385,8 +4391,19 @@ contain, and a model answer for each.</p>
 <li><strong>Deliverable:</strong> a written answer per question (a few sentences each; bullet
   points are fine).</li>
 </ul>
+<h2 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Read all fifteen questions below once, without writing anything — get a
+   feel for what you already know cold and what needs a look-up.</li>
+<li>Write your answers from memory first; only then fill gaps from the lecture
+   material. Struggling to recall a point is exactly where the learning
+   happens.</li>
+<li>Compare your answers against the answer key. You don't need identical
+   wording — you need the same substance.</li>
+<li>Bring anything you got wrong (or half-right) to the discussion with the
+   instructor. That's what it's for.</li>
+</ol>
 <h2 id="the-questions">The questions<a class="headerlink" href="#the-questions" title="Permanent link">&para;</a></h2>
-<p>Work through all fifteen before reading the answer key below.</p>
 <p><strong>Purpose and role of the tool</strong></p>
 <ol>
 <li>What is INCA, and what is its primary purpose in the automotive industry?</li>
@@ -4419,45 +4436,44 @@ contain, and a model answer for each.</p>
     engine development?</li>
 </ol>
 <h2 id="answer-key">Answer key<a class="headerlink" href="#answer-key" title="Permanent link">&para;</a></h2>
-<p>Compare your answers against these model points. You don't need identical
-wording — you need the same substance.</p>
 <h3 id="12-what-inca-is-and-why-it-exists">1–2. What INCA is and why it exists<a class="headerlink" href="#12-what-inca-is-and-why-it-exists" title="Permanent link">&para;</a></h3>
-<p>INCA (<strong>INtegrated Calibration and Acquisition</strong> system) is ETAS's
-measurement, calibration and diagnostics environment for electronic control
-units. Engine control software contains tens of thousands of parameters —
-scalars, curves and maps — whose final values cannot be determined in the
-design office: they are tuned empirically on the test bench and in the
-vehicle. INCA lets the engineer <strong>read measured variables from the running ECU
-in parallel with changing calibration parameters</strong>, observe the effect
-immediately, and iterate until emissions, consumption, drivability and
-performance targets are met.</p>
+<p>INCA is ETAS's integrated environment for <strong>measurement, calibration and
+diagnostics</strong> of electronic control units. Here's why it exists: engine
+control software contains tens of thousands of parameters — scalars, curves
+and maps — whose final values simply cannot be determined at a desk. They are
+tuned empirically, on the test bench and in the vehicle. INCA lets you <strong>read
+measured variables from the running ECU while changing calibration parameters
+at the same time</strong>, see the effect immediately, and iterate until emissions,
+consumption, drivability and performance targets are met. That tight loop is
+the whole job of a calibration engineer — INCA is where it happens.</p>
 <h3 id="34-main-features-and-advantages">3–4. Main features and advantages<a class="headerlink" href="#34-main-features-and-advantages" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Experiments</strong>: configurable screens combining oscilloscopes (YT/XY),
   numeric displays, gauges and calibration editors for scalars, curves and
-  maps.</li>
+  maps — your cockpit while working on the running ECU.</li>
 <li><strong>Database-centered data management</strong>: workspaces, projects, A2L
-  descriptions and datasets are managed in one place with versioned datasets.</li>
+  descriptions and datasets live in one place, with versioned datasets.</li>
 <li><strong>Working Page / Reference Page concept</strong>: edit a copy of the calibration
-  while keeping the original reference, and A/B-switch between them.</li>
-<li><strong>Add-ons and open interfaces</strong>: MDA (measurement data analysis), ODX-LINK
-  diagnostics, MATLAB/Simulink integration (INCA-MIP, INCA-SIP), ASAM
+  while keeping the original reference intact, and A/B-switch between them.</li>
+<li><strong>Add-ons and open interfaces</strong>: MDA (Measurement Data Analyzer), ODX-LINK
+  diagnostics, MATLAB/Simulink integration (INCA-MIP, INCA-SIP), and ASAM
   interfaces for testbed automation.</li>
-<li>Advantages over generic tools: it is the de-facto industry standard, so
-  ECU suppliers deliver A2L files and protocol support for it; the same tool
-  covers measurement, calibration and flashing; and it supports virtually all
-  ETAS and third-party hardware through standard interfaces.</li>
+<li>Why it beats generic tools: INCA is the de-facto industry standard, so ECU
+  suppliers deliver A2L files and protocol support for it out of the box; one
+  tool covers measurement, calibration <em>and</em> flashing; and it drives virtually
+  all ETAS and third-party hardware through standard interfaces.</li>
 </ul>
 <h3 id="5-diagnosis-and-troubleshooting">5. Diagnosis and troubleshooting<a class="headerlink" href="#5-diagnosis-and-troubleshooting" title="Permanent link">&para;</a></h3>
 <p>Because measurement and calibration happen simultaneously, you watch the
-ECU's <em>internal</em> variables (not just external sensor signals) while the
-engine misbehaves: lambda control states, knock detection counters, ignition
-timing actually applied, limiter interventions. Recorded measure files can be
-replayed and analyzed offline in MDA. With the ODX-LINK add-on, INCA also
-reads fault memory (DTCs) and runs diagnostic services, so calibration and
-classical diagnosis live in the same session.</p>
+ECU's <em>internal</em> variables — not just external sensor signals — while the
+engine misbehaves: lambda control states, knock detection counters, the
+ignition timing actually applied, limiter interventions. Recorded measure
+files can be replayed and analyzed offline in MDA. With the ODX-LINK add-on,
+INCA also reads fault memory (diagnostic trouble codes, DTCs) and runs
+diagnostic services, so calibration and classical diagnosis live in the same
+session.</p>
 <h3 id="6-typical-workflow">6. Typical workflow<a class="headerlink" href="#6-typical-workflow" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     A["Open workspace&lt;br/&gt;and project"] --&gt; B["Select ECU + A2L&lt;br/&gt;description file"]
     B --&gt; C["Configure hardware&lt;br/&gt;(ETK / XCP on CAN)"]
     C --&gt; D["Build experiment:&lt;br/&gt;variables, displays,&lt;br/&gt;calibration editors"]
@@ -4501,9 +4517,9 @@ classical diagnosis live in the same session.</p>
 </tr>
 </tbody>
 </table>
-<p>The ECU must contain the matching protocol driver (about 30 lines of extra
-code for an ETK acquisition table; more for CCP/XCP), otherwise no connection
-is possible.</p>
+<p>One catch worth remembering: the ECU must contain the matching protocol
+driver (about 30 lines of extra code for an ETK acquisition table; more for
+CCP/XCP). No driver, no connection.</p>
 <h3 id="8-security-and-data-integrity">8. Security and data integrity<a class="headerlink" href="#8-security-and-data-integrity" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The <strong>reference page is read-only</strong>: the originally loaded dataset is always
@@ -4518,8 +4534,8 @@ is possible.</p>
 <ul>
 <li>INCA is used by virtually all major OEMs and Tier-1 suppliers (Bosch/ETAS's
   parent ecosystem, and engine, transmission and hybrid projects across the
-  industry) — it is the tool you will most likely find already installed on a
-  calibration bench.</li>
+  industry). It is the tool you will most likely find already installed on a
+  calibration bench — learning it is never wasted.</li>
 <li>Advanced functions: automated calibration via the ASAM-MCD 3MC testbed
   interface, scripting through open APIs, Simulink model calibration with
   INCA-SIP, bypass/rapid-prototyping hooks (EHOOKS), and measurement-data
@@ -4537,16 +4553,17 @@ is possible.</p>
 <ul>
 <li>Evolution: from CCP to XCP, from parallel ETK to serial calibration, from
   pure ICE maps to hybrid/EV functions, FlexRay and Ethernet support, MDF4
-  measurement files, and growing automation interfaces — each driven by new
-  bus technology and by the shift from bench work to automated testbeds.</li>
-<li>Training: ETAS offers official courses and the <em>Getting Started</em> manual and
-  online help ship with the product; this bootcamp's own INCA lessons are the
+  measurement files, and growing automation interfaces — each step driven by
+  new bus technology and by the shift from bench work to automated testbeds.</li>
+<li>Training: ETAS offers official courses, and the <em>Getting Started</em> manual and
+  online help ship with the product. This bootcamp's own INCA lessons are your
   first step.</li>
 <li>Integrations: MATLAB/Simulink (INCA-MIP/SIP), ASAM-standard interfaces to
-  testbed automation systems, diagnostic toolchains via ODX-LINK, and third-
-  party hardware through the open HWI interface.</li>
+  testbed automation systems, diagnostic toolchains via ODX-LINK, and
+  third-party hardware through the open HWI interface.</li>
 </ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<p>These are the traps new engineers fall into — skip them:</p>
 <ul>
 <li><strong>Confusing measurement with calibration.</strong> Measuring = reading variables;
   calibrating = writing parameters. INCA does both, but they are different
@@ -4565,14 +4582,17 @@ is possible.</p>
 <p class="admonition-title">Key takeaways</p>
 <ul>
 <li>INCA = ETAS's integrated environment for <strong>measurement, calibration and
-  flashing</strong> of ECUs; its job is to tune the thousands of parameters in
-  control software on the running system.</li>
-<li>The core concepts are the <strong>experiment</strong>, the <strong>A2L description file</strong>,
-  and the <strong>Working Page / Reference Page</strong> pair for safe A/B calibration.</li>
+  flashing</strong> of ECUs — it tunes the thousands of parameters in control
+  software on the running system.</li>
+<li>Master the three core concepts and the rest follows: the <strong>experiment</strong>,
+  the <strong>A2L description file</strong>, and the <strong>Working Page / Reference Page</strong>
+  pair for safe A/B calibration.</li>
 <li>ECUs connect via <strong>ETK (parallel)</strong> or <strong>CCP/XCP (serial over CAN,
-  Ethernet, …)</strong>; the matching protocol driver must exist in the ECU.</li>
+  Ethernet, …)</strong> — and the matching protocol driver must exist in the ECU.</li>
 <li>Data integrity comes from read-only reference datasets, versioning and
-  access control — never calibrate without a rollback path.</li>
+  access control: never calibrate without a rollback path.</li>
+<li>If you can answer all 15 questions in your own words, you're ready for
+  the bench.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4585,8 +4605,8 @@ work with real measurement files.</p>
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../assets/mil3/26_INCA/26_INCA_Exercises/1_INCA_questionnaire.pdf">INCA questionnaire</a> — PDF, 74.2 KB</li>
-<li>:material-file-pdf-box: <a href="../../../assets/mil3/26_INCA/26_INCA_Exercises/2_INCA_Questionnaire.pdf">INCA Questionnaire</a> — PDF, 77.1 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil3/26_INCA/26_INCA_Exercises/1_INCA_questionnaire.pdf">INCA questionnaire</a> — PDF, 74.2 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../assets/mil3/26_INCA/26_INCA_Exercises/2_INCA_Questionnaire.pdf">INCA Questionnaire</a> — PDF, 77.1 KB</li>
 </ul>
 
 
@@ -4616,6 +4636,7 @@ work with real measurement files.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4674,6 +4695,41 @@ work with real measurement files.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4686,8 +4742,21 @@ work with real measurement files.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

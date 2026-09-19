@@ -1,76 +1,132 @@
 # Diagnosis Exercises
 
-This section turns the theory of the [Diagnosis](../index.md) lesson into
-practice. Instead of listening to how UDS services and DTC status bits work,
-you now have to **predict exactly what an ECU will answer** when a diagnostic
-tester queries it — step by step, through a scripted sequence of vehicle
-manoeuvres.
+Welcome to your first hands-on diagnostic workbench. Up to now, the
+[Diagnosis](../index.md) lesson showed you *how* UDS (Unified Diagnostic
+Services) requests and DTC (Diagnostic Trouble Code) status bits are supposed
+to behave. Here you stop listening and start predicting: given a scripted
+sequence of vehicle manoeuvres, **you decide exactly what the ECU will answer**
+when a diagnostic tester queries it — byte by byte.
 
-The exercises train the single most-used diagnostic skill in day-to-day E/E
-work: reasoning about how a fault is detected, confirmed, reported, stored and
-healed across ignition and driving cycles.
+This is not an academic drill. Reasoning your way through *detected → pending
+→ confirmed → healed* is the single most-used diagnostic skill in day-to-day
+E/E work, and by the end of this section you will be able to:
 
-## What you will practice
+- predict an ECU's full reply to a `ReadDTCInformation` request at any point
+  in a manoeuvre sequence,
+- track every DTC status bit as a fault appears, is confirmed and heals,
+- explain why a tester can report "no faults" while a fault is already
+  sitting in the ECU, waiting to be confirmed.
 
-Working through these exercises you will apply, with concrete byte values:
+## What you'll practice
 
-- **UDS service `0x19` (ReadDTCInformation)** — in particular sub-function
-  `0x02` with a status mask (`19 02 08` asks for DTCs whose *confirmedDTC* bit
-  is set), and how the ECU's reply changes as the fault state evolves.
-- **The DTC status byte** — the eight status bits (testFailed,
-  testFailedThisOperationCycle, pendingDTC, confirmedDTC,
-  testNotCompletedSinceLastClear, and friends) and when each one sets and clears.
-- **Fault timing logic** — enable conditions, setting/healing conditions,
-  event-based vs. time-based debouncing, and the difference between a
-  **monitoring cycle** (key on to key off) and a **driving cycle** (engine run).
-- **Warning lamp behavior** — how the MIL (Malfunction Indicator Lamp) follows
-  the confirmedDTC bit and heals after a defined number of clean cycles.
+All of it with concrete byte values, not just concepts:
 
-## Contents of this section
+- **UDS service `0x19` (ReadDTCInformation)** — sub-function `0x02`
+  (reportDTCByStatusMask). The request `19 02 08` asks: *"tell me every DTC
+  whose status byte has bit 3 (confirmedDTC) set."*
+- **The DTC status byte** — the eight bits that describe a fault's life:
+  testFailed, testFailedThisOperationCycle, pendingDTC, confirmedDTC,
+  testNotCompletedSinceLastClear and friends. You will set and clear each one
+  by hand.
+- **Fault timing logic** — enable conditions (when the ECU is even allowed to
+  look for the fault), setting and healing conditions, event-based
+  debouncing, and the difference between a **monitoring cycle** (key on to
+  key off) and a **driving cycle** (engine actually running).
+- **Warning lamp behavior** — how the MIL (Malfunction Indicator Lamp, the
+  "check engine" light) follows the confirmedDTC bit and only goes out after
+  a defined number of clean driving cycles.
+
+## Goal
+
+For each of the 30 manoeuvres in Exercise Diagnosi 1, write down the ECU's
+**complete response** to the tester request `19 02 08` — including the DTC
+status mask expressed bit by bit. If your predicted bits line up with the
+fault's true lifecycle across the whole sequence, you have understood how a
+real ECU stores and forgets faults.
+
+## Setup
+
+What you are working with:
 
 | Item | What it is |
 |---|---|
-| [Exercise Diagnosi 1](exercise-diagnosi-1/index.md) | A 30-step manoeuvre sequence on a cruise-control button fault (short circuit to battery). For every step you must write the ECU's full reply to `19 02 08`, tracking the DTC status mask bit by bit in a spreadsheet. |
-| ISO 14229-1:2020 | The full UDS specification, provided in the exercise directory as your reference. Use it to check service formats, sub-function parameters and the exact meaning of each DTC status bit. |
+| [Exercise Diagnosi 1](exercise-diagnosi-1/index.md) | A 30-step manoeuvre script built around a cruise-control (CC) button fault: a short circuit to battery (SCB) that appears, gets pushed, removed, re-inserted and healed across key cycles and engine runs. |
+| ISO 14229-1:2020 | The full UDS specification, sitting in the exercise directory as your normative reference. Keep it open at the `DTCStatusAvailabilityMask` table — every answer you write is an 8-bit mask built from those definitions. |
+| A spreadsheet | The exercise asks you to log every ECU response in Excel, one row per step, with the status byte expanded into individual bits. |
 
-## Suggested approach
+The exercise's ground rules, straight from the deck:
 
-1. **Re-read the Diagnosis lesson** first — you need the UDS service overview,
+- **Enable condition:** the ECU only monitors the fault while the CC button
+  is pushed.
+- **Fault condition:** SCB on the CC button.
+- **DTC:** code `00 25`, symptom byte `00`. Status bits 4 and 5 are unused.
+- **MIL:** switches on at the first driving cycle with the fault confirmed,
+  and heals after **2 clean driving cycles**.
+- **Setting and healing are event-based** — no time debounce to simulate.
+- **Monitoring cycle** = key on to key off; **driving cycle** = engine run.
+- Every manoeuvre counts as fully completed.
+
+## The lifecycle you are tracking
+
+Before you start, fix this picture in your mind — it is the whole exercise in
+one diagram:
+
+```mermaid
+stateDiagram-v2
+    [*] --> NoFault
+    NoFault --> Pending: fault detected (enable condition met)
+    Pending --> Confirmed: fault still present in a later cycle
+    Confirmed --> Healing: fault removed, MIL stays on
+    Healing --> NoFault: 2 clean driving cycles, MIL off
+    Pending --> NoFault: fault gone before confirmation
+```
+
+The request `19 02 08` filters on **bit 3 (confirmedDTC)**: while the fault
+is merely *pending*, the ECU legitimately answers "no DTCs". Only once the
+fault is confirmed does `00 25` appear in the response — and it only
+disappears again after the healing conditions are met.
+
+## Steps
+
+1. **Re-read the Diagnosis lesson first.** You need the UDS service overview,
    the DTC format (2-byte code + 1-byte symptom) and the status-bit map fresh
-   in mind before attempting the exercises.
-2. **Open ISO 14229-1 at the DTC status bit table** (the
-   `DTCStatusAvailabilityMask` description) and keep it beside you; every
-   answer you write is an 8-bit mask built from those definitions.
-3. **Work the manoeuvres strictly in order** — the reply to step *N* depends on
-   the ECU state left by steps *1…N−1*. Skipping ahead makes the exercise
-   meaningless.
-4. **Write every response bit by bit** in the spreadsheet, not just "yes/no
-   fault": the point is to see pending → confirmed → healed transitions in the
-   individual bits.
-5. **Verify against the solution logic**: does the MIL light exactly when
-   confirmedDTC sets? Does the DTC disappear from the `19 02 08` response only
-   after the required healing cycles?
+   in mind before attempting any manoeuvre.
+2. **Open ISO 14229-1 at the DTC status bit table** and keep it beside you.
+   When in doubt about a bit, the standard wins.
+3. **Work the manoeuvres strictly in order.** The reply to step *N* depends
+   entirely on the ECU state left behind by steps *1…N−1*. Skipping ahead
+   makes the exercise meaningless.
+4. **Write every response bit by bit** in your spreadsheet — never just
+   "fault yes/no". The learning happens when you watch pending → confirmed →
+   healed move through the individual bits.
+5. **Sanity-check your solution against the physics of the scenario.** Does
+   the MIL light exactly when confirmedDTC sets? Does the DTC vanish from the
+   `19 02 08` response only after the 2 required healing driving cycles? Does
+   a push of the CC button with no SCB present produce a clean
+   testNotCompleted → completed transition?
 
 !!! tip "Why the mask matters"
-    A tester that requests `19 02 08` only receives DTCs whose status byte
-    matches the mask — here, bit 3 (confirmedDTC). A *pending* fault that has
-    not yet been confirmed is invisible to that request. Choosing the right
-    status mask is what separates "the ECU looks clean" from "the fault is
-    there, just not confirmed yet".
+    A tester sending `19 02 08` only *sees* DTCs whose status byte matches
+    the mask — here, bit 3 (confirmedDTC). A pending fault that has not yet
+    been confirmed is invisible to that request. Choosing the right status
+    mask is the difference between "the ECU looks clean" and "the fault is
+    there, just not confirmed yet" — a distinction that matters enormously
+    when a customer says the problem "comes and goes".
 
 !!! note "Further diagnosis exercises"
-    More hands-on diagnostic scenarios — working with a real `.cdd` diagnostic
-    description of the instrument cluster — live in the RDI Testing section:
+    Once you are comfortable here, more hands-on scenarios — this time with a
+    real `.cdd` diagnostic description of the instrument cluster — live in
+    the RDI Testing section:
     [Exercise Diagnosi 2](../../rdi-testing/rdi-testing/exercise-diagnosi-2/index.md)
     and
     [Exercise Diagnosi 3](../../rdi-testing/rdi-testing/exercise-diagnosi-3/index.md).
 
 !!! success "Key takeaways"
-    - This section is pure practice: given a fault scenario and a manoeuvre
-      script, predict the ECU's exact reply to a UDS `ReadDTCInformation`
-      request.
-    - Everything hinges on the DTC status byte: know which bit sets at
-      detection (pending), which at confirmation, and how healing cycles clear
-      them.
-    - Keep ISO 14229-1 open while you work — it is the normative reference for
-      every byte value you write.
+    - You can now predict an ECU's exact reply to `19 02 08` at any point in
+      a fault scenario — that is real diagnostic reasoning, not theory.
+    - The DTC status byte is the whole story: pending at detection, confirmed
+      after repetition, healed only after the required clean cycles.
+    - "No DTCs in the response" never means "no fault" — it only means
+      "nothing matches your status mask".
+    - ISO 14229-1 is your permanent desk companion: every byte you wrote in
+      this exercise is defined there.

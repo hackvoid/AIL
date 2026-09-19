@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4482,40 +4470,53 @@
 
 
 <h1 id="electric-motors">Electric Motors<a class="headerlink" href="#electric-motors" title="Permanent link">&para;</a></h1>
-<p>The electric machine is the heart of every electrified powertrain: it converts
-the energy stored on board (battery, fuel cell) into mechanical motion, and it
-converts braking energy back into electricity. This article covers the ground
-from the MIL1 lessons on electric machines:</p>
+<p>Welcome to one of the most exciting topics of the bootcamp. The electric
+machine is the heart of every electrified powertrain: it turns the energy
+stored on board (battery or fuel cell) into motion, and — just as important —
+it turns braking energy back into electricity. Whether you end up writing test
+cases for a traction inverter, calibrating torque limits, or chasing a fault
+on an e-axle, this is the vocabulary you will use every day.</p>
+<p>By the end of this article you will be able to name the main machine families,
+explain in one sentence how each one makes torque, describe how the inverter
+controls them, and place the motor correctly in any hybrid layout. We will
+cover:</p>
 <ul>
 <li>how an <strong>electric drive</strong> is structured and the electromagnetic principles
   every machine relies on,</li>
-<li>the three machine families you will meet in vehicles — <strong>DC</strong>, <strong>induction</strong>
-  and <strong>permanent-magnet brushless</strong> (plus the switched reluctance motor),</li>
-<li>the <strong>power converters</strong> that feed them (rectifiers, choppers, inverters) and
-  the <strong>control strategies</strong> (V/f, FOC, PWM, six-step),</li>
+<li>the three machine families you will meet in vehicles — <strong>direct current
+  (DC)</strong>, <strong>induction</strong> and <strong>permanent-magnet brushless</strong> (plus the switched
+  reluctance motor),</li>
+<li>the <strong>power converters</strong> that feed them (rectifiers, choppers, inverters)
+  and the <strong>control strategies</strong> behind them,</li>
 <li><strong>four-quadrant operation</strong> and regenerative braking,</li>
 <li>where the motor sits in a hybrid powertrain (the <strong>P0–P5</strong> classification),
-  and what real production EVs look like.</li>
+  and what real production electric vehicles (EVs) look like.</li>
 </ul>
+<p>Don't worry if the physics feels heavy at first — focus on the mental models,
+and the equations will fall into place.</p>
 <h2 id="why-automotive-traction-is-demanding">Why automotive traction is demanding<a class="headerlink" href="#why-automotive-traction-is-demanding" title="Permanent link">&para;</a></h2>
-<p>The requirements for a traction machine are much stricter than for an
-industrial motor bolted to the floor of a factory:</p>
+<p>Before looking at the machines themselves, it helps to see why engineers can't
+just bolt an industrial motor into a car. A traction machine faces much
+stricter requirements than a motor sitting on a factory floor:</p>
 <ul>
 <li><strong>high torque and power density</strong> — the machine must fit in the vehicle and
   add as little mass as possible;</li>
 <li><strong>wide speed range</strong> — from low-speed creeping in traffic to high-speed
-  cruising, without a multi-speed gearbox in most EVs;</li>
+  cruising, usually with no multi-speed gearbox;</li>
 <li><strong>high efficiency over a wide torque/speed area</strong> — every wasted percent is
-  range lost;</li>
+  driving range lost;</li>
 <li><strong>wide constant-power operating region</strong> (flux weakening at high speed);</li>
 <li><strong>low acoustic noise</strong>;</li>
 <li><strong>reasonable cost</strong>.</li>
 </ul>
+<p>Keep this checklist in mind: every design trade-off in the rest of the article
+traces back to it.</p>
 <h2 id="the-electric-drive-system">The electric drive system<a class="headerlink" href="#the-electric-drive-system" title="Permanent link">&para;</a></h2>
-<p>The motor never works alone. An <strong>electric drive</strong> — an electromechanical
-system that converts electrical energy into controlled mechanical motion — has
-six building blocks:</p>
-<pre class="mermaid"><code>flowchart LR
+<p>Good news first: the motor never works alone, so you never have to understand
+it in isolation. An <strong>electric drive</strong> — an electromechanical system that
+converts electrical energy into controlled mechanical motion — always has the
+same six building blocks:</p>
+<pre class="kx-mermaid"><code>flowchart LR
     PS["Power source&lt;br/&gt;(battery / HV bus)"] --&gt; PC["Power converter&lt;br/&gt;(inverter / chopper)"]
     CTRL["Controller"] --&gt;|"gate signals"| PC
     PC --&gt; M["Electric motor"]
@@ -4524,64 +4525,80 @@ six building blocks:</p>
     SENS["Position / speed&lt;br/&gt;sensors"] --&gt;|"feedback"| CTRL
     M --&gt; SENS</code></pre>
 <ol>
-<li><strong>Power source</strong> — provides the energy (traction battery, HV DC bus).</li>
+<li><strong>Power source</strong> — provides the energy (traction battery, high-voltage (HV)
+   DC bus).</li>
 <li><strong>Power converter</strong> — interfaces the motor with the source and delivers
    adjustable voltage, current and/or frequency.</li>
-<li><strong>Controller</strong> — compares the speed/position command with measured values
-   and generates the control signals for the converter.</li>
-<li><strong>Electric motor</strong> — chosen for the power level, environment and performance
-   the load requires.</li>
+<li><strong>Controller</strong> — compares the speed/position command with the measured
+   values and generates the control signals for the converter.</li>
+<li><strong>Electric motor</strong> — chosen for the power level, environment and
+   performance the load requires.</li>
 <li><strong>Feedback sensors</strong> — return rotor position and/or speed to close the
    control loops.</li>
 <li><strong>Mechanical components</strong> — gears, shafts, belts, bearings that bring the
    motion to the load.</li>
 </ol>
+<div class="admonition tip">
+<p class="admonition-title">A mental model that will serve you well</p>
+<p>Think of the converter + controller as the motor's <em>translator</em>: the
+battery speaks fixed DC voltage, the motor wants precisely timed,
+shaped currents. Everything in between is the converter's job. When you
+debug a drive issue later in your career, you will almost always be
+asking "is the problem in the motor, or in the translation?"</p>
+</div>
 <h2 id="basic-electromagnetic-principles">Basic electromagnetic principles<a class="headerlink" href="#basic-electromagnetic-principles" title="Permanent link">&para;</a></h2>
-<p>Three physical laws explain every machine in this article:</p>
+<p>You only need three physical laws to understand every machine in this
+article:</p>
 <ul>
-<li><strong>Force on a conductor.</strong> A conductor of length <em>l</em> carrying current <em>I</em> in a
-  magnetic field <em>B</em> experiences a force F = B·I·l (direction given by the
+<li><strong>Force on a conductor.</strong> A conductor of length <em>l</em> carrying current <em>I</em> in
+  a magnetic field <em>B</em> experiences a force F = B·I·l (direction given by the
   right-hand rule). Two conductors on opposite sides of a rotor loop form a
   <em>couple</em> — a pair of equal, opposite forces separated by a distance — whose
   moment is the <strong>torque</strong> τ that spins the rotor.</li>
-<li><strong>Induced EMF (Faraday–Lenz).</strong> Whenever the magnetic flux through a loop
-  changes, an electromotive force is induced that opposes the change. In a
-  spinning motor this <strong>back EMF</strong> always fights the supply current — it is
-  what limits the current draw and what lets the machine work as a generator.</li>
+<li><strong>Induced electromotive force (EMF) — Faraday–Lenz law.</strong> Whenever the
+  magnetic flux through a loop changes, a voltage (EMF) is induced that
+  opposes the change. In a spinning motor this <strong>back EMF</strong> always fights the
+  supply current — it is what limits the current draw, and it is exactly what
+  lets the same machine work as a generator when you brake.</li>
 <li><strong>Magnetic flux</strong> Φ can be pictured as the number of field lines crossing an
   area; the denser the lines, the stronger the field and the torque.</li>
 </ul>
-<p>Every electric motor has the same anatomy: a fixed <strong>stator</strong> and a rotating
-<strong>rotor</strong>, separated by a thin <strong>air gap</strong> where the magnetic field is most
-intense. Either part can carry windings or permanent magnets; torque is
-produced by the interaction of the two magnetic fields across the air gap.</p>
+<p>Every electric motor also shares the same anatomy: a fixed <strong>stator</strong> and a
+rotating <strong>rotor</strong>, separated by a thin <strong>air gap</strong> where the magnetic field
+is most intense. Either part can carry windings or permanent magnets; torque
+is always produced by the interaction of the two magnetic fields across the
+air gap.</p>
 <h2 id="classification-of-traction-machines">Classification of traction machines<a class="headerlink" href="#classification-of-traction-machines" title="Permanent link">&para;</a></h2>
 <p><img alt="Classification of machines for EVs and HEVs" src="img/machine-classification.webp" /></p>
-<p>The top-level split is between <strong>commutator</strong> machines (the classic brushed DC
-motor, where current is mechanically switched in the rotor) and
+<p>The family tree splits at the top between <strong>commutator</strong> machines (the classic
+brushed DC motor, where current is mechanically switched in the rotor) and
 <strong>commutatorless</strong> machines (induction, synchronous, reluctance — where an
-electronic inverter does the switching). The rest of the article walks through
-the families that matter for EV/HEV propulsion.</p>
+electronic inverter does the switching). The rest of the article walks you
+through the families that matter for EV and hybrid electric vehicle (HEV)
+propulsion, roughly in the order the industry adopted them.</p>
 <h2 id="the-dc-machine">The DC machine<a class="headerlink" href="#the-dc-machine" title="Permanent link">&para;</a></h2>
 <h3 id="structure-and-working-principle">Structure and working principle<a class="headerlink" href="#structure-and-working-principle" title="Permanent link">&para;</a></h3>
-<p>The DC machine has a <strong>stator with salient poles</strong> acting as the field
-(inductor), built either with excitation windings carrying direct current —
-connected so that consecutive poles have alternating polarity — or with
-permanent magnets. The <strong>rotor (armature)</strong> is a cylinder of magnetic material
-with slots on its periphery housing the active conductors, connected in series
-to form a closed circuit.</p>
-<p>The key component is the <strong>commutator</strong>, mounted on the rotor shaft: a
-conducting loop in a magnetic field would only oscillate if the current always
-flowed the same way, because the torque reverses every half turn. The
-commutator and the <strong>brushes</strong> sliding on it reverse the armature current every
-half cycle, so the torque keeps the same direction and the rotor spins
-continuously.</p>
+<p>The DC (direct current) machine is the oldest and easiest to understand, so
+it is the perfect starting point. Its <strong>stator</strong> carries salient poles acting
+as the field (inductor), built either with excitation windings carrying direct
+current — connected so that consecutive poles have alternating polarity — or
+with permanent magnets. The <strong>rotor (armature)</strong> is a cylinder of magnetic
+material with slots on its periphery housing the active conductors, connected
+in series to form a closed circuit.</p>
+<p>The key component is the <strong>commutator</strong>, mounted on the rotor shaft. Here is
+the problem it solves: a conducting loop in a magnetic field would only
+oscillate if the current always flowed the same way, because the torque
+reverses every half turn. The commutator and the <strong>brushes</strong> sliding on it
+reverse the armature current every half cycle, so the torque keeps the same
+direction and the rotor spins continuously.</p>
 <div class="admonition warning">
 <p class="admonition-title">The brush–commutator system is the DC motor's weak point</p>
-<p>Brushes wear, require continuous maintenance and produce unwanted sparking.
-This is why DC drives — although mature, cheap and simple to control — are
-no longer attractive for EV propulsion, where efficiency, power density and
-maintenance-free operation are mandatory.</p>
+<p>Brushes wear, require continuous maintenance and produce unwanted
+sparking. This is why DC drives — although mature, cheap and simple to
+control — are no longer attractive for EV propulsion, where efficiency,
+power density and maintenance-free operation are mandatory. You will
+still meet small brushed DC motors all over the car (windows, seats,
+pumps), just not on the traction side.</p>
 </div>
 <h3 id="equivalent-circuit-and-governing-equations">Equivalent circuit and governing equations<a class="headerlink" href="#equivalent-circuit-and-governing-equations" title="Permanent link">&para;</a></h3>
 <p>In steady state the armature is modeled as the back EMF <strong>E</strong> in series with
@@ -4594,10 +4611,12 @@ the armature resistance <strong>R_a</strong> (winding + brush contact):</p>
   resistive drop.</li>
 </ul>
 <p>From these, speed behaves as ω = (V_a − R_a·I_a) / (K_e·Φ): speed is roughly
-proportional to armature voltage and falls slightly as load torque increases.</p>
+proportional to armature voltage and falls slightly as load torque increases.
+If you remember only one thing about DC machines, make it this: <strong>voltage
+sets the speed, current sets the torque.</strong></p>
 <h3 id="speed-regulation-and-braking">Speed regulation and braking<a class="headerlink" href="#speed-regulation-and-braking" title="Permanent link">&para;</a></h3>
-<p>There are three levers to control the speed of a DC machine, effective in
-different ranges and often combined:</p>
+<p>Three levers control the speed of a DC machine, effective in different ranges
+and often combined:</p>
 <table>
 <thead>
 <tr>
@@ -4621,12 +4640,12 @@ different ranges and often combined:</p>
 </tbody>
 </table>
 <p>Armature <strong>current</strong> is controlled directly when maximum torque is demanded.</p>
-<p>If the back EMF E is made larger than the supply voltage V, the armature
-current reverses while the flux polarity stays the same: torque reverses sign
-and the machine becomes a <strong>brake</strong>, absorbing energy from the load and
-returning it as electricity that can be dissipated (rheostatic braking) or
-recovered (regenerative braking). Combined with speed reversal, this gives
-<strong>four-quadrant operation</strong>:</p>
+<p>Now for the elegant part. If the back EMF E is made larger than the supply
+voltage V, the armature current reverses while the flux polarity stays the
+same: torque reverses sign and the machine becomes a <strong>brake</strong>, absorbing
+energy from the load and returning it as electricity that can be dissipated
+(rheostatic braking) or recovered (regenerative braking). Combined with speed
+reversal, this gives <strong>four-quadrant operation</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -4663,10 +4682,13 @@ recovered (regenerative braking). Combined with speed reversal, this gives
 </tr>
 </tbody>
 </table>
+<p>Quadrant IV is the one your future career will care about most — it is the
+regenerative braking mode every EV depends on.</p>
 <h2 id="power-converters-for-the-dc-machine">Power converters for the DC machine<a class="headerlink" href="#power-converters-for-the-dc-machine" title="Permanent link">&para;</a></h2>
-<p>The converter choice follows the source: an <strong>AC source</strong> calls for a
-rectifier built with naturally commutated devices (thyristors), a <strong>DC source</strong>
-for a chopper built with forced-commutation switches.</p>
+<p>The converter choice follows the source: an <strong>alternating current (AC)</strong>
+source calls for a rectifier built with naturally commutated devices
+(thyristors), a <strong>DC source</strong> for a chopper built with forced-commutation
+switches.</p>
 <h3 id="acdc-rectifiers">AC/DC rectifiers<a class="headerlink" href="#acdc-rectifiers" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4714,17 +4736,20 @@ for a chopper built with forced-commutation switches.</p>
 </tr>
 </tbody>
 </table>
-<p>Moving from single-phase to three-phase bridges lowers voltage/current ripple
-(smoother torque) and reduces the risk of discontinuous conduction. The
-half-wave single-phase circuit needs only one power switch plus a freewheeling
-diode across the motor — the diode dissipates the energy stored in the motor
-inductance and gives the current a path while the switch commutates — but it
-delivers poor motor performance.</p>
+<p>The pattern to remember: moving from single-phase to three-phase bridges
+lowers voltage/current ripple (smoother torque) and reduces the risk of
+discontinuous conduction. The humble half-wave single-phase circuit needs only
+one power switch plus a freewheeling diode across the motor — the diode
+dissipates the energy stored in the motor inductance and gives the current a
+path while the switch commutates — but it delivers poor motor performance.</p>
 <h3 id="dc-choppers">DC choppers<a class="headerlink" href="#dc-choppers" title="Permanent link">&para;</a></h3>
-<p>A <strong>chopper</strong> converts a fixed DC input into a variable DC output — the DC
-equivalent of an AC transformer. Choppers offer high efficiency, fast response
-and regeneration capability, and are built with switches such as power BJTs,
-MOSFETs, IGBTs (also GTO/MCT or force-commutated thyristors).</p>
+<p>A <strong>chopper</strong> converts a fixed DC input into a variable DC output — think of
+it as the DC equivalent of an AC transformer. Choppers offer high efficiency,
+fast response and regeneration capability, and are built with semiconductor
+switches such as power bipolar junction transistors (BJTs), metal-oxide-
+semiconductor field-effect transistors (MOSFETs) and insulated-gate bipolar
+transistors (IGBTs) — the device families you will keep meeting in every
+power-electronics discussion.</p>
 <table>
 <thead>
 <tr>
@@ -4768,103 +4793,110 @@ MOSFETs, IGBTs (also GTO/MCT or force-commutated thyristors).</p>
 </tbody>
 </table>
 <h2 id="the-induction-machine-im">The induction machine (IM)<a class="headerlink" href="#the-induction-machine-im" title="Permanent link">&para;</a></h2>
-<p>The induction motor is the simplest and most reliable AC machine — the most
+<p>Now we move to the AC world — where almost all modern traction motors live.
+The induction motor is the simplest and most reliable AC machine: the most
 widely used motor in consumer and industrial markets, available from a few
 watts to many kilowatts. Being commutatorless, it avoids the DC motor's cost,
-maintenance and robustness problems.</p>
+maintenance and robustness problems in one stroke.</p>
 <h3 id="structure-and-working-principle_1">Structure and working principle<a class="headerlink" href="#structure-and-working-principle_1" title="Permanent link">&para;</a></h3>
 <p>The dominant type is the <strong>squirrel-cage</strong> IM:</p>
 <ul>
 <li>a <strong>stator</strong> with three-phase armature windings;</li>
 <li>a <strong>rotor</strong> made of conductive bars short-circuited by two end rings (the
-  "cage");</li>
+  "cage" — it really looks like a hamster wheel);</li>
 <li>bearings, frame and end bells.</li>
 </ul>
 <p>Feeding the three-phase stator windings creates a <strong>rotating magnetic field</strong>
 in the air gap — picture a chain of north–south poles revolving around the
 stator at the <strong>synchronous speed</strong> ω_s, fixed by the supply frequency and the
 number of pole pairs p: ω_s = 2πf / p.</p>
-<p>The rotor turns <em>slower</em> than the field (hence "asynchronous"). Because of
-this relative motion, the flux linkage through the rotor cage changes and
-currents are <strong>induced</strong> in the bars (Faraday's law). These currents build a
-rotor field that opposes the flux variation and interacts with the stator
-field, producing torque. The normalized speed difference is the <strong>slip</strong>
-s = (ω_s − ω_r) / ω_s.</p>
+<p>Here is the trick that gives the machine its name: the rotor turns <em>slower</em>
+than the field (hence "asynchronous"). Because of this relative motion, the
+flux linkage through the rotor cage changes and currents are <strong>induced</strong> in
+the bars (Faraday's law) — no brushes, no wires to the rotor. These currents
+build a rotor field that opposes the flux variation and interacts with the
+stator field, producing torque. The normalized speed difference is the
+<strong>slip</strong> s = (ω_s − ω_r) / ω_s.</p>
 <h3 id="torquespeed-behavior">Torque–speed behavior<a class="headerlink" href="#torquespeed-behavior" title="Permanent link">&para;</a></h3>
 <p><img alt="Induction machine torque–speed characteristic" src="img/im-torque-speed.webp" /></p>
 <ul>
 <li>At synchronous speed (s = 0) no current is induced in the rotor, so <strong>no
-  torque</strong> is produced.</li>
+  torque</strong> is produced — the machine can never quite "catch" its own field.</li>
 <li>Rotor slower than the field (s &gt; 0) → <strong>motoring</strong>; rotor faster (s &lt; 0) →
-  <strong>generating</strong>.</li>
+  <strong>generating</strong>. The same machine brakes regeneratively the moment the wheels
+  push it past synchronous speed.</li>
 <li>The peak of the curve is the <strong>pullout torque</strong>; nominal torque is
   conventionally half of it, and the machine normally works in the linear
   region between the positive and negative nominal torque.</li>
 </ul>
-<p>The per-phase equivalent circuit models stator resistance and leakage
-reactance (R_s, X_s), rotor resistance and leakage reactance at standstill
-referred through the turns ratio k (R_r, X_r), and the magnetizing branch
-(R_m for core losses, X_m magnetizing reactance).</p>
+<p>For the curious: the per-phase equivalent circuit models stator resistance and
+leakage reactance (R_s, X_s), rotor resistance and leakage reactance referred
+to the stator (R_r, X_r), and a magnetizing branch (R_m, X_m). You do not need
+to work with it day to day — just know it is the basis of every motor model
+you will meet in simulation tools.</p>
 <h3 id="control-from-vf-to-foc">Control: from V/f to FOC<a class="headerlink" href="#control-from-vf-to-foc" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>V/f (scalar) control</strong> — keeps voltage proportional to frequency so the
-  flux stays constant. Simple and still common in industrial drives, but it
-  acts only on the <em>magnitude</em> of the quantities, not their phase — dynamic
-  performance is limited.</li>
-<li><strong>Field-Oriented Control (FOC)</strong> — the three instantaneous AC quantities are
-  projected, via the <strong>Park–Clarke transformations</strong> (ABC three-phase → αβ
-  stationary two-phase → dq frame rotating with the rotor field), into two DC
-  quantities: a flux-producing current component and a torque-producing one.
-  Controlling them independently gives the induction machine DC-machine-like
-  torque controllability.</li>
+<li><strong>V/f (scalar) control</strong> — keeps voltage proportional to frequency
+  ("volts per hertz") so the flux stays constant. Simple and still common in
+  industrial drives, but it acts only on the <em>magnitude</em> of the quantities,
+  not their phase — dynamic performance is limited.</li>
+<li><strong>Field-Oriented Control (FOC)</strong> — the three instantaneous AC quantities
+  are projected, via the <strong>Park–Clarke transformations</strong> (ABC three-phase →
+  αβ stationary two-phase → dq frame rotating with the rotor field), into two
+  DC quantities: a flux-producing current component and a torque-producing
+  one. Controlling them independently gives the induction machine
+  DC-machine-like torque controllability — remember "voltage sets speed,
+  current sets torque"? FOC is what buys that simplicity back for AC machines.</li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Why FOC dominates EV drives</p>
 <p>FOC delivers high efficiency (stator and rotor fluxes aligned for best
 torque production), high dynamic response (voltages, currents and fluxes
 controlled in magnitude <em>and</em> phase), low torque ripple, independent flux
-and torque control, a wide constant-power range through flux weakening, and
-high starting torque with low starting current — with four-quadrant
-operation.</p>
+and torque control, a wide constant-power range through flux weakening,
+and high starting torque with low starting current — with four-quadrant
+operation. When you see torque-control test cases later in the bootcamp,
+FOC is the algorithm underneath.</p>
 </div>
 <h3 id="the-inverter">The inverter<a class="headerlink" href="#the-inverter" title="Permanent link">&para;</a></h3>
 <p>EV traction inverters are almost exclusively <strong>voltage-fed</strong> three-phase
 full-bridge designs (current-fed inverters need a large series inductance and
 are rarely used). Two switching strategies matter:</p>
 <ul>
-<li><strong>Sinusoidal PWM</strong> — a sinusoidal modulating wave (amplitude A_s, frequency
-  f_s) is compared with a triangular carrier (A_t &gt; A_s, f_t ≫ f_s). When the
-  modulating wave exceeds the carrier, the upper switch of that phase leg turns
-  on; otherwise it turns off. The result is width-modulated pulses whose
-  fundamental reproduces the wanted sine wave; implementable in analog or
-  digital form.</li>
+<li><strong>Sinusoidal pulse-width modulation (PWM)</strong> — a sinusoidal modulating wave
+  (amplitude A_s, frequency f_s) is compared with a triangular carrier
+  (A_t &gt; A_s, f_t ≫ f_s). When the modulating wave exceeds the carrier, the
+  upper switch of that phase leg turns on; otherwise it turns off. The result
+  is width-modulated pulses whose fundamental reproduces the wanted sine
+  wave; implementable in analog or digital form.</li>
 <li><strong>Six-step (square wave)</strong> — each switch is closed for half a period and the
   inverter changes state every T/6, cycling through the six active states
   (101), (100), (110), (010), (011), (001). The output amplitude depends only
   on the DC-link voltage V_CC and the switch states.</li>
 </ul>
-<p>Power-device selection rules for the IGBT-based inverters used in modern EVs:</p>
+<p>Practical selection rules for the IGBT-based inverters used in modern EVs:</p>
 <ul>
 <li>voltage rating <strong>at least twice</strong> the nominal battery voltage;</li>
 <li>current rating large enough to avoid paralleling devices;</li>
 <li>switching speed high enough to suppress motor harmonics and acoustic noise.</li>
 </ul>
-<p>The wound-rotor variant of the IM is less attractive than the squirrel cage
-(cost, maintenance, ruggedness), so "induction motor for EVs" effectively means
-the squirrel-cage type — low cost and ruggedness outweigh its control
-complexity. Production example: the 2020 Mercedes-Benz EQC uses two induction
-motors.</p>
+<p>One last note on variants: the wound-rotor IM is less attractive than the
+squirrel cage (cost, maintenance, ruggedness), so "induction motor for EVs"
+effectively means the squirrel-cage type — low cost and ruggedness outweigh
+its control complexity. Production example: the 2020 Mercedes-Benz EQC uses
+two induction motors.</p>
 <h2 id="permanent-magnet-brushless-machines">Permanent-magnet brushless machines<a class="headerlink" href="#permanent-magnet-brushless-machines" title="Permanent link">&para;</a></h2>
-<p>PM brushless drives — above all the PM synchronous drive — are currently the
-most attractive technology for EV propulsion and dominate market share, thanks
-to high power density and high efficiency from high-energy PM materials. Their
-shortcomings are the cost and the thermal instability of the magnets.</p>
+<p>This is the family you will work with most. Permanent-magnet (PM) brushless
+drives — above all the PM synchronous drive — are currently the most
+attractive technology for EV propulsion and dominate market share, thanks to
+high power density and high efficiency from high-energy magnet materials.
+Their shortcomings are the cost and the thermal instability of the magnets.</p>
 <p>The family splits in two by the shape of the back EMF at the air gap:</p>
 <table>
 <thead>
 <tr>
 <th></th>
-<th>PMSM (PM synchronous)</th>
+<th>PMSM (PM synchronous machine)</th>
 <th>BLDC (brushless DC)</th>
 </tr>
 </thead>
@@ -4897,43 +4929,60 @@ shortcomings are the cost and the thermal instability of the magnets.</p>
 <tr>
 <td>Modeling</td>
 <td>rotor d–q reference frame</td>
-<td>d–q not applicable (nonsinusoidal flux) — per-phase state model with phase voltages, currents, back EMFs, armature resistance R and mutual inductances L_ij</td>
+<td>d–q not applicable (nonsinusoidal flux) — per-phase state model</td>
 </tr>
 </tbody>
 </table>
 <p>Both share the same basic structure — a star-connected three-phase stator
 winding and a rotor carrying permanent magnets — which is simpler than the
 induction rotor (no cage bars or end rings). In the PMSM the rotor spins <em>at</em>
-synchronous speed, locked to the stator field. The BLDC is essentially a DC
-motor turned inside out: <strong>electronic commutation</strong> replaces brushes and
-produces unidirectional torque the same way the commutator did.</p>
-<p>Control follows the waveforms: the PMSM inherits induction-machine strategies
-(<strong>FOC</strong>, direct torque control), plus <strong>flux weakening</strong> — essential because
-the PM excitation cannot be turned down — and <strong>position-sensorless</strong> control
-to eliminate the costly encoder. The BLDC, driven with the stator flux kept
-near 90° from the rotor flux, naturally gives maximum torque per ampere in the
-constant-torque region using 120° two-phase or 180° three-phase conduction; for
-constant-power cruising it needs <strong>phase-advance angle control</strong>, and
+synchronous speed, locked to the stator field like two meshed gears. The BLDC
+is best pictured as a DC motor turned inside out: <strong>electronic commutation</strong>
+replaces the brushes and produces unidirectional torque the same way the
+commutator did — which is why it inherits the "DC" name despite being an AC
+machine.</p>
+<p>Control follows the waveforms. The PMSM inherits the induction-machine
+strategies (<strong>FOC</strong>, direct torque control), plus two additions you will hear
+about constantly: <strong>flux weakening</strong> — essential because the PM excitation
+cannot be turned down at high speed — and <strong>position-sensorless</strong> control to
+eliminate the costly encoder. The BLDC, driven with the stator flux kept near
+90° from the rotor flux, naturally gives maximum torque per ampere in the
+constant-torque region using 120° two-phase or 180° three-phase conduction;
+for constant-power cruising it needs <strong>phase-advance angle control</strong>, and
 sensorless schemes are actively developed for it too.</p>
 <h2 id="switched-reluctance-motor-srm">Switched reluctance motor (SRM)<a class="headerlink" href="#switched-reluctance-motor-srm" title="Permanent link">&para;</a></h2>
-<p>The SRM produces torque purely by <strong>reluctance</strong>: its rotor is a solid
-salient-pole piece of soft magnetic material with <strong>no magnets and no
-windings</strong>. Energizing a stator phase pulls the nearest rotor pole into
-alignment; switching the phases in sequence keeps the stator field ahead of the
-rotor and drags it around. Simple, reliable and cheap with good efficiency and
-power density — but noisy, with higher torque ripple, lower power factor and
-poorer speed control.</p>
+<p>Worth knowing, even if you may never see one in production. The SRM produces
+torque purely by <strong>reluctance</strong>: its rotor is a solid salient-pole piece of
+soft magnetic material with <strong>no magnets and no windings</strong> — about as simple
+as a rotor can get. Energizing a stator phase pulls the nearest rotor pole
+into alignment (like a nail pulled toward an electromagnet); switching the
+phases in sequence keeps the stator field ahead of the rotor and drags it
+around. Simple, reliable and cheap with good efficiency and power density —
+but noisy, with higher torque ripple, lower power factor and poorer speed
+control, which is why it remains a niche technology.</p>
 <h2 id="four-quadrant-operation-and-regenerative-braking">Four-quadrant operation and regenerative braking<a class="headerlink" href="#four-quadrant-operation-and-regenerative-braking" title="Permanent link">&para;</a></h2>
-<p>EV propulsion needs all four quadrants: forward motoring, forward regeneration,
-backward motoring and backward regeneration. Quadrants I and IV share the
-positive phase sequence A-B-C; III and II use the reversed sequence A-C-B.</p>
+<p>Pulling it all together: EV propulsion needs all four quadrants — forward
+motoring, forward regeneration, backward motoring and backward regeneration.
+Quadrants I and IV share the positive phase sequence A-B-C; III and II use the
+reversed sequence A-C-B. The same hardware simply reverses the direction of
+energy flow:</p>
+<pre class="kx-mermaid"><code>flowchart LR
+    subgraph MOT["Motoring — driving"]
+        B1["Battery"] --&gt; I1["Inverter"] --&gt; M1["Motor"] --&gt; W1["Wheels"]
+    end
+    subgraph REG["Regenerating — braking"]
+        W2["Wheels"] --&gt; M2["Motor&lt;br/&gt;(acts as generator)"] --&gt; I2["Inverter"] --&gt; B2["Battery"]
+    end</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Regeneration pays for range</p>
 <p>Forward regeneration converts braking energy back into battery charge and
-can increase driving range per charge by <strong>over 10%</strong> — one reason every EV
-traction inverter is designed for bidirectional power flow.</p>
+can increase driving range per charge by <strong>over 10%</strong> — one reason every
+EV traction inverter is designed for bidirectional power flow, and one
+reason you will find regenerative-braking test cases in nearly every EV
+validation plan.</p>
 </div>
 <h2 id="choosing-the-motor-comparison">Choosing the motor: comparison<a class="headerlink" href="#choosing-the-motor-comparison" title="Permanent link">&para;</a></h2>
+<p>Here is the whole article in one table — a great cheat sheet to revisit:</p>
 <table>
 <thead>
 <tr>
@@ -4990,9 +5039,10 @@ traction inverter is designed for bidirectional power flow.</p>
 </tbody>
 </table>
 <h2 id="where-the-motor-sits-hybrid-architectures-p0p5">Where the motor sits: hybrid architectures (P0–P5)<a class="headerlink" href="#where-the-motor-sits-hybrid-architectures-p0p5" title="Permanent link">&para;</a></h2>
-<p>In hybrids, the <strong>Px</strong> code names the electric motor's <em>position</em> in the
-powertrain — the number roughly tracks the distance between the motor and the
-wheels, decreasing from P0 to P5.</p>
+<p>In hybrids, engineers use the <strong>Px</strong> code to name the electric motor's
+<em>position</em> in the powertrain — the number roughly tracks the distance between
+the motor and the wheels, decreasing from P0 to P5. You will see these codes
+in every hybrid architecture discussion, so they are worth memorizing.</p>
 <p><img alt="P0–P5 positions in the hybrid powertrain" src="img/hybrid-p-positions.webp" /></p>
 <table>
 <thead>
@@ -5008,36 +5058,36 @@ wheels, decreasing from P0 to P5.</p>
 <td><strong>P0</strong></td>
 <td>Belt-driven Starter Generator (BSG) replacing the alternator, e.g. Audi 48 V system (DC-DC, 12 V + 48 V batteries, integrated BSG)</td>
 <td>Cheapest; no change to vehicle/transmission architecture; drops into the existing accessory belt</td>
-<td>Belt mechanically ties EM to ICE → friction losses; belt slip limits torque (12 V starter kept for cold starts); belt durability</td>
+<td>Belt mechanically ties the electric machine to the internal combustion engine (ICE) → friction losses; belt slip limits torque (12 V starter kept for cold starts); belt durability</td>
 </tr>
 <tr>
 <td><strong>P1</strong></td>
 <td>On the crankshaft, same speed as the engine</td>
 <td>No belt: slightly better efficiency, more torque and faster response; electric creeping</td>
-<td>Crankshaft/engine redesign; EM still on ICE side (no disconnection); higher cost</td>
+<td>Crankshaft/engine redesign; motor still on ICE side (no disconnection); higher cost</td>
 </tr>
 <tr>
 <td><strong>P2</strong></td>
 <td>Between engine and transmission, with a clutch to decouple the ICE (e.g. Porsche Panamera with ZF transmission)</td>
 <td>Full-electric drive with clutch open; recuperation without dragging the ICE; electric creep and e-coasting</td>
-<td>High integration cost; larger battery; conventional starter still needed for S&amp;S</td>
+<td>High integration cost; larger battery; conventional starter still needed for start &amp; stop (S&amp;S)</td>
 </tr>
 <tr>
 <td><strong>P2.5</strong></td>
-<td>Inside a dual-clutch transmission, on the even-gear shaft</td>
-<td>Easy integration (same ICE); electric drive via the even shaft; combined ICE+EM modes</td>
+<td>Inside a dual-clutch transmission (DCT), on the even-gear shaft</td>
+<td>Easy integration (same ICE); electric drive via the even shaft; combined ICE+motor modes</td>
 <td>Requires a DCT; starter still needed unless combined with P0</td>
 </tr>
 <tr>
 <td><strong>P3</strong></td>
 <td>Downstream of the gearbox</td>
-<td>Minimized losses — EM drives only the final part of the transmission</td>
+<td>Minimized losses — the motor drives only the final part of the transmission</td>
 <td>Transmission limits both propulsion and recuperation efficiency</td>
 </tr>
 <tr>
 <td><strong>P4</strong></td>
-<td>On the axle <em>not</em> driven by the ICE (e.g. Toyota Prius IV with induction EM + inverter)</td>
-<td>Electric AWD with no mechanical link to the engine; easy pure-electric mode; highest recuperation potential</td>
+<td>On the axle <em>not</em> driven by the ICE (e.g. Toyota Prius IV with induction motor + inverter)</td>
+<td>Electric all-wheel drive (AWD) with no mechanical link to the engine; easy pure-electric mode; highest recuperation potential</td>
 <td>Larger battery/motor/electronics; S&amp;S inhibited without an engine-side motor</td>
 </tr>
 <tr>
@@ -5050,53 +5100,62 @@ wheels, decreasing from P0 to P5.</p>
 </table>
 <p>Two practical notes from the lessons:</p>
 <ul>
-<li>P2–P4 configurations place the EM after the clutch, which inhibits the
-  classic <strong>start&amp;stop</strong> function — hence combined <strong>P1+P2 / P1+P4</strong> layouts
-  that add an engine-side motor to restore S&amp;S and enable load shift and torque
-  assist, at the price of exponentially higher complexity and cost.</li>
+<li>P2–P4 configurations place the motor after the clutch, which inhibits the
+  classic <strong>start &amp; stop</strong> function — hence combined <strong>P1+P2 / P1+P4</strong> layouts
+  that add an engine-side motor to restore S&amp;S and enable load shift and
+  torque assist, at the price of exponentially higher complexity and cost.</li>
 <li>Typical fuel-efficiency gains: P1 around <strong>10%</strong>; P3/P4 up to <strong>25%</strong> on
   standard cycles (more in urban driving). In P0, power electronics are often
   integrated into the motor; from P1 up, liquid cooling is required (air
   cooling is not feasible for driveline-mounted machines).</li>
 </ul>
 <p>The vehicle categories built on these blocks: <strong>MHEV</strong> (mild hybrid — ICE
-drives, compact EM assists), <strong>FHEV</strong> (full hybrid — short full-electric
-stretches at low speed), <strong>PHEV</strong> (plug-in — larger battery charged from the
-grid, 40–60 km zero-emission urban range), <strong>BEV</strong> (battery electric — the
-simplest powertrain, needs an onboard charger), and <strong>FCEV</strong> (same electric
-powertrain as BEV, energy from a fuel cell — e.g. Toyota Mirai).</p>
+drives, compact motor assists), <strong>FHEV</strong> (full hybrid — short full-electric
+stretches at low speed), <strong>PHEV</strong> (plug-in hybrid — larger battery charged
+from the grid, 40–60 km zero-emission urban range), <strong>BEV</strong> (battery electric
+vehicle — the simplest powertrain, needs an onboard charger), and <strong>FCEV</strong>
+(fuel-cell electric vehicle — same electric powertrain as a BEV, energy from
+a fuel cell, e.g. Toyota Mirai).</p>
 <h2 id="the-traction-battery-in-one-page">The traction battery in one page<a class="headerlink" href="#the-traction-battery-in-one-page" title="Permanent link">&para;</a></h2>
-<p>The lessons include a battery primer, since the battery is the source every
-drive hangs from:</p>
+<p>Since the battery is the source every drive hangs from, the lessons include a
+compact primer — and you will thank it the first time you read a battery
+specification:</p>
 <ul>
 <li><strong>Key quantities</strong> — open-circuit voltage (terminals at zero current),
   capacity (Ah), mass energy density (Wh/kg or kJ/kg), power density (W/kg),
   cycle life (standard cycles until capacity falls below 80%), C-rate (current
-  relative to capacity: 5000 mA out of a 500 mAh cell = 10C), SOC (available /
-  maximum capacity), nominal voltage (at 50% SOC, 0.2C discharge).</li>
-<li><strong>Chemistries</strong> — lithium (traction; cell OCV 2.5–4.3 V, &gt;500 kJ/kg, cycle
-  life 2500–12 000, but expensive and thermal-runaway-prone), lead-acid (12/24 V
-  auxiliaries; cheap, robust, &gt;99% recyclable, huge burst currents, ~140 kJ/kg,
-  50–100 cycles), NiMH (older hybrids such as pre-2015 Prius; safe and cheap
-  but lower density). For contrast: gasoline stores ~44 000 kJ/kg.</li>
+  relative to capacity: 5000 mA out of a 500 mAh cell = 10C), state of charge
+  (SOC — available / maximum capacity), nominal voltage (at 50% SOC, 0.2C
+  discharge).</li>
+<li><strong>Chemistries</strong> — lithium (traction; cell open-circuit voltage 2.5–4.3 V,<blockquote>
+<p>500 kJ/kg, cycle life 2500–12 000, but expensive and
+  thermal-runaway-prone), lead-acid (12/24 V auxiliaries; cheap, robust, &gt;99%
+  recyclable, huge burst currents, ~140 kJ/kg, 50–100 cycles), nickel-metal
+  hydride (NiMH — older hybrids such as pre-2015 Prius; safe and cheap but
+  lower density). For contrast: gasoline stores ~44 000 kJ/kg.</p>
+</blockquote>
+</li>
 <li><strong>Behavior</strong> — terminal voltage and harvestable energy fall as discharge
-  current rises; the simplest model is an ideal source with a series resistance
-  (ESR), both SOC- and temperature-dependent. Aging raises ESR (more
-  self-heating, deeper voltage sag) and shrinks capacity. Ideal operating
-  window is 20–30 °C; above 55 °C is dangerous; extreme cold can make lithium
-  packs unusable or unchargeable.</li>
+  current rises; the simplest model is an ideal source with a series
+  resistance (equivalent series resistance, ESR), both SOC- and
+  temperature-dependent. Aging raises ESR (more self-heating, deeper voltage
+  sag) and shrinks capacity. Ideal operating window is 20–30 °C; above 55 °C
+  is dangerous; extreme cold can make lithium packs unusable or unchargeable.</li>
 <li><strong>Pack design</strong> — cells in <strong>series</strong> raise voltage (packs up to 800 V; same
   current through every cell, so one weak cell jeopardizes the whole string);
   strings in <strong>parallel</strong> raise capacity/current (same voltage, but mismatched
   SOC or temperature causes back-currents and overload between packs on the HV
   bus). High voltage keeps ohmic losses low.</li>
-<li><strong>BMS</strong> — the ECU that connects/disconnects the packs to the HV bus, balances
-  cells, requests cooling/heating, estimates SOC and SOH (ESR is a degradation
-  indicator), enforces max charge/discharge currents, and runs diagnosis:
-  over/undervoltage, overcurrent, overtemperature, insulation measurement.</li>
+<li><strong>Battery management system (BMS)</strong> — the electronic control unit that
+  connects/disconnects the packs to the HV bus, balances cells, requests
+  cooling/heating, estimates SOC and state of health (SOH — ESR is a
+  degradation indicator), enforces max charge/discharge currents, and runs
+  diagnosis: over/undervoltage, overcurrent, overtemperature, insulation
+  measurement.</li>
 </ul>
 <h2 id="production-ev-reference-points">Production EV reference points<a class="headerlink" href="#production-ev-reference-points" title="Permanent link">&para;</a></h2>
-<p>The lessons close with real cars — useful to anchor the theory:</p>
+<p>The lessons close with real cars — a great way to anchor the theory, and
+handy context whenever you see these vehicles in test fleets:</p>
 <table>
 <thead>
 <tr>
@@ -5145,50 +5204,53 @@ drive hangs from:</p>
 </tr>
 </tbody>
 </table>
-<p>Note the trend the pack section predicted: higher-voltage systems (Taycan at
-800 V) charge much faster because the same power needs less current.</p>
+<p>(CCS is the Combined Charging System, the standard DC fast-charging connector
+in Europe; AWD/RWD/FWD are all-/rear-/front-wheel drive.)</p>
+<p>Notice the trend the battery section predicted: higher-voltage systems (the
+Taycan at 800 V) charge much faster, because the same power needs less
+current.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
 <li>An electric drive = source + converter + controller + motor + sensors +
-  mechanics; the converter and its control are what make the motor usable.</li>
-<li>DC machines are simple and cheap but brushes kill them for EVs: V_a
-  controls speed, I_a controls torque, and E &gt; V turns the machine into a
-  regenerative brake.</li>
-<li>Induction machines are rugged and cheap; torque comes from slip, and FOC
-  (via Park–Clarke dq transforms) gives them DC-like controllability.</li>
-<li>PM brushless (PMSM/BLDC) is the preferred EV technology — highest
-  efficiency and power/torque density — at the price of magnet cost and
+  mechanics — and the converter is the "translator" that makes the motor
+  usable.</li>
+<li>DC machines taught us the golden rule: <strong>voltage sets speed, current
+  sets torque</strong> — and E &gt; V turns any machine into a regenerative brake.</li>
+<li>Induction machines are rugged and cheap; torque comes from slip, and
+  FOC (via Park–Clarke dq transforms) gives them DC-like controllability.</li>
+<li>PM brushless (PMSM/BLDC) is the technology you will meet most —
+  highest efficiency and power density — at the price of magnet cost and
   temperature sensitivity.</li>
 <li>Traction inverters are voltage-fed IGBT full bridges rated at ≥ 2×
-  battery voltage, switching with sinusoidal PWM / space-vector modulation
-  or six-step, and must run all four quadrants — regeneration adds &gt;10%
-  range.</li>
-<li>In hybrids, the P0–P5 code tells you where the motor sits, from belt
-  starter-generator (P0) to in-wheel (P5); capability (recuperation,
-  electric drive, e-AWD) grows as you move toward the wheels, and so do
-  cost and integration effort.</li>
+  battery voltage, switching with sinusoidal PWM / space-vector
+  modulation or six-step, and must run all four quadrants — regeneration
+  alone adds over 10% range.</li>
+<li>The P0–P5 code instantly tells you where a hybrid's motor sits, from
+  belt starter-generator (P0) to in-wheel (P5); capability grows toward
+  the wheels, and so do cost and complexity.</li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Where this leads</p>
-<p>See how these machines are arranged in complete vehicles in
+<p>You now have the machine-level foundations. Next, see how these motors
+are arranged in complete vehicles in
 <a href="../hev-architecture-bev/">HEV/BEV Architectures</a> and
-<a href="../hev-architecture-hybrid/">Hybrid Architectures</a>, and where the
-high-voltage system fits in the car in
+<a href="../hev-architecture-hybrid/">Hybrid Architectures</a>, and where
+the high-voltage system fits in the car in
 <a href="../ee-architecture/">E/E Architecture</a>.</p>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/CORRUPT_BATTSBEVHEV.pdf">CORRUPT BATTSBEVHEV</a> — PDF, 221.0 KB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/EM_DC_Motor.pdf">EM DC Motor</a> — PDF, 1.8 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/EM_Induction_Motor.pdf">EM Induction Motor</a> — PDF, 1.6 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/EM_PMSM.pdf">EM PMSM</a> — PDF, 1.3 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/EM_Power_Converters.pdf">EM Power Converters</a> — PDF, 1.6 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/Electric_Machines_1.pdf">Electric Machines 1</a> — PDF, 2.6 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Electric_Motors/Electric_Machines_2.pdf">Electric Machines 2</a> — PDF, 2.9 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/CORRUPT_BATTSBEVHEV.pdf">CORRUPT BATTSBEVHEV</a> — PDF, 221.0 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/EM_DC_Motor.pdf">EM DC Motor</a> — PDF, 1.8 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/EM_Induction_Motor.pdf">EM Induction Motor</a> — PDF, 1.6 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/EM_PMSM.pdf">EM PMSM</a> — PDF, 1.3 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/EM_Power_Converters.pdf">EM Power Converters</a> — PDF, 1.6 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/Electric_Machines_1.pdf">Electric Machines 1</a> — PDF, 2.6 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Electric_Motors/Electric_Machines_2.pdf">Electric Machines 2</a> — PDF, 2.9 MB</li>
 </ul>
 
 
@@ -5218,6 +5280,7 @@ high-voltage system fits in the car in
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -5276,6 +5339,41 @@ high-voltage system fits in the car in
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -5288,8 +5386,21 @@ high-voltage system fits in the car in
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

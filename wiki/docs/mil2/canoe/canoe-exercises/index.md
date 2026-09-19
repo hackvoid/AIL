@@ -1,14 +1,29 @@
 # CANoe Exercises — VF179 PAM State Machine & Test Cases
 
-This hands-on exercise closes the [CANoe](../index.md) lesson: you take a real
-functional specification — **VF179**, the Parking Assistance System (PAM)
-requirements for the 332 BEV platform — and turn it into executable test cases.
-It is the same requirement-to-test workflow you will use later in
-[VF analysis](../../../mil3/vf/index.md) and
-[Test Cases](../../../mil3/testcases/index.md), but here everything is driven
-and observed on the CAN/LIN buses from within CANoe.
+Welcome to the capstone exercise of the [CANoe](../index.md) lesson. Up to now
+you have learned how CANoe shows you live bus traffic; this time *you* drive
+the bus. You will take a real functional specification — **VF179**, the Vehicle
+Function document for the Parking Assistance Module (PAM) on the 332 BEV
+(Battery Electric Vehicle) platform — and turn its requirements into test cases
+that actually run against the Electronic Control Unit (ECU) in CANoe.
 
-The exercise has two parts:
+This is not busywork: the requirement → state machine → test case workflow is
+exactly what you will do for a living as an E/E (Electrical/Electronic)
+verification engineer, and it comes back in
+[VF analysis](../../../mil3/vf/index.md) and
+[Test Cases](../../../mil3/testcases/index.md). Here you just get to do it
+hands-on, on real CAN and LIN (Local Interconnect Network) signals.
+
+**By the end of this exercise you will be able to:**
+
+- read "shall"-style requirements and draw the state machine they describe,
+- derive test cases that cover *every* state and transition — not just the
+  happy path,
+- stimulate inputs and check expected signal values in CANoe, and
+- write test steps with timing and signal values precise enough that anyone
+  can reproduce your verdict.
+
+The exercise has two parts, straight from the assignment sheet:
 
 1. **Draw the PAM state machine** described in VF179 chapter 1.11.1.1.2.
 2. **Complete the test case file** `VF179_ParkingAssistanceSystem` so that every
@@ -16,10 +31,12 @@ The exercise has two parts:
 
 ## Goal
 
-Learn to read a functional requirement written as "shall" statements, convert
-it into a state diagram, and derive from it a set of test cases that can be run
-against the real (or restbus-simulated) ECU in CANoe — with each test case
-traceable back to its requirement.
+Practice the full verification loop on one well-defined feature: specification
+in, executable tests out, each test traceable back to its requirement — with
+the ECU's real bus behavior as the judge.
+
+**What you'll practice:** requirement reading, state modeling, coverage
+thinking, precise expected results, and disciplined test reporting.
 
 ## Setup
 
@@ -28,24 +45,25 @@ traceable back to its requirement.
 | CANoe configuration with the PAM node (or a restbus simulation of its communication partners) | Executes the test and lets you stimulate/observe bus signals |
 | VF179 specification (P332 BEV, Academy edition), chapter 1.11.1.1.2 "PAM State Machine" | The requirement under test |
 | Test case template `VF179_ParkingAssistanceSystem` | The document to fill in — one worked example (test case 1) is provided |
-| Network databases (DBC/LDF) mapping `TRANSM2`, `STATUS_PAM`, `PARK_INFO`, `LIN_BCM_IGW1`, `BRAKE1`, `BRAKE4` | To stimulate inputs and check outputs by signal name instead of raw bytes |
+| Network databases (DBC — Database CAN, and LDF — LIN Description File) mapping `TRANSM2`, `STATUS_PAM`, `PARK_INFO`, `LIN_BCM_IGW1`, `BRAKE1`, `BRAKE4` | To stimulate inputs and check outputs by signal name instead of raw bytes |
 
 ## Background: the PAM state machine
 
 The Parking Assistance Module decides what to do based on a state machine with
 five top-level states. Before drawing it, collect the variables the spec
-defines in chapter 1.11.1.1.1:
+defines in chapter 1.11.1.1.1 — these are the *conditions* on your arrows:
 
 | Variable / condition | Meaning |
 |---|---|
 | **KEY ON** | Ignition is `Ignition_ON`, `Ignition_Start` or `Ignition_ON_Engine_ON` (from `PAM_OperationalModeSts.Info`) |
 | **KEY OFF** | Ignition is `Ignition_OFF` or `Initialization` |
-| **Reverse Condition** | Gearbox is not manual (`Gear_Box_Type ≠ "MTX"`) **and** `TRANSM2.ShiftLeverPosition = "R"` for longer than `TReverseGear` |
+| **Reverse Condition** | Gearbox is not manual (`Gear_Box_Type ≠ "MTX"`) **and** `TRANSM2.ShiftLeverPosition = "R"` held for longer than `TReverseGear` |
 | **Standstill Condition** | `BRAKE4.VehicleStandStillSts = "True"` |
-| **MODE_PAM** | Internal, stored in non-volatile memory: last activation state (`ON`/`OFF`) before KEY OFF; initial value at power-on is `OFF` |
+| **MODE_PAM** | Internal, stored in NVM (non-volatile memory): the last activation state (`ON`/`OFF`) before KEY OFF; initial value at power-on is `OFF` |
 | **PAMFault** | Internal failure flag: `TRUE` when a fault is present |
 
-The behavior specified in chapter 1.11.1.1.2 then becomes:
+Translated from spec language into a diagram, chapter 1.11.1.1.2 looks like
+this:
 
 ```mermaid
 stateDiagram-v2
@@ -69,7 +87,8 @@ stateDiagram-v2
     OFF --> Disable: PAM button pressed while PAMFault = TRUE
 ```
 
-State entry actions that matter for your expected results:
+State entry actions are what make your expected results concrete — these are
+the signal values you will assert:
 
 - **KEY ON** — PAM initializes; all `STATUS_PAM` and `PARK_INFO` signals go to
   their default values, except `STATUS_PAM.PAMSystemSts` which initializes to
@@ -89,8 +108,9 @@ State entry actions that matter for your expected results:
 - **OFF** — `PAMSystemSts = OFF`, `RearSensorSts = Active`,
   `PAM_LedControlSts = Continuous light`, `MODE_PAM = OFF` stored in NVM.
 
-Configuration parameters referenced by the state machine (chapter 1.13.1,
-first-trial values):
+The state machine also leans on a handful of configuration parameters (chapter
+1.13.1, first-trial values) — treat them as part of the requirements, because
+your test timing depends on them:
 
 | Parameter | Value | Unit | Used for |
 |---|---|---|---|
@@ -133,7 +153,8 @@ first-trial values):
 ## Worked example — test case 1: "PAM status set in OFF"
 
 The provided example verifies the path *KEY ON → OFF → ON_Enable (via
-ON_Inactive)* with no fault and the gear lever in Park:
+ON_Inactive)* with no fault and the gear lever in Park. Study its shape — your
+own test cases should look exactly like this:
 
 | Step | Instruction | Expected result |
 |---|---|---|
@@ -165,16 +186,17 @@ KEY OFF transitions that exercise the NVM restore on the next key-on.
   specification rather than a lab notebook.
 
 !!! success "Key takeaways"
-    - VF179 §1.11.1.1.2 defines a five-state PAM machine (KEY OFF, KEY ON,
-      ON_Enable with ON_Inactive/ON_Active substates, Disable, OFF) driven by
-      ignition, gear, PAM button, speed, trailer and the `PAMFault` flag.
+    - You can now turn VF179 §1.11.1.1.2 into a five-state machine (KEY OFF,
+      KEY ON, ON_Enable with ON_Inactive/ON_Active substates, Disable, OFF)
+      driven by ignition, gear, PAM button, speed, trailer and the `PAMFault`
+      flag.
     - State after key-on is restored from NVM via `MODE_PAM`, and gear input is
-      filtered for `TFilter` — both must show up in your test steps.
+      filtered for `TFilter` — you know both must show up in your test steps.
     - A good test case is written in measurable signal values, waits for
-      specified filter times, and links back to its requirement ID.
+      specified filter times, and links back to its requirement ID — and you
+      have a worked example to copy the pattern from.
     - Full coverage = every state *and* every transition, including fault
-      paths; the provided test case 1 (OFF → button → ON_Inactive) is the
-      pattern to follow.
+      paths. You just did real requirement-to-test verification work.
 
 ---
 

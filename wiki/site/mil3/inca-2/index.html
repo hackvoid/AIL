@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4183,6 +4171,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#why-inca-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why INCA exists
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#production-vs-development-ecus" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4283,10 +4282,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#recording-configuration" class="md-nav__link">
+  <a href="#recording-configuration-name-things-like-a-professional" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recording configuration
+        Recording configuration: name things like a professional
       
     </span>
   </a>
@@ -4405,33 +4404,53 @@
 
 
 <h1 id="inca-mda-calibration-flashing-and-measurement-analysis">INCA &amp; MDA — Calibration, Flashing and Measurement Analysis<a class="headerlink" href="#inca-mda-calibration-flashing-and-measurement-analysis" title="Permanent link">&para;</a></h1>
-<p>The engine control module (ECM) — and every other ECU in a modern vehicle —
-runs two kinds of software: a <strong>firmware</strong> and an <strong>application</strong> that contains
-the control algorithms and strategies (combustion control, power management,
-emission control). The application is delivered with a default set of
-parameters. <strong>Calibration</strong> is the activity of customizing those parameters for
-a specific vehicle application, so that the <em>same</em> software can power many
-different vehicles and variants.</p>
+<p>Welcome to the lesson that turns you from a <em>bus watcher</em> into a <em>calibrator</em>.
+Until now you have mostly observed what ECUs broadcast on CAN. Here you get
+your hands on the ECU itself: reading its internal variables live, tuning its
+parameters while it runs, flashing new software, and analyzing the recordings
+afterwards.</p>
+<p>By the end of this article you will be able to:</p>
+<ul>
+<li>connect INCA to an ECU and build a working measurement setup from scratch,</li>
+<li>tell a production ECU from a development one — and know why it matters,</li>
+<li>measure internal signals with the right sampling rate and edit calibrations
+  safely,</li>
+<li>flash software onto an ECU without bricking it,</li>
+<li>compare calibration datasets in CDM and analyze recordings in MDA.</li>
+</ul>
+<p>Take your time with this one. The concepts are simple, but the <em>habits</em>
+(naming, alignment, page management) are what separate a reliable calibrator
+from someone who loses an afternoon to a mismatched dataset.</p>
+<h2 id="why-inca-exists">Why INCA exists<a class="headerlink" href="#why-inca-exists" title="Permanent link">&para;</a></h2>
+<p>Every ECU in a modern vehicle runs two kinds of software: a <strong>firmware</strong> and an
+<strong>application</strong> containing the control algorithms (combustion control, power
+management, emission control). That application ships with a default set of
+parameters — thousands of thresholds, maps and enable flags. <strong>Calibration</strong> is
+the craft of customizing those parameters for a specific vehicle, so the <em>same</em>
+software can power many different models and variants.</p>
 <p><strong>INCA</strong> (<em>INtegrated Calibration and measurement Application</em>, by ETAS) is the
-industry-standard tool for this job. It lets you:</p>
+industry-standard tool for this. With it you can:</p>
 <ul>
 <li>read the internal variables of the ECU software in real time,</li>
 <li>modify calibration parameters while the ECU is running,</li>
 <li>record measurements for later analysis,</li>
 <li>download (flash) new software onto the ECU memory.</li>
 </ul>
-<p>Its companion tool <strong>MDA</strong> (<em>Measure Data Analyzer</em>) handles the offline,
-post-processing side: opening the measurement files recorded with INCA and
-analyzing the signals. This article covers both.</p>
+<p>Its companion <strong>MDA</strong> (<em>Measure Data Analyzer</em>) covers the offline side:
+opening the measurement files recorded with INCA and digging into the signals
+after the test. This article walks you through both.</p>
 <div class="admonition note">
 <p class="admonition-title">Why internal signals matter</p>
 <p>A CAN log (e.g. from CANalyzer) only shows what the ECU <em>broadcasts</em>. INCA
 reads the variables <em>inside</em> the software — intermediate calculation
 results, internal states, diagnosis flags — so you can spot a misalignment
-between what the ECU computes and what it puts on the bus.</p>
+between what the ECU computes and what it puts on the bus. When a function
+"works on the bus" but behaves strangely in the vehicle, this is where you
+look.</p>
 </div>
 <h2 id="production-vs-development-ecus">Production vs. development ECUs<a class="headerlink" href="#production-vs-development-ecus" title="Permanent link">&para;</a></h2>
-<p>There are two kinds of ECUs, and the difference is in the memory they carry:</p>
+<p>Before you connect anything, look at the ECU in front of you. There are two
+kinds, and the difference is in the memory they carry:</p>
 <table>
 <thead>
 <tr>
@@ -4478,24 +4497,23 @@ between what the ECU computes and what it puts on the bus.</p>
   switched on the fly:</li>
 <li>the <strong>Reference Page (RP)</strong> — read-only, the default calibration dataset
     delivered with the software by the supplier,</li>
-<li>the <strong>Working Page (WP)</strong> — writable, the dataset you modify during
-    development to adapt the software to a specific application.</li>
+<li>the <strong>Working Page (WP)</strong> — writable, the dataset <em>you</em> modify during
+    development.</li>
 </ul>
-<p>The connection to the ETK RAM goes through an <strong>ETK cable</strong> plugged into the
-development ECU — this physical port is exactly what a closed production ECU
-does not have.</p>
+<p>You can spot a development ECU physically: an <strong>ETK cable</strong> comes out of it.
+That port is exactly what a closed production ECU does not have — which is why
+live calibration on a customer's car is simply not possible.</p>
 <h2 id="etas-hardware-interfaces">ETAS hardware interfaces<a class="headerlink" href="#etas-hardware-interfaces" title="Permanent link">&para;</a></h2>
 <p>INCA talks to the ECU through ETAS interface hardware. Which box you need
-depends on the communication channel:</p>
+depends on the communication channel — and on your budget:</p>
 <p><img alt="ETAS interface hardware: ES 592 and ES 581" src="img/etas-hardware.webp" /></p>
 <ul>
-<li><strong>ES 592</strong> — the more complete interface: connects to a development ECU via
-  the <strong>ETK cable</strong> <em>or</em> via CAN (CCP protocol), and to production ECUs via
-  CAN.</li>
+<li><strong>ES 592</strong> — the complete interface: connects to a development ECU via the
+  <strong>ETK cable</strong> <em>or</em> via CAN (CCP protocol), and to production ECUs via CAN.</li>
 <li><strong>ES 581</strong> — the simpler interface: CAN only (CCP), for both production and
   development ECUs. It also offers a CAN-monitoring functionality to watch bus
   traffic.</li>
-<li><strong>ES 89x family</strong> (e.g. ES 891) — modular interfaces used when you must
+<li><strong>ES 89x family</strong> (e.g. ES 891) — modular interfaces for when you must
   combine several ECUs and buses in one setup: one host port to the PC, ETK
   ports for development ECUs, plus CAN FD and LIN channels, so a single log can
   contain internal ECU signals <em>and</em> bus traffic together.</li>
@@ -4512,7 +4530,8 @@ signals of one ECU is cheap; merging internal signals, multiple ECUs, CAN FD
 and LIN into one synchronized log requires the bigger (and much more
 expensive) modular interfaces.</p>
 <h2 id="incas-main-window">INCA's main window<a class="headerlink" href="#incas-main-window" title="Permanent link">&para;</a></h2>
-<p>The INCA main screen is organized into six macro areas:</p>
+<p>Open INCA and you will see six macro areas. Knowing them by name saves you a
+lot of hunting:</p>
 <ol>
 <li><strong>Database objects</strong> — the tree of folders, projects, workspaces and
    experiments,</li>
@@ -4526,8 +4545,9 @@ expensive) modular interfaces.</p>
 <p><img alt="INCA main window with its six macro areas" src="img/inca-main-window.webp" /></p>
 <h2 id="setting-up-a-workspace-step-by-step">Setting up a workspace, step by step<a class="headerlink" href="#setting-up-a-workspace-step-by-step" title="Permanent link">&para;</a></h2>
 <p>Everything in INCA lives in a database, and connecting to an ECU always
-follows the same sequence:</p>
-<pre class="mermaid"><code>flowchart TD
+follows the same sequence. Do this once carefully and every future session is
+a single click:</p>
+<pre class="kx-mermaid"><code>flowchart TD
     A["Right-click Database Objects&lt;br/&gt;Add → Top Folder"] --&gt; B["Right-click folder&lt;br/&gt;Add ECU Project&lt;br/&gt;(A2L + HEX/S19)"]
     B --&gt; C["Add Workspace&lt;br/&gt;to the folder"]
     C --&gt; D["Project/Device: press +&lt;br/&gt;associate the software"]
@@ -4541,9 +4561,9 @@ follows the same sequence:</p>
 <li><strong>Add the ECU project (the software).</strong> Right-click the folder → <em>Add ECU
    Project</em> and follow the wizard. INCA can only talk to an ECU whose software
    it knows, so you must import two files:</li>
-<li>the <strong>A2L file</strong> — the base of the software: an ASAM-standard description
-     of every variable and parameter, with physical characteristics and the
-     memory address where each element lives;</li>
+<li>the <strong>A2L file</strong> — an ASAM-standard description of every variable and
+     parameter, with physical characteristics and the memory address where
+     each element lives;</li>
 <li>the <strong>calibration dataset</strong> — HEX, S19, csv, srec, … depending on the
      supplier. S19 and HEX serve the same purpose; some projects deliver
      several dataset files (e.g. separate files with immobilizer variants —
@@ -4565,23 +4585,25 @@ follows the same sequence:</p>
 <p>After importing, INCA shows the dataset next to the project name. A good
 habit is to duplicate it and keep the original <strong>frozen</strong> (right-click →
 set read-only / freeze). That way you always have a pristine reference
-dataset, and you make your modifications on the copy.</p>
+dataset, and you make your modifications on the copy. Future-you will be
+grateful.</p>
 </div>
 <h2 id="working-page-vs-reference-page">Working Page vs. Reference Page<a class="headerlink" href="#working-page-vs-reference-page" title="Permanent link">&para;</a></h2>
-<p>On a development ECU, INCA can switch in real time between the two calibration
-pages in ETK RAM:</p>
+<p>This is the mental model that governs everything you do on a development ECU,
+so make sure it clicks:</p>
 <ul>
 <li><strong>Reference Page (RP)</strong> — read-only; the supplier's default calibration.</li>
 <li><strong>Working Page (WP)</strong> — writable; your modified dataset.</li>
 </ul>
-<p>You cannot edit calibrations while the ECU runs on the reference page — switch
-to the working page first. The INCA status bar shows the ECU state: <em>ECU off /
-no access</em> when there is no communication, a checksum warning when WP and RP
+<p>INCA can switch between the two pages in real time, but you cannot edit
+calibrations while the ECU runs on the reference page — <strong>switch to the
+working page first</strong>. The status bar tells you where you stand: <em>ECU off / no
+access</em> when there is no communication, a checksum warning when WP and RP
 diverge, and zero differences when everything is aligned.</p>
 <p><strong>Alignment</strong> means that three copies of the calibration are consistent: the
 working page, the reference page, and what is actually flashed on the ECU.
 Press <strong>F3</strong> (Fn+F3 on laptops) or the <em>initialize hardware</em> button to start
-initialization and alignment. Useful settings:</p>
+initialization and alignment. Two settings make life easier:</p>
 <ul>
 <li>enable <strong>"initialize automatically"</strong> so INCA aligns on its own at every
   connection,</li>
@@ -4591,9 +4613,9 @@ initialization and alignment. Useful settings:</p>
   with <strong>Apply</strong>.</li>
 </ul>
 <h2 id="the-experiment-measuring-and-calibrating">The experiment: measuring and calibrating<a class="headerlink" href="#the-experiment-measuring-and-calibrating" title="Permanent link">&para;</a></h2>
-<p>The <strong>experiment</strong> is the working environment where you watch and modify the
-ECU live. It contains the measurement and calibration variables you selected
-for your task.</p>
+<p>The <strong>experiment</strong> is your working environment: the place where you watch and
+modify the ECU live. It contains the measurement and calibration variables you
+selected for your task.</p>
 <h3 id="selecting-variables-and-rasters">Selecting variables and rasters<a class="headerlink" href="#selecting-variables-and-rasters" title="Permanent link">&para;</a></h3>
 <p>Open the <strong>Variable selection</strong> window to pick what to follow:</p>
 <p><img alt="INCA variable selection: measurement vs. calibration variables and acquisition rasters" src="img/inca-variable-selection.webp" /></p>
@@ -4626,9 +4648,9 @@ the measure rate afterwards from the experiment window.</p>
 </ul>
 <p>The maximum recording time depends on your PC's free disk space and the number
 of selected variables (from about an hour on a loaded setup to many hours).
-Calibration changes on the working page use handy shortcuts: <strong>F7</strong> increment,
-<strong>F6</strong> decrement, <strong>Ctrl+U</strong> reset all changes back to the reference page
-values.</p>
+While you calibrate on the working page, three shortcuts become muscle memory:
+<strong>F7</strong> increment, <strong>F6</strong> decrement, <strong>Ctrl+U</strong> reset all changes back to the
+reference page values.</p>
 <h3 id="which-signals-to-pick">Which signals to pick<a class="headerlink" href="#which-signals-to-pick" title="Permanent link">&para;</a></h3>
 <p>Build the experiment around your test case. For vehicle testing, always keep
 the basic status feedback in front of you — ignition/key state, contactor
@@ -4636,7 +4658,7 @@ closed, drive-ready, park lock engaged, the feedback from the other ECUs — so
 you understand the vehicle's state <em>through INCA</em> without looking at the
 vehicle. Then add the signals specific to the function under test, both the
 CAN-visible ones and their internal counterparts.</p>
-<h3 id="recording-configuration">Recording configuration<a class="headerlink" href="#recording-configuration" title="Permanent link">&para;</a></h3>
+<h3 id="recording-configuration-name-things-like-a-professional">Recording configuration: name things like a professional<a class="headerlink" href="#recording-configuration-name-things-like-a-professional" title="Permanent link">&para;</a></h3>
 <p>Before saving a recording, INCA asks for a file name and comment. Adopt a
 strict naming convention — the log will be read by calibrators and function
 owners who are not on your project:</p>
@@ -4655,7 +4677,8 @@ acceleration) and INCA records a window around it — e.g. 30 minutes before
 and 30 minutes after the event. For manual logging on bench or vehicle,
 leave triggers off.</p>
 <h2 id="memory-page-operations-and-flashing">Memory page operations and flashing<a class="headerlink" href="#memory-page-operations-and-flashing" title="Permanent link">&para;</a></h2>
-<p>The <em>Manage Memory Pages</em> section offers four operations:</p>
+<p>The <em>Manage Memory Pages</em> section offers four operations. Learn the difference
+now — confusing Download and Flash is a classic beginner mistake:</p>
 <table>
 <thead>
 <tr>
@@ -4683,7 +4706,7 @@ leave triggers off.</p>
 </tbody>
 </table>
 <h3 id="flash-programming-procedure">Flash programming procedure<a class="headerlink" href="#flash-programming-procedure" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     A["Select Flash programming&lt;br/&gt;(code + data)"] --&gt; B["Press Do it"]
     B --&gt; C["ProF window opens&lt;br/&gt;→ Configure"]
     C --&gt; D["Select the ProF file&lt;br/&gt;for this software"]
@@ -4714,12 +4737,13 @@ is the safe default.</p>
 <p>The bootloader is a separate HEX file listed in the release notes. Flash it
 only when it changes — not at every release. But if you ever lose
 communication with the ECU (e.g. after flashing the wrong software),
-reflashing the bootloader is the way to recover the unit.</p>
+reflashing the bootloader is the way to recover the unit. Keep it handy.</p>
 </div>
 <h2 id="cdm-calibration-data-manager">CDM — Calibration Data Manager<a class="headerlink" href="#cdm-calibration-data-manager" title="Permanent link">&para;</a></h2>
-<p><strong>CDM</strong> processes calibration datasets inside INCA: it manages several
+<p><strong>CDM</strong> is INCA's built-in dataset workshop: it manages several calibration
 datasets simultaneously with <strong>Copy, List, Compare and Merge</strong> functions, and
-exports calibration data to <strong>Excel, HTML or ASCII</strong>.</p>
+exports to <strong>Excel, HTML or ASCII</strong>. You will use it constantly to answer the
+question "what actually changed between these two software releases?"</p>
 <h3 id="comparing-two-datasets">Comparing two datasets<a class="headerlink" href="#comparing-two-datasets" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Choose the <strong>comparison source</strong> (click the <code>...</code> icon) — it can be an
@@ -4748,9 +4772,9 @@ from file</em> and pick the file. INCA applies the values to the working page
 and immediately shows the difference against the reference page.</p>
 </div>
 <h2 id="mda-measure-data-analyzer">MDA — Measure Data Analyzer<a class="headerlink" href="#mda-measure-data-analyzer" title="Permanent link">&para;</a></h2>
-<p><strong>MDA</strong> is the post-processing tool: it opens the <code>.dat</code> measurement files
-recorded by INCA and lets you analyze the acquired variables offline. The
-typical workflow:</p>
+<p>The test is done, the <code>.dat</code> file is on your disk — now the real analysis
+starts. <strong>MDA</strong> opens the measurement files recorded by INCA and lets you work
+through the signals offline:</p>
 <ol>
 <li>Open MDA and load the <code>.dat</code> file (<em>File</em> → choose the measurement, or
    <em>New configuration</em> → <em>Add</em> the file).</li>
@@ -4779,23 +4803,22 @@ your INCA version — newer ECU software releases may require a newer INCA
 <p class="admonition-title">Key takeaways</p>
 <ul>
 <li>Calibration = adapting one software to many applications by editing its
-  parameter dataset; INCA is the tool that reads ECU internals, edits
-  calibrations live, records measurements and flashes software.</li>
-<li>Development ECUs add ETK flash/RAM with two switchable pages:
-  read-only <strong>Reference Page</strong> (supplier defaults) vs. writable <strong>Working
-  Page</strong> (your changes). Switch to WP before editing; align with F3.</li>
+  parameter dataset — and INCA is your window into the ECU's internals:
+  measure, edit live, record, flash.</li>
+<li>Development ECUs add ETK flash/RAM with two switchable pages: read-only
+  <strong>Reference Page</strong> (supplier defaults) vs. writable <strong>Working Page</strong>
+  (your changes). Switch to WP before editing; align with F3.</li>
 <li>A workspace ties together software (A2L description + HEX/S19 dataset),
   ETAS hardware (ES 592 for ETK+CAN, ES 581 for CAN/CCP only) and an
-  experiment (<code>.EXP</code>).</li>
-<li>Pick measurement variables with a raster faster than the signal's
-  dynamics; record with a disciplined naming convention (date, project,
-  facility, software, test, result); use triggers for event-based logging.</li>
-<li>Flash programming writes permanent memory and needs the ProF
-  configuration file; flash code + calibration together, and keep the
-  bootloader in mind as a recovery path.</li>
-<li>CDM compares/copies/merges datasets and exports HTML/Excel/ASCII
-  reports; MDA opens the <code>.dat</code> logs offline with oscilloscope strips and
-  cursors for the real analysis.</li>
+  experiment (<code>.EXP</code>). Set it up once, reuse it forever.</li>
+<li>Pick a raster faster than your signal's dynamics, and name every
+  recording with date, project, facility, software version, test and
+  result — your colleagues will thank you.</li>
+<li>Flash programming writes <em>permanent</em> memory and needs the ProF
+  configuration file; flash code + calibration together, and remember the
+  bootloader is your recovery path.</li>
+<li>CDM compares and merges datasets; MDA replays your <code>.dat</code> logs with
+  oscilloscope strips and cursors. You can practice both entirely offline.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4809,21 +4832,21 @@ traffic logged in parallel is analyzed in <a href="../../mil2/canalyzer/">CANaly
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/27_INCA_2/Academy_Kineton_Format___INCA_MDA.pdf">Academy Kineton Format - INCA MDA</a> — PDF, 3.2 MB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/27_INCA_2/ETAS_manual.pdf">ETAS manual</a> — PDF, 3.9 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/Academy_Kineton_Format___INCA_MDA.pdf">Academy Kineton Format - INCA MDA</a> — PDF, 3.2 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/ETAS_manual.pdf">ETAS manual</a> — PDF, 3.9 MB</li>
 </ul>
 <h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">&para;</a></h2>
 <ul>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.json">INCA &amp; MDA pt2</a> — 11.8 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.srt">INCA &amp; MDA pt2</a> — 2.8 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.tsv">INCA &amp; MDA pt2</a> — 2.3 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.vtt">INCA &amp; MDA pt2</a> — 2.6 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.json">INCA (2024 05 14 11 04 GMT+2)</a> — 199.7 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.srt">INCA (2024 05 14 11 04 GMT+2)</a> — 44.7 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.tsv">INCA (2024 05 14 11 04 GMT+2)</a> — 35.6 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.vtt">INCA (2024 05 14 11 04 GMT+2)</a> — 40.2 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.txt">INCA &amp; MDA pt2 (lecture transcript)</a> — 1.9 KB</li>
-<li>:material-file: <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.txt">INCA (2024 05 14 11 04 GMT+2) (lecture transcript)</a> — 28.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.json">INCA &amp; MDA pt2</a> — 11.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.srt">INCA &amp; MDA pt2</a> — 2.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.tsv">INCA &amp; MDA pt2</a> — 2.3 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.vtt">INCA &amp; MDA pt2</a> — 2.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.json">INCA (2024 05 14 11 04 GMT+2)</a> — 199.7 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.srt">INCA (2024 05 14 11 04 GMT+2)</a> — 44.7 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.tsv">INCA (2024 05 14 11 04 GMT+2)</a> — 35.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.vtt">INCA (2024 05 14 11 04 GMT+2)</a> — 40.2 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%26_MDA_pt2_.txt">INCA &amp; MDA pt2 (lecture transcript)</a> — 1.9 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../assets/mil3/27_INCA_2/INCA_%282024_05_14_11_04_GMT%2B2%29.txt">INCA (2024 05 14 11 04 GMT+2) (lecture transcript)</a> — 28.6 KB</li>
 </ul>
 
 
@@ -4853,6 +4876,7 @@ traffic logged in parallel is analyzed in <a href="../../mil2/canalyzer/">CANaly
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4911,6 +4935,41 @@ traffic logged in parallel is analyzed in <a href="../../mil2/canalyzer/">CANaly
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4923,8 +4982,21 @@ traffic logged in parallel is analyzed in <a href="../../mil2/canalyzer/">CANaly
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

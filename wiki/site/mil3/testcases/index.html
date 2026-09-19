@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4433,36 +4421,39 @@
 
 
 <h1 id="test-cases-from-vehicle-functions-to-executable-tests">Test Cases: From Vehicle Functions to Executable Tests<a class="headerlink" href="#test-cases-from-vehicle-functions-to-executable-tests" title="Permanent link">&para;</a></h1>
-<p>A vehicle function only counts as <em>done</em> when someone has proven it behaves the
-way its specification says. That proof is the job of the <strong>test case</strong>: a
-formal, repeatable procedure that puts the function in a known condition,
-stimulates it, and checks the result against the requirement. This article
-covers the full chain you will follow in the bootcamp:</p>
+<p>Welcome to one of the most satisfying jobs in vehicle engineering: being the
+person who <em>proves</em> a feature actually works. A function only counts as done
+when someone has put it in a known condition, stimulated it, and checked the
+result against its specification — repeatably, on record. That someone is
+you, and the tool of the trade is the <strong>test case</strong>.</p>
+<p>By the end of this article you will be able to:</p>
 <ul>
-<li>the <strong>functional specification (VF)</strong> that requirements come from,</li>
-<li>how a test case is <strong>structured and identified</strong>,</li>
-<li>the difference between <strong>functional and diagnostic</strong> tests,</li>
-<li>how to <strong>derive test cases</strong> from each form a requirement can take,</li>
-<li>the <strong>drafting workflow</strong> and where tests are actually executed.</li>
+<li>read a <strong>VF (Vehicle Function)</strong> specification — the document every
+  requirement comes from — and know what to look for,</li>
+<li>turn each requirement into a <strong>positive + negative test pair</strong> with a
+  traceable identifier,</li>
+<li>tell a <strong>functional</strong> test from a <strong>diagnostic</strong> one, and</li>
+<li>choose where each test should run: in the car, at the bench, or on a
+  simulator.</li>
 </ul>
 <h2 id="the-starting-point-the-vehicle-function-specification">The starting point: the Vehicle Function specification<a class="headerlink" href="#the-starting-point-the-vehicle-function-specification" title="Permanent link">&para;</a></h2>
-<p>Test cases are never written from thin air — they are extracted from a
-<strong>functional specification</strong>, in Kineton/Fiat practice called a <strong>VF (Vehicle
-Function)</strong>. A VF is written by a <em>functionalist</em> and gives a complete view of
-one vehicle function: its features, the nodes (ECUs) involved, the expected
-behavior under different environmental and key conditions, the diagnosis and
-the recovery strategies.</p>
-<p>Two properties matter for the tester:</p>
+<p>Test cases are never written from thin air. They are extracted from a
+<strong>functional specification</strong> — in Kineton/Fiat practice, a <strong>VF (Vehicle
+Function)</strong>. A VF is written by a <em>functionalist</em> and describes one vehicle
+function end to end: its features, the Electronic Control Units (ECUs)
+involved, the expected behavior under different environmental and key
+conditions, plus the diagnosis and recovery strategies.</p>
+<p>Two properties matter to you as a tester:</p>
 <ul>
 <li><strong>A VF is not tied to the component structure</strong> — it describes <em>what</em> the
-  vehicle does, not how a specific ECU is built. Software is written starting
-  from the VF.</li>
-<li><strong>A VF is the test basis</strong> — every test case you write must trace back to a
-  paragraph of a VF (or of a diagnostic document).</li>
+  vehicle does, not how a specific ECU is built. The software itself is
+  written starting from the VF.</li>
+<li><strong>A VF is your test basis</strong> — every test case you write must trace back to
+  a paragraph of a VF (or of a diagnostic document). No orphan tests.</li>
 </ul>
-<p>A single vehicle area can host many VFs: car access, theft protection, climate,
-braking, vehicle dynamics, energy management, interior/exterior lighting,
-infotainment, instrument panel functions, and so on.</p>
+<p>A single vehicle area hosts many VFs: car access, theft protection, climate,
+braking, vehicle dynamics, energy management, lighting, infotainment,
+instrument panel functions, and more.</p>
 <h3 id="naming-versions-and-releases">Naming: versions and releases<a class="headerlink" href="#naming-versions-and-releases" title="Permanent link">&para;</a></h3>
 <p>A VF is identified by the function name plus an alphanumeric suffix:</p>
 <div class="highlight"><pre><span></span><code>&lt;Function Name&gt;[Fx.Vfx_Rx]
@@ -4471,10 +4462,10 @@ infotainment, instrument panel functions, and so on.</p>
 <li><strong>V</strong> = <em>Version</em> — versions the functionality according to the vehicle
   set-up it targets.</li>
 <li><strong>R</strong> = <em>Release</em> — tracks changes made to the same VF across releases
-  (e.g. adaptations when porting to a new project).</li>
+  (for example, adaptations when porting to a new project).</li>
 </ul>
-<p>The same suffix reappears in test case identifiers, which is how traceability
-is enforced (see below).</p>
+<p>Remember this suffix — it reappears inside every test case identifier, and
+that is exactly how traceability is enforced.</p>
 <h3 id="what-is-inside-a-vf">What is inside a VF<a class="headerlink" href="#what-is-inside-a-vf" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4515,46 +4506,50 @@ is enforced (see below).</p>
 </tbody>
 </table>
 <p><img alt="Example of a VF functional diagram: nodes, gateways and the CAN/LIN messages exchanged between them" src="img/vf-functional-diagram.webp" /></p>
-<p>The <strong>functional diagram</strong> deserves a closer look, because you will read it
-constantly:</p>
+<p>The <strong>functional diagram</strong> is the part you will read the most, so learn to
+scan it like a map:</p>
 <ul>
-<li>Every connection between nodes is labeled with the <strong>CAN/LIN message and the
-  transmitted/received signals</strong>. Different colors distinguish the networks
-  (C1CAN, C2CAN, C3CAN, BHCAN, PCAN, LIN…), including <em>private</em> internal
-  networks between modules of one component.</li>
+<li>Every connection between nodes is labeled with the <strong>CAN (Controller Area
+  Network) or LIN (Local Interconnect Network) message and the
+  transmitted/received signals</strong>. Colors distinguish the networks (C1CAN,
+  C2CAN, C3CAN, BHCAN, PCAN, LIN…), including <em>private</em> internal networks
+  between modules of one component.</li>
 <li>Nodes drawn in <strong>two colors are gateways</strong> (direct or indirect) between
   networks.</li>
-<li>Numbers inside the node blocks reference <strong>other VFs</strong> the signals come from
-  or go to — functions reference each other through the diagram.</li>
-<li>Outputs are not always bus messages: an LED or a buzzer heard by the driver
-  is a legitimate function output.</li>
+<li>Numbers inside the node blocks reference <strong>other VFs</strong> the signals come
+  from or go to — functions talk to each other through the diagram.</li>
+<li>Outputs are not always bus messages: an LED or a buzzer the driver hears
+  is a perfectly legitimate function output.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Companion documents you must have open</p>
-<p>A VF never stands alone. To write or execute its tests you also need:</p>
+<p>A VF never stands alone. Before writing or running its tests, have these
+within reach:</p>
 <ul>
-<li>the <strong>DBC files</strong> — one per CAN network, mapping every message and signal
-  (see <a href="../../mil1/can-lin/">CAN &amp; LIN</a>),</li>
+<li>the <strong>DBC (Database CAN) files</strong> — one per CAN network, mapping every
+  message and signal (see <a href="../../mil1/can-lin/">CAN &amp; LIN</a>),</li>
 <li>the <strong>LIN description files</strong> for the LIN sub-networks,</li>
 <li>the <strong>CDD</strong> (diagnostic description) — the document that meticulously
-  lists every DTC with its validation/invalidation conditions.</li>
+  lists every fault code with its validation/invalidation conditions.</li>
 </ul>
-<p>A wrong signal name with respect to the DBC — or a signal that does not
-exist in the DBC at all — is one of the most common findings of VF analysis.</p>
+<p>A signal named differently in the VF than in the DBC — or missing from
+the DBC entirely — is one of the most common findings of VF analysis.
+Catching it early saves you a broken test later.</p>
 </div>
 <h2 id="what-a-test-case-is">What a test case is<a class="headerlink" href="#what-a-test-case-is" title="Permanent link">&para;</a></h2>
-<p>A test case is a <strong>set of conditions used to verify that the requirements of a
-function are respected</strong> and that the implementation matches the specification.
-The golden rule of coverage:</p>
+<p>A test case is a <strong>set of conditions used to verify that the requirements of
+a function are respected</strong> — and that the implementation matches the
+specification. Hold on to the golden rule of coverage:</p>
 <div class="admonition tip">
 <p class="admonition-title">Positive and negative tests</p>
-<p>For every operating condition you must foresee <strong>both</strong> a <em>positive</em> test
-(the requirement holds when it should) and a <em>negative</em> test (when the
-opposite condition is applied, the result is the opposite of the positive
-case). Only the pair makes the test robust and covers all cases.</p>
+<p>For every operating condition, foresee <strong>both</strong> a <em>positive</em> test (the
+requirement holds when it should) and a <em>negative</em> test (apply the
+opposite condition, and the result must be the opposite of the positive
+case). Only the pair makes the test robust and covers all cases. One
+without the other is a half-finished proof.</p>
 </div>
-<p>In the V-model, test cases sit on the right-hand (verification) side, against
-the requirements on the left-hand side — see
+<p>In the V-model, your test cases sit on the right-hand (verification) side,
+mirroring the requirements on the left — see
 <a href="../../mil1/v-cycle/">the V-cycle</a>.</p>
 <h3 id="test-case-format">Test case format<a class="headerlink" href="#test-case-format" title="Permanent link">&para;</a></h3>
 <p>Each test is formalized in a document (usually a table) with at least:</p>
@@ -4612,74 +4607,79 @@ the requirements on the left-hand side — see
 </tr>
 </tbody>
 </table>
+<p>If you take one habit from this table: never skimp on the <strong>preconditions</strong>.
+Most "flaky" test results trace back to a system that was not actually in
+the state the test assumed.</p>
 <h3 id="the-checklist-table">The checklist table<a class="headerlink" href="#the-checklist-table" title="Permanent link">&para;</a></h3>
-<p>In practice, tests for a VF are collected in a <strong>checklist</strong>: one row per test,
+<p>In practice, all tests for a VF live in a <strong>checklist</strong>: one row per test,
 grouped by requirement. Its columns are:</p>
 <ul>
 <li><strong>Req ID Reference</strong> — the paragraph number of the VF;</li>
 <li><strong>Req description</strong> — the title of that paragraph;</li>
 <li><strong>TEST ID</strong> — <code>VFXXX_VX_RY.TC001</code>, <code>.TC002</code>, <code>.TC003</code>, …;</li>
-<li><strong>TEST DESCRIPTION</strong> — a verbose description written as a chain of conditions:
-  <em>in → key on, engine on conditions, → when condition A = true, → the expected
-  behavior shall happen</em>;</li>
+<li><strong>TEST DESCRIPTION</strong> — a verbose description written as a chain of
+  conditions: <em>in → key on, engine on conditions, → when condition A = true,
+  → the expected behavior shall happen</em>;</li>
 <li><strong>CONDITION</strong> — the concrete stimulus values:
   <code>→ Key ON, Engine ON</code>, <code>→ CANSignal1 = xxx</code>, <code>→ CANSignal2 = yyy</code>,
   <code>→ ElectricalSignal1 = 'High'</code>, …;</li>
-<li><strong>Verification / TEST RESULT</strong> — OK or KO, plus a <strong>Note</strong>: <em>if the test is
-  KO, why is it KO?</em></li>
+<li><strong>Verification / TEST RESULT</strong> — OK or KO, plus a <strong>Note</strong>: <em>if the test
+  is KO, why is it KO?</em></li>
 </ul>
-<p>The note column is not bureaucracy: a KO without an explanation is a test that
-will have to be re-run.</p>
+<p>That last note is not bureaucracy. A KO without an explanation is a test
+someone (probably you) will have to re-run from scratch.</p>
 <h2 id="functional-vs-diagnostic-test-cases">Functional vs diagnostic test cases<a class="headerlink" href="#functional-vs-diagnostic-test-cases" title="Permanent link">&para;</a></h2>
-<p>Test cases fall into two macro categories, distinguished by the document they
-are checked against.</p>
+<p>Test cases fall into two macro categories, distinguished by the document
+they are checked against.</p>
 <p><strong>Functional (integration) test cases</strong> are the first step in guaranteeing
 software quality. They verify that the application works as expected
-technically <em>and</em> that it does what the user actually asked for. They are
-written against the <strong>VF</strong>, and their result must match what the software
-specification provides.</p>
-<p><strong>Diagnostic test cases</strong> verify the fault-detection machinery itself. They are
-written against the <strong>CDD</strong>, and their result must match what the CDD provides.
-Their purpose is to detect malfunctions (<em>faults</em>) when they happen and to
-trigger actions that minimize damage before the actual breakdown (<em>failure</em>)
-occurs. This is not optional polish: functional safety standards tie the
-<strong>Safety Integrity Level (SIL)</strong> of a system directly to its <em>diagnostic
-coverage</em> — the fraction of dangerous failures that are detected in time.</p>
+technically <em>and</em> — just as important — that it does what the user actually
+asked for. They are written against the <strong>VF</strong>, and their result must match
+what the software specification provides.</p>
+<p><strong>Diagnostic test cases</strong> verify the fault-detection machinery itself. They
+are written against the <strong>CDD</strong>, and their result must match what the CDD
+provides. Their purpose is to catch malfunctions (<em>faults</em>) when they happen
+and trigger actions that minimize damage before the actual breakdown
+(<em>failure</em>) occurs. This is not optional polish: functional safety standards
+tie the <strong>Safety Integrity Level (SIL)</strong> of a system directly to its
+<em>diagnostic coverage</em> — the fraction of dangerous failures detected in time.</p>
 <p>Diagnostic tests are extracted from the diagnosis section of the VF (when
-present) and, above all, from the CDD, which defines every DTC with its
-<strong>validation/invalidation conditions and timescales</strong> — exactly what you need
-to build preconditions and checks. See
+present) and, above all, from the CDD, which defines every <strong>DTC (Diagnostic
+Trouble Code)</strong> with its <strong>validation/invalidation conditions and
+timescales</strong> — exactly what you need to build preconditions and checks. See
 <a href="../../mil2/diagnosis/">Diagnosis</a> for the underlying concepts.</p>
 <h2 id="deriving-test-cases-from-requirements">Deriving test cases from requirements<a class="headerlink" href="#deriving-test-cases-from-requirements" title="Permanent link">&para;</a></h2>
-<p>A requirement inside a VF can take many forms, and each form has its own
-extraction style:</p>
+<p>Here is the part that becomes second nature with practice. A requirement
+inside a VF can take many forms, and each form has its own extraction style:</p>
 <ul>
-<li><strong>Descriptive text</strong> — e.g. <em>"If the Master is awakened by a Hardware Wake up
-  that requires the CAN C bus to be awake, it shall transmit the WAKE_C_NBC
-  message, setting the MainWakeSts bit and the NodeX bit corresponding to
-  itself."</em> This is the hardest form: you must interpret the prose, identify
-  the precondition ("hardware wake-up requiring CAN C"), the action (transmit
-  <code>WAKE_C_NBC</code>) and the check (<code>MainWakeSts</code> and <code>NodeX</code> bits set), and invent
-  the negative case yourself.</li>
-<li><strong>Descriptive table</strong> — behavior listed row by row; each row becomes at least
-  one test.</li>
+<li><strong>Descriptive text</strong> — e.g. <em>"If the Master is awakened by a Hardware Wake
+  up that requires the CAN C bus to be awake, it shall transmit the
+  WAKE_C_NBC message, setting the MainWakeSts bit and the NodeX bit
+  corresponding to itself."</em> This is the hardest form: you interpret the
+  prose, identify the precondition ("hardware wake-up requiring CAN C"), the
+  action (transmit <code>WAKE_C_NBC</code>) and the check (<code>MainWakeSts</code> and <code>NodeX</code>
+  bits set) — and you invent the negative case yourself.</li>
+<li><strong>Descriptive table</strong> — behavior listed row by row; each row becomes at
+  least one test.</li>
 <li><strong>Truth table</strong> — mechanical: every input combination is a test case.</li>
-<li><strong>Logical equation</strong> — test each combination that makes the equation true and
-  false.</li>
-<li><strong>State machine</strong> — every transition is a test: put the system in the source
-  state, apply the trigger, verify the destination state and the actions.</li>
+<li><strong>Logical equation</strong> — test each combination that makes the equation true
+  and false.</li>
+<li><strong>State machine</strong> — every transition is a test: put the system in the
+  source state, apply the trigger, verify the destination state and the
+  actions.</li>
 <li><strong>Flowchart</strong> — every path through the chart is a test.</li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Except for descriptive text, the process is deliberately straightforward:
-you cannot "reinterpret" a truth table or a flowchart — you follow what is
-written and put it in the chosen test syntax. The real skill (and the real
-risk of missing cases) lies in the free-text requirements.</p>
+<p>Except for descriptive text, the process is deliberately
+straightforward: you cannot "reinterpret" a truth table or a flowchart —
+you follow what is written and put it in the chosen test syntax. The
+real skill (and the real risk of missing cases) lies in the free-text
+requirements.</p>
 </div>
 <h3 id="example-a-truth-table-becomes-four-tests">Example: a truth table becomes four tests<a class="headerlink" href="#example-a-truth-table-becomes-four-tests" title="Permanent link">&para;</a></h3>
-<p>A VF remarks section states that the "+ luci" condition is transmitted on CAN
-in the <code>InternalLightSts</code> signal, according to this table:</p>
+<p>A VF remarks section states that the "+ luci" condition is transmitted on
+CAN in the <code>InternalLightSts</code> signal, according to this table:</p>
 <table>
 <thead>
 <tr>
@@ -4712,13 +4712,13 @@ in the <code>InternalLightSts</code> signal, according to this table:</p>
 </tbody>
 </table>
 <p>Each row yields a test case: set the two input signals, read the CAN signal,
-compare with the expected value. Row 4 is also the natural <em>negative</em> test for
-row 2 — same command, different ambient condition, opposite output.</p>
+compare with the expected value. Notice how row 4 is the natural <em>negative</em>
+test for row 2 — same command, different ambient condition, opposite output.</p>
 <h3 id="example-a-state-machine-transition-becomes-a-test">Example: a state machine transition becomes a test<a class="headerlink" href="#example-a-state-machine-transition-becomes-a-test" title="Permanent link">&para;</a></h3>
 <p>The figure below is the master state chart for CAN-C ignition-off bus
 wake-up/sleep management — a classic network-management requirement form:</p>
 <p><img alt="Master state chart for CAN-C wake-up, active and sleep management: states S1–S7 with transitions E1–E14" src="img/wakeup-state-chart.webp" /></p>
-<p>Take transition <strong>E12</strong>, which describes how the master moves from state <strong>S7</strong>
+<p>Take transition <strong>E12</strong>, which moves the master from state <strong>S7</strong>
 (WaitBusSleep) to state <strong>S2</strong> (Ignition On). The derived test case is:</p>
 <ul>
 <li><strong>Precondition</strong>: master ECU in S7, bus wake-up conditions as per the VF;</li>
@@ -4729,13 +4729,14 @@ wake-up/sleep management — a classic network-management requirement form:</p>
 <li><strong>Negative test</strong>: without the trigger, the ECU must remain in S7 and the
   S2-entry actions must not occur.</li>
 </ul>
-<p>One transition → one positive test plus its negative counterpart. A chart like
-this, with seven states and a dozen transitions, easily generates twenty or
-more test cases.</p>
+<p>One transition → one positive test plus its negative counterpart. A chart
+like this, with seven states and a dozen transitions, easily generates
+twenty or more test cases — good news for your coverage, and for your
+checklist.</p>
 <h2 id="the-drafting-workflow">The drafting workflow<a class="headerlink" href="#the-drafting-workflow" title="Permanent link">&para;</a></h2>
 <p>Writing test cases is a process with its own quality loop, not a one-shot
 translation task:</p>
-<pre class="mermaid"><code>flowchart TD
+<pre class="kx-mermaid"><code>flowchart TD
     A["Writing / reviewing vehicle functions"] --&gt; B["Planning"]
     B --&gt; C["Vehicle function analysis"]
     C --&gt; D["Experimentation"]
@@ -4743,51 +4744,52 @@ translation task:</p>
     C --&gt;|"points to modify on the VFs"| F["Feedback to functionalist"]
     E --&gt; G["Sending specifications to the supplier"]
     D --&gt; E</code></pre>
-<p>The <strong>VF analysis</strong> step is one of the most important for clean tests. It means
-studying the vehicle function and cross-checking it against the <strong>DB files</strong>
-(DBC/LIN), previously executed test results and related documentation. Typical
-findings:</p>
+<p>The <strong>VF analysis</strong> step is one of the most important for clean tests. It
+means studying the vehicle function and cross-checking it against the
+<strong>DB files</strong> (DBC/LIN), previously executed test results and related
+documentation. Typical findings:</p>
 <ul>
-<li>a signal is named differently in the VF than in the DBC — or is missing from
-  the DBC entirely;</li>
-<li>parts of the function are implemented through <strong>internal messages</strong> that are
-  not observable from the vehicle networks — they cannot be tested with an
-  integration approach.</li>
+<li>a signal is named differently in the VF than in the DBC — or is missing
+  from the DBC entirely;</li>
+<li>parts of the function are implemented through <strong>internal messages</strong> that
+  are not observable from the vehicle networks — they cannot be tested with
+  an integration approach.</li>
 </ul>
-<p>That second finding defines an important boundary: requirements that describe
+<p>That second finding draws an important boundary: requirements describing
 behavior <em>internal</em> to a component, which cannot be monitored from outside,
-give rise to <strong>component tests</strong> — and those are the responsibility of the
-component's <strong>supplier</strong>, not of the vehicle-level test team. Conversely, if
-during analysis you discover plausible cases not explicitly written in the VF,
-you still write the corresponding test cases.</p>
+give rise to <strong>component tests</strong> — and those belong to the component's
+<strong>supplier</strong>, not to the vehicle-level test team. The flip side: if during
+analysis you spot plausible cases the VF never wrote down, you still write
+the corresponding test cases. Total coverage of the VF is the goal.</p>
 <h2 id="worked-example-gearbox-status-management-bev">Worked example: Gearbox Status Management (BEV)<a class="headerlink" href="#worked-example-gearbox-status-management-bev" title="Permanent link">&para;</a></h2>
-<p>The lesson's reference VF — <em>Gearbox Status Management</em> for a BEV project —
-shows what real requirements look like and how test cases fall out of them. The
-function involves several nodes:</p>
+<p>Time to see all of this on a real VF: <em>Gearbox Status Management</em> for a
+Battery Electric Vehicle (BEV) project. The function involves several nodes:</p>
 <ul>
 <li><strong>MTA</strong> — the robotic transmission actuator, the node that "makes logic";</li>
-<li><strong>SLU</strong> — the shift lever unit, source of <code>ShiftLeverPosition.Info</code> (R-N-D);</li>
+<li><strong>SLU</strong> — the shift lever unit, source of <code>ShiftLeverPosition.Info</code>
+  (R-N-D);</li>
 <li><strong>BCM</strong> — body controller, acting as <strong>direct gateway</strong> routing the
-  <code>STATUS_C_TCM_MTA_DCTM</code> message between C-CAN and B-CAN, and mapping signals
-  such as <code>STATUS_B_CAN2.SBR1RowDriverSeatSts = STATUS_SDM.SBR1RowDriverSeatSts</code>;</li>
+  <code>STATUS_C_TCM_MTA_DCTM</code> message between C-CAN and B-CAN, and mapping
+  signals such as <code>STATUS_B_CAN2.SBR1RowDriverSeatSts =
+  STATUS_SDM.SBR1RowDriverSeatSts</code>;</li>
 <li><strong>IPC</strong> — the instrument panel, which displays indications and drives the
   buzzer based on what it receives on B-CAN.</li>
 </ul>
 <p>Requirements are written in a semi-formal style: a <code>@</code> condition
-(<code>@KeyStatus.info = keyon:</code>), followed by <em>shall</em> statements in if/else form.
-Each <em>shall</em> is a test seed.</p>
+(<code>@KeyStatus.info = keyon:</code>) followed by <em>shall</em> statements in if/else form.
+Train your eye here: <strong>each <em>shall</em> is a test seed</strong>.</p>
 <h3 id="mismatch-blinking-and-buzzer">Mismatch: blinking and buzzer<a class="headerlink" href="#mismatch-blinking-and-buzzer" title="Permanent link">&para;</a></h3>
-<p>The VF defines a mismatch table between the inserted gear and the transmission
-park brake status (<code>TPBMSts</code>), separately for <em>Keyon_EngineOff</em> and
-<em>Keyon_EngineOn</em> — e.g. lever in N with park brake <em>not</em> released → mismatch.
-From it:</p>
+<p>The VF defines a mismatch table between the inserted gear and the
+transmission park brake status (<code>TPBMSts</code>), separately for
+<em>Keyon_EngineOff</em> and <em>Keyon_EngineOn</em> — e.g. lever in N with park brake
+<em>not</em> released → mismatch. From it:</p>
 <ul>
 <li>when the MTA detects a mismatch for longer than the timeout
   <code>T_Gear_Mismatch</code> (trial value <strong>500 ms</strong>), it shall send
   <code>STATUS_C_TCM_MTA_DCTM.GearIndicationSts = Blinking</code> and
   <code>BuzzerReqSts = OtherCaseSoundOn</code>;</li>
-<li>when no mismatch is detected, it shall send <code>GearIndicationSts = Normal</code> and
-  <code>BuzzerReqSts = OFF</code>.</li>
+<li>when no mismatch is detected, it shall send <code>GearIndicationSts = Normal</code>
+  and <code>BuzzerReqSts = OFF</code>.</li>
 </ul>
 <p>That is a positive test (create the mismatch, wait out the timeout, read the
 CAN signals: blinking + buzzer on) and a negative test (no mismatch: signals
@@ -4801,19 +4803,19 @@ tests. For an <strong>R engagement request</strong> at <code>Keyon_EngineOn</cod
 <li>brake <strong>not</strong> pressed → MTA sends
   <code>RoboticTransmissionWarnings = Press_Brake_Pedal_Repeat_Warning</code> for
   <code>Tmessage</code> (trial value <strong>10 s</strong>) and forces N;</li>
-<li>speed too high → <code>Vehicle_Speed_Too_High_to_Shift_R</code> for <code>Tmessage</code>, force N;
-  if the speed then drops below <code>Rthreshold</code> while the lever is still in R, the
-  MTA shall stop the warning and insert R.</li>
+<li>speed too high → <code>Vehicle_Speed_Too_High_to_Shift_R</code> for <code>Tmessage</code>, force
+  N; if the speed then drops below <code>Rthreshold</code> while the lever is still in
+  R, the MTA shall stop the warning and insert R.</li>
 </ul>
 <p>Three tests minimum from one paragraph — plus the recovery path as a fourth.</p>
 <p>The symmetrical requirement exists for <strong>D engagement</strong> with
-<code>Forwardthreshold</code> (trial value <strong>−3 km/h</strong>): rolling backward faster than the
-threshold blocks the D engagement and raises
+<code>Forwardthreshold</code> (trial value <strong>−3 km/h</strong>): rolling backward faster than
+the threshold blocks the D engagement and raises
 <code>Vehicle_Speed_Too_High_to_Shift_D</code>.</p>
 <h3 id="drive-mode-a-small-state-machine">Drive mode: a small state machine<a class="headerlink" href="#drive-mode-a-small-state-machine" title="Permanent link">&para;</a></h3>
-<p>The Power/Eco button cycles three modes in a fixed sequence, with <code>Normal</code> as
-the predominant mode at every startup:</p>
-<pre class="mermaid"><code>stateDiagram-v2
+<p>The Power/Eco button cycles three modes in a fixed sequence, with <code>Normal</code>
+as the predominant mode at every startup:</p>
+<pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; Normal: startup (predominant mode)
     Normal --&gt; EcoPower: button press (after Tdebounce)
     EcoPower --&gt; PowerEco: button press (after Tdebounce)
@@ -4824,20 +4826,21 @@ the predominant mode at every startup:</p>
 key-off behavior (during <code>T_SHOW_OFF_MTA</code>, <strong>8 s</strong>, the MTA must still send
 <code>No_program_Selected</code>), and the debounce filtering itself.</p>
 <h3 id="diagnosis-missing-messages">Diagnosis: missing messages<a class="headerlink" href="#diagnosis-missing-messages" title="Permanent link">&para;</a></h3>
-<p>The VF's diagnosis table assigns each fault a type (electrical, plausibility,
-missing message), the node that stores it and its detection time. Example: if
-the MTA does not receive <code>STATUS_B_CAN</code> for at least <code>MissingMsg_Default_Time</code>
-(trial value <strong>2.5 s</strong>), it shall validate the DTC and assume a safe default —
-<code>DriverDoorSts = Closed</code>. When the message is received correctly again, the DTC
-is devalidated and real values are used. The IPC and BCM have analogous
-requirements for their input messages.</p>
-<p>The diagnostic test case: stop the message (easy on a simulator or bench), wait
-2.5 s, check the DTC is validated and the default is used; restart the message,
-check devalidation. The exact validation/invalidation timings come from the
-CDD.</p>
+<p>The VF's diagnosis table assigns each fault a type (electrical,
+plausibility, missing message), the node that stores it and its detection
+time. Example: if the MTA does not receive <code>STATUS_B_CAN</code> for at least
+<code>MissingMsg_Default_Time</code> (trial value <strong>2.5 s</strong>), it shall validate the DTC
+and assume a safe default — <code>DriverDoorSts = Closed</code>. When the message is
+received correctly again, the DTC is devalidated and real values are used.
+The IPC and BCM have analogous requirements for their input messages.</p>
+<p>The diagnostic test case writes itself: stop the message (easy on a
+simulator or bench), wait 2.5 s, check the DTC is validated and the default
+is used; restart the message, check devalidation. The exact
+validation/invalidation timings come from the CDD.</p>
 <h3 id="configuration-parameters-the-testers-cheat-sheet">Configuration parameters: the tester's cheat sheet<a class="headerlink" href="#configuration-parameters-the-testers-cheat-sheet" title="Permanent link">&para;</a></h3>
 <p>The VF closes with a table of calibrable parameters and their <em>first trial
-values</em> — these are the concrete numbers to use in preconditions and checks:</p>
+values</em> — these are the concrete numbers to use in your preconditions and
+checks:</p>
 <table>
 <thead>
 <tr>
@@ -4907,8 +4910,10 @@ values</em> — these are the concrete numbers to use in preconditions and check
 <div class="admonition warning">
 <p class="admonition-title">Trial values are calibrations, not constants</p>
 <p>These are <em>first trial values</em>: a later calibration release can change
-them. Always read the parameters from the VF release quoted in your test ID
-(<code>VFXXX_V5_R4</code>…) before writing timing checks.</p>
+them. Always read the parameters from the VF release quoted in your test
+ID (<code>VFXXX_V5_R4</code>…) before writing timing checks — a test written
+against 500 ms will fail confusingly the day the calibration moves to
+something else.</p>
 </div>
 <h2 id="where-tests-are-executed">Where tests are executed<a class="headerlink" href="#where-tests-are-executed" title="Permanent link">&para;</a></h2>
 <p>Once the tests for a VF are written, the test phase can run in three
@@ -4936,27 +4941,28 @@ environments, chosen per test type:</p>
 </tbody>
 </table>
 <p>Missing-message diagnostic tests and timing checks around hundreds of
-milliseconds are natural simulator candidates; the buzzer you must <em>hear</em> is a
-car test.</p>
+milliseconds are natural simulator candidates; the buzzer you must <em>hear</em> is
+a car test.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>Test cases are extracted from the <strong>VF</strong> (functional tests) and the
-  <strong>CDD</strong> (diagnostic tests) — never written freehand.</li>
-<li>Every requirement deserves a <strong>positive and a negative</strong> test; the pair
-  makes coverage robust.</li>
-<li>Test IDs embed the VF name, version and release (<code>VFXXX_V5_R4.TC001</code>) —
-  that is your traceability chain.</li>
+<li>You can extract test cases from the <strong>VF</strong> (functional tests) and the
+  <strong>CDD</strong> (diagnostic tests) — never write them freehand.</li>
+<li>Every requirement deserves a <strong>positive and a negative</strong> test; the
+  pair is what makes your coverage robust.</li>
+<li>Test IDs embed the VF name, version and release
+  (<code>VFXXX_V5_R4.TC001</code>) — that is your traceability chain.</li>
 <li>Requirements come as text, tables, truth tables, equations, state
-  machines and flowcharts; each form maps mechanically to tests, except
-  free text, which needs interpretation.</li>
-<li>VF analysis against the DBC catches wrong/missing signal names;
-  unobservable internal behavior becomes a <strong>component test</strong>, owned by the
-  supplier.</li>
-<li>The VF's parameter table (<code>T_Gear_Mismatch</code>, <code>MissingMsg_Default_Time</code>,
-  thresholds…) gives the concrete numbers for your checks — but they are
-  calibrable, so always test against the quoted release.</li>
-<li>Choose the execution environment per test: car for user-perceivable
+  machines and flowcharts; each form maps mechanically to tests — only
+  free text needs real interpretation, and that is where your judgment
+  grows.</li>
+<li>VF analysis against the DBC catches wrong/missing signal names before
+  they break your tests; unobservable internal behavior becomes a
+  <strong>component test</strong>, owned by the supplier.</li>
+<li>The VF's parameter table (<code>T_Gear_Mismatch</code>,
+  <code>MissingMsg_Default_Time</code>, thresholds…) hands you the concrete numbers
+  for your checks — just always test against the quoted release.</li>
+<li>You can pick the right environment per test: car for user-perceivable
   behavior, bench for electrical measurement, simulator for fast CAN
   stimulation.</li>
 </ul>
@@ -4964,19 +4970,20 @@ car test.</p>
 <div class="admonition tip">
 <p class="admonition-title">Where this leads</p>
 <p>You will manage the requirements behind these tests in
-<a href="../requirements/">Requirements</a>, dig deeper into the VF documents
-in <a href="../vf/">Vehicle Functions</a>, and automate execution on HIL rigs
-in <a href="../hil-users/">HIL Users</a>.</p>
+<a href="../requirements/">Requirements</a>, dig deeper into the VF
+documents in <a href="../vf/">Vehicle Functions</a>, and automate execution
+on HIL (Hardware-in-the-Loop) rigs in
+<a href="../hil-users/">HIL Users</a>.</p>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/24_TestCases/Checklist.pdf">Checklist</a> — PDF, 31.2 KB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/24_TestCases/Functional_Specification.pdf">Functional Specification</a> — PDF, 722.6 KB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/24_TestCases/Procedure_for_drafting_Test_Cases.pdf">Procedure for drafting Test Cases</a> — PDF, 608.4 KB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/24_TestCases/Test_cases_creation.pdf">Test cases creation</a> — PDF, 392.3 KB</li>
-<li>:material-file-pdf-box: <a href="../../assets/mil3/24_TestCases/VFxxx.pdf">VFxxx</a> — PDF, 379.8 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/24_TestCases/Checklist.pdf">Checklist</a> — PDF, 31.2 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/24_TestCases/Functional_Specification.pdf">Functional Specification</a> — PDF, 722.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/24_TestCases/Procedure_for_drafting_Test_Cases.pdf">Procedure for drafting Test Cases</a> — PDF, 608.4 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/24_TestCases/Test_cases_creation.pdf">Test cases creation</a> — PDF, 392.3 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil3/24_TestCases/VFxxx.pdf">VFxxx</a> — PDF, 379.8 KB</li>
 </ul>
 
 
@@ -5006,6 +5013,7 @@ in <a href="../hil-users/">HIL Users</a>.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -5064,6 +5072,41 @@ in <a href="../hil-users/">HIL Users</a>.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -5076,8 +5119,21 @@ in <a href="../hil-users/">HIL Users</a>.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

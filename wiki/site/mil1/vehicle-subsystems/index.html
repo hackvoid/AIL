@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4560,13 +4548,27 @@
 
 
 <h1 id="vehicle-subsystems">Vehicle Subsystems<a class="headerlink" href="#vehicle-subsystems" title="Permanent link">&para;</a></h1>
-<p>A modern vehicle is a collection of cooperating subsystems: the brakes and their
-electronic assistants, the charging and starting hardware, the exhaust
-after-treatment chain, the valve train, the transmission, and the drive layout.
-This lesson tours each of them so that, later in the bootcamp, you understand
-<em>what</em> the ECUs you will test and calibrate are actually controlling. The focus
-is on the physical principle of each subsystem and on how the electronic control
-layer sits on top of the mechanics.</p>
+<p>Welcome to your guided tour under the skin of a modern car. Before you test,
+calibrate or diagnose an Electronic Control Unit (ECU) — the small computers
+that run everything in a vehicle — you need to know <em>what those ECUs are
+actually controlling</em>. This lesson walks you through the subsystems you will
+meet again and again during the bootcamp: the brakes and their electronic
+assistants, the charging and starting hardware, the exhaust after-treatment
+chain, the valve train, the transmission, and the drive layout. For each one we
+look at the physical principle first, then at how the electronic control layer
+sits on top of the mechanics. When you finish, you will be able to look at any
+of these systems and explain what it does, what the ECU measures, and what it
+commands — the exact mental model every later lesson builds on.</p>
+<pre class="kx-mermaid"><code>flowchart LR
+    V["The vehicle"] --&gt; B["Braking &amp;&lt;br/&gt;stability"]
+    V --&gt; C["Charging &amp;&lt;br/&gt;starting"]
+    V --&gt; E["Emission&lt;br/&gt;control"]
+    V --&gt; VT["Valve&lt;br/&gt;timing"]
+    V --&gt; T["Transmission"]
+    V --&gt; D["Drive&lt;br/&gt;layout"]</code></pre>
+<p>Don't worry about memorizing everything on the first pass — treat this article
+as a map you can come back to whenever a later lesson mentions a subsystem you
+want to place in the bigger picture.</p>
 <h2 id="braking-system">Braking system<a class="headerlink" href="#braking-system" title="Permanent link">&para;</a></h2>
 <h3 id="drum-brakes-and-disk-brakes">Drum brakes and disk brakes<a class="headerlink" href="#drum-brakes-and-disk-brakes" title="Permanent link">&para;</a></h3>
 <p>Both designs convert the driver's pedal force into friction that slows the
@@ -4604,12 +4606,13 @@ wheel, but they do it differently:</p>
 </table>
 <p><img alt="Disk brake (left) and drum brake (right) component layout" src="img/brake-types.webp" /></p>
 <p>The hydraulic circuit is what translates pedal travel into clamping force: the
-pressure of the brake fluid in the circuit rises with pedal effort, so the force
-on the pads stays proportional to what the driver requests.</p>
+pressure of the brake fluid in the circuit rises with pedal effort, so the
+force on the pads stays proportional to what the driver requests.</p>
 <h3 id="oversteer-and-understeer">Oversteer and understeer<a class="headerlink" href="#oversteer-and-understeer" title="Permanent link">&para;</a></h3>
-<p>Two terms describe how a car deviates from the trajectory the driver intends in
-a curve, and they matter because the electronic stability systems below exist to
-correct exactly these behaviors:</p>
+<p>Before we meet the electronic assistants, learn two words you will hear
+constantly. They describe how a car deviates from the trajectory the driver
+intends in a curve — and they matter because the stability systems below exist
+to correct exactly these behaviors:</p>
 <ul>
 <li><strong>Oversteer</strong> — the car turns <em>tighter</em> than intended; the rear axle loses
   adhesion and the tail steps out, which can lead to a spin if uncorrected.</li>
@@ -4619,8 +4622,9 @@ correct exactly these behaviors:</p>
   front wheels lock under braking.</li>
 </ul>
 <h3 id="abs-antilock-brake-system">ABS — Antilock Brake System<a class="headerlink" href="#abs-antilock-brake-system" title="Permanent link">&para;</a></h3>
-<p>A locked wheel cannot steer: it slides, and the tire's grip collapses. ABS
-exists to keep the wheels at the edge of locking instead of beyond it.</p>
+<p>A locked wheel cannot steer: it slides, and the tire's grip collapses. The
+<strong>Antilock Brake System (ABS)</strong> exists to keep the wheels at the edge of
+locking instead of beyond it.</p>
 <p>Each wheel carries a speed pickup — a toothed <strong>phonic wheel</strong> (an angular
 position transducer) read by an <strong>inductive proximity sensor</strong>. The ABS control
 unit computes the rotational speed of every wheel from these signals. When it
@@ -4628,7 +4632,7 @@ detects that one or more wheels are decelerating far faster than the vehicle
 can physically slow down — the signature of an imminent lock — it modulates the
 hydraulic pressure to that wheel's brake, releasing and re-applying it many
 times per second, while the driver keeps full braking and steering authority.</p>
-<pre class="mermaid"><code>sequenceDiagram
+<pre class="kx-mermaid"><code>sequenceDiagram
     participant W as Wheel speed sensor
     participant ECU as ABS control unit
     participant H as Hydraulic modulator
@@ -4651,19 +4655,20 @@ the vehicle stays controllable.</p>
 </div>
 <h3 id="ebd-electronic-brakeforce-distribution">EBD — Electronic Brakeforce Distribution<a class="headerlink" href="#ebd-electronic-brakeforce-distribution" title="Permanent link">&para;</a></h3>
 <p>The load on each wheel during braking is never equal: weight transfers forward,
-so the rear wheels unload and have less grip on the asphalt. If they receive the
-same brake force as the front, they lock first — and a locked rear axle destroys
-the car's directional stability and can make it spin.</p>
-<p>EBD uses the ABS hardware (wheel speed sensors and the hydraulic modulator) to
-apportion brake force between the axles. It lightens the braking force on one
-or both rear wheels — especially in corners, where the inner rear wheel is most
-unloaded — so that lock-up is avoided at the axle that can least afford it.
-Think of it as ABS logic applied <em>preventively</em> to the brake balance, rather
-than reactively to a locking wheel.</p>
+so the rear wheels unload and have less grip on the asphalt. If they receive
+the same brake force as the front, they lock first — and a locked rear axle
+destroys the car's directional stability and can make it spin.</p>
+<p><strong>Electronic Brakeforce Distribution (EBD)</strong> uses the ABS hardware (wheel speed
+sensors and the hydraulic modulator) to apportion brake force between the
+axles. It lightens the braking force on one or both rear wheels — especially in
+corners, where the inner rear wheel is most unloaded — so that lock-up is
+avoided at the axle that can least afford it. Think of it as ABS logic applied
+<em>preventively</em> to the brake balance, rather than reactively to a locking wheel.</p>
 <h3 id="esc-electronic-stability-control">ESC — Electronic Stability Control<a class="headerlink" href="#esc-electronic-stability-control" title="Permanent link">&para;</a></h3>
-<p>ESC (Bosch markets it as <strong>ESP</strong>, Electronic Stability Program; other
-manufacturers use names such as DSC) is the system that fights oversteer and
-understeer directly.</p>
+<p><strong>Electronic Stability Control (ESC)</strong> is the system that fights oversteer and
+understeer directly. Bosch markets it as <strong>ESP</strong> (Electronic Stability
+Program), and other manufacturers use names such as DSC — same idea, different
+badge.</p>
 <p>When the car starts to skid — the measured yaw behavior no longer matches what
 the steering angle implies the driver wants — ESC intervenes on two channels at
 once:</p>
@@ -4675,10 +4680,10 @@ once:</p>
    intended attitude.</li>
 </ol>
 <h3 id="tcs-asr-traction-control-system">TCS / ASR — Traction Control System<a class="headerlink" href="#tcs-asr-traction-control-system" title="Permanent link">&para;</a></h3>
-<p>Traction control is the acceleration-side counterpart of ABS: it prevents the
-drive wheels from spinning when the driver asks for more torque than the
-surface can transmit — typical on rain-soaked or icy pavement, or whenever one
-wheel loses traction.</p>
+<p>The <strong>Traction Control System (TCS)</strong>, also called ASR, is the
+acceleration-side counterpart of ABS: it prevents the drive wheels from
+spinning when the driver asks for more torque than the surface can transmit —
+typical on rain-soaked or icy pavement, or whenever one wheel loses traction.</p>
 <p>Using the same wheel speed sensors as ABS, the controller identifies a spinning
 wheel and intervenes, depending on the system design, on one or both of:</p>
 <ul>
@@ -4731,16 +4736,18 @@ so the vehicle does not roll backwards.</p>
 <div class="admonition tip">
 <p class="admonition-title">One hardware platform, many functions</p>
 <p>ABS, EBD, ESC, TCS and Hill Holder share the same sensors (wheel speed),
-the same hydraulic modulator and largely the same ECU. When you test one of
-them on a HIL rig or in the vehicle, you are really testing the whole
-braking-control platform from different functional angles.</p>
+the same hydraulic modulator and largely the same ECU. When you later test
+one of them on a Hardware-in-the-Loop (HIL) rig or in the vehicle, you are
+really testing the whole braking-control platform from different functional
+angles — a useful thing to remember when you plan your test cases.</p>
 </div>
 <h2 id="charging-and-starting">Charging and starting<a class="headerlink" href="#charging-and-starting" title="Permanent link">&para;</a></h2>
 <h3 id="the-alternator-and-the-smart-alternator">The alternator — and the Smart Alternator<a class="headerlink" href="#the-alternator-and-the-smart-alternator" title="Permanent link">&para;</a></h3>
 <p>The alternator's job is to keep the battery charged: the battery is needed to
 start the engine and to power every electrical function on board. The
-alternator produces alternating current, and since AC cannot be stored, a
-<strong>rectifier bridge</strong> converts it to DC so the battery can accumulate it.</p>
+alternator produces alternating current (AC), and since AC cannot be stored, a
+<strong>rectifier bridge</strong> converts it to direct current (DC) so the battery can
+accumulate it.</p>
 <p>A classic alternator draws mechanical power from the engine almost constantly.
 A <strong>Smart Alternator (SAM)</strong> instead varies how much power it takes from the
 engine depending on the vehicle's running state — for example charging
@@ -4758,23 +4765,26 @@ disengages.</p>
 <h2 id="emission-control-subsystems">Emission-control subsystems<a class="headerlink" href="#emission-control-subsystems" title="Permanent link">&para;</a></h2>
 <p>Exhaust after-treatment is a chain of devices, each targeting specific
 pollutants. Understanding which device does what — and what the ECU measures to
-control it — is essential before you ever look at a diagnostic trouble code in
-this area.</p>
+control it — is essential before you ever look at a Diagnostic Trouble Code
+(DTC, the standardized error codes you will read in the MIL2 diagnosis
+lessons) in this area.</p>
 <h3 id="egr-exhaust-gas-recirculation">EGR — Exhaust Gas Recirculation<a class="headerlink" href="#egr-exhaust-gas-recirculation" title="Permanent link">&para;</a></h3>
-<p>EGR takes a small portion (typically <strong>5–15%</strong>) of the exhaust gas and routes
-it from the exhaust manifold back into the intake manifold, where it is
-aspirated into the cylinders with the fresh charge.</p>
+<p><strong>Exhaust Gas Recirculation (EGR)</strong> takes a small portion (typically <strong>5–15%</strong>)
+of the exhaust gas and routes it from the exhaust manifold back into the intake
+manifold, where it is aspirated into the cylinders with the fresh charge.</p>
 <p>The recirculated gases are burnt and inert: they do not participate in
 combustion. That is precisely the point — they dilute the combustible mixture,
 which lowers the <strong>peak combustion temperature</strong>, and lower peak temperatures
 sharply reduce the formation of <strong>nitrogen oxides (NOx)</strong>. The trade-off is a
 reduction in the power the cycle can deliver.</p>
 <p><img alt="EGR circuit: exhaust gas passes through a cooler and a PWM-controlled valve into the intake" src="img/egr-schematic.webp" /></p>
-<p>The engine control unit drives the <strong>EGR valve with a PWM signal</strong>: by varying
-the duty cycle it regulates exactly how much exhaust gas is recirculated for
-the current operating point. Many systems add an <strong>EGR cooler</strong> (a small heat
-exchanger fed by engine coolant) to drop the recirculated gas temperature,
-which improves the NOx reduction further.</p>
+<p>The engine control unit drives the <strong>EGR valve with a Pulse-Width Modulation
+(PWM) signal</strong> — a square wave whose <em>duty cycle</em> (the percentage of time it
+stays on) sets how far the valve opens. By varying the duty cycle, the ECU
+regulates exactly how much exhaust gas is recirculated for the current
+operating point. Many systems add an <strong>EGR cooler</strong> (a small heat exchanger fed
+by engine coolant) to drop the recirculated gas temperature, which improves the
+NOx reduction further.</p>
 <h3 id="the-lambda-probe-closed-loop-mixture-control">The lambda probe — closed-loop mixture control<a class="headerlink" href="#the-lambda-probe-closed-loop-mixture-control" title="Permanent link">&para;</a></h3>
 <p>The <strong>lambda probe</strong> (oxygen sensor) measures the oxygen concentration in the
 exhaust gas by comparing it against the oxygen in the ambient air at the other
@@ -4805,7 +4815,9 @@ in the exhaust — and therefore whether the mixture burnt rich or lean.</p>
 </table>
 <p>The probe reports this to the engine ECU as an electrical signal, and the ECU
 uses it in a feedback loop to correct the amount of fuel injected into the
-combustion chamber, hunting continuously around λ = 1 on petrol engines.</p>
+combustion chamber, hunting continuously around λ = 1 on petrol engines. This
+is your first real example of <strong>closed-loop control</strong>, a pattern you will see
+everywhere in this job: measure, compare against a target, correct, repeat.</p>
 <p><img alt="Lambda probe characteristic: output voltage steps from ~1 V (rich) to ~0 V (lean) at λ = 1" src="img/lambda-curve.webp" /></p>
 <p>Three probe technologies exist:</p>
 <ul>
@@ -4867,29 +4879,29 @@ contributes to reducing exhaust noise.</p>
 engines pair it with closed-loop lambda control. Diesel engines run lean, so
 they need the separate devices described next.</p>
 <h3 id="dpf-diesel-particulate-filter">DPF — Diesel Particulate Filter<a class="headerlink" href="#dpf-diesel-particulate-filter" title="Permanent link">&para;</a></h3>
-<p>The DPF physically traps fine particulate matter (soot) from diesel exhaust. It
-is combined with a pre-catalyst: exhaust gas collected from the manifold passes
-through the pre-catalyst, then through the filter itself, and continues towards
-the downstream exhaust components and the outlet.</p>
-<p>Because trapped soot accumulates, a <strong>diagnosis and management software</strong> in the
-ECU continuously monitors the filter's state — loading, pressure drop,
+<p>The <strong>Diesel Particulate Filter (DPF)</strong> physically traps fine particulate
+matter (soot) from diesel exhaust. It is combined with a pre-catalyst: exhaust
+gas collected from the manifold passes through the pre-catalyst, then through
+the filter itself, and continues towards the downstream exhaust components and
+the outlet.</p>
+<p>Because trapped soot accumulates, a <strong>diagnosis and management software</strong> in
+the ECU continuously monitors the filter's state — loading, pressure drop,
 temperature — to guarantee correct operation and to manage the filter's
 maintenance (the regeneration events that burn the stored soot off). When you
 later meet DPF-related diagnostic trouble codes, they come from exactly this
 monitoring software.</p>
 <h3 id="scr-selective-catalytic-reduction">SCR — Selective Catalytic Reduction<a class="headerlink" href="#scr-selective-catalytic-reduction" title="Permanent link">&para;</a></h3>
-<p>SCR is the diesel answer to NOx. A reducing agent — in practice a urea solution
-(AdBlue), which decomposes to ammonia — is injected into the exhaust stream
-upstream of a dedicated catalyst. On the catalyst surface the reductant
-reacts with the nitrogen oxides and converts them to harmless nitrogen and
-water.</p>
+<p><strong>Selective Catalytic Reduction (SCR)</strong> is the diesel answer to NOx. A reducing
+agent — in practice a urea solution (AdBlue), which decomposes to ammonia — is
+injected into the exhaust stream upstream of a dedicated catalyst. On the
+catalyst surface the reductant reacts with the nitrogen oxides and converts
+them to harmless nitrogen and water.</p>
 <p>The subtle engineering point of SCR is the catalyst selectivity: it must make
 <strong>NO react with the available oxygen and not consume the ammonia (NH3)</strong>
-unproductively. SCR systems are common both in industrial combustion plants and
-in automotive diesel applications, and they add their own sensors (NOx sensors,
-tank level, dosing quality monitoring) that you will see in diagnostics.</p>
+unproductively. SCR systems add their own sensors (NOx sensors, tank level,
+dosing quality monitoring) that you will see in diagnostics later.</p>
 <h3 id="how-the-chain-fits-together">How the chain fits together<a class="headerlink" href="#how-the-chain-fits-together" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     ENG["Engine"] --&gt; EXH["Exhaust manifold"]
     EXH -.-&gt;|"5-15% recirculated"| EGR["EGR valve + cooler"]
     EGR --&gt; INT["Intake manifold"]
@@ -4914,7 +4926,8 @@ opening points.</p>
 <p>With <strong>fixed timing</strong>, the camshaft is a simple component with fixed lobe
 geometry: the phasing is constant, the opening and closing moments never
 advance or retard with engine speed, and the engine behaves the same way at
-every rpm — a compromise tuned for one operating region.</p>
+every rpm (revolutions per minute) — a compromise tuned for one operating
+region.</p>
 <p>With <strong>variable valve timing (VVT)</strong>, the valve events shift as engine speed
 changes. The benefit is that performance, fuel consumption and emissions can
 each be optimized in their own operating region instead of compromising on one.
@@ -4956,13 +4969,10 @@ switches to a performance-oriented phasing.</p>
 </tr>
 </tbody>
 </table>
-<p>Almost every manufacturer has a branded implementation: Alfa Romeo's phase
-variator (the first on a production car), Toyota's VVT and VVT-iE, Honda's VTEC
-(including 3-stage VTEC), Mitsubishi's MIVEC, Porsche's VarioCam and VarioCam
-Plus, Nissan's VVL/N-VCT/CVTC/VVEL, BMW's VANOS and Valvetronic, Subaru's AVCS,
-Mazda's S-VT, Ford's VCT, Rover's VVC, Fiat's VFD and <strong>Multiair</strong>, and
-Daimler's CamTronic. Some systems additionally allow valves to stay shut by
-sliding the cams along the shaft — the basis of cylinder shut-off.</p>
+<p>Almost every manufacturer has a branded implementation — Toyota's VVT-i, Honda's
+VTEC and BMW's Valvetronic are names you may already have heard. You do not
+need to know them all; the one that matters most for this course is Fiat's
+<strong>Multiair</strong>, covered next, because you are likely to meet it on real projects.</p>
 <h3 id="multiair-electro-hydraulic-valve-control">Multiair — electro-hydraulic valve control<a class="headerlink" href="#multiair-electro-hydraulic-valve-control" title="Permanent link">&para;</a></h3>
 <p>Multiair is Fiat's valve-opening control system (developed from 2002, first
 seen on a production FIRE engine in 2009) for petrol and diesel engines. Its
@@ -4987,14 +4997,15 @@ hydraulically:</p>
 <p>Because the ECU commands the chamber valve cycle by cycle, the effective intake
 valve law becomes a software parameter rather than a machined piece of metal —
 which is why Multiair is a calibration-heavy subsystem when it comes to engine
-control development.</p>
+control development, and a great preview of the kind of work you will do with
+calibration tools like INCA in MIL3.</p>
 <h2 id="transmission">Transmission<a class="headerlink" href="#transmission" title="Permanent link">&para;</a></h2>
 <h3 id="why-a-gearbox-exists">Why a gearbox exists<a class="headerlink" href="#why-a-gearbox-exists" title="Permanent link">&para;</a></h3>
-<p>The gearbox modifies the <strong>torque characteristic</strong> (not the power) coming out of
-the engine — conceptually it works like a selectable speed reducer between the
-engine and the wheels. By choosing among the available ratios, it varies the
-relationship between engine speed and vehicle speed so the wheels always get an
-appropriate drive torque.</p>
+<p>The gearbox modifies the <strong>torque characteristic</strong> (not the power) coming out
+of the engine — conceptually it works like a selectable speed reducer between
+the engine and the wheels. By choosing among the available ratios, it varies
+the relationship between engine speed and vehicle speed so the wheels always
+get an appropriate drive torque.</p>
 <p>This matters because the engine's optimal operating point depends on the
 situation:</p>
 <ul>
@@ -5005,41 +5016,44 @@ situation:</p>
   wheel torque.</li>
 </ul>
 <p>The driver (or an automatic controller) picks the ratio; the gearbox does the
-rest.</p>
+rest. The three transmission families below differ mainly in <em>who</em> operates the
+clutch and <em>how</em> the next ratio is prepared.</p>
 <h3 id="mta-automated-manual-transmission">MTA — Automated Manual Transmission<a class="headerlink" href="#mta-automated-manual-transmission" title="Permanent link">&para;</a></h3>
-<p>The MTA (also called a robotized gearbox) starts from an ordinary manual
-gearbox and replaces the driver's hand and foot with <strong>actuators</strong>: the
-electronics operate the clutch and perform gear selection and engagement
-autonomously. The control unit sequences the whole shift — clutch disengagement,
-ratio change, clutch re-engagement. By extension, gearboxes designed from the
-start for automatic actuation but still using manual-gearbox mechanics (gears
-coupled by sleeves and synchronizers) are also considered robotized manuals.</p>
+<p>The <strong>Automated Manual Transmission (MTA)</strong>, also called a robotized gearbox,
+starts from an ordinary manual gearbox and replaces the driver's hand and foot
+with <strong>actuators</strong>: the electronics operate the clutch and perform gear
+selection and engagement autonomously. The control unit sequences the whole
+shift — clutch disengagement, ratio change, clutch re-engagement. By extension,
+gearboxes designed from the start for automatic actuation but still using
+manual-gearbox mechanics (gears coupled by sleeves and synchronizers) are also
+considered robotized manuals.</p>
 <h3 id="dct-dual-clutch-transmission">DCT — Dual Clutch Transmission<a class="headerlink" href="#dct-dual-clutch-transmission" title="Permanent link">&para;</a></h3>
-<p>A DCT contains <strong>two input shafts, each with its own clutch</strong>, nested so that
-both connect to the output shaft. The trick is in the ratio assignment:</p>
+<p>A <strong>Dual Clutch Transmission (DCT)</strong> contains <strong>two input shafts, each with its
+own clutch</strong>, nested so that both connect to the output shaft. The trick is in
+the ratio assignment:</p>
 <ul>
 <li>one shaft carries the <strong>odd</strong> gears,</li>
 <li>the other shaft carries the <strong>even</strong> gears.</li>
 </ul>
-<pre class="mermaid"><code>flowchart LR
+<pre class="kx-mermaid"><code>flowchart LR
     E["Engine"] --&gt; C1["Clutch 1"]
     E --&gt; C2["Clutch 2"]
-    C1 --&gt; S1["Shaft 1: gears 1-3-5"]
-    C2 --&gt; S2["Shaft 2: gears 2-4-6"]
+    C1 --&gt; S1["Shaft 1&lt;br/&gt;odd gears 1-3-5"]
+    C2 --&gt; S2["Shaft 2&lt;br/&gt;even gears 2-4-6"]
     S1 --&gt; O["Output shaft"]
-    S2 --&gt; O
-    S2 -.-&gt;|"next gear pre-selected"| S2</code></pre>
+    S2 --&gt; O</code></pre>
 <p>Both shafts rotate simultaneously, but only the one whose clutch is engaged
 transmits torque. While you drive in third, the second shaft already has fourth
-<strong>pre-selected and waiting</strong>; the shift itself is just a swap of which clutch is
-closed. The advantage is a remarkable shifting speed, with no torque
+<strong>pre-selected and waiting</strong>; the shift itself is just a swap of which clutch
+is closed. The advantage is a remarkable shifting speed, with no torque
 interruption worth mentioning.</p>
 <h3 id="at-conventional-automatic-transmission">AT — Conventional Automatic Transmission<a class="headerlink" href="#at-conventional-automatic-transmission" title="Permanent link">&para;</a></h3>
-<p>The classic automatic uses an <strong>epicyclic (planetary) gear set</strong>: several
-planetary systems in series, each able to produce a different ratio when
-internal <strong>brakes</strong> hold one element — ring gear, sun pinion or planet carrier —
-depending on which ratio is needed. Shifting is typically governed by a
-hydraulic circuit whose pressure reflects vehicle speed via a speed detector.</p>
+<p>The classic <strong>Automatic Transmission (AT)</strong> uses an <strong>epicyclic (planetary)
+gear set</strong>: several planetary systems in series, each able to produce a
+different ratio when internal <strong>brakes</strong> hold one element — ring gear, sun
+pinion or planet carrier — depending on which ratio is needed. Shifting is
+typically governed by a hydraulic circuit whose pressure reflects vehicle speed
+via a speed detector.</p>
 <p>A hydraulic automatic transmission consists of three main parts:</p>
 <ol>
 <li><strong>Torque converter</strong> — sits between engine and gearbox where a manual car
@@ -5052,7 +5066,7 @@ hydraulic circuit whose pressure reflects vehicle speed via a speed detector.</p
    inside the gear set.</li>
 </ol>
 <h2 id="drive-layouts-traction">Drive layouts (traction)<a class="headerlink" href="#drive-layouts-traction" title="Permanent link">&para;</a></h2>
-<p>The traction layout decides which wheels receive the engine's torque:</p>
+<p>Last stop on the tour: which wheels actually receive the engine's torque.</p>
 <table>
 <thead>
 <tr>
@@ -5092,34 +5106,38 @@ everyday conditions, some off-road vehicles and high-performance applications;
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>Disk brakes clamp pads on a disk; drum brakes push shoes inside a drum —
-  and all electronic braking assistants (ABS, EBD, ESC, TCS, Hill Holder)
-  build on the same wheel-speed sensors and hydraulic modulator.</li>
-<li>Oversteer (tighter line, rear slips) and understeer (wider line, front
-  pushes) are the two behaviors ESC corrects by braking individual wheels
-  and cutting engine torque.</li>
-<li>The Smart Alternator varies its load on the engine with the driving
-  state; the starter motor only needs to crank the engine until combustion
-  becomes self-sustaining.</li>
-<li>Emission control is a chain: EGR prevents NOx in the cylinder (5–15%
-  recirculation, PWM-controlled), the lambda probe closes the mixture loop
-  around λ = 1, the catalyst (one-/two-/three-way) converts CO, HC and NOx,
-  and diesels add a monitored DPF plus urea-based SCR.</li>
-<li>Variable valve timing adapts valve events to rpm; Multiair goes further
-  and makes the intake valve law a per-cycle software decision via an
-  oil-filled tappet chamber.</li>
-<li>Transmission types differ in <em>who</em> operates the clutch: MTA robotizes a
-  manual, DCT pre-selects the next gear on a second clutch shaft, and the
-  classic AT combines a torque converter with planetary gears.</li>
-<li>Traction layouts: FWD and RWD pick an axle; 4WD splits torque equally,
-  AWD lets the ECU redistribute it continuously.</li>
+<li>You now have the map: six subsystem families, each with mechanics
+  underneath and an ECU on top — measure, decide, actuate.</li>
+<li>All braking assistants (ABS, EBD, ESC, TCS, Hill Holder) share one
+  hardware platform: wheel-speed sensors plus a hydraulic modulator. ESC
+  additionally cuts engine torque to correct oversteer and understeer.</li>
+<li>Emission control is a chain you can recite: EGR prevents NOx in the
+  cylinder (5–15% recirculation, PWM-driven), the lambda probe closes the
+  mixture loop around λ = 1, the catalyst (one-/two-/three-way, best at
+  180–380 °C) converts CO, HC and NOx, and diesels add a monitored DPF
+  plus urea-based SCR.</li>
+<li>Variable valve timing adapts valve events to rpm; Multiair turns the
+  intake valve law into per-cycle software — your first taste of why
+  calibration matters.</li>
+<li>Transmissions differ in <em>who</em> works the clutch: MTA robotizes a manual,
+  DCT pre-selects the next gear on a second clutch shaft, AT pairs a
+  torque converter with planetary gears. FWD/RWD pick an axle; 4WD splits
+  torque equally, AWD lets the ECU redistribute it continuously.</li>
 </ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Where this leads</p>
+<p>You will see these subsystems from the ECU's point of view very soon: their
+signals travel on the buses from <a href="../can-lin/">CAN, LIN &amp; Automotive
+Ethernet</a>, and their faults surface as the Diagnostic
+Trouble Codes you will read in the <a href="../../mil2/diagnosis/">Diagnosis</a>
+lessons of MIL2.</p>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil1/Vehicle_Subsystems/Vehicle_Subsystems.pdf">Vehicle Subsystems</a> — PDF, 1.8 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil1/Vehicle_Subsystems/Vehicle_Subsystems.pdf">Vehicle Subsystems</a> — PDF, 1.8 MB</li>
 </ul>
 
 
@@ -5149,6 +5167,7 @@ everyday conditions, some off-road vehicles and high-performance applications;
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -5207,6 +5226,41 @@ everyday conditions, some off-road vehicles and high-performance applications;
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -5219,8 +5273,21 @@ everyday conditions, some off-road vehicles and high-performance applications;
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

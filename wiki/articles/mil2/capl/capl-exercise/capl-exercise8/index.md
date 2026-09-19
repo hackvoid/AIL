@@ -1,59 +1,75 @@
-# CAPL Exercise 8 — Logging, Graphics and a First CAPL Node
+# CAPL Exercise 8 — Logging, Graphics and Your First CAPL Node
 
-This exercise closes the CAPL lesson block by combining two skills in one
-working configuration: setting up a complete CANoe/CANalyzer measurement
-(trace logging plus signal graphics, as in the earlier CANalyzer/IG exercise)
-and writing your first **CAPL program node** that reacts to the measurement
-lifecycle and to live bus traffic.
+Welcome to the final exercise of the CAPL (**Communication Access Programming
+Language**, Vector's C-like scripting language for CANoe/CANalyzer) block.
+Everything you have practiced so far comes together here: you will set up a
+complete measurement on a real bus *and* write your first CAPL program node
+that reacts to that measurement as it runs.
+
+By the end of this exercise you will be able to:
+
+- build a CANoe/CANalyzer configuration that **observes and logs** live CAN
+  (Controller Area Network) traffic from a real ECU (Electronic Control Unit),
+- **plot at least two signals of interest** in a Graphics window and watch
+  them evolve with real samples,
+- write a **CAPL node** that prints `"Started"` / `"Stopped"` around the
+  measurement, prints the payload of a received CAN message, and transmits a
+  cyclic frame that the connected ECU actually accepts.
+
+What you'll practice: thinking like a test engineer — observe first, then
+script behavior on top of what you see.
 
 ## Goal
 
 Build a configuration that:
 
-1. **Observes and logs** the CAN trace coming from the real ECU connected to
-   the CANcase interface.
-2. **Displays at least two signals of interest in a Graphics window** with
-   enough samples to see them evolve over time.
-3. Hosts a **CAPL node** that:
+1. **Observes and logs** the CAN trace coming from the real ECU wired to your
+   CANcase interface (the same measurement setup you built in the CANalyzer/IG
+   exercise — IG being the *Interactive Generator* used to send frames by
+   hand).
+2. **Displays at least two signals of interest in a Graphics window**, with
+   enough samples to see them move over time.
+3. Hosts a **CAPL program node** that:
    - prints `"Started"` when the measurement begins,
    - prints `"Stopped"` when the measurement ends,
    - prints the raw payload of one specific received CAN message,
-   - transmits a CAN message at the correct cycle time so that the connected
-     ECU actually accepts it.
+   - transmits a CAN message at the correct cycle time so the connected ECU
+     accepts it without raising an error.
 
 ## Setup
 
-- **CANoe or CANalyzer** (a licensed demo version is enough), with a
-  **CANcaseXL** (or compatible Vector interface) wired to the target ECU.
-- The **DBC files** supplied with the exercise: they describe the platform's
-  BH-CAN and C-CAN networks. Assign the one matching the bus your CANcase
-  channel is physically connected to — without a database, the Graphics
-  window cannot resolve raw frames into named signals.
-- A new configuration (File → New → CAN template), with the hardware channel
-  mapped and the correct bit rate set for the bus.
+- **CANoe or CANalyzer** — a licensed demo version is enough for this
+  exercise.
+- A **CANcaseXL** (or compatible Vector interface) cabled to the target ECU.
+- The **DBC (Database CAN) files** supplied with the exercise, describing the
+  platform's BH-CAN and C-CAN networks. Assign the one matching the bus your
+  CANcase channel is physically connected to — without a database, the
+  Graphics window cannot turn raw frames into named signals.
+- A fresh configuration (File → New → CAN template) with the hardware channel
+  mapped and the correct bit rate for the bus.
 
 !!! tip "Check the bus first"
-    Before writing any code, run a plain measurement and confirm you see
-    traffic in the Trace window. No traffic usually means a wrong bit rate,
-    a missing termination, or the wrong channel mapping — fix that before
-    moving on.
+    Before writing a single line of CAPL, run a plain measurement and confirm
+    traffic shows up in the Trace window. A silent bus almost always means a
+    wrong bit rate, a missing termination, or a wrong channel mapping — fix
+    that now, not after you've written your script.
 
-## Step-by-step procedure
+## Steps
 
 ### 1. Trace and logging
 
 1. Add a **Trace window** (Configuration → Trace) so you can watch frames
    live, decoded through the DBC.
-2. Insert a **Logging block** in the Measurement Setup and configure the
-   destination file (`.asc` is fine for this exercise) and trigger mode.
-   Start a measurement, let it run a few seconds, stop it, and reopen the
-   logged file to verify frames were actually recorded.
+2. Insert a **Logging block** in the Measurement Setup, point it at a
+   destination file (`.asc` is fine here) and set the trigger mode.
+3. Start a measurement, let it run a few seconds, stop it, then reopen the
+   logged file and confirm frames were actually recorded.
 
 ### 2. Graphics window
 
 1. Add a **Graphics window** and drag at least two signals of interest from
-   the symbol explorer (DBC tree) into it — pick signals that actually change
-   (a counter, a speed, a state machine), not constants.
+   the symbol explorer (the DBC tree) into it. Pick signals that actually
+   change — a counter, a speed, a state machine — not constants.
 2. Run the measurement long enough to collect visible samples and confirm
    both curves update.
 
@@ -61,7 +77,9 @@ Build a configuration that:
 
 Insert a **program node** in the Measurement Setup (right-click on the CAN
 bus line → *Insert CAPL Test Module / Program node*) and open the CAPL
-Browser. The program is organized around **event handlers**:
+Browser. CAPL is purely **event-driven**: instead of a main loop, you write
+handlers that fire when something happens. Your whole program is four small
+handlers:
 
 ```mermaid
 flowchart LR
@@ -107,54 +125,54 @@ on stopMeasure
 }
 ```
 
-Key points:
+Walk through it once, handler by handler:
 
-- **`on start` / `on stopMeasure`** bracket the whole measurement — this is
-  where the `"Started"` / `"Stopped"` prints belong, not inside message
-  handlers.
-- **`on message <id>`** fires once per received frame; `this` refers to the
-  triggering message, and `this.byte(n)` reads individual payload bytes.
-- **Cyclic sending is done with a re-armed timer**: `setTimer()` inside the
-  `on timer` handler keeps the frame going. The cycle time must match what
-  the ECU expects for that message — look it up in the DBC's message
-  attributes (e.g. a 100 ms cycle), because an ECU monitoring that frame will
+- **`on start` / `on stopMeasure`** bracket the entire measurement — this is
+  where the `"Started"` / `"Stopped"` prints belong, not inside a message
+  handler.
+- **`on message 0x1A0`** fires once per received frame with that identifier.
+  Inside it, `this` is the message that triggered the handler, and
+  `this.byte(n)` reads its payload byte by byte.
+- **Cyclic sending is a self-re-arming timer plus `output()`**: each time the
+  timer fires you send the frame and call `setTimer()` again. The cycle time
+  must match what the ECU expects for that message — copy it from the DBC's
+  message attributes (e.g. 100 ms), because an ECU monitoring that frame will
   raise a timeout error if the period is wrong.
 
 ## Expected result
 
-- The Write window shows `Started` at measurement start and `Stopped` at
-  the end.
-- Each reception of the chosen message prints its 8 payload bytes in the
-  Write window.
-- The transmitted frame appears in the Trace window at the correct cycle
-  time, and the connected ECU reacts to it (no missing-message error, and
-  any behavior driven by that frame occurs).
-- The logging file contains the recorded trace, and the Graphics window
-  shows the two selected signals evolving with real samples.
+- The Write window shows `Started` at measurement start and `Stopped` at the
+  end.
+- Every reception of the chosen message prints its 8 payload bytes.
+- Your transmitted frame appears in the Trace window at the correct cycle
+  time, and the connected ECU reacts to it — no missing-message error, and
+  whatever behavior that frame drives actually happens.
+- The logging file contains the recorded trace, and the Graphics window shows
+  both selected signals evolving with real samples.
 
 ## Common mistakes
 
 !!! warning "Watch out for these"
-    - **No database assigned**: signals won't appear in the symbol explorer
+    - **No database assigned**: signals never appear in the symbol explorer
       and the Graphics window stays empty. Attach the DBC to the bus in the
       configuration first.
     - **Wrong cycle time on the transmitted frame**: sending a 100 ms message
       at 10 ms floods the bus; sending it too slowly triggers timeout faults
       in the ECU. Always copy the cycle time from the DBC.
     - **Forgetting to re-arm the timer**: `setTimer()` fires once — without
-      the call inside `on timer`, your message is sent exactly one time.
+      the call inside `on timer`, your message goes out exactly one time.
     - **Printing from the wrong handler**: `on stopMeasure` is the correct
-      place for the "Stopped" message; code after a measurement loop will
-      never run, because CAPL is purely event-driven.
-    - **Channel/bit rate mismatch with the CANcase**: no reception at all,
-      or error frames only.
+      place for "Stopped"; code waiting after some loop will never run,
+      because CAPL has no main loop — it only responds to events.
+    - **Channel or bit-rate mismatch with the CANcase**: no reception at all,
+      or nothing but error frames.
 
 !!! success "Key takeaways"
-    - A complete measurement setup = Trace + Logging + Graphics, driven by a
-      DBC database that decodes raw frames into signals.
+    - You can now build a full measurement setup — Trace + Logging +
+      Graphics — decoded by a DBC that turns raw frames into named signals.
     - CAPL is event-driven: `on start`, `on message`, `on timer` and
-      `on stopMeasure` cover the full lifecycle of this exercise.
-    - Cyclic transmission is a self-re-arming timer plus `output()`, and the
-      cycle time must match the DBC specification or the receiving ECU will
-      fault.
-    - `this.byte(n)` gives you direct access to a received frame's payload.
+      `on stopMeasure` are all you needed for this whole exercise.
+    - Cyclic transmission = `output()` inside a re-armed timer, and the cycle
+      time must match the DBC or the receiving ECU will fault.
+    - `this.byte(n)` hands you any received frame's payload, one byte at a
+      time — your first real step into scripted bus behavior.

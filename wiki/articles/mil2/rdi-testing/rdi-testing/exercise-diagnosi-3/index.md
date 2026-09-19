@@ -1,31 +1,43 @@
-# Exercise 3 — IOLI and Routine Control on the IPC
+# Exercise 3 — Taking Control: IOLI and Routine Control on the IPC
 
-This bench exercise moves from *reading* diagnostic data to *controlling* the
-ECU. Working against the instrument panel cluster (IPC) through its CANdela
-diagnostic description (`D2956_IPC_E2A_R10_332BEV.cdd`), you will:
+Up to now your diagnostic work has been about *listening* — reading data out of
+an ECU. This bench exercise is where you get to *drive*. You will take control
+of the instrument panel cluster (IPC) — the display behind the steering wheel —
+and make it light telltales, sound its buzzer and sweep its gauges, all through
+standard diagnostic services. By the end, you will be able to:
 
-1. explore the CDD and build three inventories: all data identifiers (RDIs),
-   all input/output lines (IOLIs) and all routines;
-2. take control of one IOLI with **InputOutputControlByIdentifier (0x2F)** and
-   cross-check the effect through the matching RDI;
-3. execute one routine with **RoutineControl (0x31)**, including its start,
-   stop and results sub-functions.
+- navigate a **CANdela Diagnostic Description (CDD)** file — the contract that
+  defines everything an ECU will let you do — and extract its full diagnostic
+  interface;
+- force an output with **InputOutputControlByIdentifier (service `0x2F`)** and
+  prove the actuation really happened;
+- launch an internal ECU procedure with **RoutineControl (service `0x31`)** and
+  collect its results.
+
+**What you'll practice:** treating the CDD as the single source of truth,
+respecting sessions and enabling conditions, and always verifying an actuation
+two ways — the response on the bus *and* the physical effect.
 
 ## Goal
 
-Learn to navigate a CDD as the single source of truth for an ECU's diagnostic
-interface, and to drive the two "actuation" services of UDS — I/O control and
-routine control — respecting the sessions, sub-functions and enabling
-conditions the CDD declares.
+Learn to read an ECU's diagnostic database like a map, and to use the two
+"actuation" services of **Unified Diagnostic Services (UDS)** — I/O control and
+routine control — exactly as the database permits: right session, right
+sub-function, right conditions.
 
 ## Setup
 
 - The academy bench with the IPC ECU powered and connected over CAN.
 - A diagnostic tester (CANoe/CANalyzer with a diagnostic console, or an
-  equivalent UDS tool) loaded with `D2956_IPC_E2A_R10_332BEV.cdd`.
+  equivalent UDS tool) loaded with the cluster's CDD,
+  `D2956_IPC_E2A_R10_332BEV.cdd`.
 - The exercise sheet (`Esercizio_diagnosi_3_Ioli_Routine.pdf`).
 
 ## The three services in one look
+
+Three UDS services do all the work in this exercise. Each request is answered
+with a positive response (request SID + `0x40`) or a refusal
+`7F <SID> <NRC>`, where NRC is a **negative response code** explaining why:
 
 | Service | SID | Positive response | Purpose |
 |---|---|---|---|
@@ -33,14 +45,12 @@ conditions the CDD declares.
 | InputOutputControlByIdentifier | `0x2F` | `0x6F` | Override an IOLI: force an output (telltale, buzzer, gauge) to a state |
 | RoutineControl | `0x31` | `0x71` | Start/stop an internal ECU procedure and fetch its results |
 
-Any request can be refused with `7F <SID> <NRC>`; the CDD lists which negative
-response codes each service may return.
+## Step 1 — Map the CDD
 
-## Part 1 — Map the CDD
-
-Before touching the bus, extract the three inventories from the database. The
-IPC CDD is a real Stellantis document, so the lists are long — here are
-representative entries to recognize what you are looking at.
+Before touching the bus, open the CDD and build three inventories: every
+**RDI (Read Data Identifier)**, every **IOLI (Input/Output Line Identifier)**
+and every routine. This is a real Stellantis production database, so the lists
+are long — here are representative entries so you know what you are looking at.
 
 **RDIs (read with `0x22`)** — live data, memories and identification:
 
@@ -51,10 +61,10 @@ representative entries to recognize what you are looking at.
 | `0x1004` | Battery voltage (+30) |
 | `0x1005` | External temperature |
 | `0x2001` | Odometer |
-| `0xF190` | VIN |
+| `0xF190` | VIN (vehicle identification number) |
 
-**IOLIs (controlled with `0x2F`)** — mostly cluster outputs, ideal for visual
-verification on the bench:
+**IOLIs (controlled with `0x2F`)** — mostly cluster outputs, which makes them
+ideal for visual verification on the bench:
 
 | DID | Output |
 |---|---|
@@ -74,20 +84,20 @@ verification on the bench:
 | `0xFF00` | FlashErase |
 | `0xFF01` | checkProgrammingDependencies / FlashChecksum |
 
-!!! tip "Note the sessions"
+!!! tip "Note the sessions — this is where most first attempts fail"
     Each CDD entry records in which diagnostic sessions it may be executed.
-    The IOLIs are executable in **ExtendedDiagnostic (`0x03`)** and the
-    end-of-line session, not in Default; `FlashErase` requires the
-    **Programming session (`0x02`)**. If the tool answers
-    `7F 2F 7E` (subFunctionNotSupportedInActiveSession) or `7F 2F 7F`
-    (serviceNotSupportedInActiveSession), you are in the wrong session —
+    The IOLIs run in **ExtendedDiagnostic (`0x03`)** and the end-of-line
+    session, not in Default; `FlashErase` requires the **Programming session
+    (`0x02`)**. If the tool answers `7F 2F 7E`
+    (subFunctionNotSupportedInActiveSession) or `7F 2F 7F`
+    (serviceNotSupportedInActiveSession), you are simply in the wrong room —
     switch with `DiagnosticSessionControl` (`10 03` → expect `50 03`) and keep
-    it alive with Tester Present (`3E 00`) while you work.
+    the session alive with Tester Present (`3E 00`) while you work.
 
-## Part 2 — Control an IOLI
+## Step 2 — Take control of an IOLI
 
-Service `0x2F` supports four sub-functions (control options); verify in the
-CDD which of them the chosen IOLI actually enables:
+Service `0x2F` offers four sub-functions (control options). The CDD tells you
+which ones your chosen IOLI actually supports — never assume all four:
 
 | Option byte | Sub-function | Effect |
 |---|---|---|
@@ -96,11 +106,11 @@ CDD which of them the chosen IOLI actually enables:
 | `0x02` | freezeCurrentState | Hold the current state |
 | `0x03` | shortTermAdjustment | Force a specific value/state (the one you will use most) |
 
-Procedure:
+Now the fun part:
 
 1. Enter the ExtendedDiagnostic session (`10 03`).
 2. Pick one IOLI from your inventory — the **high beam telltale (`0x5558`)**
-   or the **buzzer (`0x5573`)** are good first choices because you can see or
+   or the **buzzer (`0x5573`)** are great first choices because you can see or
    hear the result immediately.
 3. Read its CDD entry: allowed control options, the control-state encoding,
    and any enabling conditions.
@@ -109,7 +119,8 @@ Procedure:
 5. **Cross-check with the matching RDI**: read back the corresponding data
    identifier with `0x22` (for example, drive the speed pointer via
    `0x556A`, then read `Vehicle Speed 0x1002`) and confirm the value the ECU
-   reports is coherent with what you commanded.
+   reports agrees with what you commanded. This habit — actuate, then verify
+   through an independent path — is what separates testing from guessing.
 6. Always finish with `returnControlToECU` (`2F 55 58 00`), so the cluster
    resumes normal behavior.
 
@@ -129,11 +140,12 @@ sequenceDiagram
     IPC-->>T: 6F 55 58 00 ...
 ```
 
-## Part 3 — Run a routine
+## Step 3 — Run a routine
 
-RoutineControl (`0x31`) has three sub-functions; the CDD tells you which ones
-each routine enables (for example `FlashErase` supports all three, while
-`Original VIN Lock` only supports *start*):
+A routine is a procedure that lives *inside* the ECU; RoutineControl (`0x31`)
+just starts it, stops it and asks how it went, via three sub-functions. Again,
+the CDD decides which ones each routine enables — `FlashErase` supports all
+three, while `Original VIN Lock` only supports *start*:
 
 | Sub-function | Code | Purpose |
 |---|---|---|
@@ -143,13 +155,13 @@ each routine enables (for example `FlashErase` supports all three, while
 
 Procedure:
 
-1. Choose a routine from your Part 1 inventory and read its CDD entry
+1. Choose a routine from your Step 1 inventory and read its CDD entry
    carefully: required session, enabling conditions, option record layout
    (e.g. `FlashErase` takes a start/stop address pair).
 2. Command the start: `31 01 <RID> <options>` → expect
    `71 01 <RID> <status>`. A long-running routine may first answer
-   `7F 31 78` (requestCorrectlyReceived-ResponsePending) — keep waiting for
-   the final response.
+   `7F 31 78` (requestCorrectlyReceived-ResponsePending) — that is not an
+   error, just "working on it"; keep waiting for the final response.
 3. Request the report: `31 03 <RID>` → `71 03 <RID> <statusRecord>` and
    verify the result the tool decodes.
 4. If the CDD declares a stop sub-function, command `31 02 <RID>`, verify the
@@ -201,11 +213,12 @@ flowchart TD
 !!! success "Key takeaways"
     - The CDD is the contract: identifiers, sub-functions, sessions and
       enabling conditions all come from it, not from memory.
-    - `0x22` reads (RDI), `0x2F` actuates one I/O line (IOLI), `0x31` runs
-      whole ECU procedures — with start/stop/results sub-functions.
-    - Verify an actuation two ways: the positive response *and* a physical or
-      RDI cross-check.
-    - End every actuation session by restoring control to the ECU.
+    - You can now drive an ECU, not just read it: `0x2F` actuates one output
+      line, `0x31` runs whole internal procedures with start/stop/results.
+    - You verify every actuation twice — the positive response *and* a
+      physical or RDI cross-check — so you trust what you see.
+    - You always leave the ECU as you found it: control handed back, session
+      tidy, conditions respected.
 
 !!! tip "Where this leads"
     The service mechanics used here are covered in

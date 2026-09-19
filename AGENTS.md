@@ -67,12 +67,38 @@ All code lives at the project root and in `wiki/`:
 - `wiki/build_wiki.py` — the assembler. Copies `wiki/articles/` into `wiki/docs/`
   (plus each article's `img/` assets), appends auto-generated **Source material**
   (PDF links) and **Downloads** (dbc/cdd/transcripts/etc.) sections to every page,
-  generates module curriculum pages, the home page, glossary and resources pages,
-  asset symlinks `wiki/docs/assets/mil<N> -> ../../MIL<N>`, and `wiki/mkdocs.yml`
-  (including the full nav tree and the Mermaid superfences config). Directories
-  without an article get a fallback references-only page. **Run from the project
-  root.** `--manifest` writes `wiki/.cache/source_manifest.json`, the per-directory
-  authoring aid (article path, deck cache JSONs, transcripts, image dirs).
+  generates module curriculum pages, the home page (`build_home()`, the "Your orbit
+  starts here" hero + module cards), glossary and resources pages, asset symlinks
+  `wiki/docs/assets/mil<N> -> ../../MIL<N>`, copies the theme assets
+  (`copy_theme_assets()`), and writes `wiki/mkdocs.yml` (including the full nav
+  tree, the Mermaid superfences config, `custom_dir`, `extra_css` and
+  `extra_javascript`). Directories without an article get a fallback
+  references-only page. **Run from the project root.** `--manifest` writes
+  `wiki/.cache/source_manifest.json`, the per-directory authoring aid (article
+  path, deck cache JSONs, transcripts, image dirs).
+- `wiki/theme/` — the **"Constellation" custom theme** (dark cosmic UI). All theme
+  work happens here, never in `wiki/docs/` or `wiki/mkdocs.yml`:
+  - `theme/overrides/main.html` — MkDocs Material template override (`custom_dir`).
+    The `footer` block injects the integrated AI assistant panel markup (handle,
+    message thread, suggestion chips, composer); the `scripts` block defines the
+    backend hook `window.KX_CHAT_CONFIG = { endpoint: null, model: null }`.
+  - `theme/assets/kineton.css` — the whole visual redesign (cosmic background,
+    glass cards, violet→cyan glow accents, SaaS-style nav, chat panel styling,
+    Mermaid `--md-mermaid-*` variables).
+  - `theme/assets/kineton-chat.js` — chat panel behavior: collapse/expand
+    (persisted in localStorage, `#assistant` URL hash opens it), typing
+    indicator, rotating canned placeholder replies, and an API-ready
+    `askBackend()` that POSTs `{message}` to `KX_CHAT_CONFIG.endpoint` once it is
+    set. **No backend is wired yet — frontend shell only.**
+  - `theme/assets/mermaid.min.js` — vendored Mermaid v11 (offline-friendly, no
+    CDN dependency).
+  - `theme/assets/kineton-mermaid.js` — renders `pre.kx-mermaid` blocks with the
+    Constellation dark palette. The superfences custom fence deliberately uses
+    the class `kx-mermaid` (not `mermaid`) because Material's own bundle
+    hijacks `.mermaid` elements and races any other renderer; the `kx-` prefix
+    makes this script the only renderer. It captures diagram source
+    synchronously (script loads at end of `<body>`, before Mermaid's auto-run)
+    and re-renders with `themeVariables`.
 - `consolidate.py` — copies all files from `MIL1`–`MIL4` into flat `Files/` and logs the
   mapping to `heirarchy.txt`. Overwrites both on each run.
 - `AIL.ps1` (PowerShell, Windows-oriented) — converts all `.mp4`/`.mkv` under the tree
@@ -142,6 +168,14 @@ wanted — see `server_agent_prompt.txt`). PDF extraction/rendering for the wiki
   module changes theme, update `MODULE_TITLES` / `MODULE_BLURBS` in `build_wiki.py`.
 - Never commit or copy generated artifacts (`wiki/docs/`, `wiki/site/`,
   `wiki/.cache/`, `mkdocs.yml`, `Files/`, `heirarchy.txt`) by hand — regenerate them.
+- Theme changes go only in `wiki/theme/` (template override in `overrides/`,
+  CSS/JS in `assets/`). New asset files must be registered in `build_wiki.py`
+  (`MKDOCS_HEADER`'s `extra_css`/`extra_javascript` lists — `copy_theme_assets()`
+  copies the whole `assets/` dir, but only listed files are referenced by the
+  generated `mkdocs.yml`). Never paste custom CSS/JS into generated files.
+- `mkdocs serve` does **not** watch `wiki/articles/` or `wiki/theme/` — after
+  editing either, re-run `build_wiki.py` and restart serve (or run
+  `mkdocs build`) to see changes.
 
 ## Testing
 

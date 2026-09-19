@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4436,28 +4424,40 @@
 
 
 <h1 id="exercise-7-diagnostic-exercise-ipc">Exercise 7 — Diagnostic Exercise (IPC)<a class="headerlink" href="#exercise-7-diagnostic-exercise-ipc" title="Permanent link">&para;</a></h1>
-<p>This is the capstone exercise of the RDI testing lessons: a complete diagnostic
-session against a real ECU, driven entirely by its diagnostic database. There is
-no instruction sheet this time — the exercise material is the database itself,
-<code>D2956_IPC_E2A_R10_332BEV.cdd</code>, the CANdelaStudio diagnostic description (CDD)
-of the <strong>IPC (Instrument Panel Cluster)</strong> of the 332 BEV platform.</p>
+<p>Welcome to the capstone of the RDI (Read Data Identifier) testing lessons.
+Everything you have practiced so far — opening diagnostic sessions, reading and
+writing identifiers, driving outputs, working the fault memory — comes together
+here in <strong>one complete diagnostic session against a real ECU</strong> (electronic
+control unit).</p>
+<p>There is no instruction sheet this time, and that is the point. Your exercise
+material is the diagnostic database itself: <code>D2956_IPC_E2A_R10_332BEV.cdd</code>, the
+CANdelaStudio diagnostic description (CDD) of the <strong>IPC — Instrument Panel
+Cluster</strong> — of the 332 BEV platform. Learning to pull everything you need out
+of a CDD is exactly what you will do on real projects, so treat this as your
+first day on the job.</p>
+<p><strong>What you'll practice:</strong> navigating a diagnostic database like a professional,
+then driving a full session on the bench — session control, security unlock,
+live data reads, output control, and the complete fault-memory cycle.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>Starting from the CDD, you must be able to:</p>
+<p>Starting from nothing but the CDD, by the end of this exercise you will be able
+to:</p>
 <ol>
 <li>Navigate the database and extract its contents: sessions, security levels,
-   RDIs (data identifiers), IOLIs (I/O control items), routines and DTCs.</li>
+   RDIs (data identifiers), IOLIs (input/output control items), routines and
+   DTCs (diagnostic trouble codes).</li>
 <li>Open a diagnostic session on the academy bench IPC and unlock it with
    SecurityAccess.</li>
 <li>Read live and identification RDIs, interpret the raw hexadecimal response,
    and write writable RDIs with read-back verification.</li>
-<li>Drive an output through IOLI (Input/Output Line Interface) and cross-check it
-   against the corresponding RDI.</li>
-<li>Run the full fault-memory workflow: create a fault, read the DTC status byte,
-   retrieve the snapshot, heal the fault, and clear the memory.</li>
+<li>Drive a cluster output through an IOLI and cross-check it against the
+   corresponding RDI.</li>
+<li>Run the full fault-memory workflow: create a fault, read the DTC status
+   byte, retrieve the snapshot, heal the fault, and clear the memory.</li>
 </ol>
 <h2 id="the-diagnostic-database-at-a-glance">The diagnostic database at a glance<a class="headerlink" href="#the-diagnostic-database-at-a-glance" title="Permanent link">&para;</a></h2>
-<p>Everything below is extracted from the IPC's CDD — these are the concrete values
-you should find (and use) while working through the exercise.</p>
+<p>Everything below is extracted from the IPC's CDD. Use these tables as your
+map — and then verify every value yourself in the database. That verification
+habit is the real skill being trained here.</p>
 <h3 id="communication-parameters">Communication parameters<a class="headerlink" href="#communication-parameters" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4486,7 +4486,7 @@ you should find (and use) while working through the exercise.</p>
 <tr>
 <td>P2*_max (P2Ex)</td>
 <td>5000 ms</td>
-<td>Extended time after a <code>0x78</code> "response pending" NRC</td>
+<td>Extended time after a <code>0x78</code> "response pending" NRC (negative response code)</td>
 </tr>
 <tr>
 <td>S3 tester / ECU</td>
@@ -4531,9 +4531,10 @@ you should find (and use) while working through the exercise.</p>
 </tr>
 </tbody>
 </table>
-<p>SecurityAccess (<code>0x27</code>) uses sub-function <code>0x01</code> to request the <strong>Level 1 seed</strong>
-and <code>0x02</code> to send the computed <strong>key</strong>. Separate seed/key pairs exist for VIN
-write-unlock and for Plant Mode unlocking.</p>
+<p>SecurityAccess (<code>0x27</code>) works as a seed/key challenge: sub-function <code>0x01</code>
+requests the <strong>Level 1 seed</strong>, <code>0x02</code> sends back the computed <strong>key</strong>. Separate
+seed/key pairs exist for VIN (vehicle identification number) write-unlock and
+for Plant Mode unlocking.</p>
 <h3 id="services-implemented-by-the-ipc">Services implemented by the IPC<a class="headerlink" href="#services-implemented-by-the-ipc" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4612,6 +4613,8 @@ write-unlock and for Plant Mode unlocking.</p>
 </tbody>
 </table>
 <h3 id="a-sample-of-the-rdi-list-service-0x22">A sample of the RDI list (service <code>0x22</code>)<a class="headerlink" href="#a-sample-of-the-rdi-list-service-0x22" title="Permanent link">&para;</a></h3>
+<p>These DIDs (data identifiers) are the ones you will actually touch during the
+exercise:</p>
 <table>
 <thead>
 <tr>
@@ -4679,9 +4682,11 @@ write-unlock and for Plant Mode unlocking.</p>
 </tbody>
 </table>
 <h3 id="iolis-service-0x2f-and-routines-service-0x31">IOLIs (service <code>0x2F</code>) and routines (service <code>0x31</code>)<a class="headerlink" href="#iolis-service-0x2f-and-routines-service-0x31" title="Permanent link">&para;</a></h3>
-<p>IOLIs let the tester take over cluster outputs. The CDD shows which
-sub-services each item supports — typically <code>returnControlToECU</code> (<code>0x00</code>) and
-<code>shortTermAdjustment</code> (<code>0x03</code>), with <code>resetToDefault</code> (<code>0x01</code>) on a few items:</p>
+<p>IOLIs are how a tester takes over cluster outputs — needles, telltales, the
+buzzer — instead of waiting for the car to produce the stimulus. The CDD shows
+which sub-services each item supports: typically <code>returnControlToECU</code> (<code>0x00</code>)
+and <code>shortTermAdjustment</code> (<code>0x03</code>), with <code>resetToDefault</code> (<code>0x01</code>) on a few
+items:</p>
 <table>
 <thead>
 <tr>
@@ -4723,9 +4728,9 @@ sub-services each item supports — typically <code>returnControlToECU</code> (<
 </tr>
 </tbody>
 </table>
-<p>Routines: <code>0x2000</code> Original_VIN_Lock, <code>0x2001</code> Original_VIN_Unlock (write VIN
-with <code>0x2E</code> between unlock and lock), plus the programming routines <code>0xFF00</code>
-FlashErase and <code>0xFF01</code> checkProgrammingDependencies_FlashChecksum.</p>
+<p>Routines: <code>0x2000</code> Original_VIN_Lock, <code>0x2001</code> Original_VIN_Unlock (write the
+VIN with <code>0x2E</code> between unlock and lock), plus the programming routines
+<code>0xFF00</code> FlashErase and <code>0xFF01</code> checkProgrammingDependencies_FlashChecksum.</p>
 <div class="admonition warning">
 <p class="admonition-title">Do not touch the programming path</p>
 <p><code>0xFF00</code> FlashErase and the Download services exist in the database because
@@ -4734,8 +4739,9 @@ never enter the Programming session unless the instructor asks: erasing the
 flash bricks the bench ECU.</p>
 </div>
 <h3 id="fault-memory-services-0x19-0x14">Fault memory (services <code>0x19</code> / <code>0x14</code>)<a class="headerlink" href="#fault-memory-services-0x19-0x14" title="Permanent link">&para;</a></h3>
-<p>The CDD defines 44 DTCs. Every code ends with a <strong>failure type byte</strong> that tells
-you the detection category — essential when interpreting the readout:</p>
+<p>The CDD defines 44 DTCs. Here is a trick that will serve you for your whole
+career: every code ends with a <strong>failure type byte</strong> that tells you <em>how</em> the
+fault was detected. Learn to read it and the raw hex starts telling a story:</p>
 <table>
 <thead>
 <tr>
@@ -4774,53 +4780,68 @@ you the detection category — essential when interpreting the readout:</p>
 </table>
 <p>Other codes worth knowing: <code>900044</code>–<code>900047</code> (ECU data/program/calibration
 memory and watchdog failures) and <code>A20664</code> (current VIN missing/mismatch). Each
-DTC record in the CDD also carries its maturation conditions (e.g. detection
-enabled with key not in CRANK and 10 V &lt; Vbatt &lt; 16 V), so check the DTC's
-enabling conditions before trying to force it.</p>
+DTC record in the CDD also carries its maturation conditions — for example,
+detection enabled with the key not in CRANK and 10 V &lt; Vbatt &lt; 16 V — so check
+a DTC's enabling conditions <em>before</em> trying to force it, or you will chase a
+fault that can never set.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Academy bench with the <strong>IPC</strong> powered and connected to the diagnostic CAN.</li>
-<li><strong>CANalyzer/CANoe</strong> with a diagnostic console configured on the IPC's CDD
-  (the description file does the request/response decoding for you).</li>
-<li><strong>CANdelaStudio</strong> (viewer is enough) to browse the CDD offline: sessions,
-  DIDs, DTC table with maturation conditions, IOLI sub-services.</li>
-<li>Optional: CAN database (DBC) of the bench if you want to stimulate the
+<li>Academy bench with the <strong>IPC</strong> powered and connected to the diagnostic CAN
+  (Controller Area Network).</li>
+<li><strong>CANalyzer/CANoe</strong> with a diagnostic console configured on the IPC's CDD —
+  the description file does the request/response decoding for you.</li>
+<li><strong>CANdelaStudio</strong> (the free viewer is enough) to browse the CDD offline:
+  sessions, DIDs, the DTC table with maturation conditions, IOLI sub-services.</li>
+<li>Optional: the CAN database (DBC) of the bench, if you want to stimulate the
   cluster with real traffic instead of IOLI injection.</li>
 </ul>
 <h2 id="step-by-step-procedure">Step-by-step procedure<a class="headerlink" href="#step-by-step-procedure" title="Permanent link">&para;</a></h2>
+<p>Here is the shape of the day — keep it in mind as you work through the steps:</p>
+<pre class="kx-mermaid"><code>flowchart LR
+    A[1. Mine the CDD] --&gt; B[2. Session 10 03&lt;br/&gt;+ SecurityAccess 27]
+    B --&gt; C[3. Read RDIs&lt;br/&gt;0x22]
+    C --&gt; D[4. IOLI injection&lt;br/&gt;0x2F + re-read]
+    D --&gt; E[5. Write RDIs&lt;br/&gt;0x2E + verify]
+    E --&gt; F[6. Fault memory&lt;br/&gt;0x19 / 0x14]
+    F --&gt; G[7. Restore&lt;br/&gt;everything]</code></pre>
 <h3 id="1-mine-the-database">1. Mine the database<a class="headerlink" href="#1-mine-the-database" title="Permanent link">&para;</a></h3>
 <p>Open the CDD and build the four lists you will need all day: RDIs, DTCs (with
 their failure type bytes and set/clear conditions), IOLIs (with enabled
-sub-services), and routines. Identify which diagnostic services each list maps
-to — the table above is your check.</p>
+sub-services), and routines. Identify which diagnostic service each list maps
+to — the tables above are your answer key. Take your time here: every minute
+spent reading the database saves ten minutes of guessing at the bench.</p>
 <h3 id="2-connect-and-unlock">2. Connect and unlock<a class="headerlink" href="#2-connect-and-unlock" title="Permanent link">&para;</a></h3>
 <p>Switch the IPC to <strong>Extended Diagnostic</strong> session (<code>10 03</code>) and verify the
 positive response (<code>50 03</code>). If you plan to write anything, run the seed/key
-sequence: request seed <code>27 01</code>, compute the key with the Level 1 algorithm, send
-it with <code>27 02</code>. Keep the session alive with TesterPresent (<code>3E 00</code>) if you work
-slowly — the ECU drops back to Default after S3 (5 s) without tester traffic.</p>
+sequence: request the seed with <code>27 01</code>, compute the key with the Level 1
+algorithm, send it with <code>27 02</code>. Keep the session alive with TesterPresent
+(<code>3E 00</code>) if you work slowly — the ECU drops back to Default after S3 (5 s)
+without tester traffic, and it will not warn you when it does.</p>
 <h3 id="3-read-identification-and-live-rdis">3. Read identification and live RDIs<a class="headerlink" href="#3-read-identification-and-live-rdis" title="Permanent link">&para;</a></h3>
-<p>Request a few RDIs and decode the hexadecimal answers by hand before trusting
-the tool's interpretation: <code>22 F190</code> (VIN — 17 ASCII bytes), <code>22 F18C</code>,
+<p>Request a few RDIs and decode the hexadecimal answers <strong>by hand</strong> before
+trusting the tool's interpretation — this is how you build confidence that the
+numbers on screen are real: <code>22 F190</code> (VIN — 17 ASCII bytes), <code>22 F18C</code>,
 <code>22 F1A0</code>. Then read the live ones: <code>22 1002</code> (Vehicle_Speed), <code>22 1004</code>
 (battery voltage), <code>22 1005</code> (external temperature), <code>22 2001</code> (odometer).
 Apply the conversion defined in the CDD for each DID.</p>
 <h3 id="4-stimulate-and-re-read">4. Stimulate and re-read<a class="headerlink" href="#4-stimulate-and-re-read" title="Permanent link">&para;</a></h3>
-<p>Put the bench in a state that changes the RDI content. The controlled way to do
-it for speed is the IOLI <code>0x556A</code> Vehicle_speed_cluster with
+<p>Now put the bench in a state that changes the RDI content. The controlled way
+to do it for speed is the IOLI <code>0x556A</code> Vehicle_speed_cluster with
 <code>shortTermAdjustment</code>: inject <strong>60 km/h</strong>, then read back <code>22 1002</code> and check
-the RDI follows the injected value. Repeat at <strong>150 km/h, 250 km/h and
+that the RDI follows the injected value. Repeat at <strong>150 km/h, 250 km/h and
 600 km/h</strong> — the last one is deliberate: find out what the cluster answers when
-the value is out of range, and note it.</p>
+the value is out of range, and write it down. Edge cases like this are where
+real bugs hide.</p>
 <p>When finished, always hand the output back: <code>2F 556A 00</code>
 (returnControlToECU).</p>
 <h3 id="5-write-rdis">5. Write RDIs<a class="headerlink" href="#5-write-rdis" title="Permanent link">&para;</a></h3>
-<p>Pick three writable DIDs (e.g. service/odometer-related values, or the VIN after
-<code>0x31 2001</code> unlock), write them with <code>0x2E</code>, then read them back with <code>0x22</code> and
-prove the content matches what you sent. Restore the original values at the end
-and, if you unlocked the VIN, lock it again with routine <code>0x2000</code>.</p>
+<p>Pick three writable DIDs (e.g. service/odometer-related values, or the VIN
+after the <code>0x31 2001</code> unlock), write them with <code>0x2E</code>, then read them back with
+<code>0x22</code> and prove the content matches what you sent. A write you have not read
+back is a write you cannot trust. Restore the original values at the end and,
+if you unlocked the VIN, lock it again with routine <code>0x2000</code>.</p>
 <h3 id="6-full-fault-memory-cycle">6. Full fault-memory cycle<a class="headerlink" href="#6-full-fault-memory-cycle" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<pre class="kx-mermaid"><code>sequenceDiagram
     participant T as Tester CANoe
     participant IPC as IPC bench ECU
     T-&gt;&gt;IPC: 10 03 — Extended Diagnostic
@@ -4837,9 +4858,9 @@ and, if you unlocked the VIN, lock it again with routine <code>0x2000</code>.</p
     T-&gt;&gt;IPC: 14 FF FF FF — clear all
     IPC--&gt;&gt;T: 54</code></pre>
 <ol>
-<li>Choose a DTC whose set condition you can reproduce on the bench (a
-   <em>missing message</em> DTC such as <code>D7xx87</code> is the easiest — stop the relevant
-   message on the CAN).</li>
+<li>Choose a DTC whose set condition you can reproduce on the bench — a
+   <em>missing message</em> DTC such as <code>D7xx87</code> is the easiest: just stop the
+   relevant message on the CAN.</li>
 <li>Read the fault memory with <code>19 02 FF</code> and decode the <strong>status byte</strong> of your
    DTC: bit 0 = testFailed, bit 1 = testFailedThisOperationCycle, bit 2 =
    pendingDTC, bit 3 = confirmedDTC.</li>
@@ -4847,9 +4868,9 @@ and, if you unlocked the VIN, lock it again with routine <code>0x2000</code>.</p
    this platform the snapshot carries environment data such as the vehicle
    speed at fault detection.</li>
 <li>Remove the fault condition and figure out which actions bring bits 0, 1 and
-   2 back to 0 (healing over operation cycles vs. explicit clearing), then clear
-   the memory with <code>14 FF FF FF</code> and verify with a final <code>19 02</code> that the DTC
-   is gone.</li>
+   2 back to 0 (healing over operation cycles vs. explicit clearing), then
+   clear the memory with <code>14 FF FF FF</code> and verify with a final <code>19 02</code> that
+   the DTC is gone.</li>
 </ol>
 <h2 id="expected-result">Expected result<a class="headerlink" href="#expected-result" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4861,6 +4882,8 @@ and, if you unlocked the VIN, lock it again with routine <code>0x2000</code>.</p
   a readable snapshot; after healing and <code>0x14</code>, the memory is empty.</li>
 </ul>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<p>Everyone hits at least one of these — now you can hit them on purpose (once)
+and recognize them forever:</p>
 <ul>
 <li><strong>Working in Default session.</strong> Writes, IOLI and routines are refused with
   NRC <code>0x7F</code> (serviceNotSupportedInActiveSession) until you send <code>10 03</code>.</li>
@@ -4880,14 +4903,17 @@ and, if you unlocked the VIN, lock it again with routine <code>0x2000</code>.</p
 <p class="admonition-title">Key takeaways</p>
 <ul>
 <li>The CDD is the single source of truth: sessions, DIDs, sub-services,
-  DTCs and their conditions are all in there — learn to extract them.</li>
+  DTCs and their conditions are all in there — and you now know how to
+  extract them.</li>
 <li>The canonical bench workflow is: session (<code>0x10</code>) → security (<code>0x27</code>) →
   read/write RDIs (<code>0x22</code>/<code>0x2E</code>) → IOLI (<code>0x2F</code>) → fault memory
   (<code>0x19</code>/<code>0x14</code>) → restore everything.</li>
-<li>DTC codes encode meaning: the trailing failure type byte (<code>0x64</code>, <code>0x86</code>,
-  <code>0x87</code>, <code>0x88</code>, …) tells you <em>how</em> the fault was detected.</li>
-<li>Always leave the ECU as you found it: control returned, values restored,
-  fault memory cleared.</li>
+<li>DTC codes encode meaning: the trailing failure type byte (<code>0x64</code>,
+  <code>0x86</code>, <code>0x87</code>, <code>0x88</code>, …) tells you <em>how</em> the fault was detected.</li>
+<li>You always leave the ECU as you found it: control returned, values
+  restored, fault memory cleared.</li>
+<li>You just ran a complete professional diagnostic session from a bare
+  database — that is exactly what the job looks like.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4902,11 +4928,11 @@ Testing</a> lesson.</p>
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/Exercise_7___Diagnostic_exercise/Exercise_7___Diagnostic_Exercise.pdf">Exercise 7 - Diagnostic Exercise</a> — PDF, 21.1 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/Exercise_7___Diagnostic_exercise/Exercise_7___Diagnostic_Exercise.pdf">Exercise 7 - Diagnostic Exercise</a> — PDF, 21.1 KB</li>
 </ul>
 <h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">&para;</a></h2>
 <ul>
-<li>:material-file: <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/Exercise_7___Diagnostic_exercise/D2956_IPC_E2A_R10_332BEV.cdd">D2956 IPC E2A R10 332BEV</a> — 2.6 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/Exercise_7___Diagnostic_exercise/D2956_IPC_E2A_R10_332BEV.cdd">D2956 IPC E2A R10 332BEV</a> — 2.6 MB</li>
 </ul>
 
 
@@ -4936,6 +4962,7 @@ Testing</a> lesson.</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4943,7 +4970,7 @@ Testing</a> lesson.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: RDI Testing — The VF179 Rear Parking Assistance Specification">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: RDI Testing — Reading the VF179 Rear Parking Assistance Specification">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4953,20 +4980,20 @@ Testing</a> lesson.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                RDI Testing — The VF179 Rear Parking Assistance Specification
+                RDI Testing — Reading the VF179 Rear Parking Assistance Specification
               </div>
             </div>
           </a>
         
         
           
-          <a href="../exercise-diagnosi-2/" class="md-footer__link md-footer__link--next" aria-label="Next: Exercise: RDI and DTC Diagnostics on the IPC Cluster">
+          <a href="../exercise-diagnosi-2/" class="md-footer__link md-footer__link--next" aria-label="Next: Hands-On Diagnostics: RDIs, DTCs and the IPC Cluster">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Exercise: RDI and DTC Diagnostics on the IPC Cluster
+                Hands-On Diagnostics: RDIs, DTCs and the IPC Cluster
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4994,6 +5021,41 @@ Testing</a> lesson.</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -5006,8 +5068,21 @@ Testing</a> lesson.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4381,12 +4369,20 @@
 
 
 <h1 id="uds-exercise">UDS Exercise<a class="headerlink" href="#uds-exercise" title="Permanent link">&para;</a></h1>
-<p>This hands-on exercise closes the RDI Testing lessons on diagnostics: you first
-<strong>write scripts that simulate an ECU answering UDS requests</strong>, then you <strong>read
-real request/response traces line by line and hunt down the errors planted in
-them</strong>. It is where the theory from <a href="../../../diagnosis/">Diagnosis</a> —
-services, sessions, negative responses, multi-frame transport — stops being a
-table in a slide deck and becomes something you can produce and debug yourself.</p>
+<p>Welcome to your first hands-on diagnostic lab. Everything you learned in
+<a href="../../../diagnosis/">Diagnosis</a> — services, sessions, negative
+responses, multi-frame transport — is about to stop being a table in a slide
+deck and become something you can build and debug with your own hands.</p>
+<p><strong>What you'll be able to do after this exercise:</strong></p>
+<ul>
+<li><strong>write scripts that simulate an ECU answering UDS (Unified Diagnostic
+  Services) requests</strong> — byte for byte, response by response;</li>
+<li><strong>read real request/response traces line by line and hunt down the errors
+  planted in them</strong>, the exact skill you will use every day when a test fails
+  and nobody knows why.</li>
+</ul>
+<p>Don't worry if the hex still looks like alphabet soup. By the end of Part 2
+you'll be spotting malformed requests at a glance.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Build the request/response pairs for the core UDS services by hand:
@@ -4395,19 +4391,26 @@ table in a slide deck and becomes something you can produce and debug yourself.<
   <code>DiagnosticSessionControl</code> (0x10).</li>
 <li>Apply the diagnostic session rules while doing it.</li>
 <li>Explain multi-frame (ISO-TP) transfers with consecutive frames.</li>
-<li>Analyze complete traces, including a full <code>SecurityAccess</code> (0x27)
-  seed &amp; key sequence, and identify protocol-level mistakes.</li>
+<li>Analyze complete traces — including a full <code>SecurityAccess</code> (0x27) seed &amp;
+  key sequence — and identify protocol-level mistakes.</li>
 </ul>
 <h2 id="what-you-need-to-remember">What you need to remember<a class="headerlink" href="#what-you-need-to-remember" title="Permanent link">&para;</a></h2>
+<p>Before touching the tools, refresh these three building blocks. They are all
+you need for the whole exercise.</p>
 <h3 id="uds-message-anatomy">UDS message anatomy<a class="headerlink" href="#uds-message-anatomy" title="Permanent link">&para;</a></h3>
-<p>Every diagnostic exchange is a request from the <strong>tester</strong> and a reply from the
-<strong>ECU</strong>:</p>
+<p>Every diagnostic exchange is a conversation with exactly two speakers: a
+request from the <strong>tester</strong> (you, via CANalyzer) and a reply from the <strong>ECU</strong>.</p>
 <ul>
-<li>A request starts with the <strong>Service Identifier (SID)</strong>.</li>
-<li>A <strong>positive response</strong> echoes <code>SID + 0x40</code> (e.g. <code>22</code> → <code>62</code>).</li>
-<li>A <strong>negative response</strong> is always <code>7F &lt;SID&gt; &lt;NRC&gt;</code> — three bytes, where NRC is
-  the Negative Response Code telling you <em>why</em> the request was refused.</li>
+<li>A request starts with the <strong>Service Identifier (SID)</strong> — one byte saying
+  <em>what</em> you want.</li>
+<li>A <strong>positive response</strong> echoes <code>SID + 0x40</code> (e.g. <code>22</code> → <code>62</code>). If you see
+  the +0x40 echo, the ECU understood and complied.</li>
+<li>A <strong>negative response</strong> is always exactly three bytes: <code>7F &lt;SID&gt; &lt;NRC&gt;</code>,
+  where NRC is the Negative Response Code telling you <em>why</em> the request was
+  refused.</li>
 </ul>
+<p>The NRCs below are the ones you'll meet in this exercise. Learn them now and
+the traces in Part 2 will read like plain text:</p>
 <table>
 <thead>
 <tr>
@@ -4450,8 +4453,10 @@ table in a slide deck and becomes something you can produce and debug yourself.<
 </tbody>
 </table>
 <h3 id="session-control-rules">Session control rules<a class="headerlink" href="#session-control-rules" title="Permanent link">&para;</a></h3>
-<p>The exercise uses these transition rules (footnote (1) of the exercise sheet):</p>
-<pre class="mermaid"><code>stateDiagram-v2
+<p>ECUs have <strong>diagnostic sessions</strong> — think of them as permission levels. The
+exercise sheet fixes these transition rules (footnote (1) of the sheet), and
+your simulated ECU must enforce them:</p>
+<pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; Default
     Default --&gt; Extended: 10 03
     Extended --&gt; Programming: 10 02
@@ -4462,12 +4467,16 @@ table in a slide deck and becomes something you can produce and debug yourself.<
         never directly from Default
     end note</code></pre>
 <ul>
-<li>Default → Extended is allowed; <strong>Programming is reachable only from Extended</strong>.</li>
-<li><strong>Default can always be reached</strong>, from any session.</li>
+<li>Default → Extended is allowed; <strong>Programming is reachable only from
+  Extended</strong> — no shortcuts.</li>
+<li><strong>Default can always be reached</strong>, from any session. It is the safe
+  fallback.</li>
 </ul>
 <h3 id="multi-frame-messages-iso-tp">Multi-frame messages (ISO-TP)<a class="headerlink" href="#multi-frame-messages-iso-tp" title="Permanent link">&para;</a></h3>
-<p>When a diagnostic payload does not fit in one CAN frame, ISO-TP splits it:</p>
-<pre class="mermaid"><code>sequenceDiagram
+<p>A single CAN frame carries at most 7 bytes of diagnostic payload. When a
+message is longer, <strong>ISO-TP</strong> (the transport layer, ISO 15765-2) splits it
+into multiple frames:</p>
+<pre class="kx-mermaid"><code>sequenceDiagram
     participant T as Tester
     participant E as ECU
     T-&gt;&gt;E: First Frame (PCI 0x1N): total length + first bytes
@@ -4475,22 +4484,29 @@ table in a slide deck and becomes something you can produce and debug yourself.<
     T-&gt;&gt;E: Consecutive Frame (PCI 0x21): bytes 7..13
     T-&gt;&gt;E: Consecutive Frame (PCI 0x22): bytes 14..20
     Note over T,E: CF sequence number rolls 0x21..0x2F, then wraps to 0x20</code></pre>
-<p>The high nibble of the first byte identifies the frame type: <code>0</code> = single frame,
-<code>1</code> = first frame, <code>2</code> = consecutive frame, <code>3</code> = flow control.</p>
+<p>The high nibble of the first byte identifies the frame type: <code>0</code> = single
+frame, <code>1</code> = first frame, <code>2</code> = consecutive frame, <code>3</code> = flow control. Keep
+this decoder ring next to you whenever a trace shows more than one CAN frame
+per service.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<p>Here's what you'll practice with — the same toolchain from the earlier MIL2
+lessons, now pointed at diagnostics:</p>
 <ul>
 <li><strong>CANalyzer</strong> (or CANoe) with a diagnostic-capable configuration — the same
   environment used in the <a href="../../../canalyzer/">CANalyzer</a> lessons.</li>
 <li>The diagnostic description <strong>CDD file</strong> for the target ECU
-  (<code>D2956_IPC_E2A_R10_332BEV.cdd</code> — the instrument panel cluster of the 332 BEV
-  platform), loaded into the configuration so requests are interpreted as
+  (<code>D2956_IPC_E2A_R10_332BEV.cdd</code> — the instrument panel cluster of the 332
+  BEV platform), loaded into the configuration so requests are interpreted as
   services and DIDs instead of raw bytes.</li>
-<li>A <strong>CAPL script</strong> implementing a simulated ECU node (the <a href="../../../capl/">CAPL</a>
-  lessons cover the language): on each incoming diagnostic request the script
-  builds and sends the required response.</li>
+<li>A <strong>CAPL script</strong> implementing a simulated ECU node (the
+  <a href="../../../capl/">CAPL</a> lessons cover the language): on each incoming
+  diagnostic request the script builds and sends the required response. This
+  is the heart of Part 1 — you are the ECU now.</li>
 </ul>
 <h2 id="part-1-build-the-conversations">Part 1 — Build the conversations<a class="headerlink" href="#part-1-build-the-conversations" title="Permanent link">&para;</a></h2>
-<p>Write the script (and the byte sequences it exchanges) for each scenario.</p>
+<p>Write the script (and the byte sequences it exchanges) for each scenario.
+Take them one at a time: each one adds exactly one new UDS service to your
+muscle memory.</p>
 <p><strong>1. Read vehicle speed from DID <code>AA AA</code>.</strong>
 The tester sends a <code>ReadDataByIdentifier</code> for the DID, the ECU answers
 positively with the speed set to 100 km/h:</p>
@@ -4516,8 +4532,9 @@ positively with the speed set to 100 km/h:</p>
 </tbody>
 </table>
 <p><strong>2. Write <code>XX XX</code> to DID <code>BB BB</code> — allowed only in the Extended session.</strong>
-You must change the session first, otherwise the ECU should reject the write
-with NRC 0x7F (serviceNotSupportedInActiveSession):</p>
+This is where the session rules earn their keep: you must change the session
+first, otherwise the ECU should reject the write with NRC 0x7F
+(serviceNotSupportedInActiveSession):</p>
 <table>
 <thead>
 <tr>
@@ -4552,8 +4569,8 @@ with NRC 0x7F (serviceNotSupportedInActiveSession):</p>
 <p><strong>3. Ask how many DTCs are stored.</strong>
 Use <code>ReadDTCInformation</code> with subfunction 0x01
 (reportNumberOfDTCByStatusMask) and a status mask of <code>FF</code> (any status). The
-positive response carries the availability mask, the DTC format and the 2-byte
-count — here, 4 DTCs:</p>
+positive response carries the availability mask, the DTC format and the
+2-byte count — here, 4 DTCs:</p>
 <table>
 <thead>
 <tr>
@@ -4577,7 +4594,8 @@ count — here, 4 DTCs:</p>
 </table>
 <p><strong>4. Start routine <code>CC CC</code> — expect a negative response for wrong length.</strong>
 Send a malformed <code>RoutineControl</code> start request (e.g. missing routine control
-option bytes) and answer with NRC 0x13:</p>
+option bytes) and answer with NRC 0x13. Building the <em>failure</em> case on
+purpose teaches you more than ten happy paths:</p>
 <table>
 <thead>
 <tr>
@@ -4600,14 +4618,14 @@ option bytes) and answer with NRC 0x13:</p>
 </tbody>
 </table>
 <p><strong>5. Explain consecutive frames.</strong>
-Give an example where a response longer than 7 bytes is split: the ECU sends a
-First Frame announcing the total length, the tester returns a Flow Control, and
-the remaining bytes travel in Consecutive Frames numbered 0x21, 0x22, … (see the
-diagram above).</p>
+Give an example where a response longer than 7 bytes is split: the ECU sends
+a First Frame announcing the total length, the tester returns a Flow Control,
+and the remaining bytes travel in Consecutive Frames numbered 0x21, 0x22, …
+(see the ISO-TP diagram above).</p>
 <h2 id="part-2-read-the-traces-find-the-mistakes">Part 2 — Read the traces, find the mistakes<a class="headerlink" href="#part-2-read-the-traces-find-the-mistakes" title="Permanent link">&para;</a></h2>
-<p>Each trace below is printed exactly as given in the exercise. For every line
-say what it means, then decide whether it is correct; if not, state what the
-bytes should have been.</p>
+<p>Now for the detective work. Each trace below is printed exactly as given in
+the exercise — and some of them lie. For every line, say what it means, then
+decide whether it is correct; if not, state what the bytes should have been.</p>
 <h3 id="trace-1-read-write-read-again">Trace 1 — read, write, read again<a class="headerlink" href="#trace-1-read-write-read-again" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4643,9 +4661,9 @@ bytes should have been.</p>
 </tr>
 </tbody>
 </table>
-<p>What to check: the ECU stores DID 0xF1AB = 0x04, the tester overwrites it with
-0x07 and reads it back. Is the final response consistent with the write that
-just succeeded?</p>
+<p>What to check: the ECU stores DID 0xF1AB = 0x04, the tester overwrites it
+with 0x07 and reads it back. Is the final response consistent with the write
+that just succeeded?</p>
 <h3 id="trace-2-a-refused-read">Trace 2 — a refused read<a class="headerlink" href="#trace-2-a-refused-read" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4666,8 +4684,8 @@ just succeeded?</p>
 </tbody>
 </table>
 <p>What to check: NRC 0x33 means securityAccessDenied — but first look at the
-request itself: a DID is always <strong>two</strong> bytes. Is the request even well formed,
-and would 0x33 (or rather 0x13) be the right refusal?</p>
+request itself: a DID is always <strong>two</strong> bytes. Is the request even well
+formed, and would 0x33 (or rather 0x13) be the right refusal?</p>
 <h3 id="trace-3-securityaccess-seed-key">Trace 3 — SecurityAccess seed &amp; key<a class="headerlink" href="#trace-3-securityaccess-seed-key" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
@@ -4731,10 +4749,11 @@ and would 0x33 (or rather 0x13) be the right refusal?</p>
 </tr>
 </tbody>
 </table>
-<p>This trace is full of planted errors. The correct seed &amp; key flow is:</p>
+<p>This trace is full of planted errors — it's the most instructive one in the
+set. The correct seed &amp; key flow is a strict four-step handshake:</p>
 <ol>
-<li>Tester requests the seed: <code>27 &lt;odd subfunction&gt;</code>, e.g. <code>27 11</code> — <strong>no extra
-   data bytes</strong>.</li>
+<li>Tester requests the seed: <code>27 &lt;odd subfunction&gt;</code>, e.g. <code>27 11</code> — <strong>no
+   extra data bytes</strong>.</li>
 <li>ECU replies <code>67 &lt;same subfunction&gt; &lt;seed&gt;</code>.</li>
 <li>Tester computes the key and sends it: <code>27 &lt;subfunction+1&gt; &lt;key&gt;</code>.</li>
 <li>ECU validates and replies <code>67 &lt;subfunction+1&gt;</code>; on a wrong key it answers
@@ -4777,20 +4796,26 @@ and would 0x33 (or rather 0x13) be the right refusal?</p>
 </tr>
 </tbody>
 </table>
-<p>What to check: against the session rules (Default is always reachable; Extended
-from Default; Programming only from Extended), is this sequence legal?</p>
+<p>What to check: against the session rules (Default is always reachable;
+Extended from Default; Programming only from Extended), is this sequence
+legal?</p>
+<p>When you're done, write up your findings and send the report to
+automotive.training@kineton.it or directly to your mentor — explaining your
+reasoning out loud is part of the exercise.</p>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
+<p>Everyone trips on at least one of these the first time. Now you get to trip
+on them here, where it costs nothing:</p>
 <ul>
 <li>Forgetting the <strong>session precondition</strong>: writing a DID that requires the
   Extended session while still in Default — the ECU must answer <code>7F 2E 7F</code>.</li>
-<li>Mixing up the subfunction echo in SecurityAccess: <code>requestSeed</code> uses the odd
-  level (0x11), <code>sendKey</code> uses level+1 (0x12), and the positive response must
-  echo the <strong>same</strong> subfunction as the request.</li>
-<li>Negative responses with more or fewer than three bytes — the format is fixed:
-  <code>7F &lt;SID&gt; &lt;NRC&gt;</code>.</li>
-<li>Role confusion in traces: requests (0x22, 0x27, 0x10…) come from the tester,
-  responses (0x62, 0x67, 0x50, 0x7F…) from the ECU. Any line breaking that is
-  an error.</li>
+<li>Mixing up the subfunction echo in SecurityAccess: <code>requestSeed</code> uses the
+  odd level (0x11), <code>sendKey</code> uses level+1 (0x12), and the positive response
+  must echo the <strong>same</strong> subfunction as the request.</li>
+<li>Negative responses with more or fewer than three bytes — the format is
+  fixed: <code>7F &lt;SID&gt; &lt;NRC&gt;</code>.</li>
+<li>Role confusion in traces: requests (0x22, 0x27, 0x10…) come from the
+  tester, responses (0x62, 0x67, 0x50, 0x7F…) from the ECU. Any line breaking
+  that is an error.</li>
 <li>Miscounting DID length: a DID is two bytes, so <code>22 F1 8</code> is not a valid
   request.</li>
 <li>Consecutive-frame numbering errors: CF sequence numbers start at 0x21 and
@@ -4799,27 +4824,29 @@ from Default; Programming only from Extended), is this sequence legal?</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>Positive response = SID + 0x40; negative response = <code>7F SID NRC</code>, always
-  three bytes — learn the common NRCs (0x13, 0x33, 0x35, 0x7F) by heart.</li>
-<li>Session transitions are constrained: Programming only from Extended,
-  Default from anywhere; services may be refused per session.</li>
-<li>SecurityAccess is strictly requestSeed (odd level) → sendKey (level+1),
-  and responses echo the request's subfunction.</li>
-<li>Payloads over 7 bytes ride ISO-TP: First Frame, Flow Control, then
-  Consecutive Frames 0x21…0x2F.</li>
-<li>Reading a trace means checking <em>every</em> byte: direction, SID, subfunction,
-  length, and consistency with what happened before.</li>
+<li>You can now speak UDS by hand: positive response = SID + 0x40, negative
+  response = <code>7F SID NRC</code>, always three bytes — and you know the NRCs
+  (0x13, 0x33, 0x35, 0x7F) that matter day to day.</li>
+<li>You can enforce session rules like a real ECU: Programming only from
+  Extended, Default from anywhere, and services refused per session.</li>
+<li>You can walk the SecurityAccess handshake — requestSeed (odd level) →
+  sendKey (level+1), with responses echoing the request's subfunction.</li>
+<li>You can follow payloads over 7 bytes across ISO-TP: First Frame, Flow
+  Control, Consecutive Frames 0x21…0x2F.</li>
+<li>Most valuable of all: you can read a raw trace byte by byte — direction,
+  SID, subfunction, length, consistency — and catch the mistake. That's
+  the skill that makes you useful on day one of any test campaign.</li>
 </ul>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise/UDS_Exercise.pdf">UDS Exercise</a> — PDF, 104.6 KB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise/UDS_Exercise.pdf">UDS Exercise</a> — PDF, 104.6 KB</li>
 </ul>
 <h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">&para;</a></h2>
 <ul>
-<li>:material-file: <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise/D2956_IPC_E2A_R10_332BEV.cdd">D2956 IPC E2A R10 332BEV</a> — 2.6 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/></svg></span> <a href="../../../../assets/mil2/18_RDI_Testing/18_RDI_Testing/UDS_Exercise/D2956_IPC_E2A_R10_332BEV.cdd">D2956 IPC E2A R10 332BEV</a> — 2.6 MB</li>
 </ul>
 
 
@@ -4849,6 +4876,7 @@ from Default; Programming only from Extended), is this sequence legal?</p>
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4856,7 +4884,7 @@ from Default; Programming only from Extended), is this sequence legal?</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../exercise-missing-message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercise: Missing Message Fault">
+          <a href="../exercise-missing-message/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercise: The Missing Message">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4866,7 +4894,7 @@ from Default; Programming only from Extended), is this sequence legal?</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Exercise: Missing Message Fault
+                Exercise: The Missing Message
               </div>
             </div>
           </a>
@@ -4907,6 +4935,41 @@ from Default; Programming only from Extended), is this sequence legal?</p>
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4919,8 +4982,21 @@ from Default; Programming only from Extended), is this sequence legal?</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

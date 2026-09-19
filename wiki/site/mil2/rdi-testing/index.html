@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../../assets/theme/kineton.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -67,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -125,21 +127,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
-      </label>
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -4372,27 +4360,32 @@
 
 
 <h1 id="rdi-testing">RDI Testing<a class="headerlink" href="#rdi-testing" title="Permanent link">&para;</a></h1>
-<p>Every ECU in a vehicle holds engineering parameters — sensor readings, internal
-software states, actuator feedbacks, learned values — that development,
-production and aftersales all need to inspect from the outside. <strong>Tester Data</strong>
-is the family of diagnostic commands that exposes them, and the <strong>RDI (Readable
-Diagnostic Identifier)</strong> is its most-used element. This article covers what
-DIDs are, how they are specified in the CDD, and how to design and execute a
-proper RDI test.</p>
-<p>Tester Data is used to:</p>
+<p>Welcome to your first hands-on diagnostic topic! Every Electronic Control Unit
+(ECU) in a vehicle holds engineering parameters — sensor readings, internal
+software states, actuator feedback, learned values — that development,
+production and aftersales teams all need to inspect from the outside. <strong>Tester
+Data</strong> is the family of diagnostic commands that exposes them, and the
+<strong>Readable Diagnostic Identifier (RDI)</strong> is the element you will use most
+often. RDI checks are the simplest diagnostic tests you will run, which makes
+them the perfect place to start: by the end of this article you will know what
+a Diagnostic Identifier (DID) is, how to find one in the ECU's diagnostic
+specification, and how to design and execute an RDI test you can actually
+trust.</p>
+<p>Tester Data exists to:</p>
 <ul>
 <li>check internal software status and read sensor values,</li>
 <li>check actuator status,</li>
 <li>support component learning procedures (pedals, valves, …).</li>
 </ul>
-<p>These definitions exist so that the vehicle can be serviced at the <strong>End of
-Line (EOL)</strong> in the plant, in <strong>aftersales</strong> workshops, and during development,
-fleet and validation activities.</p>
+<p>You will rely on these definitions throughout the vehicle's life: at the
+<strong>End of Line (EOL)</strong> station in the assembly plant, in <strong>aftersales</strong>
+workshops, and during development, fleet and validation activities.</p>
 <h2 id="what-is-a-did">What is a DID?<a class="headerlink" href="#what-is-a-did" title="Permanent link">&para;</a></h2>
-<p>A <strong>DID (Diagnostic Identifier)</strong> identifies an engineering parameter that is
+<p>A <strong>Diagnostic Identifier (DID)</strong> identifies an engineering parameter that is
 generated by sensors and processed by the electronic system — or calculated
 internally for control purposes — and that must be available on the diagnostic
-link.</p>
+link. Think of it as a numbered window into the ECU's memory: you ask for a
+DID by number, the ECU answers with the value behind it.</p>
 <p>Two addressing approaches exist:</p>
 <table>
 <thead>
@@ -4416,17 +4409,20 @@ link.</p>
 conversion formulas, whether an external tool may write the value, and whether
 security access protects it.</p>
 <h3 id="availability-rules">Availability rules<a class="headerlink" href="#availability-rules" title="Permanent link">&para;</a></h3>
-<p>A DID is not just a debugging hook — it is a contractual obligation of the ECU:</p>
+<p>A DID is not just a debugging hook — it is a contractual obligation of the
+ECU. When you test one, these are the guarantees you are verifying:</p>
 <ul>
-<li>Parameters must be readable <strong>individually or in groups</strong>, on proper request.</li>
+<li>Parameters must be readable <strong>individually or in groups</strong>, on proper
+  request.</li>
 <li>They must be accessible in <strong>key ON, with the engine running, and at any
   vehicle speed</strong>.</li>
 <li>If a component is faulty, the DID must report the value <strong>actually read by
   the sensor</strong>, not the recovery/substitute value the software is using
   internally.</li>
-<li>If a parameter does not exist in a given application (variant or outfitting),
-  the ECU must answer with a negative response meaning <em>"parameter not
-  available"</em> — <strong>NRC 0x31</strong> (<code>requestOutOfRange</code>) — not crash or stay silent.</li>
+<li>If a parameter does not exist in a given application (variant or
+  outfitting), the ECU must answer with a negative response meaning
+  <em>"parameter not available"</em> — <strong>Negative Response Code (NRC) 0x31</strong>
+  (<code>requestOutOfRange</code>) — not crash or stay silent.</li>
 </ul>
 <h3 id="rdi-vs-wdi">RDI vs. WDI<a class="headerlink" href="#rdi-vs-wdi" title="Permanent link">&para;</a></h3>
 <p>DIDs divide by access direction:</p>
@@ -4458,23 +4454,26 @@ security access protects it.</p>
 </table>
 <p>And by origin:</p>
 <ul>
-<li><strong>Mandatory DIDs</strong> — required by diagnostic norms such as ISO 14229. These
-  are the <em>identification parameters</em> (ECU identification, software versions,
-  …) and generally carry identifiers in the <strong><code>F1xx</code></strong> range.</li>
+<li><strong>Mandatory DIDs</strong> — required by diagnostic norms such as ISO 14229 (the
+  standard behind Unified Diagnostic Services, UDS). These are the
+  <em>identification parameters</em> (ECU identification, software versions, …) and
+  generally carry identifiers in the <strong><code>F1xx</code></strong> range.</li>
 <li><strong>Engineering parameters</strong> — implemented for a specific ECU in a specific
   vehicle program. They report sensors, valves, pumps, pedals, ECU features,
   and so on. Their identifiers come from a range reserved to the customer,
   specified in the Stellantis diagnostic specification <strong>CS.00102</strong>.</li>
 </ul>
 <h2 id="reading-and-writing-over-uds">Reading and writing over UDS<a class="headerlink" href="#reading-and-writing-over-uds" title="Permanent link">&para;</a></h2>
-<p>RDI testing runs over standard UDS services (see <a href="../diagnosis/">Diagnosis</a>
-for the full service model):</p>
+<p>RDI testing runs over standard <strong>Unified Diagnostic Services (UDS)</strong> — the
+request/response protocol used for nearly all modern ECU diagnostics (see
+<a href="../diagnosis/">Diagnosis</a> for the full service model). The two
+exchanges below are worth memorizing; you will see them constantly.</p>
 <p><strong>Reading</strong> — service <code>0x22 ReadDataByIdentifier</code>:</p>
 <div class="highlight"><pre><span></span><code>Request:           22 XX XX
 Positive response: 62 XX XX YY ...
 </code></pre></div>
-<p><code>XX XX</code> is the 2-byte RDI identifier; <code>YY ...</code> is the raw value returned by the
-ECU, echoing the identifier first.</p>
+<p><code>XX XX</code> is the 2-byte RDI identifier; <code>YY ...</code> is the raw value returned by
+the ECU, echoing the identifier first.</p>
 <p><strong>Writing</strong> — service <code>0x2E WriteDataByIdentifier</code>:</p>
 <div class="highlight"><pre><span></span><code>Request:           2E XX XX ZZ ...
 Positive response: 6E XX XX
@@ -4518,35 +4517,38 @@ reused across DIDs.</p>
 <div class="admonition tip">
 <p class="admonition-title">Always convert before judging</p>
 <p>A raw <code>62 24 09 01 20</code> tells you nothing until you apply the DID's data
-type. When a test result looks wrong, first check whether you are comparing
-raw hex against a physical expectation.</p>
+type. When a test result looks wrong, first check whether you are
+comparing raw hex against a physical expectation — this is the single most
+common beginner mistake, and now you know to avoid it.</p>
 </div>
 <h2 id="dids-in-the-cdd">DIDs in the CDD<a class="headerlink" href="#dids-in-the-cdd" title="Permanent link">&para;</a></h2>
-<p>The <strong>CDD (CANdela Diagnostic Document)</strong> is the ECU's complete diagnostic
-specification, authored with <strong>CANdelaStudio</strong> (Vector). It is the single
+<p>The <strong>CANdela Diagnostic Document (CDD)</strong> is the ECU's complete diagnostic
+specification, authored with <strong>CANdelaStudio</strong> (Vector). It is your single
 source of truth for what to test: services, DIDs, data types, sessions and
 security. Three views matter for RDI work:</p>
 <ol>
 <li><strong>DID Overview</strong> — the list of all DIDs across all variants: identifier,
-   description, and whether each is implemented in Common Diagnostics and/or in
-   specific variants.</li>
+   description, and whether each is implemented in Common Diagnostics and/or
+   in specific variants.</li>
 <li><strong>DID Implementation</strong> — the per-DID detail screen (below): name and
    description, the <code>RecordDataIdentifier</code> (the DID itself, e.g. <code>0x1000</code>),
-   checkboxes enabling read and/or write access, the protocol services
-   (<code>$22</code> / <code>$2E</code>), and the <strong>DataRecord</strong> table giving byte/bit position,
-   name and data type of each field. The right-hand side shows the exact
-   request, positive and negative response frames; greyed-out entries mean the
-   service is not enabled (e.g. a read-only DID has <code>$2E</code> in grey).</li>
+   checkboxes enabling read and/or write access, the protocol services (<code>$22</code>
+   / <code>$2E</code>), and the <strong>DataRecord</strong> table giving byte/bit position, name and
+   data type of each field. The right-hand side shows the exact request,
+   positive and negative response frames; greyed-out entries mean the service
+   is not enabled (e.g. a read-only DID has <code>$2E</code> in grey).</li>
 <li><strong>Properties of Data Type</strong> — the conversion formula details. Navigation
    path: <em>DataRecord → right-click on the conversion formula name → Properties
    of Data Type</em>.</li>
 </ol>
 <p><img alt="DID implementation screen in CANdelaStudio — identifier, enabled services and DataRecord layout" src="img/cdd-did-implementation.webp" /></p>
 <h2 id="testing-an-rdi">Testing an RDI<a class="headerlink" href="#testing-an-rdi" title="Permanent link">&para;</a></h2>
-<p>RDI testing is the simplest diagnostic test to realize, and it runs in the
-<strong>default session</strong> (<code>10 01</code>) — no extended session or security unlock needed.</p>
+<p>Here is the good news: RDI testing is the simplest diagnostic test to realize,
+and it runs in the <strong>default session</strong> (<code>10 01</code>) — no extended session or
+security unlock needed. If you can send a request and read a response, you can
+do this.</p>
 <h3 id="the-minimal-sequence">The minimal sequence<a class="headerlink" href="#the-minimal-sequence" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<pre class="kx-mermaid"><code>sequenceDiagram
     participant T as Tester (DIAnalyzer)
     participant E as ECU
     T-&gt;&gt;E: 10 01 (default session)
@@ -4561,12 +4563,12 @@ plausible value. A <code>7F</code> negative response fails the test — note the
 it tells you <em>why</em> (<code>0x11</code> service not supported, <code>0x31</code> request out of range,
 <code>0x22</code> conditions not correct, …).</p>
 <h3 id="one-reading-is-not-enough">One reading is not enough<a class="headerlink" href="#one-reading-is-not-enough" title="Permanent link">&para;</a></h3>
-<p>A single positive answer proves the service exists — nothing more. The value
-could be a <strong>frozen constant</strong>: a software bug, a stuck variable or a broken
-scaling can all return a perfectly formatted but dead value. To say the test is
-OK, you need <strong>at least three readings</strong> proving the RDI tracks the internal
-variable:</p>
-<pre class="mermaid"><code>flowchart TD
+<p>This is the pitfall that separates a checkbox test from a real one. A single
+positive answer proves the service exists — nothing more. The value could be a
+<strong>frozen constant</strong>: a software bug, a stuck variable or a broken scaling can
+all return a perfectly formatted but dead value. To say the test is OK, you
+need <strong>at least three readings</strong> proving the RDI tracks the internal variable:</p>
+<pre class="kx-mermaid"><code>flowchart TD
     A["Read RDI → current value"] --&gt; B["Force internal SW variable&lt;br/&gt;to MINIMUM of range"]
     B --&gt; C["Read RDI → follows to min?"]
     C --&gt;|no| F["TEST NOT OK&lt;br/&gt;(RDI blocked / wrong mapping)"]
@@ -4574,11 +4576,12 @@ variable:</p>
     D --&gt; E["Read RDI → follows to max?"]
     E --&gt;|no| F
     E --&gt;|yes| G["TEST OK"]</code></pre>
-<p>The internal variable is forced with the development/debug tool chain for the
-ECU under test; the RDI is read over UDS. If the diagnostic value follows the
+<p>You force the internal variable with the development/debug tool chain for the
+ECU under test, and read the RDI over UDS. If the diagnostic value follows the
 forced minimum and maximum (within the conversion formula's tolerance), the
 whole chain — sensor/software variable → diagnostic buffer → <code>$22</code> response →
-conversion — is working.</p>
+conversion — is working, and you can report the test as passed with
+confidence.</p>
 <div class="admonition warning">
 <p class="admonition-title">Compare like with like</p>
 <p>Apply the DID's conversion formula to the raw response before comparing
@@ -4587,10 +4590,12 @@ Forcing the variable outside its specified min/max is not a valid test
 step.</p>
 </div>
 <h2 id="worked-example-scr-dosing-valve-preconditions">Worked example: SCR dosing valve preconditions<a class="headerlink" href="#worked-example-scr-dosing-valve-preconditions" title="Permanent link">&para;</a></h2>
-<p>A realistic RDI test request, as seen on a Stellantis diesel program:</p>
+<p>Let's put it all together with a realistic RDI test request, as seen on a
+Stellantis diesel program:</p>
 <ul>
 <li><strong>ECU:</strong> ECM (Engine Control Module)</li>
-<li><strong>Sub-system:</strong> SCR (Selective Catalytic Reduction) aftertreatment</li>
+<li><strong>Sub-system:</strong> SCR (Selective Catalytic Reduction) aftertreatment — the
+  system that injects a urea solution into the exhaust to cut NOx emissions</li>
 <li><strong>Issue:</strong> every component of the SCR system must be tested at EOL to verify
   it works properly</li>
 <li><strong>Customer request:</strong> implement DIDs that report whether all <em>enable
@@ -4598,9 +4603,9 @@ step.</p>
   the <strong>Urea Dosing Valve</strong> (item 9 below)</li>
 </ul>
 <p><img alt="SCR system layout — the urea dosing valve is item 9, downstream of the DOC/SCRF and feeding the SCR catalyst" src="img/scr-system-test-case.webp" /></p>
-<p>The ECU supplier answered with a multi-bit DID, <strong><code>0x2409</code> — "SCR System Dosing
-Valve 1 Preconditions"</strong>, where each bit of the DataRecord reports one enable
-condition:</p>
+<p>The ECU supplier answered with a multi-bit DID, <strong><code>0x2409</code> — "SCR System
+Dosing Valve 1 Preconditions"</strong>, where each bit of the DataRecord reports one
+enable condition:</p>
 <table>
 <thead>
 <tr>
@@ -4699,21 +4704,20 @@ missing-message detection. The tools used here are covered in
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>A DID is a diagnostic identifier for an engineering parameter; <strong>RDI</strong> =
-  readable (service <code>$22</code>), <strong>WDI</strong> = writeable (service <code>$2E</code>).</li>
+<li>A DID is a numbered window into an ECU's engineering parameters; <strong>RDI</strong>
+  = readable (service <code>$22</code>), <strong>WDI</strong> = writeable (service <code>$2E</code>).</li>
 <li>DIDs must be readable at key ON, engine running, any vehicle speed; on
-  sensor faults they report the <em>real</em> sensor value; missing parameters get
-  <strong>NRC 0x31</strong>.</li>
+  sensor faults they report the <em>real</em> sensor value; missing parameters
+  get <strong>NRC 0x31</strong>.</li>
 <li>Mandatory identification DIDs live in the <code>F1xx</code> range (ISO 14229);
   engineering parameters use customer ranges (CS.00102).</li>
 <li>Raw responses become physical values through linear (<code>y = m·x + b</code>),
   table or identical conversion formulas — check them under <em>Properties of
   Data Type</em> in the CDD.</li>
-<li>A passing RDI test needs <strong>at least three readings</strong>: current value,
-  forced minimum, forced maximum — one answer only proves the service
-  exists.</li>
-<li>Real-world pattern: bitmask DIDs like <code>0x2409</code> pack a component's test
-  preconditions into a single read, decoded by DIAnalyzer from the CDD.</li>
+<li>Never trust a single reading: a passing RDI test needs <strong>at least
+  three</strong> — current value, forced minimum, forced maximum.</li>
+<li>You've got this: if you can send <code>22 XX XX</code> and decode the <code>62</code> reply,
+  you already hold the core skill of diagnostic testing.</li>
 </ul>
 </div>
 <h2 id="sub-sections">Sub-sections<a class="headerlink" href="#sub-sections" title="Permanent link">&para;</a></h2>
@@ -4724,7 +4728,7 @@ missing-message detection. The tools used here are covered in
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
 <p>This article was distilled from the academy lesson materials:</p>
 <ul>
-<li>:material-file-pdf-box: <a href="../../assets/mil2/18_RDI_Testing/RDI_Testing.pdf">RDI Testing</a> — PDF, 1.8 MB</li>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg></span> <a href="../../assets/mil2/18_RDI_Testing/RDI_Testing.pdf">RDI Testing</a> — PDF, 1.8 MB</li>
 </ul>
 
 
@@ -4754,6 +4758,7 @@ missing-message detection. The tools used here are covered in
         
       </main>
       
+
         <footer class="md-footer">
   
     
@@ -4761,7 +4766,7 @@ missing-message detection. The tools used here are covered in
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../diagnosis/diagnosis-exercises/exercise-diagnosi-1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercise 1 — Tracking a DTC Through Its Lifecycle">
+          <a href="../diagnosis/diagnosis-exercises/exercise-diagnosi-1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Exercise 1 — Tracking a Fault Through Its Lifecycle">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4771,20 +4776,20 @@ missing-message detection. The tools used here are covered in
                 Previous
               </span>
               <div class="md-ellipsis">
-                Exercise 1 — Tracking a DTC Through Its Lifecycle
+                Exercise 1 — Tracking a Fault Through Its Lifecycle
               </div>
             </div>
           </a>
         
         
           
-          <a href="rdi-testing/" class="md-footer__link md-footer__link--next" aria-label="Next: RDI Testing — The VF179 Rear Parking Assistance Specification">
+          <a href="rdi-testing/" class="md-footer__link md-footer__link--next" aria-label="Next: RDI Testing — Reading the VF179 Rear Parking Assistance Specification">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                RDI Testing — The VF179 Rear Parking Assistance Specification
+                RDI Testing — Reading the VF179 Rear Parking Assistance Specification
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4812,6 +4817,41 @@ missing-message detection. The tools used here are covered in
   </div>
 </footer>
       
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+  <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
+    <span class="kx-chat__handle-icon">✦</span>
+    <span class="kx-chat__handle-label">AI Assistant</span>
+  </button>
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+    <header class="kx-chat__header">
+      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
+      <div class="kx-chat__headings">
+        <strong>Constellation</strong>
+        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
+      </div>
+      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+    </header>
+    <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
+      <div class="kx-chat__msg kx-chat__msg--bot">
+        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
+        vehicle networks, diagnostics, calibration, or where to start your
+        learning path.</p>
+      </div>
+      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
+        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
+        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
+        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+      </div>
+    </div>
+    <form class="kx-chat__composer" id="kx-chat-form">
+      <input type="text" id="kx-chat-input" class="kx-chat__input"
+             placeholder="Ask about the academy…" autocomplete="off" />
+      <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
+    </form>
+    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
+  </div>
+</aside>
+
     </div>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
@@ -4824,8 +4864,21 @@ missing-message detection. The tools used here are covered in
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.highlight", "search.suggest"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
+
       <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
+        <script src="../../assets/theme/mermaid.min.js"></script>
+      
+        <script src="../../assets/theme/kineton-chat.js"></script>
+      
+        <script src="../../assets/theme/kineton-mermaid.js"></script>
+      
     
+<script>
+  // API integration hook — populated in a later step. When `endpoint` is null
+  // the panel runs in visual-preview mode with canned placeholder replies.
+  window.KX_CHAT_CONFIG = { endpoint: null, model: null };
+</script>
+
   </body>
 </html>

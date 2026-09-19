@@ -1,12 +1,30 @@
 # Vehicle Subsystems
 
-A modern vehicle is a collection of cooperating subsystems: the brakes and their
-electronic assistants, the charging and starting hardware, the exhaust
-after-treatment chain, the valve train, the transmission, and the drive layout.
-This lesson tours each of them so that, later in the bootcamp, you understand
-*what* the ECUs you will test and calibrate are actually controlling. The focus
-is on the physical principle of each subsystem and on how the electronic control
-layer sits on top of the mechanics.
+Welcome to your guided tour under the skin of a modern car. Before you test,
+calibrate or diagnose an Electronic Control Unit (ECU) — the small computers
+that run everything in a vehicle — you need to know *what those ECUs are
+actually controlling*. This lesson walks you through the subsystems you will
+meet again and again during the bootcamp: the brakes and their electronic
+assistants, the charging and starting hardware, the exhaust after-treatment
+chain, the valve train, the transmission, and the drive layout. For each one we
+look at the physical principle first, then at how the electronic control layer
+sits on top of the mechanics. When you finish, you will be able to look at any
+of these systems and explain what it does, what the ECU measures, and what it
+commands — the exact mental model every later lesson builds on.
+
+```mermaid
+flowchart LR
+    V["The vehicle"] --> B["Braking &<br/>stability"]
+    V --> C["Charging &<br/>starting"]
+    V --> E["Emission<br/>control"]
+    V --> VT["Valve<br/>timing"]
+    V --> T["Transmission"]
+    V --> D["Drive<br/>layout"]
+```
+
+Don't worry about memorizing everything on the first pass — treat this article
+as a map you can come back to whenever a later lesson mentions a subsystem you
+want to place in the bigger picture.
 
 ## Braking system
 
@@ -25,14 +43,15 @@ wheel, but they do it differently:
 ![Disk brake (left) and drum brake (right) component layout](img/brake-types.webp)
 
 The hydraulic circuit is what translates pedal travel into clamping force: the
-pressure of the brake fluid in the circuit rises with pedal effort, so the force
-on the pads stays proportional to what the driver requests.
+pressure of the brake fluid in the circuit rises with pedal effort, so the
+force on the pads stays proportional to what the driver requests.
 
 ### Oversteer and understeer
 
-Two terms describe how a car deviates from the trajectory the driver intends in
-a curve, and they matter because the electronic stability systems below exist to
-correct exactly these behaviors:
+Before we meet the electronic assistants, learn two words you will hear
+constantly. They describe how a car deviates from the trajectory the driver
+intends in a curve — and they matter because the stability systems below exist
+to correct exactly these behaviors:
 
 - **Oversteer** — the car turns *tighter* than intended; the rear axle loses
   adhesion and the tail steps out, which can lead to a spin if uncorrected.
@@ -43,8 +62,9 @@ correct exactly these behaviors:
 
 ### ABS — Antilock Brake System
 
-A locked wheel cannot steer: it slides, and the tire's grip collapses. ABS
-exists to keep the wheels at the edge of locking instead of beyond it.
+A locked wheel cannot steer: it slides, and the tire's grip collapses. The
+**Antilock Brake System (ABS)** exists to keep the wheels at the edge of
+locking instead of beyond it.
 
 Each wheel carries a speed pickup — a toothed **phonic wheel** (an angular
 position transducer) read by an **inductive proximity sensor**. The ABS control
@@ -80,22 +100,23 @@ sequenceDiagram
 ### EBD — Electronic Brakeforce Distribution
 
 The load on each wheel during braking is never equal: weight transfers forward,
-so the rear wheels unload and have less grip on the asphalt. If they receive the
-same brake force as the front, they lock first — and a locked rear axle destroys
-the car's directional stability and can make it spin.
+so the rear wheels unload and have less grip on the asphalt. If they receive
+the same brake force as the front, they lock first — and a locked rear axle
+destroys the car's directional stability and can make it spin.
 
-EBD uses the ABS hardware (wheel speed sensors and the hydraulic modulator) to
-apportion brake force between the axles. It lightens the braking force on one
-or both rear wheels — especially in corners, where the inner rear wheel is most
-unloaded — so that lock-up is avoided at the axle that can least afford it.
-Think of it as ABS logic applied *preventively* to the brake balance, rather
-than reactively to a locking wheel.
+**Electronic Brakeforce Distribution (EBD)** uses the ABS hardware (wheel speed
+sensors and the hydraulic modulator) to apportion brake force between the
+axles. It lightens the braking force on one or both rear wheels — especially in
+corners, where the inner rear wheel is most unloaded — so that lock-up is
+avoided at the axle that can least afford it. Think of it as ABS logic applied
+*preventively* to the brake balance, rather than reactively to a locking wheel.
 
 ### ESC — Electronic Stability Control
 
-ESC (Bosch markets it as **ESP**, Electronic Stability Program; other
-manufacturers use names such as DSC) is the system that fights oversteer and
-understeer directly.
+**Electronic Stability Control (ESC)** is the system that fights oversteer and
+understeer directly. Bosch markets it as **ESP** (Electronic Stability
+Program), and other manufacturers use names such as DSC — same idea, different
+badge.
 
 When the car starts to skid — the measured yaw behavior no longer matches what
 the steering angle implies the driver wants — ESC intervenes on two channels at
@@ -109,10 +130,10 @@ once:
 
 ### TCS / ASR — Traction Control System
 
-Traction control is the acceleration-side counterpart of ABS: it prevents the
-drive wheels from spinning when the driver asks for more torque than the
-surface can transmit — typical on rain-soaked or icy pavement, or whenever one
-wheel loses traction.
+The **Traction Control System (TCS)**, also called ASR, is the
+acceleration-side counterpart of ABS: it prevents the drive wheels from
+spinning when the driver asks for more torque than the surface can transmit —
+typical on rain-soaked or icy pavement, or whenever one wheel loses traction.
 
 Using the same wheel speed sensors as ABS, the controller identifies a spinning
 wheel and intervenes, depending on the system design, on one or both of:
@@ -140,9 +161,10 @@ so the vehicle does not roll backwards.
 
 !!! tip "One hardware platform, many functions"
     ABS, EBD, ESC, TCS and Hill Holder share the same sensors (wheel speed),
-    the same hydraulic modulator and largely the same ECU. When you test one of
-    them on a HIL rig or in the vehicle, you are really testing the whole
-    braking-control platform from different functional angles.
+    the same hydraulic modulator and largely the same ECU. When you later test
+    one of them on a Hardware-in-the-Loop (HIL) rig or in the vehicle, you are
+    really testing the whole braking-control platform from different functional
+    angles — a useful thing to remember when you plan your test cases.
 
 ## Charging and starting
 
@@ -150,8 +172,9 @@ so the vehicle does not roll backwards.
 
 The alternator's job is to keep the battery charged: the battery is needed to
 start the engine and to power every electrical function on board. The
-alternator produces alternating current, and since AC cannot be stored, a
-**rectifier bridge** converts it to DC so the battery can accumulate it.
+alternator produces alternating current (AC), and since AC cannot be stored, a
+**rectifier bridge** converts it to direct current (DC) so the battery can
+accumulate it.
 
 A classic alternator draws mechanical power from the engine almost constantly.
 A **Smart Alternator (SAM)** instead varies how much power it takes from the
@@ -174,14 +197,15 @@ disengages.
 
 Exhaust after-treatment is a chain of devices, each targeting specific
 pollutants. Understanding which device does what — and what the ECU measures to
-control it — is essential before you ever look at a diagnostic trouble code in
-this area.
+control it — is essential before you ever look at a Diagnostic Trouble Code
+(DTC, the standardized error codes you will read in the MIL2 diagnosis
+lessons) in this area.
 
 ### EGR — Exhaust Gas Recirculation
 
-EGR takes a small portion (typically **5–15%**) of the exhaust gas and routes
-it from the exhaust manifold back into the intake manifold, where it is
-aspirated into the cylinders with the fresh charge.
+**Exhaust Gas Recirculation (EGR)** takes a small portion (typically **5–15%**)
+of the exhaust gas and routes it from the exhaust manifold back into the intake
+manifold, where it is aspirated into the cylinders with the fresh charge.
 
 The recirculated gases are burnt and inert: they do not participate in
 combustion. That is precisely the point — they dilute the combustible mixture,
@@ -191,11 +215,13 @@ reduction in the power the cycle can deliver.
 
 ![EGR circuit: exhaust gas passes through a cooler and a PWM-controlled valve into the intake](img/egr-schematic.webp)
 
-The engine control unit drives the **EGR valve with a PWM signal**: by varying
-the duty cycle it regulates exactly how much exhaust gas is recirculated for
-the current operating point. Many systems add an **EGR cooler** (a small heat
-exchanger fed by engine coolant) to drop the recirculated gas temperature,
-which improves the NOx reduction further.
+The engine control unit drives the **EGR valve with a Pulse-Width Modulation
+(PWM) signal** — a square wave whose *duty cycle* (the percentage of time it
+stays on) sets how far the valve opens. By varying the duty cycle, the ECU
+regulates exactly how much exhaust gas is recirculated for the current
+operating point. Many systems add an **EGR cooler** (a small heat exchanger fed
+by engine coolant) to drop the recirculated gas temperature, which improves the
+NOx reduction further.
 
 ### The lambda probe — closed-loop mixture control
 
@@ -214,7 +240,9 @@ The measured quantity is the air/fuel ratio expressed as **λ (lambda)**:
 
 The probe reports this to the engine ECU as an electrical signal, and the ECU
 uses it in a feedback loop to correct the amount of fuel injected into the
-combustion chamber, hunting continuously around λ = 1 on petrol engines.
+combustion chamber, hunting continuously around λ = 1 on petrol engines. This
+is your first real example of **closed-loop control**, a pattern you will see
+everywhere in this job: measure, compare against a target, correct, repeat.
 
 ![Lambda probe characteristic: output voltage steps from ~1 V (rich) to ~0 V (lean) at λ = 1](img/lambda-curve.webp)
 
@@ -255,13 +283,14 @@ they need the separate devices described next.
 
 ### DPF — Diesel Particulate Filter
 
-The DPF physically traps fine particulate matter (soot) from diesel exhaust. It
-is combined with a pre-catalyst: exhaust gas collected from the manifold passes
-through the pre-catalyst, then through the filter itself, and continues towards
-the downstream exhaust components and the outlet.
+The **Diesel Particulate Filter (DPF)** physically traps fine particulate
+matter (soot) from diesel exhaust. It is combined with a pre-catalyst: exhaust
+gas collected from the manifold passes through the pre-catalyst, then through
+the filter itself, and continues towards the downstream exhaust components and
+the outlet.
 
-Because trapped soot accumulates, a **diagnosis and management software** in the
-ECU continuously monitors the filter's state — loading, pressure drop,
+Because trapped soot accumulates, a **diagnosis and management software** in
+the ECU continuously monitors the filter's state — loading, pressure drop,
 temperature — to guarantee correct operation and to manage the filter's
 maintenance (the regeneration events that burn the stored soot off). When you
 later meet DPF-related diagnostic trouble codes, they come from exactly this
@@ -269,17 +298,16 @@ monitoring software.
 
 ### SCR — Selective Catalytic Reduction
 
-SCR is the diesel answer to NOx. A reducing agent — in practice a urea solution
-(AdBlue), which decomposes to ammonia — is injected into the exhaust stream
-upstream of a dedicated catalyst. On the catalyst surface the reductant
-reacts with the nitrogen oxides and converts them to harmless nitrogen and
-water.
+**Selective Catalytic Reduction (SCR)** is the diesel answer to NOx. A reducing
+agent — in practice a urea solution (AdBlue), which decomposes to ammonia — is
+injected into the exhaust stream upstream of a dedicated catalyst. On the
+catalyst surface the reductant reacts with the nitrogen oxides and converts
+them to harmless nitrogen and water.
 
 The subtle engineering point of SCR is the catalyst selectivity: it must make
 **NO react with the available oxygen and not consume the ammonia (NH3)**
-unproductively. SCR systems are common both in industrial combustion plants and
-in automotive diesel applications, and they add their own sensors (NOx sensors,
-tank level, dosing quality monitoring) that you will see in diagnostics.
+unproductively. SCR systems add their own sensors (NOx sensors, tank level,
+dosing quality monitoring) that you will see in diagnostics later.
 
 ### How the chain fits together
 
@@ -315,7 +343,8 @@ opening points.
 With **fixed timing**, the camshaft is a simple component with fixed lobe
 geometry: the phasing is constant, the opening and closing moments never
 advance or retard with engine speed, and the engine behaves the same way at
-every rpm — a compromise tuned for one operating region.
+every rpm (revolutions per minute) — a compromise tuned for one operating
+region.
 
 With **variable valve timing (VVT)**, the valve events shift as engine speed
 changes. The benefit is that performance, fuel consumption and emissions can
@@ -335,13 +364,10 @@ switches to a performance-oriented phasing.
 | Rocker arm | A single cam acts through a rocker arm whose geometry is modulated by a second lobe system, amplifying or reducing the lobe effect |
 | Disengageable cams | Cams slide along the camshaft under electronic control; valves can be locked closed, letting the engine run on fewer cylinders (cylinder deactivation) |
 
-Almost every manufacturer has a branded implementation: Alfa Romeo's phase
-variator (the first on a production car), Toyota's VVT and VVT-iE, Honda's VTEC
-(including 3-stage VTEC), Mitsubishi's MIVEC, Porsche's VarioCam and VarioCam
-Plus, Nissan's VVL/N-VCT/CVTC/VVEL, BMW's VANOS and Valvetronic, Subaru's AVCS,
-Mazda's S-VT, Ford's VCT, Rover's VVC, Fiat's VFD and **Multiair**, and
-Daimler's CamTronic. Some systems additionally allow valves to stay shut by
-sliding the cams along the shaft — the basis of cylinder shut-off.
+Almost every manufacturer has a branded implementation — Toyota's VVT-i, Honda's
+VTEC and BMW's Valvetronic are names you may already have heard. You do not
+need to know them all; the one that matters most for this course is Fiat's
+**Multiair**, covered next, because you are likely to meet it on real projects.
 
 ### Multiair — electro-hydraulic valve control
 
@@ -369,17 +395,18 @@ hydraulically:
 Because the ECU commands the chamber valve cycle by cycle, the effective intake
 valve law becomes a software parameter rather than a machined piece of metal —
 which is why Multiair is a calibration-heavy subsystem when it comes to engine
-control development.
+control development, and a great preview of the kind of work you will do with
+calibration tools like INCA in MIL3.
 
 ## Transmission
 
 ### Why a gearbox exists
 
-The gearbox modifies the **torque characteristic** (not the power) coming out of
-the engine — conceptually it works like a selectable speed reducer between the
-engine and the wheels. By choosing among the available ratios, it varies the
-relationship between engine speed and vehicle speed so the wheels always get an
-appropriate drive torque.
+The gearbox modifies the **torque characteristic** (not the power) coming out
+of the engine — conceptually it works like a selectable speed reducer between
+the engine and the wheels. By choosing among the available ratios, it varies
+the relationship between engine speed and vehicle speed so the wheels always
+get an appropriate drive torque.
 
 This matters because the engine's optimal operating point depends on the
 situation:
@@ -391,22 +418,25 @@ situation:
   wheel torque.
 
 The driver (or an automatic controller) picks the ratio; the gearbox does the
-rest.
+rest. The three transmission families below differ mainly in *who* operates the
+clutch and *how* the next ratio is prepared.
 
 ### MTA — Automated Manual Transmission
 
-The MTA (also called a robotized gearbox) starts from an ordinary manual
-gearbox and replaces the driver's hand and foot with **actuators**: the
-electronics operate the clutch and perform gear selection and engagement
-autonomously. The control unit sequences the whole shift — clutch disengagement,
-ratio change, clutch re-engagement. By extension, gearboxes designed from the
-start for automatic actuation but still using manual-gearbox mechanics (gears
-coupled by sleeves and synchronizers) are also considered robotized manuals.
+The **Automated Manual Transmission (MTA)**, also called a robotized gearbox,
+starts from an ordinary manual gearbox and replaces the driver's hand and foot
+with **actuators**: the electronics operate the clutch and perform gear
+selection and engagement autonomously. The control unit sequences the whole
+shift — clutch disengagement, ratio change, clutch re-engagement. By extension,
+gearboxes designed from the start for automatic actuation but still using
+manual-gearbox mechanics (gears coupled by sleeves and synchronizers) are also
+considered robotized manuals.
 
 ### DCT — Dual Clutch Transmission
 
-A DCT contains **two input shafts, each with its own clutch**, nested so that
-both connect to the output shaft. The trick is in the ratio assignment:
+A **Dual Clutch Transmission (DCT)** contains **two input shafts, each with its
+own clutch**, nested so that both connect to the output shaft. The trick is in
+the ratio assignment:
 
 - one shaft carries the **odd** gears,
 - the other shaft carries the **even** gears.
@@ -415,26 +445,26 @@ both connect to the output shaft. The trick is in the ratio assignment:
 flowchart LR
     E["Engine"] --> C1["Clutch 1"]
     E --> C2["Clutch 2"]
-    C1 --> S1["Shaft 1: gears 1-3-5"]
-    C2 --> S2["Shaft 2: gears 2-4-6"]
+    C1 --> S1["Shaft 1<br/>odd gears 1-3-5"]
+    C2 --> S2["Shaft 2<br/>even gears 2-4-6"]
     S1 --> O["Output shaft"]
     S2 --> O
-    S2 -.->|"next gear pre-selected"| S2
 ```
 
 Both shafts rotate simultaneously, but only the one whose clutch is engaged
 transmits torque. While you drive in third, the second shaft already has fourth
-**pre-selected and waiting**; the shift itself is just a swap of which clutch is
-closed. The advantage is a remarkable shifting speed, with no torque
+**pre-selected and waiting**; the shift itself is just a swap of which clutch
+is closed. The advantage is a remarkable shifting speed, with no torque
 interruption worth mentioning.
 
 ### AT — Conventional Automatic Transmission
 
-The classic automatic uses an **epicyclic (planetary) gear set**: several
-planetary systems in series, each able to produce a different ratio when
-internal **brakes** hold one element — ring gear, sun pinion or planet carrier —
-depending on which ratio is needed. Shifting is typically governed by a
-hydraulic circuit whose pressure reflects vehicle speed via a speed detector.
+The classic **Automatic Transmission (AT)** uses an **epicyclic (planetary)
+gear set**: several planetary systems in series, each able to produce a
+different ratio when internal **brakes** hold one element — ring gear, sun
+pinion or planet carrier — depending on which ratio is needed. Shifting is
+typically governed by a hydraulic circuit whose pressure reflects vehicle speed
+via a speed detector.
 
 A hydraulic automatic transmission consists of three main parts:
 
@@ -449,7 +479,7 @@ A hydraulic automatic transmission consists of three main parts:
 
 ## Drive layouts (traction)
 
-The traction layout decides which wheels receive the engine's torque:
+Last stop on the tour: which wheels actually receive the engine's torque.
 
 | Layout | Principle | Notes |
 |---|---|---|
@@ -465,24 +495,27 @@ everyday conditions, some off-road vehicles and high-performance applications;
 4WD is the choice for heavier-duty work.
 
 !!! success "Key takeaways"
-    - Disk brakes clamp pads on a disk; drum brakes push shoes inside a drum —
-      and all electronic braking assistants (ABS, EBD, ESC, TCS, Hill Holder)
-      build on the same wheel-speed sensors and hydraulic modulator.
-    - Oversteer (tighter line, rear slips) and understeer (wider line, front
-      pushes) are the two behaviors ESC corrects by braking individual wheels
-      and cutting engine torque.
-    - The Smart Alternator varies its load on the engine with the driving
-      state; the starter motor only needs to crank the engine until combustion
-      becomes self-sustaining.
-    - Emission control is a chain: EGR prevents NOx in the cylinder (5–15%
-      recirculation, PWM-controlled), the lambda probe closes the mixture loop
-      around λ = 1, the catalyst (one-/two-/three-way) converts CO, HC and NOx,
-      and diesels add a monitored DPF plus urea-based SCR.
-    - Variable valve timing adapts valve events to rpm; Multiair goes further
-      and makes the intake valve law a per-cycle software decision via an
-      oil-filled tappet chamber.
-    - Transmission types differ in *who* operates the clutch: MTA robotizes a
-      manual, DCT pre-selects the next gear on a second clutch shaft, and the
-      classic AT combines a torque converter with planetary gears.
-    - Traction layouts: FWD and RWD pick an axle; 4WD splits torque equally,
-      AWD lets the ECU redistribute it continuously.
+    - You now have the map: six subsystem families, each with mechanics
+      underneath and an ECU on top — measure, decide, actuate.
+    - All braking assistants (ABS, EBD, ESC, TCS, Hill Holder) share one
+      hardware platform: wheel-speed sensors plus a hydraulic modulator. ESC
+      additionally cuts engine torque to correct oversteer and understeer.
+    - Emission control is a chain you can recite: EGR prevents NOx in the
+      cylinder (5–15% recirculation, PWM-driven), the lambda probe closes the
+      mixture loop around λ = 1, the catalyst (one-/two-/three-way, best at
+      180–380 °C) converts CO, HC and NOx, and diesels add a monitored DPF
+      plus urea-based SCR.
+    - Variable valve timing adapts valve events to rpm; Multiair turns the
+      intake valve law into per-cycle software — your first taste of why
+      calibration matters.
+    - Transmissions differ in *who* works the clutch: MTA robotizes a manual,
+      DCT pre-selects the next gear on a second clutch shaft, AT pairs a
+      torque converter with planetary gears. FWD/RWD pick an axle; 4WD splits
+      torque equally, AWD lets the ECU redistribute it continuously.
+
+!!! tip "Where this leads"
+    You will see these subsystems from the ECU's point of view very soon: their
+    signals travel on the buses from [CAN, LIN & Automotive
+    Ethernet](../can-lin/index.md), and their faults surface as the Diagnostic
+    Trouble Codes you will read in the [Diagnosis](../../mil2/diagnosis/index.md)
+    lessons of MIL2.

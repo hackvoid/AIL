@@ -1,28 +1,37 @@
 # Battery Electric Vehicle (BEV) Architecture
 
-A **Battery Electric Vehicle** is a *pure* electric vehicle: the only traction
+Welcome to your first deep dive into the electric powertrain. A **Battery
+Electric Vehicle (BEV)** is a *pure* electric vehicle: the only traction
 device is the electric motor, and the only energy source on board is the
 chemical energy stored in rechargeable battery packs. There is no combustion
 engine to fall back on — every aspect of propulsion, braking energy recovery
 and charging is handled electrically.
 
+Why should you care as a new E/E engineer? Because nearly everything you will
+do in this bootcamp — reading CAN traces, calibrating drive styles, diagnosing
+control units — revolves around the handful of components in this article.
+By the end, you will be able to name every major BEV component, explain how
+energy flows from grid to wheels and back, and read a real vehicle's drive
+mode logic without breaking a sweat.
+
 Every BEV is built around four main component groups:
 
 1. **Electric machine** — the traction motor (which also works as a generator)
-2. **Battery packs** — the high-voltage traction battery plus a conventional
-   low-voltage auxiliary battery
+2. **Battery packs** — the **high-voltage (HV)** traction battery plus a
+   conventional **low-voltage (LV)** auxiliary battery
 3. **Power managing units** — the power electronics between battery and motor
-4. **Digital control system** — the control units that coordinate everything
+4. **Digital control system** — the **Electronic Control Units (ECUs)** that
+   coordinate everything
 
-This article walks through each group and closes with a real case study: the
-Fiat 500-based **332 City BEV** and its sporty derivative, the **595e Abarth
-BEV**.
+We will walk through each group in turn and close with a real case study you
+will meet again later in the course: the Fiat 500-based **332 City BEV** and
+its sporty derivative, the **595e Abarth BEV**.
 
 ## The electric machine: why a BEV needs no gearbox
 
 An electric motor delivers its full drive torque from standstill and can spin
 beyond **10,000 rpm**. That single fact eliminates most of the transmission
-hardware an ICE vehicle needs:
+hardware an **Internal Combustion Engine (ICE)** vehicle needs:
 
 - **No multi-gear transmission** — the torque/speed characteristic of the
   motor covers the whole vehicle speed range with a single fixed ratio.
@@ -36,8 +45,9 @@ commands: the **accelerator pedal** and the **brake pedal**.
 !!! note "Bidirectional machine"
     The same electric machine works in both directions of energy flow: as a
     **motor** (electric energy → mechanical torque) and as an **alternator**
-    (mechanical rotation → electric current). Exploiting this bidirectionality
-    is the key to energy efficiency in a BEV.
+    (mechanical rotation → electric current). Exploiting this
+    bidirectionality is the key to energy efficiency in a BEV — keep this
+    mental model; you will use it constantly.
 
 ## Regenerative braking and one-pedal driving
 
@@ -45,7 +55,7 @@ In a conventional vehicle, braking means pressing pads against discs: kinetic
 energy turns into friction heat and is lost to the environment. A BEV instead
 **recovers** part of that energy: the traction motor reverses its operation,
 acts as an alternator driven by the wheels, and converts kinetic energy back
-into electric current that recharges the high-voltage battery.
+into electric current that recharges the HV battery.
 
 Regeneration happens in two situations:
 
@@ -53,8 +63,8 @@ Regeneration happens in two situations:
    torque requested by the driver is split between the electric machine
    (regeneration) and the friction brakes.
 2. **Accelerator pedal released (coasting)** — the *E-Pedal*, also called
-   **One-Pedal Drive**. Releasing the accelerator actively decelerates the
-   vehicle through the motor instead of letting it coast freely.
+   **One-Pedal Drive (OPD)**. Releasing the accelerator actively decelerates
+   the vehicle through the motor instead of letting it coast freely.
 
 The amount of energy recovered is proportional to the braking force — the
 stronger the deceleration, the greater the generated current — and ultimately
@@ -79,11 +89,14 @@ becomes necessary only for emergency stops or very strong deceleration.
     Regeneration is not a gadget — it directly extends the usable charge of
     the HV battery. Calibrating *how much* deceleration the motor provides on
     pedal release is one of the main levers the vehicle control unit uses to
-    differentiate drive styles (see the case study below).
+    differentiate drive styles (see the case study below). When you later
+    work on calibration in INCA, this is exactly the kind of parameter you
+    will touch.
 
 ## The battery system
 
-Every BEV actually carries **two** batteries:
+Every BEV actually carries **two** batteries — newcomers often find this
+surprising:
 
 | Battery | Role | Charged from |
 |---|---|---|
@@ -91,8 +104,9 @@ Every BEV actually carries **two** batteries:
 | **LV auxiliary battery** (typically 12 V) | Powers the ECUs and most vehicle actuators ("hotel" loads) | The HV battery, via the DC-DC converter |
 
 Only the HV battery is connected to the charging grid. The 12 V battery is
-maintained by the HV side — there is no alternator belt-driven by an engine
-as in a conventional car.
+maintained by the HV side through a **DC-DC converter** (a converter that
+steps direct current from one voltage level down to another) — there is no
+alternator belt-driven by an engine as in a conventional car.
 
 Modern all-electric cars span a wide capacity range: from **6.0 kWh** (2012
 Renault Twizy) up to **100 kWh** (2012 Tesla Model S / 2015 Tesla Model X).
@@ -103,9 +117,10 @@ Renault Twizy) up to **100 kWh** (2012 Tesla Model S / 2015 Tesla Model X).
 electric motor that regulates energy flow according to the instantaneous
 demand. The three main components are:
 
-- **Inverter** — a high-power DC→AC converter that feeds the battery's direct
-  current to the three-phase traction motor. It is the most critical of the
-  three: it operates at the highest power and directly enables traction.
+- **Inverter** — a high-power DC→AC converter that turns the battery's
+  **direct current (DC)** into the three-phase **alternating current (AC)**
+  the traction motor needs. It is the most critical of the three: it operates
+  at the highest power and directly enables traction.
 - **Onboard charger** — an AC→DC rectifier that converts grid power into DC
   to charge the HV battery.
 - **DC-DC converter** — steps the high traction voltage down to the low
@@ -113,7 +128,9 @@ demand. The three main components are:
 
 ![Typical power ranges of electric car power electronics devices](img/power-electronics-ranges.webp)
 
-The power levels differ by roughly two orders of magnitude:
+The power levels differ by roughly two orders of magnitude — a fact worth
+remembering when you think about which device dominates the thermal and
+diagnostic load:
 
 | Device | Typical power range |
 |---|---|
@@ -123,7 +140,9 @@ The power levels differ by roughly two orders of magnitude:
 
 ## The digital control system
 
-A BEV concentrates its propulsion intelligence in a few typical control units:
+A BEV concentrates its propulsion intelligence in a few typical control
+units. Learn these acronyms now — they appear in wiring diagrams, diagnostic
+tools and requirements documents throughout the bootcamp:
 
 - **PIM — Power Inverter Module.** The high-power DC→AC converter for the
   traction motor. It hosts two controllers:
@@ -138,10 +157,13 @@ A BEV concentrates its propulsion intelligence in a few typical control units:
   (AC→DC, from the grid) and the DC-DC converter (HV → 12 V for the auxiliary
   battery and all control units) in a single unit.
 - **BPCM — Battery Pack Control Module.** Supervises the critical battery
-  functions: voltage, temperature and current monitoring, **state of charge
+  functions: voltage, temperature and current monitoring, **State of Charge
   (SoC)** estimation and **cell balancing** of the lithium-ion cells.
 
 ![BEV component and control unit architecture](img/bev-architecture.webp)
+
+This diagram ties the whole energy story together — grid to battery, battery
+to wheels, wheels back to battery:
 
 ```mermaid
 flowchart TD
@@ -156,11 +178,11 @@ flowchart TD
 
 ## Case study: 332 City BEV vs 595e Abarth BEV
 
-The **332 City BEV** (the electric Fiat 500) was the first fully electric car
-from Fiat Chrysler Automobiles, unveiled in March 2020. Its sporty derivative,
-the **595e Abarth BEV**, followed in March 2023 — same electric motor, but
-with different regulation, firmer suspensions and more advanced stability
-control systems.
+Theory lands best on real hardware. The **332 City BEV** (the electric Fiat
+500) was the first fully electric car from Fiat Chrysler Automobiles,
+unveiled in March 2020. Its sporty derivative, the **595e Abarth BEV**,
+followed in March 2023 — same electric motor, but with different regulation,
+firmer suspensions and more advanced stability control systems.
 
 ### Technical comparison
 
@@ -168,14 +190,19 @@ control systems.
 |---|---|---|
 | Li-ion battery pack | 42 kWh → 320 km WLTP (up to 400 km); also 24 kWh → 180 km WLTP | 42 kWh → 225 km WLTP |
 | Motor | Front-axle permanent magnet synchronous motor | Same motor, sport calibration |
-| Max power | 87 kW (118 CV) | 120 kW (180 CV) |
+| Max power | 87 kW (118 CV, metric horsepower) | 120 kW (180 CV) |
 | Max wheel torque | 2112 Nm (τ = 9.8) | 2400 Nm (τ = 10.22) |
 | Max wheel radius | 28.8 cm | 29.2 cm |
 | Vehicle mass | 1433–1493 kg | 1464–1524 kg |
 
+*WLTP* is the **Worldwide harmonised Light vehicles Test Procedure**, the
+standardized driving cycle used to rate range — treat its numbers as
+"officially comparable", not "guaranteed in the real world".
+
 The Abarth extracts more power and torque from the same hardware at the price
 of range (225 km vs 320 km on the same 42 kWh pack) — a classic
-performance-vs-efficiency calibration trade-off.
+performance-vs-efficiency calibration trade-off, and a perfect example of how
+much of a car's character lives in software rather than hardware.
 
 ### Driver-selectable drive styles
 
@@ -193,11 +220,11 @@ selects among three styles with a selector device:
 !!! note "Drive style on the CAN bus"
     The selected drive style is broadcast as the signal
     `C1 BODY7.DriveStyleSts`, with values such as *Normal (0)*, *City (1)*,
-    *Sport Fun (2)* and *Eco (4)*. When you trace vehicle behavior in CANoe or
-    CANalyzer later in the bootcamp, this is the kind of signal you will
+    *Sport Fun (2)* and *Eco (4)*. When you trace vehicle behavior in CANoe
+    or CANalyzer later in the bootcamp, this is the kind of signal you will
     monitor to correlate driver selection with powertrain response.
 
-### SOC-related drive modes (driver-independent)
+### SoC-related drive modes (driver-independent)
 
 Independently of what the driver selects, the vehicle protects its battery
 when the estimated range runs low. Both vehicles apply progressive
@@ -229,24 +256,24 @@ the former *Eco* pedal map (since the 595 range does not offer that drive
 style).
 
 !!! success "Key takeaways"
-    - A BEV has four pillars: electric machine, battery packs, power managing
-      units, and the digital control system.
-    - The electric machine's torque-from-zero and >10,000 rpm capability
-      removes the gearbox, clutch and reverse gear; reverse is just a phase
-      swap.
+    - You now know the four pillars of every BEV: electric machine, battery
+      packs, power electronics and the digital control system.
+    - Torque from zero rpm and a >10,000 rpm ceiling mean no gearbox, no
+      clutch, no reverse gear — reverse is just a phase swap.
     - Regenerative braking and One-Pedal Drive turn the motor into an
-      alternator on brake application or throttle release, recharging the HV
-      battery — recovered energy scales with braking force, speed and
-      duration.
-    - Every BEV has two batteries: the HV traction pack (charged from the
-      grid via the onboard charger) and a 12 V auxiliary battery (charged
-      from HV via the DC-DC converter).
-    - Key control units: PIM (with EVCU + MCP), IDCM (charger + DC-DC) and
-      BPCM (battery monitoring, SoC, cell balancing).
-    - Drive styles (Normal / Range / Sherpa vs Turismo / Sport Street / Sport
-      Track) are calibrations of pedal map, speed limit and One-Pedal Drive —
-      broadcast on CAN as `BODY7.DriveStyleSts` — and SOC-based turtle modes
+      alternator, feeding energy back to the HV battery; the recovered
+      energy scales with braking force, speed and duration.
+    - Every BEV carries two batteries: the HV traction pack (charged from the
+      grid via the onboard charger) and a 12 V auxiliary battery (fed from HV
+      via the DC-DC converter).
+    - The key ECUs are PIM (EVCU + MCP), IDCM (charger + DC-DC) and BPCM
+      (battery monitoring, SoC, cell balancing).
+    - Drive styles are pure calibration — pedal map, speed limit and OPD,
+      broadcast on CAN as `BODY7.DriveStyleSts` — and SoC-based turtle modes
       override them to protect a nearly empty battery.
+
+    You have just built the mental model that every later module — hybrids,
+    CAN tooling, calibration, diagnostics — hangs off. Well done.
 
 !!! tip "Where this leads"
     The hybrid counterpart of this architecture — where an ICE and one or

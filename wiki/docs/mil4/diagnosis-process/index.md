@@ -1,27 +1,39 @@
 # Diagnosis Process Validation
 
-Before an ECU software release can be approved, its **diagnostic content** must
-be validated: every trouble code, every readable parameter, and every
-tester-activated procedure has to behave exactly as the project specification
-says. This article describes how that validation is organized — which documents
-feed it, which tools and benches are used, and the concrete test procedures for
-the four kinds of diagnostic element: **DTCs, IOLIs, Routines and RDIs**.
+Welcome to the part of the job where you stop trusting documents and start
+proving things. Before the software of an electronic control unit (ECU) can be
+released, someone has to check that its **diagnostic content** actually behaves
+the way the specification promises — every trouble code, every readable
+parameter, every tester-activated procedure. That someone is you.
 
-The techniques here build directly on the UDS diagnostic concepts from
-[Diagnosis](../../mil2/diagnosis/index.md) (services, sessions, status bytes)
-and on the measurement/calibration workflow from
-[INCA](../../mil3/inca/index.md).
+By the end of this article you will be able to:
+
+- explain which specification documents feed diagnostic validation and check
+  them against each other for contradictions;
+- set up a fault on a Hardware-in-the-Loop (HIL) bench and walk a trouble code
+  through its complete life cycle, watching the status byte evolve step by step;
+- validate the four diagnostic object types — **DTCs, IOLIs, Routines and
+  RDIs** — with a repeatable procedure;
+- document your findings so they can be reproduced, discussed and closed.
+
+The techniques here build directly on the Unified Diagnostic Services (UDS)
+concepts from [Diagnosis](../../mil2/diagnosis/index.md) (services, sessions,
+status bytes) and on the measurement/calibration workflow from
+[INCA](../../mil3/inca/index.md). If those are still fuzzy, skim them first —
+everything else here is hands-on.
 
 ## The validation process at a glance
 
-Diagnostic validation is a **document-driven coherence check**. The same
-diagnostic feature is described in several specification documents, and the
-first job of the validator is to verify that all of them agree with each other;
-the second job is to verify that the ECU software actually behaves as written.
+Diagnostic validation is, at heart, a **document-driven coherence check**. The
+same diagnostic feature is described in several specification documents written
+by different teams at different times. Your first job is to verify that all of
+them agree with each other; your second job is to verify that the ECU software
+actually behaves as written. Most defects you will find are simple mismatches —
+and finding them on the bench is exactly why the process exists.
 
 ![Inputs and output of the diagnostic validation process](img/validation-process-inputs.webp)
 
-The input documents you will work with:
+The input documents you will work with every day:
 
 | Document | Full name | What it specifies |
 |---|---|---|
@@ -32,10 +44,14 @@ The input documents you will work with:
 | **DDT** | Diagnostic Definition Table | Detailed definition of diagnostic data and conversion formulas |
 | **Dataset** | — | The complete software + calibration package flashed on the ECU under test |
 
+Don't worry about memorizing the acronyms now — you will meet them so often
+that they become second nature within a week.
+
 The elements under test are the four diagnostic object types: **DTC**
-(trouble codes), **RDI** (engineering parameters, read/written by data
-identifier), **IOLI** and **Routine** (procedures used by the plant and by
-service, e.g. actuator tests and resets of learned values).
+(Diagnostic Trouble Code — a stored fault), **RDI** (engineering parameters,
+read and written by data identifier), **IOLI** (Input/Output Line Interface
+procedures) and **Routine** (tester-activated procedures used by the plant and
+by service, e.g. actuator tests and resets of learned values).
 
 The applicable **reference norms** for the project are 7.Z0059, 7.Z0059/01,
 CS.00051, CS.00052 and CS.00053 — they define the general diagnostic behavior
@@ -68,9 +84,9 @@ flowchart LR
 
 ## The test environment
 
-Validation tests run on a **HIL (Hardware-in-the-Loop) bench** equipped with
-the real ECUs — typically the ECM (engine control), HCP (hybrid control) and
-TCM (transmission control) — plus their real actuators. Faults and maneuvers
+Validation tests run on a **HIL bench** equipped with the real ECUs — typically
+the ECM (engine control module), HCP (hybrid control processor) and TCM
+(transmission control module) — plus their real actuators. Faults and maneuvers
 are reproduced in the different vehicle conditions the specification requires:
 
 - **Power On** — key on, engine off,
@@ -87,49 +103,54 @@ Four tools are used in combination, each for its own role:
 | **DIAnalyzer** | The diagnostic tester: sends UDS requests, reads the error memory, checks status bytes and snapshots |
 | **CDA** | Diagnostic data environment (per project specification) |
 
-New diagnostic tests are first executed **manually**; the maneuvers that work
-are collected and shared so they can be **automated in the VST test platform**,
-which then runs the already-automated diagnosis cases. Manual exploration and
-automated regression complement each other.
+New diagnostic tests are always executed **manually first**; the maneuvers that
+work are collected and shared so they can be **automated in the VST test
+platform**, which then re-runs the already-automated diagnosis cases. Think of
+it as explore by hand, then lock in as regression — the two modes complement
+each other, and you will do both.
 
 ## Checks common to every element
 
-Whatever the element type, three families of checks always apply:
+Whatever the element type, three families of checks always apply. Learn these
+once and reuse them everywhere:
 
 1. **Coherence between documents.** The element must exist with the same
    definition in the D&C, in the CDD/DDT and (for DTCs) in the Criteria
    Matrix. Every diagnostic session listed in the D&C must also be active in
    the CDD, with matching descriptions.
 2. **Enabling and healing conditions.** Each condition is removed one at a
-   time and the effect on the element's behavior is observed — a condition that
-   has no effect is a specification or software error.
+   time and the effect on the element's behavior is observed — a condition
+   that has no effect when removed is a specification or software error.
 3. **Sessions and addressing.** Requests are sent in *all* diagnostic sessions
    and with both **physical addressing** (one specific ECU answers,
    `Addr = none` in the tester) and **functional addressing** (the request is
    broadcast, `Addr = ALL`, and every ECU that supports the service answers).
    In functional addressing, if no ECU answers at all, the tester reports an
-   **Rx Timeout**.
+   **Rx Timeout** — that's expected, not a tool failure.
 
 !!! note "Positive and negative responses are equally important"
     A diagnostic feature is not validated when it works — it is validated when
     it works *and* fails the way the CDD says it should. Every negative
-    response code listed in the CDD must be provoked and checked.
+    response code listed in the CDD must be provoked and checked. Beginners
+    often only test the happy path; experienced validators spend most of their
+    time on the unhappy ones.
 
 ## DTC validation
 
 ### Collecting the DTC's details
 
 For each Diagnostic Trouble Code, the Criteria Matrix (checked against the DSM
-and the DDT for coherence) gives you the full test plan:
+and the DDT for coherence) hands you the full test plan:
 
 - the **MIL class** — whether this fault must light the malfunction indicator
-  lamp (MIL) or not;
+  lamp (MIL, the dashboard "check engine" light) or not;
 - the **maturation time** — how long the fault condition must persist before
   the DTC is stored — and the **de-maturation time**;
 - the **enabling conditions** (when the monitor is allowed to run) and the
   **healing conditions** (how the DTC returns to a clean state).
 
-Two project rules are checked before any bench work:
+Two project rules are checked before any bench work — they save you from
+testing something that cannot possibly pass:
 
 - every RDI referenced by the Criteria Matrix must actually be **active in the
   dataset** flashed on the ECU;
@@ -137,21 +158,23 @@ Two project rules are checked before any bench work:
 
 ### A worked example: P065B
 
-The deck walks through DTC **P065B** — "Intelligent Alternator Module
+Let's walk through a real case: DTC **P065B** — "Intelligent Alternator Module
 (functional test) general electrical failure (circuit short to battery or
-open)", internally the DFC `DFC_SAMElecFault`. The maturation criterion is that
-the signal `IAM_ECM_FEEDBACK.ElectricalFault` equals 1, and the DTC Table
-requires the warning indicator to stay **OFF** for this fault.
+open)", internally the DFC (Diagnostic Fault Code) `DFC_SAMElecFault`. The
+maturation criterion is that the signal `IAM_ECM_FEEDBACK.ElectricalFault`
+equals 1, and the DTC Table requires the warning indicator to stay **OFF** for
+this fault.
 
-The fault is simulated while the engine is running (forcing the internal signal
-in INCA), and after the maturation time elapses the DTC is stored in the error
-memory with **status byte `8F`**.
+You simulate the fault while the engine is running (forcing the internal
+signal in INCA), and after the maturation time elapses the DTC is stored in
+the error memory with **status byte `8F`**.
 
 ![DIAnalyzer and INCA while DTC P065B matures: the error memory shows status byte 8F](img/dtc-stored-error-memory.webp)
 
 In this particular test the MIL actually turned **ON** — contradicting the DTC
 Table. That is exactly the kind of finding the process exists for: an OPL point
-is opened asking for clarification.
+is opened asking for clarification. Notice that *nobody recalibrated anything*;
+the mismatch itself is the deliverable.
 
 !!! warning "Approval rule"
     For final approval, the maneuvers must simulate **all input conditions**
@@ -162,8 +185,9 @@ is opened asking for clarification.
 ### Following the status byte across key cycles
 
 Most of a DTC test is a careful walk through key on/off cycles, watching the
-**DTC status byte** (ISO 14229) evolve exactly as the norms require. The bits
-that matter here:
+**DTC status byte** (ISO 14229) evolve exactly as the norms require. This is
+the heart of the whole procedure — once you can read the status byte, you can
+read the ECU's mind. The bits that matter here:
 
 | Bit | Meaning |
 |---|---|
@@ -174,7 +198,8 @@ that matter here:
 | 6 (`40`) | testNotCompletedThisOperationCycle |
 | 7 (`80`) | warningIndicatorRequested |
 
-The validation sequence for one DTC looks like this:
+The validation sequence for one DTC looks like this — follow the byte column
+and the pattern will click:
 
 | Step | Action | Expected status byte | Why |
 |---|---|---|---|
@@ -206,17 +231,18 @@ stateDiagram-v2
 Two practical rules from the bench:
 
 - **Alternate** waiting and not waiting for the power latch time between key
-  cycles — this covers more software initialization paths and exposes DTCs that
-  behave differently depending on whether the ECU fully shut down.
+  cycles — this covers more software initialization paths and exposes DTCs
+  that behave differently depending on whether the ECU fully shut down.
 - DTC storage must always follow the status byte evolution required by the
   project norms; any jump or missing step is an OPL point.
 
 ### Checking snapshots with service $19
 
 When a DTC is stored, the ECU also freezes a **snapshot** (freeze frame) of
-environmental parameters. You verify it with UDS service `0x19` subfunction
-`0x04` (reportDTCSnapshotRecordByDTCNumber). For P065B, whose 3-byte DTC number
-is `06 5B 00`:
+environmental parameters — a photograph of the vehicle state at the moment of
+failure. You verify it with UDS service `0x19` subfunction `0x04`
+(reportDTCSnapshotRecordByDTCNumber). For P065B, whose 3-byte DTC number is
+`06 5B 00`:
 
 ```
 19 04 06 5B 00 00   → snapshot record 0 must be POPULATED  (first storage)
@@ -227,9 +253,8 @@ Rules checked:
 
 - on the **first** storage there must be exactly **one** snapshot — a second
   record while the fault was never healed and never re-detected is an error;
-- after healing the fault, re-setting it and cycling the key (steps 12/13 of
-  the walkthrough), a **second** snapshot must appear — and its content must be
-  checked for coherence too;
+- after healing the fault, re-setting it and cycling the key, a **second**
+  snapshot must appear — and its content must be checked for coherence too;
 - the environmental parameters in the snapshot must match the same parameters
   read live in INCA, and must **not contain unknown RDIs**.
 
@@ -239,9 +264,9 @@ itself through a path the specification does not allow).
 
 ## IOLI and Routine validation
 
-IOLIs (Input/Output Line Interface procedures) and Routines are
-**tester-activated procedures** — actuator commands, resets of learned values,
-self-tests. They share one procedure, with a few routine-specific steps.
+IOLIs and Routines are **tester-activated procedures** — actuator commands,
+resets of learned values, self-tests. They share one procedure, with a few
+routine-specific steps.
 
 For both element types:
 
@@ -286,7 +311,8 @@ for content, access and — most subtly — **conversion**.
 
 ### The two conversion formulas
 
-There are two distinct conversions, and mixing them up is the classic mistake:
+There are two distinct conversions, and mixing them up is the classic beginner
+mistake — keep them straight and you'll save yourself hours of confusion.
 
 **The ECU-internal formula** (from the software manual) converts between the
 internal integer and the physical value as the software sees it:
@@ -344,7 +370,7 @@ A test that is not documented does not exist. For each experiment:
 !!! success "Key takeaways"
     - Diagnostic validation is a coherence exercise: DSM, DTC Table/Criteria
       Matrix, D&C, CDD/DDT and the dataset must all agree — and then the ECU
-      must behave as written.
+      must behave as written. You can do this.
     - Tests run on the HIL bench (real ECM/HCP/TCM + actuators) with
       ControlDesk, INCA, DIAnalyzer and CDA, across all vehicle conditions;
       proven maneuvers are automated in VST.
