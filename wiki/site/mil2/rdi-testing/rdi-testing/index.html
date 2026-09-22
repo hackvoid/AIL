@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4361,14 +4375,14 @@
 
 
 <h1 id="rdi-testing-reading-the-vf179-rear-parking-assistance-specification">RDI Testing — Reading the VF179 Rear Parking Assistance Specification<a class="headerlink" href="#rdi-testing-reading-the-vf179-rear-parking-assistance-specification" title="Permanent link">&para;</a></h1>
-<p>Welcome to one of the most practical skills in this bootcamp: turning a
-requirements document into real tests. In this article you'll work with a
-genuine <strong>Vehicle Function (VF) specification</strong> — VF179, <em>Rear Parking
-Assistance</em> for the P332 battery-electric platform (Edition 2, Revision A) —
-the same document the RDI Testing lessons use as their reference. Every
-diagnostic exercise you'll meet later (missing messages, plausibility checks,
-Unified Diagnostic Services) starts from a requirement in VF179 and ends as a
-stimulus you apply on the bench and a behavior you observe.</p>
+<p>This article covers how to turn a requirements document into test cases,
+using a genuine <strong>Vehicle Function (VF) specification</strong> — VF179, <em>Rear
+Parking Assistance</em> for the P332 battery-electric platform (Edition 2,
+Revision A) — the same document the RDI Testing lessons use as their
+reference. Every diagnostic exercise that follows (missing messages,
+plausibility checks, Unified Diagnostic Services) starts from a requirement
+in VF179 and ends as a stimulus applied on the bench and an observed
+behavior.</p>
 <p>By the end of this article you'll be able to:</p>
 <ul>
 <li>navigate a VF document and know exactly which section answers which testing
@@ -4377,8 +4391,8 @@ stimulus you apply on the bench and a behavior you observe.</p>
   to respect, and the diagnostic trouble codes (DTCs) to expect,</li>
 <li>read the PAM state machine fluently enough to design your own test cases.</li>
 </ul>
-<p>Don't worry about memorizing everything — the goal is to learn <em>where to
-look</em>, so the document becomes your ally rather than a wall of text.</p>
+<p>The goal is not to memorize the document, but to know <em>where to look</em> in it
+for each kind of testing information.</p>
 <h2 id="what-a-vf-document-contains">What a VF document contains<a class="headerlink" href="#what-a-vf-document-contains" title="Permanent link">&para;</a></h2>
 <p>A VF document describes one vehicle feature end to end, across all the
 electronic control units (ECUs) that cooperate to deliver it. VF179 follows
@@ -4436,11 +4450,12 @@ actually ask on the job:</p>
 </tbody>
 </table>
 <h2 id="meet-the-four-ecus">Meet the four ECUs<a class="headerlink" href="#meet-the-four-ecus" title="Permanent link">&para;</a></h2>
-<p>Everything in VF179 revolves around four control units. Get friendly with
-them now — you'll be stimulating and observing them constantly:</p>
+<p>VF179 involves four control units, which are the units stimulated and
+observed throughout testing:</p>
 <ul>
-<li><strong>PAM</strong> (Park Assist Module) — the brain. It owns the algorithm and the
-  three ultrasonic sensors in the rear bumper (left, central, right).</li>
+<li><strong>PAM</strong> (Park Assist Module) — the central controller. It owns the
+  algorithm and the three ultrasonic sensors in the rear bumper (left,
+  central, right).</li>
 <li><strong>BCM</strong> (Body Control Module) — the gateway. It forwards the PAM button
   press over LIN (Local Interconnect Network) and drives the button LED, with
   day and night variants.</li>
@@ -4449,11 +4464,10 @@ them now — you'll be stimulating and observing them constantly:</p>
 <li><strong>LSS</strong> — acquires the physical Park Assist on/off switch.</li>
 </ul>
 <h2 id="system-purpose-and-signal-flow">System purpose and signal flow<a class="headerlink" href="#system-purpose-and-signal-flow" title="Permanent link">&para;</a></h2>
-<p>The system's job is simple to state: warn the driver about obstacles behind
-the vehicle while parking — including obstacles outside the driver's field of
-view — through <strong>visual signals</strong> (arcs on the cluster display) and
-<strong>acoustic signals</strong> (chimes whose pulse rate depends on distance). Here's how
-the information flows:</p>
+<p>The system warns the driver about obstacles behind the vehicle while parking
+— including obstacles outside the driver's field of view — through <strong>visual
+signals</strong> (arcs on the cluster display) and <strong>acoustic signals</strong> (chimes
+whose pulse rate depends on distance). The information flow is:</p>
 <pre class="kx-mermaid"><code>flowchart LR
     subgraph HW["Hardwired devices"]
         SENS["Rear bumper sensors ×3"]
@@ -4468,8 +4482,8 @@ the information flows:</p>
     VEH["Brake &amp; transmission ECUs"] --&gt;|"C-CAN: BRAKE1, BRAKE4, TRANSM2"| PAM
     PAM --&gt;|"STATUS_PAM / PARK_INFO"| IPC["IPC cluster"]
     PAM --&gt;|"PAM_LedControlSts"| BCM --&gt;|"LedControlSts.Req"| LED</code></pre>
-<p>Notice how the document groups interfaces by channel — this is exactly how
-you'll set up your tools:</p>
+<p>The document groups interfaces by channel, matching the way the measurement
+tools are configured:</p>
 <table>
 <thead>
 <tr>
@@ -4501,15 +4515,15 @@ you'll set up your tools:</p>
 </tr>
 </tbody>
 </table>
-<p>One more thing to know before diving into the logic: two <strong>PROXI parameters</strong>
-(the vehicle's configuration bytes) gate entire branches of it. <code>CAN node 24
+<p>Two <strong>PROXI parameters</strong> (the vehicle's configuration bytes) gate entire
+branches of the logic. <code>CAN node 24
 (PAM)</code> must be <code>Present</code> for the BCM/IPC requirements to apply at all, and
 <code>Gear_Box_Type</code> different from <code>MTX</code> enables the gear-lever-based reverse
 detection. Other PROXI parameters (<code>PAM_Configuration</code>, <code>PAM_Tuning_Set</code>,
 <code>Vehicle_Line_Configuration</code>) select the parameter set for the vehicle model.</p>
 <h2 id="preconditions-the-pam-internal-variables">Preconditions: the PAM internal variables<a class="headerlink" href="#preconditions-the-pam-internal-variables" title="Permanent link">&para;</a></h2>
-<p>Before the state machine makes sense, you need the handful of variables
-everything else depends on. Think of these as the vocabulary of the document:</p>
+<p>The state machine depends on a small set of internal variables, which form the
+vocabulary used throughout the document:</p>
 <ul>
 <li><strong>Reverse Condition</strong> — true when <code>Gear_Box_Type ≠ MTX</code> and
   <code>TRANSM2.ShiftLeverPosition</code> stays equal to <code>"R"</code> for longer than
@@ -4524,9 +4538,8 @@ everything else depends on. Think of these as the vocabulary of the document:</p
   at every change.</li>
 </ul>
 <h2 id="the-pam-state-machine">The PAM state machine<a class="headerlink" href="#the-pam-state-machine" title="Permanent link">&para;</a></h2>
-<p>This is the heart of the document — and, for you, the richest single source of
-test cases. Take your time with it; every arrow here is a scenario waiting to
-be verified:</p>
+<p>The state machine is the central part of the document and the primary source
+of test cases: each transition corresponds to a scenario to be verified.</p>
 <pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; KEY_OFF
     KEY_OFF --&gt; KEY_ON: ignition → ON / Start / Engine_ON
@@ -4547,8 +4560,7 @@ be verified:</p>
         OFF --&gt; ON_Enable: button pressed, PAMFault = FALSE
         OFF --&gt; Disable: button pressed, PAMFault = TRUE
     }</code></pre>
-<p>What makes this testable is that each state announces itself on the bus.
-Here's what you can actually observe:</p>
+<p>Each state is identifiable on the bus from its signal values:</p>
 <ul>
 <li>Entering <strong>KEY ON</strong>, PAM initializes, resets all <code>STATUS_PAM</code>/<code>PARK_INFO</code>
   signals to defaults except <code>STATUS_PAM.PAMSystemSts = "ON_Inactive"</code>, and
@@ -4572,8 +4584,8 @@ Here's what you can actually observe:</p>
    <code>ON_Enable</code>. That boundary at 11 km/h is a classic test point.</li>
 <li><strong>Button in Disable with an active fault</strong> — PAM stays in <code>Disable</code> and
    the LED blinks for <code>PAM_LED_BLINK_TIME</code>, then goes back to continuous
-   light. With no fault, the same press moves PAM to <code>OFF</code>. Same stimulus,
-   two different expected behaviors — a great test case.</li>
+   light. With no fault, the same press moves PAM to <code>OFF</code>. The same stimulus
+   therefore yields two different expected behaviors.</li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Why NVM persistence matters for testing</p>
@@ -4584,7 +4596,7 @@ A correct ECU must not "forget" the fault across ignition cycles.</p>
 </div>
 <h2 id="alerts-arcs-chimes-and-special-cases">Alerts: arcs, chimes and special cases<a class="headerlink" href="#alerts-arcs-chimes-and-special-cases" title="Permanent link">&para;</a></h2>
 <p>In <code>ON_Active</code>, PAM requests acoustic feedback per zone through the two rear
-speakers. The logic is refreshingly simple:</p>
+speakers, according to this mapping:</p>
 <table>
 <thead>
 <tr>
@@ -4613,10 +4625,9 @@ speakers. The logic is refreshingly simple:</p>
 </table>
 <p>The chime repetition rate varies <strong>linearly with obstacle distance</strong>, between
 <code>REP_MIN_DURATION</code> (0 ms) and <code>REP_MAX_DURATION</code> (375 ms). A value of 0 means
-a <strong>continuous tone</strong> — you're against the obstacle, so stop! <code>ChimeType_Rear</code>
-is fixed to <code>"Type4"</code>.</p>
-<p>The special cases are where sloppy systems misbehave — and where sharp testers
-shine:</p>
+a <strong>continuous tone</strong>, indicating the vehicle is immediately adjacent to the
+obstacle. <code>ChimeType_Rear</code> is fixed to <code>"Type4"</code>.</p>
+<p>The specification also defines behavior for the following special cases:</p>
 <ul>
 <li><strong>Wall detection</strong> — if both outer sensors report a wall-shaped obstacle
   continuously for more than <code>Tpamwalldet</code> (<strong>3 s</strong>), the acoustic feedback is
@@ -4634,7 +4645,7 @@ shine:</p>
 variants using <code>InternalLightSts</code>: continuous or blinking light, with blinking
 at <code>PAM_LED_BLINK_DUTY</code> (<strong>50 %</strong>) and <code>PAM_LED_BLINK_FREQ</code> (<strong>2 Hz</strong>).</p>
 <h2 id="diagnosis-and-recovery">Diagnosis and recovery<a class="headerlink" href="#diagnosis-and-recovery" title="Permanent link">&para;</a></h2>
-<p>Now for the section you'll use most in the exercises. The diagnosis table has
+<p>The diagnosis table, the section used most in the exercises, has
 <strong>20 entries (IDs 1.0–20.0)</strong>, each binding a fault to the ECU that detects
 it, the enabling ignition condition, and the fault signal it sets. All of them
 are active only with ignition <code>ON</code> or engine running.</p>
@@ -4761,10 +4772,8 @@ are active only with ignition <code>ON</code> or engine running.</p>
 </tbody>
 </table>
 <h3 id="the-common-fault-handling-pattern">The common fault-handling pattern<a class="headerlink" href="#the-common-fault-handling-pattern" title="Permanent link">&para;</a></h3>
-<p>Here's the good news: nearly every PAM diagnosis follows the same
-detect → react → heal script. Learn this one pattern and you've understood
-most of the table — and it's exactly the structure your test cases should
-mirror:</p>
+<p>Nearly every PAM diagnosis follows the same detect → react → heal sequence,
+and test cases should mirror this structure:</p>
 <pre class="kx-mermaid"><code>flowchart TD
     A["Fault persists for the debounce time&lt;br/&gt;in PAM Diagnostic Requirements"] --&gt; B["Set DTC"]
     B --&gt; C["PAMFault = TRUE&lt;br/&gt;stored in NVM"]
@@ -4774,8 +4783,7 @@ mirror:</p>
     E --&gt; G["Fault no longer detected"]
     F --&gt; G
     G --&gt; H["Heal DTC&lt;br/&gt;PAMSystemFault = False&lt;br/&gt;move to ON_Enable"]</code></pre>
-<p>The details below are what distinguish a good test from a sloppy one — keep
-them close:</p>
+<p>The following details are relevant when designing tests:</p>
 <ul>
 <li><strong>Debounce</strong> — PAM waits <code>Tign</code> (<strong>200 ms</strong> default, tunable to 3000 ms)
   after initialization before evaluating any CAN-message fault. Stimulating a
@@ -4793,9 +4801,8 @@ them close:</p>
   checking that <em>no</em> DTC appears is a perfectly valid test.</li>
 </ul>
 <h2 id="configuration-parameters">Configuration parameters<a class="headerlink" href="#configuration-parameters" title="Permanent link">&para;</a></h2>
-<p>The parameter table is your cheat sheet for timings and thresholds (the
-default column is the "first trial value"). You'll come back to this table
-every time you write a test:</p>
+<p>The parameter table collects the timing and threshold values used in test
+design; the default column is the "first trial value":</p>
 <table>
 <thead>
 <tr>
@@ -4955,9 +4962,9 @@ every time you write a test:</p>
 </tbody>
 </table>
 <h2 id="from-document-to-test-cases">From document to test cases<a class="headerlink" href="#from-document-to-test-cases" title="Permanent link">&para;</a></h2>
-<p>Time to put it all together. Here's a practical workflow for testing this
-function on a bench or HIL (Hardware-in-the-Loop) rig — notice how each step
-maps directly back to a section of the document:</p>
+<p>The following workflow applies the document to testing this function on a
+bench or HIL (Hardware-in-the-Loop) rig. Each step maps to a section of the
+document:</p>
 <ol>
 <li><strong>Nominal activation</strong> — KEY ON, simulate <code>TRANSM2.ShiftLeverPosition =
    "R"</code> for more than 400 ms, expect <code>PAMSystemSts = "ON_Active"</code> and
@@ -4989,29 +4996,28 @@ maps directly back to a section of the document:</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Parameters are project data</p>
-<p><code>Tign</code>, <code>TReverseGear</code>, <code>SPEED_LIMIT</code> and friends are tunable
-configuration, not constants of nature. Before writing a test, confirm
+<p><code>Tign</code>, <code>TReverseGear</code>, <code>SPEED_LIMIT</code> and the other parameters are tunable
+configuration, not fixed constants. Before writing a test, confirm
 which values the ECU under test was actually calibrated with (PROXI /
 <code>PAM_Tuning_Set</code>) — a mismatch between document revision and ECU
-calibration is a classic false failure.</p>
+calibration is a common source of false failures.</p>
 </div>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
 <li>VF179 specifies the Rear Parking Assistance function across four ECUs:
   PAM (algorithm + sensors), BCM (button/LED gateway), IPC (arcs + chime),
-  LSS (switch acquisition) — and you now know what each one does.</li>
+  LSS (switch acquisition).</li>
 <li>The PAM state machine — KEY OFF / KEY ON / ON_Enable (ON_Inactive,
   ON_Active) / Disable / OFF — is driven by the Reverse Condition, the PAM
   button, vehicle speed, trailer presence and the latched <code>PAMFault</code>.</li>
-<li>20 diagnosis entries follow one learnable pattern: debounce → DTC +
+<li>The 20 diagnosis entries follow one common pattern: debounce → DTC +
   <code>PAMFault</code> in NVM → disable → heal and return to <code>ON_Enable</code>.</li>
 <li>Numbers worth remembering: <code>TReverseGear</code> 400 ms, <code>SPEED_LIMIT</code> 11 km/h,
   <code>PAM_STUCK_TIMEOUT</code> 15 s, <code>Tign</code> 200 ms, chime period 0–375 ms, wall
   detection after 3 s.</li>
-<li>Every requirement maps to a stimulus/observation pair — you can now read
-  a VF document like a tester, which is the essence of requirement-based
-  diagnostic testing.</li>
+<li>Every requirement maps to a stimulus/observation pair; this mapping is
+  the basis of requirement-based diagnostic testing.</li>
 </ul>
 </div>
 <h2 id="sub-sections">Sub-sections<a class="headerlink" href="#sub-sections" title="Permanent link">&para;</a></h2>
@@ -5120,38 +5126,27 @@ calibration is a classic false failure.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -5179,7 +5174,7 @@ calibration is a classic false failure.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

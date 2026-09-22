@@ -1,28 +1,29 @@
 # Test Automation
 
-Welcome to one of the most career-defining lessons of the bootcamp. Up to now
-you have run tests by hand: stimulate the ECU (electronic control unit), watch
-the reaction, write down the verdict. That works for a handful of tests — but a
-single vehicle function can carry dozens of test cases, each one re-executed at
-*every* software release, often on a HIL (hardware-in-the-loop) bench that sits
-idle all night. **Test automation** hands the repetitive part of that work to
-tools and scripts that replay pre-defined actions against the unit under test
-(UUT) and produce a report with the verdict — and, on failure, the cause.
+Up to now, tests have been run by hand: stimulate the ECU (electronic control
+unit), watch the reaction, record the verdict. That works for a handful of
+tests — but a single vehicle function can carry dozens of test cases, each one
+re-executed at *every* software release, often on a HIL (hardware-in-the-loop)
+bench that would otherwise sit idle overnight. **Test automation** hands the
+repetitive part of that work to tools and scripts that replay pre-defined
+actions against the unit under test (UUT) and produce a report with the
+verdict — and, on failure, the cause.
 
-By the end of this article you will be able to:
+This article covers:
 
-- explain *when* automation pays off and when a human tester is still the
-  right tool,
-- pick the right toolchain for a job: **CANoe + CAPL**, **Vector vTESTstudio**,
-  **TraceTronic ECU-TEST**, or **NI VeriStand + TestStand**,
-- follow the concrete click-path from "empty project" to "finished test
-  report" on each of them.
+- *when* automation pays off and when a human tester is still the right
+  choice,
+- the four toolchains used in this course: **CANoe + CAPL**,
+  **Vector vTESTstudio**, **TraceTronic ECU-TEST**, and
+  **NI VeriStand + TestStand**,
+- the procedure from an empty project to a finished test report on each of
+  them.
 
 ## Why automate
 
-Think of the manual validation cycle you already know: four steps, done by a
-person, every release. Automation takes over step 3 — and a good chunk of
-step 4, because the tool writes the report for you:
+Consider the manual validation cycle: four steps, performed by a person at
+every release. Automation takes over step 3 — and a large part of step 4,
+because the tool generates the report:
 
 ```mermaid
 flowchart LR
@@ -46,13 +47,13 @@ The benefits compound over a project's lifetime:
 | Reliable | No human-generated errors in execution and data logging |
 | Versatile | Tests already written are reused in new projects |
 
-Two bonus points your future self will thank you for: automation removes people
-from **dangerous tests** and harsh environmental conditions, and the automatic
-report largely disposes of a separate bug-logging pass — on failure it shows
-the *cause* of the negative verdict, not just the red X.
+Two further benefits: automation removes people from **dangerous tests** and
+harsh environmental conditions, and the automatic report largely eliminates a
+separate bug-logging pass — on failure it shows the *cause* of the negative
+verdict, not just the failed status.
 
 !!! warning "Automation is not free"
-    Be honest with your project manager about the two real limitations: the
+    Two limitations must be weighed before adopting automation: the
     **initial investment** (licenses, bench setup, writing and debugging the
     automated tests) and the fact that it is **not applicable to all tests** —
     subjective evaluations, exploratory testing and one-off checks still need
@@ -61,8 +62,8 @@ the *cause* of the negative verdict, not just the red X.
 
 ### Automation levels
 
-Not every team automates the same share of the workflow — know which level
-your project is aiming at:
+Not every team automates the same share of the workflow; three levels are
+commonly distinguished:
 
 ![Automation levels: from partially automated tests to a fully automated validation workflow](img/automation-levels.webp)
 
@@ -74,18 +75,19 @@ your project is aiming at:
 
 ## CANoe + CAPL: your first automated tests
 
-The gentlest entry point builds on what you already have: the
+The simplest entry point builds on the
 [CANoe](../canoe/index.md) environment and the
 [CAPL](../capl/index.md) language (Communication Access Programming Language,
 Vector's C-like scripting language) from the previous lessons.
 
-Remember that CANoe can simulate an entire network from the communication
+CANoe can simulate an entire network from the communication
 database (DBC, Database CAN): the rest-bus nodes exist in simulation and their
 **signal values are editable**, but the *signal logic* of the real ECU software
 is not reproduced — simulated nodes send only what you tell them to send. For
-testing, that is exactly what you need: a controllable world around your ECU.
+testing, this provides exactly what is needed: a controllable environment
+around the ECU.
 
-Two building blocks turn that world into automated tests:
+Two building blocks turn that environment into automated tests:
 
 - **Network nodes** — CAPL programs attached to simulation nodes. They can
   emulate ECU behavior, drive panels, control HIL hardware and simulate whole
@@ -95,20 +97,19 @@ Two building blocks turn that world into automated tests:
   every module's outcome into a **test report**.
 
 !!! note "When CAPL test modules are the right choice"
-    CAPL gives you total freedom — anything you can express in C-like code can
-    be a test. The price: programming effort grows with test complexity, the
-    report content must be coded inside each test, and the tests are fragile
-    against database or interface changes. For a quick, sharp test of one
-    feature, CAPL is perfect. For a large, long-lived test set, reach for a
-    dedicated authoring tool — read on.
+    CAPL gives full freedom — anything that can be expressed in C-like code
+    can be a test. The price: programming effort grows with test complexity,
+    the report content must be coded inside each test, and the tests are
+    fragile against database or interface changes. For a quick, focused test
+    of one feature, CAPL is well suited. For a large, long-lived test set, a
+    dedicated authoring tool is preferable — see the following sections.
 
 ## vTESTstudio: authoring tests without (much) code
 
 **vTESTstudio** is Vector's dedicated development environment for automated ECU
-tests. Its killer feature: **three notations for the same test**, freely mixed
-within one project — so the tester who thinks in tables, the reviewer who
-thinks in diagrams and the engineer who thinks in code can all work on the
-same test set.
+tests. Its key feature: **three notations for the same test**, freely mixed
+within one project — table-, diagram- and code-oriented authors can all work
+on the same test set.
 
 | Notation | Editor | Best for |
 |---|---|---|
@@ -118,7 +119,7 @@ same test set.
 
 ### From empty project to test report
 
-One mental model to hold onto: vTESTstudio does **not** execute tests. It
+One point is essential: vTESTstudio does **not** execute tests. It
 *compiles* them and hands them to CANoe, which runs them. The end-to-end flow:
 
 ```mermaid
@@ -133,7 +134,7 @@ flowchart LR
     H --> I["Open Test Report"]
 ```
 
-Walk it once and it will stick:
+The procedure:
 
 1. **Create the project** — *File | New Project*, choose path and name. To
    share naming and variables with the bus setup, open CANoe, load your
@@ -156,8 +157,7 @@ Walk it once and it will stick:
 
 ### Anatomy of a test case
 
-Almost every table-notation test case follows the same rhythm — learn it once
-and you can read anyone's tests:
+Most table-notation test cases follow the same sequence of commands:
 
 | Command | Role |
 |---|---|
@@ -168,7 +168,7 @@ and you can read anyone's tests:
 | Completion | Exit conditions, restore state |
 | Await Value Match | Check that a symbol reaches a value before a timeout |
 
-Two reuse mechanisms keep big test sets sane — use them from day one:
+Two reuse mechanisms keep large test sets maintainable:
 
 - **Test Case Definitions** — for repetitive tests that differ only in signal
   values. From *Functions* add a *Test Case Definition*, give it a name and
@@ -185,14 +185,15 @@ Two reuse mechanisms keep big test sets sane — use them from day one:
 
 The **Test Sequence Diagram** editor defines tests graphically — flows with
 decisions, forks and joins — while tabular test code sits behind each
-graphical element. It shines in **reviews**, and by default **one test case is
-generated for each path through the diagram**. The **State Diagram** editor
-goes further: you model the *expected behavior of the system under test* as a
-state machine, and test cases are **generated automatically** for transition
-coverage, with algorithms such as **Chinese Postman** or breadth-search.
+graphical element. It is particularly useful in **reviews**, and by default
+**one test case is generated for each path through the diagram**. The
+**State Diagram** editor goes further: you model the *expected behavior of the
+system under test* as a state machine, and test cases are **generated
+automatically** for transition coverage, with algorithms such as **Chinese
+Postman** or breadth-search.
 
 **Parameters** are constant values the test sequence can read in any notation
-(Symbol Explorer, *Parameters* tab), and they come in four flavors:
+(Symbol Explorer, *Parameters* tab), and they come in four kinds:
 
 | Kind | Contents | Typical use |
 |---|---|---|
@@ -208,14 +209,14 @@ define variant-dependent test cases or groups.
 !!! tip "vTESTstudio vs. raw CAPL"
     Same CANoe underneath — but the test code is drag-and-drop over pre-defined
     commands, the generated report is rich in detail with zero extra coding,
-    and parameter/variant handling makes tests robust against change. The
-    catch is in the last clause: it only works if you actually use those
-    features.
+    and parameter/variant handling makes tests robust against change. This
+    robustness, however, only holds if parameters and variants are actually
+    used.
 
 ## ECU-TEST: one test, every bench
 
-**ECU-TEST** (by TraceTronic) zooms out one level: instead of scripting the
-bus simulation, it automates the control of the **whole test environment**.
+**ECU-TEST** (by TraceTronic) operates one level higher: instead of scripting
+the bus simulation, it automates the control of the **whole test environment**.
 Its declared characteristics:
 
 - supports a broad range of test tools (CANoe, HIL benches, measurement and
@@ -227,21 +228,20 @@ Its declared characteristics:
 
 ### The big idea: environment independence
 
-Here is the concept worth remembering from this whole lesson. ECU-TEST test
+The central concept of ECU-TEST is environment independence. ECU-TEST test
 cases are designed **once**, from the requirement, and then executed
 unchanged at every integration level — model, code, ECU, vehicle:
 
 ![ECU-TEST software workflow: one test specification feeds test cases executed against the SW model, the generated code, the ECU and the vehicle](img/ecu-test-workflow.webp)
 
-So when someone asks "what changes if the test environment changes?", the
-answer is: the test cases don't — only the configuration that binds them to
-the bench does.
+When the test environment changes, the test cases do not — only the
+configuration that binds them to the bench does.
 
 ### Architecture: project, packages, TCF and TBC
 
 ![ECU-TEST general structure: project and packages on the right, XiL test bench and system under test on the left, bound by ports and the two configurations](img/ecu-test-structure.webp)
 
-Four pieces, and each has one job:
+The structure consists of four elements:
 
 - **Project (.prj)** — the top-level container, holding **packages (.pkg)**
   with the test cases (sequences of test steps, possibly nested), **signal
@@ -264,15 +264,16 @@ execution → report analysis on the generated `.trf`.
 
 ## NI VeriStand + TestStand: automating on a HIL rig
 
-The fourth toolchain lives on a **NI (National Instruments) HIL** bench. You
-need two ingredients up front: a **UUT** (the control unit under test) and a
-**framework** — the coded structure that interacts with the UUT automatically,
-here including the VeriStand project the sequences operate on. The output, as
-always: a report with the result and, on failure, the cause.
+The fourth toolchain lives on a **NI (National Instruments) HIL** bench. Two
+prerequisites are needed up front: a **UUT** (the control unit under test) and
+a **framework** — the coded structure that interacts with the UUT
+automatically, here including the VeriStand project the sequences operate on.
+The output is, as with the other tools, a report with the result and, on
+failure, the cause.
 
 ### Real-Time Sequences with the Stimulus Profile Editor
 
-Your authoring tool is the **Stimulus Profile Editor**, an NI VeriStand
+The authoring tool is the **Stimulus Profile Editor**, an NI VeriStand
 component that looks like a standard IDE but manipulates the parameters of the
 current VeriStand project. To start it: launch VeriStand, open the project,
 then use the **Tool Launcher** and open the *Stimulus Profile Editor* window.
@@ -283,7 +284,7 @@ hand. Recurring maneuver sequences (e.g. emulating a moving vehicle) are
 factored out into **libraries** that test cases recall; library syntax is
 identical to test case syntax.
 
-Get to know the editor's panels:
+The editor's panels:
 
 | Panel | Contents |
 |---|---|
@@ -300,10 +301,10 @@ parameters involved), invoke the RTS control from the left menu and press
 Boolean, or the numeric output for a double.
 
 !!! note "Validate the automation before trusting it"
-    This is a habit worth building now: run the manual test and the automated
-    sequence on the same condition and check the results match. Only then is
-    the test case automated properly — an unvalidated automation is just a
-    faster way to be wrong.
+    Run the manual test and the automated sequence on the same condition and
+    check that the results match. Only then is the test case automated
+    properly — an unvalidated automation can produce wrong results reliably
+    and at high speed.
 
 ### Automating a whole Vehicle Function
 
@@ -379,7 +380,8 @@ The procedure, step by step:
 
 ## Choosing your tool
 
-When you are dropped into a project, this table is your compass:
+The following table summarizes the differences between the three Vector-side
+and TraceTronic toolchains:
 
 | | CAPL test modules | vTESTstudio | ECU-TEST |
 |---|---|---|---|
@@ -390,17 +392,19 @@ When you are dropped into a project, this table is your compass:
 | Robustness against changes | Low | Proportional to proper use of parameters/variants | Proportional to proper use of ports/configurations |
 
 !!! success "Key takeaways"
-    - Automation owns step 3 (execution) — and much of step 4 (reporting) — of
-      the validation cycle; it pays off when tests re-run many times, but it
-      costs up front and never replaces exploratory, human testing.
-    - CANoe + CAPL test modules are your quick-and-sharp option inside the
-      Vector world: total freedom, at the price of fragility and code.
+    - Test automation covers step 3 (execution) — and much of step 4
+      (reporting) — of the validation cycle; it pays off when tests re-run
+      many times, but it requires an initial investment and does not replace
+      exploratory, human testing.
+    - CANoe + CAPL test modules are the lightweight option inside the Vector
+      toolchain: full programming freedom, at the price of fragility and
+      coding effort.
     - vTESTstudio authors tests in tables, diagrams or code, compiles them to
-      a VTUEXE and runs them in CANoe — with Test Case Definitions,
-      parameters and variants keeping large test sets maintainable.
-    - ECU-TEST's superpower is environment independence: ports plus TCF/TBC
+      a VTUEXE and runs them in CANoe; Test Case Definitions, parameters and
+      variants keep large test sets maintainable.
+    - ECU-TEST provides environment independence: ports plus TCF/TBC
       configurations let the *same* test cases run from software model to
-      real vehicle, with no programming at all.
+      real vehicle, with no programming required.
     - On NI HIL rigs, Real-Time Sequences automate single test cases, and
       stimulus profiles or NI TestStand run a whole VF campaign to a
       PDF-ready report.

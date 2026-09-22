@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4227,10 +4241,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#dtcs-the-vehicles-way-of-saying-something-hurt" class="md-nav__link">
+  <a href="#dtcs-active-and-stored-fault-codes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        DTCs: the vehicle's way of saying "something hurt"
+        DTCs: active and stored fault codes
       
     </span>
   </a>
@@ -4459,12 +4473,10 @@
 
 
 <h1 id="first-level-analysis-fla">First Level Analysis (FLA)<a class="headerlink" href="#first-level-analysis-fla" title="Permanent link">&para;</a></h1>
-<p>Welcome to one of the most hands-on roles in vehicle validation. When a test
-car throws a warning lamp, refuses to start, or does something odd during a
-charging session, someone has to be <strong>first on the scene</strong>: look at the data,
-reconstruct what actually happened, and point the right specialists at the
-right problem. That someone is the <strong>First Level Analysis (FLA)</strong> team — and
-after this lesson, that someone could be you.</p>
+<p>When a test vehicle shows a warning lamp, fails to start, or behaves
+unexpectedly during a charging session, someone has to examine the data
+first: reconstruct what actually happened and route the problem to the right
+specialists. That is the job of the <strong>First Level Analysis (FLA)</strong> team.</p>
 <p>By the end of this article you will be able to:</p>
 <ul>
 <li>explain what FLA delivers (and, just as importantly, what it does <em>not</em>
@@ -4473,8 +4485,7 @@ after this lesson, that someone could be you.</p>
 <li>connect a laptop to a real vehicle through the diagnostic socket and see
   live bus traffic,</li>
 <li>read a fault code, look it up in the DTC Matrix, and turn raw signals into
-  a root-cause hypothesis — the exact workflow the "Flying Doctor" uses in
-  the field.</li>
+  a root-cause hypothesis.</li>
 </ul>
 <h2 id="what-the-fla-team-actually-does">What the FLA team actually does<a class="headerlink" href="#what-the-fla-team-actually-does" title="Permanent link">&para;</a></h2>
 <p>The FLA team is a group of engineers whose primary task is to <strong>analyze and
@@ -4504,8 +4515,7 @@ at any point in their life:</p>
 <p>Your deliverable is a <strong>well-defined, understandable report with a
 possible root cause and a correct solution path</strong> — not the final fix.
 The actual software or hardware correction belongs to the second-level
-team that owns the function. Think of yourself as the detective, not the
-surgeon.</p>
+team that owns the function.</p>
 </div>
 <h2 id="how-an-issue-reaches-your-desk">How an issue reaches your desk<a class="headerlink" href="#how-an-issue-reaches-your-desk" title="Permanent link">&para;</a></h2>
 <p>Analysis never starts ad-hoc. Every claim flows through the same pipeline,
@@ -4531,11 +4541,11 @@ list:</p>
 <li><strong>Extras</strong> — durability fleets, NVH campaigns, reappear tests, and
   similar.</li>
 </ul>
-<p>You are not alone in this. The teams around FLA each bring a different
-angle: the <strong>fleet team</strong> exercises the vehicle the way a new customer
+<p>Several teams work alongside FLA, each with a different focus: the
+<strong>fleet team</strong> exercises the vehicle the way a new customer
 would and records what goes wrong; the <strong>flying doctors</strong> handle on-site
 technical support, software updates and high-severity customer problems;
-the <strong>plant team</strong> chases production-process issues; the <strong>after-sales
+the <strong>plant team</strong> handles production-process issues; the <strong>after-sales
 team</strong> looks after customer-facing technical support.</p>
 <div class="admonition tip">
 <p class="admonition-title">Delivery time</p>
@@ -4544,9 +4554,8 @@ the claim — or faster. Speed matters: second-level teams and fleet
 operations are blocked until the issue is characterized and routed.</p>
 </div>
 <h2 id="your-fla-toolbox">Your FLA toolbox<a class="headerlink" href="#your-fla-toolbox" title="Permanent link">&para;</a></h2>
-<p>Good news: you already know most of these tools from MIL2 and MIL3. In FLA
-you simply combine them for a new purpose — <strong>reconstructing what the
-vehicle did</strong>:</p>
+<p>Most of these tools are introduced in MIL2 and MIL3. In FLA they are
+combined for a new purpose — <strong>reconstructing what the vehicle did</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -4590,8 +4599,8 @@ vehicle did</strong>:</p>
 </tbody>
 </table>
 <h2 id="know-the-vehicle-before-you-touch-the-data">Know the vehicle before you touch the data<a class="headerlink" href="#know-the-vehicle-before-you-touch-the-data" title="Permanent link">&para;</a></h2>
-<p>Here is a piece of mentor advice worth remembering: <strong>you cannot interpret
-signals from a vehicle you do not understand.</strong> Before analyzing a claim on
+<p><strong>Signals cannot be interpreted correctly without understanding the vehicle
+they come from.</strong> Before analyzing a claim on
 a new program, an FLA engineer studies four things — illustrated here with
 the MHEV (Mild Hybrid Electric Vehicle) P2.5 48 V vehicle from the case
 study below:</p>
@@ -4620,7 +4629,7 @@ EVCU (Electric Vehicle Control Unit) carry the termination, on C1 it is the
 BCM (Body Control Module) and EVCU. When you suspect a wiring problem, this
 drawing tells you exactly which two ECUs to measure between.</p>
 <h2 id="the-diagnostic-language-you-will-speak-every-day">The diagnostic language you will speak every day<a class="headerlink" href="#the-diagnostic-language-you-will-speak-every-day" title="Permanent link">&para;</a></h2>
-<h3 id="dtcs-the-vehicles-way-of-saying-something-hurt">DTCs: the vehicle's way of saying "something hurt"<a class="headerlink" href="#dtcs-the-vehicles-way-of-saying-something-hurt" title="Permanent link">&para;</a></h3>
+<h3 id="dtcs-active-and-stored-fault-codes">DTCs: active and stored fault codes<a class="headerlink" href="#dtcs-active-and-stored-fault-codes" title="Permanent link">&para;</a></h3>
 <p>A <strong>DTC (Diagnostic Trouble Code)</strong> is a fault recorded by an ECU
 (Electronic Control Unit), encoded in <strong>three bytes</strong>: the first two
 identify the component or system, the third identifies the symptom — the
@@ -4661,11 +4670,10 @@ type of failure. A DTC can be:</p>
 </tr>
 </tbody>
 </table>
-<p>There is a neat pattern here: the positive response is always the <strong>request
-service ID + 0x40</strong> — send <code>0x22</code>, receive <code>0x62</code>. A <strong>negative response is
-<code>0x7F</code></strong>, followed by the original service ID and a negative response code.
-Once you see this rhythm in a trace, diagnostic conversations stop looking
-like hex soup.</p>
+<p>The positive response is always the <strong>request service ID + 0x40</strong> — send
+<code>0x22</code>, receive <code>0x62</code>. A <strong>negative response is <code>0x7F</code></strong>, followed by the
+original service ID and a negative response code. This pattern makes raw
+diagnostic traces straightforward to read.</p>
 <h3 id="the-dtc-matrix-from-raw-code-to-diagnosis-plan">The DTC Matrix: from raw code to diagnosis plan<a class="headerlink" href="#the-dtc-matrix-from-raw-code-to-diagnosis-plan" title="Permanent link">&para;</a></h3>
 <p>For each ECU, the <strong>DTC Matrix</strong> (DTC Criteria Matrix) is the reference
 table that turns a raw code into a plan of attack. Its columns include:</p>
@@ -4685,7 +4693,7 @@ table that turns a raw code into a plan of attack. Its columns include:</p>
   (e.g. a signal below/above/equal to a threshold).</li>
 </ul>
 <h3 id="proxi-and-flashing-two-field-essentials">PROXI and flashing: two field essentials<a class="headerlink" href="#proxi-and-flashing-two-field-essentials" title="Permanent link">&para;</a></h3>
-<p>Two Dianalyzer functions will save you repeatedly in the field:</p>
+<p>Two Dianalyzer functions are used frequently in the field:</p>
 <ul>
 <li><strong>PROXI</strong> — the vehicle configuration file listing every fitted feature
   (e.g. whether the car has adaptive cruise control). The Body Computer is
@@ -4782,16 +4790,15 @@ also on extended CAN and other transports. This only works on
 <strong>development (open) ECUs</strong>: with a production ECU you cannot touch
 calibrations, and the only way to deploy new values is to <strong>flash</strong> the new
 software version.</p>
-<p>A field trick worth knowing: when a new software release only changes
+<p>A useful field technique: when a new software release only changes
 calibration data, you can import the calibration from the reference page
 into the working page instead of re-flashing everything. For bypassing the
 SGW, the ETAS hardware connects to the vehicle through the <strong>ETK</strong>
 interface (plus supply, Ethernet and the CAN lines to the EOBD plug).</p>
 <h2 id="case-study-ftt344-chasing-a-gearbox-fault-that-wasnt-one">Case study: FTT#344 — chasing a "gearbox fault" that wasn't one<a class="headerlink" href="#case-study-ftt344-chasing-a-gearbox-fault-that-wasnt-one" title="Permanent link">&para;</a></h2>
-<p>This is a real FLA analysis, end to end. The claim: a <strong>transmission fault
-("Avaria Cambio")</strong> reported on a 48 V mild-hybrid vehicle. Follow the
-reasoning — this is the template for almost every analysis you will ever
-do.</p>
+<p>This section walks through a real FLA analysis, end to end. The claim: a
+<strong>transmission fault ("Avaria Cambio")</strong> reported on a 48 V mild-hybrid
+vehicle. The reasoning below is the general template for most FLA analyses.</p>
 <h3 id="step-1-check-that-you-have-data">Step 1 — Check that you have data<a class="headerlink" href="#step-1-check-that-you-have-data" title="Permanent link">&para;</a></h3>
 <p>Look up the vehicle's data records on ControlTec, download them, and verify
 they are consistent with the VSR and the fleet engineer's report. No usable
@@ -4811,7 +4818,7 @@ possible causes, mature/de-mature criteria. This frames your hypotheses
 <p>Now the core FLA skill. Your first goal is to see <strong>on a graph what the
 driver saw</strong> — which lamp or message appeared on the IPC (Instrument Panel
 Cluster), and at what exact moment — so the second-level owner gets a
-precise point in time instead of gigabytes of uninteresting data. Around
+precise point in time instead of a large volume of irrelevant data. Around
 the event, always collect the <strong>boundary conditions</strong>: Drive Ready vs.
 Key-On, HEV mode, vehicle speed, engine speed, 48 V SOC (State of Charge),
 gas pedal, brake pedal, shift lever position, and so on. They become
@@ -4868,7 +4875,7 @@ simply not enough to spin the engine up to combustion.</p>
 <p>The failure only appeared in one specific situation — EM Low Power
 Start at low 48 V SOC with a warm engine. Without logging SOC, coolant
 temperature and the start mode, the second-level teams would never have
-reproduced it. Log generously; your future self will thank you.</p>
+reproduced it. Log all relevant boundary conditions for every event.</p>
 </div>
 <h2 id="watching-diagnostics-live-in-canalyzer-pdx">Watching diagnostics live in CANalyzer (PDX)<a class="headerlink" href="#watching-diagnostics-live-in-canalyzer-pdx" title="Permanent link">&para;</a></h2>
 <p>FLA often needs to watch a <strong>diagnostic conversation</strong> (tester ↔ ECU) live
@@ -4902,8 +4909,8 @@ and show the same markers — you can now read the exact signal values at the
 moment a DTC was set or a routine was executed. This is how you tie "what
 the tester asked" to "what the vehicle was doing".</p>
 <h2 id="your-turn-hands-on-exercise-on-the-tonale-phev">Your turn: hands-on exercise on the Tonale PHEV<a class="headerlink" href="#your-turn-hands-on-exercise-on-the-tonale-phev" title="Permanent link">&para;</a></h2>
-<p>Time to put it all together on a real car. <strong>What you'll practice:</strong> the
-complete field workflow — connect, unlock, scan, interpret, repair, verify.</p>
+<p>This exercise applies the complete field workflow on a real vehicle:
+connect, unlock, scan, interpret, repair, verify.</p>
 <p><strong>Goal.</strong> The vehicle (an Alfa Romeo Tonale PHEV, a plug-in hybrid) shows
 an active <strong>MIL</strong> on the instrument cluster. Find the issue and fix it.</p>
 <p><strong>Setup.</strong> EOBD bridle, CANcaseXL, laptop with CANalyzer (license + DBCs
@@ -4940,8 +4947,8 @@ after the fix to document the repair.</p>
   look for signals with unexpected values around the event.</li>
 </ul>
 </div>
-<p><strong>Common mistakes — nothing on the CANalyzer trace?</strong> Work this checklist
-before you panic:</p>
+<p><strong>Common mistakes — nothing on the CANalyzer trace?</strong> Check the following
+items in order:</p>
 <ol>
 <li>Bridle not connected correctly to the EOBD plug.</li>
 <li>DB9 plugged into the wrong CANcase channel.</li>
@@ -4961,16 +4968,15 @@ before you panic:</p>
   SharePoint.</li>
 <li>Know the vehicle <em>before</em> the data: propulsion configuration, network
   topology (who terminates which bus), cooling, layout.</li>
-<li>You now speak the diagnostic grammar: DTCs (active/stored), services
+<li>Diagnostic fundamentals: DTCs (active/stored), services
   <code>0x22</code> / <code>0x2F</code> / <code>0x31</code> answered by <code>+0x40</code> or <code>0x7F</code>, the DTC
   Matrix columns, PROXI alignment, IDX/PRM/BIN flash files.</li>
-<li>Vehicle access is a checklist, not a mystery: EOBD pins 6/14 (C1),
+<li>Vehicle access checklist: EOBD pins 6/14 (C1),
   12/13 (C2), 3/11 (BH), DB9 pins 2/7, correct CANcase channel and bit
   rate — and unlock the SGW or you will see nothing.</li>
 <li>The FTT#344 chain — claim → DTCs → signal visualization → boundary
-  conditions → root cause → calibration fix — is your template for
-  every future analysis. You have everything you need to run one
-  yourself.</li>
+  conditions → root cause → calibration fix — is the standard template
+  for FLA analyses.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -5078,38 +5084,27 @@ before you panic:</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -5137,7 +5132,7 @@ before you panic:</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

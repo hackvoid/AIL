@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4171,10 +4185,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#automotive-spice-the-rules-of-the-game" class="md-nav__link">
+  <a href="#automotive-spice" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Automotive SPICE: the rules of the game
+        Automotive SPICE
       
     </span>
   </a>
@@ -4376,27 +4390,25 @@
 
 
 <h1 id="requirements-management">Requirements Management<a class="headerlink" href="#requirements-management" title="Permanent link">&para;</a></h1>
-<p>Welcome to the starting line of every automotive project. Long before anyone
-writes a line of code or powers up a HIL (Hardware-in-the-Loop) rig, someone
-has to answer a deceptively simple question: <strong>what exactly must this system
-do, and how will we prove it does it?</strong> That answer lives in the
-<strong>requirements</strong> — and in the automotive world they are not an informal to-do
-list. They are contract-relevant engineering artifacts that get elicited,
-reviewed, versioned and traced through the entire development lifecycle.</p>
-<p>As a new E/E engineer you may never <em>own</em> the requirements document — but you
-will read it every single day, derive your test cases from it, and defend your
-test results against it. By the end of this article you will be able to:</p>
+<p>Every automotive project starts with requirements. Before any code is written
+or a HIL (Hardware-in-the-Loop) rig is powered up, the project must define
+<strong>what exactly the system must do, and how that will be proven</strong>. In the
+automotive industry, requirements are not an informal to-do list: they are
+contract-relevant engineering artifacts that are elicited, reviewed, versioned
+and traced through the entire development lifecycle.</p>
+<p>As an E/E engineer you may never <em>own</em> the requirements document, but you will
+read it regularly, derive test cases from it, and justify test results against
+it. This article covers:</p>
 <ul>
 <li>explain how <strong>Automotive SPICE (ASPICE)</strong> structures the requirements chain
   and why OEMs (Original Equipment Manufacturers) audit suppliers against it,</li>
-<li>spot a <em>bad</em> requirement on sight and rewrite it into a good one,</li>
-<li>find your way around <strong>IBM Rational DOORS</strong>, the industry-standard tool where
+<li>identify a poorly written requirement and rewrite it into a well-formed one,</li>
+<li>navigate <strong>IBM Rational DOORS</strong>, the industry-standard tool where
   real projects store and trace thousands of requirements.</li>
 </ul>
-<h2 id="automotive-spice-the-rules-of-the-game">Automotive SPICE: the rules of the game<a class="headerlink" href="#automotive-spice-the-rules-of-the-game" title="Permanent link">&para;</a></h2>
+<h2 id="automotive-spice">Automotive SPICE<a class="headerlink" href="#automotive-spice" title="Permanent link">&para;</a></h2>
 <p><strong>Automotive SPICE</strong> — short for <em>Software Process Improvement and Capability
-dEtermination</em> (yes, the capitalization is odd, but that's where the acronym
-comes from) — is the automotive-specific variant of the international standard
+dEtermination</em> — is the automotive-specific variant of the international standard
 <strong>ISO/IEC 15504 (SPICE)</strong>. Its job is to <strong>improve and evaluate the development
 processes of ECU (Electronic Control Unit) suppliers</strong>: when a carmaker audits
 a supplier, the ASPICE model defines which processes are examined and how their
@@ -4442,17 +4454,17 @@ back to its parent — and forward to the test that will prove it.</p>
     B -. "traced to" .-&gt; C
     C -. "verified by" .-&gt; E["Tests&lt;br/&gt;(SWE.4–SWE.6, SYS.4–SYS.5)"]</code></pre>
 <div class="admonition note">
-<p class="admonition-title">Why you care as a test engineer</p>
+<p class="admonition-title">Relevance for test engineers</p>
 <p>ASPICE traceability is bidirectional: a requirement must trace <em>down</em> to
 design and code, and every requirement must be <em>verifiable</em> by a test or
 analysis on the right leg of the V. When you later write test cases in the
 <a href="../testcases/">Test Cases</a> lesson and run them in
 <a href="../../mil4/verification/">Verification</a>, each test will reference
-the requirement IDs it covers. Traceability is not bureaucracy — it is how
-you prove nothing was forgotten and nothing was invented.</p>
+the requirement IDs it covers. Traceability ensures that no requirement is
+left untested and no test exists without a requirement.</p>
 </div>
 <h2 id="functional-vs-non-functional-requirements">Functional vs. non-functional requirements<a class="headerlink" href="#functional-vs-non-functional-requirements" title="Permanent link">&para;</a></h2>
-<p>Requirements come in two fundamental flavors, and you'll meet both constantly:</p>
+<p>Requirements fall into two fundamental categories:</p>
 <ul>
 <li><strong>Functional requirements</strong> — what the system <strong>shall do</strong>. Example: "If the
   driver presses the brake pedal, the brake lights shall illuminate."</li>
@@ -4464,12 +4476,11 @@ you prove nothing was forgotten and nothing was invented.</p>
 </ul>
 <p>Both kinds must follow the same quality rules below. A vague non-functional
 requirement ("the system shall be fast") is just as defective as a vague
-functional one — and just as likely to blow up in your face during testing.</p>
+functional one — and just as likely to cause failures during testing.</p>
 <h2 id="anatomy-of-a-good-requirement">Anatomy of a good requirement<a class="headerlink" href="#anatomy-of-a-good-requirement" title="Permanent link">&para;</a></h2>
-<p>Here is the heart of the lesson — and the skill you will use most. A
-requirement is only useful if it can be understood one way, built within real
-constraints, and proven at the end. Six characteristics define a well-formed
-requirement:</p>
+<p>A requirement is only useful if it can be understood one way, built within
+real constraints, and proven at the end. Six characteristics define a
+well-formed requirement:</p>
 <table>
 <thead>
 <tr>
@@ -4504,16 +4515,14 @@ requirement:</p>
 </tr>
 </tbody>
 </table>
-<p>The easiest way to internalize these is through bad → good rewrites. Train
-your eye on these examples and you'll start catching defects in reviews within
-your first weeks on a project.</p>
+<p>The following bad → good rewrites illustrate each rule.</p>
 <h3 id="clear-and-unambiguous">Clear and unambiguous<a class="headerlink" href="#clear-and-unambiguous" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>❌ <em>The system shall not accept password longer than 15 characters.</em></p>
 </blockquote>
-<p>What does "not accept" mean — ignore it? truncate it? crash? A reader can
-interpret this in several ways, and every developer will pick a different one.
-The fixed version states the observable behavior:</p>
+<p>"Not accept" admits several interpretations — ignore the input, truncate it,
+or reject it with an error — and different developers will choose different
+ones. The fixed version states the observable behavior:</p>
 <blockquote>
 <p>✅ <em>If the user inserts a password longer than 15 characters, then the system
 shall display an error message and shall ask the user to correct it.</em></p>
@@ -4522,9 +4531,8 @@ shall display an error message and shall ask the user to correct it.</em></p>
 <blockquote>
 <p>❌ <em>The system must refresh the data reasonably quickly.</em></p>
 </blockquote>
-<p>"Reasonably quickly" cannot be verified by anyone — and <em>you</em> are the one who
-will have to verify it. A requirement is testable only if it contains a
-measurable criterion:</p>
+<p>"Reasonably quickly" is not verifiable. A requirement is testable only if it
+contains a measurable criterion:</p>
 <blockquote>
 <p>✅ <em>The system must refresh the data each 0.5 ms.</em></p>
 </blockquote>
@@ -4538,9 +4546,9 @@ one method applies.</p>
 <p>❌ <em>The replacement control system shall be installed with no disruption of
 the production.</em></p>
 </blockquote>
-<p>Zero disruption is usually physically impossible, so this requirement sets the
-project up to fail before it starts. A feasible version quantifies what the
-business can actually accept:</p>
+<p>Zero disruption is usually physically impossible, so this requirement cannot
+be satisfied. A feasible version quantifies what the business can actually
+accept:</p>
 <blockquote>
 <p>✅ <em>The replacement control system shall be installed causing no more than
 2 days of production disruption.</em></p>
@@ -4561,11 +4569,12 @@ value 0 ('kein_init').</em></p>
 <div class="admonition warning">
 <p class="admonition-title">Redundancy is also a consistency problem</p>
 <p>If the same behavior is stated in two places, a later change to one copy
-creates a hidden contradiction — and the two halves of the project will
-quietly diverge. Say it once, link to it everywhere.</p>
+creates a hidden contradiction between the two. State each behavior once
+and reference it wherever it applies.</p>
 </div>
 <h3 id="atomic">Atomic<a class="headerlink" href="#atomic" title="Permanent link">&para;</a></h3>
-<p>Conjunctions are a smell. One requirement, one statement:</p>
+<p>A requirement that bundles several conditions with conjunctions is not
+atomic. One requirement, one statement:</p>
 <blockquote>
 <p>❌ <em>In case of overtemperature, overcurrent and overvoltage the system shall
 abort the charge.</em></p>
@@ -4583,14 +4592,14 @@ the verification report.</p>
 (stakeholder, system, software) and <strong>how it correlates with other
 requirements</strong> — which parent it refines, which siblings it depends on, and
 which tests verify it. Traceability is not a property of the sentence but of
-the requirement <em>management</em>: it lives in the tool, which brings us to DOORS.</p>
+the requirement <em>management</em>: it is maintained in the requirements tool,
+described in the next section.</p>
 <h2 id="managing-requirements-in-ibm-rational-doors">Managing requirements in IBM Rational DOORS<a class="headerlink" href="#managing-requirements-in-ibm-rational-doors" title="Permanent link">&para;</a></h2>
 <p><strong>IBM Rational DOORS</strong> (Dynamic Object-Oriented Requirements System) is the
-de-facto standard requirements management tool in the automotive industry. A
-Word document or Excel sheet simply cannot maintain thousands of linked,
-versioned requirements without collapsing — DOORS can. You don't need to
-master it on day one, but you do need to navigate it confidently, so let's
-walk through the mental model.</p>
+de-facto standard requirements management tool in the automotive industry.
+Maintaining thousands of linked, versioned requirements is not practical in a
+Word document or Excel sheet; DOORS is designed for this. The following
+sections describe its data model and core features.</p>
 <h3 id="the-data-hierarchy">The data hierarchy<a class="headerlink" href="#the-data-hierarchy" title="Permanent link">&para;</a></h3>
 <p>DOORS organizes a database into three levels you will see immediately in its
 two main windows:</p>
@@ -4651,12 +4660,10 @@ filter objects by:</p>
 </ul>
 <p>and multiple conditions can be combined in one filter.</p>
 <div class="admonition warning">
-<p class="admonition-title">Filters have no memory</p>
-<p>A DOORS filter is not saved as part of the module by default — close the
-module and your carefully built multi-condition filter is gone. Save your
-working configurations as named <strong>views</strong> so they survive (and so they can
-be used for exports). Every new DOORS user learns this the hard way
-exactly once.</p>
+<p class="admonition-title">Filters are not persisted</p>
+<p>A DOORS filter is not saved as part of the module by default — closing the
+module discards a multi-condition filter. Save working configurations as
+named <strong>views</strong> so they persist and can be used for exports.</p>
 </div>
 <h3 id="baselines-links-and-history">Baselines, links and history<a class="headerlink" href="#baselines-links-and-history" title="Permanent link">&para;</a></h3>
 <p>These are the features that make DOORS a <em>management</em> tool rather than a text
@@ -4708,9 +4715,9 @@ you never write a requirement yourself.</p>
   analysis → SWE.1 software analysis, each level refining the previous one.</li>
 <li>Functional requirements say what the system <em>does</em>; non-functional
   requirements say what it <em>is</em> (timing, temperature, memory, …).</li>
-<li>You can now judge any requirement against the six rules: clear,
-  testable, feasible, consistent, atomic, traceable — and demand a
-  measurable criterion wherever it must be verified.</li>
+<li>Well-formed requirements are judged against six characteristics: clear,
+  testable, feasible, consistent, atomic, traceable; any requirement that
+  must be verified needs a measurable criterion.</li>
 <li>Verification methods: inspection, analysis, demonstration, test.</li>
 <li>DOORS structures requirements as database → projects → formal modules →
   objects, with attributes, filters, baselines, history and cross-module
@@ -4719,8 +4726,8 @@ you never write a requirement yourself.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Where this leads</p>
-<p>Next up: turn these requirements into executable checks in
-<a href="../testcases/">Test Cases</a>, then prove them on real hardware in
+<p>The next lessons derive executable checks from requirements in
+<a href="../testcases/">Test Cases</a> and verify them on real hardware in
 <a href="../../mil4/verification/">Verification</a> and
 <a href="../../mil4/validation/">Validation</a>.</p>
 </div>
@@ -4817,38 +4824,27 @@ you never write a requirement yourself.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4876,7 +4872,7 @@ you never write a requirement yourself.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

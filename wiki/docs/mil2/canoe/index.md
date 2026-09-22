@@ -1,26 +1,25 @@
 # CANoe — Configuring a Simulation Environment
 
-Welcome to the tool you will probably live in for the rest of the bootcamp.
 [CANalyzer](../canalyzer/index.md) lets you *watch* a bus; **CANoe** lets you
 *build* one. On top of the same measurement and analysis windows, CANoe adds a
 simulation layer — network nodes generated from the communication database
 that transmit their messages as if the real Electronic Control Units (ECUs)
-were on your bench. This is called **rest-of-bus simulation**: you connect one
+were connected. This is called **rest-of-bus simulation**: you connect one
 real ECU, and CANoe plays the role of all the others.
 
-Why does this matter? Because you will rarely have a whole vehicle at your
-desk. Day to day, you will use CANoe to test ECUs that would otherwise sit
-silent on a bench, waiting for messages only their missing neighbors could
-send. By the end of this article you will be able to build a complete CANoe
-configuration from scratch — hardware channels, databases, simulated nodes —
-and use it to test a real ECU stand-alone.
+A complete vehicle is rarely available at a developer's desk, so in day-to-day
+work CANoe is used to test ECUs that would otherwise receive no bus traffic,
+because the messages they expect come from ECUs that are not present. This
+article covers how to build a complete CANoe configuration from scratch —
+hardware channels, databases, simulated nodes — and how to use it to test a
+real ECU stand-alone.
 
 ## CANoe vs. CANalyzer
 
 Everything you already know from CANalyzer — Trace window, Graphics window,
 the measurement setup with its analysis and logging blocks — works exactly the
-same way in CANoe. That familiarity is a gift: you are not learning a new
-tool, you are unlocking a new superpower in one you know. The differences:
+same way in CANoe, so the measurement workflow carries over unchanged. The
+differences:
 
 - **CANoe is built around databases.** Where CANalyzer mostly looks at an
   existing bus, a CANoe configuration typically starts by importing the DBC
@@ -38,7 +37,7 @@ tool, you are unlocking a new superpower in one you know. The differences:
 ## Building a configuration step by step
 
 Here is the whole workflow at a glance, in the order you would actually build
-it. Don't worry about memorizing it now — each step is explained below.
+it. Each step is explained below.
 
 ```mermaid
 flowchart TD
@@ -88,8 +87,8 @@ the typical vehicle buses used in the course:
 !!! warning "Baud rate mismatch = silent bus"
     If the configured baud rate does not match the real bus, you will see no
     valid frames (or only error frames) — and no obvious error message telling
-    you why. This is one of the most common beginner traps: always confirm the
-    rate from the network specification *before* blaming the wiring.
+    you why. This is a common configuration error: always confirm the rate
+    from the network specification *before* investigating the wiring.
 
 ### 4. Add networks in the Simulation Setup
 
@@ -101,9 +100,9 @@ This is a graphical view of the simulated bus topology:
 
 You can create **more networks than you have hardware channels**. A network
 with no mapped channel simply runs as pure simulation; unmapped channels are
-disabled in the Channel Mapping dialog. This is a quietly powerful feature: it
-lets you build the *complete* vehicle network on a laptop and attach hardware
-only to the buses you actually need.
+disabled in the Channel Mapping dialog. This makes it possible to build the
+*complete* vehicle network on a laptop and attach hardware only to the buses
+you actually need.
 
 ### 5. Import the databases
 
@@ -122,8 +121,9 @@ database, connected to the bus line:
 
 Each of those blocks is a **simulated node**: when the measurement starts,
 CANoe transmits the node's messages automatically, with the signal default
-values taken from the database. Put one real ECU on the bus instead of its
-simulated counterpart, and the device genuinely cannot tell it left the car:
+values taken from the database. Put one real ECU on the bus in place of its
+simulated counterpart, and the device receives the same message traffic it
+would see in the vehicle:
 
 ```mermaid
 flowchart LR
@@ -157,9 +157,9 @@ Two things to keep in mind:
 Simulated messages go out with default values. To change a signal at runtime,
 open the **Node Panel** of the simulated ECU, edit the signal value, and reload
 the message so the new value is transmitted. This is how you feed stimulus to
-a real device under test — for example, driving a vehicle-speed signal to see
-how an instrument cluster reacts. It feels like magic the first time: the
-cluster has no idea the "car" is a laptop.
+a real device under test — for example, driving a vehicle-speed signal to
+check how an instrument cluster reacts, while the cluster receives what
+appears to be normal vehicle traffic.
 
 ## Measurement Setup
 
@@ -194,14 +194,14 @@ With the **measurement cursor / time-difference button** in the toolbar
 (marked "1" in the figure) you can measure the time between two samples. The
 classic example from the lesson: the delay between the **Adaptive Cruise
 Control (ACC) activation button press** and the **response of the ACC system
-status signal**. This is how you verify reaction-time requirements directly on
-the trace — no stopwatch, no guesswork, just the bus telling you the truth.
+status signal**. This allows reaction-time requirements to be verified
+directly on the recorded trace.
 
 ## Replay blocks: testing one ECU stand-alone
 
-A scenario you will meet constantly: you captured a log in the car
-(`.asc`/`.blf`), and now you want one ECU on the bench to behave as if it were
-still in the vehicle. The recipe:
+A common scenario: you captured a log in the car
+(`.asc`/`.blf`), and you want one ECU on the bench to behave as if it were
+still in the vehicle. The procedure:
 
 1. In the Simulation Setup, right-click the network and **Insert Replay Block
    CAN**.
@@ -210,8 +210,7 @@ still in the vehicle. The recipe:
 3. **Add a filter that blocks the messages of the ECU you are testing.** Those
    messages exist in the log, but on the bench they must come from the *real*
    ECU, not from the replay — otherwise the device sees its own messages
-   duplicated. Forgetting this filter is a rite of passage; now you can skip
-   it.
+   duplicated. Omitting this filter is a common mistake.
 
 ```mermaid
 flowchart LR
@@ -237,22 +236,22 @@ runs tests attaches here, on the network it belongs to.
     when you need to vary the stimulus.
 
 !!! success "Key takeaways"
-    - You can do this: CANoe is CANalyzer plus simulation, and the simulation
-      is generated for you from the DBC import.
-    - Stimulus lives in the **Simulation Setup**, analysis in the Measurement
-      Setup — that one distinction answers most "where do I put this block?"
-      questions.
+    - CANoe is CANalyzer plus a simulation layer; the simulated nodes are
+      generated automatically from the DBC import.
+    - Stimulus blocks belong to the **Simulation Setup**, analysis blocks to
+      the Measurement Setup — blocks that produce messages or run tests go on
+      the network diagram.
     - Configuration order: **Channel Usage** → **Channel Mapping** (logical ↔
       physical) → **Network Hardware** (B-CAN 50, BH-CAN 125, C-CAN 500
       kBaud) → add networks → **Import Wizard** for the DBC.
-    - DBC import gives you one simulated node per ECU, sending default values
-      you can edit live in the Node Panel. Silence everything with **Switch
-      All Blocks to Real-Time Mode** before touching a real vehicle.
-    - Two classic pitfalls, now avoided: wrong baud rate (silent bus) and a
-      replay block without a filter on the DUT's own messages (duplicated
-      traffic).
-    - With rest-of-bus simulation and a log file, you can test any ECU on your
-      bench as if the whole car were around it.
+    - DBC import creates one simulated node per ECU, sending default values
+      that can be edited live in the Node Panel. Disable all simulation blocks
+      with **Switch All Blocks to Real-Time Mode** before connecting to a real
+      vehicle.
+    - Two common pitfalls: a wrong baud rate (silent bus) and a replay block
+      without a filter on the DUT's own messages (duplicated traffic).
+    - With rest-of-bus simulation or a replayed log file, an ECU can be tested
+      on the bench with the same bus traffic it would see in the vehicle.
 
 !!! tip "Where this leads"
     Simulated nodes that actually *react* to the bus are programmed in

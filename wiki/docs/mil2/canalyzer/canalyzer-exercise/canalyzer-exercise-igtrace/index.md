@@ -1,20 +1,19 @@
 # CANalyzer Exercise — Trace Filters & IG Stimulation (Cluster)
 
-Time to get your hands on the bus. In this exercise you will put the whole
-CANalyzer analysis chain to work on the **instrument panel cluster (IPC)** of
-the P332 battery electric vehicle (BEV) platform — the ECU that drives the
-warning lamps behind your steering wheel.
+This exercise applies the complete CANalyzer analysis chain to the
+**instrument panel cluster (IPC)** of the P332 battery electric vehicle (BEV)
+platform — the ECU that drives the warning lamps behind the steering wheel.
 
-By the end, you'll be able to build a two-channel measurement setup, filter a
-busy bus down to just the messages you care about, impersonate other ECUs with
-the Interactive Generator (IG) block, and *prove* — with timestamps and
-screenshots — that the cluster reacts to failure states exactly as the network
-specification says it should. This is the day-to-day workflow of every E/E
-test engineer, so the skills transfer directly to your first real project.
+The exercise covers building a two-channel measurement setup, filtering a
+busy bus down to the relevant messages, simulating other ECUs with the
+Interactive Generator (IG) block, and verifying — with timestamps and
+screenshots — that the cluster reacts to failure states as defined in the
+network specification. These tasks reflect the standard day-to-day workflow
+of E/E test engineering.
 
 ## Goal
 
-Work through six steps and come out able to:
+After completing the six steps, you will be able to:
 
 - configure **one Trace window per CAN channel** with channel-specific
   pass/stop filters,
@@ -26,7 +25,7 @@ Work through six steps and come out able to:
 - document your work in a report with screenshots of every step.
 
 **What you'll practice:** filtering, stimulation, stimulus–response
-verification, logging, and offline time analysis — the five core moves of
+verification, logging, and offline time analysis — the core activities of
 bus-level testing.
 
 ## Setup
@@ -46,8 +45,8 @@ database attached, a trace is just raw identifiers and hex bytes.
 
 !!! tip "Screenshot everything"
     This exercise is graded on evidence: after each step, paste a screenshot of
-    the relevant window into your report document. Do it as you go — hunting
-    for proof at the end always costs more time than it saves.
+    the relevant window into your report document. Capture screenshots as you
+    go; collecting them at the end costs more time.
 
 ## Step 1 — Per-channel Trace windows and filters
 
@@ -55,11 +54,11 @@ Create **two Trace blocks** in the measurement setup, one per channel, and name
 them `Trace BH` and `Trace C1`. Then give each one a different filter policy:
 
 - **Trace BH → pass filter for IPC.** Show *only* messages transmitted or
-  received by the IPC node. This is the classic "watch one ECU" setup you will
-  reach for constantly when debugging a single controller on a busy bus.
+  received by the IPC node. This configuration isolates a single ECU's
+  traffic when debugging one controller on a busy bus.
 - **Trace C1 → stop filter for BSM.** *Drop* all messages transmitted by the
-  BSM node and leave everything else visible — the standard trick for silencing
-  a chatty node that would otherwise flood your trace.
+  BSM node and leave everything else visible — the standard method for
+  suppressing a high-traffic node that would otherwise flood the trace.
 
 ```mermaid
 flowchart LR
@@ -92,30 +91,29 @@ four signals:
 | `BCM_COMMAND` | `CmdIgnSts` | `RUN` | Ignition in RUN |
 | `ENGINE1` | `PowertrainPrplsnActv` | `1` | Powertrain propulsion active |
 
-Notice the pattern: you are building a **plausible vehicle state** — ignition
-on, powertrain active, vehicle rolling at 40 km/h — and then injecting an
-airbag failure on top. This is not arbitrary: ECUs like the IPC often gate
-their behavior on the ignition and speed signals, so a "failure" injected into
-a car that looks switched off will simply be ignored.
+The four signals define a **plausible vehicle state** — ignition on,
+powertrain active, vehicle moving at 40 km/h — with an airbag failure injected
+on top. This matters because ECUs like the IPC often gate their behavior on
+the ignition and speed signals, so a failure injected while the vehicle
+appears switched off will be ignored.
 
 ## Step 3 — Verify the stimulation in a Graphic window
 
-Before trusting any response, trust your stimulus. Open a **Graphic window**,
+Verify the stimulus before evaluating any response. Open a **Graphic window**,
 drag in the four signals above, and check that each trace settles on the value
 you set in the IG block: `AirBagFailSts = 1`, speed at 40 km/h,
 `CmdIgnSts = RUN`, `PowertrainPrplsnActv = 1`.
 
-This confirms the IG block is actually transmitting and the DBC decodes the
-frames as expected. Experienced engineers *always* verify the stimulus before
-judging the system's reaction to it — it saves you from debugging a fault that
-lives in your test setup, not in the ECU.
+This confirms the IG block is transmitting and that the DBC decodes the frames
+as expected. Verifying the stimulus first prevents time spent debugging a
+fault that lies in the test setup rather than in the ECU.
 
 ## Step 4 — Closed-loop checks: how the IPC reacts
 
-Now the real test. The IPC listens to failure-status signals from other ECUs
+The IPC listens to failure-status signals from other ECUs
 and drives its lamp-status signals in the `CLUSTER2` message accordingly.
-Stimulate each input with the IG block and watch the IPC answer in a Graphic
-window:
+Stimulate each input with the IG block and observe the IPC response in a
+Graphic window:
 
 | Stimulated input (IG) | Expected IPC response |
 |---|---|
@@ -134,12 +132,12 @@ sequenceDiagram
     IPC-->>GW: CLUSTER2.ABSLamp_FailSts = 2
 ```
 
-This is the essence of **stimulus–response testing**: you impersonate one ECU
-(the airbag or brake controller) and check that another ECU (the cluster)
+This is **stimulus–response testing**: the tester simulates one ECU
+(the airbag or brake controller) and checks that another ECU (the cluster)
 translates the failure status into the correct lamp command. The encoded
 values (`0`, `2`, `3`) come from the value tables in the DBC — e.g. `3` for
 the airbag lamp means "lamp flashing" rather than a simple on/off, which is
-why a raw on/off expectation would mislead you.
+why a raw on/off expectation would be misleading.
 
 ## Step 5 — Logging and offline time analysis
 
@@ -154,25 +152,25 @@ why a raw on/off expectation would mislead you.
    - first change → third change: expected **Δt ≈ 4.35 s**,
    - first change → last change: expected **Δt ≈ 9.16 s**.
 
-Your exact deltas depend on how fast you clicked, so don't chase the numbers —
-landing in this ballpark means you did it right. The real goal of this step is
-learning to read absolute and relative timestamps in an offline trace, a skill
-you will use in every real log analysis from here on.
+The exact deltas depend on the timing of the manual edits, so the measured
+values only need to fall within this range. The purpose of this step is to
+practice reading absolute and relative timestamps in an offline trace, a
+routine part of log analysis.
 
 ## Step 6 — Report
 
 Assemble a single report with the screenshot evidence and measured values for
 every step: the two filtered traces, the IG configuration, the Graphic-window
-verifications, the logged file, and the two delta-time measurements. Treat it
-as a rehearsal for real test documentation — "it worked on my screen" is not
-evidence.
+verifications, the logged file, and the two delta-time measurements. The
+report follows the standard for formal test documentation: every claimed
+result must be backed by captured evidence.
 
 ## Common mistakes
 
 - **Wrong filter type** — using a stop filter where a pass filter is needed
   (or vice versa) in Step 1; the trace then shows everything or nothing.
 - **DBC on the wrong channel** — BH and C1 databases swapped, so signals
-  decode to garbage or not at all.
+  decode incorrectly or not at all.
 - **Trusting the IG without checking** — skipping the Graphic-window
   verification in Step 3, then wondering why the IPC does not react (the IG
   generator may not even be started).
@@ -180,25 +178,22 @@ evidence.
   ignore failure inputs when the ignition is off.
 - **Logging the whole bus** — the exercise wants a log containing *only* the
   10 chosen signals; without a filter, offline analysis becomes a
-  needle-in-a-haystack search.
+  time-consuming search.
 - **Reading absolute time instead of delta** — Step 5 wants the *difference*
   between timestamps, not the timestamps themselves.
 
 !!! success "Key takeaways"
     - One Trace window per channel keeps multi-bus analysis readable; pass
       filters whitelist, stop filters blacklist.
-    - The IG block lets you impersonate ECUs: stimulate a realistic vehicle
-      state (ignition RUN, speed 40 km/h) plus the failure you want to test.
-    - Always verify the stimulus in a Graphic window before judging the
-      response — you've now got the habit that separates fast debuggers from
-      frustrated ones.
-    - Closed-loop check passed? `AirBagFailSts = 1` →
-      `CLUSTER2.AirBagLamp_FailSts = 3` and `ABSFailSts = 1` →
-      `CLUSTER2.ABSLamp_FailSts = 2` mean you just ran a real
-      stimulus–response test.
-    - Log only what you need, then use offline mode to measure delta times
-      (≈ 4.35 s and ≈ 9.16 s between your edits) — you're ready for real log
-      analysis.
+    - The IG block simulates other ECUs: stimulate a realistic vehicle state
+      (ignition RUN, speed 40 km/h) plus the failure under test.
+    - Verify the stimulus in a Graphic window before evaluating the response;
+      this isolates test-setup faults from ECU faults.
+    - The closed-loop checks confirm the IPC's failure handling:
+      `AirBagFailSts = 1` produces `CLUSTER2.AirBagLamp_FailSts = 3`, and
+      `ABSFailSts = 1` produces `CLUSTER2.ABSLamp_FailSts = 2`.
+    - Restrict logging to the required signals, then use offline mode to
+      measure delta times (≈ 4.35 s and ≈ 9.16 s between edits).
 
 ---
 

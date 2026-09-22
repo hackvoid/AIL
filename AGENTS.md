@@ -76,25 +76,31 @@ All code lives at the project root and in `wiki/`:
   references-only page. **Run from the project root.** `--manifest` writes
   `wiki/.cache/source_manifest.json`, the per-directory authoring aid (article
   path, deck cache JSONs, transcripts, image dirs).
-- `wiki/theme/` — the **"Constellation" custom theme** (dark cosmic UI). All theme
-  work happens here, never in `wiki/docs/` or `wiki/mkdocs.yml`:
+- `wiki/theme/` — the **custom theme** (clean dark/light UI, single violet
+  accent, flat surfaces, thin borders). All theme work happens here, never in
+  `wiki/docs/` or `wiki/mkdocs.yml`:
   - `theme/overrides/main.html` — MkDocs Material template override (`custom_dir`).
-    The `footer` block injects the integrated AI assistant panel markup (handle,
-    message thread, suggestion chips, composer); the `scripts` block defines the
-    backend hook `window.KX_CHAT_CONFIG = { endpoint: null, model: null }`.
-  - `theme/assets/kineton.css` — the whole visual redesign (cosmic background,
-    glass cards, violet→cyan glow accents, SaaS-style nav, chat panel styling,
-    Mermaid `--md-mermaid-*` variables).
-  - `theme/assets/kineton-chat.js` — chat panel behavior: collapse/expand
-    (persisted in localStorage, `#assistant` URL hash opens it), typing
-    indicator, rotating canned placeholder replies, and an API-ready
-    `askBackend()` that POSTs `{message}` to `KX_CHAT_CONFIG.endpoint` once it is
-    set. **No backend is wired yet — frontend shell only.**
+    The `footer` block injects the assistant panel markup (single edge-handle
+    toggle, message thread, composer); the `scripts` block defines the backend
+    hook `window.KX_CHAT_CONFIG = { endpoint: null, model: null }`.
+  - `theme/assets/kineton.css` — the whole visual layer. All `--kx-*` tokens are
+    defined **per palette scheme** (`[data-md-color-scheme="default"]` for light,
+    `"slate"` for dark); component rules reference only tokens, so both modes
+    stay in sync. The light/dark toggle itself is MkDocs Material's built-in
+    palette switcher (media-query default + header toggle), configured in
+    `build_wiki.py`'s `MKDOCS_HEADER`.
+  - `theme/assets/kineton-chat.js` — assistant panel behavior: the same handle
+    button opens and closes the panel (state persisted in localStorage,
+    `#assistant` URL hash opens it). Until `KX_CHAT_CONFIG.endpoint` is set,
+    every message gets the static placeholder reply; once set, `askBackend()`
+    POSTs `{message}` there and renders `{reply}`. **No backend is wired yet —
+    frontend shell only.**
   - `theme/assets/mermaid.min.js` — vendored Mermaid v11 (offline-friendly, no
     CDN dependency).
-  - `theme/assets/kineton-mermaid.js` — renders `pre.kx-mermaid` blocks with the
-    Constellation dark palette. The superfences custom fence deliberately uses
-    the class `kx-mermaid` (not `mermaid`) because Material's own bundle
+  - `theme/assets/kineton-mermaid.js` — renders `pre.kx-mermaid` blocks with
+    palette-matched colors (separate light/dark `themeVariables`, re-renders
+    when the palette toggle flips). The superfences custom fence deliberately
+    uses the class `kx-mermaid` (not `mermaid`) because Material's own bundle
     hijacks `.mermaid` elements and races any other renderer; the `kx-` prefix
     makes this script the only renderer. It captures diagram source
     synchronously (script loads at end of `<body>`, before Mermaid's auto-run)

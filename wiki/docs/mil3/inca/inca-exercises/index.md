@@ -1,21 +1,17 @@
 # INCA Exercises — Knowledge Questionnaire
 
-Welcome to your first INCA exercise — and here's the good news: no bench, no
-hardware, no license required. Before anyone lets you touch real calibration
-data, this **15-question questionnaire** makes sure the
-[INCA lecture](../index.md) actually stuck. You answer in writing, from memory
-or from your notes, and then discuss the answers with the instructor.
+This exercise is a **15-question questionnaire** on the material covered in
+the [INCA lecture](../index.md). No bench, hardware, or license is required.
+Answers are written from memory or notes and then discussed with the
+instructor.
 
-**What you'll practice:** explaining what INCA (INtegrated Calibration and
-Acquisition system) is, how measurement, calibration and flashing fit into one
-workflow, how INCA talks to an electronic control unit (ECU), and how it keeps
-calibration data safe. Think of it less as an exam and more as a rehearsal for
-the questions every calibration engineer gets asked in their first week on the
-job.
+**Topics covered:** what INCA (INtegrated Calibration and Acquisition system)
+is, how measurement, calibration and flashing fit into one workflow, how INCA
+communicates with an electronic control unit (ECU), and how it protects
+calibration data.
 
-This page turns the exercise into a self-study guide: the questions grouped by
-theme, what a good answer must contain, and a model answer for each. Work the
-questions first, then check yourself against the answer key.
+This page provides the questions grouped by theme and a model answer for
+each. Answer the questions first, then compare against the answer key.
 
 ## Goal
 
@@ -36,15 +32,14 @@ By the end of this exercise you'll be able to explain, in your own words:
 
 ## Steps
 
-1. Read all fifteen questions below once, without writing anything — get a
-   feel for what you already know cold and what needs a look-up.
+1. Read all fifteen questions below once, without writing anything, to
+   identify what you already know and what requires a look-up.
 2. Write your answers from memory first; only then fill gaps from the lecture
-   material. Struggling to recall a point is exactly where the learning
-   happens.
-3. Compare your answers against the answer key. You don't need identical
-   wording — you need the same substance.
-4. Bring anything you got wrong (or half-right) to the discussion with the
-   instructor. That's what it's for.
+   material.
+3. Compare your answers against the answer key. Identical wording is not
+   required; the substance must match.
+4. Bring any incorrect or incomplete answers to the discussion with the
+   instructor.
 
 ## The questions
 
@@ -84,20 +79,20 @@ By the end of this exercise you'll be able to explain, in your own words:
 ### 1–2. What INCA is and why it exists
 
 INCA is ETAS's integrated environment for **measurement, calibration and
-diagnostics** of electronic control units. Here's why it exists: engine
-control software contains tens of thousands of parameters — scalars, curves
-and maps — whose final values simply cannot be determined at a desk. They are
-tuned empirically, on the test bench and in the vehicle. INCA lets you **read
-measured variables from the running ECU while changing calibration parameters
-at the same time**, see the effect immediately, and iterate until emissions,
-consumption, drivability and performance targets are met. That tight loop is
-the whole job of a calibration engineer — INCA is where it happens.
+diagnostics** of electronic control units. Engine control software contains
+tens of thousands of parameters — scalars, curves and maps — whose final
+values cannot be determined at a desk. They are tuned empirically, on the
+test bench and in the vehicle. INCA lets you **read measured variables from
+the running ECU while changing calibration parameters at the same time**, see
+the effect immediately, and iterate until emissions, consumption, drivability
+and performance targets are met. This measure–calibrate loop is the core of a
+calibration engineer's work, and INCA is the tool that implements it.
 
 ### 3–4. Main features and advantages
 
 - **Experiments**: configurable screens combining oscilloscopes (YT/XY),
   numeric displays, gauges and calibration editors for scalars, curves and
-  maps — your cockpit while working on the running ECU.
+  maps — the main working environment for the running ECU.
 - **Database-centered data management**: workspaces, projects, A2L
   descriptions and datasets live in one place, with versioned datasets.
 - **Working Page / Reference Page concept**: edit a copy of the calibration
@@ -105,7 +100,7 @@ the whole job of a calibration engineer — INCA is where it happens.
 - **Add-ons and open interfaces**: MDA (Measurement Data Analyzer), ODX-LINK
   diagnostics, MATLAB/Simulink integration (INCA-MIP, INCA-SIP), and ASAM
   interfaces for testbed automation.
-- Why it beats generic tools: INCA is the de-facto industry standard, so ECU
+- Advantages over generic tools: INCA is the de-facto industry standard, so ECU
   suppliers deliver A2L files and protocol support for it out of the box; one
   tool covers measurement, calibration *and* flashing; and it drives virtually
   all ETAS and third-party hardware through standard interfaces.
@@ -114,7 +109,7 @@ the whole job of a calibration engineer — INCA is where it happens.
 
 Because measurement and calibration happen simultaneously, you watch the
 ECU's *internal* variables — not just external sensor signals — while the
-engine misbehaves: lambda control states, knock detection counters, the
+engine exhibits a fault: lambda control states, knock detection counters, the
 ignition timing actually applied, limiter interventions. Recorded measure
 files can be replayed and analyzed offline in MDA. With the ODX-LINK add-on,
 INCA also reads fault memory (diagnostic trouble codes, DTCs) and runs
@@ -143,9 +138,9 @@ flowchart LR
 | Serial legacy | K-Line diagnostic interface | older ECUs |
 | Description format | **A2L** (ASAM-MCD 2MC) | maps symbolic names to addresses, scaling, limits |
 
-One catch worth remembering: the ECU must contain the matching protocol
+Note that the ECU must contain the matching protocol
 driver (about 30 lines of extra code for an ETK acquisition table; more for
-CCP/XCP). No driver, no connection.
+CCP/XCP). Without this driver, no connection is possible.
 
 ### 8. Security and data integrity
 
@@ -161,8 +156,8 @@ CCP/XCP). No driver, no connection.
 
 - INCA is used by virtually all major OEMs and Tier-1 suppliers (Bosch/ETAS's
   parent ecosystem, and engine, transmission and hybrid projects across the
-  industry). It is the tool you will most likely find already installed on a
-  calibration bench — learning it is never wasted.
+  industry). It is the tool most commonly found installed on calibration
+  benches.
 - Advanced functions: automated calibration via the ASAM-MCD 3MC testbed
   interface, scripting through open APIs, Simulink model calibration with
   INCA-SIP, bypass/rapid-prototyping hooks (EHOOKS), and measurement-data
@@ -183,15 +178,15 @@ CCP/XCP). No driver, no connection.
   measurement files, and growing automation interfaces — each step driven by
   new bus technology and by the shift from bench work to automated testbeds.
 - Training: ETAS offers official courses, and the *Getting Started* manual and
-  online help ship with the product. This bootcamp's own INCA lessons are your
-  first step.
+  online help ship with the product. This bootcamp's INCA lessons serve as an
+  introduction.
 - Integrations: MATLAB/Simulink (INCA-MIP/SIP), ASAM-standard interfaces to
   testbed automation systems, diagnostic toolchains via ODX-LINK, and
   third-party hardware through the open HWI interface.
 
 ## Common mistakes
 
-These are the traps new engineers fall into — skip them:
+Frequent errors made by new engineers:
 
 - **Confusing measurement with calibration.** Measuring = reading variables;
   calibrating = writing parameters. INCA does both, but they are different
@@ -210,15 +205,16 @@ These are the traps new engineers fall into — skip them:
     - INCA = ETAS's integrated environment for **measurement, calibration and
       flashing** of ECUs — it tunes the thousands of parameters in control
       software on the running system.
-    - Master the three core concepts and the rest follows: the **experiment**,
-      the **A2L description file**, and the **Working Page / Reference Page**
-      pair for safe A/B calibration.
+    - The three core concepts are the **experiment**, the **A2L description
+      file**, and the **Working Page / Reference Page** pair for safe A/B
+      calibration.
     - ECUs connect via **ETK (parallel)** or **CCP/XCP (serial over CAN,
       Ethernet, …)** — and the matching protocol driver must exist in the ECU.
     - Data integrity comes from read-only reference datasets, versioning and
       access control: never calibrate without a rollback path.
-    - If you can answer all 15 questions in your own words, you're ready for
-      the bench.
+    - The 15 questions covered INCA's purpose, features, interfaces, data
+      security, user base, real-time operation, evolution, training resources,
+      and tool integrations.
 
 !!! tip "Next step"
     Once you can answer all 15 questions confidently, move on to the

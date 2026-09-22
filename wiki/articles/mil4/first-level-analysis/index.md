@@ -1,11 +1,9 @@
 # First Level Analysis (FLA)
 
-Welcome to one of the most hands-on roles in vehicle validation. When a test
-car throws a warning lamp, refuses to start, or does something odd during a
-charging session, someone has to be **first on the scene**: look at the data,
-reconstruct what actually happened, and point the right specialists at the
-right problem. That someone is the **First Level Analysis (FLA)** team — and
-after this lesson, that someone could be you.
+When a test vehicle shows a warning lamp, fails to start, or behaves
+unexpectedly during a charging session, someone has to examine the data
+first: reconstruct what actually happened and route the problem to the right
+specialists. That is the job of the **First Level Analysis (FLA)** team.
 
 By the end of this article you will be able to:
 
@@ -15,8 +13,7 @@ By the end of this article you will be able to:
 - connect a laptop to a real vehicle through the diagnostic socket and see
   live bus traffic,
 - read a fault code, look it up in the DTC Matrix, and turn raw signals into
-  a root-cause hypothesis — the exact workflow the "Flying Doctor" uses in
-  the field.
+  a root-cause hypothesis.
 
 ## What the FLA team actually does
 
@@ -46,8 +43,7 @@ For every reported issue, FLA owes the organization three concrete things:
     Your deliverable is a **well-defined, understandable report with a
     possible root cause and a correct solution path** — not the final fix.
     The actual software or hardware correction belongs to the second-level
-    team that owns the function. Think of yourself as the detective, not the
-    surgeon.
+    team that owns the function.
 
 ## How an issue reaches your desk
 
@@ -78,11 +74,11 @@ list:
 - **Extras** — durability fleets, NVH campaigns, reappear tests, and
   similar.
 
-You are not alone in this. The teams around FLA each bring a different
-angle: the **fleet team** exercises the vehicle the way a new customer
+Several teams work alongside FLA, each with a different focus: the
+**fleet team** exercises the vehicle the way a new customer
 would and records what goes wrong; the **flying doctors** handle on-site
 technical support, software updates and high-severity customer problems;
-the **plant team** chases production-process issues; the **after-sales
+the **plant team** handles production-process issues; the **after-sales
 team** looks after customer-facing technical support.
 
 !!! tip "Delivery time"
@@ -92,9 +88,8 @@ team** looks after customer-facing technical support.
 
 ## Your FLA toolbox
 
-Good news: you already know most of these tools from MIL2 and MIL3. In FLA
-you simply combine them for a new purpose — **reconstructing what the
-vehicle did**:
+Most of these tools are introduced in MIL2 and MIL3. In FLA they are
+combined for a new purpose — **reconstructing what the vehicle did**:
 
 | Tool / artifact | Role in FLA |
 |---|---|
@@ -109,8 +104,8 @@ vehicle did**:
 
 ## Know the vehicle before you touch the data
 
-Here is a piece of mentor advice worth remembering: **you cannot interpret
-signals from a vehicle you do not understand.** Before analyzing a claim on
+**Signals cannot be interpreted correctly without understanding the vehicle
+they come from.** Before analyzing a claim on
 a new program, an FLA engineer studies four things — illustrated here with
 the MHEV (Mild Hybrid Electric Vehicle) P2.5 48 V vehicle from the case
 study below:
@@ -142,7 +137,7 @@ drawing tells you exactly which two ECUs to measure between.
 
 ## The diagnostic language you will speak every day
 
-### DTCs: the vehicle's way of saying "something hurt"
+### DTCs: active and stored fault codes
 
 A **DTC (Diagnostic Trouble Code)** is a fault recorded by an ECU
 (Electronic Control Unit), encoded in **three bytes**: the first two
@@ -161,11 +156,10 @@ type of failure. A DTC can be:
 | **InputOutputControlByIdentifier** | `0x2F` | `0x6F` | Commands a single actuator to perform one specific action |
 | **RoutineControl** | `0x31` | `0x71` | Starts an on-board routine — a coordinated sequence involving several components |
 
-There is a neat pattern here: the positive response is always the **request
-service ID + 0x40** — send `0x22`, receive `0x62`. A **negative response is
-`0x7F`**, followed by the original service ID and a negative response code.
-Once you see this rhythm in a trace, diagnostic conversations stop looking
-like hex soup.
+The positive response is always the **request service ID + 0x40** — send
+`0x22`, receive `0x62`. A **negative response is `0x7F`**, followed by the
+original service ID and a negative response code. This pattern makes raw
+diagnostic traces straightforward to read.
 
 ### The DTC Matrix: from raw code to diagnosis plan
 
@@ -188,7 +182,7 @@ table that turns a raw code into a plan of attack. Its columns include:
 
 ### PROXI and flashing: two field essentials
 
-Two Dianalyzer functions will save you repeatedly in the field:
+Two Dianalyzer functions are used frequently in the field:
 
 - **PROXI** — the vehicle configuration file listing every fitted feature
   (e.g. whether the car has adaptive cruise control). The Body Computer is
@@ -261,7 +255,7 @@ also on extended CAN and other transports. This only works on
 calibrations, and the only way to deploy new values is to **flash** the new
 software version.
 
-A field trick worth knowing: when a new software release only changes
+A useful field technique: when a new software release only changes
 calibration data, you can import the calibration from the reference page
 into the working page instead of re-flashing everything. For bypassing the
 SGW, the ETAS hardware connects to the vehicle through the **ETK**
@@ -269,10 +263,9 @@ interface (plus supply, Ethernet and the CAN lines to the EOBD plug).
 
 ## Case study: FTT#344 — chasing a "gearbox fault" that wasn't one
 
-This is a real FLA analysis, end to end. The claim: a **transmission fault
-("Avaria Cambio")** reported on a 48 V mild-hybrid vehicle. Follow the
-reasoning — this is the template for almost every analysis you will ever
-do.
+This section walks through a real FLA analysis, end to end. The claim: a
+**transmission fault ("Avaria Cambio")** reported on a 48 V mild-hybrid
+vehicle. The reasoning below is the general template for most FLA analyses.
 
 ### Step 1 — Check that you have data
 
@@ -299,7 +292,7 @@ possible causes, mature/de-mature criteria. This frames your hypotheses
 Now the core FLA skill. Your first goal is to see **on a graph what the
 driver saw** — which lamp or message appeared on the IPC (Instrument Panel
 Cluster), and at what exact moment — so the second-level owner gets a
-precise point in time instead of gigabytes of uninteresting data. Around
+precise point in time instead of a large volume of irrelevant data. Around
 the event, always collect the **boundary conditions**: Drive Ready vs.
 Key-On, HEV mode, vehicle speed, engine speed, 48 V SOC (State of Charge),
 gas pedal, brake pedal, shift lever position, and so on. They become
@@ -360,7 +353,7 @@ The FTT entry was updated as the second-level answers came in:
     The failure only appeared in one specific situation — EM Low Power
     Start at low 48 V SOC with a warm engine. Without logging SOC, coolant
     temperature and the start mode, the second-level teams would never have
-    reproduced it. Log generously; your future self will thank you.
+    reproduced it. Log all relevant boundary conditions for every event.
 
 ## Watching diagnostics live in CANalyzer (PDX)
 
@@ -398,8 +391,8 @@ the tester asked" to "what the vehicle was doing".
 
 ## Your turn: hands-on exercise on the Tonale PHEV
 
-Time to put it all together on a real car. **What you'll practice:** the
-complete field workflow — connect, unlock, scan, interpret, repair, verify.
+This exercise applies the complete field workflow on a real vehicle:
+connect, unlock, scan, interpret, repair, verify.
 
 **Goal.** The vehicle (an Alfa Romeo Tonale PHEV, a plug-in hybrid) shows
 an active **MIL** on the instrument cluster. Find the issue and fix it.
@@ -437,8 +430,8 @@ after the fix to document the repair.
     - If you cannot tell which DTC is the culprit, record a **log** and
       look for signals with unexpected values around the event.
 
-**Common mistakes — nothing on the CANalyzer trace?** Work this checklist
-before you panic:
+**Common mistakes — nothing on the CANalyzer trace?** Check the following
+items in order:
 
 1. Bridle not connected correctly to the EOBD plug.
 2. DB9 plugged into the wrong CANcase channel.
@@ -456,16 +449,15 @@ before you panic:
       SharePoint.
     - Know the vehicle *before* the data: propulsion configuration, network
       topology (who terminates which bus), cooling, layout.
-    - You now speak the diagnostic grammar: DTCs (active/stored), services
+    - Diagnostic fundamentals: DTCs (active/stored), services
       `0x22` / `0x2F` / `0x31` answered by `+0x40` or `0x7F`, the DTC
       Matrix columns, PROXI alignment, IDX/PRM/BIN flash files.
-    - Vehicle access is a checklist, not a mystery: EOBD pins 6/14 (C1),
+    - Vehicle access checklist: EOBD pins 6/14 (C1),
       12/13 (C2), 3/11 (BH), DB9 pins 2/7, correct CANcase channel and bit
       rate — and unlock the SGW or you will see nothing.
     - The FTT#344 chain — claim → DTCs → signal visualization → boundary
-      conditions → root cause → calibration fix — is your template for
-      every future analysis. You have everything you need to run one
-      yourself.
+      conditions → root cause → calibration fix — is the standard template
+      for FLA analyses.
 
 !!! tip "Where this leads"
     The tools used here have their own lessons:

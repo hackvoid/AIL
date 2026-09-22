@@ -1,10 +1,10 @@
 # Test Cases: From Vehicle Functions to Executable Tests
 
-Welcome to one of the most satisfying jobs in vehicle engineering: being the
-person who *proves* a feature actually works. A function only counts as done
-when someone has put it in a known condition, stimulated it, and checked the
-result against its specification — repeatably, on record. That someone is
-you, and the tool of the trade is the **test case**.
+This article explains how executable tests are derived from vehicle
+specifications. A function is considered complete only after it has been
+placed in a known condition, stimulated, and checked against its
+specification — repeatably, on record. The instrument for this is the
+**test case**.
 
 By the end of this article you will be able to:
 
@@ -50,8 +50,8 @@ A VF is identified by the function name plus an alphanumeric suffix:
 - **R** = *Release* — tracks changes made to the same VF across releases
   (for example, adaptations when porting to a new project).
 
-Remember this suffix — it reappears inside every test case identifier, and
-that is exactly how traceability is enforced.
+The suffix reappears inside every test case identifier; this is how
+traceability is enforced.
 
 ### What is inside a VF
 
@@ -67,8 +67,8 @@ that is exactly how traceability is enforced.
 
 ![Example of a VF functional diagram: nodes, gateways and the CAN/LIN messages exchanged between them](img/vf-functional-diagram.webp)
 
-The **functional diagram** is the part you will read the most, so learn to
-scan it like a map:
+The **functional diagram** is the part consulted most often during test
+design:
 
 - Every connection between nodes is labeled with the **CAN (Controller Area
   Network) or LIN (Local Interconnect Network) message and the
@@ -94,20 +94,20 @@ scan it like a map:
 
     A signal named differently in the VF than in the DBC — or missing from
     the DBC entirely — is one of the most common findings of VF analysis.
-    Catching it early saves you a broken test later.
+    Detecting it during analysis avoids rework on tests written against the
+    wrong signal name.
 
 ## What a test case is
 
 A test case is a **set of conditions used to verify that the requirements of
 a function are respected** — and that the implementation matches the
-specification. Hold on to the golden rule of coverage:
+specification. The basic coverage rule is:
 
 !!! tip "Positive and negative tests"
     For every operating condition, foresee **both** a *positive* test (the
     requirement holds when it should) and a *negative* test (apply the
     opposite condition, and the result must be the opposite of the positive
-    case). Only the pair makes the test robust and covers all cases. One
-    without the other is a half-finished proof.
+    case). Only the pair provides robust coverage of the requirement.
 
 In the V-model, your test cases sit on the right-hand (verification) side,
 mirroring the requirements on the left — see
@@ -131,9 +131,9 @@ Each test is formalized in a document (usually a table) with at least:
 | Source specification | The VF (name and release) the test was extracted from |
 | Notes | Free comments for the tester |
 
-If you take one habit from this table: never skimp on the **preconditions**.
-Most "flaky" test results trace back to a system that was not actually in
-the state the test assumed.
+The **preconditions** field deserves particular care: most non-reproducible
+test results trace back to a system that was not actually in the state the
+test assumed.
 
 ### The checklist table
 
@@ -152,8 +152,8 @@ grouped by requirement. Its columns are:
 - **Verification / TEST RESULT** — OK or KO, plus a **Note**: *if the test
   is KO, why is it KO?*
 
-That last note is not bureaucracy. A KO without an explanation is a test
-someone (probably you) will have to re-run from scratch.
+The note on a KO result is required in practice: a KO without an explanation
+forces the test to be re-run from scratch.
 
 ## Functional vs diagnostic test cases
 
@@ -170,7 +170,7 @@ what the software specification provides.
 are written against the **CDD**, and their result must match what the CDD
 provides. Their purpose is to catch malfunctions (*faults*) when they happen
 and trigger actions that minimize damage before the actual breakdown
-(*failure*) occurs. This is not optional polish: functional safety standards
+(*failure*) occurs. Functional safety standards
 tie the **Safety Integrity Level (SIL)** of a system directly to its
 *diagnostic coverage* — the fraction of dangerous failures detected in time.
 
@@ -182,8 +182,8 @@ timescales** — exactly what you need to build preconditions and checks. See
 
 ## Deriving test cases from requirements
 
-Here is the part that becomes second nature with practice. A requirement
-inside a VF can take many forms, and each form has its own extraction style:
+A requirement inside a VF can take several forms, and each form has its own
+extraction style:
 
 - **Descriptive text** — e.g. *"If the Master is awakened by a Hardware Wake
   up that requires the CAN C bus to be awake, it shall transmit the
@@ -203,11 +203,9 @@ inside a VF can take many forms, and each form has its own extraction style:
 - **Flowchart** — every path through the chart is a test.
 
 !!! note
-    Except for descriptive text, the process is deliberately
-    straightforward: you cannot "reinterpret" a truth table or a flowchart —
-    you follow what is written and put it in the chosen test syntax. The
-    real skill (and the real risk of missing cases) lies in the free-text
-    requirements.
+    Except for descriptive text, the process is mechanical: a truth table or
+    a flowchart is transcribed directly into the chosen test syntax. The
+    risk of missing cases lies mainly in the free-text requirements.
 
 ### Example: a truth table becomes four tests
 
@@ -222,8 +220,8 @@ CAN in the `InternalLightSts` signal, according to this table:
 | 1 | 1 | 0 |
 
 Each row yields a test case: set the two input signals, read the CAN signal,
-compare with the expected value. Notice how row 4 is the natural *negative*
-test for row 2 — same command, different ambient condition, opposite output.
+compare with the expected value. Row 4 is the *negative* test for row 2:
+same command, different ambient condition, opposite output.
 
 ### Example: a state machine transition becomes a test
 
@@ -243,10 +241,9 @@ Take transition **E12**, which moves the master from state **S7**
 - **Negative test**: without the trigger, the ECU must remain in S7 and the
   S2-entry actions must not occur.
 
-One transition → one positive test plus its negative counterpart. A chart
-like this, with seven states and a dozen transitions, easily generates
-twenty or more test cases — good news for your coverage, and for your
-checklist.
+One transition maps to one positive test plus its negative counterpart. A
+chart like this, with seven states and a dozen transitions, generates twenty
+or more test cases.
 
 ## The drafting workflow
 
@@ -278,14 +275,16 @@ documentation. Typical findings:
 That second finding draws an important boundary: requirements describing
 behavior *internal* to a component, which cannot be monitored from outside,
 give rise to **component tests** — and those belong to the component's
-**supplier**, not to the vehicle-level test team. The flip side: if during
-analysis you spot plausible cases the VF never wrote down, you still write
-the corresponding test cases. Total coverage of the VF is the goal.
+**supplier**, not to the vehicle-level test team. Conversely, if the
+analysis identifies plausible cases the VF does not describe, the
+corresponding test cases are still written. Total coverage of the VF is the
+goal.
 
 ## Worked example: Gearbox Status Management (BEV)
 
-Time to see all of this on a real VF: *Gearbox Status Management* for a
-Battery Electric Vehicle (BEV) project. The function involves several nodes:
+The following worked example applies this process to a real VF: *Gearbox
+Status Management* for a Battery Electric Vehicle (BEV) project. The
+function involves several nodes:
 
 - **MTA** — the robotic transmission actuator, the node that "makes logic";
 - **SLU** — the shift lever unit, source of `ShiftLeverPosition.Info`
@@ -299,7 +298,7 @@ Battery Electric Vehicle (BEV) project. The function involves several nodes:
 
 Requirements are written in a semi-formal style: a `@` condition
 (`@KeyStatus.info = keyon:`) followed by *shall* statements in if/else form.
-Train your eye here: **each *shall* is a test seed**.
+**Each *shall* statement is a candidate test case.**
 
 ### Mismatch: blinking and buzzer
 
@@ -369,10 +368,10 @@ and assume a safe default — `DriverDoorSts = Closed`. When the message is
 received correctly again, the DTC is devalidated and real values are used.
 The IPC and BCM have analogous requirements for their input messages.
 
-The diagnostic test case writes itself: stop the message (easy on a
-simulator or bench), wait 2.5 s, check the DTC is validated and the default
-is used; restart the message, check devalidation. The exact
-validation/invalidation timings come from the CDD.
+The diagnostic test case follows directly: stop the message
+(straightforward on a simulator or bench), wait 2.5 s, check that the DTC is
+validated and the default is used; restart the message, check devalidation.
+The exact validation/invalidation timings come from the CDD.
 
 ### Configuration parameters: the tester's cheat sheet
 
@@ -412,28 +411,27 @@ environments, chosen per test type:
 | **At the bench** | When you need to simulate/measure the electrical-electronic behavior — currents, voltages, oscilloscope work |
 | **At the simulator** | When no car or bench is available, or when you need CAN message stimulation with very fast dynamics |
 
-Missing-message diagnostic tests and timing checks around hundreds of
-milliseconds are natural simulator candidates; the buzzer you must *hear* is
-a car test.
+Missing-message diagnostic tests and timing checks in the
+hundreds-of-milliseconds range are typical simulator candidates; tests that
+require perceiving audible output, such as the buzzer, belong in the car.
 
 !!! success "Key takeaways"
-    - You can extract test cases from the **VF** (functional tests) and the
-      **CDD** (diagnostic tests) — never write them freehand.
-    - Every requirement deserves a **positive and a negative** test; the
-      pair is what makes your coverage robust.
+    - Test cases are extracted from the **VF** (functional tests) and the
+      **CDD** (diagnostic tests), not written freehand.
+    - Every requirement is covered by a **positive and a negative** test;
+      only the pair provides robust coverage.
     - Test IDs embed the VF name, version and release
-      (`VFXXX_V5_R4.TC001`) — that is your traceability chain.
+      (`VFXXX_V5_R4.TC001`), which provides the traceability chain.
     - Requirements come as text, tables, truth tables, equations, state
-      machines and flowcharts; each form maps mechanically to tests — only
-      free text needs real interpretation, and that is where your judgment
-      grows.
-    - VF analysis against the DBC catches wrong/missing signal names before
-      they break your tests; unobservable internal behavior becomes a
+      machines and flowcharts; each form maps mechanically to tests, and
+      only free text requires interpretation.
+    - VF analysis against the DBC detects wrong or missing signal names
+      before test execution; unobservable internal behavior becomes a
       **component test**, owned by the supplier.
     - The VF's parameter table (`T_Gear_Mismatch`,
-      `MissingMsg_Default_Time`, thresholds…) hands you the concrete numbers
-      for your checks — just always test against the quoted release.
-    - You can pick the right environment per test: car for user-perceivable
+      `MissingMsg_Default_Time`, thresholds…) provides the concrete values
+      for checks; tests must reference the quoted release.
+    - The execution environment is chosen per test: car for user-perceivable
       behavior, bench for electrical measurement, simulator for fast CAN
       stimulation.
 

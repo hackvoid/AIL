@@ -1,18 +1,16 @@
 # CAPL Exercise — Simulating the IPC's World
 
-Time to put everything from the [CAPL lessons](../../index.md) into practice.
-In this exercise you stop being a *user* of the vehicle network and start being
-part of it: you will write a small CAPL (Communication Access Programming
-Language) program that plays the role of the ECUs surrounding the **IPC**
+This exercise applies the concepts from the [CAPL lessons](../../index.md) in
+practice. You will write a small CAPL (Communication Access Programming
+Language) program that simulates the ECUs surrounding the **IPC**
 (Instrument Panel Cluster) — the display behind the steering wheel — on the
 P332 BEV's body bus (BH-CAN).
 
-Why would you ever do this? Because on a real test bench the cluster often
-arrives before the rest of the car exists. If you want to see whether it reacts
-correctly to a configuration request, *someone* has to generate the traffic it
-expects — and that someone is your simulated node. This "restbus simulation"
-is one of the most common daily tasks of an E/E test engineer, and CAPL is the
-language you do it in.
+On a real test bench the cluster often arrives before the rest of the vehicle
+network exists. To verify that it reacts correctly to a configuration request,
+a simulated node must generate the traffic it expects. This "restbus
+simulation" is one of the most common tasks of an E/E test engineer, and CAPL
+is the language it is implemented in.
 
 By the end of this exercise you will be able to:
 
@@ -20,17 +18,18 @@ By the end of this exercise you will be able to:
 - transmit a message cyclically at exactly the period the database demands,
 - react to a key press by sending a specific signal value,
 - judge incoming frames against what you asked for and keep score,
-- survive a bus-off gracefully and report results when the measurement ends.
+- stop transmitting on a bus-off condition and report results when the
+  measurement ends.
 
-Don't worry if that sounds like a lot — each piece maps to exactly one CAPL
-event handler, and we'll build them one at a time.
+Each requirement maps to exactly one CAPL event handler; the sections below
+build them one at a time.
 
 ## Goal
 
 Write **one** CAPL program node that, for the whole measurement:
 
 1. sends the `STATUS_UBSS_BH` message cyclically with the period defined in
-   the DBC (spoiler: 500 ms);
+   the DBC (500 ms);
 2. sends `TELEMATIC_VEHICLE_SETUP2` with `PowerLevelReq = 0x3` when the `2`
    key is pressed;
 3. increases a counter `Count1` each time the `PowerLevel` signal reported
@@ -59,8 +58,7 @@ lessons.
 ### The messages involved
 
 Everything below comes from the DBC — always check it rather than guessing
-IDs, periods or signal positions. Getting into this habit now will save you
-hours of "why isn't my node reacting?" later:
+IDs, periods or signal positions:
 
 | Message | ID (dec/hex) | DLC | Sender | Timing |
 |---|---|---|---|---|
@@ -79,15 +77,14 @@ The two signals that matter:
     The exercise sheet says to watch the `PowerLevel` signal "in
     `IPC_VEHICLE_SETUP`", but in this DBC that signal actually lives in
     **`IPC_VEHICLE_SETUP2`** (the plain `IPC_VEHICLE_SETUP` has no
-    `PowerLevel`). This is a classic real-world trap: documentation drifts,
-    databases don't. Attach your message event handler to the message that
-    really carries the signal.
+    `PowerLevel`). Documentation can drift from the database; attach your
+    message event handler to the message that actually carries the signal.
 
 ## How the program fits together
 
 CAPL is event-driven: there is no main loop, just small procedures that run
-when something happens. Once you accept that mental model, this exercise is
-simply one handler per event type:
+when something happens. This exercise therefore uses one handler per event
+type:
 
 ```mermaid
 flowchart TD
@@ -106,8 +103,8 @@ flowchart TD
 
 In the `variables` block declare a timer, message objects for the two messages
 you transmit, the counter, the last requested value, and a flag for the bus
-state. Note how each variable corresponds to one requirement from the goal
-list — that's not a coincidence, it's how you decompose any CAPL task:
+state. Each variable corresponds to one requirement from the goal list,
+which is how any CAPL task is decomposed:
 
 ```c
 variables
@@ -126,8 +123,9 @@ variables
 
 `on start` runs once when the measurement begins. Arm the timer there; the
 timer handler outputs the message and re-arms itself, which gives you the
-500 ms cycle "for the entire measurement duration". The `busOk` check makes
-the handler go silent after a bus-off without any further bookkeeping:
+500 ms cycle "for the entire measurement duration". The `busOk` check stops
+the handler from transmitting after a bus-off without any further
+bookkeeping:
 
 ```c
 on start
@@ -148,7 +146,7 @@ on timer tUbss
 !!! tip
     In CANoe you can also use `setTimerCyclic(tUbss, UBSS_CYCLE_MS)` and drop
     the re-arm line. The manual re-arm version works everywhere and makes the
-    period explicit — a good habit while you're learning.
+    period explicit.
 
 ### 3. Send the request on key press
 
@@ -227,8 +225,8 @@ PowerLevel signal value has been different from PowerLevelReq one 12 times
 
 ## Common mistakes
 
-Everyone trips on at least one of these the first time — check here before you
-debug for an hour:
+The following errors are common on a first attempt; check them before
+extended debugging:
 
 - **Forgetting to re-arm the timer.** `setTimer` fires once; without the
   second `setTimer` call inside `on timer`, `STATUS_UBSS_BH` is sent exactly
@@ -250,8 +248,9 @@ debug for an hour:
   inactive.
 
 !!! success "Key takeaways"
-    - You just built your first restbus simulation — the bread-and-butter
-      technique of E/E testing. Same pattern, every project.
+    - A restbus simulation replaces the ECUs not yet available on the bench
+      with a simulated node that generates the traffic the device under test
+      expects; this is a standard E/E testing task.
     - CAPL programs are pure event handlers: `on start`, `on timer`,
       `on key`, `on message`, `on busOff`, `on stopMeasurement` — no main
       loop, one handler per requirement.
@@ -260,8 +259,8 @@ debug for an hour:
       (500 ms here).
     - Keep the "requested" value in a variable so received feedback can be
       compared against it; protect counters from going negative.
-    - The DBC is the source of truth — when docs and databases disagree,
-      trust the database.
+    - The DBC is the authoritative reference for IDs, cycle times and signal
+      layouts when documentation and the database disagree.
 
 ---
 

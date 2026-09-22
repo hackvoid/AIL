@@ -1,10 +1,9 @@
 # INCA & MDA — Calibration, Flashing and Measurement Analysis
 
-Welcome to the lesson that turns you from a *bus watcher* into a *calibrator*.
-Until now you have mostly observed what ECUs broadcast on CAN. Here you get
-your hands on the ECU itself: reading its internal variables live, tuning its
-parameters while it runs, flashing new software, and analyzing the recordings
-afterwards.
+Previous lessons covered observing what ECUs broadcast on CAN. This article
+covers working on the ECU itself: reading its internal variables live, tuning
+its parameters while it runs, flashing new software, and analyzing the
+recordings afterwards.
 
 By the end of this article you will be able to:
 
@@ -15,9 +14,9 @@ By the end of this article you will be able to:
 - flash software onto an ECU without bricking it,
 - compare calibration datasets in CDM and analyze recordings in MDA.
 
-Take your time with this one. The concepts are simple, but the *habits*
-(naming, alignment, page management) are what separate a reliable calibrator
-from someone who loses an afternoon to a mismatched dataset.
+The concepts are straightforward, but consistent working habits — naming,
+alignment, page management — are what prevent errors such as working on a
+mismatched dataset.
 
 ## Why INCA exists
 
@@ -25,8 +24,8 @@ Every ECU in a modern vehicle runs two kinds of software: a **firmware** and an
 **application** containing the control algorithms (combustion control, power
 management, emission control). That application ships with a default set of
 parameters — thousands of thresholds, maps and enable flags. **Calibration** is
-the craft of customizing those parameters for a specific vehicle, so the *same*
-software can power many different models and variants.
+the process of customizing those parameters for a specific vehicle, so the
+*same* software can power many different models and variants.
 
 **INCA** (*INtegrated Calibration and measurement Application*, by ETAS) is the
 industry-standard tool for this. With it you can:
@@ -37,8 +36,8 @@ industry-standard tool for this. With it you can:
 - download (flash) new software onto the ECU memory.
 
 Its companion **MDA** (*Measure Data Analyzer*) covers the offline side:
-opening the measurement files recorded with INCA and digging into the signals
-after the test. This article walks you through both.
+opening the measurement files recorded with INCA and analyzing the signals
+after the test. This article covers both.
 
 !!! note "Why internal signals matter"
     A CAN log (e.g. from CANalyzer) only shows what the ECU *broadcasts*. INCA
@@ -84,8 +83,8 @@ live calibration on a customer's car is simply not possible.
 
 ## ETAS hardware interfaces
 
-INCA talks to the ECU through ETAS interface hardware. Which box you need
-depends on the communication channel — and on your budget:
+INCA talks to the ECU through ETAS interface hardware. The required interface
+depends on the communication channel and on cost:
 
 ![ETAS interface hardware: ES 592 and ES 581](img/etas-hardware.webp)
 
@@ -112,8 +111,8 @@ expensive) modular interfaces.
 
 ## INCA's main window
 
-Open INCA and you will see six macro areas. Knowing them by name saves you a
-lot of hunting:
+The INCA main window contains six macro areas. Knowing them by name makes
+navigation faster:
 
 1. **Database objects** — the tree of folders, projects, workspaces and
    experiments,
@@ -129,8 +128,8 @@ lot of hunting:
 ## Setting up a workspace, step by step
 
 Everything in INCA lives in a database, and connecting to an ECU always
-follows the same sequence. Do this once carefully and every future session is
-a single click:
+follows the same sequence. Set this up once carefully; subsequent sessions
+connect with a single click:
 
 ```mermaid
 flowchart TD
@@ -171,13 +170,12 @@ flowchart TD
     After importing, INCA shows the dataset next to the project name. A good
     habit is to duplicate it and keep the original **frozen** (right-click →
     set read-only / freeze). That way you always have a pristine reference
-    dataset, and you make your modifications on the copy. Future-you will be
-    grateful.
+    dataset, and you make your modifications on the copy.
 
 ## Working Page vs. Reference Page
 
-This is the mental model that governs everything you do on a development ECU,
-so make sure it clicks:
+The distinction between the two pages governs all calibration work on a
+development ECU:
 
 - **Reference Page (RP)** — read-only; the supplier's default calibration.
 - **Working Page (WP)** — writable; your modified dataset.
@@ -191,7 +189,7 @@ diverge, and zero differences when everything is aligned.
 **Alignment** means that three copies of the calibration are consistent: the
 working page, the reference page, and what is actually flashed on the ECU.
 Press **F3** (Fn+F3 on laptops) or the *initialize hardware* button to start
-initialization and alignment. Two settings make life easier:
+initialization and alignment. Two settings simplify this workflow:
 
 - enable **"initialize automatically"** so INCA aligns on its own at every
   connection,
@@ -241,7 +239,7 @@ Three commands control acquisition:
 
 The maximum recording time depends on your PC's free disk space and the number
 of selected variables (from about an hour on a loaded setup to many hours).
-While you calibrate on the working page, three shortcuts become muscle memory:
+While you calibrate on the working page, three shortcuts are used frequently:
 **F7** increment, **F6** decrement, **Ctrl+U** reset all changes back to the
 reference page values.
 
@@ -254,7 +252,7 @@ you understand the vehicle's state *through INCA* without looking at the
 vehicle. Then add the signals specific to the function under test, both the
 CAN-visible ones and their internal counterparts.
 
-### Recording configuration: name things like a professional
+### Recording configuration: naming convention
 
 Before saving a recording, INCA asks for a file name and comment. Adopt a
 strict naming convention — the log will be read by calibrators and function
@@ -277,8 +275,8 @@ leave triggers off.
 
 ## Memory page operations and flashing
 
-The *Manage Memory Pages* section offers four operations. Learn the difference
-now — confusing Download and Flash is a classic beginner mistake:
+The *Manage Memory Pages* section offers four operations. Confusing Download
+and Flash is a common error, so note the distinction:
 
 | Operation | What it does |
 |---|---|
@@ -316,11 +314,11 @@ flowchart LR
     is unchanged, but on active projects with weekly releases the full flash
     is the safe default.
 
-!!! tip "The bootloader is your recovery path"
+!!! tip "The bootloader as recovery path"
     The bootloader is a separate HEX file listed in the release notes. Flash it
     only when it changes — not at every release. But if you ever lose
     communication with the ECU (e.g. after flashing the wrong software),
-    reflashing the bootloader is the way to recover the unit. Keep it handy.
+    reflashing the bootloader is the way to recover the unit.
 
 ## CDM — Calibration Data Manager
 
@@ -358,9 +356,8 @@ highlighted ones; the same menu exports to Excel/HTML/ASCII.
 
 ## MDA — Measure Data Analyzer
 
-The test is done, the `.dat` file is on your disk — now the real analysis
-starts. **MDA** opens the measurement files recorded by INCA and lets you work
-through the signals offline:
+After the test, **MDA** opens the `.dat` measurement files recorded by INCA
+for offline analysis of the signals:
 
 1. Open MDA and load the `.dat` file (*File* → choose the measurement, or
    *New configuration* → *Add* the file).
@@ -380,27 +377,29 @@ it is what makes the data meaningful.
 !!! tip "Practice offline first"
     INCA works offline without any ECU: import an A2L + dataset, build an
     experiment, and practice variable selection, rasters, CDM compares and MDA
-    analysis on your PC before going to the vehicle. When you do connect for
-    real, the only new steps are hardware detection and alignment. Also check
+    analysis on your PC before going to the vehicle. When connecting to a real
+    ECU, the only new steps are hardware detection and alignment. Also check
     your INCA version — newer ECU software releases may require a newer INCA
     (e.g. 7.3 instead of 7.2) to open the project.
 
 !!! success "Key takeaways"
     - Calibration = adapting one software to many applications by editing its
-      parameter dataset — and INCA is your window into the ECU's internals:
-      measure, edit live, record, flash.
+      parameter dataset; INCA provides access to the ECU's internal variables
+      for measuring, live editing, recording and flashing.
     - Development ECUs add ETK flash/RAM with two switchable pages: read-only
       **Reference Page** (supplier defaults) vs. writable **Working Page**
       (your changes). Switch to WP before editing; align with F3.
     - A workspace ties together software (A2L description + HEX/S19 dataset),
       ETAS hardware (ES 592 for ETK+CAN, ES 581 for CAN/CCP only) and an
-      experiment (`.EXP`). Set it up once, reuse it forever.
+      experiment (`.EXP`). Once configured, the workspace is reused for
+      subsequent sessions.
     - Pick a raster faster than your signal's dynamics, and name every
       recording with date, project, facility, software version, test and
-      result — your colleagues will thank you.
+      result, so logs remain interpretable by calibrators and function owners
+      outside the project.
     - Flash programming writes *permanent* memory and needs the ProF
-      configuration file; flash code + calibration together, and remember the
-      bootloader is your recovery path.
+      configuration file; flash code + calibration together, and keep the
+      bootloader available as the recovery path.
     - CDM compares and merges datasets; MDA replays your `.dat` logs with
       oscilloscope strips and cursors. You can practice both entirely offline.
 

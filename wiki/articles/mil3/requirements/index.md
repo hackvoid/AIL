@@ -1,28 +1,26 @@
 # Requirements Management
 
-Welcome to the starting line of every automotive project. Long before anyone
-writes a line of code or powers up a HIL (Hardware-in-the-Loop) rig, someone
-has to answer a deceptively simple question: **what exactly must this system
-do, and how will we prove it does it?** That answer lives in the
-**requirements** — and in the automotive world they are not an informal to-do
-list. They are contract-relevant engineering artifacts that get elicited,
-reviewed, versioned and traced through the entire development lifecycle.
+Every automotive project starts with requirements. Before any code is written
+or a HIL (Hardware-in-the-Loop) rig is powered up, the project must define
+**what exactly the system must do, and how that will be proven**. In the
+automotive industry, requirements are not an informal to-do list: they are
+contract-relevant engineering artifacts that are elicited, reviewed, versioned
+and traced through the entire development lifecycle.
 
-As a new E/E engineer you may never *own* the requirements document — but you
-will read it every single day, derive your test cases from it, and defend your
-test results against it. By the end of this article you will be able to:
+As an E/E engineer you may never *own* the requirements document, but you will
+read it regularly, derive test cases from it, and justify test results against
+it. This article covers:
 
 - explain how **Automotive SPICE (ASPICE)** structures the requirements chain
   and why OEMs (Original Equipment Manufacturers) audit suppliers against it,
-- spot a *bad* requirement on sight and rewrite it into a good one,
-- find your way around **IBM Rational DOORS**, the industry-standard tool where
+- identify a poorly written requirement and rewrite it into a well-formed one,
+- navigate **IBM Rational DOORS**, the industry-standard tool where
   real projects store and trace thousands of requirements.
 
-## Automotive SPICE: the rules of the game
+## Automotive SPICE
 
 **Automotive SPICE** — short for *Software Process Improvement and Capability
-dEtermination* (yes, the capitalization is odd, but that's where the acronym
-comes from) — is the automotive-specific variant of the international standard
+dEtermination* — is the automotive-specific variant of the international standard
 **ISO/IEC 15504 (SPICE)**. Its job is to **improve and evaluate the development
 processes of ECU (Electronic Control Unit) suppliers**: when a carmaker audits
 a supplier, the ASPICE model defines which processes are examined and how their
@@ -54,18 +52,18 @@ flowchart TD
     C -. "verified by" .-> E["Tests<br/>(SWE.4–SWE.6, SYS.4–SYS.5)"]
 ```
 
-!!! note "Why you care as a test engineer"
+!!! note "Relevance for test engineers"
     ASPICE traceability is bidirectional: a requirement must trace *down* to
     design and code, and every requirement must be *verifiable* by a test or
     analysis on the right leg of the V. When you later write test cases in the
     [Test Cases](../testcases/index.md) lesson and run them in
     [Verification](../../mil4/verification/index.md), each test will reference
-    the requirement IDs it covers. Traceability is not bureaucracy — it is how
-    you prove nothing was forgotten and nothing was invented.
+    the requirement IDs it covers. Traceability ensures that no requirement is
+    left untested and no test exists without a requirement.
 
 ## Functional vs. non-functional requirements
 
-Requirements come in two fundamental flavors, and you'll meet both constantly:
+Requirements fall into two fundamental categories:
 
 - **Functional requirements** — what the system **shall do**. Example: "If the
   driver presses the brake pedal, the brake lights shall illuminate."
@@ -77,14 +75,13 @@ Requirements come in two fundamental flavors, and you'll meet both constantly:
 
 Both kinds must follow the same quality rules below. A vague non-functional
 requirement ("the system shall be fast") is just as defective as a vague
-functional one — and just as likely to blow up in your face during testing.
+functional one — and just as likely to cause failures during testing.
 
 ## Anatomy of a good requirement
 
-Here is the heart of the lesson — and the skill you will use most. A
-requirement is only useful if it can be understood one way, built within real
-constraints, and proven at the end. Six characteristics define a well-formed
-requirement:
+A requirement is only useful if it can be understood one way, built within
+real constraints, and proven at the end. Six characteristics define a
+well-formed requirement:
 
 | Characteristic | Rule |
 |---|---|
@@ -95,17 +92,15 @@ requirement:
 | **Atomic** | A single statement — no conjunctions bundling several requirements |
 | **Traceable** | Its level and its correlation with other requirements are known |
 
-The easiest way to internalize these is through bad → good rewrites. Train
-your eye on these examples and you'll start catching defects in reviews within
-your first weeks on a project.
+The following bad → good rewrites illustrate each rule.
 
 ### Clear and unambiguous
 
 > ❌ *The system shall not accept password longer than 15 characters.*
 
-What does "not accept" mean — ignore it? truncate it? crash? A reader can
-interpret this in several ways, and every developer will pick a different one.
-The fixed version states the observable behavior:
+"Not accept" admits several interpretations — ignore the input, truncate it,
+or reject it with an error — and different developers will choose different
+ones. The fixed version states the observable behavior:
 
 > ✅ *If the user inserts a password longer than 15 characters, then the system
 > shall display an error message and shall ask the user to correct it.*
@@ -114,9 +109,8 @@ The fixed version states the observable behavior:
 
 > ❌ *The system must refresh the data reasonably quickly.*
 
-"Reasonably quickly" cannot be verified by anyone — and *you* are the one who
-will have to verify it. A requirement is testable only if it contains a
-measurable criterion:
+"Reasonably quickly" is not verifiable. A requirement is testable only if it
+contains a measurable criterion:
 
 > ✅ *The system must refresh the data each 0.5 ms.*
 
@@ -131,9 +125,9 @@ one method applies.
 > ❌ *The replacement control system shall be installed with no disruption of
 > the production.*
 
-Zero disruption is usually physically impossible, so this requirement sets the
-project up to fail before it starts. A feasible version quantifies what the
-business can actually accept:
+Zero disruption is usually physically impossible, so this requirement cannot
+be satisfied. A feasible version quantifies what the business can actually
+accept:
 
 > ✅ *The replacement control system shall be installed causing no more than
 > 2 days of production disruption.*
@@ -154,12 +148,13 @@ The conflict is resolved by keeping the single, agreed behavior:
 
 !!! warning "Redundancy is also a consistency problem"
     If the same behavior is stated in two places, a later change to one copy
-    creates a hidden contradiction — and the two halves of the project will
-    quietly diverge. Say it once, link to it everywhere.
+    creates a hidden contradiction between the two. State each behavior once
+    and reference it wherever it applies.
 
 ### Atomic
 
-Conjunctions are a smell. One requirement, one statement:
+A requirement that bundles several conditions with conjunctions is not
+atomic. One requirement, one statement:
 
 > ❌ *In case of overtemperature, overcurrent and overvoltage the system shall
 > abort the charge.*
@@ -179,16 +174,16 @@ It must always be possible to know **which level a requirement belongs to**
 (stakeholder, system, software) and **how it correlates with other
 requirements** — which parent it refines, which siblings it depends on, and
 which tests verify it. Traceability is not a property of the sentence but of
-the requirement *management*: it lives in the tool, which brings us to DOORS.
+the requirement *management*: it is maintained in the requirements tool,
+described in the next section.
 
 ## Managing requirements in IBM Rational DOORS
 
 **IBM Rational DOORS** (Dynamic Object-Oriented Requirements System) is the
-de-facto standard requirements management tool in the automotive industry. A
-Word document or Excel sheet simply cannot maintain thousands of linked,
-versioned requirements without collapsing — DOORS can. You don't need to
-master it on day one, but you do need to navigate it confidently, so let's
-walk through the mental model.
+de-facto standard requirements management tool in the automotive industry.
+Maintaining thousands of linked, versioned requirements is not practical in a
+Word document or Excel sheet; DOORS is designed for this. The following
+sections describe its data model and core features.
 
 ### The data hierarchy
 
@@ -243,12 +238,10 @@ filter objects by:
 
 and multiple conditions can be combined in one filter.
 
-!!! warning "Filters have no memory"
-    A DOORS filter is not saved as part of the module by default — close the
-    module and your carefully built multi-condition filter is gone. Save your
-    working configurations as named **views** so they survive (and so they can
-    be used for exports). Every new DOORS user learns this the hard way
-    exactly once.
+!!! warning "Filters are not persisted"
+    A DOORS filter is not saved as part of the module by default — closing the
+    module discards a multi-condition filter. Save working configurations as
+    named **views** so they persist and can be used for exports.
 
 ### Baselines, links and history
 
@@ -303,16 +296,16 @@ you never write a requirement yourself.
       analysis → SWE.1 software analysis, each level refining the previous one.
     - Functional requirements say what the system *does*; non-functional
       requirements say what it *is* (timing, temperature, memory, …).
-    - You can now judge any requirement against the six rules: clear,
-      testable, feasible, consistent, atomic, traceable — and demand a
-      measurable criterion wherever it must be verified.
+    - Well-formed requirements are judged against six characteristics: clear,
+      testable, feasible, consistent, atomic, traceable; any requirement that
+      must be verified needs a measurable criterion.
     - Verification methods: inspection, analysis, demonstration, test.
     - DOORS structures requirements as database → projects → formal modules →
       objects, with attributes, filters, baselines, history and cross-module
       links providing traceability end to end.
 
 !!! tip "Where this leads"
-    Next up: turn these requirements into executable checks in
-    [Test Cases](../testcases/index.md), then prove them on real hardware in
+    The next lessons derive executable checks from requirements in
+    [Test Cases](../testcases/index.md) and verify them on real hardware in
     [Verification](../../mil4/verification/index.md) and
     [Validation](../../mil4/validation/index.md).

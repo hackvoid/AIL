@@ -1,20 +1,16 @@
 # UDS Exercise
 
-Welcome to your first hands-on diagnostic lab. Everything you learned in
+This is the first hands-on diagnostic lab. It applies the concepts covered in
 [Diagnosis](../../../diagnosis/index.md) — services, sessions, negative
-responses, multi-frame transport — is about to stop being a table in a slide
-deck and become something you can build and debug with your own hands.
+responses, multi-frame transport — by building and debugging them directly.
 
-**What you'll be able to do after this exercise:**
+**After this exercise you will be able to:**
 
 - **write scripts that simulate an ECU answering UDS (Unified Diagnostic
   Services) requests** — byte for byte, response by response;
-- **read real request/response traces line by line and hunt down the errors
-  planted in them**, the exact skill you will use every day when a test fails
-  and nobody knows why.
-
-Don't worry if the hex still looks like alphabet soup. By the end of Part 2
-you'll be spotting malformed requests at a glance.
+- **read real request/response traces line by line and identify the errors
+  planted in them**, the same skill used when a diagnostic test fails for an
+  unknown reason.
 
 ## Goal
 
@@ -29,13 +25,13 @@ you'll be spotting malformed requests at a glance.
 
 ## What you need to remember
 
-Before touching the tools, refresh these three building blocks. They are all
-you need for the whole exercise.
+Before starting the exercise, review these three building blocks; they are
+sufficient for the whole exercise.
 
 ### UDS message anatomy
 
-Every diagnostic exchange is a conversation with exactly two speakers: a
-request from the **tester** (you, via CANalyzer) and a reply from the **ECU**.
+Every diagnostic exchange involves exactly two roles: a request from the
+**tester** (via CANalyzer) and a reply from the **ECU**.
 
 - A request starts with the **Service Identifier (SID)** — one byte saying
   *what* you want.
@@ -45,8 +41,8 @@ request from the **tester** (you, via CANalyzer) and a reply from the **ECU**.
   where NRC is the Negative Response Code telling you *why* the request was
   refused.
 
-The NRCs below are the ones you'll meet in this exercise. Learn them now and
-the traces in Part 2 will read like plain text:
+The NRCs below are the ones used in this exercise and appear throughout the
+traces in Part 2:
 
 | NRC | Name | When you see it |
 |---|---|---|
@@ -59,7 +55,7 @@ the traces in Part 2 will read like plain text:
 
 ### Session control rules
 
-ECUs have **diagnostic sessions** — think of them as permission levels. The
+ECUs have **diagnostic sessions**, which act as permission levels. The
 exercise sheet fixes these transition rules (footnote (1) of the sheet), and
 your simulated ECU must enforce them:
 
@@ -77,7 +73,7 @@ stateDiagram-v2
 ```
 
 - Default → Extended is allowed; **Programming is reachable only from
-  Extended** — no shortcuts.
+  Extended**.
 - **Default can always be reached**, from any session. It is the safe
   fallback.
 
@@ -99,14 +95,13 @@ sequenceDiagram
 ```
 
 The high nibble of the first byte identifies the frame type: `0` = single
-frame, `1` = first frame, `2` = consecutive frame, `3` = flow control. Keep
-this decoder ring next to you whenever a trace shows more than one CAN frame
-per service.
+frame, `1` = first frame, `2` = consecutive frame, `3` = flow control. Refer
+to this classification whenever a trace spans more than one CAN frame.
 
 ## Setup
 
-Here's what you'll practice with — the same toolchain from the earlier MIL2
-lessons, now pointed at diagnostics:
+The exercise uses the toolchain from the earlier MIL2 lessons, applied to
+diagnostics:
 
 - **CANalyzer** (or CANoe) with a diagnostic-capable configuration — the same
   environment used in the [CANalyzer](../../../canalyzer/index.md) lessons.
@@ -117,13 +112,12 @@ lessons, now pointed at diagnostics:
 - A **CAPL script** implementing a simulated ECU node (the
   [CAPL](../../../capl/index.md) lessons cover the language): on each incoming
   diagnostic request the script builds and sends the required response. This
-  is the heart of Part 1 — you are the ECU now.
+  simulated ECU is the core of Part 1.
 
 ## Part 1 — Build the conversations
 
 Write the script (and the byte sequences it exchanges) for each scenario.
-Take them one at a time: each one adds exactly one new UDS service to your
-muscle memory.
+Each scenario adds one new UDS service.
 
 **1. Read vehicle speed from DID `AA AA`.**
 The tester sends a `ReadDataByIdentifier` for the DID, the ECU answers
@@ -135,8 +129,8 @@ positively with the speed set to 100 km/h:
 | Rx | `62 AA AA 64` | Positive response; 0x64 = 100 km/h (1 km/h per unit) |
 
 **2. Write `XX XX` to DID `BB BB` — allowed only in the Extended session.**
-This is where the session rules earn their keep: you must change the session
-first, otherwise the ECU should reject the write with NRC 0x7F
+The session rules apply here: the session must be changed first, otherwise
+the ECU should reject the write with NRC 0x7F
 (serviceNotSupportedInActiveSession):
 
 | Direction | Bytes | Meaning |
@@ -159,8 +153,8 @@ positive response carries the availability mask, the DTC format and the
 
 **4. Start routine `CC CC` — expect a negative response for wrong length.**
 Send a malformed `RoutineControl` start request (e.g. missing routine control
-option bytes) and answer with NRC 0x13. Building the *failure* case on
-purpose teaches you more than ten happy paths:
+option bytes) and answer with NRC 0x13. Building the failure case
+deliberately is part of the exercise:
 
 | Direction | Bytes | Meaning |
 |---|---|---|
@@ -175,9 +169,9 @@ and the remaining bytes travel in Consecutive Frames numbered 0x21, 0x22, …
 
 ## Part 2 — Read the traces, find the mistakes
 
-Now for the detective work. Each trace below is printed exactly as given in
-the exercise — and some of them lie. For every line, say what it means, then
-decide whether it is correct; if not, state what the bytes should have been.
+Each trace below is printed exactly as given in the exercise; some contain
+deliberate errors. For every line, state what it means, then decide whether
+it is correct; if not, state what the bytes should have been.
 
 ### Trace 1 — read, write, read again
 
@@ -223,8 +217,8 @@ formed, and would 0x33 (or rather 0x13) be the right refusal?
 | Rx | `22 AA AA` |
 | Tx | `62 AA AA XX` |
 
-This trace is full of planted errors — it's the most instructive one in the
-set. The correct seed & key flow is a strict four-step handshake:
+This trace contains several planted errors. The correct seed & key flow is a
+strict four-step handshake:
 
 1. Tester requests the seed: `27 <odd subfunction>`, e.g. `27 11` — **no
    extra data bytes**.
@@ -239,9 +233,10 @@ Compare the trace against this flow and check at least:
 - the subfunction echoed in the first seed response (`67 12` after a `27 11`
   request?),
 - the second seed request, which carries unexpected payload bytes,
-- the reply to the second key attempt — does a request ever get answered by
-  another request?
-- the last three lines: who is the tester and who is the ECU here?
+- the reply to the second key attempt — whether a request is ever answered by
+  another request,
+- the last three lines: which lines are sent by the tester and which by the
+  ECU.
 
 ### Trace 4 — session control
 
@@ -256,14 +251,13 @@ What to check: against the session rules (Default is always reachable;
 Extended from Default; Programming only from Extended), is this sequence
 legal?
 
-When you're done, write up your findings and send the report to
-automotive.training@kineton.it or directly to your mentor — explaining your
-reasoning out loud is part of the exercise.
+When the analysis is complete, write up the findings and send the report to
+automotive.training@kineton.it or directly to your mentor; explaining the
+reasoning is part of the exercise.
 
 ## Common mistakes
 
-Everyone trips on at least one of these the first time. Now you get to trip
-on them here, where it costs nothing:
+The following mistakes occur frequently on a first attempt:
 
 - Forgetting the **session precondition**: writing a DID that requires the
   Extended session while still in Default — the ECU must answer `7F 2E 7F`.
@@ -281,18 +275,18 @@ on them here, where it costs nothing:
   wrap after 0x2F back to 0x20.
 
 !!! success "Key takeaways"
-    - You can now speak UDS by hand: positive response = SID + 0x40, negative
-      response = `7F SID NRC`, always three bytes — and you know the NRCs
-      (0x13, 0x33, 0x35, 0x7F) that matter day to day.
-    - You can enforce session rules like a real ECU: Programming only from
-      Extended, Default from anywhere, and services refused per session.
-    - You can walk the SecurityAccess handshake — requestSeed (odd level) →
-      sendKey (level+1), with responses echoing the request's subfunction.
-    - You can follow payloads over 7 bytes across ISO-TP: First Frame, Flow
-      Control, Consecutive Frames 0x21…0x2F.
-    - Most valuable of all: you can read a raw trace byte by byte — direction,
-      SID, subfunction, length, consistency — and catch the mistake. That's
-      the skill that makes you useful on day one of any test campaign.
+    - Positive responses echo SID + 0x40; negative responses are always
+      three bytes in the form `7F SID NRC`. The NRCs used in this exercise
+      are 0x13, 0x33, 0x35 and 0x7F.
+    - Session rules: Programming is reachable only from Extended, Default is
+      reachable from any session, and services can be refused per session.
+    - The SecurityAccess handshake consists of requestSeed (odd level)
+      followed by sendKey (level+1), with responses echoing the request's
+      subfunction.
+    - Payloads longer than 7 bytes are transferred over ISO-TP as a First
+      Frame, a Flow Control, and Consecutive Frames numbered 0x21…0x2F.
+    - Trace analysis proceeds byte by byte — direction, SID, subfunction,
+      length, consistency — to identify planted protocol errors.
 
 ---
 

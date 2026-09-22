@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4377,27 +4391,28 @@
 
 
 <h1 id="test-automation">Test Automation<a class="headerlink" href="#test-automation" title="Permanent link">&para;</a></h1>
-<p>Welcome to one of the most career-defining lessons of the bootcamp. Up to now
-you have run tests by hand: stimulate the ECU (electronic control unit), watch
-the reaction, write down the verdict. That works for a handful of tests — but a
-single vehicle function can carry dozens of test cases, each one re-executed at
-<em>every</em> software release, often on a HIL (hardware-in-the-loop) bench that sits
-idle all night. <strong>Test automation</strong> hands the repetitive part of that work to
-tools and scripts that replay pre-defined actions against the unit under test
-(UUT) and produce a report with the verdict — and, on failure, the cause.</p>
-<p>By the end of this article you will be able to:</p>
+<p>Up to now, tests have been run by hand: stimulate the ECU (electronic control
+unit), watch the reaction, record the verdict. That works for a handful of
+tests — but a single vehicle function can carry dozens of test cases, each one
+re-executed at <em>every</em> software release, often on a HIL (hardware-in-the-loop)
+bench that would otherwise sit idle overnight. <strong>Test automation</strong> hands the
+repetitive part of that work to tools and scripts that replay pre-defined
+actions against the unit under test (UUT) and produce a report with the
+verdict — and, on failure, the cause.</p>
+<p>This article covers:</p>
 <ul>
-<li>explain <em>when</em> automation pays off and when a human tester is still the
-  right tool,</li>
-<li>pick the right toolchain for a job: <strong>CANoe + CAPL</strong>, <strong>Vector vTESTstudio</strong>,
-  <strong>TraceTronic ECU-TEST</strong>, or <strong>NI VeriStand + TestStand</strong>,</li>
-<li>follow the concrete click-path from "empty project" to "finished test
-  report" on each of them.</li>
+<li><em>when</em> automation pays off and when a human tester is still the right
+  choice,</li>
+<li>the four toolchains used in this course: <strong>CANoe + CAPL</strong>,
+  <strong>Vector vTESTstudio</strong>, <strong>TraceTronic ECU-TEST</strong>, and
+  <strong>NI VeriStand + TestStand</strong>,</li>
+<li>the procedure from an empty project to a finished test report on each of
+  them.</li>
 </ul>
 <h2 id="why-automate">Why automate<a class="headerlink" href="#why-automate" title="Permanent link">&para;</a></h2>
-<p>Think of the manual validation cycle you already know: four steps, done by a
-person, every release. Automation takes over step 3 — and a good chunk of
-step 4, because the tool writes the report for you:</p>
+<p>Consider the manual validation cycle: four steps, performed by a person at
+every release. Automation takes over step 3 — and a large part of step 4,
+because the tool generates the report:</p>
 <pre class="kx-mermaid"><code>flowchart LR
     A["1. Requirement analysis"] --&gt; B["2. Test writing"]
     B --&gt; C["3. Test execution"]
@@ -4441,13 +4456,13 @@ step 4, because the tool writes the report for you:</p>
 </tr>
 </tbody>
 </table>
-<p>Two bonus points your future self will thank you for: automation removes people
-from <strong>dangerous tests</strong> and harsh environmental conditions, and the automatic
-report largely disposes of a separate bug-logging pass — on failure it shows
-the <em>cause</em> of the negative verdict, not just the red X.</p>
+<p>Two further benefits: automation removes people from <strong>dangerous tests</strong> and
+harsh environmental conditions, and the automatic report largely eliminates a
+separate bug-logging pass — on failure it shows the <em>cause</em> of the negative
+verdict, not just the failed status.</p>
 <div class="admonition warning">
 <p class="admonition-title">Automation is not free</p>
-<p>Be honest with your project manager about the two real limitations: the
+<p>Two limitations must be weighed before adopting automation: the
 <strong>initial investment</strong> (licenses, bench setup, writing and debugging the
 automated tests) and the fact that it is <strong>not applicable to all tests</strong> —
 subjective evaluations, exploratory testing and one-off checks still need
@@ -4455,8 +4470,8 @@ a human. The rule of thumb: weigh the investment against how many times
 the test set will actually be re-executed.</p>
 </div>
 <h3 id="automation-levels">Automation levels<a class="headerlink" href="#automation-levels" title="Permanent link">&para;</a></h3>
-<p>Not every team automates the same share of the workflow — know which level
-your project is aiming at:</p>
+<p>Not every team automates the same share of the workflow; three levels are
+commonly distinguished:</p>
 <p><img alt="Automation levels: from partially automated tests to a fully automated validation workflow" src="img/automation-levels.webp" /></p>
 <ul>
 <li><strong>Level 1</strong> — only a part of the tests is automated.</li>
@@ -4466,16 +4481,17 @@ your project is aiming at:</p>
   generation and distribution, campaign scheduling, …).</li>
 </ul>
 <h2 id="canoe-capl-your-first-automated-tests">CANoe + CAPL: your first automated tests<a class="headerlink" href="#canoe-capl-your-first-automated-tests" title="Permanent link">&para;</a></h2>
-<p>The gentlest entry point builds on what you already have: the
+<p>The simplest entry point builds on the
 <a href="../canoe/">CANoe</a> environment and the
 <a href="../capl/">CAPL</a> language (Communication Access Programming Language,
 Vector's C-like scripting language) from the previous lessons.</p>
-<p>Remember that CANoe can simulate an entire network from the communication
+<p>CANoe can simulate an entire network from the communication
 database (DBC, Database CAN): the rest-bus nodes exist in simulation and their
 <strong>signal values are editable</strong>, but the <em>signal logic</em> of the real ECU software
 is not reproduced — simulated nodes send only what you tell them to send. For
-testing, that is exactly what you need: a controllable world around your ECU.</p>
-<p>Two building blocks turn that world into automated tests:</p>
+testing, this provides exactly what is needed: a controllable environment
+around the ECU.</p>
+<p>Two building blocks turn that environment into automated tests:</p>
 <ul>
 <li><strong>Network nodes</strong> — CAPL programs attached to simulation nodes. They can
   emulate ECU behavior, drive panels, control HIL hardware and simulate whole
@@ -4486,19 +4502,18 @@ testing, that is exactly what you need: a controllable world around your ECU.</p
 </ul>
 <div class="admonition note">
 <p class="admonition-title">When CAPL test modules are the right choice</p>
-<p>CAPL gives you total freedom — anything you can express in C-like code can
-be a test. The price: programming effort grows with test complexity, the
-report content must be coded inside each test, and the tests are fragile
-against database or interface changes. For a quick, sharp test of one
-feature, CAPL is perfect. For a large, long-lived test set, reach for a
-dedicated authoring tool — read on.</p>
+<p>CAPL gives full freedom — anything that can be expressed in C-like code
+can be a test. The price: programming effort grows with test complexity,
+the report content must be coded inside each test, and the tests are
+fragile against database or interface changes. For a quick, focused test
+of one feature, CAPL is well suited. For a large, long-lived test set, a
+dedicated authoring tool is preferable — see the following sections.</p>
 </div>
 <h2 id="vteststudio-authoring-tests-without-much-code">vTESTstudio: authoring tests without (much) code<a class="headerlink" href="#vteststudio-authoring-tests-without-much-code" title="Permanent link">&para;</a></h2>
 <p><strong>vTESTstudio</strong> is Vector's dedicated development environment for automated ECU
-tests. Its killer feature: <strong>three notations for the same test</strong>, freely mixed
-within one project — so the tester who thinks in tables, the reviewer who
-thinks in diagrams and the engineer who thinks in code can all work on the
-same test set.</p>
+tests. Its key feature: <strong>three notations for the same test</strong>, freely mixed
+within one project — table-, diagram- and code-oriented authors can all work
+on the same test set.</p>
 <table>
 <thead>
 <tr>
@@ -4526,7 +4541,7 @@ same test set.</p>
 </tbody>
 </table>
 <h3 id="from-empty-project-to-test-report">From empty project to test report<a class="headerlink" href="#from-empty-project-to-test-report" title="Permanent link">&para;</a></h3>
-<p>One mental model to hold onto: vTESTstudio does <strong>not</strong> execute tests. It
+<p>One point is essential: vTESTstudio does <strong>not</strong> execute tests. It
 <em>compiles</em> them and hands them to CANoe, which runs them. The end-to-end flow:</p>
 <pre class="kx-mermaid"><code>flowchart LR
     A["New Project&lt;br/&gt;(File | New Project)"] --&gt; B["Import CANoe&lt;br/&gt;configuration"]
@@ -4537,7 +4552,7 @@ same test set.</p>
     F --&gt; G["Add Test Unit&lt;br/&gt;(select VTUEXE)"]
     G --&gt; H["Start measurement F9&lt;br/&gt;→ run test"]
     H --&gt; I["Open Test Report"]</code></pre>
-<p>Walk it once and it will stick:</p>
+<p>The procedure:</p>
 <ol>
 <li><strong>Create the project</strong> — <em>File | New Project</em>, choose path and name. To
    share naming and variables with the bus setup, open CANoe, load your
@@ -4559,8 +4574,7 @@ same test set.</p>
    the test, and when it finishes click <em>Open Test Report</em>.</li>
 </ol>
 <h3 id="anatomy-of-a-test-case">Anatomy of a test case<a class="headerlink" href="#anatomy-of-a-test-case" title="Permanent link">&para;</a></h3>
-<p>Almost every table-notation test case follows the same rhythm — learn it once
-and you can read anyone's tests:</p>
+<p>Most table-notation test cases follow the same sequence of commands:</p>
 <table>
 <thead>
 <tr>
@@ -4595,7 +4609,7 @@ and you can read anyone's tests:</p>
 </tr>
 </tbody>
 </table>
-<p>Two reuse mechanisms keep big test sets sane — use them from day one:</p>
+<p>Two reuse mechanisms keep large test sets maintainable:</p>
 <ul>
 <li><strong>Test Case Definitions</strong> — for repetitive tests that differ only in signal
   values. From <em>Functions</em> add a <em>Test Case Definition</em>, give it a name and
@@ -4610,13 +4624,14 @@ and you can read anyone's tests:</p>
 <h3 id="graphical-notations-parameters-and-variants">Graphical notations, parameters and variants<a class="headerlink" href="#graphical-notations-parameters-and-variants" title="Permanent link">&para;</a></h3>
 <p>The <strong>Test Sequence Diagram</strong> editor defines tests graphically — flows with
 decisions, forks and joins — while tabular test code sits behind each
-graphical element. It shines in <strong>reviews</strong>, and by default <strong>one test case is
-generated for each path through the diagram</strong>. The <strong>State Diagram</strong> editor
-goes further: you model the <em>expected behavior of the system under test</em> as a
-state machine, and test cases are <strong>generated automatically</strong> for transition
-coverage, with algorithms such as <strong>Chinese Postman</strong> or breadth-search.</p>
+graphical element. It is particularly useful in <strong>reviews</strong>, and by default
+<strong>one test case is generated for each path through the diagram</strong>. The
+<strong>State Diagram</strong> editor goes further: you model the <em>expected behavior of the
+system under test</em> as a state machine, and test cases are <strong>generated
+automatically</strong> for transition coverage, with algorithms such as <strong>Chinese
+Postman</strong> or breadth-search.</p>
 <p><strong>Parameters</strong> are constant values the test sequence can read in any notation
-(Symbol Explorer, <em>Parameters</em> tab), and they come in four flavors:</p>
+(Symbol Explorer, <em>Parameters</em> tab), and they come in four kinds:</p>
 <table>
 <thead>
 <tr>
@@ -4655,13 +4670,13 @@ define variant-dependent test cases or groups.</p>
 <p class="admonition-title">vTESTstudio vs. raw CAPL</p>
 <p>Same CANoe underneath — but the test code is drag-and-drop over pre-defined
 commands, the generated report is rich in detail with zero extra coding,
-and parameter/variant handling makes tests robust against change. The
-catch is in the last clause: it only works if you actually use those
-features.</p>
+and parameter/variant handling makes tests robust against change. This
+robustness, however, only holds if parameters and variants are actually
+used.</p>
 </div>
 <h2 id="ecu-test-one-test-every-bench">ECU-TEST: one test, every bench<a class="headerlink" href="#ecu-test-one-test-every-bench" title="Permanent link">&para;</a></h2>
-<p><strong>ECU-TEST</strong> (by TraceTronic) zooms out one level: instead of scripting the
-bus simulation, it automates the control of the <strong>whole test environment</strong>.
+<p><strong>ECU-TEST</strong> (by TraceTronic) operates one level higher: instead of scripting
+the bus simulation, it automates the control of the <strong>whole test environment</strong>.
 Its declared characteristics:</p>
 <ul>
 <li>supports a broad range of test tools (CANoe, HIL benches, measurement and
@@ -4672,16 +4687,15 @@ Its declared characteristics:</p>
 <li>allows shared libraries of reusable test building blocks.</li>
 </ul>
 <h3 id="the-big-idea-environment-independence">The big idea: environment independence<a class="headerlink" href="#the-big-idea-environment-independence" title="Permanent link">&para;</a></h3>
-<p>Here is the concept worth remembering from this whole lesson. ECU-TEST test
+<p>The central concept of ECU-TEST is environment independence. ECU-TEST test
 cases are designed <strong>once</strong>, from the requirement, and then executed
 unchanged at every integration level — model, code, ECU, vehicle:</p>
 <p><img alt="ECU-TEST software workflow: one test specification feeds test cases executed against the SW model, the generated code, the ECU and the vehicle" src="img/ecu-test-workflow.webp" /></p>
-<p>So when someone asks "what changes if the test environment changes?", the
-answer is: the test cases don't — only the configuration that binds them to
-the bench does.</p>
+<p>When the test environment changes, the test cases do not — only the
+configuration that binds them to the bench does.</p>
 <h3 id="architecture-project-packages-tcf-and-tbc">Architecture: project, packages, TCF and TBC<a class="headerlink" href="#architecture-project-packages-tcf-and-tbc" title="Permanent link">&para;</a></h3>
 <p><img alt="ECU-TEST general structure: project and packages on the right, XiL test bench and system under test on the left, bound by ports and the two configurations" src="img/ecu-test-structure.webp" /></p>
-<p>Four pieces, and each has one job:</p>
+<p>The structure consists of four elements:</p>
 <ul>
 <li><strong>Project (.prj)</strong> — the top-level container, holding <strong>packages (.pkg)</strong>
   with the test cases (sequences of test steps, possibly nested), <strong>signal
@@ -4702,13 +4716,14 @@ vehicle just by swapping configurations. A typical run flows: setup →
 stimulation and evaluation steps (with trace analysis of recorded signals) →
 execution → report analysis on the generated <code>.trf</code>.</p>
 <h2 id="ni-veristand-teststand-automating-on-a-hil-rig">NI VeriStand + TestStand: automating on a HIL rig<a class="headerlink" href="#ni-veristand-teststand-automating-on-a-hil-rig" title="Permanent link">&para;</a></h2>
-<p>The fourth toolchain lives on a <strong>NI (National Instruments) HIL</strong> bench. You
-need two ingredients up front: a <strong>UUT</strong> (the control unit under test) and a
-<strong>framework</strong> — the coded structure that interacts with the UUT automatically,
-here including the VeriStand project the sequences operate on. The output, as
-always: a report with the result and, on failure, the cause.</p>
+<p>The fourth toolchain lives on a <strong>NI (National Instruments) HIL</strong> bench. Two
+prerequisites are needed up front: a <strong>UUT</strong> (the control unit under test) and
+a <strong>framework</strong> — the coded structure that interacts with the UUT
+automatically, here including the VeriStand project the sequences operate on.
+The output is, as with the other tools, a report with the result and, on
+failure, the cause.</p>
 <h3 id="real-time-sequences-with-the-stimulus-profile-editor">Real-Time Sequences with the Stimulus Profile Editor<a class="headerlink" href="#real-time-sequences-with-the-stimulus-profile-editor" title="Permanent link">&para;</a></h3>
-<p>Your authoring tool is the <strong>Stimulus Profile Editor</strong>, an NI VeriStand
+<p>The authoring tool is the <strong>Stimulus Profile Editor</strong>, an NI VeriStand
 component that looks like a standard IDE but manipulates the parameters of the
 current VeriStand project. To start it: launch VeriStand, open the project,
 then use the <strong>Tool Launcher</strong> and open the <em>Stimulus Profile Editor</em> window.</p>
@@ -4717,7 +4732,7 @@ code of a <em>single test case</em> — the maneuvers you would otherwise perfor
 hand. Recurring maneuver sequences (e.g. emulating a moving vehicle) are
 factored out into <strong>libraries</strong> that test cases recall; library syntax is
 identical to test case syntax.</p>
-<p>Get to know the editor's panels:</p>
+<p>The editor's panels:</p>
 <table>
 <thead>
 <tr>
@@ -4755,10 +4770,10 @@ parameters involved), invoke the RTS control from the left menu and press
 Boolean, or the numeric output for a double.</p>
 <div class="admonition note">
 <p class="admonition-title">Validate the automation before trusting it</p>
-<p>This is a habit worth building now: run the manual test and the automated
-sequence on the same condition and check the results match. Only then is
-the test case automated properly — an unvalidated automation is just a
-faster way to be wrong.</p>
+<p>Run the manual test and the automated sequence on the same condition and
+check that the results match. Only then is the test case automated
+properly — an unvalidated automation can produce wrong results reliably
+and at high speed.</p>
 </div>
 <h3 id="automating-a-whole-vehicle-function">Automating a whole Vehicle Function<a class="headerlink" href="#automating-a-whole-vehicle-function" title="Permanent link">&para;</a></h3>
 <p>A vehicle function's (VF) test set is a collection of RTS files. Two ways run
@@ -4826,7 +4841,8 @@ stimulus profile as the campaign container:</p>
    produces the complete report, exportable as a PDF.</li>
 </ol>
 <h2 id="choosing-your-tool">Choosing your tool<a class="headerlink" href="#choosing-your-tool" title="Permanent link">&para;</a></h2>
-<p>When you are dropped into a project, this table is your compass:</p>
+<p>The following table summarizes the differences between the three Vector-side
+and TraceTronic toolchains:</p>
 <table>
 <thead>
 <tr>
@@ -4872,17 +4888,19 @@ stimulus profile as the campaign container:</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>Automation owns step 3 (execution) — and much of step 4 (reporting) — of
-  the validation cycle; it pays off when tests re-run many times, but it
-  costs up front and never replaces exploratory, human testing.</li>
-<li>CANoe + CAPL test modules are your quick-and-sharp option inside the
-  Vector world: total freedom, at the price of fragility and code.</li>
+<li>Test automation covers step 3 (execution) — and much of step 4
+  (reporting) — of the validation cycle; it pays off when tests re-run
+  many times, but it requires an initial investment and does not replace
+  exploratory, human testing.</li>
+<li>CANoe + CAPL test modules are the lightweight option inside the Vector
+  toolchain: full programming freedom, at the price of fragility and
+  coding effort.</li>
 <li>vTESTstudio authors tests in tables, diagrams or code, compiles them to
-  a VTUEXE and runs them in CANoe — with Test Case Definitions,
-  parameters and variants keeping large test sets maintainable.</li>
-<li>ECU-TEST's superpower is environment independence: ports plus TCF/TBC
+  a VTUEXE and runs them in CANoe; Test Case Definitions, parameters and
+  variants keep large test sets maintainable.</li>
+<li>ECU-TEST provides environment independence: ports plus TCF/TBC
   configurations let the <em>same</em> test cases run from software model to
-  real vehicle, with no programming at all.</li>
+  real vehicle, with no programming required.</li>
 <li>On NI HIL rigs, Real-Time Sequences automate single test cases, and
   stimulus profiles or NI TestStand run a whole VF campaign to a
   PDF-ready report.</li>
@@ -4990,38 +5008,27 @@ these automated campaigns run on.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -5049,7 +5056,7 @@ these automated campaigns run on.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

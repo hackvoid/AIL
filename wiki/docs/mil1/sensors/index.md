@@ -1,15 +1,15 @@
 # Sensors & Actuators
 
-Welcome to one of the most hands-on topics of the bootcamp. Every electronic
-control unit (ECU) in a vehicle does the same three things: it **senses** a
-physical quantity, **processes** the measurement, and **acts** on the system
-to change its behavior. This article walks you through the two ends of that
+Every electronic
+control unit (ECU) in a vehicle performs the same three functions: it
+**senses** a physical quantity, **processes** the measurement, and **acts** on
+the system to change its behavior. This article covers the two ends of that
 chain — the sensors that feed information in and the actuators that turn the
-ECU's decisions back into physical action — plus the vocabulary you need to
-read an automotive wiring schematic and classify what you find on it. By the
-end, you will be able to pick up a real engine schematic and label every
-component on it as sensor or actuator, active or passive, analog or digital —
-a skill you will use from your very first week on a project.
+ECU's decisions back into physical action — plus the terminology needed to
+read an automotive wiring schematic and classify the components on it. The
+hands-on exercise at the end applies these concepts to a real engine
+schematic: each component is classified as sensor or actuator, active or
+passive, analog or digital.
 
 ## Sensors
 
@@ -32,8 +32,8 @@ signal in response to a specific measurand — so **a transducer is always a
 sensor, but a sensor is not necessarily a transducer** (a sensor may need a
 separate transduction stage before anything electrical appears).
 
-Keep the whole chain in mind — this is the path every measurement takes from
-the physical world into the software you will write and test:
+The diagram below shows the path every measurement takes from
+the physical world to the control software:
 
 ```mermaid
 flowchart LR
@@ -67,9 +67,9 @@ Sensors are grouped along several independent axes:
   in response to the measurand — it cannot generate energy by itself.
   Examples: strain gauges and magnetic sensors.
 
-This distinction has a direct practical consequence you will feel in the lab:
+This distinction has a direct practical consequence:
 a passive sensor needs an external excitation (a supply voltage or current)
-before it produces anything readable, while an active one generates its signal
+before it produces any output, while an active one generates its signal
 on its own. If a passive sensor reads a flat zero, check its supply pin first.
 
 ### Conditioning circuits
@@ -91,9 +91,9 @@ type:
 ### Static characteristics
 
 Static characteristics describe how a sensor behaves when the measurand
-changes slowly enough that dynamics do not matter. Do not try to memorize
-every term now — treat this as the reference you will come back to whenever a
-datasheet or a test report uses one of these words.
+changes slowly enough that dynamics do not matter. These terms appear
+frequently in datasheets and test reports; this section serves as a reference
+for them.
 
 **Input side:**
 
@@ -143,7 +143,7 @@ Three more terms that appear constantly in datasheets and test reports:
   same measurand value when the value is approached first with increasing and
   then with decreasing measurand, sweeping the whole range.
 
-!!! note "Accuracy terms in the wild"
+!!! note "Accuracy terms in practice"
     When you read "±1 % FS" on a datasheet, that figure usually folds
     linearity, hysteresis and repeatability into one number referenced to the
     **full scale** of the output range — not to the current reading.
@@ -158,15 +158,16 @@ When the measurand changes quickly, the sensor's own speed matters:
   **time constant**, and the **settling time** (how long the output needs to
   enter and stay within its final error band after a step input).
 
-A concrete way to feel this: a knock sensor needs bandwidth in the kilohertz
-range to catch combustion vibrations, while a coolant temperature sensor can
-be a hundred times slower without anyone noticing. Matching sensor speed to
-the job is a design decision you will see documented in every sensor spec.
+For example, a knock sensor needs bandwidth in the kilohertz
+range to capture combustion vibrations, while a coolant temperature sensor can
+be a hundred times slower without affecting control. Matching sensor bandwidth
+to the application is a design decision documented in every sensor
+specification.
 
 ### Common physical effects and sensor examples
 
-The table below collects the transduction effects you will actually meet on
-vehicle schematics — it is a practical lookup when you need to guess how an
+The table below collects the transduction effects commonly found on
+vehicle schematics; it serves as a lookup when identifying how an
 unknown sensor works.
 
 | Physical effect | What happens | Typical devices | Measures | Output |
@@ -225,8 +226,8 @@ current (a fuel pump, a starter solenoid, a fan).
     Pin labels like `CANISTER PURGE PWM (HSD)` or
     `HIGH PRESS GDI FUEL PMP LSD` on a wiring diagram tell you immediately
     which side the ECU driver switches — essential when you probe the circuit
-    with a multimeter or scope. Once you spot this pattern, half of any
-    actuator wiring becomes readable at a glance.
+    with a multimeter or scope. Recognizing this convention makes most
+    actuator wiring readable at a glance.
 
 ### PWM — the analog-style command
 
@@ -336,8 +337,8 @@ wire labels (`TIP sensor signal`, `Linear lambda sensor … HS HTR command`,
    LSD-driven loads are digital commands.
 5. Repeat on the vehicle sheet for body-side components.
 
-**Expected result (orientation):** do not worry if your first pass misses a
-few — the engine sheet alone contains, among others —
+**Expected result (orientation):** a complete list on the first pass is not
+expected. The engine sheet alone contains, among others:
 
 - *Sensors:* knock sensors 1–2, engine speed (crankshaft) sensor, engine phase
   (camshaft) sensor, GDI fuel rail pressure sensor, coolant temperature
@@ -357,7 +358,7 @@ switch, fuel level and fuel tank pressure sensors, Gasoline Particulate Filter
 (GPF) temperature and differential pressure sensors, plus the fuel pump relay,
 cranking-disable relay, engine control module relay and fuel-lid latch.
 
-**Common mistakes** (everyone makes at least one of these the first time):
+**Common mistakes** (frequent on a first pass):
 
 - Calling a knock sensor *passive* — it is piezoelectric, so it **generates**
   charge (active). Temperature NTCs and pressure cells that need a `sensor
@@ -371,21 +372,22 @@ cranking-disable relay, engine control module relay and fuel-lid latch.
   (FRB/RB designators on the vehicle sheet) and are driven *by* the ECU.
 
 !!! success "Key takeaways"
-    - You now own the chain: **sense → condition → process → drive → act** —
-      sensor, transducer and transmitter are just increasing refinement of the
-      sensing end.
-    - Active sensors make their own energy (thermocouple, piezo); passive ones
-      only change impedance and need excitation — check the supply pin first
-      when a passive sensor reads dead.
-    - You can speak datasheet: range, sensitivity, calibration, linearity,
-      resolution, repeatability, hysteresis, bandwidth, settling time.
+    - The ECU processing chain is **sense → condition → process → drive →
+      act**; sensor, transducer and transmitter describe increasing
+      refinement of the sensing end.
+    - Active sensors generate their own energy (thermocouple, piezo); passive
+      sensors only change impedance and need excitation — when a passive
+      sensor produces no output, check its supply pin first.
+    - Datasheet terminology covered: range, sensitivity, calibration,
+      linearity, resolution, repeatability, hysteresis, bandwidth, settling
+      time.
     - Actuators close the loop: relays for on/off loads (HSD switches the high
       side, LSD the low side), PWM for proportional control, H-bridges for
-      bidirectional motors — and power stages like coil transformers and
-      peak-and-hold injector drivers for the heavy lifting.
-    - Best of all: with component names plus ECU pin labels, you can now
-      classify every element on a real schematic — sensor/actuator,
-      active/passive, analog/digital. That is a genuine engineer skill.
+      bidirectional motors, and power stages such as coil transformers and
+      peak-and-hold injector drivers for high-power loads.
+    - With component names and ECU pin labels, every element on a real
+      schematic can be classified as sensor/actuator, active/passive, and
+      analog/digital.
 
 !!! tip "Where this leads"
     The signals these sensors produce travel to other ECUs over the vehicle

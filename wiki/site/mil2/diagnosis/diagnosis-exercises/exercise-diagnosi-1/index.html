@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4291,21 +4305,18 @@
 
 
 <h1 id="exercise-1-tracking-a-fault-through-its-lifecycle">Exercise 1 — Tracking a Fault Through Its Lifecycle<a class="headerlink" href="#exercise-1-tracking-a-fault-through-its-lifecycle" title="Permanent link">&para;</a></h1>
-<p>Welcome to your first hands-on diagnosis exercise — and don't worry, no car,
-no tools and no cables are required. This is a pen-and-paper (well,
-spreadsheet) workout, and it's one of the most valuable habits you can build
-early in your career: <strong>predicting what an ECU (electronic control unit) will
-answer before you even ask it.</strong></p>
-<p>Here's the scenario. A single fault — a short circuit to battery on the
-cruise control button — appears, disappears and reappears across 30 scripted
-vehicle manoeuvres. After each manoeuvre, a diagnostic tester asks the ECU
-for its fault memory. Your job is to work out the exact reply, every time.</p>
+<p>This is a pen-and-paper diagnosis exercise; no vehicle, tools or cables are
+required. The skill it builds is <strong>predicting what an ECU (electronic
+control unit) will answer before you ask it.</strong></p>
+<p>A single fault — a short circuit to battery on the cruise control button —
+appears, disappears and reappears across 30 scripted vehicle manoeuvres.
+After each manoeuvre, a diagnostic tester asks the ECU for its fault
+memory. Your task is to work out the exact reply, every time.</p>
 <p>By the end of this exercise you'll be able to:</p>
 <ul>
 <li>trace one <strong>diagnostic trouble code (DTC)</strong> through its full lifecycle —
   detected, confirmed, healed and aged — without guessing,</li>
-<li>read and write the <strong>DTC status byte</strong> bit by bit, like a diagnostic
-  engineer reading a trace,</li>
+<li>read and write the <strong>DTC status byte</strong> bit by bit,</li>
 <li>explain <em>why</em> the malfunction indicator lamp (MIL) turns on and off when it
   does, and</li>
 <li>predict the byte-level response to a real <strong>UDS (Unified Diagnostic
@@ -4315,13 +4326,12 @@ for its fault memory. Your job is to work out the exact reply, every time.</p>
 <p>Fill in a table with the exact byte sequence the ECU returns to the UDS
 request <code>19 02 08</code> (<code>ReadDTCInformation — reportDTCByStatusMask</code>) after each
 of the 30 manoeuvres, given a fixed fault model.</p>
-<p>What you'll practice: not hex arithmetic, but <em>reasoning</em> — which status bit
-changes, at which manoeuvre, and why. The bytes are just how you prove your
-reasoning is right.</p>
+<p>The focus is not hex arithmetic but <em>reasoning</em>: which status bit changes, at
+which manoeuvre, and why. The bytes are the verification of that reasoning.</p>
 <p>It applies the error-memory theory from the
 <a href="../../">Diagnosis</a> lesson: the DTC status byte, monitoring and
-driving cycles, MIL management and fault healing. If that lesson is still
-fresh, you're ready.</p>
+driving cycles, MIL management and fault healing. That lesson is the
+prerequisite for this exercise.</p>
 <h2 id="the-diagnostic-request">The diagnostic request<a class="headerlink" href="#the-diagnostic-request" title="Permanent link">&para;</a></h2>
 <p>At every step the tester sends the same three bytes:</p>
 <div class="highlight"><pre><span></span><code>19 02 08
@@ -4338,17 +4348,17 @@ has bit 3 (<code>confirmedDTC</code>) set."</em> The ECU's positive answer looks
  │  └───────────────── echo of sub-function 0x02
  └──────────────────── positive response to service 0x19
 </code></pre></div>
-<p>Two things to lock in before you start:</p>
+<p>Note the following before starting:</p>
 <ul>
 <li>The availability mask is <code>0xCF</code> (<code>1100 1111</code>) because bits 4 and 5 are
   declared <em>not used</em> in this exercise.</li>
 <li>If <strong>no</strong> stored DTC matches the mask, the ECU answers with the bare
-  <code>59 02 CF</code> — no DTC record at all. An "empty" answer is still an answer,
-  and early in the exercise it's the <em>correct</em> one.</li>
+  <code>59 02 CF</code> — no DTC record at all. An "empty" answer is a valid answer,
+  and in the early steps it is the correct one.</li>
 </ul>
 <h2 id="the-status-bits-that-matter">The status bits that matter<a class="headerlink" href="#the-status-bits-that-matter" title="Permanent link">&para;</a></h2>
-<p>The status byte is the whole game. With bits 4 and 5 unused, six bits drive
-everything that happens in this exercise:</p>
+<p>The status byte determines every response. With bits 4 and 5 unused, six
+bits drive the behaviour in this exercise:</p>
 <table>
 <thead>
 <tr>
@@ -4397,8 +4407,8 @@ everything that happens in this exercise:</p>
 </tr>
 </tbody>
 </table>
-<p>Think of it as a small state machine living inside the ECU — this is the
-mental model that will carry you through all 30 steps:</p>
+<p>The fault lifecycle can be modelled as a small state machine inside the ECU,
+which covers all 30 steps:</p>
 <pre class="kx-mermaid"><code>stateDiagram-v2
     [*] --&gt; NoFault
     NoFault --&gt; Failed : test completes, fault present&lt;br/&gt;bits 0,1,2,3 = 1, MIL on (bit 7)
@@ -4596,8 +4606,8 @@ then convert to hex. Most wrong answers in this exercise come from
 converting too early and losing track of a single bit.</p>
 </div>
 <h2 id="expected-result">Expected result<a class="headerlink" href="#expected-result" title="Permanent link">&para;</a></h2>
-<p>Stuck, or want to check yourself? Here's a worked solution following the
-assumptions above (<code>—</code> = no DTC record, so the response is just <code>59 02 CF</code>):</p>
+<p>The worked solution below follows the assumptions above (<code>—</code> = no DTC
+record, so the response is just <code>59 02 CF</code>):</p>
 <table>
 <thead>
 <tr>
@@ -4716,11 +4726,10 @@ assumptions above (<code>—</code> = no DTC record, so the response is just <co
 <p class="admonition-title">Bit 0 is sticky until the next completed test</p>
 <p>Removing the SCB never clears <code>testFailed</code> by itself — only a <em>completed
 test with a Passed result</em> does. Steps 9, 24 and 29 therefore keep bit 0
-set, and that is exactly what the exercise wants you to notice.</p>
+set, and that is what the exercise is designed to demonstrate.</p>
 </div>
 <h2 id="common-mistakes">Common mistakes<a class="headerlink" href="#common-mistakes" title="Permanent link">&para;</a></h2>
-<p>Everyone trips on at least one of these the first time — now you can skip
-them:</p>
+<p>The following mistakes are the most common on a first pass:</p>
 <ul>
 <li><strong>Reacting to the physical fault instead of the test.</strong> The SCB appearing
   or disappearing (steps 3, 9, 22, 24, 26, 29) changes nothing on its own;
@@ -4750,8 +4759,8 @@ them:</p>
   current + previous cycles, bit 3 the error memory itself.</li>
 <li>MIL management is independent counting: ON-1 at validation, off after 2
   consecutive fault-free driving cycles.</li>
-<li>You can now predict an ECU's fault-memory response by hand — real
-  diagnostic tools will feel like confirmation, not magic.</li>
+<li>With the fault model fixed, the response to <code>19 02 08</code> at every step
+  can be predicted by hand from the status byte and the cycle counters.</li>
 </ul>
 </div>
 <hr />
@@ -4847,38 +4856,27 @@ them:</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4906,7 +4904,7 @@ them:</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

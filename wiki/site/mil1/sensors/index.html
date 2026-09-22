@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4365,16 +4379,16 @@
 
 
 <h1 id="sensors-actuators">Sensors &amp; Actuators<a class="headerlink" href="#sensors-actuators" title="Permanent link">&para;</a></h1>
-<p>Welcome to one of the most hands-on topics of the bootcamp. Every electronic
-control unit (ECU) in a vehicle does the same three things: it <strong>senses</strong> a
-physical quantity, <strong>processes</strong> the measurement, and <strong>acts</strong> on the system
-to change its behavior. This article walks you through the two ends of that
+<p>Every electronic
+control unit (ECU) in a vehicle performs the same three functions: it
+<strong>senses</strong> a physical quantity, <strong>processes</strong> the measurement, and <strong>acts</strong> on
+the system to change its behavior. This article covers the two ends of that
 chain — the sensors that feed information in and the actuators that turn the
-ECU's decisions back into physical action — plus the vocabulary you need to
-read an automotive wiring schematic and classify what you find on it. By the
-end, you will be able to pick up a real engine schematic and label every
-component on it as sensor or actuator, active or passive, analog or digital —
-a skill you will use from your very first week on a project.</p>
+ECU's decisions back into physical action — plus the terminology needed to
+read an automotive wiring schematic and classify the components on it. The
+hands-on exercise at the end applies these concepts to a real engine
+schematic: each component is classified as sensor or actuator, active or
+passive, analog or digital.</p>
 <h2 id="sensors">Sensors<a class="headerlink" href="#sensors" title="Permanent link">&para;</a></h2>
 <h3 id="sensor-transducer-transmitter">Sensor, transducer, transmitter<a class="headerlink" href="#sensor-transducer-transmitter" title="Permanent link">&para;</a></h3>
 <p>These three terms are often mixed up; in measurement engineering they mean
@@ -4393,8 +4407,8 @@ distinct things:</p>
 signal in response to a specific measurand — so <strong>a transducer is always a
 sensor, but a sensor is not necessarily a transducer</strong> (a sensor may need a
 separate transduction stage before anything electrical appears).</p>
-<p>Keep the whole chain in mind — this is the path every measurement takes from
-the physical world into the software you will write and test:</p>
+<p>The diagram below shows the path every measurement takes from
+the physical world to the control software:</p>
 <pre class="kx-mermaid"><code>flowchart LR
     M["Physical quantity&lt;br/&gt;(measurand)"] --&gt; S["Sensor /&lt;br/&gt;Transducer"]
     S --&gt; C["Signal&lt;br/&gt;conditioning"]
@@ -4441,9 +4455,9 @@ the physical world into the software you will write and test:</p>
   in response to the measurand — it cannot generate energy by itself.
   Examples: strain gauges and magnetic sensors.</li>
 </ul>
-<p>This distinction has a direct practical consequence you will feel in the lab:
+<p>This distinction has a direct practical consequence:
 a passive sensor needs an external excitation (a supply voltage or current)
-before it produces anything readable, while an active one generates its signal
+before it produces any output, while an active one generates its signal
 on its own. If a passive sensor reads a flat zero, check its supply pin first.</p>
 <h3 id="conditioning-circuits">Conditioning circuits<a class="headerlink" href="#conditioning-circuits" title="Permanent link">&para;</a></h3>
 <p>The electrical signal leaving a sensor is rarely ready for an ECU pin, so a
@@ -4462,9 +4476,9 @@ type:</p>
 </ul>
 <h3 id="static-characteristics">Static characteristics<a class="headerlink" href="#static-characteristics" title="Permanent link">&para;</a></h3>
 <p>Static characteristics describe how a sensor behaves when the measurand
-changes slowly enough that dynamics do not matter. Do not try to memorize
-every term now — treat this as the reference you will come back to whenever a
-datasheet or a test report uses one of these words.</p>
+changes slowly enough that dynamics do not matter. These terms appear
+frequently in datasheets and test reports; this section serves as a reference
+for them.</p>
 <p><strong>Input side:</strong></p>
 <ul>
 <li><strong>Measurand</strong> — the quantity to be measured.</li>
@@ -4512,7 +4526,7 @@ line — it is quoted as the <em>maximum</em> deviation from the ideal line:</p>
   then with decreasing measurand, sweeping the whole range.</li>
 </ul>
 <div class="admonition note">
-<p class="admonition-title">Accuracy terms in the wild</p>
+<p class="admonition-title">Accuracy terms in practice</p>
 <p>When you read "±1 % FS" on a datasheet, that figure usually folds
 linearity, hysteresis and repeatability into one number referenced to the
 <strong>full scale</strong> of the output range — not to the current reading.</p>
@@ -4526,13 +4540,14 @@ linearity, hysteresis and repeatability into one number referenced to the
   <strong>time constant</strong>, and the <strong>settling time</strong> (how long the output needs to
   enter and stay within its final error band after a step input).</li>
 </ul>
-<p>A concrete way to feel this: a knock sensor needs bandwidth in the kilohertz
-range to catch combustion vibrations, while a coolant temperature sensor can
-be a hundred times slower without anyone noticing. Matching sensor speed to
-the job is a design decision you will see documented in every sensor spec.</p>
+<p>For example, a knock sensor needs bandwidth in the kilohertz
+range to capture combustion vibrations, while a coolant temperature sensor can
+be a hundred times slower without affecting control. Matching sensor bandwidth
+to the application is a design decision documented in every sensor
+specification.</p>
 <h3 id="common-physical-effects-and-sensor-examples">Common physical effects and sensor examples<a class="headerlink" href="#common-physical-effects-and-sensor-examples" title="Permanent link">&para;</a></h3>
-<p>The table below collects the transduction effects you will actually meet on
-vehicle schematics — it is a practical lookup when you need to guess how an
+<p>The table below collects the transduction effects commonly found on
+vehicle schematics; it serves as a lookup when identifying how an
 unknown sensor works.</p>
 <table>
 <thead>
@@ -4638,8 +4653,8 @@ current (a fuel pump, a starter solenoid, a fan).</p>
 <p>Pin labels like <code>CANISTER PURGE PWM (HSD)</code> or
 <code>HIGH PRESS GDI FUEL PMP LSD</code> on a wiring diagram tell you immediately
 which side the ECU driver switches — essential when you probe the circuit
-with a multimeter or scope. Once you spot this pattern, half of any
-actuator wiring becomes readable at a glance.</p>
+with a multimeter or scope. Recognizing this convention makes most
+actuator wiring readable at a glance.</p>
 </div>
 <h3 id="pwm-the-analog-style-command">PWM — the analog-style command<a class="headerlink" href="#pwm-the-analog-style-command" title="Permanent link">&para;</a></h3>
 <p>To get an <em>analog</em> effect from a digital output, ECUs use <strong>Pulse Width
@@ -4763,8 +4778,8 @@ wire labels (<code>TIP sensor signal</code>, <code>Linear lambda sensor … HS H
    LSD-driven loads are digital commands.</li>
 <li>Repeat on the vehicle sheet for body-side components.</li>
 </ol>
-<p><strong>Expected result (orientation):</strong> do not worry if your first pass misses a
-few — the engine sheet alone contains, among others —</p>
+<p><strong>Expected result (orientation):</strong> a complete list on the first pass is not
+expected. The engine sheet alone contains, among others:</p>
 <ul>
 <li><em>Sensors:</em> knock sensors 1–2, engine speed (crankshaft) sensor, engine phase
   (camshaft) sensor, GDI fuel rail pressure sensor, coolant temperature
@@ -4783,7 +4798,7 @@ few — the engine sheet alone contains, among others —</p>
 switch, fuel level and fuel tank pressure sensors, Gasoline Particulate Filter
 (GPF) temperature and differential pressure sensors, plus the fuel pump relay,
 cranking-disable relay, engine control module relay and fuel-lid latch.</p>
-<p><strong>Common mistakes</strong> (everyone makes at least one of these the first time):</p>
+<p><strong>Common mistakes</strong> (frequent on a first pass):</p>
 <ul>
 <li>Calling a knock sensor <em>passive</em> — it is piezoelectric, so it <strong>generates</strong>
   charge (active). Temperature NTCs and pressure cells that need a <code>sensor
@@ -4799,21 +4814,22 @@ cranking-disable relay, engine control module relay and fuel-lid latch.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>You now own the chain: <strong>sense → condition → process → drive → act</strong> —
-  sensor, transducer and transmitter are just increasing refinement of the
-  sensing end.</li>
-<li>Active sensors make their own energy (thermocouple, piezo); passive ones
-  only change impedance and need excitation — check the supply pin first
-  when a passive sensor reads dead.</li>
-<li>You can speak datasheet: range, sensitivity, calibration, linearity,
-  resolution, repeatability, hysteresis, bandwidth, settling time.</li>
+<li>The ECU processing chain is <strong>sense → condition → process → drive →
+  act</strong>; sensor, transducer and transmitter describe increasing
+  refinement of the sensing end.</li>
+<li>Active sensors generate their own energy (thermocouple, piezo); passive
+  sensors only change impedance and need excitation — when a passive
+  sensor produces no output, check its supply pin first.</li>
+<li>Datasheet terminology covered: range, sensitivity, calibration,
+  linearity, resolution, repeatability, hysteresis, bandwidth, settling
+  time.</li>
 <li>Actuators close the loop: relays for on/off loads (HSD switches the high
   side, LSD the low side), PWM for proportional control, H-bridges for
-  bidirectional motors — and power stages like coil transformers and
-  peak-and-hold injector drivers for the heavy lifting.</li>
-<li>Best of all: with component names plus ECU pin labels, you can now
-  classify every element on a real schematic — sensor/actuator,
-  active/passive, analog/digital. That is a genuine engineer skill.</li>
+  bidirectional motors, and power stages such as coil transformers and
+  peak-and-hold injector drivers for high-power loads.</li>
+<li>With component names and ECU pin labels, every element on a real
+  schematic can be classified as sensor/actuator, active/passive, and
+  analog/digital.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4919,38 +4935,27 @@ HIL lessons.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4978,7 +4983,7 @@ HIL lessons.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4302,11 +4316,11 @@
 
 
 <h1 id="exercise-3-taking-control-ioli-and-routine-control-on-the-ipc">Exercise 3 — Taking Control: IOLI and Routine Control on the IPC<a class="headerlink" href="#exercise-3-taking-control-ioli-and-routine-control-on-the-ipc" title="Permanent link">&para;</a></h1>
-<p>Up to now your diagnostic work has been about <em>listening</em> — reading data out of
-an ECU. This bench exercise is where you get to <em>drive</em>. You will take control
-of the instrument panel cluster (IPC) — the display behind the steering wheel —
-and make it light telltales, sound its buzzer and sweep its gauges, all through
-standard diagnostic services. By the end, you will be able to:</p>
+<p>Earlier exercises covered reading diagnostic data from an ECU. This bench
+exercise covers actuation: taking control of the instrument panel cluster
+(IPC) — the display behind the steering wheel — to light telltales, sound its
+buzzer and sweep its gauges through standard diagnostic services. By the end,
+you will be able to:</p>
 <ul>
 <li>navigate a <strong>CANdela Diagnostic Description (CDD)</strong> file — the contract that
   defines everything an ECU will let you do — and extract its full diagnostic
@@ -4316,14 +4330,14 @@ standard diagnostic services. By the end, you will be able to:</p>
 <li>launch an internal ECU procedure with <strong>RoutineControl (service <code>0x31</code>)</strong> and
   collect its results.</li>
 </ul>
-<p><strong>What you'll practice:</strong> treating the CDD as the single source of truth,
-respecting sessions and enabling conditions, and always verifying an actuation
+<p><strong>Skills practiced:</strong> treating the CDD as the single source of truth,
+respecting sessions and enabling conditions, and verifying every actuation
 two ways — the response on the bus <em>and</em> the physical effect.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
-<p>Learn to read an ECU's diagnostic database like a map, and to use the two
-"actuation" services of <strong>Unified Diagnostic Services (UDS)</strong> — I/O control and
-routine control — exactly as the database permits: right session, right
-sub-function, right conditions.</p>
+<p>Learn to navigate an ECU's diagnostic database, and to use the two
+"actuation" services of <strong>Unified Diagnostic Services (UDS)</strong> — I/O control
+and routine control — exactly as the database permits: correct session,
+sub-function and enabling conditions.</p>
 <h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The academy bench with the IPC ECU powered and connected over CAN.</li>
@@ -4476,7 +4490,8 @@ The IOLIs run in <strong>ExtendedDiagnostic (<code>0x03</code>)</strong> and the
 session, not in Default; <code>FlashErase</code> requires the <strong>Programming session
 (<code>0x02</code>)</strong>. If the tool answers <code>7F 2F 7E</code>
 (subFunctionNotSupportedInActiveSession) or <code>7F 2F 7F</code>
-(serviceNotSupportedInActiveSession), you are simply in the wrong room —
+(serviceNotSupportedInActiveSession), the ECU does not support the
+requested service or sub-function in the current session —
 switch with <code>DiagnosticSessionControl</code> (<code>10 03</code> → expect <code>50 03</code>) and keep
 the session alive with Tester Present (<code>3E 00</code>) while you work.</p>
 </div>
@@ -4514,12 +4529,12 @@ which ones your chosen IOLI actually supports — never assume all four:</p>
 </tr>
 </tbody>
 </table>
-<p>Now the fun part:</p>
+<p>Procedure:</p>
 <ol>
 <li>Enter the ExtendedDiagnostic session (<code>10 03</code>).</li>
 <li>Pick one IOLI from your inventory — the <strong>high beam telltale (<code>0x5558</code>)</strong>
-   or the <strong>buzzer (<code>0x5573</code>)</strong> are great first choices because you can see or
-   hear the result immediately.</li>
+   or the <strong>buzzer (<code>0x5573</code>)</strong> are suitable first choices because the result
+   is immediately visible or audible.</li>
 <li>Read its CDD entry: allowed control options, the control-state encoding,
    and any enabling conditions.</li>
 <li>Force the output with <code>shortTermAdjustment</code>, e.g.
@@ -4527,8 +4542,8 @@ which ones your chosen IOLI actually supports — never assume all four:</p>
 <li><strong>Cross-check with the matching RDI</strong>: read back the corresponding data
    identifier with <code>0x22</code> (for example, drive the speed pointer via
    <code>0x556A</code>, then read <code>Vehicle Speed 0x1002</code>) and confirm the value the ECU
-   reports agrees with what you commanded. This habit — actuate, then verify
-   through an independent path — is what separates testing from guessing.</li>
+   reports agrees with what you commanded. Verifying each actuation through
+   an independent path distinguishes a test result from an assumption.</li>
 <li>Always finish with <code>returnControlToECU</code> (<code>2F 55 58 00</code>), so the cluster
    resumes normal behavior.</li>
 </ol>
@@ -4583,8 +4598,8 @@ three, while <code>Original VIN Lock</code> only supports <em>start</em>:</p>
    (e.g. <code>FlashErase</code> takes a start/stop address pair).</li>
 <li>Command the start: <code>31 01 &lt;RID&gt; &lt;options&gt;</code> → expect
    <code>71 01 &lt;RID&gt; &lt;status&gt;</code>. A long-running routine may first answer
-   <code>7F 31 78</code> (requestCorrectlyReceived-ResponsePending) — that is not an
-   error, just "working on it"; keep waiting for the final response.</li>
+   <code>7F 31 78</code> (requestCorrectlyReceived-ResponsePending) — this indicates the
+   routine is still executing; wait for the final response.</li>
 <li>Request the report: <code>31 03 &lt;RID&gt;</code> → <code>71 03 &lt;RID&gt; &lt;statusRecord&gt;</code> and
    verify the result the tool decodes.</li>
 <li>If the CDD declares a stop sub-function, command <code>31 02 &lt;RID&gt;</code>, verify the
@@ -4598,7 +4613,7 @@ three, while <code>Original VIN Lock</code> only supports <em>start</em>:</p>
     C --&gt; D["31 02 RID — stopRoutine (if supported)"]
     D --&gt; C</code></pre>
 <div class="admonition warning">
-<p class="admonition-title">Respect enabling conditions — and think before you erase</p>
+<p class="admonition-title">Respect enabling conditions</p>
 <p>Routines change ECU state: <code>Original VIN Lock</code> permanently locks the VIN
 against further updates, and <code>FlashErase</code>/<code>FlashChecksum</code> belong to the
 reprogramming flow. On the bench, follow the CDD conditions exactly, and
@@ -4624,8 +4639,8 @@ for.</p>
 <li><strong>Assuming sub-functions exist.</strong> Not every IOLI supports all four control
   options and not every routine supports stop/results — read the CDD entry,
   do not guess from the standard.</li>
-<li><strong>Panicking at <code>7F xx 78</code>.</strong> It is not an error, just "response pending";
-  wait for the final positive response.</li>
+<li><strong>Misinterpreting <code>7F xx 78</code>.</strong> It is not an error; it means "response
+  pending". Wait for the final positive response.</li>
 <li><strong>Misreading NRCs.</strong> <code>0x22</code> conditionsNotCorrect and <code>0x33</code>
   securityAccessDenied mean the ECU refuses <em>now</em>, not that your syntax is
   wrong (<code>0x13</code> incorrectMessageLengthOrInvalidFormat) — decode the NRC
@@ -4634,14 +4649,16 @@ for.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>The CDD is the contract: identifiers, sub-functions, sessions and
-  enabling conditions all come from it, not from memory.</li>
-<li>You can now drive an ECU, not just read it: <code>0x2F</code> actuates one output
-  line, <code>0x31</code> runs whole internal procedures with start/stop/results.</li>
-<li>You verify every actuation twice — the positive response <em>and</em> a
-  physical or RDI cross-check — so you trust what you see.</li>
-<li>You always leave the ECU as you found it: control handed back, session
-  tidy, conditions respected.</li>
+<li>The CDD defines the diagnostic interface: identifiers, sub-functions,
+  sessions and enabling conditions are taken from it, not assumed from
+  the UDS standard.</li>
+<li>Service <code>0x2F</code> (InputOutputControlByIdentifier) actuates a single
+  output line; service <code>0x31</code> (RoutineControl) runs internal ECU
+  procedures via start/stop/requestResults sub-functions.</li>
+<li>Each actuation is verified twice: by the positive response and by an
+  independent physical or RDI cross-check.</li>
+<li>On completion, control is returned to the ECU with
+  <code>returnControlToECU</code> so subsequent measurements remain valid.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -4747,38 +4764,27 @@ is <a href="../exercise-diagnosi-2/">Exercise Diagnosi 2</a>.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4806,7 +4812,7 @@ is <a href="../exercise-diagnosi-2/">Exercise Diagnosi 2</a>.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

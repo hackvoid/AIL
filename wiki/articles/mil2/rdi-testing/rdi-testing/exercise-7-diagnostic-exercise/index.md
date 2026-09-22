@@ -1,25 +1,24 @@
 # Exercise 7 — Diagnostic Exercise (IPC)
 
-Welcome to the capstone of the RDI (Read Data Identifier) testing lessons.
-Everything you have practiced so far — opening diagnostic sessions, reading and
-writing identifiers, driving outputs, working the fault memory — comes together
-here in **one complete diagnostic session against a real ECU** (electronic
-control unit).
+This exercise is the capstone of the RDI (Read Data Identifier) testing
+lessons. It combines the skills practiced so far — opening diagnostic sessions,
+reading and writing identifiers, driving outputs, working with the fault
+memory — into **one complete diagnostic session against a real ECU**
+(electronic control unit).
 
-There is no instruction sheet this time, and that is the point. Your exercise
-material is the diagnostic database itself: `D2956_IPC_E2A_R10_332BEV.cdd`, the
-CANdelaStudio diagnostic description (CDD) of the **IPC — Instrument Panel
-Cluster** — of the 332 BEV platform. Learning to pull everything you need out
-of a CDD is exactly what you will do on real projects, so treat this as your
-first day on the job.
+This exercise has no instruction sheet. The exercise material is the diagnostic
+database itself: `D2956_IPC_E2A_R10_332BEV.cdd`, the CANdelaStudio diagnostic
+description (CDD) of the **IPC — Instrument Panel Cluster** — of the 332 BEV
+platform. Extracting all required information from a CDD is a standard task on
+real projects.
 
-**What you'll practice:** navigating a diagnostic database like a professional,
-then driving a full session on the bench — session control, security unlock,
-live data reads, output control, and the complete fault-memory cycle.
+**Skills practiced:** navigating a diagnostic database, then executing a full
+session on the bench — session control, security unlock, live data reads,
+output control, and the complete fault-memory cycle.
 
 ## Goal
 
-Starting from nothing but the CDD, by the end of this exercise you will be able
+Starting from the CDD alone, by the end of this exercise you will be able
 to:
 
 1. Navigate the database and extract its contents: sessions, security levels,
@@ -36,9 +35,9 @@ to:
 
 ## The diagnostic database at a glance
 
-Everything below is extracted from the IPC's CDD. Use these tables as your
-map — and then verify every value yourself in the database. That verification
-habit is the real skill being trained here.
+Everything below is extracted from the IPC's CDD. Use these tables as a
+reference, and verify every value against the database yourself: checking
+extracted data against the CDD is part of the exercise.
 
 ### Communication parameters
 
@@ -86,7 +85,7 @@ for Plant Mode unlocking.
 
 ### A sample of the RDI list (service `0x22`)
 
-These DIDs (data identifiers) are the ones you will actually touch during the
+These DIDs (data identifiers) are the ones used during the
 exercise:
 
 | DID | Name | Content |
@@ -113,7 +112,7 @@ items:
 
 | ID | IOLI | Notes |
 |---|---|---|
-| `0x556A` | Vehicle_speed_cluster | Inject a vehicle speed value — the one to use for the speed simulation |
+| `0x556A` | Vehicle_speed_cluster | Inject a vehicle speed value; used for the speed simulation |
 | `0x557B` | Autocheck | Full gauge sweep / self-test |
 | `0x5573` / `0x5543` | Buzzer / Bargraph | Acoustic and bargraph display tests |
 | `0x5572` | Dimming_display | Display dimming |
@@ -132,9 +131,8 @@ VIN with `0x2E` between unlock and lock), plus the programming routines
 
 ### Fault memory (services `0x19` / `0x14`)
 
-The CDD defines 44 DTCs. Here is a trick that will serve you for your whole
-career: every code ends with a **failure type byte** that tells you *how* the
-fault was detected. Learn to read it and the raw hex starts telling a story:
+The CDD defines 44 DTCs. Every code ends with a **failure type byte** that
+indicates *how* the fault was detected:
 
 | Suffix | Meaning | Example |
 |---|---|---|
@@ -148,8 +146,8 @@ Other codes worth knowing: `900044`–`900047` (ECU data/program/calibration
 memory and watchdog failures) and `A20664` (current VIN missing/mismatch). Each
 DTC record in the CDD also carries its maturation conditions — for example,
 detection enabled with the key not in CRANK and 10 V < Vbatt < 16 V — so check
-a DTC's enabling conditions *before* trying to force it, or you will chase a
-fault that can never set.
+a DTC's enabling conditions *before* trying to force it; otherwise the fault
+cannot be set.
 
 ## Setup
 
@@ -164,7 +162,7 @@ fault that can never set.
 
 ## Step-by-step procedure
 
-Here is the shape of the day — keep it in mind as you work through the steps:
+The overall procedure is:
 
 ```mermaid
 flowchart LR
@@ -178,11 +176,11 @@ flowchart LR
 
 ### 1. Mine the database
 
-Open the CDD and build the four lists you will need all day: RDIs, DTCs (with
-their failure type bytes and set/clear conditions), IOLIs (with enabled
+Open the CDD and build the four lists required for the exercise: RDIs, DTCs
+(with their failure type bytes and set/clear conditions), IOLIs (with enabled
 sub-services), and routines. Identify which diagnostic service each list maps
-to — the tables above are your answer key. Take your time here: every minute
-spent reading the database saves ten minutes of guessing at the bench.
+to; the tables above serve as a reference. Thorough preparation here reduces
+trial-and-error at the bench.
 
 ### 2. Connect and unlock
 
@@ -190,15 +188,14 @@ Switch the IPC to **Extended Diagnostic** session (`10 03`) and verify the
 positive response (`50 03`). If you plan to write anything, run the seed/key
 sequence: request the seed with `27 01`, compute the key with the Level 1
 algorithm, send it with `27 02`. Keep the session alive with TesterPresent
-(`3E 00`) if you work slowly — the ECU drops back to Default after S3 (5 s)
-without tester traffic, and it will not warn you when it does.
+(`3E 00`) during pauses — the ECU drops back to Default after S3 (5 s)
+without tester traffic.
 
 ### 3. Read identification and live RDIs
 
-Request a few RDIs and decode the hexadecimal answers **by hand** before
-trusting the tool's interpretation — this is how you build confidence that the
-numbers on screen are real: `22 F190` (VIN — 17 ASCII bytes), `22 F18C`,
-`22 F1A0`. Then read the live ones: `22 1002` (Vehicle_Speed), `22 1004`
+Request a few RDIs and decode the hexadecimal answers **by hand**, then
+compare the result with the tool's interpretation: `22 F190` (VIN — 17 ASCII
+bytes), `22 F18C`, `22 F1A0`. Then read the live ones: `22 1002` (Vehicle_Speed), `22 1004`
 (battery voltage), `22 1005` (external temperature), `22 2001` (odometer).
 Apply the conversion defined in the CDD for each DID.
 
@@ -208,19 +205,18 @@ Now put the bench in a state that changes the RDI content. The controlled way
 to do it for speed is the IOLI `0x556A` Vehicle_speed_cluster with
 `shortTermAdjustment`: inject **60 km/h**, then read back `22 1002` and check
 that the RDI follows the injected value. Repeat at **150 km/h, 250 km/h and
-600 km/h** — the last one is deliberate: find out what the cluster answers when
-the value is out of range, and write it down. Edge cases like this are where
-real bugs hide.
+600 km/h**; the last value is out of range — record how the cluster responds
+to it.
 
-When finished, always hand the output back: `2F 556A 00`
+When finished, return control of the output: `2F 556A 00`
 (returnControlToECU).
 
 ### 5. Write RDIs
 
 Pick three writable DIDs (e.g. service/odometer-related values, or the VIN
 after the `0x31 2001` unlock), write them with `0x2E`, then read them back with
-`0x22` and prove the content matches what you sent. A write you have not read
-back is a write you cannot trust. Restore the original values at the end and,
+`0x22` and verify the content matches what was sent. Restore the original
+values at the end and,
 if you unlocked the VIN, lock it again with routine `0x2000`.
 
 ### 6. Full fault-memory cycle
@@ -245,7 +241,7 @@ sequenceDiagram
 ```
 
 1. Choose a DTC whose set condition you can reproduce on the bench — a
-   *missing message* DTC such as `D7xx87` is the easiest: just stop the
+   *missing message* DTC such as `D7xx87` is the easiest: stop the
    relevant message on the CAN.
 2. Read the fault memory with `19 02 FF` and decode the **status byte** of your
    DTC: bit 0 = testFailed, bit 1 = testFailedThisOperationCycle, bit 2 =
@@ -253,7 +249,7 @@ sequenceDiagram
 3. Read the **snapshot** (freeze frame) attached to the DTC with `19 04` — for
    this platform the snapshot carries environment data such as the vehicle
    speed at fault detection.
-4. Remove the fault condition and figure out which actions bring bits 0, 1 and
+4. Remove the fault condition and determine which actions bring bits 0, 1 and
    2 back to 0 (healing over operation cycles vs. explicit clearing), then
    clear the memory with `14 FF FF FF` and verify with a final `19 02` that
    the DTC is gone.
@@ -269,8 +265,7 @@ sequenceDiagram
 
 ## Common mistakes
 
-Everyone hits at least one of these — now you can hit them on purpose (once)
-and recognize them forever:
+The following mistakes are common in this exercise:
 
 - **Working in Default session.** Writes, IOLI and routines are refused with
   NRC `0x7F` (serviceNotSupportedInActiveSession) until you send `10 03`.
@@ -279,7 +274,7 @@ and recognize them forever:
 - **Session timeout.** Long pauses drop you back to Default; send `3E 00`
   periodically or accept re-entering the session.
 - **Forgetting returnControlToECU.** Leaving `0x556A` under shortTermAdjustment
-  makes every later speed-related reading wrong — yours and the next team's.
+  invalidates every later speed-related reading until control is returned.
 - **Reading the DTC status byte as a plain number.** It is a bitmask: decode it
   bit by bit, and check the DTC's maturation conditions in the CDD before
   assuming a fault should have set.
@@ -288,20 +283,20 @@ and recognize them forever:
 
 !!! success "Key takeaways"
     - The CDD is the single source of truth: sessions, DIDs, sub-services,
-      DTCs and their conditions are all in there — and you now know how to
-      extract them.
+      DTCs and their conditions are all extracted from it.
     - The canonical bench workflow is: session (`0x10`) → security (`0x27`) →
       read/write RDIs (`0x22`/`0x2E`) → IOLI (`0x2F`) → fault memory
       (`0x19`/`0x14`) → restore everything.
     - DTC codes encode meaning: the trailing failure type byte (`0x64`,
       `0x86`, `0x87`, `0x88`, …) tells you *how* the fault was detected.
-    - You always leave the ECU as you found it: control returned, values
+    - Leave the ECU as found: control returned, values
       restored, fault memory cleared.
-    - You just ran a complete professional diagnostic session from a bare
-      database — that is exactly what the job looks like.
+    - The exercise covers a complete diagnostic session — the same workflow
+      used on production projects — starting from the diagnostic database
+      alone.
 
 !!! tip "Where this fits"
-    This exercise pulls together the earlier drills — [Exercise
+    This exercise combines the earlier drills — [Exercise
     2](../exercise-diagnosi-2/index.md) (RDIs and DTCs) and [Exercise
     3](../exercise-diagnosi-3/index.md) (IOLIs and routines) — into one full
     session, on the same IPC database used in the [RDI

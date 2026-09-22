@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4369,17 +4383,15 @@
 
 
 <h1 id="hands-on-diagnostics-rdis-dtcs-and-the-ipc-cluster">Hands-On Diagnostics: RDIs, DTCs and the IPC Cluster<a class="headerlink" href="#hands-on-diagnostics-rdis-dtcs-and-the-ipc-cluster" title="Permanent link">&para;</a></h1>
-<p>Time to get your hands on a real control unit. In this bench exercise you move
-from <em>knowing</em> the diagnostic theory to <em>doing</em> what a diagnostics engineer does
-every day: talking to the <strong>instrument panel cluster (IPC)</strong> of the P332
-battery-electric platform over <strong>UDS (Unified Diagnostic Services)</strong>, using its
-<strong>CANdela Diagnostic Description (CDD)</strong> database
-<code>D2956_IPC_E2A_R10_332BEV.cdd</code> as your map.</p>
-<p><strong>What you'll practice:</strong> navigating a diagnostic database, reading and writing
-<strong>RDIs (Read Data Identifiers)</strong>, provoking a fault on purpose, watching the
-<strong>DTC (Diagnostic Trouble Code)</strong> status byte evolve, and rescuing the snapshot
-evidence before you clear anything. Don't worry about breaking something —
-that's what the bench is for.</p>
+<p>This bench exercise applies the diagnostic theory from the previous lessons to
+a real control unit: the <strong>instrument panel cluster (IPC)</strong> of the P332
+battery-electric platform, accessed over <strong>UDS (Unified Diagnostic Services)</strong>
+using its <strong>CANdela Diagnostic Description (CDD)</strong> database
+<code>D2956_IPC_E2A_R10_332BEV.cdd</code>.</p>
+<p><strong>What you will practice:</strong> navigating a diagnostic database, reading and
+writing <strong>RDIs (Read Data Identifiers)</strong>, provoking a fault, observing the
+<strong>DTC (Diagnostic Trouble Code)</strong> status byte, and retrieving the snapshot
+data before clearing the fault memory.</p>
 <h2 id="goal">Goal<a class="headerlink" href="#goal" title="Permanent link">&para;</a></h2>
 <p>By the end of this exercise you will be able to:</p>
 <ul>
@@ -4427,8 +4439,9 @@ on the academy bench ECU. Writing RDIs or clearing DTCs on a real vehicle
 can alter its configuration or erase evidence needed for troubleshooting.</p>
 </div>
 <h2 id="step-1-explore-the-diagnostic-database">Step 1 — Explore the diagnostic database<a class="headerlink" href="#step-1-explore-the-diagnostic-database" title="Permanent link">&para;</a></h2>
-<p>Think of the CDD as the ECU's own user manual. Open it in the CANdela viewer
-(or the diagnostics console's database view) and extract four lists:</p>
+<p>The CDD describes every diagnostic element the ECU exposes. Open it in the
+CANdela viewer (or the diagnostics console's database view) and extract four
+lists:</p>
 <ol>
 <li><strong>All RDIs</strong> — the 16-bit identifiers the ECU exposes for reading: VIN
    (Vehicle Identification Number), software/hardware versions, vehicle speed,
@@ -4441,8 +4454,8 @@ can alter its configuration or erase evidence needed for troubleshooting.</p>
    (self-tests, calibration routines, …).</li>
 </ol>
 <h2 id="step-2-map-elements-to-diagnostic-services">Step 2 — Map elements to diagnostic services<a class="headerlink" href="#step-2-map-elements-to-diagnostic-services" title="Permanent link">&para;</a></h2>
-<p>Now connect the dots: for each list from Step 1, identify which UDS service
-operates on it. This table is your cheat sheet for the rest of the exercise:</p>
+<p>For each list from Step 1, identify which UDS service operates on it. The
+mapping is summarized below:</p>
 <table>
 <thead>
 <tr>
@@ -4503,8 +4516,8 @@ broken.</p>
    actually changes, and read it again to confirm you see the difference.</li>
 </ol>
 <h3 id="vehicle-speed-sweep">Vehicle speed sweep<a class="headerlink" href="#vehicle-speed-sweep" title="Permanent link">&para;</a></h3>
-<p>Now for the fun part. Find the RDI that carries the vehicle speed and run the
-full sweep, recording the raw response and the decoded value at each point:</p>
+<p>Locate the RDI that carries the vehicle speed and run the full sweep,
+recording the raw response and the decoded value at each point:</p>
 <table>
 <thead>
 <tr>
@@ -4532,16 +4545,16 @@ full sweep, recording the raw response and the decoded value at each point:</p>
 </tbody>
 </table>
 <div class="admonition tip">
-<p class="admonition-title">600 km/h is a trap — on purpose</p>
-<p>600 km/h is far beyond anything this signal should ever see. Depending on
-the CDD definition you will get the signal's saturation value, an
+<p class="admonition-title">600 km/h tests out-of-range behavior</p>
+<p>600 km/h is far beyond the valid range of this signal. Depending on the
+CDD definition you will get the signal's saturation value, an
 "invalid/not available" pattern (e.g. all bits set), or a negative
-response. The point of this step is to discover how the ECU and the
-conversion formula behave <strong>at and beyond the valid range</strong> — probing the
-edges like this is exactly what testing a diagnostic specification means.</p>
+response. This step shows how the ECU and the conversion formula behave
+<strong>at and beyond the valid range</strong> — probing boundary values is part of
+testing a diagnostic specification.</p>
 </div>
 <h2 id="step-4-write-rdis">Step 4 — Write RDIs<a class="headerlink" href="#step-4-write-rdis" title="Permanent link">&para;</a></h2>
-<p>Reading is only half the story. Now you'll change data inside the ECU:</p>
+<p>Next, write data to the ECU:</p>
 <ol>
 <li>Select <strong>three writable RDIs</strong> from the database (the CDD marks which
    identifiers support <code>WriteDataByIdentifier</code> — read-only ones will answer
@@ -4549,8 +4562,8 @@ edges like this is exactly what testing a diagnostic specification means.</p>
 <li>Write new content with service <code>0x2E</code>, building the payload from the DID
    plus the correctly formatted data bytes.</li>
 <li><strong>Verify each write</strong> by reading the same RDI back with <code>0x22</code> and
-   comparing the returned bytes with what you sent. A write you haven't read
-   back is a write you haven't done.</li>
+   comparing the returned bytes with what you sent. A write is only confirmed
+   by a successful read-back.</li>
 </ol>
 <pre class="kx-mermaid"><code>sequenceDiagram
     participant T as Tester (CANoe)
@@ -4563,15 +4576,15 @@ edges like this is exactly what testing a diagnostic specification means.</p>
     T-&gt;&gt;E: "22 &lt;DID&gt; — read back to verify"
     E--&gt;&gt;T: "62 &lt;DID&gt; &lt;new value&gt;"</code></pre>
 <h2 id="step-5-fault-status-byte-healing-and-snapshot">Step 5 — Fault, status byte, healing and snapshot<a class="headerlink" href="#step-5-fault-status-byte-healing-and-snapshot" title="Permanent link">&para;</a></h2>
-<p>This is where the exercise comes together: you'll watch a fault live its whole
-life inside the ECU, from detection to healing.</p>
+<p>This step covers the full lifecycle of a fault inside the ECU, from detection
+to healing.</p>
 <h3 id="create-the-fault-and-read-the-status-byte">Create the fault and read the status byte<a class="headerlink" href="#create-the-fault-and-read-the-status-byte" title="Permanent link">&para;</a></h3>
 <ol>
 <li>Provoke a fault condition on the bench (e.g. disconnect or short a
    monitored line — pick a DTC from your list whose cause you can actually
    reproduce).</li>
 <li>Read the DTC with <code>0x19 0x02</code> (reportDTCByStatusMask) and look at its
-   <strong>status byte</strong> — eight bits that tell the fault's life story.</li>
+   <strong>status byte</strong> — eight bits that record the fault's current state.</li>
 </ol>
 <h3 id="heal-bits-0-1-and-2">Heal bits 0, 1 and 2<a class="headerlink" href="#heal-bits-0-1-and-2" title="Permanent link">&para;</a></h3>
 <table>
@@ -4608,7 +4621,7 @@ life inside the ECU, from detection to healing.</p>
     E --&gt; F["N fault-free cycles → bit2=0&lt;br/&gt;(healed)"]
     F -. "0x14 ClearDiagnosticInformation" .-&gt; G["Memory erased&lt;br/&gt;status byte = 0x00"]</code></pre>
 <h3 id="clear-the-memory-and-get-the-snapshot">Clear the memory and get the snapshot<a class="headerlink" href="#clear-the-memory-and-get-the-snapshot" title="Permanent link">&para;</a></h3>
-<p>Order matters here — read this sequence before you touch the tool:</p>
+<p>The following sequence must be performed in order:</p>
 <ol>
 <li><strong>Before clearing</strong>, identify which snapshot record is attached to your
    DTC: query <code>0x19 0x04</code> (reportDTCSnapshotRecordByDTCNumber) with the DTC
@@ -4619,10 +4632,10 @@ life inside the ECU, from detection to healing.</p>
 <li>Read the DTCs again: the entry — and its snapshot — must be gone.</li>
 </ol>
 <div class="admonition warning">
-<p class="admonition-title">Snapshots die with the clear</p>
+<p class="admonition-title">Snapshots are erased when the memory is cleared</p>
 <p><code>0x14</code> erases DTCs <strong>and their snapshot/extended data</strong>. In real
-troubleshooting you always download snapshots <em>before</em> clearing — once
-cleared, the evidence is unrecoverable.</p>
+troubleshooting, snapshots must always be downloaded <em>before</em> clearing —
+once cleared, the data is unrecoverable.</p>
 </div>
 <h2 id="expected-results">Expected results<a class="headerlink" href="#expected-results" title="Permanent link">&para;</a></h2>
 <ul>
@@ -4654,17 +4667,18 @@ cleared, the evidence is unrecoverable.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>The CDD database is your contract with the ECU: RDIs, DTCs, I/O and
-  routines, each bound to a UDS service (<code>0x22</code>/<code>0x2E</code>/<code>0x19</code>/<code>0x14</code>/<code>0x2F</code>/<code>0x31</code>).</li>
-<li>Always decode responses with the database's scaling — and always probe
-  boundary values (600 km/h) to see saturation and invalid-value handling.</li>
-<li>A write is only proven by read-back.</li>
-<li>The DTC status byte tells the fault's life story; bits 0–2 clear through
-  specific healing maneuvers, not by magic.</li>
-<li>Grab snapshots <strong>before</strong> <code>ClearDiagnosticInformation</code> — clearing wipes
-  the evidence.</li>
-<li>You just ran the full daily loop of a diagnostics engineer. This exact
-  workflow is what you'll repeat on every ECU you meet.</li>
+<li>The CDD database defines all diagnostic elements of the ECU — RDIs, DTCs,
+  I/O and routines — each bound to a UDS service (<code>0x22</code>/<code>0x2E</code>/<code>0x19</code>/<code>0x14</code>/<code>0x2F</code>/<code>0x31</code>).</li>
+<li>Responses must be decoded with the database's scaling; boundary values
+  (600 km/h) reveal saturation and invalid-value handling.</li>
+<li>A write is only confirmed by read-back.</li>
+<li>The DTC status byte records the fault state; bits 0–2 are cleared
+  through specific healing maneuvers.</li>
+<li>Snapshots must be retrieved <strong>before</strong> <code>ClearDiagnosticInformation</code>;
+  clearing erases them permanently.</li>
+<li>The sequence covered here — database exploration, RDI read/write, fault
+  injection, status-byte healing and snapshot retrieval — is the standard
+  diagnostic workflow applied to any ECU.</li>
 </ul>
 </div>
 <hr />
@@ -4764,38 +4778,27 @@ cleared, the evidence is unrecoverable.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4823,7 +4826,7 @@ cleared, the evidence is unrecoverable.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

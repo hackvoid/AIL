@@ -1,17 +1,14 @@
 # CANalyzer — CAN Bus Analysis
 
-Welcome to your first real diagnostic tool. In MIL1 you learned what happens on
-the wire; **CANalyzer** is how you actually *see* it. It is Vector's tool for
-**observing, logging and stimulating bus communication** — Controller Area
-Network (CAN) first, but also Local Interconnect Network (LIN) and FlexRay.
-You connect it to a real bus (or feed it a recorded trace), and it answers the
-fundamental question of every debugging session: *is there communication on
-this bus, and what is it saying?* By the end of this article you will know how
-to set up a measurement, decode live traffic with a database, and send your
-own messages onto the bus.
+**CANalyzer** is Vector's tool for **observing, logging and stimulating bus
+communication** — Controller Area Network (CAN) first, but also Local
+Interconnect Network (LIN) and FlexRay. It connects to a real bus (or reads a
+recorded trace) and answers the fundamental question of a debugging session:
+is there communication on this bus, and what does it contain? This article
+covers how to set up a measurement, decode live traffic with a database, and
+send messages onto the bus.
 
-Don't worry if the tool feels big at first — every daily workflow reduces to
-three use cases:
+Daily work with CANalyzer reduces to three use cases:
 
 - **Analysis** — watch messages and signals live, with decoded physical
   values, statistics and graphical plots.
@@ -22,8 +19,8 @@ three use cases:
 
 ## Before the tool: the buses you will connect to
 
-CANalyzer is only as useful as your understanding of what you are probing.
-Here is a quick recap of what you will find in a vehicle (full theory in
+Before connecting to a vehicle, a short recap of the buses you will find in
+it (full theory in
 [CAN, LIN & Automotive Ethernet](../../mil1/can-lin/index.md)):
 
 | Bus | Bit rate | Typical content |
@@ -38,9 +35,9 @@ Module (BCM) often acting as the hub between them:
 
 ![Example vehicle CAN topology with CAN-C1 and CAN-BH buses](img/vehicle-can-topology.webp)
 
-CAN is a **broadcast** bus — every node sees every frame — which is exactly
-why a passive observer like CANalyzer works so well: tap the bus anywhere and
-you see everything that flows on it.
+CAN is a **broadcast** bus — every node sees every frame — so a passive
+observer like CANalyzer can be connected at any point of the bus and sees all
+traffic on it.
 
 ## Physical access: where to plug in
 
@@ -90,8 +87,9 @@ Cluster (IPC) as an example: an 18-pin connector where each pin is marked
 
 Everything in CANalyzer revolves around the **Measurement Setup** window,
 where the data flow is drawn and edited graphically — from the data source on
-the left to the analysis windows on the right. Think of it as wiring up a
-pipeline: data enters, you shape it, and you decide where it ends up.
+the left to the analysis windows on the right. It works like a pipeline: data
+enters from the source, is processed by the inserted blocks, and is routed to
+analysis windows or logging.
 
 ![Measurement Setup window: data flows from the CAN hardware through filters and program nodes to the analysis windows](img/measurement-setup.webp)
 
@@ -115,15 +113,15 @@ The building blocks you insert into the data flow:
 - **Data source (online/offline).** The real bus connected via the interface
   hardware is the *online* source; a previously recorded log file is the
   *offline* source. You can replay an offline file through the exact same
-  analysis setup as a live bus — a huge help when you want to re-examine a
-  problem at your desk.
+  analysis setup as a live bus, which allows a problem to be re-examined
+  offline at any time.
 - **Analysis windows.** Trace, Graphics, Data, Statistics (details below) —
   each window can show the same data in a different way.
 - **CAPL program nodes.** Small programs inserted into the data flow for
   filtering, arithmetic on signals, or custom reactions.
 - **Filters.** Define which data is passed and which is explicitly blocked —
   essential on a 500 kbit/s bus, where thousands of frames per second would
-  otherwise bury the one message you care about.
+  otherwise make individual messages difficult to isolate.
 - **Logging blocks.** Record the (filtered) data stream to a file for later
   analysis.
 
@@ -144,18 +142,18 @@ you:
 - define environment variables used by CANoe simulations.
 
 !!! tip "No DBC, no decode"
-    If the trace shows only raw hex, you are missing the database assignment
-    for that channel. The very first thing to check in any CANalyzer
-    configuration is that each channel has the correct DBC — the same bus at
-    the same bit rate with the wrong DBC decodes into plausible-looking
-    nonsense. This one check will save you hours.
+    If the trace shows only raw hex, the database assignment for that channel
+    is missing. The first thing to check in any CANalyzer configuration is
+    that each channel has the correct DBC — the same bus at the same bit rate
+    with the wrong DBC decodes into plausible-looking nonsense. This check
+    should be performed before any further analysis.
 
 ## The analysis windows
 
 ### Trace window
 
-The **Trace Window** is the workhorse — the window you will live in most of
-the time. It is a chronological list of every bus event — data frames, remote
+The **Trace Window** is the most frequently used analysis window. It is a
+chronological list of every bus event — data frames, remote
 frames, error frames — with timestamp, channel, identifier, name, direction,
 data length code and data bytes. With a DBC attached, each message expands to
 show its decoded signal values.
@@ -167,7 +165,7 @@ Capabilities that matter in daily work:
 - **Filters** (pass/stop) to shrink the displayed data volume — you can even
   delete events from the data stream.
 - **Hide unchanged data** — signals that do not change fade out or disappear,
-  so changes jump out visually.
+  so changes become immediately visible.
 - **Color highlighting** for important events and messages.
 - **Markers** bound to an event's timestamp; they are shared with the other
   analysis windows, so you can jump to the same instant in the Graphics
@@ -243,10 +241,10 @@ In the example above (from the lesson's workshop capture) the tester requests
 DTC data with service **0x19 subfunction 0x04**, the ECU answers with a First
 Frame announcing **0x2F = 47 payload bytes**, the tester releases the
 transfer with a Flow Control (`30 00 00`), and the payload arrives in
-Consecutive Frames numbered `21`, `22`, … `2F`. The good news: with a
+Consecutive Frames numbered `21`, `22`, … `2F`. With a
 diagnostic description loaded, CANalyzer reassembles all of this
-automatically and shows the decoded service — without one, you must stitch
-the bytes together yourself.
+automatically and shows the decoded service; without one, the bytes must be
+stitched together manually.
 
 ## Logging and replay
 
@@ -261,9 +259,9 @@ later, time-independently:
    log file: the recorded traffic flows through the same filters, CAPL nodes
    and analysis windows as if it were live.
 
-This online/offline symmetry is a core workflow you will use constantly:
-capture in the vehicle, analyze at the desk, and hand the same file to a
-colleague who can reproduce exactly what you saw.
+This online/offline symmetry is a standard workflow: capture in the vehicle,
+analyze at the desk, and hand the same file to a colleague, who can reproduce
+exactly the same measurement.
 
 ## Stimulation: making the bus talk
 
@@ -296,26 +294,27 @@ because it extends CANalyzer everywhere:
 - Programs are written in the **CAPL Browser**, which goes beyond a plain
   editor (symbol completion, compilation, debugging).
 
-You will go much deeper into CAPL in the [CAPL lessons](../capl/index.md),
-and meet CANalyzer's bigger sibling in the
-[CANoe lessons](../canoe/index.md) — CANoe adds full network simulation and
-remaining-bus modeling on top of the same measurement concepts you learned
-here, so everything in this article transfers directly.
+CAPL is covered in depth in the [CAPL lessons](../capl/index.md); the related
+tool CANoe is covered in the
+[CANoe lessons](../canoe/index.md). CANoe adds full network simulation and
+remaining-bus modeling on top of the same measurement concepts, so the
+content of this article transfers directly.
 
 !!! success "Key takeaways"
-    - You can now name CANalyzer's three jobs — analyze, log/replay,
-      stimulate — and wire them up in the Measurement Setup data flow.
-    - You know where to plug in: EOBD socket pins 6/14 (CAN), 4/5 (GND),
-      16 (+12 V), or ECU pins from the wiring document (KL30 / KL15 / KL31).
-    - Remember the golden rule: **no DBC, no decode** — the database is what
-      turns raw frames into named, scaled signals.
+    - CANalyzer covers three use cases — analysis, logging/replay and
+      stimulation — configured as blocks in the Measurement Setup data flow.
+    - Bus access is via the EOBD socket (pins 6/14 CAN, 4/5 GND, 16 +12 V)
+      or directly at ECU pins identified from the wiring document
+      (KL30 / KL15 / KL31).
+    - A DBC database must be assigned to each channel; without it, only raw
+      frames are shown and no signal decoding takes place.
     - Trace, Graphics, Data and Statistics are different views on the same
-      stream; filters and markers keep big traces manageable.
-    - Diagnostics are built in (UDS/KWP2000 tester, DTC fault memory), and
-      ISO-TP multi-frame traffic is easy to spot once you know the 1/3/2
+      data stream; filters and markers keep large traces manageable.
+    - Diagnostics are built in (UDS/KWP2000 tester, DTC fault memory);
+      ISO-TP multi-frame transfers are identified by the 1/3/2
       First Frame / Flow Control / Consecutive Frame nibbles.
-    - When listening is not enough, the Interactive Generator gets you
-      sending in minutes — CAPL is there when you outgrow it.
+    - Stimulation ranges from the Interactive Generator for simple message
+      sending to CAPL for fully programmed behavior.
 
 !!! tip "Where this leads"
     Practice these concepts hands-on in the

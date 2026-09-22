@@ -1,32 +1,31 @@
 # Diagnosis
 
-Welcome to one of the most practical topics of the whole bootcamp. Every
-modern **Electronic Control Unit (ECU)** runs a continuous self-check while
-the vehicle drives: it watches its sensors, actuators, power supply lines and
-even its own microcontroller, and whenever something looks wrong it writes the
-fault down so that you — with a diagnostic tester, or from a test bench — can
-read it back later. Diagnosis is the discipline behind all of that: how the
-self-check is specified, how faults become **Diagnostic Trouble Codes (DTCs)**
-in the ECU's error memory, and how you talk to the ECU over CAN to read
-parameters, clear faults, run actuator tests and flash new software. After
-this lesson you will be able to explain how a fault travels from "sensor
-reads oddly" to a stored DTC, and which **Unified Diagnostic Services (UDS)**
-requests a tester sends to do each workshop operation.
+Every modern **Electronic Control Unit (ECU)** runs a continuous self-check
+while the vehicle drives: it watches its sensors, actuators, power supply
+lines and even its own microcontroller, and whenever something looks wrong
+it writes the fault down so that it can be read back later with a
+diagnostic tester or from a test bench. Diagnosis is the discipline behind
+all of that: how the self-check is specified, how faults become
+**Diagnostic Trouble Codes (DTCs)** in the ECU's error memory, and how the
+tester communicates with the ECU over CAN to read parameters, clear faults,
+run actuator tests and flash new software. After this lesson you will be
+able to explain how a fault travels from an anomalous sensor reading to a
+stored DTC, and which **Unified Diagnostic Services (UDS)** requests a
+tester sends to do each workshop operation.
 
-Don't worry about memorizing every service ID on first read — focus on the
-mental models (fault lifecycle, error memory, request/response protocol). The
-tables will still be here when you need them at the bench.
+The focus of this article is the underlying models (fault lifecycle, error
+memory, request/response protocol); the service IDs and tables are included
+for reference at the bench.
 
 ## How a diagnostic conversation works
 
-Diagnostic communication has a reassuringly simple shape:
+Diagnostic communication follows a simple request/response pattern:
 
 - the channel is the **CAN bus** (see
   [CAN & LIN](../../mil1/can-lin/index.md)); the diagnostic socket is the
   physical access point,
 - the **diagnostic tool is just one more node** on the network: it sends a
-  request to an ECU, and that ECU answers — nothing magical happens in
-  between,
+  request to an ECU, and that ECU answers,
 - the translation from raw bytes to engineering values is done by the tool,
   driven by the ECU's diagnostic description (the **CDD** file, produced with
   the CANdela authoring tool). The CDD is to diagnosis what the DBC is to CAN
@@ -64,15 +63,14 @@ the tester–ECU exchange.
 Diagnosis means the ECU cyclically acquires, processes and compares the
 signals of everything connected to it — internal components (microprocessor,
 memory) and external ones (sensors, actuators) — and records every detected
-failure, permanent or intermittent, in non-volatile memory. Think of the ECU
-as a diligent colleague who never sleeps and keeps a written log of every
-anomaly. A compliant control system must:
+failure, permanent or intermittent, in non-volatile memory. A compliant
+control system must:
 
 - recognize electrical faults on all directly connected sensors and actuators
   and on the power supply lines, and where possible detect mechanical faults
   through **plausibility checks**;
-- distinguish real failures from disturbances (this is harder than it sounds —
-  see the filtering rules below);
+- distinguish real failures from disturbances (see the filtering rules
+  below);
 - manage the fault lifecycle (validation, storage, healing, erasing);
 - apply a **recovery strategy** for each fault, so the vehicle stays drivable;
 - expose engineering parameters to the tester on request;
@@ -90,8 +88,8 @@ anomaly. A compliant control system must:
   running, vehicle moving, and power latch (after-run).
 - The ECU must recognize the **cranking phase** and filter it, because the
   voltage dip while the starter motor turns would otherwise validate false
-  faults. This is a classic newcomer trap: "ghost" low-voltage DTCs that
-  appear right after engine start.
+  faults. Without this filtering, false low-voltage DTCs would appear right
+  after engine start.
 
 ### Electrical and plausibility faults
 
@@ -123,9 +121,9 @@ that would produce false faults are inhibited), and, where feasible,
 
 ### CAN network failures
 
-Communication itself is diagnosed too — after all, an ECU that can't hear
-the others is blind. Four canonical faults cover the cases where node A
-monitors the other nodes on the bus:
+Communication itself is diagnosed too — an ECU that cannot receive messages
+from the other nodes is effectively isolated. Four canonical faults cover
+the cases where node A monitors the other nodes on the bus:
 
 ```mermaid
 flowchart LR
@@ -170,8 +168,7 @@ flowchart LR
 ## The error memory
 
 The error memory is an array of **error cells**, one per fault line. This is
-the "black box" you will interrogate in every diagnosis exercise. Each cell
-contains:
+the record the tester reads in every diagnosis exercise. Each cell contains:
 
 - **DTC code** — 3 bytes: the first two identify the component, the third
   (DTCLowByte) identifies the failure type (the *symptom*, e.g. open circuit
@@ -183,10 +180,10 @@ contains:
 
 ### The statusOfDTC byte
 
-This one byte is the fault's whole biography. It is used in two roles: in a
-*tester request* it is a **DTCStatusMask** (which status bits to filter on);
-in an *ECU response* it is the **statusOfDTC** (the actual state of each
-DTC). The bit meanings are identical in both contexts:
+This byte is used in two roles: in a *tester request* it is a
+**DTCStatusMask** (which status bits to filter on); in an *ECU response* it
+is the **statusOfDTC** (the actual state of each DTC). The bit meanings are
+identical in both contexts:
 
 | Bit | Name | Meaning when 1 |
 |---|---|---|
@@ -202,9 +199,8 @@ DTC). The bit meanings are identical in both contexts:
 A *monitoring cycle* is the reference time frame for the diagnostic tests —
 for most practical purposes, one driving cycle from Key ON to Key OFF.
 
-The lifecycle below is the single most important mental model of this
-lesson — it explains why a fault you "fixed" still shows up in the tester for
-dozens of key cycles before disappearing on its own:
+The lifecycle below explains why a repaired fault still appears in the
+tester for many key cycles before it is deleted autonomously:
 
 ```mermaid
 stateDiagram-v2
@@ -221,11 +217,11 @@ stateDiagram-v2
 
 A **DTCSnapshotRecord** freezes environmental parameters (the "freeze
 frame": rpm, temperature, voltage, odometer, …) at the moment a fault is
-validated — invaluable when you try to reproduce an intermittent fault on
-the bench. Each DTC keeps up to two snapshots: the **first** validation
-(kept until the DTC is deleted) and the **last** validation (updated on
-every re-validation). The first four parameters are mandatory for every
-system and DTC.
+validated — useful when reproducing an intermittent fault on the bench.
+Each DTC keeps up to two snapshots: the **first** validation (kept until
+the DTC is deleted) and the **last** validation (updated on every
+re-validation). The first four parameters are mandatory for every system
+and DTC.
 
 The **DTCExtendedDataRecord** holds counters; two are essentially standard:
 
@@ -279,17 +275,18 @@ lower-priority cells are evicted first:
 ## Diagnostic functions exposed to the tester
 
 Beyond reading DTCs, an ECU exposes four families of functions on the
-diagnostic link. Together they are your everyday toolkit at the bench.
+diagnostic link. These four families cover the standard operations performed
+at the bench.
 
 ### Reading parameters — RDI
 
 All engineering parameters (raw sensor values, computed control quantities)
 must be readable **individually or in groups**, at Key ON, engine running,
-and any vehicle speed. This is the parameter-reading function (RDI) you will
-use constantly: it is how you watch live values while poking at the hardware.
-When a sensor is faulty, the ECU must report the value **actually read**, not
-the recovery substitute — otherwise you would be debugging a fiction. Asking
-for a parameter that does not exist in that vehicle outfit must produce a
+and any vehicle speed. This parameter-reading function (RDI) is how live
+values are observed while the hardware is exercised. When a sensor is
+faulty, the ECU must report the value **actually read**, not the recovery
+substitute, so that diagnosis sees the real signal state. Asking for a
+parameter that does not exist in that vehicle outfit must produce a
 negative response with **NRC 0x31** (requestOutOfRange — "parameter not
 available"; NRC = Negative Response Code).
 
@@ -316,33 +313,31 @@ conditions hard to reach on the road, must be verified by sound or sight, or
 must be calibrated. During active diagnosis the normal diagnostic strategies
 keep running. One important caution: it must **not** be used on CAN signals
 that other ECUs use for plausibility checks — forcing them would trigger
-false faults elsewhere on the network, and you would spend an afternoon
-chasing ghosts of your own making.
+false faults in the other ECUs.
 
 ### Statistical functions
 
 Counters that reconstruct the vehicle/system history: total number of
 missions, missions with anomalies, actuation counts of a component, plus
 dedicated functions such as **engine overspeed** and **odometer** tracking.
-These are the data that answer "has this always been marginal, or did it
-just break?"
+These data make it possible to distinguish a long-standing marginal
+condition from a recent failure.
 
 ### Routines — calibration and learning
 
 Some ECUs need workshop procedures after installation: key/remote
 programming, characteristic learning (throttle body, phonic wheel, gear
 position, mixture), sensor calibration (steering angle, radar alignment), or
-service operations (odometer setting, service interval reset). Because a
-botched procedure can break the system, the CDD specifies each routine in
-detail: why and when it runs, what the operator must do, the exact tester
-commands and ECU responses, the timing constraints, and the completion
-criteria. Follow the script exactly — this is one place where improvising is
-genuinely risky.
+service operations (odometer setting, service interval reset). Because an
+incorrectly executed procedure can damage the system, the CDD specifies each
+routine in detail: why and when it runs, what the operator must do, the
+exact tester commands and ECU responses, the timing constraints, and the
+completion criteria. The specified procedure must be followed exactly.
 
 ## The UDS services behind it all
 
-Everything above is executed through a compact vocabulary of UDS services.
-You will soon recognize these hex IDs on sight in a CAN trace:
+Everything above is executed through a compact vocabulary of UDS services;
+these hex IDs appear directly in CAN traces:
 
 | Service | Name | Use in this lesson |
 |---|---|---|
@@ -373,20 +368,19 @@ Service `$19` has a rich sub-function list; the ones used in practice:
 
 When a request cannot be executed, the ECU answers with the **negative
 response** `7F <SID> <NRC>`; the response codes are listed in ISO 14229 (you
-already met `0x31` for an unavailable parameter). Reading `7F` frames
-fluently is a genuine bench skill — the NRC usually tells you *why* the ECU
-refused, which is half the diagnosis.
+already met `0x31` for an unavailable parameter). The NRC indicates *why*
+the ECU refused the request, which is a primary input to troubleshooting.
 
 ## PROXI — end-of-line car configuration
 
-Building one ECU hardware per vehicle variant would explode the part-number
-matrix, so configuration differences that can be expressed as software
-parameters are programmed **at the end of the line (EOL)** — the last station
-of the assembly line, where the finished car receives its identity. The data
-package sent to the nodes is the **PROXI file** (PROXI = *Programming and
-configuration of integrated systems*); formats include `.BYT`, `.EOL`,
-`.EPLUS`, `.HEX`, and a per-system *PROXI programming targeted specification*
-defines the bit-level coding.
+Building one ECU hardware per vehicle variant would multiply the
+part-number count, so configuration differences that can be expressed as
+software parameters are programmed **at the end of the line (EOL)** — the
+last station of the assembly line, where the finished car receives its
+identity. The data package sent to the nodes is the **PROXI file** (PROXI =
+*Programming and configuration of integrated systems*); formats include
+`.BYT`, `.EOL`, `.EPLUS`, `.HEX`, and a per-system *PROXI programming
+targeted specification* defines the bit-level coding.
 
 - The **master node is the Body Computer (BCM)** — the central body
   electronics ECU; the instrument cluster (IPC — Instrument Panel Cluster)
@@ -442,10 +436,10 @@ result is readable as snapshots:
 ## ECU software download (flashing)
 
 Reprogramming lets the tester send new software to the ECU, which receives,
-verifies and stores it. You will do this many times during the bootcamp and
-beyond, and it is the operation with the strictest choreography. ECU
-software is structured in blocks — **bootloader**, **application**,
-**calibration** — and a flash delivery comes as a *kit* of three files:
+verifies and stores it. It is the operation with the strictest sequence
+requirements. ECU software is structured in blocks — **bootloader**,
+**application**, **calibration** — and a flash delivery comes as a *kit* of
+three files:
 
 | File | Role |
 |---|---|
@@ -488,8 +482,8 @@ value of the update.
 !!! warning "Never interrupt a flash"
     Erasing and rewriting happen while the application is not running. A
     power loss or bus disturbance mid-download can leave the ECU in boot
-    mode; always guarantee supply voltage (a battery maintainer is your
-    friend) and follow the exact service sequence.
+    mode; always guarantee supply voltage (a battery maintainer is
+    recommended) and follow the exact service sequence.
 
 !!! success "Key takeaways"
     - Diagnosis is a continuous self-check: sensors, actuators, supply,
@@ -498,17 +492,16 @@ value of the update.
     - Four canonical CAN network faults: node ABSENT, node FAULTY, node
       MUTE, BUS-OFF — one DTC per source node, with strict inhibition and
       timing rules.
-    - The statusOfDTC byte tells each fault's story: pending → confirmed →
-      healing → aging, with the event counter counting down from 40 until
-      the cell deletes itself.
-    - Snapshots freeze the environment at first/last validation — your best
-      friend when reproducing intermittent faults.
-    - Your tester toolkit: read DTCs (`$19`), clear them (`$14`), read
-      parameters (`$22`), drive actuators (`$2F`), run routines (`$31`) —
-      and read `7F SID NRC` negative responses fluently.
+    - The statusOfDTC byte records each fault's lifecycle: pending →
+      confirmed → healing → aging, with the event counter counting down
+      from 40 until the cell deletes itself.
+    - Snapshots freeze the environment at first and last validation, which
+      supports the reproduction of intermittent faults.
+    - The tester operations: read DTCs (`$19`), clear them (`$14`), read
+      parameters (`$22`), drive actuators (`$2F`), run routines (`$31`),
+      and interpret `7F SID NRC` negative responses.
     - PROXI configures the car at end-of-line under the BCM's authority, and
-      flashing follows a fixed UDS choreography you can now read step by
-      step.
+      flashing follows a fixed UDS service sequence.
 
 !!! tip "Where this leads"
     You will practice reading DTCs and parameters hands-on in the

@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4171,10 +4185,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#verification-vs-validation-and-why-the-vehicle-wins" class="md-nav__link">
+  <a href="#verification-vs-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Verification vs. validation — and why the vehicle wins
+        Verification vs. validation
       
     </span>
   </a>
@@ -4437,32 +4451,30 @@
 
 
 <h1 id="vehicle-validation">Vehicle Validation<a class="headerlink" href="#vehicle-validation" title="Permanent link">&para;</a></h1>
-<p>Welcome to the last — and most honest — test stage of the whole development
-cycle. Everything so far (simulation, bench rigs, lab measurements) has been a
-rehearsal. Vehicle validation is opening night: real car, real physics, real
-ECUs talking to each other, and you behind the wheel with a laptop and a
-checklist.</p>
-<p>By the end of this article you'll be able to:</p>
+<p>Vehicle validation is the final test stage of the development cycle. Earlier
+stages (simulation, bench rigs, lab measurements) exercise the function in
+controlled environments; vehicle validation tests it in the real car, with
+real physics and all ECUs interacting.</p>
+<p>This article covers:</p>
 <ul>
-<li>explain what <strong>validation</strong> checks that verification doesn't, and why the
-  vehicle is the one environment you can't skip,</li>
-<li>follow the validation workflow from requirement to frozen software, and read
-  the document set (VF, CFTS, CheckList, DVPM) that drives it,</li>
-<li>walk through a real worked example — the ECM speed limiter — from spec, to
-  maneuver, to measurement, to a caught software bug,</li>
-<li>work safely and confidently around a BEV prototype: wire a CAN case, flash
-  ECUs, and inject faults without frying anything.</li>
+<li>what <strong>validation</strong> checks that verification doesn't, and why the vehicle
+  environment cannot be skipped,</li>
+<li>the validation workflow from requirement to frozen software, and the
+  document set (VF, CFTS, CheckList, DVPM) that drives it,</li>
+<li>a worked example — the ECM speed limiter — from spec, to maneuver, to
+  measurement, to a detected software bug,</li>
+<li>safe working practice on a BEV prototype: wiring a CAN case, flashing ECUs,
+  and injecting faults.</li>
 </ul>
-<p>Let's start with the big picture.</p>
-<h2 id="verification-vs-validation-and-why-the-vehicle-wins">Verification vs. validation — and why the vehicle wins<a class="headerlink" href="#verification-vs-validation-and-why-the-vehicle-wins" title="Permanent link">&para;</a></h2>
-<p>Here's the one-liner to keep in your pocket: <strong>verification</strong> checks the code
+<h2 id="verification-vs-validation">Verification vs. validation<a class="headerlink" href="#verification-vs-validation" title="Permanent link">&para;</a></h2>
+<p>The distinction in one sentence: <strong>verification</strong> checks the code
 was written correctly against its design; <strong>validation</strong> checks that the
 <em>implemented</em> control logic, running on the real system, actually behaves the
 way the original concept and requirements promised.</p>
-<p>By the time a function reaches you in the vehicle, it has already survived
+<p>By the time a function reaches the vehicle, it has already passed
 simulated environments — MiL (Model-in-the-Loop), SiL (Software-in-the-Loop),
-HiL (Hardware-in-the-Loop). So why bother with the car? Because the vehicle
-gives you three things no rig fully reproduces:</p>
+HiL (Hardware-in-the-Loop). The vehicle nevertheless adds three things no rig
+fully reproduces:</p>
 <ul>
 <li><strong>Real dynamics and disturbances.</strong> Friction, inertia, thermal behavior,
   tolerances — the controlled system answers a stimulus with all its physical
@@ -4471,16 +4483,15 @@ gives you three things no rig fully reproduces:</p>
   simulated or simply absent. In the car, every ECU is live, talking, and
   occasionally interfering.</li>
 <li><strong>Proof of the simulation itself.</strong> A passing vehicle test is evidence that
-  your earlier simulated results were trustworthy. A <em>failing</em> one tells you
-  exactly where the model lied.</li>
+  your earlier simulated results were trustworthy. A <em>failing</em> one shows
+  exactly where the model diverged from reality.</li>
 </ul>
-<p>The price you pay is <strong>controllability</strong>. In a HiL rig you can force any input
+<p>The trade-off is <strong>controllability</strong>. In a HiL rig you can force any input
 to any value at any moment. In a vehicle the sensors are physical, so to reach
 a given system state you must perform an actual <strong>maneuver</strong> — if a function
 only activates with a warm engine, you drive until the coolant reaches
-temperature. Designing maneuvers that reliably push the system into the state
-you need is the core craft of a validator, and it's a skill you'll sharpen with
-every test campaign.</p>
+temperature. Designing maneuvers that reliably bring the system into the
+required state is a core validation skill.</p>
 <h2 id="where-validation-sits-in-the-v-model">Where validation sits in the V-model<a class="headerlink" href="#where-validation-sits-in-the-v-model" title="Permanent link">&para;</a></h2>
 <p><img alt="VIF position in the V-cycle" src="img/v-cycle-vif.webp" /></p>
 <p>This activity is formally called <strong>Vehicle Integrated Functionality (VIF)
@@ -4509,8 +4520,8 @@ The daily workflow:</p>
     G --&gt; H["Issue state monitoring&lt;br/&gt;until fix is released"]
     H --&gt; D</code></pre>
 <h2 id="speaking-the-paperwork-your-validation-document-set">Speaking the paperwork: your validation document set<a class="headerlink" href="#speaking-the-paperwork-your-validation-document-set" title="Permanent link">&para;</a></h2>
-<p>Validation at Stellantis runs on a standard set of documents. You'll see these
-acronyms constantly, so make friends with them now:</p>
+<p>Validation at Stellantis runs on a standard set of documents. These acronyms
+appear throughout the workflow:</p>
 <table>
 <thead>
 <tr>
@@ -4564,18 +4575,17 @@ Check that the sensed valve position stays fully closed for 10 seconds after
 engine start, and that it is partially/fully opened once the temperature has
 been regulated.</p>
 </blockquote>
-<p>Notice the pattern: a condition you can physically realize, a measurable
-expected behavior, and concrete numbers. That's a good test case.</p>
+<p>The pattern to follow: a condition that can be physically realized, a
+measurable expected behavior, and concrete values.</p>
 <div class="admonition tip">
 <p class="admonition-title">Map the names before you drive</p>
 <p>The variables named in the requirement rarely match the labels you read in
 the measurement tool (INCA). Part of your function analysis is mapping
 requirement entities to the real software labels <em>before</em> you go testing —
-discovering the mismatch mid-maneuver is a classic rookie time sink.</p>
+discovering the mismatch mid-maneuver costs significant test time.</p>
 </div>
 <h2 id="worked-example-validating-the-ecm-speed-limiter">Worked example: validating the ECM speed limiter<a class="headerlink" href="#worked-example-validating-the-ecm-speed-limiter" title="Permanent link">&para;</a></h2>
-<p>Theory is nice; a real function is better. Let's follow one validation all the
-way through.</p>
+<p>This section follows one complete validation end to end.</p>
 <h3 id="the-function">The function<a class="headerlink" href="#the-function" title="Permanent link">&para;</a></h3>
 <p>The speed limiter caps vehicle speed at a driver-selected threshold. On the
 PowerNet architecture (Jeep Wrangler) it spans three ECUs: the <strong>SCCM</strong>
@@ -4622,15 +4632,15 @@ reaction to check (the verification).</p>
   torque limitation request.</li>
 </ul>
 <p><img alt="Measurement analysis of the overspeed test" src="img/sl-overspeed-measure.webp" /></p>
-<p>Read the measurement like a story: the driver's SL activation command, the
-vehicle speed drifting above the target, the state machine transitioning into
-the overspeed state once the timer expires, and the SL torque limitation
+<p>The measurement shows the full sequence: the driver's SL activation command,
+the vehicle speed drifting above the target, the state machine transitioning
+into the overspeed state once the timer expires, and the SL torque limitation
 request pulling the speed back down. If all of that matches the spec, the test
-is OK and goes into the report. If not — it's a NOK, and the interesting work
-begins.</p>
+is OK and goes into the report. If not, the result is NOK and enters the
+troubleshooting loop described below.</p>
 <h3 id="a-real-nok-the-start-stop-trap">A real NOK: the Start &amp; Stop trap<a class="headerlink" href="#a-real-nok-the-start-stop-trap" title="Permanent link">&para;</a></h3>
 <p>Some of the most valuable tests target the <strong>interaction between functions</strong> —
-that's where bugs love to hide. In this case the scenario was the speed
+a frequent source of defects. In this case the scenario was the speed
 limiter's behavior after a Start &amp; Stop re-crank. The measurement showed the
 requirement being violated: after the autostop maneuver, the limiter was
 wrongly turned off — the limitation setpoint collapsed to 0 km/h.</p>
@@ -4659,8 +4669,8 @@ That distinction matters, and the next section is built on it.</p>
   of the function. Getting this right saves everyone weeks.</li>
 </ul>
 <h2 id="why-the-vehicle-still-wins-the-cam-backup-story">Why the vehicle still wins: the cam-backup story<a class="headerlink" href="#why-the-vehicle-still-wins-the-cam-backup-story" title="Permanent link">&para;</a></h2>
-<p>Remember the claim that some behaviors can only be judged in the car? Here's
-the proof, from the <strong>crankshaft tone wheel backup strategy</strong>.</p>
+<p>The <strong>crankshaft tone wheel backup strategy</strong> is a concrete case of a behavior
+that can only be assessed conclusively in the vehicle.</p>
 <p>Engine position is essential — injection control, variable valve actuation,
 gear management and fuel pressure all descend from it. The requirement (engine
 speed calculation) says, in essence:</p>
@@ -4700,13 +4710,13 @@ test, two environments:</p>
 </tr>
 </tbody>
 </table>
-<p>Same software, same maneuver — wildly different outcome. The gap comes from
-real engine physics (friction losses, mechanical inertia) that the model didn't
-reproduce reliably. The lesson to tattoo on your brain: <strong>test significance
-depends on the environment</strong>, and the vehicle is the final referee.</p>
+<p>Same software, same maneuver — a markedly different outcome. The gap comes
+from real engine physics (friction losses, mechanical inertia) that the model
+did not reproduce reliably. The conclusion: <strong>test significance depends on the
+environment</strong>, and vehicle testing remains the decisive check.</p>
 <div class="admonition note">
 <p class="admonition-title">Appendix: calibration, ETK and CCP/XCP</p>
-<p>Three terms you'll hear around every validation desk:
+<p>Three terms used routinely in validation work:
 - <strong>Calibration</strong> is what lets one software application run on different
   engine/vehicle variants (a 1.6 L 120 hp manual and a 2.0 L 180 hp
   automatic on the same ECU hardware): the control logic is common, the
@@ -4722,11 +4732,11 @@ depends on the environment</strong>, and the vehicle is the final referee.</p>
   FlexRay, Ethernet or USB (and supports flashing).</p>
 </div>
 <h2 id="hands-on-a-day-on-the-m182-bev-prototype">Hands-on: a day on the M182 BEV prototype<a class="headerlink" href="#hands-on-a-day-on-the-m182-bev-prototype" title="Permanent link">&para;</a></h2>
-<p>Enough theory — here's the practical playbook from a real validation campaign
-on the <strong>Maserati M182</strong> battery-electric prototype. This is what you'll
-practice: finding your way around the car, wiring measurement hardware,
-monitoring buses, flashing ECUs, and injecting faults safely.</p>
-<p>First, meet the cast on the high-voltage side: the <strong>EDM</strong> (Electric Drive
+<p>This section covers the practical procedures from a validation campaign on the
+<strong>Maserati M182</strong> battery-electric prototype: vehicle orientation, wiring
+measurement hardware, monitoring buses, flashing ECUs, and injecting faults
+safely.</p>
+<p>The high-voltage hardware and control modules are: the <strong>EDM</strong> (Electric Drive
 Machine = motor + inverter, 400 V / up to 1 kA), the <strong>OBCM</strong> (On-Board Charger
 Module), the <strong>EVSE</strong> (Electric Vehicle Supply Equipment — the charging
 station), the <strong>ECH/BCH</strong> (coolant heaters), plus the control modules: <strong>SGW</strong>
@@ -4736,19 +4746,19 @@ Pack Control Module), <strong>MCPA/MCPB</strong> (front/rear Motor Control Proce
 <h3 id="getting-oriented-in-the-car">Getting oriented in the car<a class="headerlink" href="#getting-oriented-in-the-car" title="Permanent link">&para;</a></h3>
 <ul>
 <li>The <strong>12 V battery</strong> sits under the front hood. Its negative-pole cable has a
-  button that releases it without tools — handy, because disconnecting the 12 V
-  is a routine step.</li>
+  button that releases it without tools — useful, because disconnecting the
+  12 V is a routine step.</li>
 <li><strong>OBD sockets</strong> — driver side, lower left: the <strong>FD-CAN6</strong> socket (the
   diagnostic CAN, the same one service uses) and next to it the <strong>FD-CAN11</strong>
   socket. Passenger side: three more sockets carrying <strong>FD-CAN 5, 14 and 3</strong>.
   Every cable carries a label with its connection info — always work from those
   labels, never from memory.</li>
-<li>Field trick: you can close the "door closed" switch by hand to keep the door
+<li>It is possible to close the "door closed" switch by hand to keep the door
   open without the acoustic warning.</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">After a 12 V reconnect</p>
-<p>Two things bite you if you forget them:
+<p>Two steps must not be skipped:
 - After detaching/reattaching the 12 V battery you must press the
   door-open button on the key, otherwise the vehicle will not go into
   charge.
@@ -4810,7 +4820,7 @@ the <strong>120 Ω resistor is needed on the vehicle side only</strong>, not on 
    wait until it appears in the application channel mapping, <em>then</em> connect the
    second.</li>
 </ol>
-<p>Practical habits that separate calm validators from panicked ones:</p>
+<p>Recommended monitoring practices:</p>
 <ul>
 <li>If a CAN does not go to sleep, the first message to check is the <strong>NM</strong>
   (Network Management) message — it tells you which ECU is requesting to stay
@@ -4847,7 +4857,8 @@ the <strong>120 Ω resistor is needed on the vehicle side only</strong>, not on 
   Normal to Sport and see if the car lowers (in Offroad it must raise).</li>
 </ul>
 <h3 id="safety-first-the-two-mushrooms-and-the-hvil">Safety first: the two mushrooms and the HVIL<a class="headerlink" href="#safety-first-the-two-mushrooms-and-the-hvil" title="Permanent link">&para;</a></h3>
-<p>Prototype cars carry hardware safety nets. Learn them before you need them:</p>
+<p>Prototype cars carry hardware safety interlocks; their function must be
+understood before vehicle testing:</p>
 <ul>
 <li><strong>Red mushroom</strong> (normally up) — commands <strong>zero torque</strong>. Push it only when
   there is an unintended acceleration.</li>
@@ -4857,8 +4868,7 @@ the <strong>120 Ω resistor is needed on the vehicle side only</strong>, not on 
 <p>The HVIL is a wire that loops in and out of every high-voltage connector. If
 any contact is lost, the <strong>VDCM and BPCM open the contactors</strong> and discharge
 the HV bus: the VDCM first ramps the current down, then the BPCM commands the
-opening — this order protects the contactors from burning under high current.
-Elegant, and worth respecting.</p>
+opening — this order protects the contactors from burning under high current.</p>
 <h3 id="fault-injection-with-the-bob">Fault injection with the BOB<a class="headerlink" href="#fault-injection-with-the-bob" title="Permanent link">&para;</a></h3>
 <p><img alt="BOB hardware setup between vehicle and ECU" src="img/bob-hw-setup.webp" /></p>
 <p>The <strong>BOB</strong> (Breakout Box) replicates the VDCM pinout and sits between the
@@ -4885,8 +4895,8 @@ for these shorts.</p>
 </div>
 <h3 id="inserting-a-gateway">Inserting a gateway<a class="headerlink" href="#inserting-a-gateway" title="Permanent link">&para;</a></h3>
 <p>"Doing a gateway" means <strong>modifying signals on the fly</strong> between the vehicle
-and the VDCM using CAPL in CANalyzer — a powerful trick for testing how the ECU
-reacts to messages it never really received. You need the CAN case and <strong>two
+and the VDCM using CAPL in CANalyzer — used to test how the ECU reacts to
+modified messages. You need the CAN case and <strong>two
 breakout leads</strong> (one vehicle side, one VDCM side) with three output pins for
 CAN/LIN:</p>
 <ol>
@@ -4913,7 +4923,7 @@ If you leave it connected, the vehicle goes to sleep to protect the battery,
 and the <strong>APM</strong> (Auxiliary Power Module) monitors the 12 V state during sleep:
 if it detects discharge, it wakes up and recharges the 12 V battery from the
 400 V HV battery — so with a healthy vehicle, the 12 V battery should never die
-on its own. Nice to know, but disconnect anyway.</p>
+on its own. Disconnect it regardless.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
@@ -4923,15 +4933,16 @@ on its own. Nice to know, but disconnect anyway.</p>
 <li>Requirements become maneuvers (CheckList/DVP): every test is a
   <strong>condition</strong> you realize plus a <strong>verification</strong> you check; NOK results
   open a <strong>DVPM point</strong> and enter the troubleshooting loop.</li>
-<li>You followed the full chain on the speed limiter: requirement → checklist
-  → I/O monitoring → measurement → bug caught in a state transition (a SW
-  bug, not calibration — and knowing the difference is your job).</li>
+<li>The speed limiter example covered the full chain: requirement →
+  checklist → I/O monitoring → measurement → bug found in a state
+  transition (a software bug, not a calibration issue — the distinction
+  determines the fix path).</li>
 <li>Environment matters: the cam-backup strategy passed 8/10 on HiL but only
-  ~5/10 in the vehicle. Trust the car as the final referee.</li>
-<li>On a BEV prototype you're ready to: find the OBD sockets and CAN case
-  channels, never flash with a weak 12 V battery, re-proxy after a battery
-  reconnect, respect the HVIL/mushroom safety logic, and inject faults with
-  the BOB (shorts to battery on the ECU side only, fused cable).</li>
+  ~5/10 in the vehicle; vehicle testing is the decisive check.</li>
+<li>The BEV prototype section covered: locating the OBD sockets and CAN case
+  channels, never flashing with a weak 12 V battery, re-proxying after a
+  battery reconnect, the HVIL/mushroom safety logic, and fault injection
+  with the BOB (shorts to battery on the ECU side only, fused cable).</li>
 </ul>
 </div>
 <hr />
@@ -5028,38 +5039,27 @@ on its own. Nice to know, but disconnect anyway.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -5087,7 +5087,7 @@ on its own. Nice to know, but disconnect anyway.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

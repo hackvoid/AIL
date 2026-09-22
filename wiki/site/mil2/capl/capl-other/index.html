@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4184,10 +4198,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#orczip-a-real-canoe-project-to-dissect" class="md-nav__link">
+  <a href="#orczip-a-complete-canoe-project" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ORC.zip — a real CANoe project to dissect
+        ORC.zip — a complete CANoe project
       
     </span>
   </a>
@@ -4234,26 +4248,25 @@
 
 
 <h1 id="capl-extra-practice-material">CAPL — Extra Practice Material<a class="headerlink" href="#capl-extra-practice-material" title="Permanent link">&para;</a></h1>
-<p>You've made it through the core CAPL (Communication Access Programming Language)
-lessons — event procedures, message objects, timers, symbolic access — and the
-<a href="../capl-exercise/">CAPL exercises</a>. Nice work. This page is where you go
-<strong>next</strong>: two resources that take you from "I can write an <code>on message</code> handler"
-to "I can read a real, production-style CANoe project and understand why it's
-built the way it is."</p>
-<p>Here's what you'll be able to do after spending an afternoon here:</p>
+<p>This page collects two supplementary resources for CAPL (Communication Access
+Programming Language), intended for use after the core lessons — event
+procedures, message objects, timers, symbolic access — and the
+<a href="../capl-exercise/">CAPL exercises</a>. They cover the progression from
+writing individual <code>on message</code> handlers to reading and understanding a
+production-style CANoe project:</p>
 <ul>
-<li>revise any CAPL concept that felt shaky, explained the way an instructor
-  actually teaches it live, and</li>
-<li>open a genuine vehicle simulation project, trace how its panels, environment
-  variables and CAPL nodes talk to each other, and steal its patterns for your
-  own work.</li>
+<li>recorded classroom slide decks for revising any CAPL concept, presented in
+  the order an instructor teaches it live, and</li>
+<li>a complete vehicle simulation project in which you can trace how panels,
+  environment variables and CAPL nodes interact, and reuse its patterns in
+  your own work.</li>
 </ul>
-<p>Nothing here is mandatory — but both resources repay the time many times over.</p>
+<p>Both resources are optional supplementary material.</p>
 <h2 id="wip-decks-capl-taught-live">WIP decks — CAPL taught live<a class="headerlink" href="#wip-decks-capl-taught-live" title="Permanent link">&para;</a></h2>
 <p>The <a href="wip/">WIP</a> sub-section holds the slide decks from two classroom
-sessions recorded in April 2021. They cover the same ground as the main
-<a href="../">CAPL article</a>, but in the order a real instructor builds it up,
-with extra care around the syntax traps that catch every beginner.</p>
+sessions recorded in April 2021. They cover the same material as the main
+<a href="../">CAPL article</a>, but in the order an instructor presents it in a
+classroom, with additional attention to common syntax errors for beginners.</p>
 <table>
 <thead>
 <tr>
@@ -4275,22 +4288,22 @@ with extra care around the syntax traps that catch every beginner.</p>
 </tr>
 </tbody>
 </table>
-<p>Read them <strong>in order</strong> — part 2 assumes you're fluent with the event-procedure
-model from part 1 and builds straight on top of it.</p>
+<p>Read them <strong>in order</strong> — part 2 assumes familiarity with the event-procedure
+model from part 1 and builds directly on it.</p>
 <div class="admonition note">
-<p class="admonition-title">Overlap is a feature, not a bug</p>
-<p>Yes, these decks repeat material from the main article. That's the point.
-When a concept didn't click the first time — say, the difference between a
-timer <em>variable</em> and a timer <em>event procedure</em>, or what <code>this</code> means inside
-<code>on message</code> — hearing it explained differently is usually what unblocks
-it. Treat part 1 as a revision pass and part 2 as your bridge from syntax
-to real simulations.</p>
+<p class="admonition-title">Intentional overlap with the main article</p>
+<p>These decks intentionally repeat material from the main article. Concepts
+that were unclear on first reading — for example, the difference between a
+timer <em>variable</em> and a timer <em>event procedure</em>, or the meaning of <code>this</code>
+inside <code>on message</code> — are often clarified by a second explanation in
+different words. Use part 1 as a revision pass and part 2 as the transition
+from syntax to complete simulations.</p>
 </div>
-<h2 id="orczip-a-real-canoe-project-to-dissect">ORC.zip — a real CANoe project to dissect<a class="headerlink" href="#orczip-a-real-canoe-project-to-dissect" title="Permanent link">&para;</a></h2>
-<p>Reading about CAPL is one thing; reading a working configuration is where it
-becomes intuition. <code>ORC.zip</code> is a complete <strong>CANoe configuration for the P520
-platform (Jeep Renegade)</strong> — the kind of project you'd be handed on day one at
-an OEM or Tier-1. Unpack it, open the <code>.cfg</code> file in CANoe, and explore:</p>
+<h2 id="orczip-a-complete-canoe-project">ORC.zip — a complete CANoe project<a class="headerlink" href="#orczip-a-complete-canoe-project" title="Permanent link">&para;</a></h2>
+<p>Reading a working configuration complements the syntax reference in the decks.
+<code>ORC.zip</code> is a complete <strong>CANoe configuration for the P520 platform (Jeep
+Renegade)</strong>, representative of the projects used in OEM and Tier-1 development.
+Unpack it, open the <code>.cfg</code> file in CANoe, and examine its contents:</p>
 <table>
 <thead>
 <tr>
@@ -4327,8 +4340,8 @@ an OEM or Tier-1. Unpack it, open the <code>.cfg</code> file in CANoe, and explo
 </tr>
 </tbody>
 </table>
-<p>The thing to notice while exploring is the data flow — this is the pattern
-you'll recreate in your own projects:</p>
+<p>The key aspect to observe while exploring is the data flow, which follows the
+same pattern in most CANoe simulation projects:</p>
 <pre class="kx-mermaid"><code>flowchart LR
     P["Panel switch&lt;br/&gt;(.cbf panel)"] --&gt;|writes| E[Environment variable]
     E --&gt;|triggers| C["on envVar event&lt;br/&gt;CAPL node (.can)"]
@@ -4336,14 +4349,14 @@ you'll recreate in your own projects:</p>
     D --&gt;|output()| B(("CAN bus&lt;br/&gt;C1 / C2"))
     B --&gt;|feeds| T[Trace &amp; other nodes]</code></pre>
 <div class="admonition tip">
-<p class="admonition-title">Your 20-minute tour</p>
+<p class="admonition-title">Suggested exploration</p>
 <p>Load <code>P520_E3A_R7_CAN.cfg</code> in CANoe and open the Simulation Setup. The
 pencil icon on a network node means it carries a CAPL program — double-click
 it to open the <code>.can</code> file in the CAPL Browser. Then pick one panel switch
 and follow it end to end: which environment variable it writes, which
 <code>on envVar</code> handler reacts, which signals get set, and which message goes
-out on the bus. Doing this once with a real project teaches you more than
-re-reading any deck.</p>
+out on the bus. Tracing one complete path through a real configuration is
+the most effective way to consolidate this material.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Confidential content</p>
@@ -4353,16 +4366,17 @@ Use them for local training only — do not share or publish them.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>This page is your deepening shelf, not a new exam topic — dip in whenever
-  a CAPL idea needs a second explanation.</li>
-<li>The <a href="wip/">WIP</a> decks re-teach CAPL the way an instructor does:
-  fundamentals in part 1, symbolic access, panels and functions in part 2.
-  Read them in order.</li>
-<li><code>ORC.zip</code> is a full P520/Renegade CANoe project — two DBCs, CAPL source,
-  panels, configurations. Open it and trace one switch all the way to a bus
-  frame.</li>
-<li>You now have the pattern that powers every CANoe simulation: panel →
-  environment variable → CAPL event procedure → signals → CAN frame.</li>
+<li>This page provides supplementary material for the CAPL lessons: two
+  recorded classroom decks and a complete CANoe project, for use when a
+  CAPL concept needs a second explanation.</li>
+<li>The <a href="wip/">WIP</a> decks cover the same content as the main article
+  in classroom order: fundamentals in part 1, symbolic access, panels and
+  functions in part 2. Read them in order.</li>
+<li><code>ORC.zip</code> contains a full P520/Renegade CANoe project — two DBCs, CAPL
+  source, panels, configurations — for tracing one panel switch through to
+  the corresponding bus frame.</li>
+<li>The standard data flow in CANoe simulations is: panel → environment
+  variable → CAPL event procedure → signals → CAN frame.</li>
 </ul>
 </div>
 <h2 id="sub-sections">Sub-sections<a class="headerlink" href="#sub-sections" title="Permanent link">&para;</a></h2>
@@ -4460,38 +4474,27 @@ Use them for local training only — do not share or publish them.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4519,7 +4522,7 @@ Use them for local training only — do not share or publish them.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

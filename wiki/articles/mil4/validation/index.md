@@ -1,35 +1,32 @@
 # Vehicle Validation
 
-Welcome to the last — and most honest — test stage of the whole development
-cycle. Everything so far (simulation, bench rigs, lab measurements) has been a
-rehearsal. Vehicle validation is opening night: real car, real physics, real
-ECUs talking to each other, and you behind the wheel with a laptop and a
-checklist.
+Vehicle validation is the final test stage of the development cycle. Earlier
+stages (simulation, bench rigs, lab measurements) exercise the function in
+controlled environments; vehicle validation tests it in the real car, with
+real physics and all ECUs interacting.
 
-By the end of this article you'll be able to:
+This article covers:
 
-- explain what **validation** checks that verification doesn't, and why the
-  vehicle is the one environment you can't skip,
-- follow the validation workflow from requirement to frozen software, and read
-  the document set (VF, CFTS, CheckList, DVPM) that drives it,
-- walk through a real worked example — the ECM speed limiter — from spec, to
-  maneuver, to measurement, to a caught software bug,
-- work safely and confidently around a BEV prototype: wire a CAN case, flash
-  ECUs, and inject faults without frying anything.
+- what **validation** checks that verification doesn't, and why the vehicle
+  environment cannot be skipped,
+- the validation workflow from requirement to frozen software, and the
+  document set (VF, CFTS, CheckList, DVPM) that drives it,
+- a worked example — the ECM speed limiter — from spec, to maneuver, to
+  measurement, to a detected software bug,
+- safe working practice on a BEV prototype: wiring a CAN case, flashing ECUs,
+  and injecting faults.
 
-Let's start with the big picture.
+## Verification vs. validation
 
-## Verification vs. validation — and why the vehicle wins
-
-Here's the one-liner to keep in your pocket: **verification** checks the code
+The distinction in one sentence: **verification** checks the code
 was written correctly against its design; **validation** checks that the
 *implemented* control logic, running on the real system, actually behaves the
 way the original concept and requirements promised.
 
-By the time a function reaches you in the vehicle, it has already survived
+By the time a function reaches the vehicle, it has already passed
 simulated environments — MiL (Model-in-the-Loop), SiL (Software-in-the-Loop),
-HiL (Hardware-in-the-Loop). So why bother with the car? Because the vehicle
-gives you three things no rig fully reproduces:
+HiL (Hardware-in-the-Loop). The vehicle nevertheless adds three things no rig
+fully reproduces:
 
 - **Real dynamics and disturbances.** Friction, inertia, thermal behavior,
   tolerances — the controlled system answers a stimulus with all its physical
@@ -38,16 +35,15 @@ gives you three things no rig fully reproduces:
   simulated or simply absent. In the car, every ECU is live, talking, and
   occasionally interfering.
 - **Proof of the simulation itself.** A passing vehicle test is evidence that
-  your earlier simulated results were trustworthy. A *failing* one tells you
-  exactly where the model lied.
+  your earlier simulated results were trustworthy. A *failing* one shows
+  exactly where the model diverged from reality.
 
-The price you pay is **controllability**. In a HiL rig you can force any input
+The trade-off is **controllability**. In a HiL rig you can force any input
 to any value at any moment. In a vehicle the sensors are physical, so to reach
 a given system state you must perform an actual **maneuver** — if a function
 only activates with a warm engine, you drive until the coolant reaches
-temperature. Designing maneuvers that reliably push the system into the state
-you need is the core craft of a validator, and it's a skill you'll sharpen with
-every test campaign.
+temperature. Designing maneuvers that reliably bring the system into the
+required state is a core validation skill.
 
 ## Where validation sits in the V-model
 
@@ -83,8 +79,8 @@ flowchart TD
 
 ## Speaking the paperwork: your validation document set
 
-Validation at Stellantis runs on a standard set of documents. You'll see these
-acronyms constantly, so make friends with them now:
+Validation at Stellantis runs on a standard set of documents. These acronyms
+appear throughout the workflow:
 
 | Document | What it is |
 |---|---|
@@ -116,19 +112,18 @@ approaches the target idling temperature. The corresponding test case reads:
 > engine start, and that it is partially/fully opened once the temperature has
 > been regulated.
 
-Notice the pattern: a condition you can physically realize, a measurable
-expected behavior, and concrete numbers. That's a good test case.
+The pattern to follow: a condition that can be physically realized, a
+measurable expected behavior, and concrete values.
 
 !!! tip "Map the names before you drive"
     The variables named in the requirement rarely match the labels you read in
     the measurement tool (INCA). Part of your function analysis is mapping
     requirement entities to the real software labels *before* you go testing —
-    discovering the mismatch mid-maneuver is a classic rookie time sink.
+    discovering the mismatch mid-maneuver costs significant test time.
 
 ## Worked example: validating the ECM speed limiter
 
-Theory is nice; a real function is better. Let's follow one validation all the
-way through.
+This section follows one complete validation end to end.
 
 ### The function
 
@@ -183,17 +178,17 @@ While you execute it, you monitor the function's inputs and outputs live:
 
 ![Measurement analysis of the overspeed test](img/sl-overspeed-measure.webp)
 
-Read the measurement like a story: the driver's SL activation command, the
-vehicle speed drifting above the target, the state machine transitioning into
-the overspeed state once the timer expires, and the SL torque limitation
+The measurement shows the full sequence: the driver's SL activation command,
+the vehicle speed drifting above the target, the state machine transitioning
+into the overspeed state once the timer expires, and the SL torque limitation
 request pulling the speed back down. If all of that matches the spec, the test
-is OK and goes into the report. If not — it's a NOK, and the interesting work
-begins.
+is OK and goes into the report. If not, the result is NOK and enters the
+troubleshooting loop described below.
 
 ### A real NOK: the Start & Stop trap
 
 Some of the most valuable tests target the **interaction between functions** —
-that's where bugs love to hide. In this case the scenario was the speed
+a frequent source of defects. In this case the scenario was the speed
 limiter's behavior after a Start & Stop re-crank. The measurement showed the
 requirement being violated: after the autostop maneuver, the limiter was
 wrongly turned off — the limitation setpoint collapsed to 0 km/h.
@@ -230,8 +225,8 @@ The rules that keep the loop honest:
 
 ## Why the vehicle still wins: the cam-backup story
 
-Remember the claim that some behaviors can only be judged in the car? Here's
-the proof, from the **crankshaft tone wheel backup strategy**.
+The **crankshaft tone wheel backup strategy** is a concrete case of a behavior
+that can only be assessed conclusively in the vehicle.
 
 Engine position is essential — injection control, variable valve actuation,
 gear management and fuel pressure all descend from it. The requirement (engine
@@ -261,13 +256,13 @@ test, two environments:
 | HiL | 8 out of 10 |
 | Vehicle | about 5 out of 10 |
 
-Same software, same maneuver — wildly different outcome. The gap comes from
-real engine physics (friction losses, mechanical inertia) that the model didn't
-reproduce reliably. The lesson to tattoo on your brain: **test significance
-depends on the environment**, and the vehicle is the final referee.
+Same software, same maneuver — a markedly different outcome. The gap comes
+from real engine physics (friction losses, mechanical inertia) that the model
+did not reproduce reliably. The conclusion: **test significance depends on the
+environment**, and vehicle testing remains the decisive check.
 
 !!! note "Appendix: calibration, ETK and CCP/XCP"
-    Three terms you'll hear around every validation desk:
+    Three terms used routinely in validation work:
     - **Calibration** is what lets one software application run on different
       engine/vehicle variants (a 1.6 L 120 hp manual and a 2.0 L 180 hp
       automatic on the same ECU hardware): the control logic is common, the
@@ -284,12 +279,12 @@ depends on the environment**, and the vehicle is the final referee.
 
 ## Hands-on: a day on the M182 BEV prototype
 
-Enough theory — here's the practical playbook from a real validation campaign
-on the **Maserati M182** battery-electric prototype. This is what you'll
-practice: finding your way around the car, wiring measurement hardware,
-monitoring buses, flashing ECUs, and injecting faults safely.
+This section covers the practical procedures from a validation campaign on the
+**Maserati M182** battery-electric prototype: vehicle orientation, wiring
+measurement hardware, monitoring buses, flashing ECUs, and injecting faults
+safely.
 
-First, meet the cast on the high-voltage side: the **EDM** (Electric Drive
+The high-voltage hardware and control modules are: the **EDM** (Electric Drive
 Machine = motor + inverter, 400 V / up to 1 kA), the **OBCM** (On-Board Charger
 Module), the **EVSE** (Electric Vehicle Supply Equipment — the charging
 station), the **ECH/BCH** (coolant heaters), plus the control modules: **SGW**
@@ -300,18 +295,18 @@ Pack Control Module), **MCPA/MCPB** (front/rear Motor Control Processors),
 ### Getting oriented in the car
 
 - The **12 V battery** sits under the front hood. Its negative-pole cable has a
-  button that releases it without tools — handy, because disconnecting the 12 V
-  is a routine step.
+  button that releases it without tools — useful, because disconnecting the
+  12 V is a routine step.
 - **OBD sockets** — driver side, lower left: the **FD-CAN6** socket (the
   diagnostic CAN, the same one service uses) and next to it the **FD-CAN11**
   socket. Passenger side: three more sockets carrying **FD-CAN 5, 14 and 3**.
   Every cable carries a label with its connection info — always work from those
   labels, never from memory.
-- Field trick: you can close the "door closed" switch by hand to keep the door
+- It is possible to close the "door closed" switch by hand to keep the door
   open without the acoustic warning.
 
 !!! warning "After a 12 V reconnect"
-    Two things bite you if you forget them:
+    Two steps must not be skipped:
     - After detaching/reattaching the 12 V battery you must press the
       door-open button on the key, otherwise the vehicle will not go into
       charge.
@@ -357,7 +352,7 @@ the **120 Ω resistor is needed on the vehicle side only**, not on the VDCM side
    wait until it appears in the application channel mapping, *then* connect the
    second.
 
-Practical habits that separate calm validators from panicked ones:
+Recommended monitoring practices:
 
 - If a CAN does not go to sleep, the first message to check is the **NM**
   (Network Management) message — it tells you which ECU is requesting to stay
@@ -393,7 +388,8 @@ Practical habits that separate calm validators from panicked ones:
 
 ### Safety first: the two mushrooms and the HVIL
 
-Prototype cars carry hardware safety nets. Learn them before you need them:
+Prototype cars carry hardware safety interlocks; their function must be
+understood before vehicle testing:
 
 - **Red mushroom** (normally up) — commands **zero torque**. Push it only when
   there is an unintended acceleration.
@@ -404,7 +400,6 @@ The HVIL is a wire that loops in and out of every high-voltage connector. If
 any contact is lost, the **VDCM and BPCM open the contactors** and discharge
 the HV bus: the VDCM first ramps the current down, then the BPCM commands the
 opening — this order protects the contactors from burning under high current.
-Elegant, and worth respecting.
 
 ### Fault injection with the BOB
 
@@ -435,8 +430,8 @@ parenthesized pair is just a duplicate and can be ignored):
 ### Inserting a gateway
 
 "Doing a gateway" means **modifying signals on the fly** between the vehicle
-and the VDCM using CAPL in CANalyzer — a powerful trick for testing how the ECU
-reacts to messages it never really received. You need the CAN case and **two
+and the VDCM using CAPL in CANalyzer — used to test how the ECU reacts to
+modified messages. You need the CAN case and **two
 breakout leads** (one vehicle side, one VDCM side) with three output pins for
 CAN/LIN:
 
@@ -463,7 +458,7 @@ If you leave it connected, the vehicle goes to sleep to protect the battery,
 and the **APM** (Auxiliary Power Module) monitors the 12 V state during sleep:
 if it detects discharge, it wakes up and recharges the 12 V battery from the
 400 V HV battery — so with a healthy vehicle, the 12 V battery should never die
-on its own. Nice to know, but disconnect anyway.
+on its own. Disconnect it regardless.
 
 !!! success "Key takeaways"
     - Validation proves the implemented software against the original
@@ -472,12 +467,13 @@ on its own. Nice to know, but disconnect anyway.
     - Requirements become maneuvers (CheckList/DVP): every test is a
       **condition** you realize plus a **verification** you check; NOK results
       open a **DVPM point** and enter the troubleshooting loop.
-    - You followed the full chain on the speed limiter: requirement → checklist
-      → I/O monitoring → measurement → bug caught in a state transition (a SW
-      bug, not calibration — and knowing the difference is your job).
+    - The speed limiter example covered the full chain: requirement →
+      checklist → I/O monitoring → measurement → bug found in a state
+      transition (a software bug, not a calibration issue — the distinction
+      determines the fix path).
     - Environment matters: the cam-backup strategy passed 8/10 on HiL but only
-      ~5/10 in the vehicle. Trust the car as the final referee.
-    - On a BEV prototype you're ready to: find the OBD sockets and CAN case
-      channels, never flash with a weak 12 V battery, re-proxy after a battery
-      reconnect, respect the HVIL/mushroom safety logic, and inject faults with
-      the BOB (shorts to battery on the ECU side only, fused cable).
+      ~5/10 in the vehicle; vehicle testing is the decisive check.
+    - The BEV prototype section covered: locating the OBD sockets and CAN case
+      channels, never flashing with a weak 12 V battery, re-proxying after a
+      battery reconnect, the HVIL/mushroom safety logic, and fault injection
+      with the BOB (shorts to battery on the ECU side only, fused cable).

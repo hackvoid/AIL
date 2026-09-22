@@ -1,13 +1,13 @@
 <div class="kx-hero" markdown>
-<span class="kx-hero__badge">Kineton Academy · Onboarding Platform</span>
+<span class="kx-hero__badge">Kineton Academy · E/E Engineering Bootcamp</span>
 
-# Your orbit starts here
+# Kineton Academy Wiki
 
 <p class="kx-hero__sub" markdown>
-Welcome, engineer. This is the knowledge base for the Academy bootcamp in
-automotive E/E engineering — every lesson rewritten as a readable article, with
-diagrams, real-bench exercises and the original files one click away. Work
-through the modules in order, or jump straight to what you need.
+This site is the knowledge base for the Kineton Academy bootcamp in automotive
+E/E engineering. Each lesson is a self-contained article with diagrams, bench
+exercises, and links to the original source files. The four modules below
+follow the bootcamp sequence.
 </p>
 
 <div class="kx-hero__stats" markdown>
@@ -72,12 +72,11 @@ through the modules in order, or jump straight to what you need.
 
 </div>
 
-!!! tip "New here? Your first week"
-    1. Read [CAN, LIN & Automotive Ethernet](mil1/can-lin/index.md) — everything
-       else builds on it.
-    2. Skim the [V-Cycle](mil1/v-cycle/index.md) article to see how your work
-       fits the development process.
-    3. Open the **✦ AI Assistant** panel on the right whenever you feel lost —
-       it will guide you once connected (currently in preview).
-    4. Keep the [Glossary](glossary/index.md) open in a tab — automotive loves
-       acronyms.
+!!! tip "Suggested starting points"
+    1. Read [CAN, LIN & Automotive Ethernet](mil1/can-lin/index.md) — the basis
+       for all later tooling lessons.
+    2. Read the [V-Cycle](mil1/v-cycle/index.md) article for the development
+       process used throughout the course.
+    3. Use the [Glossary](glossary/index.md) as a reference for acronyms.
+    4. The **Assistant** panel on the right answers questions about the course
+       content once its backend is connected (currently in preview).

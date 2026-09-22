@@ -1,12 +1,12 @@
 # Hybrid Vehicle Architectures
 
-Welcome to your first look at how electrified vehicles are actually put
-together. Almost every project you will touch during the bootcamp — and later
-on the job — involves some mix of combustion engine and electric motor, so
-being able to "read" a hybrid architecture is a daily skill for an E/E
-engineer: it tells you which control units exist, what energy flows where, and
-which operating modes a vehicle can physically perform. By the end of this
-article you will be able to decode any architecture name like **P1P4**,
+This article describes how electrified vehicles are structured at the
+architecture level. Most vehicle projects involve some combination of
+combustion engine and electric motor, so reading a hybrid architecture is a
+routine task for an E/E engineer: it identifies which control units exist,
+how energy flows, and which operating modes a vehicle can physically perform.
+After this article you will be able to decode an architecture name such as
+**P1P4**,
 classify a vehicle on the electrification ladder (micro → mild → full →
 plug-in → electric), and explain how a real plug-in hybrid switches between
 its driving modes.
@@ -20,9 +20,9 @@ its driving modes.
 ## Motor positions: the P0–P4 nomenclature
 
 Hybrid architectures are named after **where the electric machine sits** in
-the driveline — and this is the single most useful mental model in the whole
-topic. The position determines what the motor can do: a belt-driven motor can
-only assist the engine, while a motor on its own axle can drive the car alone.
+the driveline. The position determines what the motor can do: a belt-driven
+motor can only assist the engine, while a motor on its own axle can drive the
+car alone.
 
 ![Electric motor positions P0 to P4 in the driveline](img/motor-positions-p0-p4.webp)
 
@@ -44,10 +44,9 @@ battery-electric vehicles you will work on.
 
 !!! tip "Reading architecture names"
     A name like **P1P4** is simply the list of positions in use: a P1 machine
-    coupled to the engine plus a P4 machine on the rear axle. When you meet an
-    unfamiliar hybrid, decode its P-code first — it tells you immediately
-    which operating modes are physically possible, before you have seen a
-    single schematic.
+    coupled to the engine plus a P4 machine on the rear axle. For an
+    unfamiliar hybrid, decoding its P-code first indicates which operating
+    modes are physically possible.
 
 ## The electrification ladder
 
@@ -83,8 +82,8 @@ under 10 km/h (parking manoeuvres, stop-and-go queues) and typically carry a
 
 ### Full hybrid (FHEV)
 
-The full hybrid was the real revolution: born in **1997 with Toyota**, it was
-the first architecture to fundamentally change vehicle propulsion. An FHEV can
+The full hybrid was introduced by **Toyota in 1997** and was the first
+architecture to fundamentally change vehicle propulsion. An FHEV can
 drive electrically for a few kilometres at speeds defined by the manufacturer.
 Its battery (roughly 6 kWh class) is charged **only by recovering kinetic
 energy** — there is no plug, so the usable electric range is bounded by how
@@ -96,8 +95,7 @@ A PHEV keeps the full-hybrid architecture and removes its two limits: the
 battery **can be charged from an external charging point**, and it can be
 **larger**, because its size is no longer constrained by what kinetic
 recuperation can store. The Jeep Compass and Renegade **4xe** are the
-Stellantis examples of this layout — and the ones you are most likely to meet
-first in your project work.
+Stellantis examples of this layout.
 
 ## BEV architecture and torque control
 
@@ -111,9 +109,8 @@ delivering up to **200 Nm** of torque with an expected range of about
 
 ### The powertrain controllers
 
-A Stellantis BEV splits powertrain control across four main modules. You will
-see these acronyms in network traces and diagnostic sessions throughout your
-career, so it is worth learning them now:
+A Stellantis BEV splits powertrain control across four main modules. These
+acronyms appear frequently in network traces and diagnostic sessions:
 
 | Module | Responsibility |
 |---|---|
@@ -171,7 +168,7 @@ most efficient point) only when the battery needs support.
 
 ## P1P4 plug-in hybrid: the operating modes
 
-Now let's put it all together. The P1P4 layout — used, for example, on the
+The P1P4 layout — used, for example, on the
 Jeep 4xe models — combines a **P1f machine on the engine** with a **P4 machine
 on the rear axle**, giving the energy manager three ways to move the car:
 
@@ -215,8 +212,8 @@ The categories are not rivals but trade-offs along three axes:
   favour highway efficiency while series paths favour urban stop-and-go.
 
 !!! success "Key takeaways"
-    - You can now decode any P-code: motor **position** (P0–P4) defines what a
-      hybrid can do, and names like P1P4 just list the positions in use.
+    - Motor **position** (P0–P4) defines what a
+      hybrid can do, and names like P1P4 list the positions in use.
     - The ladder runs micro (12 V belt assist) → mild (48 V, P2.5) → full
       (~6 kWh, kinetic-only charging) → plug-in (external charging, bigger
       battery) → BEV (single-ratio P4, e.g. 500e: 70 kW, 400 V, 200 Nm,

@@ -1,10 +1,11 @@
 # CAPL Exercise 8 — Logging, Graphics and Your First CAPL Node
 
-Welcome to the final exercise of the CAPL (**Communication Access Programming
+This is the final exercise of the CAPL (**Communication Access Programming
 Language**, Vector's C-like scripting language for CANoe/CANalyzer) block.
-Everything you have practiced so far comes together here: you will set up a
-complete measurement on a real bus *and* write your first CAPL program node
-that reacts to that measurement as it runs.
+It combines the measurement setup tasks from the previous exercises with the
+creation of a first CAPL program node: you will set up a complete measurement
+on a real bus *and* write a CAPL node that reacts to that measurement as it
+runs.
 
 By the end of this exercise you will be able to:
 
@@ -16,8 +17,8 @@ By the end of this exercise you will be able to:
   measurement, prints the payload of a received CAN message, and transmits a
   cyclic frame that the connected ECU actually accepts.
 
-What you'll practice: thinking like a test engineer — observe first, then
-script behavior on top of what you see.
+The workflow follows the standard test-engineering sequence: observe the bus
+first, then script behavior on top of the observed traffic.
 
 ## Goal
 
@@ -51,8 +52,8 @@ Build a configuration that:
 !!! tip "Check the bus first"
     Before writing a single line of CAPL, run a plain measurement and confirm
     traffic shows up in the Trace window. A silent bus almost always means a
-    wrong bit rate, a missing termination, or a wrong channel mapping — fix
-    that now, not after you've written your script.
+    wrong bit rate, a missing termination, or a wrong channel mapping — these
+    issues must be corrected before any scripting work begins.
 
 ## Steps
 
@@ -78,8 +79,8 @@ Build a configuration that:
 Insert a **program node** in the Measurement Setup (right-click on the CAN
 bus line → *Insert CAPL Test Module / Program node*) and open the CAPL
 Browser. CAPL is purely **event-driven**: instead of a main loop, you write
-handlers that fire when something happens. Your whole program is four small
-handlers:
+handlers that fire when something happens. The complete program consists of
+four handlers:
 
 ```mermaid
 flowchart LR
@@ -125,7 +126,7 @@ on stopMeasure
 }
 ```
 
-Walk through it once, handler by handler:
+The four handlers in detail:
 
 - **`on start` / `on stopMeasure`** bracket the entire measurement — this is
   where the `"Started"` / `"Stopped"` prints belong, not inside a message
@@ -168,11 +169,13 @@ Walk through it once, handler by handler:
       or nothing but error frames.
 
 !!! success "Key takeaways"
-    - You can now build a full measurement setup — Trace + Logging +
-      Graphics — decoded by a DBC that turns raw frames into named signals.
-    - CAPL is event-driven: `on start`, `on message`, `on timer` and
-      `on stopMeasure` are all you needed for this whole exercise.
-    - Cyclic transmission = `output()` inside a re-armed timer, and the cycle
-      time must match the DBC or the receiving ECU will fault.
-    - `this.byte(n)` hands you any received frame's payload, one byte at a
-      time — your first real step into scripted bus behavior.
+    - A complete measurement setup combines Trace, Logging, and Graphics
+      windows, with a DBC decoding raw frames into named signals.
+    - CAPL is event-driven: the four handlers `on start`, `on message`,
+      `on timer`, and `on stopMeasure` cover all behaviors required by this
+      exercise.
+    - Cyclic transmission is implemented with `output()` inside a re-armed
+      timer, and the cycle time must match the DBC or the receiving ECU will
+      fault.
+    - `this.byte(n)` reads the payload of a received frame one byte at a
+      time, providing the basis for scripted reactions to bus traffic.

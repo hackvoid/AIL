@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4359,20 +4373,19 @@
 
 
 <h1 id="vehicle-ee-architecture">Vehicle E/E Architecture<a class="headerlink" href="#vehicle-ee-architecture" title="Permanent link">&para;</a></h1>
-<p>Welcome to your first look under the hood of a modern car — not the engine, but
-the <em>nervous system</em>. An average new vehicle carries <strong>more than 40 electronic
-control units (ECUs)</strong> — small computers, each responsible for something like
-braking, climate or airbags — connected by about <strong>five miles of wiring</strong> and
-running <strong>over 10 million lines of software</strong>. Electronics now make up close to
-<strong>40% of a vehicle's content</strong>, and the share keeps growing.</p>
+<p>An average new vehicle carries <strong>more than 40 electronic
+control units (ECUs)</strong> — small computers, each responsible for functions such
+as braking, climate or airbags — connected by about <strong>five miles of wiring</strong>
+and running <strong>over 10 million lines of software</strong>. Electronics now make up
+close to <strong>40% of a vehicle's content</strong>, and the share keeps growing.</p>
 <p>The <strong>E/E (Electrical/Electronic) Architecture</strong> is the plan that holds all of
 this together: which ECUs exist, which communication buses they sit on, how they
-are powered, and how they exchange signals. Why should you care? Because almost
-everything you will do in this bootcamp — reading a CAN trace, diagnosing an
-ECU, testing a vehicle function — happens <em>inside</em> an architecture like the
-ones described here. By the end of this article you will be able to read a
-vehicle network topology, name the buses and their speeds, and run your first
-hands-on health check on a real car with nothing more than a multimeter.</p>
+are powered, and how they exchange signals. Nearly every task covered in this
+bootcamp — reading a CAN trace, diagnosing an ECU, testing a vehicle function —
+takes place inside an architecture of this kind. This article explains how to
+read a vehicle network topology, identifies the buses and their speeds, and
+walks through a first hands-on health check on a real vehicle using only a
+multimeter.</p>
 <p>The pressure behind all this growth comes from four directions:</p>
 <ul>
 <li>fuel economy and electrification,</li>
@@ -4382,10 +4395,9 @@ hands-on health check on a real car with nothing more than a multimeter.</p>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">A word about acronyms</p>
-<p>Automotive engineering runs on three-letter acronyms. We explain each one
-the first time it appears, and there is a full decoder box further down —
-don't try to memorize them all on the first read; you will pick them up
-naturally as you work with the tools.</p>
+<p>Automotive engineering relies heavily on three-letter acronyms. Each one is
+explained the first time it appears, and a summary table appears further
+down in this article.</p>
 </div>
 <h2 id="what-the-ee-architecture-covers-and-what-it-does-not">What the E/E architecture covers — and what it does not<a class="headerlink" href="#what-the-ee-architecture-covers-and-what-it-does-not" title="Permanent link">&para;</a></h2>
 <p>The architecture work sits <strong>above</strong> the individual components and <strong>before</strong>
@@ -4406,13 +4418,12 @@ to reach performance targets.</p>
 <p class="admonition-title">Note</p>
 <p>Think of the E/E architecture as the "constitution" of the vehicle's
 electronics: it fixes the rules, the partitions and the interfaces. What
-each ECU then <em>does</em> inside those rules is application work — and that
-application work is where you will spend most of the bootcamp.</p>
+each ECU then <em>does</em> inside those rules is application work, which is
+outside the architecture definition.</p>
 </div>
 <h2 id="the-documents-that-define-an-architecture">The documents that define an architecture<a class="headerlink" href="#the-documents-that-define-an-architecture" title="Permanent link">&para;</a></h2>
 <p>An E/E architecture is not one drawing — it is a set of coordinated
-specifications. You will meet these documents again and again, so it is worth
-knowing what each one is for:</p>
+specifications. The table below summarizes the purpose of each:</p>
 <table>
 <thead>
 <tr>
@@ -4460,11 +4471,11 @@ knowing what each one is for:</p>
 </tbody>
 </table>
 <p>Electrical interfaces (sensors, pedal assembly, starter), ECU re-programming,
-cyber-security level, AUTOSAR compliance and the standard CAN map all hang off
-this same definition.</p>
+cyber-security level, AUTOSAR compliance and the standard CAN map are all
+covered by this same definition.</p>
 <h2 id="key-drivers-of-architecture-development">Key drivers of architecture development<a class="headerlink" href="#key-drivers-of-architecture-development" title="Permanent link">&para;</a></h2>
-<p>Why can't an architecture just stay frozen? Four forces keep pushing it to
-evolve — and they explain most of the design decisions you will see later:</p>
+<p>Four forces keep pushing an architecture to
+evolve, and they explain most of the design decisions described later:</p>
 <ol>
 <li><strong>Integration and function complexity.</strong> The volume and complexity of new
    requirements grows at an exponential rate — every new feature adds signals,
@@ -4472,9 +4483,8 @@ evolve — and they explain most of the design decisions you will see later:</p>
 <li><strong>Bus load capacity.</strong> Current networks already run at <strong>50–60% bus load</strong>
    on the C-CAN. To guarantee robust communication (no missed messages, no
    latency problems), networks are kept below a <strong>65–70%</strong> threshold. New
-   features must be budgeted against this limit, or the bus will overflow —
-   which is why "how much bus load does your feature add?" is a question you
-   will hear in real projects.</li>
+   features must be budgeted against this limit, or the bus will overflow;
+   bus load is therefore a standard review question for every new feature.</li>
 <li><strong>Cyber security.</strong> Vehicles must be protected against attack. Secure CAN
    communication needs message authentication, which <strong>increases message data
    by ~50%</strong>; safety-critical modules need hardware <strong>trust anchors</strong> — as
@@ -4494,8 +4504,8 @@ carry the high-level integration requirements between vehicle ECUs and are
 detail (signals exchanged, algorithms, conditions) in the functional
 specifications you will study in the <a href="../../mil3/vf/">VF</a> lessons.</p>
 <h2 id="network-topology-how-real-architectures-are-laid-out">Network topology: how real architectures are laid out<a class="headerlink" href="#network-topology-how-real-architectures-are-laid-out" title="Permanent link">&para;</a></h2>
-<p>Time to see the real thing. The Stellantis/FCA architectures below illustrate
-how the industry evolved. All of them share the same backbone ideas — <strong>11-bit
+<p>The Stellantis/FCA architectures below illustrate
+how the industry evolved. They share the same backbone ideas — <strong>11-bit
 CAN IDs</strong>, <strong>LIN 2.x</strong> sub-networks, cruise-control commands on a LIN connected
 to the <strong>BCM (Body Control Module)</strong>, a signal-key architecture, and an
 advanced frame-security mechanism (CRC/message-counter coverage) — and differ
@@ -4553,7 +4563,7 @@ network.)</p>
 <p><img alt="500 BEV (P332) network topology — buses, domains and the BCM/SGW hub" src="img/bev-topology.webp" /></p>
 <h2 id="the-can-buses-of-the-vehicle">The CAN buses of the vehicle<a class="headerlink" href="#the-can-buses-of-the-vehicle" title="Permanent link">&para;</a></h2>
 <p>Vehicles split traffic over several CAN buses classified by baud rate, so that
-slow comfort gadgets never delay a braking message:</p>
+slow comfort traffic never delays a braking message:</p>
 <table>
 <thead>
 <tr>
@@ -4587,8 +4597,8 @@ slow comfort gadgets never delay a braking message:</p>
 </table>
 <p>The <strong>Nextgen</strong> architecture — the one you will work with in the bootcamp —
 concretely uses three digital networks: <strong>CAN-C1</strong> and <strong>CAN-C2</strong>, both
-high-speed at 500 kbit/s, and <strong>CAN-BH</strong> at 125 kbit/s. Here is who lives on
-each bus:</p>
+high-speed at 500 kbit/s, and <strong>CAN-BH</strong> at 125 kbit/s. The ECUs on each bus
+are listed below:</p>
 <h3 id="can-c1-powertrain-and-core">CAN-C1 — powertrain and core<a class="headerlink" href="#can-c1-powertrain-and-core" title="Permanent link">&para;</a></h3>
 <p>CAN-C1 interconnects the core of the vehicle: <strong>BCM</strong> (body control module),
 <strong>IPC</strong> (instrument cluster), <strong>ORC</strong> (airbag/occupant restraint), <strong>RFHm</strong>
@@ -4615,22 +4625,22 @@ and air conditioning), <strong>ETM</strong> (infotelematics), <strong>BCM</stron
 and <strong>PLGM</strong> (power liftgate).</p>
 <div class="admonition note">
 <p class="admonition-title">Acronym decoder</p>
-<p>Feeling lost in the alphabet soup? Keep this at hand:
+<p>Summary of the acronyms used above:
 <strong>BCM</strong> body control · <strong>IPC</strong> instrument cluster · <strong>ECM</strong> engine control ·
 <strong>ORC</strong> airbag (occupant restraint) · <strong>ABS</strong> anti-lock brakes ·
 <strong>ACC</strong> adaptive cruise · <strong>TBM</strong> telematics · <strong>CDCM</strong> chassis domain
 control · <strong>EPS</strong> power steering · <strong>HVAC</strong> climate · <strong>AFLS</strong> adaptive
 lights · <strong>EOBD</strong> European On-Board Diagnostics (the standard diagnostic
-socket). Anything else, look back at the section where it first appears —
-every one is explained there.</p>
+socket). For any other acronym, refer to the section where it first
+appears — each one is defined there.</p>
 </div>
 <h3 id="private-can">Private CAN<a class="headerlink" href="#private-can" title="Permanent link">&para;</a></h3>
-<p>Some ECU pairs talk so intensely that they get a <strong>dedicated bus</strong>: the ACC
-module and the HALF module are connected by a private CAN-C line because they
-exchange data continuously while adaptive cruise control and the <strong>FCW</strong>
-(forward collision warning) function are active. Giving them their own bus
-keeps that chatter off the shared networks — a simple, elegant application of
-the bus-load budgeting you saw above.</p>
+<p>Some ECU pairs exchange data so frequently that they are given a
+<strong>dedicated bus</strong>: the ACC module and the HALF module are connected by a
+private CAN-C line because they exchange data continuously while adaptive
+cruise control and the <strong>FCW</strong> (forward collision warning) function are
+active. Giving them their own bus keeps that traffic off the shared networks,
+applying the bus-load budgeting described above.</p>
 <pre class="kx-mermaid"><code>flowchart TD
     EOBD["EOBD diagnostic socket"]
     subgraph Nextgen architecture
@@ -4645,7 +4655,8 @@ the bus-load budgeting you saw above.</p>
     PRIV --- ACC["ACC"] &amp; HALF["HALF"]
     EOBD --- C1 &amp; C2 &amp; BH</code></pre>
 <h2 id="lin-sub-networks">LIN sub-networks<a class="headerlink" href="#lin-sub-networks" title="Permanent link">&para;</a></h2>
-<p>Cheap actuators and sensors (window motors, rain sensors, knobs) hang off
+<p>Low-cost actuators and sensors (window motors, rain sensors, knobs) are
+connected to
 <strong>LIN</strong> buses — see <a href="../can-lin/">CAN, LIN &amp; Ethernet</a> for the protocol
 itself — always with one ECU acting as the master that schedules all traffic.
 On the Nextgen vehicle:</p>
@@ -4663,8 +4674,8 @@ On the Nextgen vehicle:</p>
   and the cabin temperature sensor (ARST).</li>
 <li><strong>EMCM</strong> masters the volume knob.</li>
 </ul>
-<p>Notice the pattern: every LIN master is itself a node on a CAN bus, so each
-master doubles as a <strong>gateway</strong> between its little LIN neighborhood and the
+<p>Note the pattern: every LIN master is itself a node on a CAN bus, so each
+master also acts as a <strong>gateway</strong> between its LIN sub-network and the
 rest of the vehicle.</p>
 <pre class="kx-mermaid"><code>flowchart LR
     BCM --&gt; L1["LIN1: CHDM, IBS, UAM, ASU, RLS"]
@@ -4675,7 +4686,7 @@ rest of the vehicle.</p>
     HVAC --&gt; L6["HUM, HCPM, ARST"]
     AFLS --&gt; L7["LHDU, RHDU"]</code></pre>
 <h2 id="sleep-and-wake-up">Sleep and wake-up<a class="headerlink" href="#sleep-and-wake-up" title="Permanent link">&para;</a></h2>
-<p>A parked car must not drain its battery, so the networks literally go to sleep.
+<p>A parked car must not drain its battery, so the networks go to sleep.
 The CAN-C1, CAN-C2 and CAN-BH networks <strong>enter sleep mode about 10–12 seconds
 after the key is turned OFF</strong>. They wake up again even with the key still OFF
 as soon as a door changes from <em>closed</em> to <em>open</em> — the BCM sees the door-ajar
@@ -4688,16 +4699,17 @@ lights, cluster, locks) before you even insert the key.</p>
     Sleep --&gt; Awake: key ON
     Awake --&gt; Awake: bus activity keeps network alive</code></pre>
 <div class="admonition tip">
-<p class="admonition-title">Why you care during testing</p>
-<p>If you connect a diagnostic tool or a CAN logger and see a dead bus, don't
-panic: the network may simply be asleep. Opening a door (or turning the
-key) is the standard way to wake it — and conversely, any leakage current
-test must wait for the 10–12 s sleep transition before measuring.</p>
+<p class="admonition-title">Implications for testing</p>
+<p>If a diagnostic tool or CAN logger shows a dead bus, the network may simply
+be asleep. Opening a door (or turning the key) is the standard way to wake
+it. Conversely, any leakage current test must wait for the 10–12 s sleep
+transition before measuring.</p>
 </div>
 <h2 id="the-obd-ii-diagnostic-connector">The OBD-II diagnostic connector<a class="headerlink" href="#the-obd-ii-diagnostic-connector" title="Permanent link">&para;</a></h2>
 <p>All diagnosis goes through the 16-pin <strong>OBD-II / EOBD</strong> connector (usually
-under the dashboard near the steering column). This is <em>your</em> front door into
-the vehicle — every tool session in MIL2 starts by plugging in here. On the
+under the dashboard near the steering column). This connector is the standard
+access point to the vehicle networks — every tool session in MIL2 starts by
+plugging in here. On the
 Nextgen vehicle the three networks are pinned out as follows:</p>
 <table>
 <thead>
@@ -4723,7 +4735,7 @@ Nextgen vehicle the three networks are pinned out as follows:</p>
 </table>
 <p><img alt="OBD-II connector pinout for CAN-C1, CAN-C2 and CAN-BH" src="img/obd2-pinout.webp" /></p>
 <h2 id="checking-a-can-bus-with-a-multimeter">Checking a CAN bus with a multimeter<a class="headerlink" href="#checking-a-can-bus-with-a-multimeter" title="Permanent link">&para;</a></h2>
-<p>Here is your first genuinely hands-on skill. Each of the three networks has
+<p>This section describes a basic workshop measurement. Each of the three networks has
 <strong>two 120 Ω termination resistors</strong>, one at each end of the bus, wired in
 parallel by the twisted pair itself. A healthy, electrically continuous
 network therefore measures <strong>about 60 Ω</strong> between its High and Low pins at the
@@ -4755,11 +4767,11 @@ diagnostic connector — with the vehicle asleep or powered off:</p>
 </tbody>
 </table>
 <p><img alt="Measuring ~60 Ω termination resistance on the three CAN networks" src="img/can-resistance-test.webp" /></p>
-<p>This is the fastest sanity check in vehicle troubleshooting: <strong>~60 Ω</strong> means
-both terminations and the wiring are intact; <strong>~120 Ω</strong> means one termination
-or one side of the bus is disconnected; a much lower value points to a short.
-One measurement, three diagnoses — not bad for thirty seconds with a
-multimeter.</p>
+<p>This measurement is a fast sanity check in vehicle troubleshooting: <strong>~60 Ω</strong>
+means both terminations and the wiring are intact; <strong>~120 Ω</strong> means one
+termination or one side of the bus is disconnected; a much lower value points
+to a short. A single resistance reading therefore distinguishes three failure
+cases.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Always measure resistance with the bus unpowered. A resistance reading
@@ -4768,29 +4780,30 @@ taken on a live network is meaningless and can damage the multimeter.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>You can now explain what an E/E architecture <em>is</em>: the standards,
-  topology, SLA distribution, interfaces, network management, diagnostics,
-  configuration management and network database — everything except the
-  application software built on top.</li>
-<li>You know the four forces that shape it: feature complexity, bus load
-  (keep C-CAN below the 65–70% threshold), cyber security (SGW, message
-  authentication, trust anchors) and AUTOSAR.</li>
-<li>You can read a Nextgen topology: CAN-C1 and CAN-C2 at 500 kbit/s, CAN-BH
-  at 125 kbit/s, LIN sub-networks mastered by the BCM, ECM, AFLS, HVAC and
-  EMCM.</li>
-<li>You know networks sleep 10–12 s after key OFF and wake on a door opening
-  — so a silent bus is not necessarily a broken bus.</li>
-<li>And you can already do a real workshop check: CAN-C1 on pins 6/14,
-  CAN-C2 on 12/13, CAN-BH on 3/11 — a healthy bus measures ≈ 60 Ω between
-  High and Low.</li>
+<li>An E/E architecture comprises the standards, topology, SLA distribution,
+  interfaces, network management, diagnostics, configuration management
+  and network database — everything except the application software built
+  on top.</li>
+<li>Four drivers shape it: feature complexity, bus load (C-CAN kept below
+  the 65–70% threshold), cyber security (SGW, message authentication,
+  trust anchors) and AUTOSAR.</li>
+<li>The Nextgen topology uses CAN-C1 and CAN-C2 at 500 kbit/s and CAN-BH at
+  125 kbit/s, with LIN sub-networks mastered by the BCM, ECM, AFLS, HVAC
+  and EMCM.</li>
+<li>Networks sleep 10–12 s after key OFF and wake on a door opening, so a
+  silent bus is not necessarily a broken bus.</li>
+<li>The CAN termination check at the OBD-II connector uses pins 6/14 for
+  CAN-C1, 12/13 for CAN-C2 and 3/11 for CAN-BH; a healthy bus measures
+  ≈ 60 Ω between High and Low.</li>
 </ul>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Where this leads</p>
-<p>You will decode the traffic on these exact buses in
-<a href="../../mil2/canalyzer/">CANalyzer</a>, diagnose the ECUs behind them
-in the <a href="../../mil2/diagnosis/">Diagnosis</a> lessons, and test the
-Vehicle Functions that ride on top in <a href="../../mil3/vf/">VF</a>.</p>
+<p>The traffic on these buses is decoded in
+<a href="../../mil2/canalyzer/">CANalyzer</a>, the ECUs behind them are
+diagnosed in the <a href="../../mil2/diagnosis/">Diagnosis</a> lessons, and
+the Vehicle Functions that ride on top are tested in
+<a href="../../mil3/vf/">VF</a>.</p>
 </div>
 <hr />
 <h2 id="source-material">Source material<a class="headerlink" href="#source-material" title="Permanent link">&para;</a></h2>
@@ -4885,38 +4898,27 @@ Vehicle Functions that ride on top in <a href="../../mil3/vf/">VF</a>.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4944,7 +4946,7 @@ Vehicle Functions that ride on top in <a href="../../mil3/vf/">VF</a>.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

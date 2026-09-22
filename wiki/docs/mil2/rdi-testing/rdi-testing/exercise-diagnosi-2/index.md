@@ -1,17 +1,15 @@
 # Hands-On Diagnostics: RDIs, DTCs and the IPC Cluster
 
-Time to get your hands on a real control unit. In this bench exercise you move
-from *knowing* the diagnostic theory to *doing* what a diagnostics engineer does
-every day: talking to the **instrument panel cluster (IPC)** of the P332
-battery-electric platform over **UDS (Unified Diagnostic Services)**, using its
-**CANdela Diagnostic Description (CDD)** database
-`D2956_IPC_E2A_R10_332BEV.cdd` as your map.
+This bench exercise applies the diagnostic theory from the previous lessons to
+a real control unit: the **instrument panel cluster (IPC)** of the P332
+battery-electric platform, accessed over **UDS (Unified Diagnostic Services)**
+using its **CANdela Diagnostic Description (CDD)** database
+`D2956_IPC_E2A_R10_332BEV.cdd`.
 
-**What you'll practice:** navigating a diagnostic database, reading and writing
-**RDIs (Read Data Identifiers)**, provoking a fault on purpose, watching the
-**DTC (Diagnostic Trouble Code)** status byte evolve, and rescuing the snapshot
-evidence before you clear anything. Don't worry about breaking something —
-that's what the bench is for.
+**What you will practice:** navigating a diagnostic database, reading and
+writing **RDIs (Read Data Identifiers)**, provoking a fault, observing the
+**DTC (Diagnostic Trouble Code)** status byte, and retrieving the snapshot
+data before clearing the fault memory.
 
 ## Goal
 
@@ -43,8 +41,9 @@ By the end of this exercise you will be able to:
 
 ## Step 1 — Explore the diagnostic database
 
-Think of the CDD as the ECU's own user manual. Open it in the CANdela viewer
-(or the diagnostics console's database view) and extract four lists:
+The CDD describes every diagnostic element the ECU exposes. Open it in the
+CANdela viewer (or the diagnostics console's database view) and extract four
+lists:
 
 1. **All RDIs** — the 16-bit identifiers the ECU exposes for reading: VIN
    (Vehicle Identification Number), software/hardware versions, vehicle speed,
@@ -58,8 +57,8 @@ Think of the CDD as the ECU's own user manual. Open it in the CANdela viewer
 
 ## Step 2 — Map elements to diagnostic services
 
-Now connect the dots: for each list from Step 1, identify which UDS service
-operates on it. This table is your cheat sheet for the rest of the exercise:
+For each list from Step 1, identify which UDS service operates on it. The
+mapping is summarized below:
 
 | Element | UDS service | Positive response |
 |---|---|---|
@@ -89,8 +88,8 @@ operates on it. This table is your cheat sheet for the rest of the exercise:
 
 ### Vehicle speed sweep
 
-Now for the fun part. Find the RDI that carries the vehicle speed and run the
-full sweep, recording the raw response and the decoded value at each point:
+Locate the RDI that carries the vehicle speed and run the full sweep,
+recording the raw response and the decoded value at each point:
 
 | Simulated speed | What to do |
 |---|---|
@@ -99,17 +98,17 @@ full sweep, recording the raw response and the decoded value at each point:
 | 250 km/h | Repeat |
 | 600 km/h | Repeat — observe carefully |
 
-!!! tip "600 km/h is a trap — on purpose"
-    600 km/h is far beyond anything this signal should ever see. Depending on
-    the CDD definition you will get the signal's saturation value, an
+!!! tip "600 km/h tests out-of-range behavior"
+    600 km/h is far beyond the valid range of this signal. Depending on the
+    CDD definition you will get the signal's saturation value, an
     "invalid/not available" pattern (e.g. all bits set), or a negative
-    response. The point of this step is to discover how the ECU and the
-    conversion formula behave **at and beyond the valid range** — probing the
-    edges like this is exactly what testing a diagnostic specification means.
+    response. This step shows how the ECU and the conversion formula behave
+    **at and beyond the valid range** — probing boundary values is part of
+    testing a diagnostic specification.
 
 ## Step 4 — Write RDIs
 
-Reading is only half the story. Now you'll change data inside the ECU:
+Next, write data to the ECU:
 
 1. Select **three writable RDIs** from the database (the CDD marks which
    identifiers support `WriteDataByIdentifier` — read-only ones will answer
@@ -117,8 +116,8 @@ Reading is only half the story. Now you'll change data inside the ECU:
 2. Write new content with service `0x2E`, building the payload from the DID
    plus the correctly formatted data bytes.
 3. **Verify each write** by reading the same RDI back with `0x22` and
-   comparing the returned bytes with what you sent. A write you haven't read
-   back is a write you haven't done.
+   comparing the returned bytes with what you sent. A write is only confirmed
+   by a successful read-back.
 
 ```mermaid
 sequenceDiagram
@@ -135,8 +134,8 @@ sequenceDiagram
 
 ## Step 5 — Fault, status byte, healing and snapshot
 
-This is where the exercise comes together: you'll watch a fault live its whole
-life inside the ECU, from detection to healing.
+This step covers the full lifecycle of a fault inside the ECU, from detection
+to healing.
 
 ### Create the fault and read the status byte
 
@@ -144,7 +143,7 @@ life inside the ECU, from detection to healing.
    monitored line — pick a DTC from your list whose cause you can actually
    reproduce).
 2. Read the DTC with `0x19 0x02` (reportDTCByStatusMask) and look at its
-   **status byte** — eight bits that tell the fault's life story.
+   **status byte** — eight bits that record the fault's current state.
 
 ### Heal bits 0, 1 and 2
 
@@ -166,7 +165,7 @@ flowchart TD
 
 ### Clear the memory and get the snapshot
 
-Order matters here — read this sequence before you touch the tool:
+The following sequence must be performed in order:
 
 1. **Before clearing**, identify which snapshot record is attached to your
    DTC: query `0x19 0x04` (reportDTCSnapshotRecordByDTCNumber) with the DTC
@@ -176,10 +175,10 @@ Order matters here — read this sequence before you touch the tool:
 3. Only now clear the fault memory with `0x14` ClearDiagnosticInformation.
 4. Read the DTCs again: the entry — and its snapshot — must be gone.
 
-!!! warning "Snapshots die with the clear"
+!!! warning "Snapshots are erased when the memory is cleared"
     `0x14` erases DTCs **and their snapshot/extended data**. In real
-    troubleshooting you always download snapshots *before* clearing — once
-    cleared, the evidence is unrecoverable.
+    troubleshooting, snapshots must always be downloaded *before* clearing —
+    once cleared, the data is unrecoverable.
 
 ## Expected results
 
@@ -209,17 +208,18 @@ Order matters here — read this sequence before you touch the tool:
   out-of-range behavior must be checked against the specification first.
 
 !!! success "Key takeaways"
-    - The CDD database is your contract with the ECU: RDIs, DTCs, I/O and
-      routines, each bound to a UDS service (`0x22`/`0x2E`/`0x19`/`0x14`/`0x2F`/`0x31`).
-    - Always decode responses with the database's scaling — and always probe
-      boundary values (600 km/h) to see saturation and invalid-value handling.
-    - A write is only proven by read-back.
-    - The DTC status byte tells the fault's life story; bits 0–2 clear through
-      specific healing maneuvers, not by magic.
-    - Grab snapshots **before** `ClearDiagnosticInformation` — clearing wipes
-      the evidence.
-    - You just ran the full daily loop of a diagnostics engineer. This exact
-      workflow is what you'll repeat on every ECU you meet.
+    - The CDD database defines all diagnostic elements of the ECU — RDIs, DTCs,
+      I/O and routines — each bound to a UDS service (`0x22`/`0x2E`/`0x19`/`0x14`/`0x2F`/`0x31`).
+    - Responses must be decoded with the database's scaling; boundary values
+      (600 km/h) reveal saturation and invalid-value handling.
+    - A write is only confirmed by read-back.
+    - The DTC status byte records the fault state; bits 0–2 are cleared
+      through specific healing maneuvers.
+    - Snapshots must be retrieved **before** `ClearDiagnosticInformation`;
+      clearing erases them permanently.
+    - The sequence covered here — database exploration, RDI read/write, fault
+      injection, status-byte healing and snapshot retrieval — is the standard
+      diagnostic workflow applied to any ECU.
 
 ---
 

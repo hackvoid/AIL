@@ -1,19 +1,17 @@
 # Internal Combustion Engines (ICE)
 
-Welcome to your first deep dive into the hardware you will spend much of the
-bootcamp talking to. Even in an electrification-focused program, most vehicles
-you will calibrate, test and diagnose still burn fuel — and almost everything
-you will do as an E/E engineer (reading sensors, driving actuators, flashing
-software, chasing faults) happens *around* the engine. These two lessons build
-the foundation you need: how a 4-stroke engine works, how gasoline (spark
-ignition) and Diesel engines differ, how the engine control module meters air
-and fuel, and how modern engines use turbocharging, exhaust gas recirculation,
-variable valve actuation and exhaust aftertreatment to meet Euro 6 emission
-limits. By the end, you will be able to look at any engine control schematic
-and recognize every sensor, actuator and control loop on it.
+The internal combustion engine remains at the core of most vehicles that are
+calibrated, tested and diagnosed in this bootcamp, even in an
+electrification-focused program, and most E/E engineering tasks (reading
+sensors, driving actuators, flashing software, tracing faults) happen
+*around* the engine. These two lessons cover how a 4-stroke engine works,
+how gasoline (spark ignition) and Diesel engines differ, how the engine
+control module meters air and fuel, and how modern engines use
+turbocharging, exhaust gas recirculation, variable valve actuation and
+exhaust aftertreatment to meet Euro 6 emission limits.
 
-Don't worry if some terms are new — every acronym is explained the first time
-it appears, and you will meet all of them again in the hands-on modules.
+Each acronym is explained at first use; all of them recur in the hands-on
+modules.
 
 ## Anatomy of a 4-stroke engine
 
@@ -29,7 +27,7 @@ bottom holds the lubricating oil.
 
 ![Labeled cross-section of a 4-stroke engine](img/engine-anatomy.webp)
 
-The piston moves between two limit positions you will hear about constantly:
+The piston moves between two limit positions:
 
 - **TDC** — top dead center, minimum chamber volume
 - **BDC** — bottom dead center, maximum chamber volume
@@ -117,8 +115,8 @@ typically **15°–25° BTDC**.
 - Turbocharged SI engines therefore use **lower compression ratios** than
   naturally aspirated ones.
 
-Four abnormal combustion events to recognize (you will meet these names again
-in the diagnosis modules):
+Four abnormal combustion events to recognize (these terms recur in the
+diagnosis modules):
 
 - **Misfire** — mixture too diluted (too lean); combustion cannot start.
   Unburned fuel goes straight to the exhaust.
@@ -165,8 +163,7 @@ into the intake flow.
 
 The problem: the exact instantaneous air mass flow cannot be predicted —
 transients, fluid dynamics, thermal effects and fuel vaporization all disturb
-it. The solution is a two-layer control loop, and it is the first closed-loop
-system you will learn to read:
+it. The solution is a two-layer control loop:
 
 ```mermaid
 flowchart LR
@@ -189,8 +186,9 @@ flowchart LR
 
 ## Diesel engines
 
-Diesel (compression ignition) engines flip most SI assumptions. This table is
-worth remembering — it explains nearly every hardware difference you will see:
+Diesel (compression ignition) engines invert most SI assumptions. The
+following table summarizes the differences, which explain most of the hardware
+distinctions between the two engine types:
 
 | | Spark ignition | Diesel |
 |---|---|---|
@@ -214,8 +212,7 @@ noise.
 
 ### Diesel pollutants: soot and NOx
 
-Diesels are more efficient, but that efficiency comes with a specific
-emissions bill:
+Diesels are more efficient, but that efficiency produces specific pollutants:
 
 - **Soot** is essentially unburned fuel — its presence means lost efficiency.
   It forms when oxygen is locally or globally scarce, mixing is poor (low
@@ -225,9 +222,9 @@ emissions bill:
   soot.
 - **NOx** (nitrogen oxides, NO and NO₂) forms because air is ~79% N₂ and ~21%
   O₂: at Diesel combustion temperatures, and with long residence times and
-  abundant excess oxygen, molecular nitrogen splits and oxidizes. NOx is
-  therefore the price of the Diesel's efficiency — high temperature, high
-  pressure, no throttling.
+  abundant excess oxygen, molecular nitrogen splits and oxidizes. NOx
+  formation is therefore a direct consequence of the Diesel's high-efficiency
+  operating conditions — high temperature, high pressure, no throttling.
 
 ### Injection hardware evolution
 
@@ -245,9 +242,8 @@ emissions bill:
 - **Common rail** — a shared high-pressure **rail** acts as a hydraulic
   accumulator, decoupling the available fuel pressure from the injection
   pump. Fuel is always available at ECM-controlled rail pressure, so
-  electronic injectors can fire **multiple injections within 1–2 ms**. This
-  is the technology behind the names you will see everywhere (MultiJet, TDI,
-  HDi, CDI).
+  electronic injectors can fire **multiple injections within 1–2 ms**.
+  Commercial names for common-rail systems include MultiJet, TDI, HDi and CDI.
 
 ### Multiple injection phases
 
@@ -271,14 +267,14 @@ rpm, or higher in-cylinder peak pressure. **Turbocharging** takes the third
 route indirectly: a compressor raises the intake-manifold pressure, so more
 air (more oxygen) enters the cylinder and more fuel can be burned.
 
-The trick is that the compressor sits on the same shaft as a **turbine**
-driven by the hot, still-pressurized exhaust gases — energy that would
-otherwise be wasted. Boost is therefore (almost) free.
+The compressor sits on the same shaft as a **turbine** driven by the hot,
+still-pressurized exhaust gases, recovering energy that would otherwise be
+wasted.
 
 ![Turbocharged engine air path: intercooler, EGR, VGT + wastegate, MAP/MAF/EBP sensors](img/turbo-overview.webp)
 
-Take a moment with this figure — nearly every component on it is a sensor or
-actuator you will one day measure or drive from a test bench.
+Nearly every component in this figure is a sensor or actuator that is
+measured or driven from a test bench.
 
 **Pros**
 
@@ -367,8 +363,8 @@ a syringe) through a rocker. The pump feeds pressurized engine oil to
 hydraulic pistons above the intake valves via an **electronically controlled
 solenoid valve**. By opening or closing the solenoid, the ECM decouples
 intake-valve motion from the camshaft — full software control of intake lift
-and timing using the engine's own oil as the working fluid. It is a great
-example of how much "mechanical" behavior is now actually software.
+and timing using the engine's own oil as the working fluid. It illustrates
+how much traditionally mechanical behavior is now implemented in software.
 
 ## Exhaust aftertreatment
 
@@ -383,14 +379,14 @@ example of how much "mechanical" behavior is now actually software.
   rich-to-stoichiometric exhaust, so it cannot be used on Diesels (always
   lean).
 - Best overall conversion requires AFR ≈ stoichiometric — one more reason for
-  the lambda closed loop you saw above.
+  the lambda closed loop described above.
 
 !!! tip "Catalyst diagnostics"
     Catalyst health is monitored with **two lambda probes**, one upstream and
     one downstream. As long as the two see different oxygen concentrations
     the catalyst is storing/releasing oxygen correctly; when the two signals
-    become too similar, the ECM flags catalyst degradation. You will use
-    exactly this signal pair when diagnosing aftertreatment faults.
+    become too similar, the ECM flags catalyst degradation. This signal pair
+    is the basis for diagnosing aftertreatment faults.
 
 ### Particulate filters: DPF and GPF
 
@@ -440,8 +436,8 @@ flowchart LR
 
 The second lesson closes with a real Euro 6d diesel (2.2 L, 180–200 hp class,
 Jeep Cherokee / Ducato family) showing what all of the above means in
-hardware. Read this list as a preview of your future workplace: almost every
-item is a sensor you will log or an actuator you will command.
+hardware. Almost every item in this list is a sensor logged or an actuator
+commanded in calibration and test work.
 
 - **Air path**: MAF meter with integrated temperature/humidity/pressure
   sensors (connected over [LIN](../can-lin/index.md)), MAP + manifold
@@ -470,19 +466,18 @@ sensor, a second 80 W water pump, cooled LP-EGR, new injector nozzles, and
 durability upgrades (steel pistons, new cylinder head, oil pump and cooler).
 
 !!! success "Key takeaways"
-    You now have the mental map every engine-related task in this bootcamp
-    builds on:
     - A 4-stroke cycle = intake, compression, expansion, exhaust over two
       crankshaft revolutions; compression ratio, displacement and AFR are the
       numbers that define an engine.
     - Gasoline (SI) engines hold AFR ≈ 14.7 and control torque with the
       throttle; the ECM meters fuel via MAF feed-forward plus lambda-probe
-      feedback — your first closed control loop.
+      feedback — a closed control loop.
     - Knock, pre-ignition and misfire bound spark advance and compression
       ratio; octane (SI) and cetane (Diesel) numbers grade fuel quality.
     - Diesels run unthrottled with excess air, control torque via injected
       fuel quantity, ignite by compression (CR 15–20, injection up to
-      2000 bar) and pay for their efficiency with soot and NOx.
+      2000 bar) and produce soot and NOx as a consequence of their
+      high-efficiency operating conditions.
     - Common-rail injection chains pilot/pre/main/after/post events within
       1–2 ms to trade noise, NOx, soot and DPF regeneration.
     - Turbocharging recovers exhaust energy (wastegate/VGT control, up to
@@ -491,17 +486,16 @@ durability upgrades (steel pistons, new cylinder head, oil pump and cooler).
     - Aftertreatment is a chain: oxidation catalyst/DOC, DPF/GPF with
       pressure-sensor-triggered regeneration, SCR with AdBlue dosing plus an
       ammonia slip catalyst — all monitored by lambda, NOx, temperature and
-      differential-pressure sensors that you will meet again in the diagnosis
+      differential-pressure sensors, which are covered further in the diagnosis
       and calibration modules.
 
 !!! tip "Where this leads"
     The sensors and actuators listed here (MAF, MAP, lambda, EGR and VGT
-    position, rail pressure) are exactly what you will measure and stimulate
-    in the [HIL](../../mil3/hil-users/index.md) and
+    position, rail pressure) are measured and stimulated directly in the
+    [HIL](../../mil3/hil-users/index.md) and
     [INCA](../../mil3/inca/index.md) lessons, and the communication between
-    the ECM and smart auxiliaries rides on the
-    [CAN and LIN](../can-lin/index.md) buses. Everything on this page comes
-    back — now with a multimeter and a CAN trace in your hands.
+    the ECM and smart auxiliaries uses the
+    [CAN and LIN](../can-lin/index.md) buses.
 
 ---
 

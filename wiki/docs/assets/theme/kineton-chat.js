@@ -1,16 +1,12 @@
-/* Kineton Academy Wiki — AI assistant panel (frontend shell).
-   Visual-preview mode: canned placeholder replies. When
-   window.KX_CHAT_CONFIG.endpoint is set in a later step, askBackend()
-   will POST {message} there and render {reply} instead. */
+/* Kineton Academy Wiki — assistant panel (frontend shell).
+   The panel shows a static placeholder reply until
+   window.KX_CHAT_CONFIG.endpoint is set; once configured, askBackend()
+   POSTs {message} there and renders the returned {reply}. */
 (function () {
   "use strict";
 
-  var PLACEHOLDER_REPLIES = [
-    "Great question! Once I'm connected to the academy knowledge base, I'll answer this with links to the exact lesson. For now, try the search bar above — the wiki covers it.",
-    "I'm still in preview mode, so I can't look that up yet. A good place to check: the MIL1 fundamentals module — it builds up the concepts step by step.",
-    "That's covered in the bootcamp material! When my backend is connected I'll point you straight to the right article. Meanwhile, the glossary has a quick definition.",
-    "Nice one — that's exactly the kind of question I'll handle once the API is wired up. For now, browse the module pages; each topic lists its articles and exercises."
-  ];
+  var PLACEHOLDER_REPLY =
+    "Response will appear here once the API is configured.";
 
   function ready(fn) {
     if (document.readyState !== "loading") fn();
@@ -21,12 +17,9 @@
     var root = document.getElementById("kx-chat");
     if (!root) return;
     var handle = document.getElementById("kx-chat-handle");
-    var closeBtn = document.getElementById("kx-chat-close");
     var thread = document.getElementById("kx-chat-thread");
     var form = document.getElementById("kx-chat-form");
     var input = document.getElementById("kx-chat-input");
-    var suggestions = document.getElementById("kx-chat-suggestions");
-    var replyIdx = 0;
 
     function setOpen(open) {
       root.setAttribute("data-state", open ? "open" : "collapsed");
@@ -36,8 +29,9 @@
       if (open) setTimeout(function () { input.focus(); }, 250);
     }
 
-    handle.addEventListener("click", function () { setOpen(true); });
-    closeBtn.addEventListener("click", function () { setOpen(false); });
+    handle.addEventListener("click", function () {
+      setOpen(root.getAttribute("data-state") !== "open");
+    });
 
     var wasOpen = false;
     try { wasOpen = localStorage.getItem("kx-chat-open") === "1"; } catch (e) {}
@@ -56,15 +50,6 @@
       return el;
     }
 
-    function addTyping() {
-      var el = document.createElement("div");
-      el.className = "kx-chat__msg kx-chat__msg--bot kx-chat__msg--typing";
-      el.innerHTML = "<span></span><span></span><span></span>";
-      thread.appendChild(el);
-      scrollDown();
-      return el;
-    }
-
     function askBackend(message) {
       var cfg = window.KX_CHAT_CONFIG || {};
       if (!cfg.endpoint) return Promise.resolve(null);
@@ -77,34 +62,15 @@
         .catch(function () { return null; });
     }
 
-    function respond(message) {
-      var typing = addTyping();
-      askBackend(message).then(function (backendReply) {
-        setTimeout(function () {
-          typing.remove();
-          var reply = backendReply || PLACEHOLDER_REPLIES[replyIdx++ % PLACEHOLDER_REPLIES.length];
-          addMsg(reply, "bot");
-        }, backendReply ? 0 : 850);
-      });
-    }
-
     form.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var text = input.value.trim();
       if (!text) return;
-      if (suggestions) { suggestions.remove(); suggestions = null; }
       addMsg(text, "user");
       input.value = "";
-      respond(text);
-    });
-
-    if (suggestions) {
-      suggestions.addEventListener("click", function (ev) {
-        var chip = ev.target.closest(".kx-chip");
-        if (!chip) return;
-        input.value = chip.getAttribute("data-prompt") || chip.textContent;
-        form.requestSubmit();
+      askBackend(text).then(function (backendReply) {
+        addMsg(backendReply || PLACEHOLDER_REPLY, "bot");
       });
-    }
+    });
   });
 })();

@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4448,12 +4462,10 @@
 
 
 <h1 id="inca-measurement-calibration-and-flashing">INCA — Measurement, Calibration and Flashing<a class="headerlink" href="#inca-measurement-calibration-and-flashing" title="Permanent link">&para;</a></h1>
-<p>Welcome to the tool where ECUs stop being black boxes. <strong>INCA</strong> (INtegrated
-Calibration and Acquisition system) is ETAS's measurement and calibration
-environment, and it is the single most hands-on tool in this part of the
-bootcamp. Up to now you have watched traffic <em>between</em> ECUs on the bus; INCA
-lets you look <em>inside</em> one — at intermediate software values that never appear
-on CAN at all.</p>
+<p><strong>INCA</strong> (INtegrated Calibration and Acquisition system) is ETAS's measurement
+and calibration environment. Where bus-level tools show traffic <em>between</em> ECUs,
+INCA provides access <em>inside</em> one — to intermediate software values that never
+appear on CAN at all.</p>
 <p>By the end of this lesson you will be able to:</p>
 <ul>
 <li><strong>Measure</strong> — read internal ECU signals (lambda, temperatures, state
@@ -4467,15 +4479,12 @@ on CAN at all.</p>
 bootcamp demo session, which ran the full workflow on a real project: building
 a database from the software delivery, wiring up the hardware, measuring with
 the right raster, recording logs, flashing, and comparing calibration
-datasets. Don't worry if the vocabulary feels dense at first — every term is
-explained where you first need it.</p>
+datasets. Each term is explained where it is first used.</p>
 <div class="admonition tip">
 <p class="admonition-title">Practice offline first</p>
-<p>INCA works perfectly well without a connected ECU (offline mode). Get
-comfortable creating workspaces, picking variables and building
-experiments offline on your own PC <em>before</em> you sit in a vehicle or at a
-HIL rig — a mistake in the office costs nothing; a mistake on a running
-powertrain can.</p>
+<p>INCA works without a connected ECU (offline mode). Create workspaces, pick
+variables and build experiments offline on your own PC <em>before</em> working in
+a vehicle or at a HIL rig, where a mistake can affect a running powertrain.</p>
 </div>
 <h2 id="calibration-basics-what-a-calibration-system-actually-does">Calibration basics: what a calibration system actually does<a class="headerlink" href="#calibration-basics-what-a-calibration-system-actually-does" title="Permanent link">&para;</a></h2>
 <p>An ECU's control algorithms are full of adjustable values — a throttle
@@ -4489,8 +4498,8 @@ the calibration system must answer three questions about every variable:</p>
    physical conversion rule, e.g. <code>speed_kmh = raw * 0.01</code>)</li>
 <li><strong>How</strong> does the PC talk to the ECU? (interface, protocol, baud rate)</li>
 </ol>
-<p>Nobody expects you to figure these out by hand. They are delivered together
-with the ECU software, in two files you will see constantly:</p>
+<p>These are delivered together with the ECU software, in two files used
+throughout the calibration workflow:</p>
 <table>
 <thead>
 <tr>
@@ -4548,8 +4557,8 @@ The four standards worth recognizing by name:</p>
 </tbody>
 </table>
 <h2 id="connecting-to-the-ecu-parallel-etk-vs-serial-access">Connecting to the ECU: parallel (ETK) vs. serial access<a class="headerlink" href="#connecting-to-the-ecu-parallel-etk-vs-serial-access" title="Permanent link">&para;</a></h2>
-<p>There are two fundamentally different ways to reach an ECU's memory, and
-knowing which one you have in front of you shapes your whole session.</p>
+<p>There are two fundamentally different ways to reach an ECU's memory; the
+available access method determines the measurement and calibration workflow.</p>
 <h3 id="etk-the-parallel-emulator-probe">ETK — the parallel emulator probe<a class="headerlink" href="#etk-the-parallel-emulator-probe" title="Permanent link">&para;</a></h3>
 <p>The <strong>ETK (Emulator Test Probe)</strong> is an ECU-specific board that hooks directly
 onto the microcontroller's address and data buses and emulates (part of) the
@@ -4558,7 +4567,7 @@ or from the ETK. Only about 30 lines of extra code in the ECU software are
 needed for data acquisition via a table transferred from the calibration
 system, and the extra computing load is negligible.</p>
 <p><img alt="ETK hardware hookup: PC over Ethernet to an ES590 interface, which connects to the ETK board inside the ECU" src="img/etk-hookup.webp" /></p>
-<p>What the ETK buys you:</p>
+<p>The ETK provides the following capabilities:</p>
 <ul>
 <li>The ETK carries its own <strong>RAM and flash</strong> (plus dual-port RAM for
   simultaneous access by the microcontroller and the calibration tool), so you
@@ -4568,17 +4577,17 @@ system, and the extra computing load is negligible.</p>
   simultaneously</strong>, speed-synchronous if needed.</li>
 <li>The ETK board is <strong>microcontroller-specific</strong> (bus width, clock, memory size
   …) and connects to the ECU via adapters — everything else (PC software,
-  calibration device, cables) is identical across projects, so once you learn
-  the setup it transfers to the next program.</li>
+  calibration device, cables) is identical across projects, so the same setup
+  applies across programs.</li>
 <li>The ETK has its own flash for storing calibrated data, so the ECU can start
   immediately without a download. Do not confuse it with the ECU's own flash.</li>
 </ul>
-<p>This power is also why a <strong>development ECU</strong> (open housing, ETK connector on
+<p>This capability is also why a <strong>development ECU</strong> (open housing, ETK connector on
 the board) costs orders of magnitude more than a <strong>production ECU</strong> — in the
 bootcamp demo the instructor quoted roughly <strong>50–100 € for a production unit
 versus up to ~15 000 € for a development ECU</strong>, depending on the
-microcontroller's complexity. The production ECU in your own car is closed: no
-ETK port, no memory emulation.</p>
+microcontroller's complexity. A production ECU is closed: no ETK port, no
+memory emulation.</p>
 <h3 id="serial-calibration-ccpxcp-over-can-k-line">Serial calibration: CCP/XCP over CAN, K-Line<a class="headerlink" href="#serial-calibration-ccpxcp-over-can-k-line" title="Permanent link">&para;</a></h3>
 <p>If no ETK is available (or only bus access is wanted), calibration runs over
 the vehicle's serial interfaces — <strong>CAN, LIN, FlexRay or K-Line</strong> — using a
@@ -4609,7 +4618,7 @@ flashed before its data portion can be edited.</p>
   Manager</strong>, configured once with the <strong>ETAS Network Manager</strong> (Windows Start
   menu → ETAS). If INCA cannot find Ethernet hardware, check that APIPA is
   enabled and that the firewall allows outgoing TCP connections to the ETAS
-  network on <strong>ports 18001–18020</strong> — a surprisingly common first-day problem.</li>
+  network on <strong>ports 18001–18020</strong> — a common cause of connection problems.</li>
 </ul>
 <h2 id="how-inca-organizes-data-database-project-datasets-workspace-experiment">How INCA organizes data: database, project, datasets, workspace, experiment<a class="headerlink" href="#how-inca-organizes-data-database-project-datasets-workspace-experiment" title="Permanent link">&para;</a></h2>
 <p>Everything INCA knows lives in a <strong>database</strong>, managed by the <strong>Database
@@ -4651,8 +4660,7 @@ performance. The DBM stores these object types:</p>
 </tbody>
 </table>
 <p><img alt="Relationships between INCA database objects: projects and datasets belong to an ECU, workspaces capture the hardware configuration of a vehicle or bench, and experiments can be shared between workspaces" src="img/database-objects.webp" /></p>
-<p>Two design ideas are worth internalizing early — they explain most of INCA's
-menus:</p>
+<p>Two design ideas explain most of INCA's menus:</p>
 <ul>
 <li><strong>Experiments are reusable across projects and workspaces.</strong> The same
   "Idle Control" experiment can run on the test bench and in the vehicle, as
@@ -4663,9 +4671,8 @@ menus:</p>
   exported file — experiments travel as <code>*.exp</code> files.</li>
 </ul>
 <h3 id="working-page-vs-reference-page">Working page vs. reference page<a class="headerlink" href="#working-page-vs-reference-page" title="Permanent link">&para;</a></h3>
-<p>At the heart of calibration is a two-page concept, mirrored both in INCA and
-in the ECU's emulation memory. Once this clicks, calibration stops feeling
-risky:</p>
+<p>Calibration is based on a two-page concept, mirrored both in INCA and in the
+ECU's emulation memory:</p>
 <p><img alt="Working page and reference page in INCA and in the ECU" src="img/working-reference-pages.webp" /></p>
 <ul>
 <li>All your edits go to the <strong>working page</strong> only. The <strong>reference page</strong> holds
@@ -4684,8 +4691,7 @@ risky:</p>
   another laptop — you must decide which side wins before calibrating.</li>
 </ul>
 <h2 id="setting-up-a-project-step-by-step">Setting up a project step by step<a class="headerlink" href="#setting-up-a-project-step-by-step" title="Permanent link">&para;</a></h2>
-<p>This is the exact sequence demonstrated in the bootcamp session. Follow it
-once and the folder structure will feel natural:</p>
+<p>This is the sequence demonstrated in the bootcamp session:</p>
 <ol>
 <li><strong>Create a top folder</strong> in the DBM (right-click → new folder) to keep
    everything for your project together. INCA can host several projects and
@@ -4729,10 +4735,9 @@ and the physical hardware:</p>
 </li>
 </ul>
 <h2 id="flashing-the-ecu">Flashing the ECU<a class="headerlink" href="#flashing-the-ecu" title="Permanent link">&para;</a></h2>
-<p>Flashing is the moment new engineers tend to hold their breath — and rightly
-so, but with a few habits it is routine. Flash programming is started from the
-hardware window (the <em>flash programming</em> action). Practical points from the
-demo:</p>
+<p>Flash programming writes new software and dataset versions into the ECU and is
+started from the hardware window (the <em>flash programming</em> action). Practical
+points from the demo:</p>
 <ul>
 <li><strong>Flash from the reference page</strong> (which you keep read-only) into the ECU
   flash, so you always program a known, frozen data version — not your
@@ -4748,7 +4753,7 @@ demo:</p>
 <li>The <strong>bootloader</strong> (a HEX file named in the release notes) only needs to be
   flashed when it actually changed. If you ever lose communication with an ECU
   completely — e.g. after flashing a wrong software — flashing the bootloader
-  again is the recovery path. Good to know before you need it.</li>
+  again is the recovery path.</li>
 <li>After OK, INCA resets the ECU and shows the flash progress and result; when
   it finishes, it starts the <strong>automatic alignment</strong> of working and reference
   pages.</li>
@@ -4761,8 +4766,8 @@ powertrain ECU) is missing. Know whether your dataset includes the
 immobilizer association for your vehicle before you flash.</p>
 </div>
 <h2 id="the-experiment-environment">The Experiment Environment<a class="headerlink" href="#the-experiment-environment" title="Permanent link">&para;</a></h2>
-<p>The experiment is where measurement and calibration happen — the screen you
-will live in during a test session. Its main building blocks:</p>
+<p>The experiment is where measurement and calibration happen — the main screen
+used during a test session. Its main building blocks:</p>
 <h3 id="selecting-variables">Selecting variables<a class="headerlink" href="#selecting-variables" title="Permanent link">&para;</a></h3>
 <p>The <strong>Variable Selection</strong> dialog lists every measurement and calibration
 variable of the project. Practical tips:</p>
@@ -4774,8 +4779,8 @@ variable of the project. Practical tips:</p>
   drive-ready, contactor states, park-lock position — plus the <em>internal</em> ECU
   variables relevant to the feature under test, not only the CAN signals. A
   mismatch between a CAN signal and the internal variable that produced it is
-  exactly the kind of finding you are looking for — it is where INCA earns its
-  place next to CANalyzer.</li>
+  a typical finding that requires INCA's internal view; it cannot be detected
+  with a bus-level tool alone.</li>
 <li>Variables can be set <strong>inactive</strong>: they stay in the experiment but are
   neither displayed nor recorded.</li>
 </ul>
@@ -4810,15 +4815,15 @@ calibrations.</p>
 <li>Configure file storage in the measure configuration <strong>before</strong> recording:
   path, filename pattern, and metadata such as user, company, project and
   vehicle (available as variables like <code>&amp;[USER]</code>, <code>&amp;[PROJECT]</code>).</li>
-<li><strong>Filename discipline</strong> (from the demo, worth adopting verbatim): start with
+<li><strong>Filename discipline</strong> (the convention recommended in the demo): start with
   the <strong>date</strong>, then <strong>project/vehicle</strong>, <strong>facility</strong> (vehicle vs.
   HIL/simulator — it changes how much the log is worth), <strong>software version</strong>,
   <strong>test number</strong> and <strong>result</strong> (OK/NOK). Anyone receiving your log months
   later can reconstruct exactly what was tested, where, and on which software.
   Use the <strong>auto-increment</strong> option for checklist-style test runs (test1,
   test2, …).</li>
-<li><strong>Triggers</strong> let you record only around interesting events instead of
-  logging hours of nothing: define a condition (e.g. a DTC is set, a reset
+<li><strong>Triggers</strong> let you record only around relevant events instead of
+  continuous logging: define a condition (e.g. a DTC is set, a reset
   occurs, a threshold crossing) with the signal logic, plus how much
   <strong>pre-trigger and post-trigger time</strong> to keep (e.g. 30 min before and after
   the event). For ordinary manual testing on a simulator, triggers are simply
@@ -4831,9 +4836,9 @@ calibrations.</p>
 </ul>
 <h3 id="calibrating-in-the-experiment">Calibrating in the experiment<a class="headerlink" href="#calibrating-in-the-experiment" title="Permanent link">&para;</a></h3>
 <ul>
-<li>The status bar tells you the ECU connection state and whether working and
-  reference pages differ (a checksum warning means: align before trusting
-  anything).</li>
+<li>The status bar shows the ECU connection state and whether working and
+  reference pages differ (a checksum warning indicates the pages must be
+  aligned before calibrating).</li>
 <li>You can only edit calibrations on the <strong>working page</strong> — if an editor
   refuses your input, check which page is active, switch to the working page
   (and align pages first if needed).</li>
@@ -4846,9 +4851,8 @@ calibrations.</p>
   reference page.</li>
 </ul>
 <h3 id="comparing-datasets-with-the-calibration-data-manager-cdm">Comparing datasets with the Calibration Data Manager (CDM)<a class="headerlink" href="#comparing-datasets-with-the-calibration-data-manager-cdm" title="Permanent link">&para;</a></h3>
-<p>The <strong>CDM</strong> is the offline workbench for datasets — the answer to "what
-exactly did we change between calibration release A and B", without diffing
-HEX files by hand:</p>
+<p>The <strong>CDM</strong> is the offline tool for comparing datasets — it shows what changed
+between calibration releases without manually comparing HEX files:</p>
 <ol>
 <li>Choose a <strong>source dataset</strong> and one or more <strong>comparison datasets</strong> (from
    the database or from file).</li>
@@ -4935,7 +4939,7 @@ support).</p>
   software — all based on the <strong>A2L (addresses/conversions) + HEX/S19
   (code+data)</strong> pair; they must match the ECU's software exactly.</li>
 <li><strong>ETK</strong> = parallel memory emulation on a development ECU (fast,
-  multi-raster, calibration while running); serial calibration rides
+  multi-raster, calibration while running); serial calibration uses
   CCP/XCP over CAN or K-Line.</li>
 <li>Data model: <strong>project + datasets</strong> describe the software, the
   <strong>workspace</strong> describes the hardware, the <strong>experiment</strong> describes the
@@ -5070,38 +5074,27 @@ access (DTCs, UDS services), see <a href="../../mil2/diagnosis/">Diagnosis</a>.<
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -5129,7 +5122,7 @@ access (DTCs, UDS services), see <a href="../../mil2/diagnosis/">Diagnosis</a>.<
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

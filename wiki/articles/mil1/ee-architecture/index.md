@@ -1,20 +1,19 @@
 # Vehicle E/E Architecture
 
-Welcome to your first look under the hood of a modern car — not the engine, but
-the *nervous system*. An average new vehicle carries **more than 40 electronic
-control units (ECUs)** — small computers, each responsible for something like
-braking, climate or airbags — connected by about **five miles of wiring** and
-running **over 10 million lines of software**. Electronics now make up close to
-**40% of a vehicle's content**, and the share keeps growing.
+An average new vehicle carries **more than 40 electronic
+control units (ECUs)** — small computers, each responsible for functions such
+as braking, climate or airbags — connected by about **five miles of wiring**
+and running **over 10 million lines of software**. Electronics now make up
+close to **40% of a vehicle's content**, and the share keeps growing.
 
 The **E/E (Electrical/Electronic) Architecture** is the plan that holds all of
 this together: which ECUs exist, which communication buses they sit on, how they
-are powered, and how they exchange signals. Why should you care? Because almost
-everything you will do in this bootcamp — reading a CAN trace, diagnosing an
-ECU, testing a vehicle function — happens *inside* an architecture like the
-ones described here. By the end of this article you will be able to read a
-vehicle network topology, name the buses and their speeds, and run your first
-hands-on health check on a real car with nothing more than a multimeter.
+are powered, and how they exchange signals. Nearly every task covered in this
+bootcamp — reading a CAN trace, diagnosing an ECU, testing a vehicle function —
+takes place inside an architecture of this kind. This article explains how to
+read a vehicle network topology, identifies the buses and their speeds, and
+walks through a first hands-on health check on a real vehicle using only a
+multimeter.
 
 The pressure behind all this growth comes from four directions:
 
@@ -24,10 +23,9 @@ The pressure behind all this growth comes from four directions:
 - navigation and connectivity.
 
 !!! note "A word about acronyms"
-    Automotive engineering runs on three-letter acronyms. We explain each one
-    the first time it appears, and there is a full decoder box further down —
-    don't try to memorize them all on the first read; you will pick them up
-    naturally as you work with the tools.
+    Automotive engineering relies heavily on three-letter acronyms. Each one is
+    explained the first time it appears, and a summary table appears further
+    down in this article.
 
 ## What the E/E architecture covers — and what it does not
 
@@ -49,14 +47,13 @@ to reach performance targets.
 !!! note
     Think of the E/E architecture as the "constitution" of the vehicle's
     electronics: it fixes the rules, the partitions and the interfaces. What
-    each ECU then *does* inside those rules is application work — and that
-    application work is where you will spend most of the bootcamp.
+    each ECU then *does* inside those rules is application work, which is
+    outside the architecture definition.
 
 ## The documents that define an architecture
 
 An E/E architecture is not one drawing — it is a set of coordinated
-specifications. You will meet these documents again and again, so it is worth
-knowing what each one is for:
+specifications. The table below summarizes the purpose of each:
 
 | Characteristic | What it defines |
 |---|---|
@@ -71,13 +68,13 @@ knowing what each one is for:
 | VF (Vehicle Functions) | Detailed description of the functionality, exchanged signals and algorithms of each feature or sub-feature |
 
 Electrical interfaces (sensors, pedal assembly, starter), ECU re-programming,
-cyber-security level, AUTOSAR compliance and the standard CAN map all hang off
-this same definition.
+cyber-security level, AUTOSAR compliance and the standard CAN map are all
+covered by this same definition.
 
 ## Key drivers of architecture development
 
-Why can't an architecture just stay frozen? Four forces keep pushing it to
-evolve — and they explain most of the design decisions you will see later:
+Four forces keep pushing an architecture to
+evolve, and they explain most of the design decisions described later:
 
 1. **Integration and function complexity.** The volume and complexity of new
    requirements grows at an exponential rate — every new feature adds signals,
@@ -85,9 +82,8 @@ evolve — and they explain most of the design decisions you will see later:
 2. **Bus load capacity.** Current networks already run at **50–60% bus load**
    on the C-CAN. To guarantee robust communication (no missed messages, no
    latency problems), networks are kept below a **65–70%** threshold. New
-   features must be budgeted against this limit, or the bus will overflow —
-   which is why "how much bus load does your feature add?" is a question you
-   will hear in real projects.
+   features must be budgeted against this limit, or the bus will overflow;
+   bus load is therefore a standard review question for every new feature.
 3. **Cyber security.** Vehicles must be protected against attack. Secure CAN
    communication needs message authentication, which **increases message data
    by ~50%**; safety-critical modules need hardware **trust anchors** — as
@@ -110,8 +106,8 @@ specifications you will study in the [VF](../../mil3/vf/index.md) lessons.
 
 ## Network topology: how real architectures are laid out
 
-Time to see the real thing. The Stellantis/FCA architectures below illustrate
-how the industry evolved. All of them share the same backbone ideas — **11-bit
+The Stellantis/FCA architectures below illustrate
+how the industry evolved. They share the same backbone ideas — **11-bit
 CAN IDs**, **LIN 2.x** sub-networks, cruise-control commands on a LIN connected
 to the **BCM (Body Control Module)**, a signal-key architecture, and an
 advanced frame-security mechanism (CRC/message-counter coverage) — and differ
@@ -144,7 +140,7 @@ Two recurring building blocks deserve attention:
 ## The CAN buses of the vehicle
 
 Vehicles split traffic over several CAN buses classified by baud rate, so that
-slow comfort gadgets never delay a braking message:
+slow comfort traffic never delays a braking message:
 
 | Bus | Baud rate | Carries |
 |---|---|---|
@@ -155,8 +151,8 @@ slow comfort gadgets never delay a braking message:
 
 The **Nextgen** architecture — the one you will work with in the bootcamp —
 concretely uses three digital networks: **CAN-C1** and **CAN-C2**, both
-high-speed at 500 kbit/s, and **CAN-BH** at 125 kbit/s. Here is who lives on
-each bus:
+high-speed at 500 kbit/s, and **CAN-BH** at 125 kbit/s. The ECUs on each bus
+are listed below:
 
 ### CAN-C1 — powertrain and core
 
@@ -189,23 +185,23 @@ and air conditioning), **ETM** (infotelematics), **BCM**, **TBM**, **EMCM**
 and **PLGM** (power liftgate).
 
 !!! note "Acronym decoder"
-    Feeling lost in the alphabet soup? Keep this at hand:
+    Summary of the acronyms used above:
     **BCM** body control · **IPC** instrument cluster · **ECM** engine control ·
     **ORC** airbag (occupant restraint) · **ABS** anti-lock brakes ·
     **ACC** adaptive cruise · **TBM** telematics · **CDCM** chassis domain
     control · **EPS** power steering · **HVAC** climate · **AFLS** adaptive
     lights · **EOBD** European On-Board Diagnostics (the standard diagnostic
-    socket). Anything else, look back at the section where it first appears —
-    every one is explained there.
+    socket). For any other acronym, refer to the section where it first
+    appears — each one is defined there.
 
 ### Private CAN
 
-Some ECU pairs talk so intensely that they get a **dedicated bus**: the ACC
-module and the HALF module are connected by a private CAN-C line because they
-exchange data continuously while adaptive cruise control and the **FCW**
-(forward collision warning) function are active. Giving them their own bus
-keeps that chatter off the shared networks — a simple, elegant application of
-the bus-load budgeting you saw above.
+Some ECU pairs exchange data so frequently that they are given a
+**dedicated bus**: the ACC module and the HALF module are connected by a
+private CAN-C line because they exchange data continuously while adaptive
+cruise control and the **FCW** (forward collision warning) function are
+active. Giving them their own bus keeps that traffic off the shared networks,
+applying the bus-load budgeting described above.
 
 ```mermaid
 flowchart TD
@@ -225,7 +221,8 @@ flowchart TD
 
 ## LIN sub-networks
 
-Cheap actuators and sensors (window motors, rain sensors, knobs) hang off
+Low-cost actuators and sensors (window motors, rain sensors, knobs) are
+connected to
 **LIN** buses — see [CAN, LIN & Ethernet](../can-lin/index.md) for the protocol
 itself — always with one ECU acting as the master that schedules all traffic.
 On the Nextgen vehicle:
@@ -243,8 +240,8 @@ On the Nextgen vehicle:
   and the cabin temperature sensor (ARST).
 - **EMCM** masters the volume knob.
 
-Notice the pattern: every LIN master is itself a node on a CAN bus, so each
-master doubles as a **gateway** between its little LIN neighborhood and the
+Note the pattern: every LIN master is itself a node on a CAN bus, so each
+master also acts as a **gateway** between its LIN sub-network and the
 rest of the vehicle.
 
 ```mermaid
@@ -260,7 +257,7 @@ flowchart LR
 
 ## Sleep and wake-up
 
-A parked car must not drain its battery, so the networks literally go to sleep.
+A parked car must not drain its battery, so the networks go to sleep.
 The CAN-C1, CAN-C2 and CAN-BH networks **enter sleep mode about 10–12 seconds
 after the key is turned OFF**. They wake up again even with the key still OFF
 as soon as a door changes from *closed* to *open* — the BCM sees the door-ajar
@@ -276,17 +273,18 @@ stateDiagram-v2
     Awake --> Awake: bus activity keeps network alive
 ```
 
-!!! tip "Why you care during testing"
-    If you connect a diagnostic tool or a CAN logger and see a dead bus, don't
-    panic: the network may simply be asleep. Opening a door (or turning the
-    key) is the standard way to wake it — and conversely, any leakage current
-    test must wait for the 10–12 s sleep transition before measuring.
+!!! tip "Implications for testing"
+    If a diagnostic tool or CAN logger shows a dead bus, the network may simply
+    be asleep. Opening a door (or turning the key) is the standard way to wake
+    it. Conversely, any leakage current test must wait for the 10–12 s sleep
+    transition before measuring.
 
 ## The OBD-II diagnostic connector
 
 All diagnosis goes through the 16-pin **OBD-II / EOBD** connector (usually
-under the dashboard near the steering column). This is *your* front door into
-the vehicle — every tool session in MIL2 starts by plugging in here. On the
+under the dashboard near the steering column). This connector is the standard
+access point to the vehicle networks — every tool session in MIL2 starts by
+plugging in here. On the
 Nextgen vehicle the three networks are pinned out as follows:
 
 | Pins | Network |
@@ -299,7 +297,7 @@ Nextgen vehicle the three networks are pinned out as follows:
 
 ## Checking a CAN bus with a multimeter
 
-Here is your first genuinely hands-on skill. Each of the three networks has
+This section describes a basic workshop measurement. Each of the three networks has
 **two 120 Ω termination resistors**, one at each end of the bus, wired in
 parallel by the twisted pair itself. A healthy, electrically continuous
 network therefore measures **about 60 Ω** between its High and Low pins at the
@@ -313,35 +311,36 @@ diagnostic connector — with the vehicle asleep or powered off:
 
 ![Measuring ~60 Ω termination resistance on the three CAN networks](img/can-resistance-test.webp)
 
-This is the fastest sanity check in vehicle troubleshooting: **~60 Ω** means
-both terminations and the wiring are intact; **~120 Ω** means one termination
-or one side of the bus is disconnected; a much lower value points to a short.
-One measurement, three diagnoses — not bad for thirty seconds with a
-multimeter.
+This measurement is a fast sanity check in vehicle troubleshooting: **~60 Ω**
+means both terminations and the wiring are intact; **~120 Ω** means one
+termination or one side of the bus is disconnected; a much lower value points
+to a short. A single resistance reading therefore distinguishes three failure
+cases.
 
 !!! warning
     Always measure resistance with the bus unpowered. A resistance reading
     taken on a live network is meaningless and can damage the multimeter.
 
 !!! success "Key takeaways"
-    - You can now explain what an E/E architecture *is*: the standards,
-      topology, SLA distribution, interfaces, network management, diagnostics,
-      configuration management and network database — everything except the
-      application software built on top.
-    - You know the four forces that shape it: feature complexity, bus load
-      (keep C-CAN below the 65–70% threshold), cyber security (SGW, message
-      authentication, trust anchors) and AUTOSAR.
-    - You can read a Nextgen topology: CAN-C1 and CAN-C2 at 500 kbit/s, CAN-BH
-      at 125 kbit/s, LIN sub-networks mastered by the BCM, ECM, AFLS, HVAC and
-      EMCM.
-    - You know networks sleep 10–12 s after key OFF and wake on a door opening
-      — so a silent bus is not necessarily a broken bus.
-    - And you can already do a real workshop check: CAN-C1 on pins 6/14,
-      CAN-C2 on 12/13, CAN-BH on 3/11 — a healthy bus measures ≈ 60 Ω between
-      High and Low.
+    - An E/E architecture comprises the standards, topology, SLA distribution,
+      interfaces, network management, diagnostics, configuration management
+      and network database — everything except the application software built
+      on top.
+    - Four drivers shape it: feature complexity, bus load (C-CAN kept below
+      the 65–70% threshold), cyber security (SGW, message authentication,
+      trust anchors) and AUTOSAR.
+    - The Nextgen topology uses CAN-C1 and CAN-C2 at 500 kbit/s and CAN-BH at
+      125 kbit/s, with LIN sub-networks mastered by the BCM, ECM, AFLS, HVAC
+      and EMCM.
+    - Networks sleep 10–12 s after key OFF and wake on a door opening, so a
+      silent bus is not necessarily a broken bus.
+    - The CAN termination check at the OBD-II connector uses pins 6/14 for
+      CAN-C1, 12/13 for CAN-C2 and 3/11 for CAN-BH; a healthy bus measures
+      ≈ 60 Ω between High and Low.
 
 !!! tip "Where this leads"
-    You will decode the traffic on these exact buses in
-    [CANalyzer](../../mil2/canalyzer/index.md), diagnose the ECUs behind them
-    in the [Diagnosis](../../mil2/diagnosis/index.md) lessons, and test the
-    Vehicle Functions that ride on top in [VF](../../mil3/vf/index.md).
+    The traffic on these buses is decoded in
+    [CANalyzer](../../mil2/canalyzer/index.md), the ECUs behind them are
+    diagnosed in the [Diagnosis](../../mil2/diagnosis/index.md) lessons, and
+    the Vehicle Functions that ride on top are tested in
+    [VF](../../mil3/vf/index.md).

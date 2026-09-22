@@ -1,17 +1,16 @@
 # CAPL In Depth — Language, Events and Functions
 
-Welcome to your deep dive into **CAPL**. You have already met the basics in the
-main CAPL lesson; this guide takes you the rest of the way. By the end, you will
-be able to write event-driven programs inside CANoe that react to bus traffic,
-timers and key presses, talk to the bus symbolically through a database, drive
-custom panels, and avoid the four classic traps that bite every newcomer
-(static local variables, `cancelTimer()` misuse, `putValue()` loops, and
-abusing environment variables).
+This article covers **CAPL** in depth, building on the basics introduced in
+the main CAPL lesson. It describes how to write event-driven programs inside
+CANoe that react to bus traffic, timers and key presses, access the bus
+symbolically through a database, drive custom panels, and avoid four common
+pitfalls (static local variables, `cancelTimer()` misuse, `putValue()` loops,
+and misuse of environment variables).
 
 !!! note "How to read this guide"
     This content intentionally overlaps with the main [CAPL](../../index.md)
-    article. Treat it as your second pass over the same ground — the one where
-    the details click and the **syntax pitfalls** get explained properly.
+    article. Treat it as a second pass over the same material, with more
+    detail on the **syntax pitfalls**.
 
 ## What CAPL is and where it runs
 
@@ -21,7 +20,7 @@ event-driven language that exists only inside the Vector tool environment —
 **network node modules**: the simulated Electronic Control Units (ECUs) that
 sit on the buses of a CANoe simulation and behave like real controllers.
 
-What engineers actually use it for:
+Typical applications:
 
 - analyzing specific messages or data in the traffic;
 - creating and modifying the tool's measurement environment;
@@ -40,7 +39,7 @@ ARXML for AUTOSAR.
 
 ![CANoe Simulation Setup: CAPL-programmed nodes on the Powertrain network, with the Networks list on the right](img/canoe-simulation-setup.webp)
 
-Three icons on a node block are your daily controls:
+Three icons on a node block provide the main operations:
 
 | Icon | Action |
 |---|---|
@@ -68,7 +67,7 @@ objects straight into your code instead of typing names.
 ## CAPL vs. C: what to unlearn
 
 CAPL's syntax is C, but its execution model is different and its feature set is
-deliberately smaller. If you come from C, here is the short list of surprises:
+deliberately smaller. For readers coming from C, the main differences are:
 
 - CAPL is **event based, not interrupt driven** — there is no `main()`.
 - Not supported: header files, the preprocessor, `#define` macros, file
@@ -89,9 +88,9 @@ must not start with a digit, and **CAPL is case sensitive** — `value`, `Value`
 and `VALUE` are three different objects.
 
 !!! tip "Adopt a naming standard"
-    Because everything is case sensitive, pick one naming style and stick to
-    it. If CAPL programs are shared in a team, agree on a coding standard
-    *before* the inconsistencies start costing debugging time.
+    Because everything is case sensitive, use one naming style consistently.
+    If CAPL programs are shared in a team, agree on a coding standard in
+    advance.
 
 ### Data types
 
@@ -235,9 +234,9 @@ A timer fires **once**; the classic periodic pattern is to re-arm it inside
 its own handler. Typical uses: send message 100 twenty milliseconds after the
 `a` key is pressed, or re-send a cyclic message on every expiry.
 
-`cancelTimer()` stops a running timer — and is a classic source of bugs:
+`cancelTimer()` stops a running timer — and is a frequent source of bugs:
 
-!!! warning "The `cancelTimer()` trap"
+!!! warning "Misusing `cancelTimer()`"
     Calling `setTimer()` on a timer that is still running is an error, so the
     instinctive fix is to `cancelTimer()` first and then re-arm. But if the
     re-arm happens in an `on key` handler and the user presses the key *faster
@@ -329,8 +328,8 @@ Rules that matter:
     makes them tempting for exchanging data between simulated nodes. **Do not
     do this.** Panels and environment variables cannot talk to a real ECU —
     the only way onto a CAN network is a CAN message. A simulation that
-    "works" through environment variables hides the mistake until the day a
-    real ECU replaces a simulated node and the communication silently stops.
+    "works" through environment variables hides the mistake until a real ECU
+    replaces a simulated node and the communication silently stops.
     Use environment variables for panel I/O only; use `output()` and messages
     for everything else.
 
@@ -366,7 +365,8 @@ environment variable to its intended starting state.
 
 ### Message and identifier functions
 
-- `isStdId()` / `isExtId()` — is the received message 11-bit or 29-bit?
+- `isStdId()` / `isExtId()` — whether the received message has an 11-bit or
+  29-bit identifier.
 - `mkExtId()` — convert an 11-bit identifier into a 29-bit one.
 - `output()` — transmit a message from the node (nothing reaches the bus
   without it).
@@ -465,20 +465,21 @@ from the CAN controller, which is what you use for network timing tests.
     `setJitter()` alone with the combined settings.
 
 !!! success "Key takeaways"
-    - You can now read any CAPL program: C syntax, event-driven core, no
-      `main()` — just event procedures, globals and functions.
-    - You know the #1 CAPL gotcha: local variables are **static** — re-assign
-      them at the top of the procedure for fresh values on every call.
-    - You can drive timers confidently: declare → `setTimer()` → `on timer`,
-      re-arm inside the handler, and never shield `setTimer()` with
-      `cancelTimer()` in a key handler.
-    - You access signals like a pro: physical value first, `.raw` second, byte
-      packing last — and environment variables connect **panels to CAPL**,
-      never node to node.
-    - You have the function catalog in your pocket: `output()` for the bus,
-      `putValue()` / `getValue()` / `callAllOnEnvVar()` for environment
-      variables, `startLogging()` for capture control, `setDrift()` /
-      `setJitter()` for timing robustness tests.
+    - CAPL uses C syntax with an event-driven execution model: there is no
+      `main()`, only event procedures, globals and functions.
+    - Local variables in CAPL are **static** — they keep their value between
+      calls. Re-assign them at the top of the procedure when a fresh value is
+      needed on every call.
+    - Timers follow a three-step pattern: declare → `setTimer()` → `on timer`;
+      re-arm inside the handler for periodic behavior, and do not shield
+      `setTimer()` with `cancelTimer()` in a key handler.
+    - Access signals at the highest level available: physical value first,
+      `.raw` second, byte packing last. Environment variables connect panels
+      to CAPL, never node to node.
+    - Core functions: `output()` transmits messages; `putValue()` /
+      `getValue()` / `callAllOnEnvVar()` handle environment variables;
+      `startLogging()` controls capture; `setDrift()` / `setJitter()`
+      configure timing robustness tests.
 
 !!! tip "Where to go next"
     Consolidate these concepts with the [CAPL](../../index.md) topic and the

@@ -1,26 +1,23 @@
 # HIL Testing with dSPACE SCALEXIO & ControlDesk
 
-Welcome to the bench. This lesson is where you stop reading about electronic
-control units (ECUs) and start *driving* one — without a car. A
-Hardware-in-the-Loop (HIL) bench puts the **real ECU**, running its production
-software on its real hardware, in the middle of a **simulated vehicle**: the
-engine, the battery, the sensors and even the other ECUs around it are all
-simulated in real time, and the controller can't tell the difference.
+A Hardware-in-the-Loop (HIL) bench puts the **real ECU**, running its
+production software on its real hardware, in the middle of a **simulated
+vehicle**: the engine, the battery, the sensors and even the other ECUs around
+it are all simulated in real time, and the controller can't tell the
+difference.
 
-By the end of this article you'll be able to walk up to the academy's dSPACE
-rig, load the model in **ControlDesk** (dSPACE's experimentation software),
-drive the simulated vehicle from the dashboard, watch and record signals and
-CAN traffic, bend the bus to your will, inject real electrical faults, and —
-just as important — leave the bench exactly as you found it. Don't worry if
-the tool list sounds intimidating: every workflow below is a short, repeatable
-sequence you will have under your fingers after one session.
+This article covers the standard workflows on the academy's dSPACE rig:
+loading the model in **ControlDesk** (dSPACE's experimentation software),
+driving the simulated vehicle from the dashboard, watching and recording
+signals and CAN traffic, manipulating simulated bus messages, injecting
+electrical faults, and returning the bench to its nominal state at the end of
+a session. Each workflow is a short, repeatable sequence.
 
 ## Why hardware-in-the-loop exists
 
 HIL testing was born in the automotive industry in the **1980s**, alongside the
 first microprocessor-based engine controllers, and has since spread to
-aerospace, military, naval and robotics. The idea is a bargain between two
-worlds:
+aerospace, military, naval and robotics. The concept combines two aspects:
 
 - the **controller is real** — its electronics, drivers and production software
   are exercised exactly as in the car;
@@ -28,12 +25,12 @@ worlds:
   can change, repeat and automate test scenarios at will.
 
 On the right-hand (verification) side of the
-[V-Cycle](../../mil1/v-cycle/index.md), that bargain buys you four things:
+[V-Cycle](../../mil1/v-cycle/index.md), this provides four advantages:
 
 - **speed and cost** — many tests that would need a prototype vehicle run on
   the bench instead, shortening time-to-market;
 - **reproducibility** — the same stimulus produces the same conditions every
-  single time, something the road will never give you;
+  time, which road testing cannot guarantee;
 - **safety** — short circuits, sensor failures, missing messages, dangerous
   maneuvers: you can try all of it without risking a vehicle or a driver;
 - **scalability** — from a single ECU up to a full networked rig.
@@ -44,7 +41,7 @@ On the right-hand (verification) side of the
     enough, the ECU may behave perfectly on the bench and wrongly in the car.
     Developing and validating an **accurate model of the real plant** is the
     critical — and expensive — part of any HIL project. As a HIL *user* you
-    inherit that model; as you grow into the role, you'll learn to question it.
+    inherit that model; treat unexpected results as a reason to question it.
 
 ## Meet the bench: anatomy of a HIL rig
 
@@ -90,8 +87,8 @@ sensor protocols like SENT (Single Edge Nibble Transmission), plus real
 
 ![Schematic overview of a typical HIL system and its components](img/hil-system-overview.webp)
 
-Around the hardware sits the dSPACE software ecosystem. You will live in the
-first row; know the others by name:
+Around the hardware sits the dSPACE software ecosystem. ControlDesk is the
+tool used for bench work in this article; the others are listed for reference:
 
 | Tool | Role |
 |---|---|
@@ -104,8 +101,8 @@ first row; know the others by name:
 
 ### Real ECUs and "soft" ECUs on the same bus
 
-Here's a concept that confuses everyone at first: a HIL rig rarely tests one
-ECU alone. The bench wires in several **real ECUs** while the remaining
+A HIL rig rarely tests one ECU alone. The bench wires in several **real
+ECUs** while the remaining
 network nodes are **simulated** inside the model — this is called *restbus
 simulation*. On the academy rig the real units under test are the **VDCM**
 (Vehicle Domain Control Module) and the three motor control units **MCPA**,
@@ -184,8 +181,7 @@ Your basic start sequence, every time:
 2. Press **GO ONLINE** in the main view (Home ribbon). The model and all its
    parameters are loaded onto the platform and the simulation is ready to run.
 3. Verify the **power supply is ON** — without battery voltage the real ECUs
-   stay dead, and you'll spend ten confused minutes debugging a bench that is
-   simply unpowered. Everyone does this once.
+   remain unpowered, and the bench will appear unresponsive.
 
 To restart from a clean state, go **OFFLINE** and choose **Reload and Start**
 on the platform in the **Platforms/Devices** section.
@@ -209,8 +205,7 @@ An experiment's screens are called **layouts**. The main layout (the
 
 From the **Layouting** ribbon you can create additional layouts and fill them
 with more instruments, so each test activity (I/O check, CAN monitoring, fault
-injection) gets its own screen instead of overloading the dashboard. Your
-future self will thank you for keeping these tidy.
+injection) gets its own screen instead of overloading the dashboard.
 
 ### Variables, overrides and plots
 
@@ -224,11 +219,11 @@ things you'll do most:
 - **open-loop I/O tests** on sensors and actuators: override a model variable
   (e.g. force a sensor voltage) and verify the ECU reacts as specified.
 
-Handy trick: to write the **same value to two variables at once**, drag the
-second variable onto the first one's instrument with the right mouse button
-and choose **Connect as Additional Write Variable**. And remember: any
-overridden variable *stays* overridden until you release it — keep a mental
-(or written) list of everything you've forced.
+To write the **same value to two variables at once**, drag the second
+variable onto the first one's instrument with the right mouse button and
+choose **Connect as Additional Write Variable**. Note that any overridden
+variable *stays* overridden until you release it — keep track of everything
+you have forced.
 
 ### Measuring and recording
 
@@ -260,8 +255,8 @@ Two instruments do most of the work:
 
 ### Manipulating simulated CAN traffic
 
-This is where it gets fun. For messages sent by **simulated nodes**,
-ControlDesk lets you take over the transmission — right-click a message in the
+For messages sent by **simulated nodes**, ControlDesk lets you take over the
+transmission — right-click a message in the
 Bus Navigator and **Generate TX Layout**. The generated layout exposes every
 signal of the message; switching a signal's source from *Input* (model-driven)
 to **Constant** lets you type the value you want on the bus. Three failure
@@ -273,11 +268,11 @@ simulations are built into the same layout:
 | **CRC** deselected | uncheck the cyclic redundancy check in the message layout | a **CRC failure** on that frame |
 | **Message counter** changed | force the counter signal | a **rolling-counter failure** (e.g. frozen counter) |
 
-These are the bread and butter of diagnostic and degradation testing: the real
-ECUs in the loop must detect each condition and set the expected diagnostic
-trouble code (DTC) or fallback behavior. And afterwards? Restore everything —
-a forgotten constant or disabled message will confuse the next engineer on the
-bench (see best practices below).
+These manipulations are the basis of diagnostic and degradation testing: the
+real ECUs in the loop must detect each condition and set the expected
+diagnostic trouble code (DTC) or fallback behavior. Restore all settings
+afterwards — a forgotten constant or disabled message will confuse the next
+engineer on the bench (see best practices below).
 
 ## Fault injection with the FIU
 
@@ -328,9 +323,8 @@ flowchart LR
 
 !!! warning "Heal every fault"
     **Always unload and deactivate the fault at the end of the test.** A fault
-    left armed on a shared bench is a trap for the next user — the ECU will
-    report errors with no visible cause, and someone will lose an afternoon
-    chasing a ghost. Don't be that engineer.
+    left armed on a shared bench causes the ECU to report errors with no
+    visible cause, making the next user's session difficult to diagnose.
 
 ## Signal generator: stimulus with a shape
 
@@ -352,8 +346,8 @@ the generator does not do that for you.
 ## Bench etiquette: best practices on shared equipment
 
 A HIL rig is shared equipment: automation runs at night, colleagues test
-during the day. Treat these rules from the lessons as the bench's code of
-honor — follow them and the bench will never lie to you.
+during the day. The following rules from the lessons keep the bench in a
+known, reproducible state for every user.
 
 **Before starting:**
 
@@ -383,15 +377,14 @@ honor — follow them and the bench will never lie to you.
       commands, powers the ECU and injects faults (FIU); ControlDesk is your
       experimenting front-end over Ethernet.
     - The bench mixes **real ECUs** (VDCM, MCPA/B/C) with **soft ECUs**
-      (BCM, ORC, BPCM) simulated as a restbus on the same CAN networks — and
-      the real ECUs can't tell.
-    - Your daily workflow: activate the right `.sdf` → GO ONLINE → drive from
-      the Dashboard → instrument variables → record with a recorder (`.mf4`).
-    - Bus Navigator lets you hijack simulated CAN nodes (TX layouts, Global
-      Enable, CRC, message counter); the FIU puts real electrical faults
-      (SCG/SCB/OL) on the wiring via XIL API EESPort.
-    - Shared-bench discipline is non-negotiable: reload after automation, and
-      always return to nominal before leaving. You can do this.
+      (BCM, ORC, BPCM) simulated as a restbus on the same CAN networks.
+    - The standard workflow: activate the correct `.sdf` → GO ONLINE → drive
+      from the Dashboard → instrument variables → record with a recorder (`.mf4`).
+    - Bus Navigator lets you override the signals of simulated CAN nodes (TX
+      layouts, Global Enable, CRC, message counter); the FIU puts real
+      electrical faults (SCG/SCB/OL) on the wiring via XIL API EESPort.
+    - Shared-bench discipline: reload after automation, and always return to
+      nominal before leaving.
 
 !!! tip "Where this leads"
     Calibration and measurement *inside* the ECU (not in the model) is done

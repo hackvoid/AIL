@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4426,17 +4440,15 @@
 
 
 <h1 id="diagnostic-tools-dianalyzer-cda-dts-monaco">Diagnostic Tools: DIAnalyzer, CDA &amp; DTS Monaco<a class="headerlink" href="#diagnostic-tools-dianalyzer-cda-dts-monaco" title="Permanent link">&para;</a></h1>
-<p>Welcome to one of the most hands-on topics of the bootcamp. In the
-<a href="../diagnosis/">Diagnosis</a> lessons you learned the theory of ECU
+<p>The <a href="../diagnosis/">Diagnosis</a> lessons covered the theory of ECU
 (Electronic Control Unit — one of the small computers inside the vehicle)
-diagnostics and the UDS (Unified Diagnostic Services) protocol behind it. Now
-you get to meet the tools that put that theory into your hands: the
-<strong>off-board diagnostic testers</strong>, the PC applications you will run at the
-bench and in the car to talk to real ECUs every day. After reading this
-article you will be able to connect a tester to a vehicle, read and clear
-fault codes, read live parameters, drive actuators, and flash ECU software
-with confidence.</p>
-<p>A diagnostic tester does the boring part for you: it sends UDS requests
+diagnostics and the UDS (Unified Diagnostic Services) protocol behind it.
+This article covers the tools that put that theory into practice: the
+<strong>off-board diagnostic testers</strong>, the PC applications used at the bench and
+in the vehicle to communicate with ECUs. It explains how to connect a tester
+to a vehicle, read and clear fault codes, read live parameters, drive
+actuators, and flash ECU software.</p>
+<p>A diagnostic tester sends UDS requests
 through a hardware interface called a <strong>VCI (Vehicle Communication
 Interface)</strong> — the box that bridges your laptop and the vehicle buses — and
 turns the raw hex exchanges into readable fault codes, parameters and guided
@@ -4450,8 +4462,8 @@ procedures.</p>
 <li><strong>DTS Monaco</strong> — Softing's engineering diagnostic tool, used across the
   whole vehicle lifecycle from ECU testing to vehicle release</li>
 </ul>
-<p>The good news: all three share the same basic architecture, so everything you
-learn with one transfers to the others. A PC application connects to a VCI,
+<p>All three share the same basic architecture, so the concepts learned with one
+transfer to the others. A PC application connects to a VCI,
 the VCI connects to the vehicle buses, and the tester speaks UDS to whichever
 ECU you select.</p>
 <pre class="kx-mermaid"><code>flowchart LR
@@ -4519,8 +4531,8 @@ know the theory behind every button you will click.</p>
 </tr>
 </tbody>
 </table>
-<p>A few of those acronyms will follow you everywhere, so let us pin them down
-once:</p>
+<p>Three of these acronyms recur throughout the lessons and are defined once
+here:</p>
 <ul>
 <li><strong>DTC (Diagnostic Trouble Code)</strong> — a standardized fault code an ECU stores
   when it detects a problem, together with <em>snapshot</em> and <em>extended</em> data
@@ -4548,8 +4560,7 @@ each function is presented on screen — not about the protocol.</p>
 <p>Several operations are only allowed with the ignition on but the engine
 off. Clearing the DTC memory and running the PROXI configuration
 procedure are both possible only in <strong>KeyOn</strong>, never with the engine
-running. Get into this habit early — it will save you a lot of confusing
-error messages.</p>
+running. Attempting them with the engine running produces error messages.</p>
 </div>
 <h2 id="dianalyzer-fca">DIAnalyzer (FCA)<a class="headerlink" href="#dianalyzer-fca" title="Permanent link">&para;</a></h2>
 <p>DIAnalyzer is the diagnostic application used on FCA projects; version 4.x is
@@ -4573,8 +4584,8 @@ specific authorization as well.</p>
    (Transmission Control Module, present on every vehicle without a manual
    gearbox). The main screen shows the live trace with the tester's Tx frames
    and the ECU's Rx responses, including communication timing and sender/
-   receiver for each frame. This trace view is your best friend while
-   learning: you can watch every UDS exchange as it happens.</li>
+   receiver for each frame. The trace view shows every UDS exchange as it
+   happens.</li>
 </ol>
 <h3 id="the-par-file-decoding-raw-data">The .PAR file: decoding raw data<a class="headerlink" href="#the-par-file-decoding-raw-data" title="Permanent link">&para;</a></h3>
 <p>When you select a <code>.car</code>, DIAnalyzer automatically loads the <strong><code>.PAR</code> file</strong> —
@@ -4646,8 +4657,8 @@ toolbar:</p>
 diagnostic communication with the selected ECU, and <strong>Extended</strong> switches
 between the <em>Default</em> and <em>Extended</em> diagnostic sessions.</p>
 <h3 id="raw-requests-screen-1">Raw requests (Screen 1)<a class="headerlink" href="#raw-requests-screen-1" title="Permanent link">&para;</a></h3>
-<p>Screen 1 doubles as a raw service console — a great way to practice what you
-learned in the Diagnosis lessons. A typical example: requesting all stored
+<p>Screen 1 doubles as a raw service console for sending requests manually. A
+typical example: requesting all stored
 DTCs by hand —</p>
 <ul>
 <li>request: <code>19 02 FF</code> (ReadDTCInformation, report DTC by status mask, all)</li>
@@ -4674,11 +4685,11 @@ extensions</strong> in the same folder: <code>.idx</code>, <code>.prm</code> and
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>The <code>.idx</code> file is plain text — open it in an editor to check exactly what
-the flash package contains before you download it. Thirty seconds of
-checking can save you a bricked ECU.</p>
+the flash package contains before you download it. Downloading an
+incorrect package can leave the ECU in an unusable state.</p>
 </div>
 <h3 id="proxi-the-end-of-line-personalization-procedure">PROXI: the End-of-Line personalization procedure<a class="headerlink" href="#proxi-the-end-of-line-personalization-procedure" title="Permanent link">&para;</a></h3>
-<p>PROXI is one of those procedures you will run constantly, so it is worth
+<p>PROXI is a procedure used frequently on FCA projects, so it is worth
 understanding the idea behind it. FCA requires its suppliers to deliver <strong>one
 general-purpose software</strong> per ECU that can manage every functionality variant
 (engine, transmission, optionals). The vehicle-specific activation happens
@@ -4727,13 +4738,11 @@ with <strong>Change Proxi</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Save every modified <code>.byt</code> under a <em>new</em> name so the original
-configuration and each variant stay distinguishable. Your future self —
-and your colleagues — will thank you.</p>
+configuration and each variant stay distinguishable.</p>
 </div>
 <h2 id="cda-chrysler-diagnostic-application">CDA (Chrysler Diagnostic Application)<a class="headerlink" href="#cda-chrysler-diagnostic-application" title="Permanent link">&para;</a></h2>
-<p>CDA is Chrysler's diagnostic tool, still used on some FCA projects; if you
-have just read the DIAnalyzer section, you already know 90% of it — it is
-essentially equivalent. Every user needs a <strong>specifically enabled ID</strong> to log
+<p>CDA is Chrysler's diagnostic tool, still used on some FCA projects; it is
+essentially equivalent to DIAnalyzer. Every user needs a <strong>specifically enabled ID</strong> to log
 in; a <strong>Work Offline</strong> mode exists but is gated by a user privilege.</p>
 <h3 id="connecting-to-an-ecu">Connecting to an ECU<a class="headerlink" href="#connecting-to-an-ecu" title="Permanent link">&para;</a></h3>
 <ol>
@@ -4770,13 +4779,13 @@ Unlock</strong> (privileged) and <strong>Calibration</strong>.</p>
 <h3 id="flashing-with-cda">Flashing with CDA<a class="headerlink" href="#flashing-with-cda" title="Permanent link">&para;</a></h3>
 <p>The <strong>lightning icon</strong> opens the download window: <strong>Select Flash File</strong>, then
 <strong>Start Flash</strong>. The application software must be provided as an <strong><code>.efd</code>
-file</strong>. CDA notifies you when the download finishes — but note the quirk
-below, because it confuses everyone the first time.</p>
+file</strong>. CDA notifies you when the download finishes, subject to the behavior
+described in the warning below.</p>
 <div class="admonition warning">
 <p class="admonition-title">The 99% stall is normal</p>
-<p>The download bar typically locks at <strong>99%</strong>. Do not panic and do not
-unplug anything: the flash only completes after a <strong>KeyOff → KeyOn</strong>
-cycle, which lets the ECU reboot into the new software.</p>
+<p>The download bar typically locks at <strong>99%</strong>. Do not interrupt the
+download or disconnect the VCI: the flash only completes after a
+<strong>KeyOff → KeyOn</strong> cycle, which lets the ECU reboot into the new software.</p>
 </div>
 <h3 id="proxi-in-cda">PROXI in CDA<a class="headerlink" href="#proxi-in-cda" title="Permanent link">&para;</a></h3>
 <p>The PROXI procedure in CDA runs <strong>only in Vehicle mode — never on a HiL
@@ -4823,7 +4832,7 @@ communication data and test results can be fully documented.</p>
 <h3 id="from-power-on-to-the-first-ecu">From power-on to the first ECU<a class="headerlink" href="#from-power-on-to-the-first-ecu" title="Permanent link">&para;</a></h3>
 <p>DTS Monaco communicates with modern vehicles over <strong>DoIP (Diagnostics over
 Internet Protocol)</strong> — UDS carried over Ethernet instead of CAN. The startup
-sequence is always the same, so learn it once and it becomes muscle memory:</p>
+sequence is always the same:</p>
 <pre class="kx-mermaid"><code>flowchart TD
     A["Connect laptop to the&lt;br/&gt;VIN|ING 2000 WiFi network"] --&gt; B["System Configurator:&lt;br/&gt;'Administrate and manage&lt;br/&gt;DTS projects'"]
     B --&gt; C["Select the VIN|ING 2000&lt;br/&gt;serial number in use"]
@@ -4869,7 +4878,7 @@ project) and a set of docked windows:</p>
 </table>
 <p>On top of the generic layout, DTS Monaco ships <strong>preconfigured task
 workspaces</strong> — each one pairs the relevant trace window with the bus trace
-and the ECU tab menu, so you can jump straight into the job at hand:</p>
+and the ECU tab menu for the corresponding task:</p>
 <ul>
 <li><strong>Fault memory read</strong> — read the DTC memory of an ECU</li>
 <li><strong>Clear &amp; Read DTC</strong> — clear then re-read to verify what returns</li>
@@ -4939,18 +4948,19 @@ flashing — are identical everywhere.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>One mental model, three tools: every tester speaks UDS through a VCI —
-  learn the concepts once, reuse them everywhere.</li>
-<li>The decoding database makes or breaks you: with the wrong <code>.PAR</code> file,
-  everything looks fine but means nothing.</li>
-<li>Respect the states: Extended session for active diagnosis, KeyOn for
-  clearing DTCs and PROXI, KeyOff → KeyOn to finish a CDA flash.</li>
-<li>Keep your files straight: <code>.car</code> + <code>.PAR</code> to open a project,
-  <code>.idx</code>/<code>.prm</code>/<code>.bin</code> (or <code>.efd</code>) to flash, <code>.byt</code> to personalize with
-  PROXI.</li>
-<li>You are ready: you can now connect a tester, read a fault memory, watch
-  live parameters, drive an actuator and flash an ECU — the daily bread
-  of an E/E engineer.</li>
+<li>All three testers communicate with ECUs over UDS through a VCI; the
+  same concepts apply to each tool.</li>
+<li>The <code>.PAR</code> decoding database must match the project: a wrong file
+  decodes DTCs and RDI values incorrectly without any visible error.</li>
+<li>Operations are state-dependent: active diagnosis requires the Extended
+  session, clearing DTCs and PROXI require KeyOn, and a CDA flash
+  completes only after a KeyOff → KeyOn cycle.</li>
+<li>Each function has its own file set: <code>.car</code> + <code>.PAR</code> to open a project,
+  <code>.idx</code>/<code>.prm</code>/<code>.bin</code> (or <code>.efd</code>) to flash, <code>.byt</code> for PROXI
+  personalization.</li>
+<li>The standard workflow is: connect the VCI, open the project, select the
+  ECU, read identifications and DTCs, read parameters or run active
+  diagnosis, and flash software when required.</li>
 </ul>
 </div>
 <div class="admonition tip">
@@ -5055,38 +5065,27 @@ and <a href="../../mil4/troubleshooting/">Troubleshooting</a>.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -5114,7 +5113,7 @@ and <a href="../../mil4/troubleshooting/">Troubleshooting</a>.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

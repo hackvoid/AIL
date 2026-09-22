@@ -1,28 +1,29 @@
 # CAPL Exercise: Building a CAN Gateway
 
-Welcome to your first hands-on CAPL (Communication Access Programming Language)
-project — and it's a good one. A **gateway** is an ECU that sits between two CAN
-(Controller Area Network) buses and forwards traffic from one side to the other.
-Every real car has them: they let a fast, safety-critical powertrain bus and a
-slower body bus coexist without drowning each other in traffic. The instrument
-panel computer (IPC), for example, often bridges exactly these two worlds.
+This exercise is a first hands-on CAPL (Communication Access Programming
+Language) project. A **gateway** is an ECU that sits between two CAN
+(Controller Area Network) buses and forwards traffic from one side to the
+other. Production vehicles use gateways so that a fast, safety-critical
+powertrain bus and a slower body bus can exchange data without overloading
+each other. The instrument panel computer (IPC), for example, often bridges
+exactly these two networks.
 
-In this exercise you *become* the gateway. By the end, you'll be able to:
+In this exercise you implement the gateway in CAPL. By the end, you will be
+able to:
 
 - forward CAN messages from one network to another with a small CAPL program,
-- deliberately manipulate traffic in transit — change a raw byte, change a named
-  signal,
-- repackage a message under a brand-new identifier so it looks native on the
+- manipulate traffic in transit — change a raw byte, change a named signal,
+- repackage a message under a new identifier so it decodes natively on the
   second bus.
 
-These are the exact techniques behind restbus simulation and fault injection,
-so what you practice here pays off for the rest of the bootcamp.
+These are the techniques used in restbus simulation and fault injection, and
+they recur in the later HIL and test automation lessons.
 
 ## What you'll practice
 
-Three gateway skills, in increasing order of cleverness: **copy** a message
-across the bus boundary, **modify** it on the way through, and **repack** its
-signals into a new message the second network understands.
+The exercise covers three gateway operations in increasing complexity: **copy**
+a message across the bus boundary, **modify** it on the way through, and
+**repack** its signals into a new message for the second network.
 
 ```mermaid
 flowchart LR
@@ -49,15 +50,14 @@ flowchart LR
 
 You need a CANoe (or CANalyzer with a full CAPL node) configuration with **two
 CAN channels**, plus the two DBC (Database CAN) files supplied with the exercise
-— remember, a DBC is what turns raw identifiers and bytes into named, scaled
-signals:
+— a DBC is what turns raw identifiers and bytes into named, scaled signals:
 
 | File | Network |
 |---|---|
 | `P332BEV_C1_CAN_R1_20200902_E2A_plus_CR14698_14830_14888.dbc` | CAN 1 (C1-CAN) |
 | `P332BEV_BH_CAN_R1_20200902_E2A_plus_CR14698_14830_14888_(1).dbc` | CAN 2 (BH-CAN) |
 
-Four steps and you're ready to code:
+The setup consists of four steps:
 
 1. Configure the hardware/simulation setup with **2 CAN channels** and assign
    each DBC to its CAN network (**Simulation Setup** → right-click the network →
@@ -69,17 +69,17 @@ Four steps and you're ready to code:
 4. Start the measurement and watch the result in the **Trace** window.
 
 !!! tip
-    A gateway with no traffic is a sad gateway. If nothing is transmitting on
-    CAN 1, add an **IG (Interactive Generator)** block or a second CAPL node that
-    sends the source message cyclically — otherwise your handler never fires and
-    the Trace stays empty. This is the most common "my code doesn't work" moment,
-    and it isn't the code.
+    A gateway with no incoming traffic never fires. If nothing is transmitting
+    on CAN 1, add an **IG (Interactive Generator)** block or a second CAPL node
+    that sends the source message cyclically — otherwise the handler is never
+    called and the Trace stays empty. An empty Trace is most often caused by
+    missing source traffic rather than a coding error.
 
 ## Step 1 — Forward a message between the two networks
 
-The heart of a CAPL gateway is wonderfully simple: an `on message` handler that
-re-sends whatever it receives, addressed to the other channel. Here's the pattern
-for a single message — `CLUSTER2` (ID `0x256`), sent by the IPC on CAN 1:
+The core of a CAPL gateway is an `on message` handler that re-sends whatever it
+receives on the other channel. The pattern for a single message — `CLUSTER2`
+(ID `0x256`), sent by the IPC on CAN 1:
 
 ```c
 variables
@@ -97,9 +97,9 @@ on message CAN1.CLUSTER2
 }
 ```
 
-Two details do the heavy lifting: declaring the variable as
-`message CAN2.CLUSTER2` ties the outgoing frame to channel 2, and `this` inside
-the handler always means "the message that just woke me up."
+Two details matter here: declaring the variable as
+`message CAN2.CLUSTER2` binds the outgoing frame to channel 2, and `this` inside
+the handler always refers to the message that triggered the handler.
 
 To forward *multiple* messages, either write one handler per message, or use a
 generic handler (`on message CAN1.*`) that copies identifier, DLC and data bytes
@@ -113,12 +113,13 @@ into a raw `message` variable and re-outputs it on CAN 2.
 
 **Check:** in the Trace window you should see the original frame on CAN 1 and,
 immediately after, the same identifier and data on CAN 2, sent by your gateway
-node. Seeing that pair appear is your first real "I built a gateway" moment.
+node.
 
 ## Step 2 — Modify the message in transit
 
-Forwarding is useful; *tampering on purpose* is where it gets fun. This is the
-foundation of fault injection: change one thing, watch the system react.
+The next step modifies the forwarded frame deliberately. This is the
+foundation of fault injection: change one value and observe how the system
+reacts.
 
 ### Change a raw byte
 
@@ -143,8 +144,7 @@ on message CAN1.CLUSTER2
 }
 ```
 
-(Yes, `byte(5)` is the sixth byte — CAPL counts from zero. Everyone trips on
-this once.)
+(`byte(5)` refers to the sixth byte; CAPL indices are zero-based.)
 
 ### Change a signal value
 
@@ -166,9 +166,9 @@ raw bytes only when you truly need them.
 
 ## Step 3 — Republish under a new identifier (the `TEST` message)
 
-Real gateways rarely forward frames one-to-one — they *repack* data into
-messages that make sense on the target bus. That's your final skill. Three
-moves:
+Production gateways rarely forward frames one-to-one; they *repack* data into
+messages defined for the target bus. This step adds that operation, in three
+parts:
 
 1. Open the **CAN 2 DBC** in the CANdb++ Editor and create a new message named
    `TEST` — give it a free identifier (the exercise suggests `0xFF`) and set
@@ -202,12 +202,12 @@ the right.
 ![CANdb++ Editor: CLUSTER2 (0x256) signals copied into the new TEST (0xFF) message](img/candb-test-message.webp)
 
 **Check:** the Trace now shows `TEST` on CAN 2, and because its signals live in
-the CAN 2 DBC, the decoded values match those of `CLUSTER2` on CAN 1. Same
-data, new identity — that's repacking.
+the CAN 2 DBC, the decoded values match those of `CLUSTER2` on CAN 1. The same
+data is now transmitted under a new identifier.
 
 ## Common mistakes
 
-Everyone hits at least one of these — now you'll recognize them instantly:
+The following problems occur frequently in this exercise:
 
 - **No DBC on one channel** — named access (`fwdMsg.SignalName`) fails to
   compile, or the Trace shows raw hex only. Assign both DBCs before writing
@@ -225,20 +225,21 @@ Everyone hits at least one of these — now you'll recognize them instantly:
   the gateway never fires and the Trace stays empty.
 
 !!! success "Key takeaways"
-    - A CAPL gateway is just an `on message` handler that copies a frame (bytes
-      or signals) into a `message` variable bound to the other CAN channel and
-      calls `output()` — you can write one from memory now.
-    - You can shape traffic in transit: raw bytes with `byte(n)` (mind the
-      Motorola/Intel byte order) or named signals with DBC-based access — the
-      safer, clearer option.
-    - Repacking into a new `TEST` message takes two edits: create the message
-      with a free ID in the CANdb++ Editor, then add the same signals so the
-      Trace decodes it.
-    - The Trace window is your proof: original frame on CAN 1, forwarded (and
-      modified) frame on CAN 2. If you can see both, your gateway works.
+    - A CAPL gateway is an `on message` handler that copies a frame (bytes or
+      signals) into a `message` variable bound to the other CAN channel and
+      calls `output()`.
+    - Traffic can be modified in transit using raw bytes with `byte(n)`
+      (observing the Motorola/Intel byte order) or named signals with
+      DBC-based access; signal access is clearer and applies the DBC scaling
+      automatically.
+    - Repacking into a new `TEST` message requires two changes: create the
+      message with a free ID in the CANdb++ Editor, then add the same signals
+      so the Trace decodes it.
+    - The Trace window verifies the gateway: the original frame appears on
+      CAN 1 and the forwarded (and modified) frame on CAN 2.
 
 !!! tip "Where this leads"
-    The same forwarding and signal-manipulation techniques power restbus
+    The same forwarding and signal-manipulation techniques are used for restbus
     simulations and test-traffic injection in the later HIL and test automation
     lessons. Review [CAPL](../../index.md) for the language basics and
     [CANalyzer](../../../canalyzer/index.md) for Trace and IG blocks.

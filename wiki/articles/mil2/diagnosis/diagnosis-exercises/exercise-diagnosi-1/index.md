@@ -1,22 +1,19 @@
 # Exercise 1 — Tracking a Fault Through Its Lifecycle
 
-Welcome to your first hands-on diagnosis exercise — and don't worry, no car,
-no tools and no cables are required. This is a pen-and-paper (well,
-spreadsheet) workout, and it's one of the most valuable habits you can build
-early in your career: **predicting what an ECU (electronic control unit) will
-answer before you even ask it.**
+This is a pen-and-paper diagnosis exercise; no vehicle, tools or cables are
+required. The skill it builds is **predicting what an ECU (electronic
+control unit) will answer before you ask it.**
 
-Here's the scenario. A single fault — a short circuit to battery on the
-cruise control button — appears, disappears and reappears across 30 scripted
-vehicle manoeuvres. After each manoeuvre, a diagnostic tester asks the ECU
-for its fault memory. Your job is to work out the exact reply, every time.
+A single fault — a short circuit to battery on the cruise control button —
+appears, disappears and reappears across 30 scripted vehicle manoeuvres.
+After each manoeuvre, a diagnostic tester asks the ECU for its fault
+memory. Your task is to work out the exact reply, every time.
 
 By the end of this exercise you'll be able to:
 
 - trace one **diagnostic trouble code (DTC)** through its full lifecycle —
   detected, confirmed, healed and aged — without guessing,
-- read and write the **DTC status byte** bit by bit, like a diagnostic
-  engineer reading a trace,
+- read and write the **DTC status byte** bit by bit,
 - explain *why* the malfunction indicator lamp (MIL) turns on and off when it
   does, and
 - predict the byte-level response to a real **UDS (Unified Diagnostic
@@ -28,14 +25,13 @@ Fill in a table with the exact byte sequence the ECU returns to the UDS
 request `19 02 08` (`ReadDTCInformation — reportDTCByStatusMask`) after each
 of the 30 manoeuvres, given a fixed fault model.
 
-What you'll practice: not hex arithmetic, but *reasoning* — which status bit
-changes, at which manoeuvre, and why. The bytes are just how you prove your
-reasoning is right.
+The focus is not hex arithmetic but *reasoning*: which status bit changes, at
+which manoeuvre, and why. The bytes are the verification of that reasoning.
 
 It applies the error-memory theory from the
 [Diagnosis](../../index.md) lesson: the DTC status byte, monitoring and
-driving cycles, MIL management and fault healing. If that lesson is still
-fresh, you're ready.
+driving cycles, MIL management and fault healing. That lesson is the
+prerequisite for this exercise.
 
 ## The diagnostic request
 
@@ -60,18 +56,18 @@ has bit 3 (`confirmedDTC`) set."* The ECU's positive answer looks like this:
  └──────────────────── positive response to service 0x19
 ```
 
-Two things to lock in before you start:
+Note the following before starting:
 
 - The availability mask is `0xCF` (`1100 1111`) because bits 4 and 5 are
   declared *not used* in this exercise.
 - If **no** stored DTC matches the mask, the ECU answers with the bare
-  `59 02 CF` — no DTC record at all. An "empty" answer is still an answer,
-  and early in the exercise it's the *correct* one.
+  `59 02 CF` — no DTC record at all. An "empty" answer is a valid answer,
+  and in the early steps it is the correct one.
 
 ## The status bits that matter
 
-The status byte is the whole game. With bits 4 and 5 unused, six bits drive
-everything that happens in this exercise:
+The status byte determines every response. With bits 4 and 5 unused, six
+bits drive the behaviour in this exercise:
 
 | Bit | Name | Set to 1 when… | Returns to 0 when… |
 |---|---|---|---|
@@ -82,8 +78,8 @@ everything that happens in this exercise:
 | 6 | testNotCompletedThisMonitoringCycle | default at every key on | a test completes in the current cycle |
 | 7 | warningIndicatorRequested | the validated DTC switches the MIL on | the lamp heals after the required fault-free cycles |
 
-Think of it as a small state machine living inside the ECU — this is the
-mental model that will carry you through all 30 steps:
+The fault lifecycle can be modelled as a small state machine inside the ECU,
+which covers all 30 steps:
 
 ```mermaid
 stateDiagram-v2
@@ -171,8 +167,8 @@ For every row, ask these four questions — always in this order:
 
 ## Expected result
 
-Stuck, or want to check yourself? Here's a worked solution following the
-assumptions above (`—` = no DTC record, so the response is just `59 02 CF`):
+The worked solution below follows the assumptions above (`—` = no DTC
+record, so the response is just `59 02 CF`):
 
 | # | Status byte | ECU response | Reason |
 |---|---|---|---|
@@ -197,12 +193,11 @@ assumptions above (`—` = no DTC record, so the response is just `59 02 CF`):
 !!! warning "Bit 0 is sticky until the next completed test"
     Removing the SCB never clears `testFailed` by itself — only a *completed
     test with a Passed result* does. Steps 9, 24 and 29 therefore keep bit 0
-    set, and that is exactly what the exercise wants you to notice.
+    set, and that is what the exercise is designed to demonstrate.
 
 ## Common mistakes
 
-Everyone trips on at least one of these the first time — now you can skip
-them:
+The following mistakes are the most common on a first pass:
 
 - **Reacting to the physical fault instead of the test.** The SCB appearing
   or disappearing (steps 3, 9, 22, 24, 26, 29) changes nothing on its own;
@@ -230,5 +225,5 @@ them:
       current + previous cycles, bit 3 the error memory itself.
     - MIL management is independent counting: ON-1 at validation, off after 2
       consecutive fault-free driving cycles.
-    - You can now predict an ECU's fault-memory response by hand — real
-      diagnostic tools will feel like confirmation, not magic.
+    - With the fault model fixed, the response to `19 02 08` at every step
+      can be predicted by hand from the status byte and the cycle counters.

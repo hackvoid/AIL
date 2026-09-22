@@ -1,23 +1,22 @@
 # Functional Specifications (VF)
 
-Welcome to the document you will open more than any other in your career as an
-automotive E/E engineer. Before a single line of software is written, every
-vehicle function — from climate control to the gear letter on the dashboard —
-is described in a **functional specification**. In the FCA/Stellantis world
-this document is called a **VF (Vehicle Function)**, written by a dedicated
-professional figure: the **functionalist**.
+Every vehicle function — from climate control to the gear letter on the
+dashboard — is described in a **functional specification** before any software
+is written. In the FCA/Stellantis world this document is
+called a **VF (Vehicle Function)**, written by a dedicated professional role:
+the **functionalist**.
 
-Why should you care? Because whenever the car does something unexpected, the
-VF is the referee. If the behavior differs from what the VF says, either the
-software or the document is wrong — and your job, often, is to find out which.
+The VF is the reference against which vehicle behavior is judged. If the
+observed behavior differs from what the VF specifies, either the software or
+the document is wrong, and determining which is a recurring part of test and
+integration work.
 
 By the end of this article you will be able to:
 
 - explain what a VF contains and where it sits in the development process,
 - decode a VF identifier like `VF200_V5_R4R3_P250FL14`,
 - walk through a real VF — VF200, *Gearbox Status Management* for a battery
-  electric vehicle (BEV) — and recognize every section when you meet one at
-  work.
+  electric vehicle (BEV) — and recognize its standard sections in practice.
 
 ## What a VF is (and is not)
 
@@ -32,15 +31,15 @@ A VF gives a **complete view of the behavior of one function**:
   fails,
 - a history of the changes made with respect to previous versions.
 
-Two properties are worth memorizing on day one:
+Two properties define the role of a VF:
 
 - **A VF is not tied to the component structure.** It describes *what* the
   function must do, not *how* a specific ECU is built. The same function may
   be re-allocated to different hardware across projects without changing the
   VF's logic.
 - **The software is written starting from the VF.** Requirements and test
-  cases are derived from it downstream — which is why a vague VF produces
-  vague software, and why you should never be shy about challenging one.
+  cases are derived from it downstream, so ambiguities in the VF propagate
+  into the software and should be raised and resolved with the functionalist.
 
 ### Position in the V-model
 
@@ -50,8 +49,8 @@ The VF sits on the **left branch of the V-model**, just below the requirements
 specifications: requirements say *what the vehicle must do*, the VF says *how
 each function behaves to achieve it*. On the right branch it is mirrored by
 the **integration and system test** phases — the tests that verify the
-implemented function against the specification. That mirroring is exactly why
-you, as a test engineer, will read VFs even if you never write one.
+implemented function against the specification. For this reason, test
+engineers work extensively with VFs even if they never author one.
 
 !!! note "One function, many VFs"
     A car-level feature area (car access, climate, braking, lighting,
@@ -86,15 +85,16 @@ and R4 merged), ported to project 250FL14.
 ## Anatomy of a VF
 
 Layouts vary slightly between manufacturers' templates, but every VF contains
-the same logical sections. Here is the tour.
+the same logical sections, described below.
 
 ### Revision notes
 
 The document opens with a **revision table**: for every release, the date,
 the author (the VF *owner*), and the list of changes — usually referencing a
 change request (CR) number. If the VF was **ported** from another project,
-the origin is declared here. Make this table your first stop when a test
-fails "against the spec": you may simply be reading an outdated release.
+the origin is declared here. When a test fails against the specification,
+check this table first: the discrepancy may come from reading an outdated
+release.
 
 ### Functional diagram
 
@@ -129,7 +129,7 @@ Each row is marked Yes/No, with remarks for timing (in minutes) or exclusion
 mode (software or hardware). A simple function may live only at key-on; a body
 function often needs key-off and timed operation too.
 
-### Function description — the heart of the VF
+### Function description
 
 The core section, and the longest. It starts by listing the **nodes
 involved**, distinguishing those that *"make logic"* (implement the
@@ -152,14 +152,14 @@ vehicle is asleep.
 All tunable values — thresholds, timeouts, debounce times — are collected as
 **configuration parameters**, each with a description, the owning node, and
 where the value is implemented (PROXI configuration, end-of-line programming,
-part number, or to be defined with the supplier). You will care about these a
-lot: changing a parameter is a *calibration* change, not a software change,
-and tests must often be repeated per parameter set.
+part number, or to be defined with the supplier). The distinction matters in
+testing: changing a parameter is a *calibration* change, not a software
+change, and tests must often be repeated per parameter set.
 
 ### CAN wake-up
 
 A short section states whether activating the function can **wake the CAN
-network** (think of a door-handle pull waking the body CAN), with a table of
+network** (for example, a door-handle pull waking the body CAN), with a table of
 the triggering events per node. This matters for power-management tests.
 
 ### Diagnosis and recovery
@@ -197,7 +197,7 @@ and edit DBC files constantly in CANalyzer/CANoe.
 
 ## Case study: VF200 — Gearbox Status Management (BEV)
 
-Theory is nice; a real document is better. Our example is **VF200_V5_R4R3**,
+The example in this section is **VF200_V5_R4R3**,
 *Gearbox Status Management – BEV*, for FCA project **250FL14** (Vehicle
 Function Area: *Powertrain Management*, Group: *GearBox*). The function
 manages **everything the driver sees and hears about the transmission**: the
@@ -205,12 +205,13 @@ gear indication on the instrument panel, its blinking, the warning messages,
 the buzzer, the drive-mode (Eco/Power) management, and the vehicle-hold /
 parking-brake requests.
 
-Even the revision notes teach a lesson: across releases, an unnecessary
+The revision notes already show the kind of changes to expect: across releases,
+an unnecessary
 parameter (`T_SHOW_OFF_BCM`) was deleted, signal names were corrected
 (`Power_Eco.Req` → `EcoPower.Req`), diagnosis timers were aligned
 (`MissingMsg_Fast_Time` → `MissingMsg_Default_Time`), and the driver-exit
-logic was changed from AND to OR between seat-belt and door status — exactly
-the kind of detail that flips a test result.
+logic was changed from AND to OR between seat-belt and door status — the kind
+of detail that can change a test outcome.
 
 ### Nodes and signal flow
 
@@ -280,8 +281,8 @@ pattern repeats for N, R and D:
 the actually engaged gear (and the park-brake status). If a mismatch persists
 longer than `T_Gear_Mismatch` (first trial 500 ms), it sets
 `GearIndicationSts = Blinking` **and** `BuzzerReqSts = OtherCaseSoundOn` —
-that is the blinking gear letter and the beep you hear when the gearbox could
-not do what you asked.
+the blinking gear letter and audible warning the driver perceives when the
+requested gear could not be engaged.
 
 ### Drive-mode (Power_Eco) management
 
@@ -304,10 +305,10 @@ At every key-on→key-off transition the MTA reports
 
 ### Vehicle-hold (transmission parking brake) scenarios
 
-The trickiest part of VF200 is `MOT5.Vehicle_Hold_Rq` — when the MTA asks to
+The most complex part of VF200 is `MOT5.Vehicle_Hold_Rq` — when the MTA asks to
 hold the vehicle. The VF enumerates **seven scenarios**, with explicit
 priority rules (driver-exit scenarios override normal operation). Two of them
-show the safety thinking:
+illustrate the safety reasoning:
 
 - **Switch-off**: at key-on→key-off, if the last known speed was below
   `TPBM_threshold` the MTA requests hold; otherwise it warns
@@ -347,7 +348,7 @@ CRANKING"), and derives `EcoPower.Req` from the received `DriveModeSts`.
 ### Diagnosis and recovery in VF200
 
 The diagnosis table lists every input, the fault type, and the storing ECU.
-The recovery rules show the standard patterns you will meet everywhere:
+The recovery rules follow the standard patterns:
 
 | Fault | Detecting ECU | Recovery while fault active |
 |---|---|---|
@@ -359,14 +360,13 @@ The recovery rules show the standard patterns you will meet everywhere:
 | `STATUS_SDM` missing | BCM | Forward `Seat Belt Fasten` |
 | `STATUS_C_CAN`, `STATUS_B_TCM_MTA_DCTM`, `EDR_INFO` missing | IPC | Assume `EngineSts = On`, requests `Not_Active`, brake switch `Not_active` |
 
-Notice the philosophy: **fallback values are chosen on the safe side** —
+The design principle is consistent: **fallback values are chosen on the safe side** —
 assume the door is closed and the belt fastened (so no spurious hold
 request), declare the engine running, and neutralize driver-visible requests.
 
 ### Configuration parameters
 
-VF200 closes with its calibration table — the knobs you can turn as a test
-engineer:
+VF200 closes with its calibration table of tunable parameters:
 
 | Parameter | Meaning | First trial value |
 |---|---|---|
@@ -386,25 +386,25 @@ engineer:
     every parameter in a VF is a candidate test case. In the test-design
     lessons, a VF like VF200 is exactly the document you will be asked to
     derive cases from — boundary values around `Rthreshold`,
-    `TPBM_threshold` and the mismatch timer are the obvious targets.
+    `TPBM_threshold` and the mismatch timer are typical targets.
 
 !!! success "Key takeaways"
-    - You can now read a VF: the functionalist's document describing the
-      complete behavior of one vehicle function — software and tests are
-      derived from it, and it is independent of the component structure.
-    - You can decode any identifier: `Function [VFn_Vx_Ry]` — Version tracks
-      the set-up, Release tracks evolutions. Always quote the full string.
-    - You know the fixed sections: revision notes, functional diagram,
-      working conditions, function description, parameters, CAN wake-up,
-      diagnosis & recovery — plus DBC/LIN companion files and the CDD for
-      full diagnosis detail.
-    - You have seen real logic: requirements written per key condition with
-      named calibration parameters, never hardcoded values.
-    - VF200 is your reference example: lever/gear mismatch → blinking +
+    - A VF is the functionalist's document describing the complete behavior of
+      one vehicle function; software and tests are derived from it, and it is
+      independent of the component structure.
+    - A VF identifier `Function [VFn_Vx_Ry]` encodes the function number, the
+      version (vehicle set-up) and the release (evolution); the full string
+      must be quoted in test reports and defects.
+    - The fixed sections are: revision notes, functional diagram, working
+      conditions, function description, parameters, CAN wake-up, diagnosis &
+      recovery — plus the DBC/LIN companion files and the CDD for full
+      diagnosis detail.
+    - VF requirements are written per key condition and use named calibration
+      parameters rather than hardcoded values.
+    - VF200 illustrates the typical patterns: lever/gear mismatch → blinking +
       buzzer, speed-thresholded engagement with forced-N fallback, seven
       prioritized vehicle-hold scenarios, one-to-one IPC mapping, and
-      safe-side recovery defaults for every failed input. Next time someone
-      says "check the VF", you will know exactly where to look.
+      safe-side recovery defaults for every failed input.
 
 ---
 

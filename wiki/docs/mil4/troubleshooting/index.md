@@ -1,20 +1,18 @@
 # Troubleshooting Principles
 
-Welcome to the part of the bootcamp where everything comes together. Reading CAN
-traces, flashing ECUs, running HIL test cases — all of those skills exist for
-one moment: a vehicle or a rig misbehaves, and *you* are the person who has to
-figure out why. That moment is **troubleshooting**, and the good news is that it
-is a learnable method, not a talent you're born with.
+Troubleshooting is where the skills from the previous modules come together.
+Reading CAN traces, flashing ECUs and running HIL test cases all serve one
+purpose: finding the cause when a vehicle or a rig misbehaves. Troubleshooting
+is a learnable method, not an innate talent.
 
 By the end of this article you'll be able to:
 
-- explain what separates real troubleshooting from guessing (and why guessing
-  *feels* so productive),
+- explain what separates systematic troubleshooting from guessing,
 - run the six-step troubleshooting loop on any defect, electrical or software,
-- hunt down a parasitic battery drain with a multimeter and a fuse box,
-- read a real fault investigation — a torque-security DTC on a hybrid
-  prototype — and see the method hiding inside it,
-- practice on two classic warm-up problems before you ever touch a car.
+- locate a parasitic battery drain with a multimeter and a fuse box,
+- analyze a real fault investigation — a torque-security DTC on a hybrid
+  prototype — and identify the troubleshooting method applied in it,
+- practice the method on two introductory exercises.
 
 ## What troubleshooting actually is
 
@@ -33,12 +31,12 @@ suddenly stopped. Three properties define it:
     The lesson opens with Einstein's remark: given one hour to solve a
     problem, spend 55 minutes thinking about the problem and 5 minutes
     thinking about solutions. Get the problem statement wrong and every
-    activity that follows is poisoned — no matter how fast you work.
+    activity that follows is compromised, no matter how fast you work.
 
 ## Think like an engineer, not a magician
 
-When a system fails, your first instinct is to blame whatever changed most
-recently. That's a fine *starting point* — but remember the principle that
+When a system fails, a common first hypothesis is whatever changed most
+recently. That is a reasonable starting point — but remember the principle that
 **correlation does not imply causality**. Two events happening together, or
 resembling each other, does not make one the cause of the other. Jumping from
 coincidence to causation is what the lesson calls *magical thinking*, and it is
@@ -50,8 +48,7 @@ judgement. On the bench, that means:
 - base your theory of the cause on **facts**, as much as you can gather;
 - a theory is good if you can **test it** — even a wrong-but-testable theory
   moves the investigation forward;
-- don't be afraid of being wrong. Being wrong is a normal step: discard the
-  theory, build the next one.
+- a disproven theory is a normal step: discard it and build the next one.
 
 ### Occam's razor: simplest first
 
@@ -60,7 +57,8 @@ problem-solving principle known as Occam's razor — "entities should not be
 multiplied without necessity" — translates into workshop language as: *the
 simplest solution is most likely the right one*. Before you suspect a rare
 software race condition, check the fuse, the connector, the power supply and
-the ground. You will be amazed how often the answer lives there.
+the ground. In practice, these simple causes account for a large share of
+faults.
 
 ### Defining the problem: Descartes at the bench
 
@@ -109,7 +107,7 @@ every day:
   to the solution yourself, help someone else get there — what matters is a
   solution in a reasonable time, not who finds it.
 - If someone else found the solution, make sure you **fully understand how it
-  works**. Ask questions; there are no silly questions.
+  works**. Ask questions until the reasoning is clear.
 - **Carefully examine the data you already have.** Don't wait for "perfect"
   data — the answer is often already sitting in the first log you received.
   It's a matter of learning to read it.
@@ -118,11 +116,10 @@ every day:
   to trust your data.
 - **Know the system architecture.** If you don't know how it works, it's
   unlikely you'll know how to fix it.
-- And one from the heart of the lesson: troubleshooting is serious work, but
-  it can also be **fun** — you get the best results when you let yourself get
-  genuinely involved and interested in the problem.
+- **Engagement with the problem matters.** Sustained, genuine interest in the
+  issue tends to produce the best results.
 
-!!! tip "Structuring the cause hunt: the fishbone"
+!!! tip "Structuring the cause search: the fishbone diagram"
     When a problem has many possible causes, an **Ishikawa (fishbone)
     diagram** helps you enumerate them systematically instead of fixating on
     the first one: the effect sits at the head, and the bones group candidate
@@ -131,14 +128,10 @@ every day:
 
     ![Ishikawa cause-and-effect diagram](img/ishikawa-diagram.webp)
 
-    As Sherlock Holmes put it: *"When you have eliminated the impossible,
-    whatever remains, however improbable, must be the truth."*
-
 ## Case study 1 — a battery that keeps dying
 
-A battery that goes flat once is an inconvenience. A battery that keeps going
-flat is a **symptom** — and a perfect first troubleshooting case, because the
-candidate causes are few and concrete:
+A battery that repeatedly goes flat is a **symptom**, and a suitable first
+troubleshooting case because the candidate causes are few and concrete:
 
 - **battery wear** (the battery itself no longer holds charge);
 - a **mismatch of the charge/discharge ratio** when charging from the
@@ -148,7 +141,7 @@ candidate causes are few and concrete:
 - **external leakage currents** — something on the vehicle draws current while
   it is parked.
 
-Here's the power distribution hardware you'll be probing:
+The power distribution hardware involved in the measurement:
 
 ![Battery, fuse box and front power distribution center in the vehicle](img/battery-power-layout.webp)
 
@@ -163,7 +156,7 @@ draining the battery while the vehicle is parked.
 
 ### Setup
 
-Preparation first — skip this and you can lock yourself out of the car:
+Prepare the vehicle first — skipping these steps can lock you out of the car:
 
 1. Open the hood and **switch off all consumers** — radio, exterior and
    interior lights.
@@ -208,9 +201,8 @@ tested theory, and the search space shrinks circuit by circuit.
 
 ## Case study 2 — torque security check fail (DTC P061B)
 
-Now for a software/safety issue — the kind you'll spend much of your career
-on. This one happened on a **P1P4 hybrid prototype** at the Melfi plant, with
-the vehicle on dynamometer rolls.
+This case study covers a software/safety issue. It occurred on a **P1P4
+hybrid prototype** at the Melfi plant, with the vehicle on dynamometer rolls.
 
 **Symptom and customer impact:**
 
@@ -256,10 +248,9 @@ repeatedly and the controller behavior captured precisely.
 
 ## Try it yourself
 
-These are the two starter exercises from the lesson — thinking drills to
-sharpen your method before you look at any answer. For each one, write down
-the checks **in the order you would perform them** — simplest and most
-probable first.
+The following two exercises from the lesson practice the method. For each
+one, write down the checks **in the order you would perform them** — simplest
+and most probable first.
 
 ### Exercise 1 — the starter does not crank
 
@@ -317,9 +308,9 @@ and ground before bus physics, bus physics before suspecting the ECU.
 !!! success "Key takeaways"
     - Troubleshooting = systematic elimination of candidate causes, ending
       only when the fix is **verified** and, where possible, a **preventive
-      measure** is in place. You can do this — it's a method, not magic.
-    - Correlation is not causation: test theories, don't marry them. A wrong
-      theory is still progress, as long as it's falsifiable.
+      measure** is in place.
+    - Correlation is not causation: treat theories as hypotheses to be tested.
+      A disproven theory is still progress, as long as it was falsifiable.
     - Simplest first (Occam): fuse → connector → power/ground before software.
     - Descartes' four rules — doubt, simplification, focus, completeness —
       turn "define the issue" into a concrete checklist.
@@ -328,8 +319,8 @@ and ground before bus physics, bus physics before suspecting the ECU.
     - Parasitic drain is found by measuring leakage current (multimeter,
       ≥ 10 A DC range, or a DC clamp meter) and pulling fuses one by one;
       remember the unfused suspects: alternator and starter.
-    - Real failures are cross-domain: DTC P061B came from the *interaction* of
-      wheel-speed mismatch, ESC intervention and a D→N transition — and the
+    - The P061B case was cross-domain: the fault came from the *interaction*
+      of wheel-speed mismatch, ESC intervention and a D→N transition, and the
       fix starts with reproducing it at HIL.
 
 !!! tip "Where this leads"

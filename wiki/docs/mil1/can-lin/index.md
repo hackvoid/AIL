@@ -3,7 +3,7 @@
 Modern vehicles contain dozens of electronic control units (ECUs) that must
 exchange data constantly. Instead of point-to-point wiring between every pair of
 ECUs, vehicles use **shared communication buses**. This article covers the three
-technologies you will meet throughout the bootcamp:
+technologies used throughout the bootcamp:
 
 - **CAN** — the workhorse for powertrain, chassis and body communication
 - **LIN** — the cheap, slow bus for simple actuators and sensors
@@ -137,7 +137,7 @@ stateDiagram-v2
 - **Error passive** — the node sends passive error flags and waits longer before
   retransmitting, so it disturbs the bus less.
 - **Bus off** — the node disconnects itself from the bus until a recovery
-  sequence completes. This is what prevents one broken ECU from killing the
+  sequence completes. This is what prevents one broken ECU from disrupting the
   whole network.
 
 ### DBC files: giving raw frames meaning
@@ -255,7 +255,7 @@ flowchart LR
     E --> S((Switch)) --> R[Receiver ECU]
 ```
 
-Protocols you will meet later that ride on this stack: **DoIP** (diagnostics
+Protocols covered in later lessons that run on this stack: **DoIP** (diagnostics
 over IP), **FOTA** (firmware over the air), **gPTP** (time synchronization),
 **AVB/TSN** (audio-video and time-sensitive traffic).
 

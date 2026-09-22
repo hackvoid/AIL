@@ -1,16 +1,14 @@
 # Vehicle Subsystems
 
-Welcome to your guided tour under the skin of a modern car. Before you test,
-calibrate or diagnose an Electronic Control Unit (ECU) — the small computers
-that run everything in a vehicle — you need to know *what those ECUs are
-actually controlling*. This lesson walks you through the subsystems you will
-meet again and again during the bootcamp: the brakes and their electronic
-assistants, the charging and starting hardware, the exhaust after-treatment
-chain, the valve train, the transmission, and the drive layout. For each one we
-look at the physical principle first, then at how the electronic control layer
-sits on top of the mechanics. When you finish, you will be able to look at any
-of these systems and explain what it does, what the ECU measures, and what it
-commands — the exact mental model every later lesson builds on.
+Before testing, calibrating or diagnosing an Electronic Control Unit (ECU) —
+the small computers that run the vehicle's functions — you need to know what
+those ECUs actually control. This article covers the subsystems used throughout
+the bootcamp: the brakes and their electronic control functions, the charging
+and starting hardware, the exhaust after-treatment chain, the valve train, the
+transmission, and the drive layout. For each subsystem, the physical principle
+is presented first, followed by how the electronic control layer operates on
+top of the mechanics. The objective is to be able to explain, for each system,
+what it does, what the ECU measures, and what it commands.
 
 ```mermaid
 flowchart LR
@@ -22,9 +20,8 @@ flowchart LR
     V --> D["Drive<br/>layout"]
 ```
 
-Don't worry about memorizing everything on the first pass — treat this article
-as a map you can come back to whenever a later lesson mentions a subsystem you
-want to place in the bigger picture.
+This article can be used as a reference to revisit whenever a later lesson
+mentions one of these subsystems.
 
 ## Braking system
 
@@ -48,10 +45,9 @@ force on the pads stays proportional to what the driver requests.
 
 ### Oversteer and understeer
 
-Before we meet the electronic assistants, learn two words you will hear
-constantly. They describe how a car deviates from the trajectory the driver
-intends in a curve — and they matter because the stability systems below exist
-to correct exactly these behaviors:
+Two terms describe how a car deviates from the trajectory the driver intends
+in a curve. They matter because the stability systems below exist to correct
+exactly these behaviors:
 
 - **Oversteer** — the car turns *tighter* than intended; the rear axle loses
   adhesion and the tail steps out, which can lead to a spin if uncorrected.
@@ -91,7 +87,7 @@ sequenceDiagram
     end
 ```
 
-!!! note "ABS shortens the path to safety, not always the stopping distance"
+!!! note "ABS preserves steerability, not always the shortest stopping distance"
     The main benefit of ABS is that the wheels keep rolling, so the car remains
     steerable during emergency braking — the driver can brake *and* swerve. On
     some surfaces (gravel, deep snow) stopping distance can even increase, but
@@ -108,15 +104,15 @@ destroys the car's directional stability and can make it spin.
 sensors and the hydraulic modulator) to apportion brake force between the
 axles. It lightens the braking force on one or both rear wheels — especially in
 corners, where the inner rear wheel is most unloaded — so that lock-up is
-avoided at the axle that can least afford it. Think of it as ABS logic applied
+avoided at the axle that can least afford it. EBD effectively applies ABS logic
 *preventively* to the brake balance, rather than reactively to a locking wheel.
 
 ### ESC — Electronic Stability Control
 
-**Electronic Stability Control (ESC)** is the system that fights oversteer and
-understeer directly. Bosch markets it as **ESP** (Electronic Stability
-Program), and other manufacturers use names such as DSC — same idea, different
-badge.
+**Electronic Stability Control (ESC)** is the system that directly corrects
+oversteer and understeer. Bosch markets it as **ESP** (Electronic Stability
+Program); other manufacturers use names such as DSC for functionally
+equivalent systems.
 
 When the car starts to skid — the measured yaw behavior no longer matches what
 the steering angle implies the driver wants — ESC intervenes on two channels at
@@ -144,8 +140,8 @@ wheel and intervenes, depending on the system design, on one or both of:
 
 ### Hill Holder
 
-Hill Holder solves a small but real problem: when starting from a standstill on
-an uphill grade, it keeps the brakes applied during the gap between the driver
+Hill Holder addresses hill starts: when starting from a standstill on an
+uphill grade, it keeps the brakes applied during the gap between the driver
 releasing the brake pedal and the engine delivering enough torque to move off,
 so the vehicle does not roll backwards.
 
@@ -164,7 +160,7 @@ so the vehicle does not roll backwards.
     the same hydraulic modulator and largely the same ECU. When you later test
     one of them on a Hardware-in-the-Loop (HIL) rig or in the vehicle, you are
     really testing the whole braking-control platform from different functional
-    angles — a useful thing to remember when you plan your test cases.
+    angles — which is relevant when planning test cases.
 
 ## Charging and starting
 
@@ -241,8 +237,8 @@ The measured quantity is the air/fuel ratio expressed as **λ (lambda)**:
 The probe reports this to the engine ECU as an electrical signal, and the ECU
 uses it in a feedback loop to correct the amount of fuel injected into the
 combustion chamber, hunting continuously around λ = 1 on petrol engines. This
-is your first real example of **closed-loop control**, a pattern you will see
-everywhere in this job: measure, compare against a target, correct, repeat.
+is an example of **closed-loop control**, a pattern used throughout automotive
+ECU software: measure, compare against a target, correct, repeat.
 
 ![Lambda probe characteristic: output voltage steps from ~1 V (rich) to ~0 V (lean) at λ = 1](img/lambda-curve.webp)
 
@@ -365,9 +361,9 @@ switches to a performance-oriented phasing.
 | Disengageable cams | Cams slide along the camshaft under electronic control; valves can be locked closed, letting the engine run on fewer cylinders (cylinder deactivation) |
 
 Almost every manufacturer has a branded implementation — Toyota's VVT-i, Honda's
-VTEC and BMW's Valvetronic are names you may already have heard. You do not
-need to know them all; the one that matters most for this course is Fiat's
-**Multiair**, covered next, because you are likely to meet it on real projects.
+VTEC and BMW's Valvetronic are common examples. The one most relevant to this
+course is Fiat's **Multiair**, covered next, as it is likely to appear on real
+projects.
 
 ### Multiair — electro-hydraulic valve control
 
@@ -395,8 +391,8 @@ hydraulically:
 Because the ECU commands the chamber valve cycle by cycle, the effective intake
 valve law becomes a software parameter rather than a machined piece of metal —
 which is why Multiair is a calibration-heavy subsystem when it comes to engine
-control development, and a great preview of the kind of work you will do with
-calibration tools like INCA in MIL3.
+control development, and a preview of the calibration work performed with tools
+such as INCA in MIL3.
 
 ## Transmission
 
@@ -452,10 +448,10 @@ flowchart LR
 ```
 
 Both shafts rotate simultaneously, but only the one whose clutch is engaged
-transmits torque. While you drive in third, the second shaft already has fourth
-**pre-selected and waiting**; the shift itself is just a swap of which clutch
-is closed. The advantage is a remarkable shifting speed, with no torque
-interruption worth mentioning.
+transmits torque. While third gear is engaged, the second shaft already has
+fourth **pre-selected**; the shift itself is only a swap of which clutch is
+closed. The advantage is very fast shifting with virtually no torque
+interruption.
 
 ### AT — Conventional Automatic Transmission
 
@@ -479,7 +475,8 @@ A hydraulic automatic transmission consists of three main parts:
 
 ## Drive layouts (traction)
 
-Last stop on the tour: which wheels actually receive the engine's torque.
+The final subsystem group concerns which wheels actually receive the engine's
+torque.
 
 | Layout | Principle | Notes |
 |---|---|---|
@@ -495,29 +492,29 @@ everyday conditions, some off-road vehicles and high-performance applications;
 4WD is the choice for heavier-duty work.
 
 !!! success "Key takeaways"
-    - You now have the map: six subsystem families, each with mechanics
-      underneath and an ECU on top — measure, decide, actuate.
+    - Six subsystem families were covered, each with mechanics underneath and an
+      ECU control layer on top: measure, decide, actuate.
     - All braking assistants (ABS, EBD, ESC, TCS, Hill Holder) share one
       hardware platform: wheel-speed sensors plus a hydraulic modulator. ESC
       additionally cuts engine torque to correct oversteer and understeer.
-    - Emission control is a chain you can recite: EGR prevents NOx in the
+    - Emission control is a chain: EGR prevents NOx in the
       cylinder (5–15% recirculation, PWM-driven), the lambda probe closes the
       mixture loop around λ = 1, the catalyst (one-/two-/three-way, best at
       180–380 °C) converts CO, HC and NOx, and diesels add a monitored DPF
       plus urea-based SCR.
     - Variable valve timing adapts valve events to rpm; Multiair turns the
-      intake valve law into per-cycle software — your first taste of why
-      calibration matters.
+      intake valve law into per-cycle software — an example of why calibration
+      matters.
     - Transmissions differ in *who* works the clutch: MTA robotizes a manual,
       DCT pre-selects the next gear on a second clutch shaft, AT pairs a
       torque converter with planetary gears. FWD/RWD pick an axle; 4WD splits
       torque equally, AWD lets the ECU redistribute it continuously.
 
 !!! tip "Where this leads"
-    You will see these subsystems from the ECU's point of view very soon: their
-    signals travel on the buses from [CAN, LIN & Automotive
+    These subsystems reappear from the ECU's point of view in later modules:
+    their signals travel on the buses covered in [CAN, LIN & Automotive
     Ethernet](../can-lin/index.md), and their faults surface as the Diagnostic
-    Trouble Codes you will read in the [Diagnosis](../../mil2/diagnosis/index.md)
+    Trouble Codes read in the [Diagnosis](../../mil2/diagnosis/index.md)
     lessons of MIL2.
 
 ---

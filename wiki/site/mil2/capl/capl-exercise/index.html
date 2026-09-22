@@ -25,7 +25,7 @@
     
     
       
-        <title>CAPL Exercises — Your Hands-On Lab Series - Kineton Academy Wiki</title>
+        <title>CAPL Exercises — Hands-On Lab Series - Kineton Academy Wiki</title>
       
     
     
@@ -69,7 +69,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#capl-exercises-your-hands-on-lab-series" class="md-skip">
+        <a href="#capl-exercises-hands-on-lab-series" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CAPL Exercises — Your Hands-On Lab Series
+              CAPL Exercises — Hands-On Lab Series
             
           </span>
         </div>
@@ -127,7 +127,21 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
     
   
 </form>
@@ -4266,14 +4280,15 @@
 
 
 
-<h1 id="capl-exercises-your-hands-on-lab-series">CAPL Exercises — Your Hands-On Lab Series<a class="headerlink" href="#capl-exercises-your-hands-on-lab-series" title="Permanent link">&para;</a></h1>
-<p>Time to stop reading about CAPL (<strong>Communication Access Programming Language</strong>,
-Vector's C-like scripting language) and start writing it. After the
-<a href="../">CAPL theory lessons</a>, these three labs put you in front of
-CANoe/CANalyzer with the real <strong>P332 BEV (Battery Electric Vehicle) platform
-databases</strong> and ask you to make a script behave like a real <strong>ECU (Electronic
-Control Unit)</strong> — sending cyclic frames, reacting to what arrives on the bus,
-and even bridging two CAN (Controller Area Network) buses together.</p>
+<h1 id="capl-exercises-hands-on-lab-series">CAPL Exercises — Hands-On Lab Series<a class="headerlink" href="#capl-exercises-hands-on-lab-series" title="Permanent link">&para;</a></h1>
+<p>This series of three labs applies CAPL (<strong>Communication Access Programming
+Language</strong>, Vector's C-like scripting language) in practice. Following the
+<a href="../">CAPL theory lessons</a>, the labs are carried out in
+CANoe/CANalyzer using the real <strong>P332 BEV (Battery Electric Vehicle) platform
+databases</strong>, and each lab requires a script that behaves like a real
+<strong>ECU (Electronic Control Unit)</strong> — sending cyclic frames, reacting to
+messages arriving on the bus, and bridging two CAN (Controller Area Network)
+buses together.</p>
 <p>By the end of this series you will be able to:</p>
 <ul>
 <li>write event-driven CAPL nodes using timers, <code>on key</code>, <code>on message</code> and
@@ -4283,16 +4298,15 @@ and even bridging two CAN (Controller Area Network) buses together.</p>
 <li>build a two-bus <strong>gateway</strong> that forwards, modifies and repackages live
   traffic.</li>
 </ul>
-<p><strong>What you'll practice:</strong> thinking like the ECU you're simulating — reading
-identifiers, periods and signal layouts from the database, and proving every
-behavior in the Trace window.</p>
+<p><strong>Focus of the exercises:</strong> reading identifiers, periods and signal layouts
+from the database, and verifying every behavior in the Trace window.</p>
 <h2 id="the-scenario">The scenario<a class="headerlink" href="#the-scenario" title="Permanent link">&para;</a></h2>
-<p>All three labs revolve around the <strong>IPC (Instrument Panel Cluster)</strong> ECU — the
-computer behind the dashboard — and the body/chassis CAN networks it talks to.
-The networks are described by the P332BEV <strong>DBC (Database CAN)</strong> files attached
-to each exercise folder: <code>BH-CAN</code> for the body-high bus, <code>C1-CAN</code> for the
-chassis bus. Those files are your source of truth for every message name,
-cycle time and signal layout you'll touch.</p>
+<p>All three labs are based on the <strong>IPC (Instrument Panel Cluster)</strong> ECU — the
+computer behind the dashboard — and the body/chassis CAN networks it
+communicates with. The networks are described by the P332BEV <strong>DBC (Database
+CAN)</strong> files attached to each exercise folder: <code>BH-CAN</code> for the body-high bus,
+<code>C1-CAN</code> for the chassis bus. These files are the reference for every message
+name, cycle time and signal layout used in the exercises.</p>
 <h2 id="setup-what-you-need-before-starting">Setup — what you need before starting<a class="headerlink" href="#setup-what-you-need-before-starting" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -4322,61 +4336,64 @@ cycle time and signal layout you'll touch.</p>
 </table>
 <p>Every lab starts the same way: create a configuration, attach the DBC(s) to
 the CAN channels, insert a <strong>Program/Network node</strong>, and open the CAPL Browser
-to write your code. From then on, the <strong>Trace</strong> and <strong>Write</strong> windows are how
-you prove it works.</p>
+to write your code. The <strong>Trace</strong> and <strong>Write</strong> windows are then used to
+verify the behavior.</p>
 <h2 id="lab-1-simulating-the-ipc-environment">Lab 1 — <a href="capl-exercise/">Simulating the IPC environment</a><a class="headerlink" href="#lab-1-simulating-the-ipc-environment" title="Permanent link">&para;</a></h2>
-<p>Your first complete CAPL node. <strong>Goal:</strong> simulate the slice of the vehicle
-network that talks to the IPC. One script, four event-driven skills:</p>
+<p>The first complete CAPL node. <strong>Goal:</strong> simulate the portion of the vehicle
+network that communicates with the IPC. The lab uses a single script covering
+four event-driven tasks:</p>
 <ol>
 <li>Send the <code>STATUS_UBSS_BH</code> message cyclically for the whole measurement,
    using the exact period from the DBC (a self-re-arming timer plus <code>output()</code>).</li>
 <li>When the <strong>"2" key</strong> is pressed, send <code>TELEMATIC_VEHICLE_SETUP2</code> with the
    <code>PowerLevelReq</code> signal set to <code>0x3</code>.</li>
 <li>Each time <code>IPC_VEHICLE_SETUP</code> arrives, compare its <code>PowerLevel</code> signal
-   against your requested value: bump a counter <code>Count1</code> on every mismatch,
-   decrease it on every match — and never let it go below zero.</li>
-<li>Behave like a good network citizen: stop transmitting if a <strong>Bus Off</strong>
-   condition occurs, and at the end of the measurement print a summary line to
-   the Write window reporting how many times <code>PowerLevel</code> differed from
-   <code>PowerLevelReq</code>.</li>
+   against the requested value: increment the counter <code>Count1</code> on every
+   mismatch, decrement it on every match — and never let it go below zero.</li>
+<li>Stop transmitting if a <strong>Bus Off</strong> condition occurs, and at the end of the
+   measurement print a summary line to the Write window reporting how many
+   times <code>PowerLevel</code> differed from <code>PowerLevelReq</code>.</li>
 </ol>
-<p>This is the most complete single-node workout of the series — timers, key
-events, message handlers, signal access and error handling in one script.</p>
+<p>This is the most complete single-node exercise of the series, combining
+timers, key events, message handlers, signal access and error handling in one
+script.</p>
 <h2 id="lab-2-exercise-8-capl-with-real-hardware">Lab 2 — <a href="capl-exercise8/">Exercise 8: CAPL with real hardware</a><a class="headerlink" href="#lab-2-exercise-8-capl-with-real-hardware" title="Permanent link">&para;</a></h2>
-<p>A shorter lab that connects everything to the physical world. <strong>Goal:</strong> run a
-real measurement through the CANcaseXL and script on top of it — configure
+<p>A shorter lab that connects the toolchain to physical hardware. <strong>Goal:</strong> run
+a real measurement through the CANcaseXL and script on top of it — configure
 trace observation and logging, plot two signals of interest in a Graphics
 window, print the payload of a received CAN message, and transmit a frame with
 correct timing that the <strong>real ECU</strong> on the other end actually accepts without
-faulting. Measurement lifecycle prints (<code>"Started"</code> / <code>"Stopped"</code>) round it
-out. If Lab 1 taught you the language, this one teaches you the discipline:
-observe first, then script.</p>
+faulting. Measurement lifecycle prints (<code>"Started"</code> / <code>"Stopped"</code>) complete
+the exercise. Where Lab 1 covers the CAPL language constructs, this lab covers
+the hardware workflow: configure and observe the measurement first, then add
+scripting.</p>
 <h2 id="lab-3-can-gateway-bridging-two-can-buses">Lab 3 — <a href="capl-exercise-gateway/">CAN Gateway: bridging two CAN buses</a><a class="headerlink" href="#lab-3-can-gateway-bridging-two-can-buses" title="Permanent link">&para;</a></h2>
-<p>The advanced lab, and the most fun. <strong>Goal:</strong> become the gateway between the
-C1-CAN and BH-CAN networks. You start by copying messages from one bus to the
-other and verifying the routing in the Trace window. Then you modify traffic
-in transit — first a raw byte (checking the <strong>Motorola vs. Intel byte order</strong>
-in the CANdb++ Editor before touching anything), then a scaled signal value by
-name. Finally you extend the DBC with a new <code>TEST</code> message and signals, and
-repack the routed content into it so it looks native on the second bus. Copy,
-modify, repack: the three moves behind restbus simulation and fault injection.</p>
+<p>The advanced lab. <strong>Goal:</strong> implement a gateway between the C1-CAN and BH-CAN
+networks. You start by copying messages from one bus to the other and
+verifying the routing in the Trace window. Then you modify traffic in transit
+— first a raw byte (checking the <strong>Motorola vs. Intel byte order</strong> in the
+CANdb++ Editor before making any change), then a scaled signal value by name.
+Finally you extend the DBC with a new <code>TEST</code> message and signals, and repack
+the routed content into it so it appears native on the second bus. These three
+operations — copy, modify, repack — are the basis of restbus simulation and
+fault injection.</p>
 <h2 id="suggested-order">Suggested order<a class="headerlink" href="#suggested-order" title="Permanent link">&para;</a></h2>
 <pre class="kx-mermaid"><code>flowchart LR
     A["1. CAPL Exercise&lt;br/&gt;single-node scripting"] --&gt; B["2. Exercise 8&lt;br/&gt;real ECU via CANcase"]
     B --&gt; C["3. CAN Gateway&lt;br/&gt;two buses, data manipulation"]</code></pre>
-<p>Take them in order: Lab 1 teaches the CAPL event handlers and timer patterns,
-Lab 2 adds hardware and measurement analysis, and the Gateway lab combines
-both while adding byte- and signal-level data manipulation. Each lab assumes
-the previous one's instincts.</p>
+<p>Complete the labs in order: Lab 1 teaches the CAPL event handlers and timer
+patterns, Lab 2 adds hardware and measurement analysis, and the Gateway lab
+combines both while adding byte- and signal-level data manipulation. Each lab
+builds on the skills developed in the previous one.</p>
 <div class="admonition tip">
-<p class="admonition-title">Habits that pay off in all three labs</p>
+<p class="admonition-title">Practical recommendations</p>
 <ul>
 <li>Always read the message's <strong>cycle time from the DBC</strong> instead of
   guessing a timer period — a wrong period floods the bus or trips
   timeout faults in the receiving ECU.</li>
-<li>Treat the <strong>Trace window</strong> as your source of truth: if your transmitted
-  frame doesn't appear there, the node or channel setup is wrong, not the
-  CAPL.</li>
+<li>Use the <strong>Trace window</strong> to verify behavior: if a transmitted frame
+  does not appear there, the problem is in the node or channel setup,
+  not in the CAPL code.</li>
 <li>Before editing bytes in the Gateway lab, confirm the byte order
   (Motorola/Intel) in CANdb++ — <code>byte(5)</code> hits a different signal
   depending on the layout.</li>
@@ -4385,14 +4402,15 @@ the previous one's instincts.</p>
 <div class="admonition success">
 <p class="admonition-title">Key takeaways</p>
 <ul>
-<li>Three labs, one ladder: single-node simulation → real-hardware
-  interaction → a two-bus gateway with in-transit data manipulation.</li>
-<li>The P332BEV BH-CAN and C1-CAN databases anchor everything — read IDs,
-  periods and signal layouts from the DBC, never hardcode blindly.</li>
-<li>Timers + <code>output()</code> for cyclic frames, <code>on message</code>/<code>on key</code> for
-  reactions: that small toolkit carries you through all three labs.</li>
-<li>Trace and Write are your proof of work — and Bus Off handling plus
-  measurement start/stop hooks are what makes CAPL behave like a real ECU.</li>
+<li>The three labs progress from single-node simulation to real-hardware
+  interaction to a two-bus gateway with in-transit data manipulation.</li>
+<li>Message IDs, cycle times and signal layouts are read from the P332BEV
+  BH-CAN and C1-CAN DBC files rather than hardcoded.</li>
+<li>Cyclic transmission is implemented with timers and <code>output()</code>; event
+  handling uses <code>on message</code> and <code>on key</code>.</li>
+<li>The Trace and Write windows are used to verify behavior; Bus Off
+  handling and measurement start/stop hooks are required for a script to
+  behave like a real ECU.</li>
 </ul>
 </div>
 <h2 id="sub-sections">Sub-sections<a class="headerlink" href="#sub-sections" title="Permanent link">&para;</a></h2>
@@ -4488,38 +4506,27 @@ the previous one's instincts.</p>
   </div>
 </footer>
       
-<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="AI assistant panel">
+<aside class="kx-chat" id="kx-chat" data-state="collapsed" aria-label="Assistant panel">
   <button class="kx-chat__handle" id="kx-chat-handle" aria-expanded="false" aria-controls="kx-chat">
-    <span class="kx-chat__handle-icon">✦</span>
-    <span class="kx-chat__handle-label">AI Assistant</span>
+    <span class="kx-chat__handle-icon" aria-hidden="true">✦</span>
+    <span class="kx-chat__handle-close" aria-hidden="true">✕</span>
+    <span class="kx-chat__handle-label">Assistant</span>
   </button>
-  <div class="kx-chat__panel" role="dialog" aria-label="Academy AI assistant">
+  <div class="kx-chat__panel" role="dialog" aria-label="Academy assistant">
     <header class="kx-chat__header">
-      <span class="kx-chat__avatar" aria-hidden="true">✦</span>
-      <div class="kx-chat__headings">
-        <strong>Constellation</strong>
-        <span class="kx-chat__status"><span class="kx-chat__dot"></span>Academy guide</span>
-      </div>
-      <button class="kx-chat__close" id="kx-chat-close" aria-label="Collapse chat">–</button>
+      <strong>Assistant</strong>
     </header>
     <div class="kx-chat__thread" id="kx-chat-thread" aria-live="polite">
       <div class="kx-chat__msg kx-chat__msg--bot">
-        <p>Welcome to the Kineton Academy! I'm your onboarding guide. Ask me about
-        vehicle networks, diagnostics, calibration, or where to start your
-        learning path.</p>
-      </div>
-      <div class="kx-chat__suggestions" id="kx-chat-suggestions">
-        <button class="kx-chip" data-prompt="Where should I start as a new engineer?">Where should I start?</button>
-        <button class="kx-chip" data-prompt="Explain CAN bus arbitration simply">CAN arbitration?</button>
-        <button class="kx-chip" data-prompt="What is the V-model?">What is the V-model?</button>
+        <p>Ask a question about the course content. Responses will appear here
+        once the API is configured.</p>
       </div>
     </div>
     <form class="kx-chat__composer" id="kx-chat-form">
       <input type="text" id="kx-chat-input" class="kx-chat__input"
-             placeholder="Ask about the academy…" autocomplete="off" />
+             placeholder="Ask about the course…" autocomplete="off" />
       <button type="submit" class="kx-chat__send" aria-label="Send message">➤</button>
     </form>
-    <footer class="kx-chat__foot">Preview — AI responses are not connected yet</footer>
   </div>
 </aside>
 
@@ -4547,7 +4554,7 @@ the previous one's instincts.</p>
     
 <script>
   // API integration hook — populated in a later step. When `endpoint` is null
-  // the panel runs in visual-preview mode with canned placeholder replies.
+  // the panel replies with a static placeholder message.
   window.KX_CHAT_CONFIG = { endpoint: null, model: null };
 </script>
 

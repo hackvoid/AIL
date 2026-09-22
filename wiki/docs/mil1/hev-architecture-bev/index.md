@@ -1,18 +1,16 @@
 # Battery Electric Vehicle (BEV) Architecture
 
-Welcome to your first deep dive into the electric powertrain. A **Battery
-Electric Vehicle (BEV)** is a *pure* electric vehicle: the only traction
-device is the electric motor, and the only energy source on board is the
-chemical energy stored in rechargeable battery packs. There is no combustion
-engine to fall back on — every aspect of propulsion, braking energy recovery
-and charging is handled electrically.
+A **Battery Electric Vehicle (BEV)** is a *pure* electric vehicle: the only
+traction device is the electric motor, and the only energy source on board is
+the chemical energy stored in rechargeable battery packs. There is no
+combustion engine — every aspect of propulsion, braking energy recovery and
+charging is handled electrically.
 
-Why should you care as a new E/E engineer? Because nearly everything you will
-do in this bootcamp — reading CAN traces, calibrating drive styles, diagnosing
-control units — revolves around the handful of components in this article.
-By the end, you will be able to name every major BEV component, explain how
-energy flows from grid to wheels and back, and read a real vehicle's drive
-mode logic without breaking a sweat.
+The components covered here are the basis for most later bootcamp topics,
+including CAN trace analysis, drive style calibration and control unit
+diagnostics. This article describes the major BEV components, the energy flow
+from grid to wheels and back, and the drive mode logic of a production
+vehicle.
 
 Every BEV is built around four main component groups:
 
@@ -23,9 +21,9 @@ Every BEV is built around four main component groups:
 4. **Digital control system** — the **Electronic Control Units (ECUs)** that
    coordinate everything
 
-We will walk through each group in turn and close with a real case study you
-will meet again later in the course: the Fiat 500-based **332 City BEV** and
-its sporty derivative, the **595e Abarth BEV**.
+The sections below cover each group in turn, followed by a case study of the
+Fiat 500-based **332 City BEV** and its sporty derivative, the **595e Abarth
+BEV**, which recurs later in the course.
 
 ## The electric machine: why a BEV needs no gearbox
 
@@ -45,9 +43,8 @@ commands: the **accelerator pedal** and the **brake pedal**.
 !!! note "Bidirectional machine"
     The same electric machine works in both directions of energy flow: as a
     **motor** (electric energy → mechanical torque) and as an **alternator**
-    (mechanical rotation → electric current). Exploiting this
-    bidirectionality is the key to energy efficiency in a BEV — keep this
-    mental model; you will use it constantly.
+    (mechanical rotation → electric current). This bidirectionality is the key
+    to energy efficiency in a BEV.
 
 ## Regenerative braking and one-pedal driving
 
@@ -86,17 +83,15 @@ current speed and how quickly the driver eases off the pedal. The brake pedal
 becomes necessary only for emergency stops or very strong deceleration.
 
 !!! tip "Why this matters for range"
-    Regeneration is not a gadget — it directly extends the usable charge of
-    the HV battery. Calibrating *how much* deceleration the motor provides on
-    pedal release is one of the main levers the vehicle control unit uses to
-    differentiate drive styles (see the case study below). When you later
-    work on calibration in INCA, this is exactly the kind of parameter you
-    will touch.
+    Regeneration directly extends the usable charge of the HV battery.
+    Calibrating *how much* deceleration the motor provides on pedal release
+    is one of the main levers the vehicle control unit uses to differentiate
+    drive styles (see the case study below); it is a typical INCA calibration
+    parameter.
 
 ## The battery system
 
-Every BEV actually carries **two** batteries — newcomers often find this
-surprising:
+Every BEV carries **two** batteries with distinct roles:
 
 | Battery | Role | Charged from |
 |---|---|---|
@@ -128,9 +123,8 @@ demand. The three main components are:
 
 ![Typical power ranges of electric car power electronics devices](img/power-electronics-ranges.webp)
 
-The power levels differ by roughly two orders of magnitude — a fact worth
-remembering when you think about which device dominates the thermal and
-diagnostic load:
+The power levels differ by roughly two orders of magnitude, which determines
+which device dominates the thermal and diagnostic load:
 
 | Device | Typical power range |
 |---|---|
@@ -141,8 +135,8 @@ diagnostic load:
 ## The digital control system
 
 A BEV concentrates its propulsion intelligence in a few typical control
-units. Learn these acronyms now — they appear in wiring diagrams, diagnostic
-tools and requirements documents throughout the bootcamp:
+units. These acronyms appear in wiring diagrams, diagnostic tools and
+requirements documents throughout the bootcamp:
 
 - **PIM — Power Inverter Module.** The high-power DC→AC converter for the
   traction motor. It hosts two controllers:
@@ -162,8 +156,8 @@ tools and requirements documents throughout the bootcamp:
 
 ![BEV component and control unit architecture](img/bev-architecture.webp)
 
-This diagram ties the whole energy story together — grid to battery, battery
-to wheels, wheels back to battery:
+The following diagram summarizes the complete energy flow — grid to battery,
+battery to wheels, wheels back to battery:
 
 ```mermaid
 flowchart TD
@@ -178,7 +172,7 @@ flowchart TD
 
 ## Case study: 332 City BEV vs 595e Abarth BEV
 
-Theory lands best on real hardware. The **332 City BEV** (the electric Fiat
+The **332 City BEV** (the electric Fiat
 500) was the first fully electric car from Fiat Chrysler Automobiles,
 unveiled in March 2020. Its sporty derivative, the **595e Abarth BEV**,
 followed in March 2023 — same electric motor, but with different regulation,
@@ -196,17 +190,17 @@ firmer suspensions and more advanced stability control systems.
 | Vehicle mass | 1433–1493 kg | 1464–1524 kg |
 
 *WLTP* is the **Worldwide harmonised Light vehicles Test Procedure**, the
-standardized driving cycle used to rate range — treat its numbers as
-"officially comparable", not "guaranteed in the real world".
+standardized driving cycle used to rate range. WLTP figures are comparable
+across vehicles but do not guarantee real-world range.
 
 The Abarth extracts more power and torque from the same hardware at the price
-of range (225 km vs 320 km on the same 42 kWh pack) — a classic
-performance-vs-efficiency calibration trade-off, and a perfect example of how
-much of a car's character lives in software rather than hardware.
+of range (225 km vs 320 km on the same 42 kWh pack) — a
+performance-vs-efficiency calibration trade-off implemented entirely in
+software on identical hardware.
 
 ### Driver-selectable drive styles
 
-The 332 was designed as a city car — fun but not sporty — so the driver
+The 332 was designed as a city car; the driver
 selects among three styles with a selector device:
 
 | Drive style | 332 City BEV | 595e Abarth BEV |
@@ -256,8 +250,8 @@ the former *Eco* pedal map (since the 595 range does not offer that drive
 style).
 
 !!! success "Key takeaways"
-    - You now know the four pillars of every BEV: electric machine, battery
-      packs, power electronics and the digital control system.
+    - Every BEV is built around four component groups: electric machine,
+      battery packs, power electronics and the digital control system.
     - Torque from zero rpm and a >10,000 rpm ceiling mean no gearbox, no
       clutch, no reverse gear — reverse is just a phase swap.
     - Regenerative braking and One-Pedal Drive turn the motor into an
@@ -268,12 +262,9 @@ style).
       via the DC-DC converter).
     - The key ECUs are PIM (EVCU + MCP), IDCM (charger + DC-DC) and BPCM
       (battery monitoring, SoC, cell balancing).
-    - Drive styles are pure calibration — pedal map, speed limit and OPD,
+    - Drive styles are calibration settings — pedal map, speed limit and OPD,
       broadcast on CAN as `BODY7.DriveStyleSts` — and SoC-based turtle modes
       override them to protect a nearly empty battery.
-
-    You have just built the mental model that every later module — hybrids,
-    CAN tooling, calibration, diagnostics — hangs off. Well done.
 
 !!! tip "Where this leads"
     The hybrid counterpart of this architecture — where an ICE and one or
